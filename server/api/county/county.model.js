@@ -3,10 +3,10 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
+var CountySchema = new Schema({
   name: String,
   info: String,
   active: Boolean
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('County', CountySchema);

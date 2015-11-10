@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('foglightApp')
-  .factory('unemployments', function () {
+  .factory('diabetes', function () {
 
-    var unemployments = [
+    var diabetes = [
   {
     "id":1001,
     "rate":12
@@ -12902,7 +12902,7 @@ angular.module('foglightApp')
   }
 ]
 
-    return unemployments;
+    return diabetes;
     // return $resource('/api/unemployments/');
 
   });

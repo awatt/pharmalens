@@ -9,6 +9,10 @@ var errors = require('./components/errors');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/physicians', require('./api/physician'));
+  app.use('/api/countys', require('./api/county'));
+  app.use('/api/grants', require('./api/grant'));
+  app.use('/api/payments', require('./api/payment'));
   app.use('/api/unemployments', require('./api/unemployment'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
@@ -25,3 +29,13 @@ module.exports = function(app) {
       res.sendfile(app.get('appPath') + '/index.html');
     });
 };
+
+
+
+
+
+
+
+
+
+

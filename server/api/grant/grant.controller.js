@@ -1,53 +1,53 @@
 'use strict';
 
 var _ = require('lodash');
-var User = require('./user.model');
+var Grant = require('./grant.model');
 
-// Get list of users
+// Get list of grants
 exports.index = function(req, res) {
-  User.find(function (err, users) {
+  Grant.find(function (err, grants) {
     if(err) { return handleError(res, err); }
-    return res.json(200, users);
+    return res.json(200, grants);
   });
 };
 
-// Get a single user
+// Get a single grant
 exports.show = function(req, res) {
-  User.findById(req.params.id, function (err, user) {
+  Grant.findById(req.params.id, function (err, grant) {
     if(err) { return handleError(res, err); }
-    if(!user) { return res.send(404); }
-    return res.json(user);
+    if(!grant) { return res.send(404); }
+    return res.json(grant);
   });
 };
 
-// Creates a new user in the DB.
+// Creates a new grant in the DB.
 exports.create = function(req, res) {
-  User.create(req.body, function(err, user) {
+  Grant.create(req.body, function(err, grant) {
     if(err) { return handleError(res, err); }
-    return res.json(201, user);
+    return res.json(201, grant);
   });
 };
 
-// Updates an existing user in the DB.
+// Updates an existing grant in the DB.
 exports.update = function(req, res) {
   if(req.body._id) { delete req.body._id; }
-  User.findById(req.params.id, function (err, user) {
+  Grant.findById(req.params.id, function (err, grant) {
     if (err) { return handleError(res, err); }
-    if(!user) { return res.send(404); }
-    var updated = _.merge(user, req.body);
+    if(!grant) { return res.send(404); }
+    var updated = _.merge(grant, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
-      return res.json(200, user);
+      return res.json(200, grant);
     });
   });
 };
 
-// Deletes a user from the DB.
+// Deletes a grant from the DB.
 exports.destroy = function(req, res) {
-  User.findById(req.params.id, function (err, user) {
+  Grant.findById(req.params.id, function (err, grant) {
     if(err) { return handleError(res, err); }
-    if(!user) { return res.send(404); }
-    user.remove(function(err) {
+    if(!grant) { return res.send(404); }
+    grant.remove(function(err) {
       if(err) { return handleError(res, err); }
       return res.send(204);
     });

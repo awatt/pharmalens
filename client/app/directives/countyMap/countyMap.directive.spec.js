@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: districtMap', function () {
+describe('Directive: countyMap', function () {
 
   // load the directive's module
   beforeEach(module('foglightApp'));
@@ -13,8 +13,8 @@ describe('Directive: districtMap', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<district-map></district-map>');
+    element = angular.element('<county-map></county-map>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the districtMap directive');
+    expect(element.text()).toBe('this is the countyMap directive');
   }));
 });
