@@ -1,85 +1,86 @@
 'use strict';
 
 angular.module('foglightApp')
-.factory('sankey', function () {
+  .factory('sankeyService', ['d3Service', function (d3Service) {
 
-  d3.sankey = function() {
-    var sankey = {},
-    nodeWidth = 24,
-    nodePadding = 8,
-    size = [1, 1],
-    nodes = [],
-    links = [];
+d3.sankey = function(width) {
+  var sankey = {},
+      nodeWidth = 24,
+      nodePadding = 8,
+      width = width,
+      size = [1, 1],
+      nodes = [],
+      links = [];
 
-    sankey.nodeWidth = function(_) {
-      if (!arguments.length) return nodeWidth;
-      nodeWidth = +_;
-      return sankey;
-    };
+  sankey.nodeWidth = function(_) {
+    if (!arguments.length) return nodeWidth;
+    nodeWidth = +_;
+    return sankey;
+  };
 
-    sankey.nodePadding = function(_) {
-      if (!arguments.length) return nodePadding;
-      nodePadding = +_;
-      return sankey;
-    };
+  sankey.nodePadding = function(_) {
+    if (!arguments.length) return nodePadding;
+    nodePadding = +_;
+    return sankey;
+  };
 
-    sankey.nodes = function(_) {
-      if (!arguments.length) return nodes;
-      nodes = _;
-      return sankey;
-    };
+  sankey.nodes = function(_) {
+    if (!arguments.length) return nodes;
+    nodes = _;
+    return sankey;
+  };
 
-    sankey.links = function(_) {
-      if (!arguments.length) return links;
-      links = _;
-      return sankey;
-    };
+  sankey.links = function(_) {
+    if (!arguments.length) return links;
+    links = _;
+    return sankey;
+  };
 
-    sankey.size = function(_) {
-      if (!arguments.length) return size;
-      size = _;
-      return sankey;
-    };
+  sankey.size = function(_) {
+    if (!arguments.length) return size;
+    size = _;
+    return sankey;
+  };
 
-    sankey.layout = function(iterations) {
-      computeNodeLinks();
-      computeNodeValues();
-      computeNodeBreadths();
-      computeNodeDepths(iterations);
-      computeLinkDepths();
-      return sankey;
-    };
+  sankey.layout = function(width, iterations) {
+    computeNodeLinks();
+    computeNodeValues();
+    computeNodeBreadths(width);
+    computeNodeDepths(iterations);
+    computeLinkDepths();
+    return sankey;
+  };
 
-    sankey.relayout = function() {
-      computeLinkDepths();
-      return sankey;
-    };
+  sankey.relayout = function() {
+    computeLinkDepths();
+    return sankey;
+  };
 
-    sankey.link = function() {
-      var curvature = .5;
+  sankey.link = function() {
+    var curvature = .5;
 
-      function link(d) {
-        var x0 = d.source.x + d.source.dx,
-        x1 = d.target.x,
-        xi = d3.interpolateNumber(x0, x1),
-        x2 = xi(curvature),
-        x3 = xi(1 - curvature),
-        y0 = d.source.y + d.sy + d.dy / 2,
-        y1 = d.target.y + d.ty + d.dy / 2;
-        return "M" + x0 + "," + y0
-        + "C" + x2 + "," + y0
-        + " " + x3 + "," + y1
-        + " " + x1 + "," + y1;
-      }
+    function link(d) {
+      var x0 = d.source.x + d.source.dx,
+          x1 = d.target.x,
+          xi = d3.interpolateNumber(x0, x1),
+          x2 = xi(curvature),
+          x3 = xi(1 - curvature),
+          y0 = d.source.y + d.sy + d.dy / 2,
+          y1 = d.target.y + d.ty + d.dy / 2;
+      return "M" + x0 + "," + y0
+           + "C" + x2 + "," + y0
+           + " " + x3 + "," + y1
+           + " " + x1 + "," + y1;
+    }
 
-      link.curvature = function(_) {
-        if (!arguments.length) return curvature;
-        curvature = +_;
-        return link;
-      };
-
+    link.curvature = function(_) {
+      if (!arguments.length) return curvature;
+      curvature = +_;
       return link;
     };
+
+    return link;
+  };
 
   // Populate the sourceLinks and targetLinks for each node.
   // Also, if the source and target are not objects, assume they are indices.
@@ -90,7 +91,7 @@ angular.module('foglightApp')
     });
     links.forEach(function(link) {
       var source = link.source,
-      target = link.target;
+          target = link.target;
       if (typeof source === "number") source = link.source = nodes[link.source];
       if (typeof target === "number") target = link.target = nodes[link.target];
       source.sourceLinks.push(link);
@@ -104,7 +105,7 @@ angular.module('foglightApp')
       node.value = Math.max(
         d3.sum(node.sourceLinks, value),
         d3.sum(node.targetLinks, value)
-        );
+      );
     });
   }
 
@@ -112,10 +113,10 @@ angular.module('foglightApp')
   // Nodes are assigned the maximum breadth of incoming neighbors plus one;
   // nodes with no incoming links are assigned breadth zero, while
   // nodes with no outgoing links are assigned the maximum breadth.
-  function computeNodeBreadths() {
+  function computeNodeBreadths(width) {
     var remainingNodes = nodes,
-    nextNodes,
-    x = 0;
+        nextNodes,
+        x = 0;
 
     while (remainingNodes.length) {
       nextNodes = [];
@@ -159,10 +160,10 @@ angular.module('foglightApp')
 
   function computeNodeDepths(iterations) {
     var nodesByBreadth = d3.nest()
-    .key(function(d) { return d.x; })
-    .sortKeys(d3.ascending)
-    .entries(nodes)
-    .map(function(d) { return d.values; });
+        .key(function(d) { return d.x; })
+        .sortKeys(d3.ascending)
+        .entries(nodes)
+        .map(function(d) { return d.values; });
 
     //
     initializeNodeDepth();
@@ -224,10 +225,10 @@ angular.module('foglightApp')
     function resolveCollisions() {
       nodesByBreadth.forEach(function(nodes) {
         var node,
-        dy,
-        y0 = 0,
-        n = nodes.length,
-        i;
+            dy,
+            y0 = 0,
+            n = nodes.length,
+            i;
 
         // Push any overlapping nodes down.
         nodes.sort(ascendingDepth);
@@ -294,6 +295,7 @@ angular.module('foglightApp')
   }
 
   return sankey;
-
-});
-
+};
+return d3.sankey;
+  
+}]);

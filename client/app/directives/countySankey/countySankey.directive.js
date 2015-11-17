@@ -1,11 +1,14 @@
 'use strict';
 
 angular.module('foglightApp')
-  .directive('countySankey', ['d3Service', 'sankey', function(d3Service, sankey) {
-    return {
-      restrict: 'EA',
+.directive('countySankey', ['d3Service', 'sankeyService', 'sankeyData', function(d3Service, sankeyService, sankeyData) {
+	return {
+		restrict: 'EA',
+		scope: {
+			analysisResults: '='
+		},
 
-      link: function (scope, element, attrs) {
+      	link: function (scope, element, attrs) {
         
 		d3Service.d3().then(function(d3){
 
@@ -20,7 +23,7 @@ angular.module('foglightApp')
 		color = d3.scale.category20();
 
 		// append the svg canvas to the page
-		var svg = d3.select("#chart").append("svg")
+		var svg = d3.select('[id="countySankey"]').append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 		.append("g")
@@ -28,7 +31,11 @@ angular.module('foglightApp')
 			"translate(" + margin.left + "," + margin.top + ")");
 
 		// Set the sankey diagram properties
-		var sankey = d3.sankey()
+
+		// var sankey = sankeyService.someMethod
+		// console.log(sankey)
+
+		var sankey = sankeyService()
 		.nodeWidth(36)
 		.nodePadding(40)
 		.size([width, height]);
@@ -36,10 +43,12 @@ angular.module('foglightApp')
 		var path = sankey.link();
 
 		// load the data (using the timelyportfolio csv method)
-		d3.csv("sankey.csv", function(error, data) {
+		// d3.csv("sankey.csv", function(error, data) {
 
-		  //set up graph in same style as original example but empty
-		  graph = {"nodes" : [], "links" : []};
+		var data = sankeyData;
+		
+		//set up graph in same style as original example but empty
+		var graph = {"nodes" : [], "links" : []};
 
 		  data.forEach(function (d) {
 		  	graph.nodes.push({ "name": d.source });
@@ -69,7 +78,7 @@ angular.module('foglightApp')
 	     sankey
 	     .nodes(graph.nodes)
 	     .links(graph.links)
-	     .layout(32);
+	     .layout(width, 32);
 
 		// add in the links
 		var link = svg.append("g").selectAll(".link")
@@ -132,22 +141,17 @@ angular.module('foglightApp')
 			sankey.relayout();
 			link.attr("d", path);
 		}
-	});
+
+	// });  //close csv load function
 
 
-//close d3 service CB function
 
-})
+})  //close d3 service CB function
 
-//close link function
+}  //close link function
 
-}
-//close return object
+};  //close return object
 
-};
-
-//close main directive CB function
-
-}]);
+}]);  //close main directive CB function
 
 
