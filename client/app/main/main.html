@@ -9,14 +9,18 @@
 
 <div class="container">
 
+
+
 <div id="countyMap"></div>
 
-<div county-map></div>
+<div county-map countyfocus="countyfocus">
+<h2>{{countyfocus}}</h2>
+</div>
 
 
-<!-- <div id="countySankey"></div>
+<div id="countySankey"></div>
 
-<div county-sankey></div> -->
+<div county-sankey countyfocus="{{ countyfocus }}"></div>
 
 <div id='dataset-picker'></div>
 

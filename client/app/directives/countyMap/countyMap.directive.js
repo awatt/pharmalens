@@ -5,7 +5,7 @@ angular.module('foglightApp')
 	return {
 		restrict: 'EA',
 		scope: {
-			analysisResults: '='
+			countyfocus: '='
 		},
 
 		link: function (scope, element, attrs) {
@@ -17,7 +17,16 @@ angular.module('foglightApp')
 				buckets = 9,
 				colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"],
 				// colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"],
-				dataSets = [diabetes, payments, grants, totals]
+				dataSets = [{'Diabetes': diabetes}, {'Payments': payments}, {'Grants': grants}, {'Totals': totals}]
+
+		        //tooltip template
+		        var tooltip = d3.select('body').append('div')
+		        .style('position', 'absolute')
+		        .style('padding', '0 10px')
+		        .style('background', 'black')
+		        .style('color', 'white')
+		        .style('opacity', 0)
+		        .style('font-size', '1.25rem')
 
 				var projection = d3.geo.albersUsa()
 				.scale(1280)
@@ -34,16 +43,6 @@ angular.module('foglightApp')
 
 				var us = counties;
 
-				// queue()
-				// .defer(d3.csv, unemployments, function(d) { console.log(d); rateById.set(d.id, +d.rate); })
-				// .await(ready);
-
-				// d3.csv(unemployments, function(d) { console.log(d); rateById.set(d.id, +d.rate); });
-
-
-				// function ready(error, us) {
-				// 	if (error) throw error;
-
 				var renderMap =  function(data){
 
 				var rateById = d3.map();
@@ -55,10 +54,6 @@ angular.module('foglightApp')
 					nameById.set(d.id, d.name + ', ' + d.state)
 				}
 
-				console.log(rateById)
-				console.log(nameById)
-
-
 				var colorScale = d3.scale.quantile()
 				// .domain([d3.min(data, function (d){ if(d.rate) return d.rate; }), buckets-1, d3.max(data, function (d){ return d.rate; })])
 				.domain([0, buckets - 1, d3.max(data, function (d){ return d.rate; })])
@@ -69,10 +64,11 @@ angular.module('foglightApp')
 
 				counties.enter().append("path")
 			  	.attr("d", path)
+			  	.attr("class", "county")
 			  	.style("fill", colors[0]);
 
 			  	counties.transition().duration(1000)
-			  	.style("fill", function(d) { if (rateById.get(d.id) === undefined){return 0}; return colorScale(rateById.get(d.id)); });
+			  	.style("fill", function(d) { if (rateById.get(d.id)) {return colorScale(rateById.get(d.id))} else {return 0}; });
 
 			  	// .attr("class", function(d) { var quantized = colorScale(rateById.get(d.id)); return quantized })
 
@@ -82,41 +78,38 @@ angular.module('foglightApp')
 				.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
 				.attr("class", "states")
 				.attr("d", path);
-				
-				
+
+				// County Specific Tooltip
+				d3.selectAll('.county')
+				.on('mouseover', function(d) {
+					var countyState = nameById.get(d.id);
+					var state = countyState.split(", ")[1];
+					var value = rateById.get(d.id);
+
+					d3.select(this).style('opacity', 0.7)
+					tooltip.transition()
+					.style('opacity', .9)
+					tooltip.html([countyState, value].join(': '))
+				})
+				.on('mousemove',function(d){
+					tooltip
+					.style('left', (d3.event.pageX - 40) + 'px')
+					.style('top', (d3.event.pageY - 30) + 'px')
+				})
+				.on('mouseout', function(d) {
+					d3.select(this)
+					.style('opacity', .8)
+					tooltip.transition().duration(500)
+					.style('opacity', 0)
+				})
+				.on('click', function(d) {
+					scope.countyfocus = d.id;
+					scope.$apply();
+				})
+
 			}
 
-				            //HeatMap Specific Tooltip
-            // d3.selectAll('.counties')
-            //     .on('mouseover', function(d) {
-            //         var stateId = d.id.slice(d.id.length - 2);
-            //         var funding = formatMoney(stateHeat[stateId]);
-
-            //         d3.select(this).style('opacity', 0.7)
-            //         tooltip.transition()
-            //             .style('opacity', .9)
-            //         tooltip.html([stateId, funding].join(': '))
-            //     })
-            //     .on('mousemove',function(d){
-            //         tooltip
-            //             .style('left', (d3.event.pageX - 40) + 'px')
-            //             .style('top', (d3.event.pageY - 30) + 'px')
-            //     })
-            //     .on('mouseout', function(d) {
-            //         d3.select(this)
-            //             .style('opacity', .8)
-            //         tooltip.transition().duration(500)
-            //             .style('opacity', 0)
-            //     })
-            //     .on('click', function(d) {
-            //         var stateAbbrev = d.id.split('-')[1];
-            //         window.location.replace('/state/' + stateAbbrev);
-            //     })
-
-
-				renderMap(dataSets[0]);
-
-
+				renderMap(dataSets[0].Diabetes);
 
 			      d3.select(self.frameElement).style("height", height + "px");
 
@@ -125,12 +118,10 @@ angular.module('foglightApp')
 
 			      datasetpicker.enter()
 			      .append("input")
-			      .attr("value", function(d){ return "" + d })
+			      .attr("value", function(d){ for (var name in d){ return name;}})
 			      .attr("type", "button")
 			      .attr("class", "dataset-button")
-			      .on("click", function(d) {
-			      	renderMap(d);
-			      });
+			      .on("click", function(d){ for (var name in d){renderMap(d[name]);}});
 
 		//close d3 service CB function
 	})

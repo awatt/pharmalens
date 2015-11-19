@@ -5,7 +5,8 @@ angular.module('foglightApp')
 
     
 
-
+    $scope.countyfocus = 0;
+    // $scope.apply();
 
     // $scope.awesomeThings = [];
 
