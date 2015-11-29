@@ -4,6 +4,7 @@ angular.module('foglightApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ngMaterial',
   'ui.router',
   'ui.bootstrap',
   'd3'

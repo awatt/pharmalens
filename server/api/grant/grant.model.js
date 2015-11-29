@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
 var GrantSchema = new Schema({
 	principal_investigator_profile_ID: Number,
 	principal_investigator_ZIP: String,
-	FIPS: Number,
+	principal_investigator_FIPS: Number,
 	principal_investigator_specialty: String,
 	hospital_ID: String,
 	hospital_name: String,

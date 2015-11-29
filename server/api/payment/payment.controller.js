@@ -3,6 +3,15 @@
 var _ = require('lodash');
 var Payment = require('./payment.model');
 
+
+// Get a list of payments by FIPS
+exports.findByFIPS = function(req, res) {
+  Payment.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
+    if(err) {return handleError(res, err); }
+      return res.json(200, payments);
+  });
+};
+
 // Get list of payments
 exports.index = function(req, res) {
   Payment.find(function (err, payments) {

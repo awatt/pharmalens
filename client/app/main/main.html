@@ -9,18 +9,50 @@
 
 <div class="container">
 
-
-
 <div id="countyMap"></div>
+<div county-map countyfocus="countyfocus"></div>
 
-<div county-map countyfocus="countyfocus">
-<h2>{{countyfocus}}</h2>
+<!-- 
+<div class="md-padding" id="popupContainer" ng-cloak>
+  <div class="dialog-demo-content" layout="row" layout-wrap layout-margin>
+    <md-button class="md-primary md-raised" ng-click="showDialog($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
+      Custom Dialog
+    </md-button>
+  </div>
+</div> -->
+
+
+<!--  -->
+
+<!-- BOOTSTRAP MODAL -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sankeyModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="sankeyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">County</h4>
+      </div>
+      <div class="modal-body">
+        <div id="countySankey"></div>
+<div county-sankey countyfocus="{{ countyfocus }}"></div>
+      </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-<div id="countySankey"></div>
 
-<div county-sankey countyfocus="{{ countyfocus }}"></div>
+<!-- BOOTSTRAP MODAL END -->
+
+
 
 <div id='dataset-picker'></div>
 

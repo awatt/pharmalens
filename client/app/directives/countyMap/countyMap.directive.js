@@ -65,7 +65,11 @@ angular.module('foglightApp')
 				counties.enter().append("path")
 			  	.attr("d", path)
 			  	.attr("class", "county")
+			  	.attr("data-toggle", "modal")
+			  	.attr("data-target", "#sankeyModal")
 			  	.style("fill", colors[0]);
+
+// data-toggle="modal" data-target="#sankeyModal"
 
 			  	counties.transition().duration(1000)
 			  	.style("fill", function(d) { if (rateById.get(d.id)) {return colorScale(rateById.get(d.id))} else {return 0}; });

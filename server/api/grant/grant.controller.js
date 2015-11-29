@@ -3,6 +3,15 @@
 var _ = require('lodash');
 var Grant = require('./grant.model');
 
+
+// Get a list of grants by FIPS
+exports.findByFIPS = function(req, res) {
+  Grant.find({ principal_investigator_FIPS: req.params.FIPS }).exec(function(err, grants) {
+    if(err) {return handleError(res, err); }
+      return res.json(200, grants);
+  });
+};
+
 // Get list of grants
 exports.index = function(req, res) {
   Grant.find(function (err, grants) {

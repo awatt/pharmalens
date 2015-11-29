@@ -91,6 +91,8 @@
 
 //begin sankey
 
+// #countySankey { overflow-x : scroll ;}
+
 .node rect {
   cursor: move;
   fill-opacity: .9;
@@ -113,3 +115,20 @@
 }
 
 //end sankey
+
+//Material Design Dialog Modal
+
+// #popupContainer {
+//   position: relative; }
+
+//Bootstrap Modal
+
+.modal-body {
+    overflow-y:auto;
+    overflow-x:auto;
+}
+
+.modal-dialog{
+  width: 90%;
+}
+

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foglightApp')
-.directive('countySankey', ['d3Service', 'sankeyService', 'sankeyData', function(d3Service, sankeyService, sankeyData) {
+.directive('countySankey', ['d3Service', 'sankeyService', 'sankeyData', 'paymentStats', function(d3Service, sankeyService, sankeyData, paymentStats) {
 	return {
 		restrict: 'EA',
 		scope: {
@@ -12,9 +12,8 @@ angular.module('foglightApp')
        
       	scope.$watch("countyfocus", function(newValue, oldValue){
 				console.log("these are the new and old values", newValue, oldValue)
-			// if(newValue !== oldValue){
 
-			var renderSankey = function(){
+			var renderSankey = function(data){
 
 				d3Service.d3().then(function(d3){
 
@@ -23,8 +22,8 @@ angular.module('foglightApp')
 				var units = "Widgets";
 
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
-				width = 700 - margin.left - margin.right,
-				height = 300 - margin.top - margin.bottom;
+				width = 500 - margin.left - margin.right,
+				height = 2*data.length - margin.top - margin.bottom;
 
 				var formatNumber = d3.format(",.0f"),    // zero decimal places
 				format = function(d) { return formatNumber(d) + " " + units; },
@@ -33,11 +32,14 @@ angular.module('foglightApp')
 				// append the svg canvas to the page
 				var svg = d3.select('[id="countySankey"]').append("svg")
 				.attr("class", "sankey")
-				.attr("width", width + margin.left + margin.right)
-				.attr("height", height + margin.top + margin.bottom)
+				.attr("width", height + margin.left + margin.right)
+				.attr("height", width + margin.top + margin.bottom)
 				.append("g")
-				.attr("transform", 
-					"translate(" + margin.left + "," + margin.top + ")");
+				.attr("transform", "translate(" + height + ", " + 0 + ") rotate(90)")
+				// .attr("transform", 
+				// 	"translate(" + margin.left + "," + margin.top + ")")
+
+
 
 				// Set the sankey diagram properties
 
@@ -54,7 +56,7 @@ angular.module('foglightApp')
 				// load the data (using the timelyportfolio csv method)
 				// d3.csv("sankey.csv", function(error, data) {
 
-				var data = sankeyData;
+				// var data = sankeyData;
 				
 				//set up graph in same style as original example but empty
 				var graph = {"nodes" : [], "links" : []};
@@ -123,8 +125,8 @@ angular.module('foglightApp')
 				.attr("width", sankey.nodeWidth())
 				.style("fill", function(d) { 
 					return d.color = color(d.name.replace(/ .*/, "")); })
-				.style("stroke", function(d) { 
-					return d3.rgb(d.color).darker(2); })
+				// .style("stroke", function(d) { 
+				// 	return d3.rgb(d.color).darker(2); })
 				.append("title")
 				.text(function(d) { 
 					return d.name + "\n" + format(d.value); });
@@ -140,6 +142,8 @@ angular.module('foglightApp')
 				.filter(function(d) { return d.x < width / 2; })
 				.attr("x", 6 + sankey.nodeWidth())
 				.attr("text-anchor", "start");
+
+
 
 				// the function for moving the nodes
 				function dragmove(d) {
@@ -157,7 +161,21 @@ angular.module('foglightApp')
 
 	} //close renderSankey function
 
+if(newValue !== oldValue){
+
+	paymentStats.query({FIPS: newValue}).$promise.then(function(stats){
+		var newStats = paymentStats.formatData(stats);
+		renderSankey(newStats);
+      })
 	
+	// .then(function(newStats){
+	// console.log("these are the stats returned to the directive after the promise resolved: ", newStats)	
+	// });
+	
+	// renderSankey();
+}
+
+
 
 }) //close scope.$watch function
 
