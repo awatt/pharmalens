@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('foglightApp')
-.directive('countyMap', ['d3Service', 'counties', 'diabetes', 'payments', 'grants', 'totals', function(d3Service, counties, diabetes, payments, grants, totals) {
+.directive('countyMap', ['d3Service', 'counties', 'diabetes', 'payments', 'grants', 'totals', 'paymentStats', function(d3Service, counties, diabetes, payments, grants, totals, paymentStats) {
 	return {
 		restrict: 'EA',
 		scope: {
-			countyfocus: '='
+			countyfocus: '=',
+			hasdata: '='
 		},
 
 		link: function (scope, element, attrs) {
@@ -69,8 +70,6 @@ angular.module('foglightApp')
 			  	.attr("data-target", "#sankeyModal")
 			  	.style("fill", colors[0]);
 
-// data-toggle="modal" data-target="#sankeyModal"
-
 			  	counties.transition().duration(1000)
 			  	.style("fill", function(d) { if (rateById.get(d.id)) {return colorScale(rateById.get(d.id))} else {return 0}; });
 
@@ -107,8 +106,38 @@ angular.module('foglightApp')
 					.style('opacity', 0)
 				})
 				.on('click', function(d) {
-					scope.countyfocus = d.id;
-					scope.$apply();
+					
+					//drop previous countySankey charts
+					var parent = d3.selectAll(".chartParent");
+					parent.each(function(d,i) {            
+						d3.selectAll(this.childNodes).remove();
+					});
+					// d3.select(".chartParent").select("svg").remove();
+
+					//prepare new selected county data
+					paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
+						paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
+
+							var binObj = paymentStats.paymentStats.formatData(stats,recipientStats);
+
+							for (var key in binObj) {
+								if (binObj.hasOwnProperty(key)) {
+									scope.hasdata[key] = binObj[key];
+								}
+							}
+							scope.countyfocus = d.id;
+							
+							setTimeout(function () {
+								scope.$apply(function () {
+									scope.message = "Timeout called!";
+								});
+							}, 2000);
+
+							// if(!scope.$$phase) {
+							// 	scope.$apply();
+							// }
+						})
+					})
 				})
 
 			}

@@ -10,7 +10,8 @@
 <div class="container">
 
 <div id="countyMap"></div>
-<div county-map countyfocus="countyfocus"></div>
+<div county-map countyfocus="countyfocus" hasdata="hasdata"></div>
+<h3>{{hasdata}}</h3>
 
 <!-- 
 <div class="md-padding" id="popupContainer" ng-cloak>
@@ -39,10 +40,99 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">County</h4>
       </div>
+
       <div class="modal-body">
-        <div id="countySankey"></div>
-<div county-sankey countyfocus="{{ countyfocus }}"></div>
-      </div>
+
+        <!-- <div county-sankey hasdata="hasdata" countyfocus="{{ countyfocus }}"></div> -->
+        <!-- <div id="countySankey"></div> -->
+
+        <md-tabs class="md-accent" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
+        
+          <md-tab id="tab1" ng-if="hasdata['0to500']">
+          <!-- <md-tab id="tab1"> -->
+            <md-tab-label>Under $500</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_0to500"></div>
+            <div id="0to500" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['0to500']}}"></div>
+              <!-- <div id="countySankey0to500"></div> -->
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab id="tab2" ng-if="hasdata['500to1k']">
+          <!-- <md-tab id="tab2" > -->
+            <md-tab-label>$500-1k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_500to1k" ></div>
+            <div id="500to1k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['500to1k']}}"></div>
+              <!-- <div id="countySankey500to1k"></div> -->
+            </md-tab-body>
+          </md-tab>
+          
+          <md-tab id="tab3" ng-if="hasdata['1to5k']">
+          <!-- <md-tab id="tab3" > -->
+            <md-tab-label>$1k-5k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_1to5k"></div>
+              <div id="1to5k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['1to5k']}}"></div>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab id="tab4" ng-if="hasdata['5to10k']">
+          <!-- <md-tab id="tab4" > -->
+            <md-tab-label>$5k-10k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_5to10k"></div>
+              <div id="5to10k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['5to10k']}}"></div>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab id="tab5" ng-if="hasdata['10to25k']">
+          <!-- <md-tab id="tab5" > -->
+            <md-tab-label>$10k-25k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_10to25k"></div>
+              <div id="10to25k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['10to25k']}}"></div>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab id="tab6" ng-if="hasdata['25to50k']">
+          <!-- <md-tab id="tab6" > -->
+            <md-tab-label>$25k-50k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_25to50k"></div>
+              <div id="25to50k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['25to50k']}}"></div>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab id="tab7" ng-if="hasdata['50to100k']">
+          <!-- <md-tab id="tab7" > -->
+              <md-tab-label>$50k-100k</md-tab-label>
+              <md-tab-body>
+              <div class="chartParent" id="chart_50to100k"></div>
+                <div id="50to100k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['50to100k']}}"></div>
+              </md-tab-body>
+            </md-tab>
+          </md-tabs>
+
+          <md-tab id="tab8" ng-if="hasdata['100to200k']">
+          <!-- <md-tab id="tab8" > -->
+            <md-tab-label>$100k-200k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_100to200k"></div>
+              <div id="100to200k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['100to200k']}}"></div>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab id="tab9" ng-if="hasdata['over200k']">
+          <!-- <md-tab id="tab9" > -->
+            <md-tab-label>Over $200k</md-tab-label>
+            <md-tab-body>
+            <div class="chartParent" id="chart_over200k"></div>
+              <div id="over200k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['over200k']}}"></div>
+            </md-tab-body>
+          </md-tab>
+         </md-tabs>
+
       </div>
     </div>
   </div>
@@ -51,8 +141,6 @@
 
 
 <!-- BOOTSTRAP MODAL END -->
-
-
 
 <div id='dataset-picker'></div>
 

@@ -4,50 +4,32 @@ angular.module('foglightApp')
 .controller('MainCtrl', function ($scope, $http) {
 
     $scope.countyfocus = 0;
+    
+    $scope.hasdata = {
+      '0to500': false,
+      '500to1k': false,
+      '1to5k': false,
+      '5to10k': false,
+      '10to25k': false,
+      '25to50k': false,
+      '50to100k': false,
+      '100to200k': false,
+      'over200k': false
+    };
 
-    // $scope.showDialog = showDialog;
-    // $scope.items = [1, 2, 3];
+//Angular Material Design Tabs
+  $scope.data = {
+    selectedIndex: 0,
+    bottom: true
+  };
+  $scope.next = function() {
+    $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
+  };
+  $scope.previous = function() {
+    $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
+  };
 
-    // function showDialog(ev) {
-    //     var parentEl = angular.element("#testDiv");
-    //     $mdDialog.show({
-    //       controller: 'MainCtrl',
-    //       template:
-    //        '<md-dialog aria-label="List dialog">' +
-    //        '  <md-dialog-content>'+
-    //        // '  TESTING'+
-    //        '    <div id="countySankey"></div>'+
-    //        // '      <div county-sankey countyfocus="{{ countyfocus }}"></div>'+
-    //        '  </md-dialog-content>' +
-    //        '</md-dialog>',
-    //       parent: parentEl,
-    //       locals: {
-    //        items: $scope.items
-    //      },
-    //       targetEvent: ev,
-    //       clickOutsideToClose:true
-    //   })
-    //   //   .then(function(answer) {
-    //   //     $scope.status = 'You said the information was "' + answer + '".';
-    //   // }, function() {
-    //   //     $scope.status = 'You cancelled the dialog.';
-    //   // });
-    // };
+
+
+
 })
-// .controller('DialogController', function ($scope, $mdDialog) {
-//   $scope.hide = function() {
-//     console.log("HIDDEN")
-//     $mdDialog.hide();
-//   };
-//   $scope.cancel = function() {
-//     console.log("CANCELLED")
-//     $mdDialog.cancel();
-//   };
-//   $scope.answer = function(answer) {
-//     console.log($scope.countyfocus)
-//     console.log(answer)
-//     $mdDialog.hide(answer);
-//   };
-// }
-// );
-

@@ -5,32 +5,41 @@ angular.module('foglightApp')
 	return {
 		restrict: 'EA',
 		scope: {
-			countyfocus: '@'
+			countyfocus: '@',
+			hasdata: '@'
 		},
 
       	link: function (scope, element, attrs) {
        
+
       	scope.$watch("countyfocus", function(newValue, oldValue){
-				console.log("these are the new and old values", newValue, oldValue)
+
+
+		console.log("these are the new and old values", newValue, oldValue)
 
 			var renderSankey = function(data){
 
+				console.log("this is data passed into renderSankey: ", data)
+
 				d3Service.d3().then(function(d3){
 
-				d3.select(".sankey").remove();
+				// d3.select(".sankey").remove();
 
-				var units = "Widgets";
+				var units = "$";
+				var parentID = "#chart_" + attrs.id;
+
+				var test = d3.select(parentID).select("svg")
 
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
 				width = 500 - margin.left - margin.right,
-				height = 2*data.length - margin.top - margin.bottom;
+				height = 4*data.length - margin.top - margin.bottom;
 
 				var formatNumber = d3.format(",.0f"),    // zero decimal places
-				format = function(d) { return formatNumber(d) + " " + units; },
+				format = function(d) { return units + "" +formatNumber(d); },
 				color = d3.scale.category20();
 
 				// append the svg canvas to the page
-				var svg = d3.select('[id="countySankey"]').append("svg")
+				var svg = d3.select(parentID).append("svg")
 				.attr("class", "sankey")
 				.attr("width", height + margin.left + margin.right)
 				.attr("height", width + margin.top + margin.bottom)
@@ -42,10 +51,6 @@ angular.module('foglightApp')
 
 
 				// Set the sankey diagram properties
-
-				// var sankey = sankeyService.someMethod
-				// console.log(sankey)
-
 				var sankey = sankeyService()
 				.nodeWidth(36)
 				.nodePadding(40)
@@ -143,8 +148,6 @@ angular.module('foglightApp')
 				.attr("x", 6 + sankey.nodeWidth())
 				.attr("text-anchor", "start");
 
-
-
 				// the function for moving the nodes
 				function dragmove(d) {
 					d3.select(this).attr("transform", 
@@ -161,19 +164,15 @@ angular.module('foglightApp')
 
 	} //close renderSankey function
 
-if(newValue !== oldValue){
 
-	paymentStats.query({FIPS: newValue}).$promise.then(function(stats){
-		var newStats = paymentStats.formatData(stats);
-		renderSankey(newStats);
-      })
-	
-	// .then(function(newStats){
-	// console.log("these are the stats returned to the directive after the promise resolved: ", newStats)	
-	// });
-	
-	// renderSankey();
-}
+	var data = paymentStats.dataObj[attrs.id];
+
+	if(scope.hasdata){
+
+	console.log("this is data being passed into renderSankey: ", data)
+		
+		renderSankey(data);
+	}
 
 
 

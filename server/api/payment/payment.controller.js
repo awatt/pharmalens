@@ -12,6 +12,19 @@ exports.findByFIPS = function(req, res) {
   });
 };
 
+exports.recipientStatsByFIPS = function(req, res) {
+  var o = {};
+  o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
+  o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};
+  o.query = { recipient_FIPS: req.params.FIPS };
+
+  Payment.mapReduce(o, function (err, results) {
+    if(err) {return handleError(res, err); }
+    console.log("these are mapreduce results in the back end: ", results)
+    return res.json(200, results);
+})
+};
+
 // Get list of payments
 exports.index = function(req, res) {
   Payment.find(function (err, payments) {

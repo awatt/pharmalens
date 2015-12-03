@@ -18,8 +18,10 @@ var PaymentSchema = new Schema({
 
 PaymentSchema.index({program_year: 1, recipient_FIPS: 1, recipient_profile_ID: 1, submitting_mfr: 1});
 
-// ProductSchema.statics.findPaymentsByFIPS = function(FIPS, cb) {
+// ProductSchema.statics.mapRecipientStatsByFIPS = function(FIPS, cb) {
+  
 //   return this.find({ recipient_FIPS: FIPS }, cb);
 // };
+
 
 module.exports = mongoose.model('Payment', PaymentSchema);
