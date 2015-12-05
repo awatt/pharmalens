@@ -8,6 +8,16 @@ var Payment = require('./payment.model');
 exports.findByFIPS = function(req, res) {
   Payment.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
     if(err) {return handleError(res, err); }
+
+    
+
+  //   Payment.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
+  //   if(err) {return handleError(res, err); }
+  //     return res.json(200, payments);
+  // });
+
+
+
       return res.json(200, payments);
   });
 };

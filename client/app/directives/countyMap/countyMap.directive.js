@@ -133,9 +133,6 @@ angular.module('foglightApp')
 								});
 							}, 2000);
 
-							// if(!scope.$$phase) {
-							// 	scope.$apply();
-							// }
 						})
 					})
 				})

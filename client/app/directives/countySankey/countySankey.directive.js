@@ -14,16 +14,36 @@ angular.module('foglightApp')
 
       	scope.$watch("countyfocus", function(newValue, oldValue){
 
-
-		console.log("these are the new and old values", newValue, oldValue)
-
 			var renderSankey = function(data){
-
-				console.log("this is data passed into renderSankey: ", data)
 
 				d3Service.d3().then(function(d3){
 
 				// d3.select(".sankey").remove();
+
+				var totalValue = 0;
+				var totalRecipientPayments = 0;
+
+
+				var countRecipients = function(){
+					var count = 0;
+					for (var key in paymentStats.recipientStatsMap){
+						if (paymentStats.recipientStatsMap[key] === attrs.id){
+							count++;
+						}
+					}
+					return count;
+				}
+
+				var numRecipients = countRecipients();
+
+				for (var i=0, max = data.length; i<max; i++){
+					if (data[i]["linkType"] === "drug_recipient" || data[i]["linkType"] === "mfr_recipient"){
+						totalRecipientPayments ++;
+						totalValue += data[i].value;
+					}
+				}
+
+				console.log("this is bin, totalRecipientPayments, numRecipients, totalValue inside countySankey: ", attrs.id + ' ' + totalRecipientPayments + ' ' + numRecipients +' ' + totalValue)
 
 				var units = "$";
 				var parentID = "#chart_" + attrs.id;
@@ -32,7 +52,9 @@ angular.module('foglightApp')
 
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
 				width = 500 - margin.left - margin.right,
-				height = 4*data.length - margin.top - margin.bottom;
+				// height = .2*totalValue - margin.top - margin.bottom;
+				height = numRecipients*20 + totalRecipientPayments*10 - margin.top - margin.bottom;
+				
 
 				var formatNumber = d3.format(",.0f"),    // zero decimal places
 				format = function(d) { return units + "" +formatNumber(d); },
@@ -138,11 +160,14 @@ angular.module('foglightApp')
 
 				// add in the title for the nodes
 				node.append("text")
-				.attr("x", -6)
-				.attr("y", function(d) { return d.dy / 2; })
-				.attr("dy", ".35em")
+				.attr("x", 0)
+				.attr("y", 0)
+				.attr("dy", 0)
+				// .attr("y", function(d) { return d.dy / 2; })
+				// .attr("dy", ".35em")
+				.attr("transform", function(d){if (!isNaN(Number(d.name))){return "rotate(-60)"}; })
 				.attr("text-anchor", "end")
-				.attr("transform", null)
+				// .attr("transform", null)
 				.text(function(d) { return d.name; })
 				.filter(function(d) { return d.x < width / 2; })
 				.attr("x", 6 + sankey.nodeWidth())
@@ -168,9 +193,6 @@ angular.module('foglightApp')
 	var data = paymentStats.dataObj[attrs.id];
 
 	if(scope.hasdata){
-
-	console.log("this is data being passed into renderSankey: ", data)
-		
 		renderSankey(data);
 	}
 

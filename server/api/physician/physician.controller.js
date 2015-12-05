@@ -11,6 +11,20 @@ exports.index = function(req, res) {
   });
 };
 
+exports.recipientNamesByFIPS = function(req, res) {
+  var o = {};
+  o.map = function(){ var fullName = this.name_first + ',' + this.name_middle + ',' + this.name_last; emit(this.profile_ID, fullName); };
+  o.reduce = function(profile_ID, fullName){return Array(fullName);};
+  o.query = { FIPS: req.params.FIPS };
+
+  Payment.mapReduce(o, function (err, results) {
+    if(err) {return handleError(res, err); }
+    console.log("these are physician mapreduce results in the back end: ", results)
+    return res.json(200, results);
+})
+};
+
+
 // Get a single physician
 exports.show = function(req, res) {
   Physician.findById(req.params.id, function (err, physician) {

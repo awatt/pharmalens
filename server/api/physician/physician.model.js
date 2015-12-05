@@ -4,7 +4,8 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var PhysicianSchema = new Schema({
-  	profile_ID: Number,
+	_id: Number,
+  	profile_ID: { type: Number, required: true },
   	name_first: String,
   	name_last: String,
   	name_middle: String,
@@ -17,8 +18,9 @@ var PhysicianSchema = new Schema({
 	state: String,
 	ZIP: String,
 	FIPS: Number,
-	_payments: {type: Schema.Types.ObjectId, ref: 'Payment'},
-    _grants: {type: Schema.Types.ObjectId, ref: 'Grant'}
+	payments: [{ type: Schema.Types.ObjectId, ref: 'Payment' }]
+	// _payments: {type: Schema.Types.ObjectId, ref: 'Payment'}
+    // _grants: {type: Schema.Types.ObjectId, ref: 'Grant'}
 });
 
 PhysicianSchema.index({profile_ID: 1});
