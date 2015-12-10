@@ -4,9 +4,14 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var CountySchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  FIPS: Number,
+  county: String,
+  state: String,
+  DM_number: Number,
+  DM_percent: Number,
+  population: Number
 });
+
+CountySchema.index({FIPS: 1});
 
 module.exports = mongoose.model('County', CountySchema);

@@ -4,6 +4,7 @@ angular.module('foglightApp')
 .controller('MainCtrl', function ($scope, $http) {
 
     $scope.countyfocus = 0;
+    $scope.countyInfo = 0;
     
     $scope.hasdata = {
       '0to500': false,

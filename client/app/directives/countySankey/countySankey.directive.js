@@ -9,20 +9,19 @@ angular.module('foglightApp')
 			hasdata: '@'
 		},
 
-      	link: function (scope, element, attrs) {
-       
+		link: function (scope, element, attrs) {
 
-      	scope.$watch("countyfocus", function(newValue, oldValue){
 
-			var renderSankey = function(data){
+			scope.$watch("countyfocus", function(newValue, oldValue){
 
-				d3Service.d3().then(function(d3){
+				var renderSankey = function(data){
+
+					d3Service.d3().then(function(d3){
 
 				// d3.select(".sankey").remove();
 
 				var totalValue = 0;
 				var totalRecipientPayments = 0;
-
 
 				var countRecipients = function(){
 					var count = 0;
@@ -43,7 +42,7 @@ angular.module('foglightApp')
 					}
 				}
 
-				console.log("this is bin, totalRecipientPayments, numRecipients, totalValue inside countySankey: ", attrs.id + ' ' + totalRecipientPayments + ' ' + numRecipients +' ' + totalValue)
+				// console.log("this is bin, totalRecipientPayments, numRecipients, totalValue inside countySankey: ", attrs.id + ' ' + totalRecipientPayments + ' ' + numRecipients +' ' + totalValue)
 
 				var units = "$";
 				var parentID = "#chart_" + attrs.id;
@@ -88,30 +87,45 @@ angular.module('foglightApp')
 				//set up graph in same style as original example but empty
 				var graph = {"nodes" : [], "links" : []};
 
-				  data.forEach(function (d) {
-				  	graph.nodes.push({ "name": d.source });
-				  	graph.nodes.push({ "name": d.target });
+				data.forEach(function (d) {
+				  	// console.log("this is d inside initial graph build: ", d)
+				  	graph.nodes.push({ "name": d.source, "nodeType": d.sourceType });
+				  	graph.nodes.push({ "name": d.target, "nodeType": d.targetType });
 				  	graph.links.push({ "source": d.source,
 				  		"target": d.target,
-				  		"value": +d.value });
+				  		"value": +d.value,
+				  		"linkType": d.linkType });
 				  });
 
+				var subGraph = d3.nest()
+					.key(function (d) { return d.name; })
+					.map(graph.nodes)
+
+				// console.log("this is subGraph: ", subGraph)
+
 			     // return only the distinct / unique nodes
-			     graph.nodes = d3.keys(d3.nest()
-			     	.key(function (d) { return d.name; })
-			     	.map(graph.nodes));
+			     var subGraphKeys = d3.keys(subGraph);
+			     // graph.nodes = d3.keys(subGraph);
 
 			     // loop through each link replacing the text with its index from node
 			     graph.links.forEach(function (d, i) {
-			     	graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
-			     	graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+			     	graph.links[i].source = subGraphKeys.indexOf(graph.links[i].source);
+			     	graph.links[i].target = subGraphKeys.indexOf(graph.links[i].target);
 			     });
 
 			     //now loop through each nodes to make nodes an array of objects
 			     // rather than an array of strings
-			     graph.nodes.forEach(function (d, i) {
-			     	graph.nodes[i] = { "name": d };
-			     });
+			     graph.nodes = [];
+
+			     for (var key in subGraph){
+			     	// console.log("this is graph.nodes inside iterator: ", graph.nodes)
+			     	graph.nodes.push(subGraph[key][0])
+			     }
+
+			     // graph.nodes.forEach(function (d, i) {
+			     // 	// console.log("this is d inside loop: ", d)
+			     // 	graph.nodes[i] = { "name": d };
+			     // });
 
 			     sankey
 			     .nodes(graph.nodes)
@@ -154,9 +168,9 @@ angular.module('foglightApp')
 					return d.color = color(d.name.replace(/ .*/, "")); })
 				// .style("stroke", function(d) { 
 				// 	return d3.rgb(d.color).darker(2); })
-				.append("title")
-				.text(function(d) { 
-					return d.name + "\n" + format(d.value); });
+.append("title")
+.text(function(d) { 
+	return d.name + "\n" + format(d.value); });
 
 				// add in the title for the nodes
 				node.append("text")

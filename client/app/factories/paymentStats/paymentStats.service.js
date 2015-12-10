@@ -15,11 +15,17 @@ angular.module('foglightApp')
       }
     });
 
-    // var recipientNames = $resource('api/payments/FIPS/RecipientStats/:FIPS', {FIPS: '@FIPS'}, {
-    //   update: {
-    //     method: 'PUT'
-    //   }
-    // });
+    var recipientNames = $resource('api/physicians/FIPS/RecipientNames/:FIPS', {FIPS: '@FIPS'}, {
+      update: {
+        method: 'PUT'
+      }
+    });
+
+    var countyInfo = $resource('api/countys/FIPS/:FIPS', {FIPS: '@FIPS'}, {
+      update: {
+        method: 'PUT'
+      }
+    });
 
     var dataObj = {
         '0to500': [],
@@ -46,6 +52,7 @@ angular.module('foglightApp')
       };
 
     var recipientStatsMap = {};
+    var recipientNamesMap = {};
 
     var findBin = function(val){
     var bins = ['0to500', '500to1k', '1to5k', '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k'];
@@ -62,11 +69,17 @@ angular.module('foglightApp')
       statsObj = newStats;
     }
 
-    paymentStats.formatData = function(data,recipientStats){
+    paymentStats.formatData = function(data,recipientStats,recipientNames){
 
-      console.log("this is data: ", data)
+      //convert names and stats from back end into a hashmap for sorting payment data points into d3 buckets
+      for (var key in recipientNames) {
+        if (recipientNames.hasOwnProperty(key) && !isNaN(key)) {
+          recipientNamesMap[recipientNames[key]._id] = recipientNames[key].value;
+        }
+      }
 
-      //convert stats from back end into a hashmap for sorting payment data points into d3 buckets
+      console.log("this is recipientNamesMap: ", recipientNamesMap)
+
       for (var key in recipientStats) {
         if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
           recipientStatsMap[recipientStats[key]._id] = findBin(recipientStats[key].value);
@@ -113,11 +126,20 @@ angular.module('foglightApp')
             
             var obj1 = {};
 
+            if (recipientNamesMap[data[i].recipient_profile_ID] === undefined){
+            console.log("this is data[i].recipient_profile_ID inside paymentStats: ", data[i].recipient_profile_ID)
+            console.log("this is recipientNamesMap[data[i].recipient_profile_ID] inside paymentStats: ", recipientNamesMap[data[i].recipient_profile_ID])
+          }
+
             obj1["source"] = data[i].drugs[j];
-            obj1["target"] = data[i].recipient_profile_ID;
+            obj1["sourceType"] = "drug";
+            // obj1["target"] = data[i].recipient_profile_ID;
+            obj1["target"] = recipientNamesMap[data[i].recipient_profile_ID];
+            obj1["targetType"] = "recipient";
+            // obj1["recipient_fullName"] = recipientNames[data[i].recipient_profile_ID];
             obj1["value"] = data[i].amount_USD/max2;
             obj1["linkType"] = "drug_recipient";
-            if(obj1.target !== null){obj1.target = obj1.target.toString()}
+            // if(obj1.target !== null){obj1.target = obj1.target.toString()}
 
             bin.push(obj1)
           }
@@ -125,11 +147,15 @@ angular.module('foglightApp')
         if (data[i].drugs.length === 0) { 
         var obj2 = {};
         obj2["source"] = formatMfr(data[i].submitting_mfr);
-        obj2["mfr_fullname"] = data[i].submitting_mfr;
-        obj2["target"] = data[i].recipient_profile_ID;
+        obj2["sourceType"] = "mfr";
+        obj2["mfr_fullName"] = data[i].submitting_mfr;
+        // obj2["target"] = data[i].recipient_profile_ID;
+        obj2["target"] = recipientNamesMap[data[i].recipient_profile_ID];
+        obj2["targetType"] = "recipient";
+        // obj2["recipient_fullName"] = recipientNames[data[i].recipient_profile_ID];
         obj2["value"] = data[i].amount_USD;
         obj2["linkType"] = "mfr_recipient";
-        if(obj2.target !== null){obj2.target = obj2.target.toString()}
+        // if(obj2.target !== null){obj2.target = obj2.target.toString()}
         bin.push(obj2); 
       }
     }
@@ -148,8 +174,10 @@ angular.module('foglightApp')
 
                 var newLink = {};
                 newLink["source"] = formatMfr(mfrKey);
-                newLink["mfr_fullname"] = mfrKey;
+                newLink["sourceType"] = "mfr";
+                newLink["mfr_fullName"] = mfrKey;
                 newLink["target"] = drugKey;
+                newLink["targetType"] = "drug";
                 newLink["value"] = amount;
                 newLink["linkType"] = "mfr_drug";
 
@@ -176,7 +204,9 @@ angular.module('foglightApp')
     }
     return {
       paymentStats: paymentStats,
+      countyInfo: countyInfo,
       recipientStats: recipientStats,
+      recipientNames: recipientNames,
       dataObj: dataObj,
       recipientStatsMap: recipientStatsMap
     };

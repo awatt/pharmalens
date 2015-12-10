@@ -6,17 +6,15 @@ var mongoose = require('mongoose'),
 var PhysicianSchema = new Schema({
 	_id: Number,
   	profile_ID: { type: Number, required: true },
-  	name_first: String,
-  	name_last: String,
-  	name_middle: String,
-  	name_suffix: String,	
+  	first_name: String,
+  	last_name: String,
 	primary_type: String,
 	specialty: String,
 	address_1: String,
 	address_2: String,
 	city: String,
 	state: String,
-	ZIP: String,
+	zip: String,
 	FIPS: Number,
 	payments: [{ type: Schema.Types.ObjectId, ref: 'Payment' }]
 	// _payments: {type: Schema.Types.ObjectId, ref: 'Payment'}
@@ -26,4 +24,3 @@ var PhysicianSchema = new Schema({
 PhysicianSchema.index({profile_ID: 1});
 
 module.exports = mongoose.model('Physician', PhysicianSchema);
-

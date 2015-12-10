@@ -57,7 +57,7 @@ d3.sankey = function(width) {
   };
 
   sankey.link = function() {
-    var curvature = .5;
+    var curvature = .7;
 
     function link(d) {
       var x0 = d.source.x + d.source.dx,
@@ -86,10 +86,12 @@ d3.sankey = function(width) {
   // Also, if the source and target are not objects, assume they are indices.
   function computeNodeLinks() {
     nodes.forEach(function(node) {
+      // console.log("this is node inside computeNodeLinks: ", node)
       node.sourceLinks = [];
       node.targetLinks = [];
     });
     links.forEach(function(link) {
+      // console.log("this is link inside computeNodeLinks: ", link)
       var source = link.source,
           target = link.target;
       if (typeof source === "number") source = link.source = nodes[link.source];
@@ -117,6 +119,8 @@ d3.sankey = function(width) {
     var remainingNodes = nodes,
         nextNodes,
         x = 0;
+
+    // console.log("this is remainingNodes in computeNodeBreadths: ", remainingNodes)
 
     while (remainingNodes.length) {
       nextNodes = [];
@@ -155,6 +159,12 @@ d3.sankey = function(width) {
   function scaleNodeBreadths(kx) {
     nodes.forEach(function(node) {
       node.x *= kx;
+      // console.log("this is node.nodeType in scaleNodeBreadths: ", node.nodeType)
+      // console.log("this is node.x in scaleNodeBreadths: ", node.x)
+      if(node.nodeType === "drug"){
+          var tempBreadth = node.x;
+        node.x = tempBreadth/2;
+      }
     });
   }
 

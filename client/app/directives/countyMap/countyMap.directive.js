@@ -6,6 +6,7 @@ angular.module('foglightApp')
 		restrict: 'EA',
 		scope: {
 			countyfocus: '=',
+			countyinfo: '=',
 			hasdata: '='
 		},
 
@@ -112,29 +113,42 @@ angular.module('foglightApp')
 					parent.each(function(d,i) {            
 						d3.selectAll(this.childNodes).remove();
 					});
+
+					console.log("this is queried FIPS inside countyMap: ", d.id)
 					// d3.select(".chartParent").select("svg").remove();
 
+					paymentStats.countyInfo.query({FIPS: d.id}).$promise.then(function(countyInfo){
+						console.log("this is countyInfo inside countyMap query: ", countyInfo)
+						scope.countyinfo = countyInfo;
+					})
+
 					//prepare new selected county data
-					paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
-						paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
+					paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
+						paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
+							paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
 
-							var binObj = paymentStats.paymentStats.formatData(stats,recipientStats);
+								var binObj = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
 
-							for (var key in binObj) {
-								if (binObj.hasOwnProperty(key)) {
-									scope.hasdata[key] = binObj[key];
+								for (var key in binObj) {
+									if (binObj.hasOwnProperty(key)) {
+										scope.hasdata[key] = binObj[key];
+									}
 								}
-							}
-							scope.countyfocus = d.id;
-							
-							setTimeout(function () {
-								scope.$apply(function () {
-									scope.message = "Timeout called!";
-								});
-							}, 2000);
+								scope.countyfocus = d.id;
+								
+								setTimeout(function () {
+									scope.$apply(function () {
+										scope.message = "Timeout called!";
+									});
+								}, 2000);
 
+							})
 						})
 					})
+
+
+
+
 				})
 
 			}

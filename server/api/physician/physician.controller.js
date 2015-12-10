@@ -13,13 +13,26 @@ exports.index = function(req, res) {
 
 exports.recipientNamesByFIPS = function(req, res) {
   var o = {};
-  o.map = function(){ var fullName = this.name_first + ',' + this.name_middle + ',' + this.name_last; emit(this.profile_ID, fullName); };
+  o.map = function(){var fullName = this.first_name.substr(0,1).toUpperCase() + ". " + this.last_name.substr(0,1).toUpperCase() + "" + this.last_name.substr(1).toLowerCase(); emit(this.profile_ID, fullName); };
   o.reduce = function(profile_ID, fullName){return Array(fullName);};
   o.query = { FIPS: req.params.FIPS };
 
-  Payment.mapReduce(o, function (err, results) {
+  Physician.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
     console.log("these are physician mapreduce results in the back end: ", results)
+    return res.json(200, results);
+})
+};
+
+exports.recipientStatsByFIPS = function(req, res) {
+  var o = {};
+  o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
+  o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};
+  o.query = { recipient_FIPS: req.params.FIPS };
+
+  Payment.mapReduce(o, function (err, results) {
+    if(err) {return handleError(res, err); }
+    // console.log("these are mapreduce results in the back end: ", results)
     return res.json(200, results);
 })
 };
