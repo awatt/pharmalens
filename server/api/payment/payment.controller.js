@@ -7,7 +7,9 @@ var Payment = require('./payment.model');
 // Get a list of payments by FIPS
 exports.findByFIPS = function(req, res) {
   Payment.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
+    console.log("this is req.params.FIPS on the payments back end: ", req.params.FIPS)
     if(err) {return handleError(res, err); }
+    // console.log("this is payments in the back end: ", payments)
       return res.json(200, payments);
   });
 };

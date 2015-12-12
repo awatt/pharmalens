@@ -57,7 +57,7 @@ d3.sankey = function(width) {
   };
 
   sankey.link = function() {
-    var curvature = .7;
+    var curvature = .8;
 
     function link(d) {
       var x0 = d.source.x + d.source.dx,
@@ -163,7 +163,7 @@ d3.sankey = function(width) {
       // console.log("this is node.x in scaleNodeBreadths: ", node.x)
       if(node.nodeType === "drug"){
           var tempBreadth = node.x;
-        node.x = tempBreadth/2;
+        node.x = tempBreadth/1.5;
       }
     });
   }

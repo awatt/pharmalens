@@ -50,9 +50,9 @@ angular.module('foglightApp')
 				var test = d3.select(parentID).select("svg")
 
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
-				width = 500 - margin.left - margin.right,
+				width = 1200 - margin.left - margin.right,
 				// height = .2*totalValue - margin.top - margin.bottom;
-				height = numRecipients*20 + totalRecipientPayments*10 - margin.top - margin.bottom;
+				height = numRecipients*18 + totalRecipientPayments*10 - margin.top - margin.bottom;
 				
 
 				var formatNumber = d3.format(",.0f"),    // zero decimal places
@@ -62,12 +62,12 @@ angular.module('foglightApp')
 				// append the svg canvas to the page
 				var svg = d3.select(parentID).append("svg")
 				.attr("class", "sankey")
-				.attr("width", height + margin.left + margin.right)
-				.attr("height", width + margin.top + margin.bottom)
+				.attr("width", width + margin.left + margin.right)
+				.attr("height", height + margin.top + margin.bottom)
 				.append("g")
-				.attr("transform", "translate(" + height + ", " + 0 + ") rotate(90)")
-				// .attr("transform", 
-				// 	"translate(" + margin.left + "," + margin.top + ")")
+				// .attr("transform", "translate(" + height + ", " + 0 + ") rotate(90)")
+				.attr("transform", 
+					"translate(" + margin.left + "," + margin.top + ")")
 
 
 
@@ -164,24 +164,21 @@ angular.module('foglightApp')
 				node.append("rect")
 				.attr("height", function(d) { return d.dy; })
 				.attr("width", sankey.nodeWidth())
-				.style("fill", function(d) { 
-					return d.color = color(d.name.replace(/ .*/, "")); })
-				// .style("stroke", function(d) { 
-				// 	return d3.rgb(d.color).darker(2); })
-.append("title")
-.text(function(d) { 
-	return d.name + "\n" + format(d.value); });
+				.style("fill", function(d) { return d.color = color(d.name.replace(/ .*/, "")); })
+				// .style("stroke", function(d) { return d3.rgb(d.color).darker(2); })
+				.append("title")
+				.text(function(d) { return d.name + "\n" + format(d.value); });
 
 				// add in the title for the nodes
 				node.append("text")
 				.attr("x", 0)
 				.attr("y", 0)
 				.attr("dy", 0)
-				// .attr("y", function(d) { return d.dy / 2; })
-				// .attr("dy", ".35em")
-				.attr("transform", function(d){if (!isNaN(Number(d.name))){return "rotate(-60)"}; })
+				.attr("y", function(d) { return d.dy / 2; })
+				.attr("dy", ".35em")
+				// .attr("transform", function(d){return "rotate(-90)";})
 				.attr("text-anchor", "end")
-				// .attr("transform", null)
+				.attr("transform", null)
 				.text(function(d) { return d.name; })
 				.filter(function(d) { return d.x < width / 2; })
 				.attr("x", 6 + sankey.nodeWidth())

@@ -13,7 +13,7 @@ exports.index = function(req, res) {
 
 exports.recipientNamesByFIPS = function(req, res) {
   var o = {};
-  o.map = function(){var fullName = this.first_name.substr(0,1).toUpperCase() + ". " + this.last_name.substr(0,1).toUpperCase() + "" + this.last_name.substr(1).toLowerCase(); emit(this.profile_ID, fullName); };
+  o.map = function(){var fullName = this.first_name.substr(0,1).toUpperCase() + this.first_name.substr(1).toLowerCase() + " " + this.last_name.substr(0,1).toUpperCase() + "" + this.last_name.substr(1).toLowerCase(); emit(this.profile_ID, fullName); };
   o.reduce = function(profile_ID, fullName){return Array(fullName);};
   o.query = { FIPS: req.params.FIPS };
 

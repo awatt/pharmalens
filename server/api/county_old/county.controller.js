@@ -3,13 +3,14 @@
 var _ = require('lodash');
 var County = require('./county.model');
 
+
 // Get county info by FIPS
 exports.findByFIPS = function(req, res) {
-  County.find({ FIPS: req.params.FIPS }).exec(function(err, county) {
+  County.find({ FIPS: req.params.FIPS }).exec(function(err, countys) {
     console.log("this is req.params.FIPS in county back end query: ", req.params.FIPS)
     if(err) {return handleError(res, err); }
-    console.log("this is county returned in the back end: ", county)
-      return res.json(200, county);
+    console.log("this is countys returned in the back end: ", countys)
+      return res.json(200, countys);
   });
 };
 

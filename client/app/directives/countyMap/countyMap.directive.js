@@ -114,37 +114,44 @@ angular.module('foglightApp')
 						d3.selectAll(this.childNodes).remove();
 					});
 
+					var countyState = nameById.get(d.id);
+
 					console.log("this is queried FIPS inside countyMap: ", d.id)
+					console.log("this is countyState inside countyMap: ", countyState)
+					scope.countyinfo = countyState;
+					scope.$apply()
 					// d3.select(".chartParent").select("svg").remove();
 
-					paymentStats.countyInfo.query({FIPS: d.id}).$promise.then(function(countyInfo){
-						console.log("this is countyInfo inside countyMap query: ", countyInfo)
-						scope.countyinfo = countyInfo;
-					})
+					// paymentStats.countyInfo.query({FIPS: d.id}).$promise.then(function(countyInfo){
+					// 	console.log("this is countyInfo inside countyMap query: ", countyInfo)
+					// 	scope.countyinfo = countyInfo;
+						//prepare new selected county data
+						
+						paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
+							paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
+								paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
 
-					//prepare new selected county data
-					paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
-						paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
-							paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
+									var binObj = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
 
-								var binObj = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
-
-								for (var key in binObj) {
-									if (binObj.hasOwnProperty(key)) {
-										scope.hasdata[key] = binObj[key];
+									for (var key in binObj) {
+										if (binObj.hasOwnProperty(key)) {
+											scope.hasdata[key] = binObj[key];
+										}
 									}
-								}
-								scope.countyfocus = d.id;
-								
-								setTimeout(function () {
-									scope.$apply(function () {
-										scope.message = "Timeout called!";
-									});
-								}, 2000);
+									scope.countyfocus = d.id;
+									
+									setTimeout(function () {
+										scope.$apply(function () {
+											scope.message = "Timeout called!";
+										});
+									}, 2000);
 
+								})
 							})
 						})
-					})
+					// })
+
+
 
 
 

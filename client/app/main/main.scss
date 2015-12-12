@@ -123,13 +123,13 @@
 
 //Bootstrap Modal
 
-.modal-body {
-    overflow-y:auto;
-    overflow-x:auto;
+.md-accent{
+  height: 550px;
 }
 
 .modal-dialog{
   width: 90%;
+  height: 90%;
 }
 
 //Angular Material Design - Tabs
