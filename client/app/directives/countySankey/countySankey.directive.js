@@ -87,6 +87,8 @@ angular.module('foglightApp')
 				//set up graph in same style as original example but empty
 				var graph = {"nodes" : [], "links" : []};
 
+				var getNature = function(data){ if (data.nature) return data.nature; return "";}
+
 				data.forEach(function (d) {
 				  	// console.log("this is d inside initial graph build: ", d)
 				  	graph.nodes.push({ "name": d.source, "nodeType": d.sourceType });
@@ -94,6 +96,7 @@ angular.module('foglightApp')
 				  	graph.links.push({ "source": d.source,
 				  		"target": d.target,
 				  		"value": +d.value,
+				  		"nature": getNature(d),
 				  		"linkType": d.linkType });
 				  });
 
@@ -144,7 +147,8 @@ angular.module('foglightApp')
 				// add the link titles
 				link.append("title")
 				.text(function(d) {
-					return d.source.name + " → " + 
+					console.log("this is d inside link title: ", d)
+					return d.source.name + " → " + d.nature + " → " + 
 					d.target.name + "\n" + format(d.value); });
 
 				// add in the nodes

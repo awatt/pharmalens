@@ -51,6 +51,31 @@ angular.module('foglightApp')
         'over200k': {}
       };
 
+    var dataObj_drug = {
+        '0to500': {},
+        '500to1k': {},
+        '1to5k': {}, 
+        '5to10k': {},
+        '10to25k': {},
+        '25to50k': {},
+        '50to100k': {},
+        '100to200k': {},
+        'over200k': {}
+      };
+
+    var dataObj_direct = {
+        '0to500': {},
+        '500to1k': {},
+        '1to5k': {}, 
+        '5to10k': {},
+        '10to25k': {},
+        '25to50k': {},
+        '50to100k': {},
+        '100to200k': {},
+        'over200k': {}
+      };
+
+
     var recipientStatsMap = {};
     var recipientNamesMap = {};
 
@@ -78,7 +103,6 @@ angular.module('foglightApp')
         }
       }
 
-      console.log("this is recipientNamesMap: ", recipientNamesMap)
 
       for (var key in recipientStats) {
         if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
@@ -106,15 +130,25 @@ angular.module('foglightApp')
 
       //format each data point for d3 and push into appropriate visualization bin
       for (var i = 0, max = data.length; i<max; i++){
-        var bin = dataObj[recipientStatsMap[data[i].recipient_profile_ID]];
-        var bin_mfr = dataObj_mfr[recipientStatsMap[data[i].recipient_profile_ID]];
+        
+        var bin = dataObj[recipientStatsMap[data[i].recipient_profile_ID]],
+        bin_mfr = dataObj_mfr[recipientStatsMap[data[i].recipient_profile_ID]],
+        bin_drug = dataObj_drug[recipientStatsMap[data[i].recipient_profile_ID]],
+        bin_direct = dataObj_direct[recipientStatsMap[data[i].recipient_profile_ID]],
+        mfr = data[i].submitting_mfr, 
+        recipient = data[i].recipient_profile_ID,
+        amount = data[i].amount_USD,
+        nature = data[i].nature_of_payment
+        
         if (data[i].drugs.length){
           for(var j = 0, max2 = data[i].drugs.length; j<max2; j++){
+
+            var drug = data[i].drugs[j];
+
+            amount = amount/max2
+
             
             //aggregate mfr_drug payment values into single node-link pairs
-            var mfr = data[i].submitting_mfr, drug = data[i].drugs[j], amount = data[i].amount_USD/max2;
-          
-
             if (bin_mfr[mfr] === undefined){
               bin_mfr[mfr] = {};
             };
@@ -124,39 +158,36 @@ angular.module('foglightApp')
             };
             bin_mfr[mfr][drug] += amount;
             
-            var obj1 = {};
+            if (bin_drug[drug] === undefined){
+              bin_drug[drug] = {};
+            };
 
-            if (recipientNamesMap[data[i].recipient_profile_ID] === undefined){
-            console.log("this is data[i].recipient_profile_ID inside paymentStats: ", data[i].recipient_profile_ID)
-            console.log("this is recipientNamesMap[data[i].recipient_profile_ID] inside paymentStats: ", recipientNamesMap[data[i].recipient_profile_ID])
-          }
+            if (bin_drug[drug][recipient] === undefined){
+              bin_drug[drug][recipient] = {};
+            };
 
-            obj1["source"] = data[i].drugs[j];
-            obj1["sourceType"] = "drug";
-            // obj1["target"] = data[i].recipient_profile_ID;
-            obj1["target"] = recipientNamesMap[data[i].recipient_profile_ID];
-            obj1["targetType"] = "recipient";
-            // obj1["recipient_fullName"] = recipientNames[data[i].recipient_profile_ID];
-            obj1["value"] = data[i].amount_USD/max2;
-            obj1["linkType"] = "drug_recipient";
-            // if(obj1.target !== null){obj1.target = obj1.target.toString()}
+            if (bin_drug[drug][recipient][nature] === undefined){
+              bin_drug[drug][recipient][nature] = 0;
+            };
+            bin_drug[drug][recipient][nature] += amount;
 
-            bin.push(obj1)
           }
         }
         if (data[i].drugs.length === 0) { 
-        var obj2 = {};
-        obj2["source"] = formatMfr(data[i].submitting_mfr);
-        obj2["sourceType"] = "mfr";
-        obj2["mfr_fullName"] = data[i].submitting_mfr;
-        // obj2["target"] = data[i].recipient_profile_ID;
-        obj2["target"] = recipientNamesMap[data[i].recipient_profile_ID];
-        obj2["targetType"] = "recipient";
-        // obj2["recipient_fullName"] = recipientNames[data[i].recipient_profile_ID];
-        obj2["value"] = data[i].amount_USD;
-        obj2["linkType"] = "mfr_recipient";
-        // if(obj2.target !== null){obj2.target = obj2.target.toString()}
-        bin.push(obj2); 
+
+          if (bin_direct[mfr] === undefined){
+            bin_direct[mfr] = {};
+          };
+
+          if (bin_direct[mfr][recipient] === undefined){
+            bin_direct[mfr][recipient] = {};
+          };
+
+          if (bin_direct[mfr][recipient][nature] === undefined){
+            bin_direct[mfr][recipient][nature] = 0;
+          };
+          bin_direct[mfr][recipient][nature] += amount;
+
       }
     }
 
@@ -182,6 +213,78 @@ angular.module('foglightApp')
                 newLink["linkType"] = "mfr_drug";
 
                 dataObj[binKey].push(newLink);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    for (var binKey in dataObj_direct) {
+      if (dataObj_direct.hasOwnProperty(binKey)) {
+        var bin = dataObj_direct[binKey]
+
+        for (var mfrKey in bin) {
+          if (bin.hasOwnProperty(mfrKey)) {
+            var mfrBin = bin[mfrKey];
+
+            for (var recipientKey in mfrBin) {
+              if (mfrBin.hasOwnProperty(recipientKey)) {
+                var recipientBin = mfrBin[recipientKey];
+
+                for (var natureKey in recipientBin){
+                  if (recipientBin.hasOwnProperty(natureKey)){
+                    var amount = recipientBin[natureKey];
+                
+                    var newLink = {};
+                    newLink["source"] = formatMfr(mfrKey);
+                    newLink["sourceType"] = "mfr";
+                    newLink["target"] = recipientNamesMap[recipientKey];
+                    newLink["targetType"] = "recipient";
+                    newLink["value"] = amount;
+                    newLink["nature"] = natureKey;
+                    newLink["linkType"] = "mfr_recipient";
+
+                    dataObj[binKey].push(newLink);
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    for (var binKey in dataObj_drug) {
+      if (dataObj_drug.hasOwnProperty(binKey)) {
+        var bin = dataObj_drug[binKey]
+
+        for (var drugKey in bin) {
+          if (bin.hasOwnProperty(drugKey)) {
+            var drugBin = bin[drugKey];
+
+            for (var recipientKey in drugBin) {
+              if (drugBin.hasOwnProperty(recipientKey)) {
+                var recipientBin = drugBin[recipientKey];
+
+                for (var natureKey in recipientBin){
+                  if (recipientBin.hasOwnProperty(natureKey)){
+                    var amount = recipientBin[natureKey];
+                
+                    var newLink = {};
+                    newLink["source"] = drugKey;
+                    newLink["sourceType"] = "drug";
+                    newLink["target"] = recipientNamesMap[recipientKey];
+                    newLink["targetType"] = "recipient";
+                    newLink["value"] = amount;
+                    newLink["nature"] = natureKey;
+                    newLink["linkType"] = "drug_recipient";
+
+                    dataObj[binKey].push(newLink);
+
+                  }
+                }
               }
             }
           }

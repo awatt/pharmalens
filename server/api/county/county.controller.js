@@ -13,6 +13,15 @@ exports.findByFIPS = function(req, res) {
   });
 };
 
+exports.findByFIPS = function(req, res) {
+  Payment.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
+    console.log("this is req.params.FIPS on the payments back end: ", req.params.FIPS)
+    if(err) {return handleError(res, err); }
+    // console.log("this is payments in the back end: ", payments)
+      return res.json(200, payments);
+  });
+};
+
 // Get list of countys
 exports.index = function(req, res) {
   County.find(function (err, countys) {
