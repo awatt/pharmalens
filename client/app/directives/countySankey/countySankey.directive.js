@@ -20,6 +20,20 @@ angular.module('foglightApp')
 
 				// d3.select(".sankey").remove();
 
+				console.log('this is data passed into sankey: ', data)
+				//a = total number of recipients
+				//b = median drug_recipient link value in $
+				//c = avg # of links per recipient
+				//
+				//avg $ amount per recipient = b*c
+				//if a is <= 3; 
+				//12 recipient; median 100; height 2500px; 500-1000 bin; avg 16 links per recipient
+				//13px per link, times multiplier = median link value - mid link value/100
+				//each recipient should have about 200px for each 15 links, times a multiplier for difference btw
+				//median and min value - multiplier is the difference divided by 100
+				//range from 1000px to 10000px
+				//
+
 				var totalValue = 0;
 				var totalRecipientPayments = 0;
 
@@ -34,13 +48,23 @@ angular.module('foglightApp')
 				}
 
 				var numRecipients = countRecipients();
+				var linkValues = [];
+				var linkMultiplier = 0;
+				var linkNumber = 0;
 
 				for (var i=0, max = data.length; i<max; i++){
 					if (data[i]["linkType"] === "drug_recipient" || data[i]["linkType"] === "mfr_recipient"){
-						totalRecipientPayments ++;
-						totalValue += data[i].value;
+						linkValues.push(data[i].value);
 					}
 				}
+
+				var numLinks = linkValues.length;
+				var maxLinkValue = d3.max(linkValues);
+				var medianLinkValue = d3.median(linkValues);
+				var minLinkValue = d3.min(linkValues);
+				var lowerScaleMultiplier = (maxLinkValue - medianLinkValue)/200;
+				var upperScaleMultiplier = (medianLinkValue - minLinkValue)/50;
+				var multiplier = lowerScaleMultiplier*upperScaleMultiplier*(numRecipients/18);
 
 				// console.log("this is bin, totalRecipientPayments, numRecipients, totalValue inside countySankey: ", attrs.id + ' ' + totalRecipientPayments + ' ' + numRecipients +' ' + totalValue)
 
@@ -52,7 +76,7 @@ angular.module('foglightApp')
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
 				width = 1200 - margin.left - margin.right,
 				// height = .2*totalValue - margin.top - margin.bottom;
-				height = numRecipients*18 + totalRecipientPayments*10 - margin.top - margin.bottom;
+				height = numLinks*50*multiplier - margin.top - margin.bottom;
 				
 
 				var formatNumber = d3.format(",.0f"),    // zero decimal places
@@ -87,7 +111,7 @@ angular.module('foglightApp')
 				//set up graph in same style as original example but empty
 				var graph = {"nodes" : [], "links" : []};
 
-				var getNature = function(data){ if (data.nature) return data.nature; return "";}
+				var getNature = function(x){ if (x.nature) return x.nature; return "";}
 
 				data.forEach(function (d) {
 				  	// console.log("this is d inside initial graph build: ", d)
@@ -147,7 +171,7 @@ angular.module('foglightApp')
 				// add the link titles
 				link.append("title")
 				.text(function(d) {
-					console.log("this is d inside link title: ", d)
+					// console.log("this is d inside link title: ", d)
 					return d.source.name + " → " + d.nature + " → " + 
 					d.target.name + "\n" + format(d.value); });
 

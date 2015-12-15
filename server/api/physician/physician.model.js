@@ -16,7 +16,8 @@ var PhysicianSchema = new Schema({
 	state: String,
 	zip: String,
 	FIPS: Number,
-	payments: [{ type: Schema.Types.ObjectId, ref: 'Payment' }]
+	totalPayments: [Object]
+	// payments: [{ type: Schema.Types.ObjectId, ref: 'Payment' }]
 	// _payments: {type: Schema.Types.ObjectId, ref: 'Payment'}
     // _grants: {type: Schema.Types.ObjectId, ref: 'Grant'}
 });
