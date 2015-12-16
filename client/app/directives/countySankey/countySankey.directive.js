@@ -5,14 +5,13 @@ angular.module('foglightApp')
 	return {
 		restrict: 'EA',
 		scope: {
-			countyfocus: '@',
-			hasdata: '@'
+			binNum: '=',
 		},
 
 		link: function (scope, element, attrs) {
 
 
-			scope.$watch("countyfocus", function(newValue, oldValue){
+			// scope.$watch("countyfocus", function(newValue, oldValue){
 
 				var renderSankey = function(data){
 
@@ -21,6 +20,7 @@ angular.module('foglightApp')
 				// d3.select(".sankey").remove();
 
 				console.log('this is data passed into sankey: ', data)
+				console.log("this is attrs.id in sankey directive: ", attrs.id)
 				//a = total number of recipients
 				//b = median drug_recipient link value in $
 				//c = avg # of links per recipient
@@ -69,9 +69,9 @@ angular.module('foglightApp')
 				// console.log("this is bin, totalRecipientPayments, numRecipients, totalValue inside countySankey: ", attrs.id + ' ' + totalRecipientPayments + ' ' + numRecipients +' ' + totalValue)
 
 				var units = "$";
-				var parentID = "#chart_" + attrs.id;
+				// var parentID = "#chart_" + attrs.id;
 
-				var test = d3.select(parentID).select("svg")
+				// var test = d3.select(parentID).select("svg")
 
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
 				width = 1200 - margin.left - margin.right,
@@ -84,7 +84,7 @@ angular.module('foglightApp')
 				color = d3.scale.category20();
 
 				// append the svg canvas to the page
-				var svg = d3.select(parentID).append("svg")
+				var svg = d3.select('#chart-' + scope.binNum).append("svg")
 				.attr("class", "sankey")
 				.attr("width", width + margin.left + margin.right)
 				.attr("height", height + margin.top + margin.bottom)
@@ -125,8 +125,8 @@ angular.module('foglightApp')
 				  });
 
 				var subGraph = d3.nest()
-					.key(function (d) { return d.name; })
-					.map(graph.nodes)
+				.key(function (d) { return d.name; })
+				.map(graph.nodes)
 
 				// console.log("this is subGraph: ", subGraph)
 
@@ -154,10 +154,10 @@ angular.module('foglightApp')
 			     // 	graph.nodes[i] = { "name": d };
 			     // });
 
-			     sankey
-			     .nodes(graph.nodes)
-			     .links(graph.links)
-			     .layout(width, 32);
+sankey
+.nodes(graph.nodes)
+.links(graph.links)
+.layout(width, 32);
 
 				// add in the links
 				var link = svg.append("g").selectAll(".link")
@@ -228,6 +228,7 @@ angular.module('foglightApp')
 
 	} //close renderSankey function
 
+	console.log("this is paymentStats inside countySankey:", paymentStats)
 
 	var data = paymentStats.dataObj[attrs.id];
 
@@ -237,7 +238,7 @@ angular.module('foglightApp')
 
 
 
-}) //close scope.$watch function
+// }) //close scope.$watch function
 
 }  //close link function
 

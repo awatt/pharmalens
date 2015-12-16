@@ -7,7 +7,7 @@ angular.module('foglightApp')
 		scope: {
 			countyfocus: '=',
 			countyinfo: '=',
-			hasdata: '='
+			bins: '='
 		},
 
 		link: function (scope, element, attrs) {
@@ -114,12 +114,10 @@ angular.module('foglightApp')
 						d3.selectAll(this.childNodes).remove();
 					});
 
+					//update scope for full name of queried county
 					var countyState = nameById.get(d.id);
-
-					console.log("this is queried FIPS inside countyMap: ", d.id)
-					console.log("this is countyState inside countyMap: ", countyState)
 					scope.countyinfo = countyState;
-					scope.$apply()
+					
 					// d3.select(".chartParent").select("svg").remove();
 
 					// paymentStats.countyInfo.query({FIPS: d.id}).$promise.then(function(countyInfo){
@@ -131,14 +129,11 @@ angular.module('foglightApp')
 							paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
 								paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
 
-									var binObj = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
+									scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
+									// scope.$apply()
+									console.log("this is scope.bins inside countyMap: ", scope.bins)
 
-									for (var key in binObj) {
-										if (binObj.hasOwnProperty(key)) {
-											scope.hasdata[key] = binObj[key];
-										}
-									}
-									scope.countyfocus = d.id;
+									// scope.countyfocus = d.id;
 									
 									setTimeout(function () {
 										scope.$apply(function () {
@@ -150,11 +145,6 @@ angular.module('foglightApp')
 							})
 						})
 					// })
-
-
-
-
-
 
 				})
 
