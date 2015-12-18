@@ -6,6 +6,7 @@ angular.module('foglightApp')
 		restrict: 'EA',
 		scope: {
 			binNum: '=',
+			bin: '='
 		},
 
 		link: function (scope, element, attrs) {
@@ -19,8 +20,8 @@ angular.module('foglightApp')
 
 				// d3.select(".sankey").remove();
 
-				console.log('this is data passed into sankey: ', data)
-				console.log("this is attrs.id in sankey directive: ", attrs.id)
+				// console.log('this is data passed into sankey: ', data)
+				// console.log("this is attrs.id in sankey directive: ", attrs.id)
 				//a = total number of recipients
 				//b = median drug_recipient link value in $
 				//c = avg # of links per recipient
@@ -69,14 +70,12 @@ angular.module('foglightApp')
 				// console.log("this is bin, totalRecipientPayments, numRecipients, totalValue inside countySankey: ", attrs.id + ' ' + totalRecipientPayments + ' ' + numRecipients +' ' + totalValue)
 
 				var units = "$";
-				// var parentID = "#chart_" + attrs.id;
-
-				// var test = d3.select(parentID).select("svg")
+				
 
 				var margin = {top: 10, right: 10, bottom: 10, left: 10},
 				width = 1200 - margin.left - margin.right,
 				// height = .2*totalValue - margin.top - margin.bottom;
-				height = numLinks*50*multiplier - margin.top - margin.bottom;
+				height = numLinks*40 - margin.top - margin.bottom;
 				
 
 				var formatNumber = d3.format(",.0f"),    // zero decimal places
@@ -154,10 +153,10 @@ angular.module('foglightApp')
 			     // 	graph.nodes[i] = { "name": d };
 			     // });
 
-sankey
-.nodes(graph.nodes)
-.links(graph.links)
-.layout(width, 32);
+				sankey
+				.nodes(graph.nodes)
+				.links(graph.links)
+				.layout(width, 32);
 
 				// add in the links
 				var link = svg.append("g").selectAll(".link")
@@ -228,13 +227,11 @@ sankey
 
 	} //close renderSankey function
 
-	console.log("this is paymentStats inside countySankey:", paymentStats)
+	// console.log("this is paymentStats inside countySankey:", paymentStats)
 
-	var data = paymentStats.dataObj[attrs.id];
+	var data = paymentStats.dataObj[scope.bin];
 
-	if(scope.hasdata){
 		renderSankey(data);
-	}
 
 
 

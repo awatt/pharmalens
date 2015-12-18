@@ -23,110 +23,13 @@
 
       <div class="modal-body">
 
-              <!-- <div flex id="dayChart" >
-        <md-tabs md-selected="selectedIndex" >
-
-          <md-tab ng-repeat="day in days" label="{{day.date}}" ng-mousedown="changeDay(selectedIndex,$index)" ng-if="isDays.value">
-            <md-content>
-
-              <div id="chart-{{$index}}" response-chart height-mult="mult" on-rect-click="pullData(response)" day="day" day-num="$index"></div>
-
-            </md-content>
-          </md-tab>
-
-        </md-tabs>
-      </div> -->
-
         <md-tabs flex class="md-accent" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
-
-
           <md-tab ng-repeat="bin in bins"  ng-if="isBins.value">
-
-            <md-tab-label>{{bin}}</md-tab-label>
-
+            <md-tab-label>{{bin.bin}} <span ng-if="bin.rawAmount > 0">(${{bin.rawAmount | number:2}})</span></md-tab-label>
             <md-tab-body>
-            
-            <div id="chart-{{$index}}" county-sankey bin-num="$index" flex style="overflow: scroll; overflow-x: hidden;"></div>
-            
+            <div id="chart-{{$index}}" county-sankey bin-num="$index" bin="bin.bin" flex style="overflow: scroll; overflow-x: hidden;"></div>
             </md-tab-body>
           </md-tab>
-
-
-       <!--  
-          <md-tab id="tab1" ng-if="hasdata['0to500']">
-            <md-tab-label>Under $500</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_0to500"  flex style="overflow: scroll; overflow-x: hidden;" ></div>
-            <div id="0to500" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['0to500']}}"></div>
-            </md-tab-body>
-          </md-tab>
-
-          <md-tab id="tab2" ng-if="hasdata['500to1k']">
-            <md-tab-label>$500-1k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_500to1k" style="overflow-y-y: scroll; overflow-x: hidden;"></div>
-            <div id="500to1k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['500to1k']}}"></div>
-            </md-tab-body>
-          </md-tab>
-          
-          <md-tab id="tab3" ng-if="hasdata['1to5k']">
-            <md-tab-label>$1k-5k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_1to5k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-              <div id="1to5k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['1to5k']}}"></div>
-            </md-tab-body>
-          </md-tab>
-
-          <md-tab id="tab4" ng-if="hasdata['5to10k']">
-            <md-tab-label>$5k-10k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_5to10k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-              <div id="5to10k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['5to10k']}}"></div>
-            </md-tab-body>
-          </md-tab>
-
-          <md-tab id="tab5" ng-if="hasdata['10to25k']">
-            <md-tab-label>$10k-25k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_10to25k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-              <div id="10to25k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['10to25k']}}"></div>
-            </md-tab-body>
-          </md-tab>
-
-          <md-tab id="tab6" ng-if="hasdata['25to50k']">
-            <md-tab-label>$25k-50k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_25to50k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-              <div id="25to50k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['25to50k']}}"></div>
-            </md-tab-body>
-          </md-tab>
-
-          <md-tab id="tab7" ng-if="hasdata['50to100k']">
-              <md-tab-label>$50k-100k</md-tab-label>
-              <md-tab-body>
-              <div class="chartParent" id="chart_50to100k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-                <div id="50to100k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['50to100k']}}"></div>
-              </md-tab-body>
-            </md-tab>
-          </md-tabs>
-
-          <md-tab id="tab8" ng-if="hasdata['100to200k']">
-            <md-tab-label>$100k-200k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_100to200k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-              <div id="100to200k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['100to200k']}}"></div>
-            </md-tab-body>
-          </md-tab>
-
-          <md-tab id="tab9" ng-if="hasdata['over200k']">
-            <md-tab-label>Over $200k</md-tab-label>
-            <md-tab-body>
-            <div class="chartParent" id="chart_over200k" style="overflow-y: scroll; overflow-x: hidden;"></div>
-              <div id="over200k" county-sankey countyfocus="{{countyfocus}}" hasdata="{{hasdata['over200k']}}"></div>
-            </md-tab-body>
-          </md-tab>
- -->
-
          </md-tabs>
 
       </div>

@@ -83,7 +83,7 @@ angular.module('foglightApp')
 
       for (var key in recipientStats) {
         if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
-          
+          var rawAmount = recipientStats[key].value;
           var bin = findBin(recipientStats[key].value);
           var recipientKey = recipientNamesMap[recipientStats[key]._id];
           recipientStatsMap[recipientKey] = bin;
@@ -95,14 +95,14 @@ angular.module('foglightApp')
             dataObj_drug[recipientKey] = {};
             dataObj_direct[recipientKey] = {};
             dataObj_misc[recipientKey] = {};
-            allBins.push(recipientKey);
+            allBins.push({bin: recipientKey, rawAmount: rawAmount});
           } else {
             if(dataObj[bin] === undefined){
               dataObj[bin] = [];
               dataObj_mfr[bin] = {};
               dataObj_drug[bin] = {};
               dataObj_direct[bin] = {};
-              allBins.push(bin);
+              allBins.push({ bin: bin, rawAmount: 0});
             }
           }
         }
@@ -123,6 +123,14 @@ angular.module('foglightApp')
           objectBin = recipientBin;          
         }
 
+        var getTestAmount = function(totalAmount, drugsArr){
+          if (drugsArr.length){
+            return totalAmount/drugsArr.length;
+          }
+          return totalAmount;
+        }
+
+
         var bin = dataObj[objectBin],
             bin_mfr = dataObj_mfr[objectBin],
             bin_drug = dataObj_drug[objectBin],
@@ -130,18 +138,19 @@ angular.module('foglightApp')
             bin_misc = dataObj_misc[objectBin],
             mfr = data[i].submitting_mfr,
             drugs = data[i].drugs,
-            amount = data[i].amount_USD/data[i].drugs.length,
+            testAmount = getTestAmount(data[i].amount_USD, data[i].drugs),
+            amount = data[i].amount_USD,
             nature = data[i].nature_of_payment;
 
         
-        // if ((recipientBin === '5to10k' && amount < 25) ||
-        //     (recipientBin === '10to25k' && amount < 50) ||
-        //     (recipientBin === '25to50k' && amount < 100) ||
-        //     (recipientBin === '50to100k' && amount < 150) ||
-        //     (recipientBin === '100to200k' && amount < 250) ||
-        //     (recipientBin === 'over200k' && amount < 500)){
+        // if ((recipientBin === '5to10k' && amountPerDrug < 25) ||
+        //     (recipientBin === '10to25k' && amountPerDrug < 50) ||
+        //     (recipientBin === '25to50k' && amountPerDrug < 100) ||
+        //     (recipientBin === '50to100k' && amountPerDrug < 150) ||
+        //     (recipientBin === '100to200k' && amountPerDrug < 250) ||
+        //     (recipientBin === 'over200k' && amountPerDrug < 500)){
 
-        if(objectBin === recipient && amount < 50){
+        if(objectBin === recipient && testAmount < 100){
 
         //   console.log("this is recipient, recipientBin past the misc hurdle: ", recipient + " " + recipientBin);
         // console.log("this is data[i] past the misc hurdle: ", data[i])
@@ -156,7 +165,7 @@ angular.module('foglightApp')
 
           // console.log("this is bin_misc[recipient].value: ", bin_misc[recipient].value)
 
-          bin_misc[recipient].value += data[i].amount_USD;
+          bin_misc[recipient].value += amount;
 
           if (bin_misc[recipient].mfrs.indexOf(mfr) < 0){
             bin_misc[recipient].mfrs.push(mfr);
@@ -171,8 +180,6 @@ angular.module('foglightApp')
               bin_misc[recipient].drugs.push(drugs[k]);  
             }
           }
-          // console.log("this is dataObj_misc before debugger: ", dataObj_misc);
-          // console.log("this is bin_misc before debugger: ", bin_misc);
 
           miscSwitch = 1;
         }
@@ -190,7 +197,7 @@ angular.module('foglightApp')
             if (bin_mfr[mfr][drug] === undefined){
               bin_mfr[mfr][drug] = 0;
             };
-            bin_mfr[mfr][drug] += amount;
+            bin_mfr[mfr][drug] += testAmount;
             
             if (bin_drug[drug] === undefined){
               bin_drug[drug] = {};
@@ -203,7 +210,7 @@ angular.module('foglightApp')
             if (bin_drug[drug][recipient][nature] === undefined){
               bin_drug[drug][recipient][nature] = 0;
             };
-            bin_drug[drug][recipient][nature] += amount;
+            bin_drug[drug][recipient][nature] += testAmount;
 
           }
         }
@@ -235,7 +242,7 @@ angular.module('foglightApp')
 
             for (var drugKey in drugBin) {
               if (drugBin.hasOwnProperty(drugKey)) {
-                var amount = drugBin[drugKey];
+                var value = drugBin[drugKey];
 
                 var newLink = {};
                 newLink["source"] = formatMfr(mfrKey);
@@ -243,7 +250,7 @@ angular.module('foglightApp')
                 newLink["mfr_fullName"] = mfrKey;
                 newLink["target"] = drugKey;
                 newLink["targetType"] = "drug";
-                newLink["value"] = amount;
+                newLink["value"] = value;
                 newLink["linkType"] = "mfr_drug";
 
                 dataObj[binKey].push(newLink);
@@ -270,18 +277,16 @@ angular.module('foglightApp')
 
                 for (var natureKey in recipientBin){
                   if (recipientBin.hasOwnProperty(natureKey)){
-                    var amount = recipientBin[natureKey];
+                    var value = recipientBin[natureKey];
                 
                     var newLink = {};
                     newLink["source"] = drugKey;
                     newLink["sourceType"] = "drug";
                     newLink["target"] = recipientKey;
                     newLink["targetType"] = "recipient";
-                    newLink["value"] = amount;
+                    newLink["value"] = value;
                     newLink["nature"] = natureKey;
                     newLink["linkType"] = "drug_recipient";
-
-                    // console.log("this is newLink in dataObj_drug: ", newLink)
 
                     dataObj[binKey].push(newLink);
 
@@ -308,14 +313,14 @@ angular.module('foglightApp')
 
                 for (var natureKey in recipientBin){
                   if (recipientBin.hasOwnProperty(natureKey)){
-                    var amount = recipientBin[natureKey];
+                    var value = recipientBin[natureKey];
                 
                     var newLink = {};
                     newLink["source"] = formatMfr(mfrKey);
                     newLink["sourceType"] = "mfr";
                     newLink["target"] = recipientKey;
                     newLink["targetType"] = "recipient";
-                    newLink["value"] = amount;
+                    newLink["value"] = value;
                     newLink["nature"] = natureKey;
                     newLink["linkType"] = "mfr_recipient";
 
@@ -330,8 +335,6 @@ angular.module('foglightApp')
       }
     }
 
-    console.log("this is dataObj_misc just before harvesting: ", dataObj_misc)
-
     for (var binKey in dataObj_misc) {
       if (dataObj_misc.hasOwnProperty(binKey)) {
         var bin = dataObj_misc[binKey]
@@ -339,37 +342,24 @@ angular.module('foglightApp')
         for (var recipientKey in bin) {
           if (bin.hasOwnProperty(recipientKey)) {
             var recipientBin = bin[recipientKey];
-
-            // for (var recipientKey in recipientBin) {
-            //   if (recipientBin.hasOwnProperty(recipientKey)) {
-            //     var recipient = recipientBin[recipientKey];
-
-                // console.log("this is bin: ", bin)
-                // console.log("this is recipientBin: ", recipientBin)
-
                 
                     var newLink = {};
                     newLink["source"] = "Miscellaneous";
-                    newLink["sourceType"] = "mfr";
+                    newLink["sourceType"] = "mfr_and_drug";
                     newLink["target"] = recipientKey;
                     newLink["targetType"] = "recipient";
                     newLink["value"] = recipientBin.value;
                     newLink["mfrs"] = recipientBin.mfrs;
                     newLink["drugs"] = recipientBin.drugs;
                     newLink["natures"] = recipientBin.natures;
-                    newLink["linkType"] = "mfr_recipient";
-
-                    // console.log("this is newLink in dataObj_misc: ", newLink)
+                    newLink["linkType"] = "misc_recipient";
 
                     dataObj[binKey].push(newLink);
-
-            //   }
-            // }
           }
         }
       }
     }
-
+      console.log("this is allBins in paymentStats: ", allBins)
       return allBins;
     }
 
