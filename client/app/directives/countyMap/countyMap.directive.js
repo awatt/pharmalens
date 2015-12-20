@@ -56,6 +56,8 @@ angular.module('foglightApp')
 					nameById.set(d.id, d.name + ', ' + d.state)
 				}
 
+				console.log("this is nameById: ", nameById)
+
 				var colorScale = d3.scale.quantile()
 				// .domain([d3.min(data, function (d){ if(d.rate) return d.rate; }), buckets-1, d3.max(data, function (d){ return d.rate; })])
 				.domain([0, buckets - 1, d3.max(data, function (d){ return d.rate; })])

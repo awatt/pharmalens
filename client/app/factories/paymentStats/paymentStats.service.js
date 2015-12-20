@@ -1,15 +1,9 @@
 'use strict';
 
 angular.module('foglightApp')
-  .factory('paymentStats', function ($resource) {
+  .factory('paymentStats', function ($resource, recipientStats) {
 
     var paymentStats = $resource('api/payments/FIPS/:FIPS', {FIPS: '@FIPS'}, {
-      update: {
-        method: 'PUT'
-      }
-    });
-
-    var recipientStats = $resource('api/payments/FIPS/RecipientStats/:FIPS', {FIPS: '@FIPS'}, {
       update: {
         method: 'PUT'
       }
@@ -29,16 +23,45 @@ angular.module('foglightApp')
 
     var dataObj = {},
         recipientStatsMap = {},
-        recipientNamesMap = {};
+        recipientNamesMap = {},
+        bins = ["< $500", "$500 - $1,000", "$1,000 - $5,000", '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k']
 
     var findBin = function(val){
-      var bins = ['0to500', '500to1k', '1to5k', '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k'],
-          arr = [0, 500, 1000, 5000, 10000, 25000, 50000, 100000, 200000],
+      var arr = [0, 500, 1000, 5000, 10000, 25000, 50000, 100000, 200000],
           i = 0
       while (val - arr[i] > 0 && i < 9){
         i++;
       }
       return bins[i-1];
+    }
+
+    var formatBins = function(newLowBins, newIndivBins){
+
+        var lowBins = bins.slice(0,3),
+            newBins = []
+
+            //pull and sort lower three bin categories and put them first for display
+            for (var i = 0, max = lowBins.length; i<max; i++){
+              if (newLowBins.indexOf(lowBins[i]) >= 0){
+                newBins.push({ bin: lowBins[i], rawAmount: 0 });
+              }
+            }
+
+            newIndivBins.sort(function (a, b) {
+                if (a.rawAmount > b.rawAmount) {
+                  return 1;
+                }
+                if (a.rawAmount < b.rawAmount) {
+                  return -1;
+                }
+
+            return 0;
+            });
+
+            for (var i = 0, max = newIndivBins.length; i<max; i++){
+              newBins.push(newIndivBins[i]);
+            }
+            return newBins;
     }
 
     paymentStats.formatData = function(data,recipientStats,recipientNames){
@@ -52,7 +75,8 @@ angular.module('foglightApp')
         dataObj_drug = {},
         dataObj_direct = {},
         dataObj_misc = {},
-        allBins = [],
+        newLowBins = [],
+        newIndivBins = [],
         highBins = ['5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k'];
 
     var formatMfr = function(str){
@@ -95,14 +119,14 @@ angular.module('foglightApp')
             dataObj_drug[recipientKey] = {};
             dataObj_direct[recipientKey] = {};
             dataObj_misc[recipientKey] = {};
-            allBins.push({bin: recipientKey, rawAmount: rawAmount});
+            newIndivBins.push({bin: recipientKey, rawAmount: rawAmount});
           } else {
             if(dataObj[bin] === undefined){
               dataObj[bin] = [];
               dataObj_mfr[bin] = {};
               dataObj_drug[bin] = {};
               dataObj_direct[bin] = {};
-              allBins.push({ bin: bin, rawAmount: 0});
+              newLowBins.push(bin);
             }
           }
         }
@@ -142,18 +166,14 @@ angular.module('foglightApp')
             amount = data[i].amount_USD,
             nature = data[i].nature_of_payment;
 
-        
-        // if ((recipientBin === '5to10k' && amountPerDrug < 25) ||
-        //     (recipientBin === '10to25k' && amountPerDrug < 50) ||
-        //     (recipientBin === '25to50k' && amountPerDrug < 100) ||
-        //     (recipientBin === '50to100k' && amountPerDrug < 150) ||
-        //     (recipientBin === '100to200k' && amountPerDrug < 250) ||
-        //     (recipientBin === 'over200k' && amountPerDrug < 500)){
+        //filter out smaller payments to aggregate in misc bin
+        if ((recipientBin === '5to10k' && testAmount < 50) ||
+            (recipientBin === '10to25k' && testAmount < 100) ||
+            (recipientBin === '25to50k' && testAmount < 150) ||
+            (recipientBin === '50to100k' && testAmount < 200) ||
+            (recipientBin === '100to200k' && testAmount < 350) ||
+            (recipientBin === 'over200k' && testAmount < 500)){
 
-        if(objectBin === recipient && testAmount < 100){
-
-        //   console.log("this is recipient, recipientBin past the misc hurdle: ", recipient + " " + recipientBin);
-        // console.log("this is data[i] past the misc hurdle: ", data[i])
           //misc logic here
           if (bin_misc[recipient] === undefined){
             bin_misc[recipient] = {};
@@ -162,8 +182,6 @@ angular.module('foglightApp')
             bin_misc[recipient]['drugs'] = [];
             bin_misc[recipient]['natures'] = [];
           };
-
-          // console.log("this is bin_misc[recipient].value: ", bin_misc[recipient].value)
 
           bin_misc[recipient].value += amount;
 
@@ -261,8 +279,6 @@ angular.module('foglightApp')
       }
     }
 
-    // console.log("this is dataObj_drug just before harvesting: ", dataObj_drug)
-
     for (var binKey in dataObj_drug) {
       if (dataObj_drug.hasOwnProperty(binKey)) {
         var bin = dataObj_drug[binKey]
@@ -359,8 +375,8 @@ angular.module('foglightApp')
         }
       }
     }
-      console.log("this is allBins in paymentStats: ", allBins)
-      return allBins;
+      var formattedBins = formatBins(newLowBins, newIndivBins)
+      return formattedBins;
     }
 
     return {

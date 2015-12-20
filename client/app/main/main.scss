@@ -128,8 +128,8 @@
 }
 
 .modal-dialog{
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
 }
 
 //Angular Material Design - Tabs
@@ -150,3 +150,9 @@
 .tabsdemoStaticTabs .after-tabs-area > md-checkbox {
   margin-top: 26px;
   margin-left: 0; }
+
+
+  //Angular Material Design - Input Dash - Test
+.inputdemoBasicUsage .md-datepicker-button {
+  width: 36px; }
+
