@@ -1,15 +1,9 @@
 'use strict';
 
 angular.module('foglightApp')
-  .factory('paymentStats', function ($resource, recipientStats) {
+  .factory('paymentStats', function ($resource, recipientStats, recipientNames) {
 
     var paymentStats = $resource('api/payments/FIPS/:FIPS', {FIPS: '@FIPS'}, {
-      update: {
-        method: 'PUT'
-      }
-    });
-
-    var recipientNames = $resource('api/physicians/FIPS/RecipientNames/:FIPS', {FIPS: '@FIPS'}, {
       update: {
         method: 'PUT'
       }
