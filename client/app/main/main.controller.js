@@ -101,12 +101,12 @@ angular.module('foglightApp')
       $mdDialog.show({
         controller: DialogCtrl,
         controllerAs: 'ctrl',
-        templateURL: 'dialog.tmpl.html',
-        // templateUrl: 'dialog.tmpl.html',
+        templateUrl: 'app/main/dialog.tmpl.html',
         locals: {
-          states: $scope.states,
-          counties: $scope.counties,
-          physicians: $scope.physicians
+          states: $scope.states
+          // counties: $scope.counties,
+          // physicians: $scope.physicians,
+          // user: $scope.user
         },
         parent: angular.element(document.body),
         targetEvent: $event,
@@ -117,9 +117,10 @@ angular.module('foglightApp')
 //Angular Material Design Autocomplete
 })
 
-  function DialogCtrl ($scope, $mdDialog) {
+  function DialogCtrl ($scope, $mdDialog,states) {
     var self = this;
     // list of `state` value/display objects
+    self.states = states;
     self.isDisabled = false;
     self.querySearch = querySearch;
     self.selectedItemChange = selectedItemChange;

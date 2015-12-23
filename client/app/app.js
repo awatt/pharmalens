@@ -7,6 +7,7 @@ angular.module('foglightApp', [
   'ngMaterial',
   'ui.router',
   'ui.bootstrap',
+  'ngAria',
   'd3'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
