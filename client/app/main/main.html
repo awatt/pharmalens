@@ -10,7 +10,6 @@
 
 <div  layout="column" ng-cloak>
   <md-content flex layout-padding>
-    <form name="userForm">
       <div layout="row" layout-xs="column" layout-sm="column" layout-align="space-between center">
         <div flex-gt-sm="80">
           <br>
@@ -22,9 +21,10 @@
           </p>
         </div>
       </div>
-      <div layout-gt-sm="row">
+
+    <div layout-gt-sm="row">
         
-   <!--      <md-input-container class="md-block" flex-gt-sm>
+        <md-input-container class="md-block" flex-gt-sm>
             <label>State</label>
             <md-select ng-model="user.state">
               <md-option ng-repeat="state in states" value="{{state.abbrev}}">
@@ -47,154 +47,37 @@
               <md-option ng-repeat="county in counties" value="{{county.FIPS}}">
                 {{county.name}}
               </md-option>
-          </md-select>
-          </md-input-container>
-
-        <div flex="70" hide-xs hide-sm>
-          
-        </div>
-
-      </div> -->
-
-<div layout="column" ng-cloak>
-  <md-content class="md-padding">
-    <p>
-      Click the button below to open the dialog with an autocomplete.
-    </p>
-    <md-button ng-click="openDialog($event)" class="md-raised">Open Dialog</md-button>
-  </md-content>
-</div>
-
-
-   <!--    <div layout-gt-sm="row">
-
-        <md-input-container class="md-block" flex-gt-sm>
-        <label>Physician</label>
-        <md-autocomplete
-        ng-disabled="isDisabled"
-        md-no-cache="noCache"
-        md-selected-item="selectedItem"
-        md-search-text-change="searchTextChange(searchText)"
-        md-search-text="searchText"
-        md-selected-item-change="selectedItemChange(item)"
-        md-items="item in querySearch(searchText)"
-        md-item-text="item.display"
-        md-min-length="0"
-        placeholder="search by physician last name">
-        <md-item-template>
-        <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
-      </md-item-template>
-      <md-not-found>
-      No states matching "{{searchText}}" were found.
-    </md-not-found>
-  </md-autocomplete>
- -->
-
-
-
-
-<!--             <md-select ng-model="user.state">
-              <md-option ng-repeat="county in counties" value="{{county.name}}">
-                {{county.name}}
-              </md-option>
-          </md-select> -->
-          
-
-
-          </md-input-container>
-        <div flex="70" hide-xs hide-sm>
-          <!-- Spacer //-->
-        </div>
-      </div>
-
-    </form>
-  </md-content>
-</div>
-
-<!-- 
-
-<div layout="column" ng-cloak class="md-inline-form">
-  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-    <div>
-      <md-input-container>
-        <label>Title</label>
-        <input ng-model="user.title">
-      </md-input-container>
-      <md-input-container>
-        <label>Email</label>
-        <input ng-model="user.email" type="email">
-      </md-input-container>
-    </div>
-  </md-content>
-  <md-content layout-padding>
-    <div>
-      <form name="userForm">
-        <div layout-gt-xs="row">
-          <md-input-container class="md-block" flex-gt-xs>
-            <label>Company (Disabled)</label>
-            <input ng-model="user.company" disabled>
-          </md-input-container>
-          <md-datepicker ng-model="user.submissionDate" md-placeholder="Enter date">
-          </md-datepicker>
-        </div>
-        <div layout-gt-sm="row">
-          <md-input-container class="md-block" flex-gt-sm>
-            <label>First name</label>
-            <input ng-model="user.firstName">
-          </md-input-container>
-          <md-input-container class="md-block" flex-gt-sm>
-            <label>Last Name</label>
-            <input ng-model="theMax">
-          </md-input-container>
-        </div>
-        <md-input-container class="md-block">
-          <label>Address</label>
-          <input ng-model="user.address">
-        </md-input-container>
-        <md-input-container md-no-float class="md-block">
-          <input ng-model="user.address2" placeholder="Address 2">
-        </md-input-container>
-        <div layout-gt-sm="row">
-          <md-input-container class="md-block" flex-gt-sm>
-            <label>City</label>
-            <input ng-model="user.city">
-          </md-input-container>
-          <md-input-container class="md-block" flex-gt-sm>
-            <label>State</label>
-            <md-select ng-model="user.state">
-              <md-option ng-repeat="state in states" value="{{state.abbrev}}">
-                {{state.abbrev}}
-              </md-option>
             </md-select>
           </md-input-container>
-          <md-input-container class="md-block" flex-gt-sm>
-            <label>Postal Code</label>
-            <input name="postalCode" ng-model="user.postalCode" placeholder="12345"
-                   required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
-            <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
-              <div ng-message="required" class="my-message">You must supply a postal code.</div>
-              <div ng-message="pattern" class="my-message">That doesn't look like a valid postal
-                code.
-              </div>
-              <div ng-message="md-maxlength" class="my-message">
-                Don't use the long version silly...we don't need to be that specific...
-              </div>
-            </div>
-          </md-input-container>
+
+        <div flex="70" hide-xs hide-sm>
+          
         </div>
-        <md-input-container class="md-block">
-          <label>Biography</label>
-          <textarea ng-model="user.biography" columns="1" md-maxlength="150" rows="5"></textarea>
-        </md-input-container>
-      </form>
-    </div>
-  </md-content>
-</div>
 
+      </div>
 
- -->
-
-
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Physician</label>
+          <md-autocomplete
+          ng-disabled="isDisabled"
+          md-no-cache="noCache"
+          md-selected-item="selectedItem"
+          md-search-text-change="searchTextChange(searchText)"
+          md-search-text="searchText"
+          md-selected-item-change="selectedItemChange(item)"
+          md-items="item in querySearch(searchText)"
+          md-item-text="item.display"
+          md-min-length="0"
+          placeholder="search by physician last name">
+          <md-item-template>
+            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
+          </md-item-template>
+          <md-not-found>
+          No states matching "{{searchText}}" were found.
+          </md-not-found>
+        </md-autocomplete>
+      </div>
 
 
 <!-- main body -->
@@ -202,34 +85,7 @@
 <!-- <div class="container"> -->
 
 <div id="countyMap"></div>
-<div county-map countyfocus="countyfocus" countyinfo="countyInfo" bins="bins"></div>
-
-
-<div class="modal fade" id="sankeyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">{{countyInfo}}</h4>
-      </div>
-
-      <div class="modal-body">
-
-        <md-tabs flex class="md-accent" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
-          <md-tab ng-repeat="bin in bins"  ng-if="isBins.value">
-            <md-tab-label>{{bin.bin}} <span ng-if="bin.rawAmount > 0">(${{bin.rawAmount | number:2}})</span></md-tab-label>
-            <md-tab-body>
-            <div id="chart-{{$index}}" county-sankey bin-num="$index" bin="bin.bin" flex style="overflow: scroll; overflow-x: hidden;"></div>
-            </md-tab-body>
-          </md-tab>
-         </md-tabs>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<div county-map countyfocus="countyfocus" countyinfo="countyInfo" bins="bins" on-county-click="showTabDialog($event)"></div>
 
 <!-- BOOTSTRAP MODAL END -->
 

@@ -31,7 +31,7 @@ angular.module('foglightApp')
 					var units = "$";
 
 					var margin = {top: 10, right: 10, bottom: 10, left: 10},
-					width = 1275 - margin.left - margin.right,
+					width = 1070 - margin.left - margin.right,
 					height = 500 + numLinks*18 - margin.top - margin.bottom;
 
 
@@ -91,7 +91,6 @@ angular.module('foglightApp')
 				     graph.nodes = [];
 
 				     for (var key in subGraph){
-				     	// console.log("this is graph.nodes inside iterator: ", graph.nodes)
 				     	graph.nodes.push(subGraph[key][0])
 				     }
 

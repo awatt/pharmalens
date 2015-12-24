@@ -3,49 +3,49 @@
 angular.module('foglightApp')
 .controller('MainCtrl', function ($scope, $http, paymentStats, locator, recipientNames, $mdDialog) {
 
-    $scope.countyfocus = 0;
-    $scope.countyInfo = '';
+  $scope.countyfocus = 0;
+  $scope.countyInfo = '';
+  $scope.bins = [];
+  $scope.isBins = {
+    value: false
+  };
+
+  $scope.$watch("bins", function(newVal, oldVal){
+    if(newVal.length){
+      $scope.isBins.value = true;
+    }
+  })
+
+  $('#sankeyModal').on('hidden.bs.modal', function (e) {
+    $scope.isBins.value = false;
     $scope.bins = [];
-    $scope.isBins = {
-        value: false
-    };
-
-    $scope.$watch("bins", function(newVal, oldVal){
-        if(newVal.length){
-            $scope.isBins.value = true;
-        }
-    })
-
-    $('#sankeyModal').on('hidden.bs.modal', function (e) {
-      $scope.isBins.value = false;
-      $scope.bins = [];
-    })
+  })
 
   //Angular Material Design Tabs
-    $scope.data = {
-      selectedIndex: 0,
-      bottom: true
-    };
-    $scope.next = function() {
-      $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-    };
-    $scope.previous = function() {
-      $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-    };
+  $scope.data = {
+    selectedIndex: 0,
+    bottom: true
+  };
+  $scope.next = function() {
+    $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
+  };
+  $scope.previous = function() {
+    $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
+  };
 
 
   //Angular Material Design - Input Dash - Test
-    $scope.user = {
-      state: 'AL',
-      FIPS: '',
-      physician: ''
-    };
+  $scope.user = {
+    state: 'AL',
+    FIPS: '',
+    physician: ''
+  };
 
-    $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+  $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
     'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
     'WY').split(' ').map(function(state) {
-        return {abbrev: state};
-      })
+      return {abbrev: state};
+    })
 
     $scope.counties;
     $scope.physicians;
@@ -61,7 +61,6 @@ angular.module('foglightApp')
           if (a.name < b.name) {
             return -1;
           }
-          
           return 0;
         });
       }
@@ -70,9 +69,9 @@ angular.module('foglightApp')
     $scope.$watch("user.FIPS", function(newVal, oldVal){
       if(newVal !== oldVal){
 
-    recipientNames.query({FIPS: newVal}).$promise.then(function(physicians){
+        recipientNames.query({FIPS: newVal}).$promise.then(function(physicians){
 
-        console.log("this is physicians returned from back end: ", physicians)
+        // console.log("this is physicians returned from back end: ", physicians)
 
         $scope.physicians = physicians.map( function (physician) {
           return {
@@ -87,73 +86,59 @@ angular.module('foglightApp')
           if (a.value < b.value) {
             return -1;
           }
-          
           return 0;
         });
       })
-        
       }
     })
 
+  $scope.isDisabled = false;
+  
+  $scope.querySearch = function (query) {
+    var results = query ? $scope.physicians.filter( createFilterFor(query) ) : $scope.physicians;
+    return results;
+  }
 
-//MD Dialog 
-    $scope.openDialog = function($event) {
+  function createFilterFor(query) {
+    var lowercaseQuery = angular.lowercase(query);
+    return function filterFn(state) {
+      return (state.value.indexOf(lowercaseQuery) === 0);
+    };
+  }
+  
+    $scope.showTabDialog = function(ev) {
       $mdDialog.show({
-        controller: DialogCtrl,
-        controllerAs: 'ctrl',
-        templateUrl: 'app/main/dialog.tmpl.html',
-        locals: {
-          states: $scope.states
-          // counties: $scope.counties,
-          // physicians: $scope.physicians,
-          // user: $scope.user
-        },
+        controller: TabDialogController,
+        templateUrl: 'app/main/tabDialog.tmpl.html',
+        scope: $scope,        
+        preserveScope: true,
         parent: angular.element(document.body),
-        targetEvent: $event,
+        targetEvent: ev,
         clickOutsideToClose:true
       })
-    }
+      .then(function(answer) {
+        $scope.status = 'You said the information was "' + answer + '".';
+      }, function() {
+        $scope.status = 'You cancelled the dialog.';
+      });
+    };
 
-//Angular Material Design Autocomplete
+//md-dialog controller
 })
 
-  function DialogCtrl ($scope, $mdDialog,states) {
-    var self = this;
-    // list of `state` value/display objects
-    self.states = states;
-    self.isDisabled = false;
-    self.querySearch = querySearch;
-    self.selectedItemChange = selectedItemChange;
-    self.searchTextChange   = searchTextChange;
+function TabDialogController($scope, $mdDialog) {
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
+}
 
-    function querySearch (query) {
-      var results = query ? self.physicians.filter( createFilterFor(query) ) : self.physicians;
-      return results;
-    }
 
-    function searchTextChange(text) {
-      $log.info('Text changed to ' + text);
-    }
-    function selectedItemChange(item) {
-      $log.info('Item changed to ' + JSON.stringify(item));
-    }
 
-    function createFilterFor(query) {
-      var lowercaseQuery = angular.lowercase(query);
-      return function filterFn(state) {
-        return (state.value.indexOf(lowercaseQuery) === 0);
-      };
-    }
-    
-    // ******************************
-    // Template methods
-    // ******************************
-    self.cancel = function($event) {
-      $mdDialog.cancel();
-    };
-    self.finish = function($event) {
-      $mdDialog.hide();
-    };
-  } 
 
 

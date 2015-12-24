@@ -7,6 +7,7 @@ angular.module('foglightApp')
 		scope: {
 			countyfocus: '=',
 			countyinfo: '=',
+			onCountyClick: '&',
 			bins: '='
 		},
 
@@ -55,8 +56,6 @@ angular.module('foglightApp')
 					rateById.set(d.id, +d.rate)
 					nameById.set(d.id, d.name + ', ' + d.state)
 				}
-
-				console.log("this is nameById: ", nameById)
 
 				var colorScale = d3.scale.quantile()
 				// .domain([d3.min(data, function (d){ if(d.rate) return d.rate; }), buckets-1, d3.max(data, function (d){ return d.rate; })])
@@ -119,6 +118,8 @@ angular.module('foglightApp')
 					//update scope for full name of queried county
 					var countyState = nameById.get(d.id);
 					scope.countyinfo = countyState;
+
+					scope.bins = [];
 					
 					// d3.select(".chartParent").select("svg").remove();
 
@@ -126,16 +127,17 @@ angular.module('foglightApp')
 					// 	console.log("this is countyInfo inside countyMap query: ", countyInfo)
 					// 	scope.countyinfo = countyInfo;
 						//prepare new selected county data
+
+						scope.onCountyClick();
 						
 						paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
 							paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
 								paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
 
 									scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
-									// scope.$apply()
+
 									console.log("this is scope.bins inside countyMap: ", scope.bins)
 
-									// scope.countyfocus = d.id;
 									
 									setTimeout(function () {
 										scope.$apply(function () {
