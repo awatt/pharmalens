@@ -5,27 +5,22 @@
         <h2>{{countyInfo}}</h2>
       </div>
     </md-toolbar>
-    <md-dialog-content style="max-width:1800px;max-height:1000px; ">
+    <md-dialog-content>
+
       <md-tabs md-dynamic-height class="md-accent" md-border-bottom>
-        <md-tab ng-repeat="bin in bins">
+
+        <md-tab ng-repeat="bin in bins" ng-init="$last ? hideProgress() : null">
           <md-tab-label>{{bin.bin}} <span ng-if="bin.rawAmount > 0">(${{bin.rawAmount | number:2}})</span></md-tab-label>
           <md-tab-body>
           <div id="chart-{{$index}}" county-sankey bin-num="$index" bin="bin.bin"></div>
           </md-tab-body>
         </md-tab>
       </md-tabs>
+
+  <div ng-hide="!progress" layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular class="md-warn md-hue-3"  md-mode="indeterminate" md-diameter="70"></md-progress-circular>
+  </div>
+
     </md-dialog-content>
-<!--     <md-dialog-actions layout="row">
-      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
-        More on Wikipedia
-      </md-button>
-      <span flex></span>
-      <md-button ng-click="answer('not useful')" >
-        Not Useful
-      </md-button>
-      <md-button ng-click="answer('useful')" style="margin-right:20px;" >
-        Useful
-      </md-button>
-    </md-dialog-actions> -->
   </form>
 </md-dialog>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foglightApp')
-.controller('MainCtrl', function ($scope, $http, paymentStats, locator, recipientNames, $mdDialog) {
+.controller('MainCtrl', function ($scope, $http, paymentStats, locator, recipientNames, $mdDialog, $interval) {
 
   $scope.countyfocus = 0;
   $scope.countyInfo = '';
@@ -9,6 +9,12 @@ angular.module('foglightApp')
   $scope.isBins = {
     value: false
   };
+  $scope.progress = true;
+
+  $scope.hideProgress = function(){
+    console.log("GOT HERE")
+    $scope.progress = false;
+  }
 
   $scope.$watch("bins", function(newVal, oldVal){
     if(newVal.length){
@@ -16,10 +22,12 @@ angular.module('foglightApp')
     }
   })
 
-  $('#sankeyModal').on('hidden.bs.modal', function (e) {
-    $scope.isBins.value = false;
-    $scope.bins = [];
-  })
+  // $('#sankeyModal').on('hidden.bs.modal', function (e) {
+  //   console.log("GOT HERE TOO")
+  //   $scope.isBins.value = false;
+  //   $scope.bins = [];
+  //   $scope.progress = true;
+  // })
 
   //Angular Material Design Tabs
   $scope.data = {
@@ -41,14 +49,19 @@ angular.module('foglightApp')
     physician: ''
   };
 
-  $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
-    'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
-    'WY').split(' ').map(function(state) {
-      return {abbrev: state};
-    })
-
+    $scope.states;
     $scope.counties;
     $scope.physicians;
+
+    $scope.loadStates = function(){
+      if ($scope.states === undefined){
+        $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+          'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+          'WY').split(' ').map(function(state) {
+            return {abbrev: state};
+          })
+        }
+      }
 
     $scope.$watch("user.state", function(newVal, oldVal){
       if(newVal !== oldVal){
@@ -70,8 +83,6 @@ angular.module('foglightApp')
       if(newVal !== oldVal){
 
         recipientNames.query({FIPS: newVal}).$promise.then(function(physicians){
-
-        // console.log("this is physicians returned from back end: ", physicians)
 
         $scope.physicians = physicians.map( function (physician) {
           return {
@@ -122,10 +133,9 @@ angular.module('foglightApp')
         $scope.status = 'You cancelled the dialog.';
       });
     };
-
-//md-dialog controller
 })
 
+//sankeyDialog controller
 function TabDialogController($scope, $mdDialog) {
   $scope.hide = function() {
     $mdDialog.hide();
@@ -138,6 +148,39 @@ function TabDialogController($scope, $mdDialog) {
   };
 }
 
+
+
+// angular
+//   .module('progressCircularDemo1', ['ngMaterial'])
+//   .controller('AppCtrl', ['$scope', '$interval',
+//     function($scope, $interval) {
+//       var j= 0, counter = 0;
+//       $scope.modes = [ ];
+//       $scope.activated = true;
+//       $scope.determinateValue = 30;
+//       /**
+//        * Turn off or on the 5 themed loaders
+//        */
+//       self.toggleActivation = function() {
+//           if ( !$scope.activated ) $scope.modes = [ ];
+//           if (  $scope.activated ) j = counter = 0;
+//       };
+//       // Iterate every 100ms, non-stop
+//       $interval(function() {
+//         // Increment the Determinate loader
+//         $scope.determinateValue += 1;
+//         if ($scope.determinateValue > 100) {
+//           $scope.determinateValue = 30;
+//         }
+//         // Incrementally start animation the five (5) Indeterminate,
+//         // themed progress circular bars
+//         if ( (j < 5) && !$scope.modes[j] && $scope.activated ) {
+//           $scope.modes[j] = 'indeterminate';
+//         }
+//         if ( counter++ % 4 == 0 ) j++;
+//       }, 100, 0, true);
+//     }
+//   ]);
 
 
 
