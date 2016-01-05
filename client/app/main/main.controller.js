@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('foglightApp')
-.controller('MainCtrl', function ($scope, $http, paymentStats, locator, recipientNames, $mdDialog, $interval) {
+.controller('MainCtrl', function ($scope, $http, paymentStats, recipientStats, locator, recipientNames, $mdDialog, $interval) {
 
-  $scope.countyInfo = '';
+  $scope.countyName = '';
   $scope.bins = [];
   $scope.progress = true;
 
@@ -12,21 +12,39 @@ angular.module('foglightApp')
   }
 
   $scope.getPaymentsByFIPS = function(FIPS){
-      paymentStats.recipientNames.query({FIPS: FIPS}).$promise.then(function(recipientNames){
-        paymentStats.recipientStats.query({FIPS: FIPS}).$promise.then(function(recipientStats){
-          paymentStats.paymentStats.query({FIPS: FIPS}).$promise.then(function(stats){
+    recipientNames.query({FIPS: FIPS}).$promise.then(function(recipientNames){
+      recipientStats.query({FIPS: FIPS}).$promise.then(function(recipientStats){
+        paymentStats.paymentStats.query({FIPS: FIPS}).$promise.then(function(stats){
 
-            $scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
-            
-            setTimeout(function () {
-              $scope.$apply(function () {
-                $scope.message = "Timeout called!";
-              });
-            }, 2000);
+          $scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
+          
+          // setTimeout(function () {
+          //   $scope.$apply(function () {
+          //     $scope.message = "Timeout called!";
+          //   });
+          // }, 2000);
 
-          })
         })
       })
+    })
+  }
+
+  $scope.getPaymentsByPhysician = function(physician){
+
+        paymentStats.paymentStatsByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(stats){
+
+          var recipientStats = [{_id: physician.profile_ID, value: physician.totalPayments}];
+          var recipientNames = [{_id: physician.profile_ID, value: physician.display}];
+
+          $scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
+          
+          // setTimeout(function () {
+          //   $scope.$apply(function () {
+          //     $scope.message = "Timeout called!";
+          //   });
+          // }, 2000);
+
+        })
   }
 
   //Angular Material Design Tabs
@@ -48,6 +66,7 @@ angular.module('foglightApp')
     FIPS: '',
     physician: ''
   };
+
 
     $scope.states;
     $scope.counties;
@@ -84,24 +103,35 @@ angular.module('foglightApp')
 
         recipientNames.query({FIPS: newVal}).$promise.then(function(physicians){
 
-        $scope.physicians = physicians.map( function (physician) {
-          return {
-            value: physician.value.toLowerCase(),
-            display: physician.value,
-            profile_ID: physician._id
-          };
-        }).sort(function (a, b) {
-          if (a.value > b.value) {
-            return 1;
-          }
-          if (a.value < b.value) {
-            return -1;
-          }
-          return 0;
-        });
+            paymentStats.recipientStats.query({FIPS: newVal}).$promise.then(function(recipientStats){
+              
+              //create hashmap of stats by recipient
+              var recipientStatsMap = {};
+                for (var key in recipientStats) {
+                  if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
+                    recipientStatsMap[recipientStats[key]._id] = recipientStats[key].value;
+                  }
+                }
+                $scope.physicians = physicians.map( function (physician) {
+                  return {
+                    value: physician.value.toLowerCase(),
+                    display: physician.value,
+                    profile_ID: physician._id,
+                    totalPayments: recipientStatsMap[physician._id]
+                  };
+                }).sort(function (a, b) {
+                  if (a.value > b.value) {
+                    return 1;
+                  }
+                  if (a.value < b.value) {
+                    return -1;
+                  }
+                  return 0;
+                });
+            })
+          })
+        }
       })
-      }
-    })
 
   $scope.isDisabled = false;
   
@@ -117,10 +147,16 @@ angular.module('foglightApp')
     };
   }
   
-    $scope.showTabDialog = function(ev, FIPS, county) {
+    $scope.showTabDialog = function(ev, county, FIPS, physician) {
       $scope.progress = true;
-      $scope.countyInfo = county;
-      $scope.getPaymentsByFIPS(FIPS);
+      $scope.countyName = county;
+
+      if(FIPS === undefined){
+        $scope.getPaymentsByPhysician(physician);
+      } else {
+        $scope.getPaymentsByFIPS(FIPS);
+      }
+
       $mdDialog.show({
         controller: TabDialogController,
         templateUrl: 'app/main/tabDialog.tmpl.html',

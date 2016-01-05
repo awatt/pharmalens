@@ -14,6 +14,15 @@ exports.findByFIPS = function(req, res) {
   });
 };
 
+exports.findByProfileID = function(req, res) {
+  Payment.find({ recipient_profile_ID: req.params.profile_ID }).exec(function(err, payments) {
+    // console.log("this is req.params.FIPS on the payments back end: ", req.params.FIPS)
+    if(err) {return handleError(res, err); }
+    console.log("this is payments findByProfileID in the back end: ", payments)
+      return res.json(200, payments);
+  });
+};
+
 exports.recipientStatsByFIPS = function(req, res) {
   var o = {};
   o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
@@ -22,7 +31,7 @@ exports.recipientStatsByFIPS = function(req, res) {
 
   Payment.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
-    console.log("these are mapreduce results in the back end: ", results)
+    // console.log("these are recipientStatsByFIPS in the back end: ", results)
     return res.json(200, results);
 })
 };

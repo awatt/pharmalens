@@ -64,6 +64,8 @@
           </md-not-found>
         </md-autocomplete>
 
+        <md-button class="md-raised md-primary"  ng-click="showTabDialog($event, county.name, county.FIPS, selectedItem)" >Display Physician Payments</md-button>
+
       </div>
 
 
@@ -72,7 +74,7 @@
 <!-- <div class="container"> -->
 
 <div id="countyMap"></div>
-<div county-map countyinfo="countyInfo" bins="bins" on-county-click="showTabDialog($event, FIPS, county)"></div>
+<div county-map countyinfo="countyInfo" bins="bins" on-county-click="showTabDialog($event, county, FIPS)"></div>
 
 <!-- BOOTSTRAP MODAL END -->
 

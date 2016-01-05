@@ -9,6 +9,12 @@ angular.module('foglightApp')
       }
     });
 
+    var paymentStatsByProfileID = $resource('api/payments/profile_ID/:profile_ID', {profile_ID: '@profile_ID'}, {
+      update: {
+        method: 'PUT'
+      }
+    });
+
     var countyInfo = $resource('api/countys/FIPS/:FIPS', {FIPS: '@FIPS'}, {
       update: {
         method: 'PUT'
@@ -102,7 +108,12 @@ angular.module('foglightApp')
       for (var key in recipientStats) {
         if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
           var rawAmount = recipientStats[key].value;
-          var bin = findBin(recipientStats[key].value);
+          var bin;
+          if (recipientStats.length === 1){
+            bin = findBin(10000);
+          } else {
+           bin = findBin(recipientStats[key].value);
+          }
           var recipientKey = recipientNamesMap[recipientStats[key]._id];
           recipientStatsMap[recipientKey] = bin;
 
@@ -375,6 +386,7 @@ angular.module('foglightApp')
 
     return {
       paymentStats: paymentStats,
+      paymentStatsByProfileID: paymentStatsByProfileID,
       countyInfo: countyInfo,
       recipientStats: recipientStats,
       recipientNames: recipientNames,

@@ -19,7 +19,7 @@ exports.recipientNamesByFIPS = function(req, res) {
 
   Physician.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
-    console.log("these are physician mapreduce results in the back end: ", results)
+    // console.log("recipientNamesByFIPS in the back end: ", results)
     return res.json(200, results);
 })
 };
@@ -32,7 +32,7 @@ exports.recipientStatsByFIPS = function(req, res) {
 
   Payment.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
-    // console.log("these are mapreduce results in the back end: ", results)
+    // console.log("recipientStatsByFIPS in the back end: ", results)
     return res.json(200, results);
 })
 };
