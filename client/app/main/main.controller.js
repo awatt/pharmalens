@@ -3,31 +3,31 @@
 angular.module('foglightApp')
 .controller('MainCtrl', function ($scope, $http, paymentStats, locator, recipientNames, $mdDialog, $interval) {
 
-  $scope.countyfocus = 0;
   $scope.countyInfo = '';
   $scope.bins = [];
-  $scope.isBins = {
-    value: false
-  };
   $scope.progress = true;
 
   $scope.hideProgress = function(){
-    console.log("GOT HERE")
     $scope.progress = false;
   }
 
-  $scope.$watch("bins", function(newVal, oldVal){
-    if(newVal.length){
-      $scope.isBins.value = true;
-    }
-  })
+  $scope.getPaymentsByFIPS = function(FIPS){
+      paymentStats.recipientNames.query({FIPS: FIPS}).$promise.then(function(recipientNames){
+        paymentStats.recipientStats.query({FIPS: FIPS}).$promise.then(function(recipientStats){
+          paymentStats.paymentStats.query({FIPS: FIPS}).$promise.then(function(stats){
 
-  // $('#sankeyModal').on('hidden.bs.modal', function (e) {
-  //   console.log("GOT HERE TOO")
-  //   $scope.isBins.value = false;
-  //   $scope.bins = [];
-  //   $scope.progress = true;
-  // })
+            $scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
+            
+            setTimeout(function () {
+              $scope.$apply(function () {
+                $scope.message = "Timeout called!";
+              });
+            }, 2000);
+
+          })
+        })
+      })
+  }
 
   //Angular Material Design Tabs
   $scope.data = {
@@ -117,7 +117,10 @@ angular.module('foglightApp')
     };
   }
   
-    $scope.showTabDialog = function(ev) {
+    $scope.showTabDialog = function(ev, FIPS, county) {
+      $scope.progress = true;
+      $scope.countyInfo = county;
+      $scope.getPaymentsByFIPS(FIPS);
       $mdDialog.show({
         controller: TabDialogController,
         templateUrl: 'app/main/tabDialog.tmpl.html',
@@ -147,40 +150,6 @@ function TabDialogController($scope, $mdDialog) {
     $mdDialog.hide(answer);
   };
 }
-
-
-
-// angular
-//   .module('progressCircularDemo1', ['ngMaterial'])
-//   .controller('AppCtrl', ['$scope', '$interval',
-//     function($scope, $interval) {
-//       var j= 0, counter = 0;
-//       $scope.modes = [ ];
-//       $scope.activated = true;
-//       $scope.determinateValue = 30;
-//       /**
-//        * Turn off or on the 5 themed loaders
-//        */
-//       self.toggleActivation = function() {
-//           if ( !$scope.activated ) $scope.modes = [ ];
-//           if (  $scope.activated ) j = counter = 0;
-//       };
-//       // Iterate every 100ms, non-stop
-//       $interval(function() {
-//         // Increment the Determinate loader
-//         $scope.determinateValue += 1;
-//         if ($scope.determinateValue > 100) {
-//           $scope.determinateValue = 30;
-//         }
-//         // Incrementally start animation the five (5) Indeterminate,
-//         // themed progress circular bars
-//         if ( (j < 5) && !$scope.modes[j] && $scope.activated ) {
-//           $scope.modes[j] = 'indeterminate';
-//         }
-//         if ( counter++ % 4 == 0 ) j++;
-//       }, 100, 0, true);
-//     }
-//   ]);
 
 
 

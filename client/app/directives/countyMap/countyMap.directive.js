@@ -5,7 +5,6 @@ angular.module('foglightApp')
 	return {
 		restrict: 'EA',
 		scope: {
-			countyfocus: '=',
 			countyinfo: '=',
 			onCountyClick: '&',
 			bins: '='
@@ -18,8 +17,8 @@ angular.module('foglightApp')
 				var width = 960,
 				height = 600,
 				buckets = 9,
-				colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"],
-				// colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"],
+				// colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"],
+				colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"],
 				dataSets = [{'Diabetes': diabetes}, {'Payments': payments}, {'Grants': grants}, {'Totals': totals}]
 
 		        //tooltip template
@@ -120,34 +119,27 @@ angular.module('foglightApp')
 					scope.countyinfo = countyState;
 
 					scope.bins = [];
-					
-					// d3.select(".chartParent").select("svg").remove();
 
-					// paymentStats.countyInfo.query({FIPS: d.id}).$promise.then(function(countyInfo){
-					// 	console.log("this is countyInfo inside countyMap query: ", countyInfo)
-					// 	scope.countyinfo = countyInfo;
-						//prepare new selected county data
-
-						scope.onCountyClick();
+						scope.onCountyClick({FIPS: d.id, county: countyState});
 						
-						paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
-							paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
-								paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
+					// 	paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
+					// 		paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
+					// 			paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
 
-									scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
+					// 				scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
 
-									console.log("this is scope.bins inside countyMap: ", scope.bins)
+					// 				console.log("this is scope.bins inside countyMap: ", scope.bins)
 
 									
-									setTimeout(function () {
-										scope.$apply(function () {
-											scope.message = "Timeout called!";
-										});
-									}, 2000);
+					// 				setTimeout(function () {
+					// 					scope.$apply(function () {
+					// 						scope.message = "Timeout called!";
+					// 					});
+					// 				}, 2000);
 
-								})
-							})
-						})
+					// 			})
+					// 		})
+					// 	})
 					// })
 
 				})
