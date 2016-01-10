@@ -19,8 +19,13 @@ exports.recipientNamesByFIPS = function(req, res) {
 
   Physician.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
-    // console.log("recipientNamesByFIPS in the back end: ", results)
-    return res.json(200, results);
+    var resultsMap = {};
+    for (var key in results) {
+        if (results.hasOwnProperty(key) && !isNaN(key)) {
+          resultsMap[results[key]._id] = results[key].value;
+        }
+      }
+    return res.json(200, resultsMap);
 })
 };
 

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foglightApp')
-.directive('countySankey', ['d3Service', 'sankeyService', 'sankeyData', 'paymentStats', function(d3Service, sankeyService, sankeyData, paymentStats) {
+.directive('countySankey', ['d3Service', 'sankeyService', 'sankeyData', 'statService', function(d3Service, sankeyService, sankeyData, statService) {
 	return {
 		restrict: 'EA',
 		scope: {
@@ -164,9 +164,10 @@ angular.module('foglightApp')
 	
 		} //close renderSankey function
 
-	// console.log("this is paymentStats inside countySankey:", paymentStats)
+	// console.log("this is statService inside countySankey:", statService)
 
-				var data = paymentStats.dataObj[scope.bin];
+				var data = statService.dataObj[scope.bin];
+				console.log("this is statService.dataObj: ", statService.dataObj)
 
 					renderSankey(data);
 

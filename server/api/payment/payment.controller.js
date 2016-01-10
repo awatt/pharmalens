@@ -9,7 +9,7 @@ exports.findByFIPS = function(req, res) {
   Payment.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
     // console.log("this is req.params.FIPS on the payments back end: ", req.params.FIPS)
     if(err) {return handleError(res, err); }
-    // console.log("this is payments in the back end: ", payments)
+    console.log("this is payments in the back end: ", payments)
       return res.json(200, payments);
   });
 };
@@ -18,12 +18,13 @@ exports.findByProfileID = function(req, res) {
   Payment.find({ recipient_profile_ID: req.params.profile_ID }).exec(function(err, payments) {
     // console.log("this is req.params.FIPS on the payments back end: ", req.params.FIPS)
     if(err) {return handleError(res, err); }
-    console.log("this is payments findByProfileID in the back end: ", payments)
+    // console.log("this is payments findByProfileID in the back end: ", payments)
       return res.json(200, payments);
   });
 };
 
-exports.recipientStatsByFIPS = function(req, res) {
+exports.recipientTotalsByFIPS = function(req, res) {
+  console.log("req.params: ", req.params)
   var o = {};
   o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
   o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};
@@ -31,8 +32,14 @@ exports.recipientStatsByFIPS = function(req, res) {
 
   Payment.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
-    // console.log("these are recipientStatsByFIPS in the back end: ", results)
-    return res.json(200, results);
+    var resultsMap = {};
+    for (var key in results) {
+        if (results.hasOwnProperty(key) && !isNaN(key)) {
+          resultsMap[results[key]._id] = results[key].value;
+        }
+      }
+    // console.log("these are recipientTotalsByFIPS in the back end: ", resultsMap)
+    return res.json(200, resultsMap);
 })
 };
 

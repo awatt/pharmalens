@@ -9,7 +9,7 @@ router.get('/', controller.index);
 router.get('/:id', controller.show);
 router.get('/FIPS/:FIPS', controller.findByFIPS);
 router.get('/profile_ID/:profile_ID', controller.findByProfileID);
-router.get('/FIPS/RecipientStats/:FIPS', controller.recipientStatsByFIPS);
+router.get('/FIPS/RecipientTotals/:FIPS', controller.recipientTotalsByFIPS);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);

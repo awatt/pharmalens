@@ -1,12 +1,13 @@
 'use strict';
 
 angular.module('foglightApp')
-.directive('countyMap', ['d3Service', 'counties', 'diabetes', 'payments', 'grants', 'totals', 'paymentStats', function(d3Service, counties, diabetes, payments, grants, totals, paymentStats) {
+.directive('countyMap', ['d3Service', 'counties', 'diabetes', 'payments', 'grants', 'totals', function(d3Service, counties, diabetes, payments, grants, totals) {
 	return {
 		restrict: 'EA',
 		scope: {
 			countyinfo: '=',
 			onCountyClick: '&',
+			dataset: '=',
 			bins: '='
 		},
 
@@ -18,8 +19,9 @@ angular.module('foglightApp')
 				height = 600,
 				buckets = 9,
 				// colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"],
-				colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"],
-				dataSets = [{'Diabetes': diabetes}, {'Payments': payments}, {'Grants': grants}, {'Totals': totals}]
+				// colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"],
+				colors = ["rgb(247,251,255)","rgb(222,235,247)","rgb(198,219,239)","rgb(158,202,225)","rgb(107,174,214)","rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)"],
+				dataSets = {'diabetes': diabetes,'payments': payments, 'grants': grants, 'totals': totals};
 
 		        //tooltip template
 		        var tooltip = d3.select('body').append('div')
@@ -117,48 +119,37 @@ angular.module('foglightApp')
 					//update scope for full name of queried county
 					var countyState = nameById.get(d.id);
 					scope.countyinfo = countyState;
-
 					scope.bins = [];
-
-						scope.onCountyClick({FIPS: d.id, county: countyState});
-						
-					// 	paymentStats.recipientNames.query({FIPS: d.id}).$promise.then(function(recipientNames){
-					// 		paymentStats.recipientStats.query({FIPS: d.id}).$promise.then(function(recipientStats){
-					// 			paymentStats.paymentStats.query({FIPS: d.id}).$promise.then(function(stats){
-
-					// 				scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
-
-					// 				console.log("this is scope.bins inside countyMap: ", scope.bins)
-
-									
-					// 				setTimeout(function () {
-					// 					scope.$apply(function () {
-					// 						scope.message = "Timeout called!";
-					// 					});
-					// 				}, 2000);
-
-					// 			})
-					// 		})
-					// 	})
-					// })
-
+					scope.onCountyClick({FIPS: d.id, county: countyState});
 				})
-
 			}
 
-				renderMap(dataSets[0].Diabetes);
+				renderMap(dataSets['diabetes']);
 
 			      d3.select(self.frameElement).style("height", height + "px");
 
-			      var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
-			      .data(dataSets);
+			      // d3.select("#diabetes").on("click", function(){ console.log("scope.dataset: ", scope.dataset); renderMap(scope.dataset);});
+			      // d3.select("#payments").on("click", function(){ console.log("scope.dataset: ", scope.dataset); renderMap(scope.dataset);});
+			      // d3.select("#grants").on("click", function(){ console.log("scope.dataset: ", scope.dataset); renderMap(scope.dataset);});
 
-			      datasetpicker.enter()
-			      .append("input")
-			      .attr("value", function(d){ for (var name in d){ return name;}})
-			      .attr("type", "button")
-			      .attr("class", "dataset-button")
-			      .on("click", function(d){ for (var name in d){renderMap(d[name]);}});
+			      scope.$watch("dataset", function(newVal, oldVal){
+			      	if(newVal !== oldVal){
+			      		console.log("newVal in countyMap: ", newVal)
+			      		renderMap(dataSets[newVal]);
+			      	}
+			      })
+			      // var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
+			      // .data(dataSets);
+
+			      // datasetpicker.enter()
+			      // .append("md-button")
+			      // .attr("value", function(d){ for (var name in d){ return name;}})
+			      // // .attr("type", "button")
+			      // .attr("class", "dataset-button")
+			      // .attr("class", "md-primary")
+			      // .on("click", function(d){ for (var name in d){renderMap(d[name]);}});
+
+
 
 		//close d3 service CB function
 	})

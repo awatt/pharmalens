@@ -6,10 +6,38 @@ var Grant = require('./grant.model');
 
 // Get a list of grants by FIPS
 exports.findByFIPS = function(req, res) {
-  Grant.find({ principal_investigator_FIPS: req.params.FIPS }).exec(function(err, grants) {
+  Grant.find({ recipient_FIPS: req.params.FIPS }).exec(function(err, grants) {
     if(err) {return handleError(res, err); }
       return res.json(200, grants);
   });
+};
+
+exports.findByProfileID = function(req, res) {
+  Grant.find({ recipient_profile_ID: req.params.profile_ID }).exec(function(err, grants) {
+    // console.log("this is req.params.FIPS on the grants back end: ", req.params.FIPS)
+    if(err) {return handleError(res, err); }
+    // console.log("this is grants findByProfileID in the back end: ", grants)
+      return res.json(200, grants);
+  });
+};
+
+exports.recipientTotalsByFIPS = function(req, res) {
+  var o = {};
+  o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
+  o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};
+  o.query = { recipient_FIPS: req.params.FIPS };
+
+  Grant.mapReduce(o, function (err, results) {
+    if(err) {return handleError(res, err); }
+    var resultsMap = {};
+    for (var key in results) {
+        if (results.hasOwnProperty(key) && !isNaN(key)) {
+          resultsMap[results[key]._id] = results[key].value;
+        }
+      }
+    // console.log("these are recipientTotalsByFIPS in the back end: ", resultsMap)
+    return res.json(200, resultsMap);
+})
 };
 
 // Get list of grants

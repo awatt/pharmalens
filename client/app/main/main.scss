@@ -161,4 +161,40 @@
 // }
 
 md-input-container {
-  margin-right: 10px; }
+  margin: 10px; }
+
+
+.physician-list-template li {
+  border-bottom: 1px solid #ccc;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal; }
+.physician-list-template li:last-child {
+  border-bottom-width: 0; }
+.physician-list-template .item-title,
+.physician-list-template .item-metadata {
+  display: block;
+  line-height: 2; }
+.physician-list-template .item-title md-icon {
+  height: 18px;
+  width: 18px; }
+
+section {
+  background: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px; }
+md-content {
+  margin-right: 7px; }
+section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+.label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54; }
