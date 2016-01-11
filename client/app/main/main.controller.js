@@ -21,7 +21,6 @@ angular.module('foglightApp')
       if ($scope.dataSet === 'payments'){
         recipientTotals.getPaymentTotals(FIPS).$promise.then(function(paymentTotals){
           paymentData.paymentData.query({FIPS: FIPS}).$promise.then(function(paymentData){
-            console.log("typeof paymentData: ", typeof paymentData)
             $scope.bins = statService.formatData(paymentData,paymentTotals,$scope.recipientNames);
           })
         });
@@ -37,7 +36,6 @@ angular.module('foglightApp')
             paymentData.paymentData.query({FIPS: FIPS}).$promise.then(function(paymentData){
               grantData.grantData.query({FIPS: FIPS}).$promise.then(function(grantData){
                 var totalData = paymentData.concat(grantData);
-                console.log("typeof totalData: ")
                 var totalTotals = paymentTotals;
                 for (var key in grantTotals) {
                   if (grantTotals.hasOwnProperty(key) && !isNaN(key)) {
@@ -55,26 +53,47 @@ angular.module('foglightApp')
         });
       }
     });
-}
+  }
 
 
-$scope.getPaymentsByPhysician = function(physician){
+$scope.getStatsByPhysician = function(physician){
 
-  paymentStats.paymentStatsByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(stats){
-
-    var recipientStats = [{_id: physician.profile_ID, value: physician.totalPayments}];
-    var recipientNames = [{_id: physician.profile_ID, value: physician.display}];
-
+  paymentData.paymentDataByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(stats){
+    var recipientStats = {};
+    var recipientNames = {};
+    recipientStats[physician.profile_ID] = physician.totalPayments;
+    recipientNames[physician.profile_ID] = physician.display;
     $scope.bins = paymentStats.paymentStats.formatData(stats,recipientStats, recipientNames);
-
-          // setTimeout(function () {
-          //   $scope.$apply(function () {
-          //     $scope.message = "Timeout called!";
-          //   });
-          // }, 2000);
-
-})
+  })
 }
+
+  $scope.getStatsByPhysician = function(physician){
+    var recipientStats = {};
+    var recipientNames = {};
+    if ($scope.dataSet === 'payments'){
+      paymentData.paymentDataByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(paymentData){
+        recipientStats[physician.profile_ID] = physician.totalPayments;
+        recipientNames[physician.profile_ID] = physician.display;
+        $scope.bins = statService.formatData(paymentData,recipientStats, recipientNames);
+      });
+    } else if ($scope.dataSet === 'grants'){
+      grantData.grantDataByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(grantData){
+        recipientStats[physician.profile_ID] = physician.totalGrants;
+        recipientNames[physician.profile_ID] = physician.display;
+        $scope.bins = statService.formatData(grantData,recipientStats, recipientNames);
+      });
+    } else {
+      paymentData.paymentDataByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(paymentData){
+        grantData.grantDataByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(grantData){
+          var totalData = paymentData.concat(grantData);
+          recipientStats[physician.profile_ID] = physician.totalGrants + physician.totalPayments;
+          recipientNames[physician.profile_ID] = physician.display;
+          $scope.bins = statService.formatData(totalData,recipientStats, recipientNames);
+        });
+      });
+    }
+  };
+  
 
   //Angular Material Design Tabs
   $scope.data = {
@@ -130,28 +149,39 @@ $scope.getPaymentsByPhysician = function(physician){
 
     $scope.$watch("user.county", function(newVal, oldVal){
       if(newVal !== oldVal){
+        
         var newFIPS = $scope.counties[newVal].FIPS;
         $scope.countyName = $scope.counties[newVal].name;
-
-        recipientNames.query({FIPS: newFIPS}).$promise.then(function(physicians){
-
-          paymentStats.recipientStats.query({FIPS: newFIPS}).$promise.then(function(recipientStats){
-
-              //create hashmap of stats by recipient
-              var recipientStatsMap = {};
-              for (var key in recipientStats) {
-                if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
-                  recipientStatsMap[recipientStats[key]._id] = recipientStats[key].value;
+        
+        var getValue = function(val){
+          if (!val){
+            return 0;
+          };
+          return val;
+        }
+        
+        recipientNames.get({FIPS: newFIPS}, function(physicianNames){
+          $scope.physicianNames = physicianNames;
+        }).$promise
+        .then(function(){
+          recipientTotals.getPaymentTotals(newFIPS).$promise.then(function(paymentTotals){
+            recipientTotals.getGrantTotals(newFIPS).$promise.then(function(grantTotals){
+              
+              var physiciansMap = [];
+              for (var key in $scope.physicianNames) {
+                if ($scope.physicianNames.hasOwnProperty(key) && !isNaN(key) && (paymentTotals[key] || grantTotals[key])) {
+                  var physician = {
+                    value: $scope.physicianNames[key].toLowerCase(),
+                    display: $scope.physicianNames[key],
+                    profile_ID: key,
+                    totalPayments: getValue(paymentTotals[key]),
+                    totalGrants: getValue(grantTotals[key])
+                  };
+                  physiciansMap.push(physician);
                 }
               }
-              $scope.physicians = physicians.map( function (physician) {
-                return {
-                  value: physician.value.toLowerCase(),
-                  display: physician.value,
-                  profile_ID: physician._id,
-                  totalPayments: recipientStatsMap[physician._id]
-                };
-              }).sort(function (a, b) {
+              console.log("physiciansMap: ", physiciansMap)
+              $scope.physicians = physiciansMap.sort(function (a, b) {
                 if (a.value > b.value) {
                   return 1;
                 }
@@ -160,10 +190,15 @@ $scope.getPaymentsByPhysician = function(physician){
                 }
                 return 0;
               });
+
             })
-        })
-}
-})
+        });
+      }); 
+
+
+    }
+  });
+
 
 $scope.isDisabled = false;
 
