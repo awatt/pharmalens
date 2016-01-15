@@ -1,31 +1,16 @@
 <!-- <div ng-include="'components/navbar/navbar.html'"></div> -->
-
-<!-- <header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>FOGLIGHT</h1>
-    <p class="lead">Cut Through the Pharma Phog</p>
+<div class="fullscreen">
+  <div class="fullscreen-overlay">
   </div>
-</header> -->
-<div class="container">
+</div>
+<header id="banner">
+  <div class="container">
+    <h1>PHARMASCOPE</h1>
+<!--     <p class="lead">According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.</p> -->
 
-<div  layout="column" ng-cloak>
-  <md-content flex layout-padding>
-      <div layout="row" layout-xs="column" layout-sm="column" layout-align="space-between center">
-        <div flex-gt-sm="80">
-          <br>
-          <p>
-            PHARMALENS
-          </p>
-          <p>
-            According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.
-          </p>
-        </div>
-      </div>
-
-<md-content>
-    <section layout="row" layout-sm="column" layout-align="center left" layout-wrap>
-
-        <!-- state search -->
+    <div layout="row">
+     
+     <!-- state search -->
         <md-input-container ng-click="loadStates()" flex="10" class="md-block" flex-gt-sm>
             <label>State</label>
             <md-select ng-model="user.state">
@@ -57,7 +42,7 @@
           md-item-text="item.display"
           md-min-length="0"
           md-floating-label="Physician",
-          md-menu-class="physician-list-template">
+          md-menu-class="physician-list">
           <md-item-template>
             <span class="item-title">
             <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
@@ -76,31 +61,74 @@
           </md-not-found>
         </md-autocomplete>
 
-      <section>
-        <md-switch id="diabetes" ng-disabled="true" ng-model="dataSetSwitches.diabetes" ng-click="selectDataSet()" aria-label="Diabetes">Diabetes</md-switch>
-        <md-switch id="payments" ng-model="dataSetSwitches.payments" ng-click="selectDataSet()" aria-label="Payments">Payments</md-switch>
-        <md-switch id="grants" ng-model="dataSetSwitches.grants" ng-click="selectDataSet()" aria-label="Grants">Grants</md-switch></section>
-
          <md-button md-no-ink class="md-primary" ng-click="showTabDialog($event, county.FIPS, selectedItem)">Display</md-button>
-      </section>
 
-    <section>
+<!--      <md-switch id="diabetes" ng-disabled="true" ng-model="dataSetSwitches.diabetes" ng-click="selectDataSet()" aria-label="Diabetes">Diabetes</md-switch>
+     <md-switch id="payments" ng-model="dataSetSwitches.payments" ng-click="selectDataSet()" aria-label="Payments">Payments</md-switch>
+     <md-switch id="grants" ng-model="dataSetSwitches.grants" ng-click="selectDataSet()" aria-label="Grants">Grants</md-switch> -->
+
+
+   </div>
+  </div>
+</header>
+<div class="container">
+  <div layout="row">
+    <md-switch flex-offset="50" flex="10" id="diabetes" ng-disabled="true" ng-model="dataSetSwitches.diabetes" ng-click="selectDataSet()" aria-label="Diabetes">Diabetes</md-switch>
+    <md-switch flex="10" id="payments" ng-model="dataSetSwitches.payments" ng-click="selectDataSet()" aria-label="Payments">Payments</md-switch>
+    <md-switch flex="10" id="grants" ng-model="dataSetSwitches.grants" ng-click="selectDataSet()" aria-label="Grants">Grants</md-switch>
+  </div>
+  
+  <div>
+    <md-fab-speed-dial ng-hide="hidden" md-direction="left" md-open="isOpen"
+                       class="md-scale md-fab-top-right" ng-class="{ 'md-hover-full': hover }"
+                       ng-mouseenter="isOpen=true" ng-mouseleave="isOpen=false">
+      <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn">
+          <!-- <md-tooltip md-direction="top" md-visible="tooltipVisible">Menu</md-tooltip> -->
+          <i class="fa fa-bars fa-2x fa-align-center"></i>
+          <!-- <i class="fa fa-usd fa-2x fa-align-center"></i> -->
+          <!-- <md-icon md-svg-src="img/icons/menu.svg" aria-label="menu"></md-icon> -->
+        </md-button>
+      </md-fab-trigger>
+      <md-fab-actions>
+        
+          <md-button id="doctorLookup" aria-label="Doctor Lookup" class="md-fab md-raised md-mini"
+                     ng-click="openDialog($event, item)">
+            <md-tooltip md-direction="bottom" md-visible="tooltipVisible"
+                        md-autohide="false">
+              Doctor Lookup
+            </md-tooltip>
+            <i class="fa fa-user-md fa-2x fa-align-center"></i>
+            <!-- <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon> -->
+          </md-button>
+          
+          <md-button id="countyLookup" aria-label="County Lookup" class="md-fab md-raised md-mini"
+                     ng-click="openDialog($event, item)">
+            <md-tooltip md-direction="bottom" md-visible="tooltipVisible"
+                        md-autohide="false">
+              County Lookup
+            </md-tooltip>
+            <i class="fa fa-map fa-2x fa-align-center"></i>
+            <!-- <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon> -->
+          </md-button>
+
+          <md-button aria-label="About" class="md-fab md-raised md-mini"
+                     ng-click="openDialog($event, item)">
+            <md-tooltip md-direction="bottom" md-visible="tooltipVisible"
+                        md-autohide="false">
+              About
+            </md-tooltip>
+            <i class="fa fa-info-circle fa-2x fa-align-center"></i>
+            <!-- <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon> -->
+          </md-button>
+
+      </md-fab-actions>
+    </md-fab-speed-dial>
+  </div>
+
+
      <div id="countyMap"></div>
      <div county-map countyinfo="countyInfo" bins="bins" dataset="dataSet" on-county-click="showTabDialog($event, FIPS, county)"></div>
-    </section>
-
-</md-content>
-
-<!-- main body -->
-
-<!-- <div class="container"> -->
-
-<!-- <div id="countyMap"></div>
-<div county-map countyinfo="countyInfo" bins="bins" on-county-click="showTabDialog($event, FIPS, county)"></div> -->
-
-<!-- BOOTSTRAP MODAL END -->
-
-<!-- <div id='dataset-picker'></div> -->
 
 
 </div>
@@ -108,6 +136,10 @@
 <footer class="footer">
   
     <p>&copy; Andy Watt, 2015. Made possible by the <a href='https://openpaymentsdata.cms.gov/'>OpenPayments API</a>.</p>
+      <p>Photo credit: <a href="https://www.flickr.com/photos/manoftaste-de/17783209085/">manoftaste.de</a> via <a href="http://visualhunt.com">VisualHunt.com</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
+  </p>
+  <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
   </div>
+
 
 </footer>

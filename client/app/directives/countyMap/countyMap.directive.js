@@ -18,10 +18,13 @@ angular.module('foglightApp')
 				var width = 960,
 				height = 600,
 				buckets = 9,
-				// colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"],
+				colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"],
 				// colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"],
-				colors = ["rgb(247,251,255)","rgb(222,235,247)","rgb(198,219,239)","rgb(158,202,225)","rgb(107,174,214)","rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)"],
+				// colors = ["rgb(247,251,255)","rgb(222,235,247)","rgb(198,219,239)","rgb(158,202,225)","rgb(107,174,214)","rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)"],
 				dataSets = {'diabetes': diabetes,'payments': payments, 'grants': grants, 'totals': totals};
+
+				var frameWidth = d3.select('#countyMap')[0][0].clientWidth,
+				margin = (frameWidth-width/2);
 
 		        //tooltip template
 		        var tooltip = d3.select('body').append('div')
@@ -42,6 +45,8 @@ angular.module('foglightApp')
 				var svg = d3.select('[id="countyMap"]').append("svg")
 				.attr("width", width)
 				.attr("height", height)
+				.attr("transform", 
+						"translate(" + margin + "," + 0 + ")")
 				.append("g")
 				.attr("class", "counties")
 
@@ -128,28 +133,11 @@ angular.module('foglightApp')
 
 			      d3.select(self.frameElement).style("height", height + "px");
 
-			      // d3.select("#diabetes").on("click", function(){ console.log("scope.dataset: ", scope.dataset); renderMap(scope.dataset);});
-			      // d3.select("#payments").on("click", function(){ console.log("scope.dataset: ", scope.dataset); renderMap(scope.dataset);});
-			      // d3.select("#grants").on("click", function(){ console.log("scope.dataset: ", scope.dataset); renderMap(scope.dataset);});
-
 			      scope.$watch("dataset", function(newVal, oldVal){
 			      	if(newVal !== oldVal){
-			      		console.log("newVal in countyMap: ", newVal)
 			      		renderMap(dataSets[newVal]);
 			      	}
 			      })
-			      // var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
-			      // .data(dataSets);
-
-			      // datasetpicker.enter()
-			      // .append("md-button")
-			      // .attr("value", function(d){ for (var name in d){ return name;}})
-			      // // .attr("type", "button")
-			      // .attr("class", "dataset-button")
-			      // .attr("class", "md-primary")
-			      // .on("click", function(d){ for (var name in d){renderMap(d[name]);}});
-
-
 
 		//close d3 service CB function
 	})

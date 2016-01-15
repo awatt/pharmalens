@@ -1,11 +1,11 @@
-<md-dialog class="sankeyDialog" aria-label="...">
+<md-dialog class="sankeyDialog fullscreen-dialog" aria-label="...">
   <form>
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2>{{countyName}}</h2>
       </div>
     </md-toolbar>
-    <md-dialog-content>
+    <md-dialog-content id="sankeyContent">
 
       <md-tabs md-dynamic-height class="md-accent" md-border-bottom>
 
@@ -18,7 +18,7 @@
       </md-tabs>
 
   <div ng-hide="!progress" layout="row" layout-sm="column" layout-align="space-around">
-    <md-progress-circular class="md-warn md-hue-3"  md-mode="indeterminate" md-diameter="40"></md-progress-circular>
+    <md-progress-circular class="md-warn md-hue-3"  md-mode="indeterminate" md-diameter="100"></md-progress-circular>
   </div>
 
     </md-dialog-content>

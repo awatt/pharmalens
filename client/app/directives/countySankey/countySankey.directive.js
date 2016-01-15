@@ -30,9 +30,16 @@ angular.module('foglightApp')
 
 					var units = "$";
 
-					var margin = {top: 10, right: 10, bottom: 10, left: 10},
-					width = 1070 - margin.left - margin.right,
+					var margin = {top: 10, right: 160, bottom: 10, left: 10},
+					frameWidth = d3.select('#sankeyContent')[0].parentNode.clientWidth,
+					width = frameWidth - margin.left - margin.right,
 					height = 500 + numLinks*18 - margin.top - margin.bottom;
+
+
+					// var frameWidth = d3.select('#sankeyContent')[0].parentNode.clientWidth;
+					// console.log("frameWidth: ", frameWidth)
+
+
 
 
 					var formatNumber = d3.format(",.0f"),    // zero decimal places
@@ -164,10 +171,7 @@ angular.module('foglightApp')
 	
 		} //close renderSankey function
 
-	// console.log("this is statService inside countySankey:", statService)
-
 				var data = statService.dataObj[scope.bin];
-				console.log("this is statService.dataObj: ", statService.dataObj)
 
 					renderSankey(data);
 

@@ -5,7 +5,7 @@ angular.module('foglightApp')
 
    var dataObj = {},
    recipientStatsMap = {},
-        bins = ["< $500", "$500 - $1,000", "$1,000 - $5,000", '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k']
+        bins = ["less than $500", "btw $500 - $1,000", "btw $1,000 - $5,000", '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k']
 
     var findBin = function(val){
       var arr = [0, 500, 1000, 5000, 10000, 25000, 50000, 100000, 200000],
@@ -72,6 +72,8 @@ angular.module('foglightApp')
           if(str === "The Spectranetics Corporation"){return "SPECTRANETICS"};
           if(str === "W. L. Gore & Associates, Inc."){return "W. L. GORE"};
           if(str === "Novo Nordisk Inc."){return "N. NORDISK"};
+          if(str === "Rapid Pathogen Screening, Inc."){return "RAPID PATHOGEN"};
+          if(str === "Dr.Reddy's Laboratories,Inc."){return "DR. REDDY'S"};
           return str.match(/(?:^|(?:[.!?]\s))(\w+)/)[0].toUpperCase();
         }
 
@@ -245,8 +247,6 @@ angular.module('foglightApp')
                 newLink["value"] = value;
                 newLink["linkType"] = "mfr_drug";
 
-                console.log("newLink dataObj_mfr: ", newLink)
-
                 dataObj[binKey].push(newLink);
               }
             }
@@ -279,8 +279,6 @@ angular.module('foglightApp')
                     newLink["value"] = value;
                     newLink["nature"] = natureKey;
                     newLink["linkType"] = "drug_recipient";
-
-                    console.log("newLink dataObj_drug: ", newLink)
 
                     dataObj[binKey].push(newLink);
 
@@ -318,8 +316,6 @@ angular.module('foglightApp')
                     newLink["nature"] = natureKey;
                     newLink["linkType"] = "mfr_recipient";
 
-                    console.log("newLink dataObj_direct: ", newLink)
-
                     dataObj[binKey].push(newLink);
 
                   }
@@ -349,8 +345,6 @@ angular.module('foglightApp')
                     newLink["drugs"] = recipientBin.drugs;
                     newLink["natures"] = recipientBin.natures;
                     newLink["linkType"] = "misc_recipient";
-
-                    console.log("newLink dataObj_misc: ", newLink)
 
                     dataObj[binKey].push(newLink);
           }

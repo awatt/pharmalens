@@ -57,7 +57,6 @@ angular.module('foglightApp')
 
 
 $scope.getStatsByPhysician = function(physician){
-
   paymentData.paymentDataByProfileID.query({profile_ID: physician.profile_ID}).$promise.then(function(stats){
     var recipientStats = {};
     var recipientNames = {};
@@ -143,7 +142,6 @@ $scope.getStatsByPhysician = function(physician){
           }
           return 0;
         });
-        console.log("$scope.counties: ", $scope.counties)
       }
     })
 
@@ -180,7 +178,6 @@ $scope.getStatsByPhysician = function(physician){
                   physiciansMap.push(physician);
                 }
               }
-              console.log("physiciansMap: ", physiciansMap)
               $scope.physicians = physiciansMap.sort(function (a, b) {
                 if (a.value > b.value) {
                   return 1;
@@ -233,11 +230,29 @@ $scope.showTabDialog = function(ev, FIPS, searchTerm) {
     parent: angular.element(document.body),
     targetEvent: ev,
     clickOutsideToClose:true
-  })
-  .then(function(answer) {
-    $scope.status = 'You said the information was "' + answer + '".';
-  }, function() {
-    $scope.status = 'You cancelled the dialog.';
+  });
+};
+
+$scope.showSearchDialog = function(ev, FIPS, searchTerm) {
+  $scope.progress = true;
+  $scope.bins = [];
+
+  if(FIPS === undefined){
+    $scope.getStatsByPhysician(searchTerm);
+  } else {
+    $scope.countyName = searchTerm;
+    $scope.getStatsByFIPS(FIPS);
+  }
+  $mdDialog.show({
+    controller: TabDialogController,
+    templateUrl: 'app/main/tabDialog.tmpl.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true,
+    openFrom: angular.element(document.querySelector('#doctorLookup')),
+    closeTo: angular.element(document.querySelector('#doctorLookup'))
   });
 };
 
@@ -271,6 +286,10 @@ $scope.showTabDialog = function(ev, FIPS, searchTerm) {
         } 
       }, 0);
     }
+
+    //FAB Speed Dial
+
+
 
   })
 
