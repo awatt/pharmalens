@@ -36,7 +36,7 @@
   left: -10%;
   top: -10%;
   z-index: -1;
-  background-image: url('main/img/pills.jpg');
+  background-image: url('main/img/pills3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -206,9 +206,13 @@ body{
 }
 
 md-progress-circular {
-  vertical-align: middle;
+  margin: 175px;
 }
 
 i {
   vertical-align: middle;
 }
+
+// md-item-template {
+//   display: inline-block;
+// }
