@@ -244,12 +244,14 @@ function createFilterFor(query) {
 $scope.showSankeyDialog = function(ev, FIPS, searchTerm) {
   $scope.progress = true;
   $scope.bins = [];
-
-  if(searchTerm !== null){
+  if(typeof searchTerm === "object" && searchTerm !== null){
     $scope.getStatsByPhysician(searchTerm);
-  } else {
+  } else if (searchTerm === null) {
     $scope.countyName = $scope.counties[FIPS].name;
     $scope.getStatsByFIPS($scope.counties[FIPS].FIPS);
+  } else {
+    $scope.countyName = searchTerm;
+    $scope.getStatsByFIPS(FIPS);
   }
 
   $mdDialog.show({
@@ -277,19 +279,19 @@ $scope.showPhysicianSearchDialog = function(ev) {
   });
 };
 
-$scope.showCountySearchDialog = function(ev) {
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/countySearchDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true,
-    openFrom: angular.element(document.querySelector('#doctorLookup')),
-    closeTo: angular.element(document.querySelector('#countyMap'))
-  });
-};
+// $scope.showCountySearchDialog = function(ev) {
+//   $mdDialog.show({
+//     controller: dialogController,
+//     templateUrl: 'app/main/countySearchDialog.html',
+//     scope: $scope,        
+//     preserveScope: true,
+//     parent: angular.element(document.body),
+//     targetEvent: ev,
+//     clickOutsideToClose:true,
+//     openFrom: angular.element(document.querySelector('#doctorLookup')),
+//     closeTo: angular.element(document.querySelector('#countyMap'))
+//   });
+// };
 //DIALOG FUNCTIONS - END
 
 

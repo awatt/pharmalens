@@ -123,6 +123,7 @@ angular.module('foglightApp')
 
 					//update scope for full name of queried county
 					var countyState = nameById.get(d.id);
+					console.log("countyState inside countyMap: ", countyState)
 					scope.countyinfo = countyState;
 					scope.bins = [];
 					scope.onCountyClick({FIPS: d.id, county: countyState});
