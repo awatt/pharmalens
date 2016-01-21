@@ -5,11 +5,40 @@
 </div>
 <header id="banner">
   <div class="container">
-    <h1>PHARMASCOPE</h1>
-    <p class="lead">According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.</p>
-
+    <h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">LENS</span></h1>
+    <!-- <p class="lead">Stuff about Diabetes rates by county.</p> -->
   </div>
 </header>
+
+<div class="container">
+      <md-card>
+        <!-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> -->
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Action buttons</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            Stuff about Diabetes rates by county.
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-switch id="diabetes" ng-disabled="true" ng-model="dataSetSwitches.diabetes" ng-click="selectDataSet()" aria-label="Diabetes">Diabetes</md-switch>
+          <md-switch id="payments" ng-model="dataSetSwitches.payments" ng-click="selectDataSet()" aria-label="Payments">Payments</md-switch>
+          <md-switch id="grants" ng-model="dataSetSwitches.grants" ng-click="selectDataSet()" aria-label="Grants">Grants</md-switch>
+          <md-radio-group ng-model="programYear">
+            <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
+            <md-radio-button value="2014">2014</md-radio-button>
+          </md-radio-group>
+        </md-card-actions>
+      </md-card>
+</div>
+
+
+
+
+
 <div class="container">
   <md-fab-speed-dial ng-hide="hidden" md-direction="left" md-open="isOpen"
                        class="md-scale md-fab-top-right" ng-class="{ 'md-hover-full': hover }"
@@ -40,7 +69,7 @@
       </md-button>
 
       <md-button aria-label="About" class="md-fab md-raised md-mini"
-                 ng-click="openDialog($event, item)">
+                 ng-click="showInfoDialog($event)">
         <md-tooltip md-direction="bottom" md-visible="tooltipVisible"
                     md-autohide="false">
           About
@@ -51,17 +80,9 @@
       </md-fab-actions>
     </md-fab-speed-dial>
 
-    <div layout="row"  layout-align="space-between center">
-      <div county-map flex="80" id="countyMap" countyinfo="countyInfo" bins="bins" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
+      <div county-map id="countyMap" countyinfo="countyInfo" bins="bins" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
       </div>
-      <div flex="20">
-        <div layout="column">
-          <md-switch id="diabetes" ng-disabled="true" ng-model="dataSetSwitches.diabetes" ng-click="selectDataSet()" aria-label="Diabetes">Diabetes</md-switch>
-          <md-switch id="payments" ng-model="dataSetSwitches.payments" ng-click="selectDataSet()" aria-label="Payments">Payments</md-switch>
-          <md-switch id="grants" ng-model="dataSetSwitches.grants" ng-click="selectDataSet()" aria-label="Grants">Grants</md-switch>
-        </div>
-      </div>
-    </div>
+      
 </div>
     
 

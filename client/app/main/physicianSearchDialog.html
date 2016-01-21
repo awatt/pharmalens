@@ -52,6 +52,11 @@
           </md-not-found>
         </md-autocomplete>
 
+        <md-radio-group ng-model="programYear">
+          <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
+          <md-radio-button value="2014">2014</md-radio-button>
+        </md-radio-group>
+
          <div layout="row">
           <md-button ng-disabled="(user.county === -1)" flex class="md-button md-cornered md-button-colored btn-lg home-input-button" ng-click="showSankeyDialog($event, user.county, selectedItem)">Display   <i ng-show="selectedItem" class="fa fa-user-md"></i><i ng-hide="selectedItem" class="fa fa-map-marker"></i>  Stats</md-button>
          </div>

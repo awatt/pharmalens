@@ -213,6 +213,93 @@ i {
   vertical-align: middle;
 }
 
-// md-item-template {
-//   display: inline-block;
+md-radio-group {
+  width: 150px; 
+}
+
+.sankeyTitle {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.sankeyHeaders {
+  font-weight: bolder;
+  font-size: 16px;
+  background-color: #9a169d;
+}
+
+.fa-long-arrow-right {
+  padding: 0 15px;
+}
+
+.fa-money {
+  color: #85bb65;
+}
+
+// .blurred {
+//     color: transparent;
+//     text-shadow: 0px 0px 5px rgb(0,0,0);
 // }
+
+.blurred {
+    // font-size: 32px;
+    color: transparent;
+    -webkit-animation: blurry 6s infinite;/* Safari 4+ */
+    -moz-animation:    blurry 6s infinite;/* Fx 5+ */
+    -o-animation:      blurry 6s infinite;/* Opera 12+ */
+    animation:         blurry 6s infinite;/* IE 10+ */
+}
+@-webkit-keyframes blurry {
+  0%   { text-shadow: 0px 0px 0px #a33838; }
+  25%   { text-shadow: 0px 0px 10px #a33838; }
+  50% { text-shadow: 0px 0px 2px #a33838; }
+  75%   { text-shadow: 0px 0px 6px #a33838; }
+  100% { text-shadow: 0px 0px 0px #a33838; }
+}
+@-moz-keyframes blurry {
+  0%   { text-shadow: 0px 0px 0px #a33838; }
+  25%   { text-shadow: 0px 0px 10px #a33838; }
+  50% { text-shadow: 0px 0px 2px #a33838; }
+  75%   { text-shadow: 0px 0px 6px #a33838; }
+  100% { text-shadow: 0px 0px 0px #a33838; }
+}
+@-o-keyframes blurry {
+  0%   { text-shadow: 0px 0px 0px #a33838; }
+  25%   { text-shadow: 0px 0px 10px #a33838; }
+  50% { text-shadow: 0px 0px 2px #a33838; }
+  75%   { text-shadow: 0px 0px 6px #a33838; }
+  100% { text-shadow: 0px 0px 0px #a33838; }
+}
+@keyframes blurry {
+  0%   { text-shadow: 0px 0px 0px #a33838; }
+  25%   { text-shadow: 0px 0px 10px #a33838; }
+  50% { text-shadow: 0px 0px 2px #a33838; }
+  75%   { text-shadow: 0px 0px 6px #a33838; }
+  100% { text-shadow: 0px 0px 0px #a33838; }  
+}
+
+//title effect
+.mainTitle {
+    // position: relative;
+    color: #a33838;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+md-card {
+  background: rgba(158,202,225,0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,32 @@
 <md-dialog class="sankeyDialog fullscreen-dialog" aria-label="...">
   <form>
     <md-toolbar>
-      <div class="md-toolbar-tools">
-        <h2>{{countyName}}</h2>
-      </div>
+      <div class="md-toolbar-tools sankeyTitle" layout="row" layout-align="center center">
+        <div>{{countyName}} ({{programYear}})</div>
+        </div>
+  <div class="sankeyHeaders" layout="row" layout-align"space-between end">
+    <div flex-offset="5" flex="10">Manufacturer</div>
+    <div flex="20">
+      <i class="fa fa-long-arrow-right fa-lg"></i>
+      <i class="fa fa-money fa-lg"></i>
+      <i class="fa fa-money fa-lg"></i>
+      <i class="fa fa-money fa-lg"></i>
+      <i class="fa fa-long-arrow-right fa-lg"></i>
+    </div>
+    <div flex="20">Associated Drug Promotion</div>
+    <div flex="25">
+      <i class="fa fa-long-arrow-right fa-lg"></i>
+      <i class="fa fa-long-arrow-right fa-lg"></i>
+      <i class="fa fa-money fa-lg"></i>
+      <i class="fa fa-money fa-lg"></i>
+      <i class="fa fa-money fa-lg"></i>
+      <i class="fa fa-long-arrow-right fa-lg"></i>
+      <i class="fa fa-long-arrow-right fa-lg"></i>
+    </div>
+    <div flex="15">Recipient Prescriber</div>
+  </div>
+
+
     </md-toolbar>
     <md-dialog-content id="sankeyContent">
 

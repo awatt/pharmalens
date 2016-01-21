@@ -163,7 +163,7 @@ d3.sankey = function(width) {
       // console.log("this is node.x in scaleNodeBreadths: ", node.x)
       if(node.nodeType === "drug"){
           var tempBreadth = node.x;
-        node.x = tempBreadth/1.7;
+        node.x = tempBreadth/1.6;
       }
     });
   }
