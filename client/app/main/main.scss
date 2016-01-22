@@ -48,9 +48,10 @@
   }
 }
 
-// #countyMap {
-//   opacity: 0;
-// }
+.container {
+  width: 85%;
+  position: auto;
+}
 
 .counties {
   fill: none;
@@ -112,9 +113,6 @@
 
 
 //begin sankey
-
-// #countySankey { overflow-x : scroll ;}
-
 .node rect {
   cursor: move;
   fill-opacity: .9;
@@ -244,62 +242,73 @@ md-radio-group {
 .blurred {
     // font-size: 32px;
     color: transparent;
-    -webkit-animation: blurry 6s infinite;/* Safari 4+ */
-    -moz-animation:    blurry 6s infinite;/* Fx 5+ */
-    -o-animation:      blurry 6s infinite;/* Opera 12+ */
-    animation:         blurry 6s infinite;/* IE 10+ */
+    -webkit-animation: blurry 10s infinite;/* Safari 4+ */
+    -moz-animation:    blurry 10s infinite;/* Fx 5+ */
+    -o-animation:      blurry 10s infinite;/* Opera 12+ */
+    animation:         blurry 10s infinite;/* IE 10+ */
 }
 @-webkit-keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #a33838; }
-  25%   { text-shadow: 0px 0px 10px #a33838; }
-  50% { text-shadow: 0px 0px 2px #a33838; }
-  75%   { text-shadow: 0px 0px 6px #a33838; }
-  100% { text-shadow: 0px 0px 0px #a33838; }
+  0%   { text-shadow: 0px 0px 0px #1d91c0; }
+  35%   { text-shadow: 0px 0px 12px #1d91c0; }
+  60% { text-shadow: 0px 0px 0px #1d91c0; }
+  // 75%   { text-shadow: 0px 0px 6px #1d91c0; }
+  100% { text-shadow: 0px 0px 0px #1d91c0; }
 }
 @-moz-keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #a33838; }
-  25%   { text-shadow: 0px 0px 10px #a33838; }
-  50% { text-shadow: 0px 0px 2px #a33838; }
-  75%   { text-shadow: 0px 0px 6px #a33838; }
-  100% { text-shadow: 0px 0px 0px #a33838; }
+  0%   { text-shadow: 0px 0px 0px #1d91c0; }
+  35%   { text-shadow: 0px 0px 12px #1d91c0; }
+  60% { text-shadow: 0px 0px 0px #1d91c0; }
+  // 75%   { text-shadow: 0px 0px 6px #1d91c0; }
+  100% { text-shadow: 0px 0px 0px #1d91c0; }
 }
 @-o-keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #a33838; }
-  25%   { text-shadow: 0px 0px 10px #a33838; }
-  50% { text-shadow: 0px 0px 2px #a33838; }
-  75%   { text-shadow: 0px 0px 6px #a33838; }
-  100% { text-shadow: 0px 0px 0px #a33838; }
+  0%   { text-shadow: 0px 0px 0px #1d91c0; }
+  35%   { text-shadow: 0px 0px 12px #1d91c0; }
+  60% { text-shadow: 0px 0px 0px #1d91c0; }
+  // 75%   { text-shadow: 0px 0px 6px #1d91c0; }
+  100% { text-shadow: 0px 0px 0px #1d91c0; }
 }
 @keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #a33838; }
-  25%   { text-shadow: 0px 0px 10px #a33838; }
-  50% { text-shadow: 0px 0px 2px #a33838; }
-  75%   { text-shadow: 0px 0px 6px #a33838; }
-  100% { text-shadow: 0px 0px 0px #a33838; }  
+  0%   { text-shadow: 0px 0px 0px #1d91c0; }
+  35%   { text-shadow: 0px 0px 12px #1d91c0; }
+  60% { text-shadow: 0px 0px 0px #1d91c0; }
+  // 75%   { text-shadow: 0px 0px 6px #1d91c0; }
+  100% { text-shadow: 0px 0px 0px #1d91c0; }  
 }
 
 //title effect
 .mainTitle {
     // position: relative;
-    color: #a33838;
+    color: #1d91c0;
     font-size: 60px;
     text-align: center;
-    margin-top: 40px;
+    // margin-top: 40px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
+.titleCard {
+  width: 75%;
+  position: center;
+}
+
 md-card {
-  background: rgba(158,202,225,0.4);
+  background: rgba(158,202,225,0.2);
+}
+
+.textCard {
+  background: rgba(158,202,225,0.7);
+}
+
+.fabButton {
+  position: absolute;
+}
+
+.factoidButton {
+  float: right;
 }
 
 
-
-
-
-
-
-
-
-
-
+#infoButton {
+  color: rgba(158,202,225,0.2);
+}
 

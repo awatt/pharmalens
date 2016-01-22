@@ -9,36 +9,36 @@ angular.module('foglightApp')
   $scope.recipientStats;
   $scope.programYear = '2014';
 
+  $scope.test = 'false';
+  $scope.runTest = function(){
+    console.log($scope.test)
+  }
+
   //DATASET SWITCHING
-  $scope.dataSetSwitches = {
-    diabetes: true,
-    payments: false,
-    grants: false
-  };
-  $scope.dataSet = '';
+  $scope.dataSet = 'diabetes';
   $scope.message = 'false';
   $scope.onChange = function(cbState) {
     $scope.message = cbState;
   };
 
-  $scope.selectDataSet = function(){
-    $timeout(function(){ 
-      var selected = $scope.dataSetSwitches;
-      if(selected.payments && !selected.grants){
-        $scope.dataSet = 'payments'
-        selected.diabetes = false;
-      } else if(!selected.payments && selected.grants){
-        $scope.dataSet = 'grants'
-        selected.diabetes = false;
-      } else if(selected.payments && selected.grants){
-        $scope.dataSet = 'totals'
-        selected.diabetes = false;
-      } else if(!selected.payments && !selected.grants){
-        $scope.dataSet = 'diabetes'
-        selected.diabetes = true;
-      } 
-    }, 0);
-  }
+  // $scope.selectDataSet = function(){
+  //   $timeout(function(){ 
+  //     var selected = $scope.dataSetSwitches;
+  //     if(selected.payments && !selected.grants){
+  //       $scope.dataSet = 'payments'
+  //       selected.diabetes = false;
+  //     } else if(!selected.payments && selected.grants){
+  //       $scope.dataSet = 'grants'
+  //       selected.diabetes = false;
+  //     } else if(selected.payments && selected.grants){
+  //       $scope.dataSet = 'totals'
+  //       selected.diabetes = false;
+  //     } else if(!selected.payments && !selected.grants){
+  //       $scope.dataSet = 'diabetes'
+  //       selected.diabetes = true;
+  //     } 
+  //   }, 0);
+  // }
   //DATASET SWITCHING - END
 
 
