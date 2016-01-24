@@ -312,3 +312,44 @@ md-card {
   color: rgba(158,202,225,0.2);
 }
 
+// .textCardTransition.ng-hide {
+//   transition:0.5s linear all;
+// }
+
+.fade.ng-hide {
+  transition:0.5s linear all;
+}
+
+
+// <div ng-show="bool" class="fade">
+//   Show and hide me
+// </div>
+// <button ng-click="bool=true">Toggle</button>
+
+// <style>
+// .fade.ng-hide {
+//   transition:0.5s linear all;
+//   opacity:0;
+// }
+// </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

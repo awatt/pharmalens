@@ -18,7 +18,7 @@
       <md-card flex="60" flex-offset="20" class="titleCard">
         <md-card-content layout="row" layout-alignment="space-between center">
      
-<div flex="90"><h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">SCOPE</span></h1>
+<div flex="90"><h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">LENS</span></h1>
 </div>
             
 <div id="infoButton" flex>
@@ -42,12 +42,15 @@
     </div>
           <md-card class="textCard">
           <md-card-content layout="row" layout-wrap>
-            <p flex="100">
-              According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.
-            </p>
+            <p flex="100" class="fade" ng-show="bool">According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.</p>
 
           </md-card-content>
         </md-card>
+
+
+<button ng-click="bool=true">Fade In!</button>
+<button ng-click="bool=false">Fade Out!</button>
+
 
 
         <md-card>
@@ -75,10 +78,14 @@
 
             <div>
               <md-radio-group ng-model="dataSet" layout="row">
-                <md-radio-button value="diabetes">Diabetes</md-radio-button>
-                <md-radio-button value="payments">Payments</md-radio-button>
-                <md-radio-button value="grants">Grants</md-radio-button>
-                <md-radio-button value="totals">Totals</md-radio-button>
+                <md-radio-button value="diabetes">Diabetes<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Average Diabetes Rate</md-tooltip>
+                </md-radio-button>
+                <md-radio-button value="payments">Payments<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Per Capita Payments</md-tooltip>
+                </md-radio-button>
+                <md-radio-button value="grants">Grants<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Per Capita Grants</md-tooltip>
+                </md-radio-button>
+                <md-radio-button value="totals">Totals<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Per Capita Payments & Grants</md-tooltip>
+                </md-radio-button>
               </md-radio-group>
             </div>              
 
