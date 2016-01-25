@@ -42,6 +42,33 @@ angular.module('foglightApp')
   //DATASET SWITCHING - END
 
 
+  //CHECKBOXES
+
+   $scope.items = ['payments', 'grants'];
+      $scope.selected = [];
+      $scope.toggle = function (item, list) {
+        var idx = list.indexOf(item);
+        if (idx > -1){
+          list.splice(idx, 1);
+          if (list.length){
+            $scope.dataSet = list[0]
+          } else{
+            $scope.dataSet = 'diabetes'
+          }
+        } else {
+          list.push(item);
+          if(list.length === 2){
+            $scope.dataSet = 'totals';
+          } else {
+            $scope.dataSet = list[0];
+          }
+        }
+      };
+      $scope.exists = function (item, list) {
+        return list.indexOf(item) > -1;
+      };
+
+
 
   //PROGRESS CIRCULAR
   $scope.progress = true;

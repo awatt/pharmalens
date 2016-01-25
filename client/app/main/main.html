@@ -3,173 +3,122 @@
   <div class="fullscreen-overlay">
   </div>
 </div>
-<!-- <header id="banner">
-  <div class="container">
-    <h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">LENS</span></h1>
-  </div>
-</header> -->
+
 
 <div class="container mainBody">
+    
+    <!-- MAIN BODY CARD -->
+    <md-card>
+      <md-card-content>
 
-   <md-card>
-    <md-card-content>
-
-    <div layout="row" layout-alignment="center center">
-      <md-card flex="60" flex-offset="20" class="titleCard">
-        <md-card-content layout="row" layout-alignment="space-between center">
-     
-<div flex="90"><h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">LENS</span></h1>
-</div>
-            
-<div id="infoButton" flex>
-  <md-button aria-label="About" class="md-fab md-raised md-mini"
-        ng-click="showInfoDialog($event)">
-        <md-tooltip md-direction="down" md-visible="tooltipVisible"
-        md-autohide="false">
-        About
-        </md-tooltip>
-        <i class="fa fa-info fa-lg fa-align-center"></i>
-      </md-button>
-</div>
-
-    </md-card-content>
-      </md-card>
-
-<!-- <div flex flex-offset="5">
+        <!-- FAB SPEED DIAL -->
+        <md-fab-speed-dial ng-hide="hidden" md-direction="down" md-open="isOpen" class="md-scale md-fab-top-right" ng-class="{ 'md-hover-full': hover }" ng-mouseenter="isOpen=true" ng-mouseleave="isOpen=false">
+         <md-fab-trigger>
+           <md-button aria-label="menu" class="md-fab md-warn">
+             <i class="fa fa-bars fa-lg fa-align-center"></i>
+           </md-button>
+         </md-fab-trigger>
+       <md-fab-actions>
+         
+       <md-button id="doctorLookup" aria-label="Search by Doctor or County" class="md-fab md-raised md-mini" ng-click="showPhysicianSearchDialog($event)"><md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">Search by Doctor or County</md-tooltip><i class="fa fa-search fa-lg"></i>
+       </md-button>
+ 
+       <md-button aria-label="Factoids" class="md-fab md-raised md-mini" ng-click="openDialog($event, item)"><md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">Factoids</md-tooltip>
+         <i class="fa fa-bar-chart fa-lg fa-align-center"></i>
+        </md-button>
   
-    </div> -->
-
-    </div>
-          <md-card class="textCard">
-          <md-card-content layout="row" layout-wrap>
-            <p flex="100" class="fade" ng-show="bool">According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.</p>
-
-          </md-card-content>
-        </md-card>
-
-
-<button ng-click="bool=true">Fade In!</button>
-<button ng-click="bool=false">Fade Out!</button>
-
-
-
-        <md-card>
-          <md-card-content>
-
-          <!-- countyMap buttons -->
-          <div layout="row">
-
-
-          
-          <md-card flex="20" class="textCard" flex-offset="10">
-            <md-card-actions layout="row" layout-alignment="center center">
-
-              <md-radio-group layout="row" ng-model="programYear">
-                <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
-                <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
-              </md-radio-group>
-
-            </md-card-actions>
-          </md-card>
-
-        <md-card flex="45" class="textCard">
-          <md-card-actions layout="row" layout-alignment="space-between center">
-
-
-            <div>
-              <md-radio-group ng-model="dataSet" layout="row">
-                <md-radio-button value="diabetes">Diabetes<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Average Diabetes Rate</md-tooltip>
-                </md-radio-button>
-                <md-radio-button value="payments">Payments<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Per Capita Payments</md-tooltip>
-                </md-radio-button>
-                <md-radio-button value="grants">Grants<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Per Capita Grants</md-tooltip>
-                </md-radio-button>
-                <md-radio-button value="totals">Totals<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">Per Capita Payments & Grants</md-tooltip>
-                </md-radio-button>
-              </md-radio-group>
-            </div>              
-
-              </md-card-actions>
-            </md-card>
-      <div flex="5">
-        <md-button aria-label="Search" class="md-fab md-warn md-raised md-mini"
-            ng-click="showPhysicianSearchDialog($event)">
-          <md-tooltip md-direction="up" md-visible="tooltipVisible"
-            md-autohide="false">
-            Search County/Physician or Click on a County Below
-          </md-tooltip>
-          <i class="fa fa-search fa-lg"></i>
+        <md-button aria-label="About" class="md-fab md-raised md-mini" ng-click="showInfoDialog($event)"><md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">About</md-tooltip><i class="fa fa-info fa-lg fa-align-center"></i>
         </md-button>
-      </div>
-        
-      <div flex="5">
-        <md-button id="factoidButton" aria-label="Factoids" class="md-fab md-raised md-mini"
-                ng-click="openDialog($event, item)">
-                  <md-tooltip md-direction="up" md-visible="tooltipVisible"
-                  md-autohide="false">
-                  Factoids
-                </md-tooltip>
-               <i class="fa fa-bar-chart fa-lg fa-align-center"></i>
-        </md-button>
+ 
+        </md-fab-actions>
+      </md-fab-speed-dial>
+
+      <!-- TITLE -->
+      <div><h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">SCOPE</span></h1>
       </div>
 
-
-<!--           <md-button aria-label="Factoids" class="md-fab md-raised md-mini"
-          ng-click="openDialog($event, item)">
-            <md-tooltip md-direction="up" md-visible="tooltipVisible"
-            md-autohide="false">
-            Factoids
-          </md-tooltip>
-            <i class="fa fa-bar-chart fa-lg fa-align-center"></i>
-          </md-button> -->
-
-
-<!--           <div flex="5">
-            <md-button class="md-fab md-mini md-warn" aria-label="doctor">
-              <i class="fa fa-user-md fa-lg"></i>
-            </md-button>
-          </div> -->
-
-<!--           <div flex="5">
-            <md-button class="md-fab md-mini md-primary" aria-label="county">
-              <i class="fa fa-map-marker fa-lg"></i>
-            </md-button>
-          </div> -->
-
-          </div>
-
+      <!-- DASHBOARD -->
     <div layout="row">
 
+     <div flex="80" flex-offset="10" class="textCard">
+
+     <md-card-title>
+     <md-card-title-text>
+                     <!-- countyMap buttons -->
+
+      <!-- <div layout="row"> -->
+        <!-- <md-card class="dashCard" flex="50" flex-offset="25"> -->
+            <div layout="row">
+                <div flex="25" flex-offset="25">
+                  <md-radio-group layout="row" ng-model="programYear">
+                    <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
+                    <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
+                  </md-radio-group>
+                </div>
+                <div flex="25" layout="row">
+                 <div ng-repeat="item in items">
+                   <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
+                 </div>
+                </div>   
+              </div>
+            <!-- </md-card> -->
+      <!-- </div> -->
 
 
+       </md-card-title-text>
+         </md-card-title>
+
+              <div class="infoFrame" layout="row" layout-wrap>
+
+                <md-card flex class="fade" ng-show="dataSet === 'diabetes'">
+                <md-card-content>
+                  <p>DIABETES.  According to data from The International Diabetes Federation, about 382 million people on earth now have diabetes, with an estimated 592 million by the year 2035 – a 55% increase.   According to the Centers for Disease Control and Prevention, 29.1 million or 9.3% of all Americans had diabetes as of 2012, with an alarming 8.1 million (27.8%) of them undiagnosed.  About 86 million or 37% of Americans over the age of 20 are considered prediabetic/IGT.   The market for Type 2 Diabetes treatment options is exponentially increasing – current worth estimates are approximately $10 billion in the United States and are predicted to increase to $30 billion by 2030.
+                  </p>
+                </md-card-content>
+                </md-card>
+
+                <md-card flex class="fade" ng-show="dataSet === 'payments'">
+                <md-card-content>
+                  <p>PAYMENTS.  The Sunshine Act embodies the growing pubic awareness of the conflicts of interest produced by these financial relationships.  In 2009, the National Academy of Medicine (NAM), reported data suggesting “that these relationships may influence physicians to prescribe a company’s medicines even when evidence indicates another drug would be more beneficial.” (url: http://iom.nationalacademies.org/Reports/2009/Conflict-of-Interest-in-Medical-Research-Education-and-Practice.aspx)  The NAM report urged greater transparency and recommended “eliminating these problematic relationships between physicians and industry.”</p>
+                  </md-card-content>
+                </md-card>
+
+                <md-card flex class="fade" ng-show="dataSet === 'grants'">
+                <md-card-content>
+                  <p>GRANTS.  While Open Payments is a major step towards transparency, a recent University of Colorado study published in JAMA Internal Medicine found “negligible to small” deterrence effect of the disclosure laws on physicians’ prescribing habits.  Among the researchers’ speculative reasons for the small effect was the fact that “although these payments were disclosed to state agencies, payment information was not disseminated to the public in an accessible way.”  [url: http://archinte.jamanetwork.com/article.aspx?articleid=1170047]</p>
+                  </md-card-content>
+                </md-card>
+
+                <md-card flex class="fade" ng-show="dataSet === 'totals'">
+                <md-card-content>
+                  <p>TOTALS.  PharmLens is designed to enhance transparency and public accessibility to this critical information, using the tools of data visualization.</p>
+                  </md-card-content>
+                </md-card>
+
+              </div>
+
+            </div>
     </div>
 
 
-          <div county-map id="countyMap" countyinfo="countyInfo" bins="bins" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
-          </div>
+    <div id="countyMap">
+      <div county-map countyinfo="countyInfo" bins="bins" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
+      </div>
+    </div>
+
+
           </md-card-content>
         </md-card>
-
-
-        </md-card-content>
-      </md-card>
-
-
-
       
 </div>
-
-
-
 
 <div class="container">
   <footer class="footer">
     <div layout="row">
-      <md-card flex="50" flex-offset="25" class="footerCard">
+      <md-card flex="40" flex-offset="30" class="footerCard">
         <md-card-content>
-          <p>&copy; Andy Watt, 2015. Made possible by the <a href='https://openpaymentsdata.cms.gov/'>OpenPayments API</a>.</p>
-          <p>Photo credit: <a href="https://www.flickr.com/photos/manoftaste-de/17783209085/">manoftaste.de</a> via <a href="http://visualhunt.com">VisualHunt.com</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a>
-          </p>
+          <p>&copy; Andrew Watt, 2016. Made possible by the <a href='https://openpaymentsdata.cms.gov/'>OpenPayments API</a>.</p>
+          <p>Photo credit: <a href="https://www.flickr.com/photos/manoftaste-de/17783209085/">manoftaste.de</a> via <a href="http://visualhunt.com">VisualHunt.com</a> / <a href="http://creativecommons.org/licenses/by/2.0/">CC BY</a></p>
         </md-card-content>
       </md-card>
     </div>

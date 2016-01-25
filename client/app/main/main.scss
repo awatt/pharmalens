@@ -134,11 +134,8 @@
   stroke-opacity: .5;
 }
 
-
-
 md-input-container {
   margin: 10px; }
-
 
 .physician-list li {
   border-bottom: 1px solid #ccc;
@@ -155,25 +152,6 @@ md-input-container {
 .physician-list .item-title md-icon {
   height: 18px;
   width: 18px; }
-
-// section {
-//   background: #f7f7f7;
-//   border-radius: 3px;
-//   text-align: center;
-//   margin: 1em;
-//   position: relative !important;
-//   padding-bottom: 10px; }
-// md-content {
-//   margin-right: 7px; }
-// section .md-button {
-//   margin-top: 16px;
-//   margin-bottom: 16px; }
-// .label {
-//   position: absolute;
-//   bottom: 5px;
-//   left: 7px;
-//   font-size: 14px;
-//   opacity: 0.54; }
 
 md-dialog-content{
   padding: 2px;
@@ -234,11 +212,6 @@ md-radio-group {
   color: #85bb65;
 }
 
-// .blurred {
-//     color: transparent;
-//     text-shadow: 0px 0px 5px rgb(0,0,0);
-// }
-
 .blurred {
     // font-size: 32px;
     color: transparent;
@@ -247,6 +220,196 @@ md-radio-group {
     -o-animation:      blurry 10s infinite;/* Opera 12+ */
     animation:         blurry 10s infinite;/* IE 10+ */
 }
+
+//title effect
+.mainTitle {
+    // position: relative;
+    color: #1d91c0;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.titleCard {
+  width: 75%;
+  position: center;
+}
+
+md-card {
+  background: rgba(158,202,225,0.3);
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 50px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.footerCard {
+  padding-top: 10px;
+}
+
+.fade, .dashCard {
+  background: rgba(158,202,225,0.65);
+}
+
+.fade {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  opacity: 1;
+}
+
+.infoFrame {
+  min-height: 120px;
+}
+
+.fade.ng-hide-remove {
+      -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+
+.fade.ng-hide-remove {
+    -webkit-animation: flipInX 1.5s;
+    animation: flipInX 1.5s;
+}
+
+
+md-radio-button {
+  margin: 16px;
+}
+
+md-checkbox {
+  margin: 14px;
+}
+
+.mainBody {
+  margin-top: 20px;
+}
+
+
+// ANIMATIONS
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+
 @-webkit-keyframes blurry {
   0%   { text-shadow: 0px 0px 0px #1d91c0; }
   35%   { text-shadow: 0px 0px 12px #1d91c0; }
@@ -275,73 +438,6 @@ md-radio-group {
   // 75%   { text-shadow: 0px 0px 6px #1d91c0; }
   100% { text-shadow: 0px 0px 0px #1d91c0; }  
 }
-
-//title effect
-.mainTitle {
-    // position: relative;
-    color: #1d91c0;
-    font-size: 60px;
-    text-align: center;
-    // margin-top: 40px;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.titleCard {
-  width: 75%;
-  position: center;
-}
-
-md-card {
-  background: rgba(158,202,225,0.2);
-}
-
-.textCard {
-  background: rgba(158,202,225,0.7);
-}
-
-.fabButton {
-  position: absolute;
-}
-
-.factoidButton {
-  float: right;
-}
-
-
-#infoButton {
-  color: rgba(158,202,225,0.2);
-}
-
-// .textCardTransition.ng-hide {
-//   transition:0.5s linear all;
-// }
-
-.fade.ng-hide {
-  transition:0.5s linear all;
-}
-
-
-// <div ng-show="bool" class="fade">
-//   Show and hide me
-// </div>
-// <button ng-click="bool=true">Toggle</button>
-
-// <style>
-// .fade.ng-hide {
-//   transition:0.5s linear all;
-//   opacity:0;
-// }
-// </style>
-
-
-
-
-
-
-
-
-
-
 
 
 
