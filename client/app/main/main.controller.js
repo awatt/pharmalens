@@ -16,34 +16,21 @@ angular.module('foglightApp')
 
   //DATASET SWITCHING
   $scope.dataSet = 'diabetes';
+  $scope.dataTitle;
+  $scope.setDataTitle = function(){
+    if ($scope.dataSet === 'diabetes' || $scope.dataSet === 'totals'){
+      $scope.dataTitle = 'Payments & Grants';
+    } else {
+      $scope.dataTitle = $scope.dataSet.substring(0,1).toUpperCase() + $scope.dataSet.substring(1);
+    }
+  }
+
   $scope.message = 'false';
   $scope.onChange = function(cbState) {
     $scope.message = cbState;
   };
 
-  // $scope.selectDataSet = function(){
-  //   $timeout(function(){ 
-  //     var selected = $scope.dataSetSwitches;
-  //     if(selected.payments && !selected.grants){
-  //       $scope.dataSet = 'payments'
-  //       selected.diabetes = false;
-  //     } else if(!selected.payments && selected.grants){
-  //       $scope.dataSet = 'grants'
-  //       selected.diabetes = false;
-  //     } else if(selected.payments && selected.grants){
-  //       $scope.dataSet = 'totals'
-  //       selected.diabetes = false;
-  //     } else if(!selected.payments && !selected.grants){
-  //       $scope.dataSet = 'diabetes'
-  //       selected.diabetes = true;
-  //     } 
-  //   }, 0);
-  // }
-  //DATASET SWITCHING - END
-
-
   //CHECKBOXES
-
    $scope.items = ['payments', 'grants'];
       $scope.selected = [];
       $scope.toggle = function (item, list) {
@@ -269,6 +256,7 @@ function createFilterFor(query) {
 
 //DIALOG FUNCTIONS
 $scope.showSankeyDialog = function(ev, FIPS, searchTerm) {
+  $scope.setDataTitle();
   $scope.progress = true;
   $scope.bins = [];
   if(typeof searchTerm === "object" && searchTerm !== null){

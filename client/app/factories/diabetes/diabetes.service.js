@@ -5,22556 +5,25775 @@ angular.module('foglightApp')
 
     var diabetes = [
   {
-    "id":2013,
+    "state":"AK",
+    "FIPS":2013,
     "number":214,
     "rate":7.8,
-    "state":"AK",
-    "name":"Aleutians East Borough"
+    "population":3320,
+    "county":"Aleutians East Borough"
   },
   {
-    "id":2016,
+    "state":"AK",
+    "FIPS":2016,
     "number":297,
     "rate":6.3,
-    "state":"AK",
-    "name":"Aleutians West Census Area"
+    "population":5671,
+    "county":"Aleutians West Census Area"
   },
   {
-    "id":2020,
+    "state":"AK",
+    "FIPS":2020,
     "number":15195,
     "rate":7.1,
-    "state":"AK",
-    "name":"Municipality of Anchorage"
+    "population":298633,
+    "county":"Municipality of Anchorage"
   },
   {
-    "id":2050,
+    "state":"AK",
+    "FIPS":2050,
     "number":658,
     "rate":6.1,
-    "state":"AK",
-    "name":"Bethel Census Area"
+    "population":17687,
+    "county":"Bethel Census Area"
   },
   {
-    "id":2060,
+    "state":"AK",
+    "FIPS":2060,
     "number":64,
     "rate":8.8,
-    "state":"AK",
-    "name":"Bristol Bay Borough"
+    "population":984,
+    "county":"Bristol Bay Borough"
   },
   {
-    "id":2068,
+    "state":"AK",
+    "FIPS":2068,
     "number":83,
     "rate":5.8,
-    "state":"AK",
-    "name":"Denali Borough"
+    "population":1906,
+    "county":"Denali Borough"
   },
   {
-    "id":2070,
+    "state":"AK",
+    "FIPS":2070,
     "number":237,
     "rate":7.4,
-    "state":"AK",
-    "name":"Dillingham Census Area"
+    "population":4968,
+    "county":"Dillingham Census Area"
   },
   {
-    "id":2090,
+    "state":"AK",
+    "FIPS":2090,
     "number":4129,
     "rate":5.7,
-    "state":"AK",
-    "name":"Fairbanks North Star Borough"
+    "population":100227,
+    "county":"Fairbanks North Star Borough"
   },
   {
-    "id":2100,
+    "state":"AK",
+    "FIPS":2100,
     "number":140,
     "rate":7,
-    "state":"AK",
-    "name":"Haines Borough"
+    "population":2572,
+    "county":"Haines Borough"
   },
   {
-    "id":2105,
+    "state":"AK",
+    "FIPS":2105,
     "number":135,
     "rate":8.1,
-    "state":"AK",
-    "name":"Hoonah-Angoon Borough"
+    "population":2140,
+    "county":"Hoonah-Angoon Borough"
   },
   {
-    "id":2110,
+    "state":"AK",
+    "FIPS":2110,
     "number":1487,
     "rate":6.1,
-    "state":"AK",
-    "name":"Juneau Borough"
+    "population":32411,
+    "county":"Juneau Borough"
   },
   {
-    "id":2122,
+    "state":"AK",
+    "FIPS":2122,
     "number":2994,
     "rate":7.1,
-    "state":"AK",
-    "name":"Kenai Peninsula Borough"
+    "population":56958,
+    "county":"Kenai Peninsula Borough"
   },
   {
-    "id":2130,
+    "state":"AK",
+    "FIPS":2130,
     "number":891,
     "rate":8.7,
-    "state":"AK",
-    "name":"Ketchikan Gateway Borough"
+    "population":13709,
+    "county":"Ketchikan Gateway Borough"
   },
   {
-    "id":2150,
+    "state":"AK",
+    "FIPS":2150,
     "number":585,
     "rate":5.9,
-    "state":"AK",
-    "name":"Kodiak Island Borough"
+    "population":14075,
+    "county":"Kodiak Island Borough"
   },
   {
-    "id":2164,
+    "state":"AK",
+    "FIPS":2164,
     "number":88,
     "rate":8,
-    "state":"AK",
-    "name":"Lake and Peninsula Borough"
+    "population":1643,
+    "county":"Lake and Peninsula Borough"
   },
   {
-    "id":2170,
+    "state":"AK",
+    "FIPS":2170,
     "number":5238,
     "rate":8.1,
-    "state":"AK",
-    "name":"Matanuska-Susitna Borough"
+    "population":93798,
+    "county":"Matanuska-Susitna Borough"
   },
   {
-    "id":2180,
+    "state":"AK",
+    "FIPS":2180,
     "number":426,
     "rate":6.9,
-    "state":"AK",
-    "name":"Nome Census Area"
+    "population":9873,
+    "county":"Nome Census Area"
   },
   {
-    "id":2185,
+    "state":"AK",
+    "FIPS":2185,
     "number":518,
     "rate":7.4,
-    "state":"AK",
-    "name":"North Slope Borough"
+    "population":9655,
+    "county":"North Slope Borough"
   },
   {
-    "id":2188,
+    "state":"AK",
+    "FIPS":2188,
     "number":324,
     "rate":6.8,
-    "state":"AK",
-    "name":"Northwest Arctic Borough"
+    "population":7709,
+    "county":"Northwest Arctic Borough"
   },
   {
-    "id":2195,
+    "state":"AK",
+    "FIPS":2195,
     "number":201,
     "rate":7,
-    "state":"AK",
-    "name":"Petersburg Borough"
+    "population":3241,
+    "county":"Petersburg Borough"
   },
   {
-    "id":2198,
+    "state":"AK",
+    "FIPS":2198,
     "number":323,
     "rate":7.7,
-    "state":"AK",
-    "name":"Prince of Wales-Outer Ketchikan Borough"
+    "population":6387,
+    "county":"Prince of Wales-Outer Ketchikan Borough"
   },
   {
-    "id":2220,
+    "state":"AK",
+    "FIPS":2220,
     "number":502,
     "rate":7.4,
-    "state":"AK",
-    "name":"Sitka Borough"
+    "population":9060,
+    "county":"Sitka Borough"
   },
   {
-    "id":2230,
+    "state":"AK",
+    "FIPS":2230,
     "number":56,
     "rate":6.7,
-    "state":"AK",
-    "name":"Skagway Borough"
+    "population":994,
+    "county":"Skagway Borough"
   },
   {
-    "id":2240,
+    "state":"AK",
+    "FIPS":2240,
     "number":333,
     "rate":6.5,
-    "state":"AK",
-    "name":"Southeast Fairbanks Census Area"
+    "population":7149,
+    "county":"Southeast Fairbanks Census Area"
   },
   {
-    "id":2261,
+    "state":"AK",
+    "FIPS":2261,
     "number":472,
     "rate":6.7,
-    "state":"AK",
-    "name":"Valdez-Cordova Census Area"
+    "population":9736,
+    "county":"Valdez-Cordova Census Area"
   },
   {
-    "id":2270,
+    "state":"AK",
+    "FIPS":2270,
     "number":232,
     "rate":5.4,
-    "state":"AK",
-    "name":"Wade Hampton Census Area"
+    "population":7795,
+    "county":"Wade Hampton Census Area"
   },
   {
-    "id":2275,
+    "state":"AK",
+    "FIPS":2275,
     "number":159,
     "rate":8.7,
-    "state":"AK",
-    "name":"Wrangell Borough"
+    "population":2398,
+    "county":"Wrangell Borough"
   },
   {
-    "id":2282,
+    "state":"AK",
+    "FIPS":2282,
     "number":39,
     "rate":7.9,
-    "state":"AK",
-    "name":"Yakutat Borough"
+    "population":651,
+    "county":"Yakutat Borough"
   },
   {
-    "id":2290,
+    "state":"AK",
+    "FIPS":2290,
     "number":328,
     "rate":8.1,
-    "state":"AK",
-    "name":"Yukon-Koyukuk Census Area"
+    "population":5731,
+    "county":"Yukon-Koyukuk Census Area"
   },
   {
-    "id":1001,
+    "state":"AL",
+    "FIPS":1001,
     "number":4724,
     "rate":12,
-    "state":"AL",
-    "name":"Autauga County"
+    "population":55192,
+    "county":"Autauga County"
   },
   {
-    "id":1003,
+    "state":"AL",
+    "FIPS":1003,
     "number":15437,
     "rate":10.8,
-    "state":"AL",
-    "name":"Baldwin County"
+    "population":190561,
+    "county":"Baldwin County"
   },
   {
-    "id":1005,
+    "state":"AL",
+    "FIPS":1005,
     "number":3377,
     "rate":16.2,
-    "state":"AL",
-    "name":"Barbour County"
+    "population":27169,
+    "county":"Barbour County"
   },
   {
-    "id":1007,
+    "state":"AL",
+    "FIPS":1007,
     "number":2276,
     "rate":13.2,
-    "state":"AL",
-    "name":"Bibb County"
+    "population":22634,
+    "county":"Bibb County"
   },
   {
-    "id":1009,
+    "state":"AL",
+    "FIPS":1009,
     "number":5869,
     "rate":13.8,
-    "state":"AL",
-    "name":"Blount County"
+    "population":57748,
+    "county":"Blount County"
   },
   {
-    "id":1011,
+    "state":"AL",
+    "FIPS":1011,
     "number":1527,
     "rate":18.6,
-    "state":"AL",
-    "name":"Bullock County"
+    "population":10589,
+    "county":"Bullock County"
   },
   {
-    "id":1013,
+    "state":"AL",
+    "FIPS":1013,
     "number":2507,
     "rate":16.4,
-    "state":"AL",
-    "name":"Butler County"
+    "population":20409,
+    "county":"Butler County"
   },
   {
-    "id":1015,
+    "state":"AL",
+    "FIPS":1015,
     "number":12582,
     "rate":14.3,
-    "state":"AL",
-    "name":"Calhoun County"
+    "population":117264,
+    "county":"Calhoun County"
   },
   {
-    "id":1017,
+    "state":"AL",
+    "FIPS":1017,
     "number":4102,
     "rate":15.8,
-    "state":"AL",
-    "name":"Chambers County"
+    "population":34087,
+    "county":"Chambers County"
   },
   {
-    "id":1019,
+    "state":"AL",
+    "FIPS":1019,
     "number":2993,
     "rate":14.9,
-    "state":"AL",
-    "name":"Cherokee County"
+    "population":26017,
+    "county":"Cherokee County"
   },
   {
-    "id":1021,
+    "state":"AL",
+    "FIPS":1021,
     "number":4234,
     "rate":13.2,
-    "state":"AL",
-    "name":"Chilton County"
+    "population":43709,
+    "county":"Chilton County"
   },
   {
-    "id":1023,
+    "state":"AL",
+    "FIPS":1023,
     "number":1960,
     "rate":18.9,
-    "state":"AL",
-    "name":"Choctaw County"
+    "population":13559,
+    "county":"Choctaw County"
   },
   {
-    "id":1025,
+    "state":"AL",
+    "FIPS":1025,
     "number":2948,
     "rate":15.8,
-    "state":"AL",
-    "name":"Clarke County"
+    "population":25168,
+    "county":"Clarke County"
   },
   {
-    "id":1027,
+    "state":"AL",
+    "FIPS":1027,
     "number":1455,
     "rate":14.3,
-    "state":"AL",
-    "name":"Clay County"
+    "population":13465,
+    "county":"Clay County"
   },
   {
-    "id":1029,
+    "state":"AL",
+    "FIPS":1029,
     "number":1484,
     "rate":13.3,
-    "state":"AL",
-    "name":"Cleburne County"
+    "population":14918,
+    "county":"Cleburne County"
   },
   {
-    "id":1031,
+    "state":"AL",
+    "FIPS":1031,
     "number":5313,
     "rate":14,
-    "state":"AL",
-    "name":"Coffee County"
+    "population":51217,
+    "county":"Coffee County"
   },
   {
-    "id":1033,
+    "state":"AL",
+    "FIPS":1033,
     "number":6928,
     "rate":16.8,
-    "state":"AL",
-    "name":"Colbert County"
+    "population":54473,
+    "county":"Colbert County"
   },
   {
-    "id":1035,
+    "state":"AL",
+    "FIPS":1035,
     "number":1746,
     "rate":17.8,
-    "state":"AL",
-    "name":"Conecuh County"
+    "population":13005,
+    "county":"Conecuh County"
   },
   {
-    "id":1037,
+    "state":"AL",
+    "FIPS":1037,
     "number":1441,
     "rate":16.7,
-    "state":"AL",
-    "name":"Coosa County"
+    "population":11181,
+    "county":"Coosa County"
   },
   {
-    "id":1039,
+    "state":"AL",
+    "FIPS":1039,
     "number":4435,
     "rate":15.5,
-    "state":"AL",
-    "name":"Covington County"
+    "population":37809,
+    "county":"Covington County"
   },
   {
-    "id":1041,
+    "state":"AL",
+    "FIPS":1041,
     "number":1604,
     "rate":15.4,
-    "state":"AL",
-    "name":"Crenshaw County"
+    "population":13972,
+    "county":"Crenshaw County"
   },
   {
-    "id":1043,
+    "state":"AL",
+    "FIPS":1043,
     "number":8293,
     "rate":13.7,
-    "state":"AL",
-    "name":"Cullman County"
+    "population":80361,
+    "county":"Cullman County"
   },
   {
-    "id":1045,
+    "state":"AL",
+    "FIPS":1045,
     "number":5358,
     "rate":14.5,
-    "state":"AL",
-    "name":"Dale County"
+    "population":50310,
+    "county":"Dale County"
   },
   {
-    "id":1047,
+    "state":"AL",
+    "FIPS":1047,
     "number":5347,
     "rate":17.5,
-    "state":"AL",
-    "name":"Dallas County"
+    "population":42839,
+    "county":"Dallas County"
   },
   {
-    "id":1049,
+    "state":"AL",
+    "FIPS":1049,
     "number":7716,
     "rate":15,
-    "state":"AL",
-    "name":"Dekalb County"
+    "population":70930,
+    "county":"Dekalb County"
   },
   {
-    "id":1051,
+    "state":"AL",
+    "FIPS":1051,
     "number":7530,
     "rate":12.6,
-    "state":"AL",
-    "name":"Elmore County"
+    "population":80392,
+    "county":"Elmore County"
   },
   {
-    "id":1053,
+    "state":"AL",
+    "FIPS":1053,
     "number":4630,
     "rate":16.1,
-    "state":"AL",
-    "name":"Escambia County"
+    "population":38048,
+    "county":"Escambia County"
   },
   {
-    "id":1055,
+    "state":"AL",
+    "FIPS":1055,
     "number":11804,
     "rate":15.1,
-    "state":"AL",
-    "name":"Etowah County"
+    "population":104324,
+    "county":"Etowah County"
   },
   {
-    "id":1057,
+    "state":"AL",
+    "FIPS":1057,
     "number":2045,
     "rate":15.8,
-    "state":"AL",
-    "name":"Fayette County"
+    "population":16982,
+    "county":"Fayette County"
   },
   {
-    "id":1059,
+    "state":"AL",
+    "FIPS":1059,
     "number":3121,
     "rate":13.5,
-    "state":"AL",
-    "name":"Franklin County"
+    "population":31660,
+    "county":"Franklin County"
   },
   {
-    "id":1061,
+    "state":"AL",
+    "FIPS":1061,
     "number":2996,
     "rate":14.7,
-    "state":"AL",
-    "name":"Geneva County"
+    "population":27002,
+    "county":"Geneva County"
   },
   {
-    "id":1063,
+    "state":"AL",
+    "FIPS":1063,
     "number":1379,
     "rate":21,
-    "state":"AL",
-    "name":"Greene County"
+    "population":8827,
+    "county":"Greene County"
   },
   {
-    "id":1065,
+    "state":"AL",
+    "FIPS":1065,
     "number":1956,
     "rate":17.2,
-    "state":"AL",
-    "name":"Hale County"
+    "population":15390,
+    "county":"Hale County"
   },
   {
-    "id":1067,
+    "state":"AL",
+    "FIPS":1067,
     "number":2188,
     "rate":16.7,
-    "state":"AL",
-    "name":"Henry County"
+    "population":17248,
+    "county":"Henry County"
   },
   {
-    "id":1069,
+    "state":"AL",
+    "FIPS":1069,
     "number":10657,
     "rate":14,
-    "state":"AL",
-    "name":"Houston County"
+    "population":103368,
+    "county":"Houston County"
   },
   {
-    "id":1071,
+    "state":"AL",
+    "FIPS":1071,
     "number":5735,
     "rate":14.3,
-    "state":"AL",
-    "name":"Jackson County"
+    "population":53048,
+    "county":"Jackson County"
   },
   {
-    "id":1073,
+    "state":"AL",
+    "FIPS":1073,
     "number":60238,
     "rate":12.3,
-    "state":"AL",
-    "name":"Jefferson County"
+    "population":657953,
+    "county":"Jefferson County"
   },
   {
-    "id":1075,
+    "state":"AL",
+    "FIPS":1075,
     "number":1748,
     "rate":16.1,
-    "state":"AL",
-    "name":"Lamar County"
+    "population":14255,
+    "county":"Lamar County"
   },
   {
-    "id":1077,
+    "state":"AL",
+    "FIPS":1077,
     "number":9158,
     "rate":13,
-    "state":"AL",
-    "name":"Lauderdale County"
+    "population":92694,
+    "county":"Lauderdale County"
   },
   {
-    "id":1079,
+    "state":"AL",
+    "FIPS":1079,
     "number":3977,
     "rate":15.7,
-    "state":"AL",
-    "name":"Lawrence County"
+    "population":33776,
+    "county":"Lawrence County"
   },
   {
-    "id":1081,
+    "state":"AL",
+    "FIPS":1081,
     "number":10552,
     "rate":9.7,
-    "state":"AL",
-    "name":"Lee County"
+    "population":148040,
+    "county":"Lee County"
   },
   {
-    "id":1085,
+    "state":"AL",
+    "FIPS":1085,
     "number":1880,
     "rate":23.5,
-    "state":"AL",
-    "name":"Lowndes County"
+    "population":10864,
+    "county":"Lowndes County"
   },
   {
-    "id":1087,
+    "state":"AL",
+    "FIPS":1087,
     "number":2708,
     "rate":17.8,
-    "state":"AL",
-    "name":"Macon County"
+    "population":20470,
+    "county":"Macon County"
   },
   {
-    "id":1083,
+    "state":"AL",
+    "FIPS":1083,
     "number":7745,
     "rate":11.9,
-    "state":"AL",
-    "name":"Limestone County"
+    "population":87363,
+    "county":"Limestone County"
   },
   {
-    "id":1089,
+    "state":"AL",
+    "FIPS":1089,
     "number":29744,
     "rate":11.7,
-    "state":"AL",
-    "name":"Madison County"
+    "population":342868,
+    "county":"Madison County"
   },
   {
-    "id":1091,
+    "state":"AL",
+    "FIPS":1091,
     "number":2778,
     "rate":18.5,
-    "state":"AL",
-    "name":"Marengo County"
+    "population":20443,
+    "county":"Marengo County"
   },
   {
-    "id":1093,
+    "state":"AL",
+    "FIPS":1093,
     "number":3884,
     "rate":16.6,
-    "state":"AL",
-    "name":"Marion County"
+    "population":30516,
+    "county":"Marion County"
   },
   {
-    "id":1095,
+    "state":"AL",
+    "FIPS":1095,
     "number":9247,
     "rate":13.5,
-    "state":"AL",
-    "name":"Marshall County"
+    "population":94303,
+    "county":"Marshall County"
   },
   {
-    "id":1097,
+    "state":"AL",
+    "FIPS":1097,
     "number":41997,
     "rate":13.9,
-    "state":"AL",
-    "name":"Mobile County"
+    "population":413955,
+    "county":"Mobile County"
   },
   {
-    "id":1099,
+    "state":"AL",
+    "FIPS":1099,
     "number":2660,
     "rate":16.1,
-    "state":"AL",
-    "name":"Monroe County"
+    "population":22609,
+    "county":"Monroe County"
   },
   {
-    "id":1101,
+    "state":"AL",
+    "FIPS":1101,
     "number":22734,
     "rate":13.8,
-    "state":"AL",
-    "name":"Montgomery County"
+    "population":229426,
+    "county":"Montgomery County"
   },
   {
-    "id":1103,
+    "state":"AL",
+    "FIPS":1103,
     "number":12160,
     "rate":13.6,
-    "state":"AL",
-    "name":"Morgan County"
+    "population":120057,
+    "county":"Morgan County"
   },
   {
-    "id":1105,
+    "state":"AL",
+    "FIPS":1105,
     "number":1285,
     "rate":17.9,
-    "state":"AL",
-    "name":"Perry County"
+    "population":10172,
+    "county":"Perry County"
   },
   {
-    "id":1107,
+    "state":"AL",
+    "FIPS":1107,
     "number":2584,
     "rate":17.8,
-    "state":"AL",
-    "name":"Pickens County"
+    "population":19344,
+    "county":"Pickens County"
   },
   {
-    "id":1109,
+    "state":"AL",
+    "FIPS":1109,
     "number":3468,
     "rate":14,
-    "state":"AL",
-    "name":"Pike County"
+    "population":33128,
+    "county":"Pike County"
   },
   {
-    "id":1111,
+    "state":"AL",
+    "FIPS":1111,
     "number":2718,
     "rate":16.1,
-    "state":"AL",
-    "name":"Randolph County"
+    "population":22657,
+    "county":"Randolph County"
   },
   {
-    "id":1113,
+    "state":"AL",
+    "FIPS":1113,
     "number":5782,
     "rate":13.9,
-    "state":"AL",
-    "name":"Russell County"
+    "population":57736,
+    "county":"Russell County"
   },
   {
-    "id":1117,
+    "state":"AL",
+    "FIPS":1117,
     "number":12622,
     "rate":8.6,
-    "state":"AL",
-    "name":"Shelby County"
+    "population":200963,
+    "county":"Shelby County"
   },
   {
-    "id":1115,
+    "state":"AL",
+    "FIPS":1115,
     "number":8222,
     "rate":13,
-    "state":"AL",
-    "name":"St. Clair County"
+    "population":85165,
+    "county":"St. Clair County"
   },
   {
-    "id":1119,
+    "state":"AL",
+    "FIPS":1119,
     "number":1589,
     "rate":16,
-    "state":"AL",
-    "name":"Sumter County"
+    "population":13411,
+    "county":"Sumter County"
   },
   {
-    "id":1121,
+    "state":"AL",
+    "FIPS":1121,
     "number":8356,
     "rate":13.6,
-    "state":"AL",
-    "name":"Talladega County"
+    "population":81858,
+    "county":"Talladega County"
   },
   {
-    "id":1123,
+    "state":"AL",
+    "FIPS":1123,
     "number":4502,
     "rate":14.4,
-    "state":"AL",
-    "name":"Tallapoosa County"
+    "population":41156,
+    "county":"Tallapoosa County"
   },
   {
-    "id":1125,
+    "state":"AL",
+    "FIPS":1125,
     "number":16403,
     "rate":11.2,
-    "state":"AL",
-    "name":"Tuscaloosa County"
+    "population":198643,
+    "county":"Tuscaloosa County"
   },
   {
-    "id":1127,
+    "state":"AL",
+    "FIPS":1127,
     "number":7742,
     "rate":15.5,
-    "state":"AL",
-    "name":"Walker County"
+    "population":66125,
+    "county":"Walker County"
   },
   {
-    "id":1129,
+    "state":"AL",
+    "FIPS":1129,
     "number":2050,
     "rate":16.3,
-    "state":"AL",
-    "name":"Washington County"
+    "population":17088,
+    "county":"Washington County"
   },
   {
-    "id":1131,
+    "state":"AL",
+    "FIPS":1131,
     "number":1645,
     "rate":20.1,
-    "state":"AL",
-    "name":"Wilcox County"
+    "population":11386,
+    "county":"Wilcox County"
   },
   {
-    "id":1133,
+    "state":"AL",
+    "FIPS":1133,
     "number":2268,
     "rate":12.2,
-    "state":"AL",
-    "name":"Winston County"
+    "population":24185,
+    "county":"Winston County"
   },
   {
-    "id":5001,
+    "state":"AR",
+    "FIPS":5001,
     "number":1829,
     "rate":13,
-    "state":"AR",
-    "name":"Arkansas County"
+    "population":18994,
+    "county":"Arkansas County"
   },
   {
-    "id":5003,
+    "state":"AR",
+    "FIPS":5003,
     "number":2135,
     "rate":13.4,
-    "state":"AR",
-    "name":"Ashley County"
+    "population":21497,
+    "county":"Ashley County"
   },
   {
-    "id":5005,
+    "state":"AR",
+    "FIPS":5005,
     "number":4364,
     "rate":13.2,
-    "state":"AR",
-    "name":"Baxter County"
+    "population":41077,
+    "county":"Baxter County"
   },
   {
-    "id":5007,
+    "state":"AR",
+    "FIPS":5007,
     "number":16401,
     "rate":10,
-    "state":"AR",
-    "name":"Benton County"
+    "population":232739,
+    "county":"Benton County"
   },
   {
-    "id":5009,
+    "state":"AR",
+    "FIPS":5009,
     "number":3403,
     "rate":12.2,
-    "state":"AR",
-    "name":"Boone County"
+    "population":37333,
+    "county":"Boone County"
   },
   {
-    "id":5011,
+    "state":"AR",
+    "FIPS":5011,
     "number":1057,
     "rate":12.5,
-    "state":"AR",
-    "name":"Bradley County"
+    "population":11298,
+    "county":"Bradley County"
   },
   {
-    "id":5013,
+    "state":"AR",
+    "FIPS":5013,
     "number":540,
     "rate":12.9,
-    "state":"AR",
-    "name":"Calhoun County"
+    "population":5299,
+    "county":"Calhoun County"
   },
   {
-    "id":5015,
+    "state":"AR",
+    "FIPS":5015,
     "number":2616,
     "rate":12.5,
-    "state":"AR",
-    "name":"Carroll County"
+    "population":27598,
+    "county":"Carroll County"
   },
   {
-    "id":5017,
+    "state":"AR",
+    "FIPS":5017,
     "number":1399,
     "rate":16.4,
-    "state":"AR",
-    "name":"Chicot County"
+    "population":11458,
+    "county":"Chicot County"
   },
   {
-    "id":5019,
+    "state":"AR",
+    "FIPS":5019,
     "number":1933,
     "rate":11.5,
-    "state":"AR",
-    "name":"Clark County"
+    "population":22822,
+    "county":"Clark County"
   },
   {
-    "id":5021,
+    "state":"AR",
+    "FIPS":5021,
     "number":1330,
     "rate":11.2,
-    "state":"AR",
-    "name":"Clay County"
+    "population":15580,
+    "county":"Clay County"
   },
   {
-    "id":5023,
+    "state":"AR",
+    "FIPS":5023,
     "number":2759,
     "rate":13.7,
-    "state":"AR",
-    "name":"Cleburne County"
+    "population":25778,
+    "county":"Cleburne County"
   },
   {
-    "id":5025,
+    "state":"AR",
+    "FIPS":5025,
     "number":916,
     "rate":14.4,
-    "state":"AR",
-    "name":"Cleveland County"
+    "population":8615,
+    "county":"Cleveland County"
   },
   {
-    "id":5027,
+    "state":"AR",
+    "FIPS":5027,
     "number":2226,
     "rate":12.6,
-    "state":"AR",
-    "name":"Columbia County"
+    "population":24401,
+    "county":"Columbia County"
   },
   {
-    "id":5029,
+    "state":"AR",
+    "FIPS":5029,
     "number":1984,
     "rate":12.6,
-    "state":"AR",
-    "name":"Conway County"
+    "population":21216,
+    "county":"Conway County"
   },
   {
-    "id":5031,
+    "state":"AR",
+    "FIPS":5031,
     "number":8765,
     "rate":12.2,
-    "state":"AR",
-    "name":"Craighead County"
+    "population":99903,
+    "county":"Craighead County"
   },
   {
-    "id":5033,
+    "state":"AR",
+    "FIPS":5033,
     "number":4959,
     "rate":11.1,
-    "state":"AR",
-    "name":"Crawford County"
+    "population":61933,
+    "county":"Crawford County"
   },
   {
-    "id":5035,
+    "state":"AR",
+    "FIPS":5035,
     "number":5381,
     "rate":15.6,
-    "state":"AR",
-    "name":"Crittenden County"
+    "population":50070,
+    "county":"Crittenden County"
   },
   {
-    "id":5037,
+    "state":"AR",
+    "FIPS":5037,
     "number":1749,
     "rate":13.6,
-    "state":"AR",
-    "name":"Cross County"
+    "population":17654,
+    "county":"Cross County"
   },
   {
-    "id":5039,
+    "state":"AR",
+    "FIPS":5039,
     "number":843,
     "rate":14.1,
-    "state":"AR",
-    "name":"Dallas County"
+    "population":7965,
+    "county":"Dallas County"
   },
   {
-    "id":5041,
+    "state":"AR",
+    "FIPS":5041,
     "number":1296,
     "rate":14.4,
-    "state":"AR",
-    "name":"Desha County"
+    "population":12574,
+    "county":"Desha County"
   },
   {
-    "id":5043,
+    "state":"AR",
+    "FIPS":5043,
     "number":1695,
     "rate":12.4,
-    "state":"AR",
-    "name":"Drew County"
+    "population":18775,
+    "county":"Drew County"
   },
   {
-    "id":5045,
+    "state":"AR",
+    "FIPS":5045,
     "number":9247,
     "rate":10.8,
-    "state":"AR",
-    "name":"Faulkner County"
+    "population":118529,
+    "county":"Faulkner County"
   },
   {
-    "id":5047,
+    "state":"AR",
+    "FIPS":5047,
     "number":1673,
     "rate":12.7,
-    "state":"AR",
-    "name":"Franklin County"
+    "population":17942,
+    "county":"Franklin County"
   },
   {
-    "id":5049,
+    "state":"AR",
+    "FIPS":5049,
     "number":1316,
     "rate":13.9,
-    "state":"AR",
-    "name":"Fulton County"
+    "population":12241,
+    "county":"Fulton County"
   },
   {
-    "id":5051,
+    "state":"AR",
+    "FIPS":5051,
     "number":10348,
     "rate":13.9,
-    "state":"AR",
-    "name":"Garland County"
+    "population":96837,
+    "county":"Garland County"
   },
   {
-    "id":5053,
+    "state":"AR",
+    "FIPS":5053,
     "number":1448,
     "rate":10.9,
-    "state":"AR",
-    "name":"Grant County"
+    "population":18035,
+    "county":"Grant County"
   },
   {
-    "id":5055,
+    "state":"AR",
+    "FIPS":5055,
     "number":4318,
     "rate":13.8,
-    "state":"AR",
-    "name":"Greene County"
+    "population":43158,
+    "county":"Greene County"
   },
   {
-    "id":5057,
+    "state":"AR",
+    "FIPS":5057,
     "number":2265,
     "rate":14.2,
-    "state":"AR",
-    "name":"Hempstead County"
+    "population":22325,
+    "county":"Hempstead County"
   },
   {
-    "id":5059,
+    "state":"AR",
+    "FIPS":5059,
     "number":3054,
     "rate":12.1,
-    "state":"AR",
-    "name":"Hot Spring County"
+    "population":33386,
+    "county":"Hot Spring County"
   },
   {
-    "id":5061,
+    "state":"AR",
+    "FIPS":5061,
     "number":1183,
     "rate":12,
-    "state":"AR",
-    "name":"Howard County"
+    "population":13710,
+    "county":"Howard County"
   },
   {
-    "id":5063,
+    "state":"AR",
+    "FIPS":5063,
     "number":3164,
     "rate":11.7,
-    "state":"AR",
-    "name":"Independence County"
+    "population":36905,
+    "county":"Independence County"
   },
   {
-    "id":5065,
+    "state":"AR",
+    "FIPS":5065,
     "number":1385,
     "rate":12.9,
-    "state":"AR",
-    "name":"Izard County"
+    "population":13506,
+    "county":"Izard County"
   },
   {
-    "id":5067,
+    "state":"AR",
+    "FIPS":5067,
     "number":1724,
     "rate":12.7,
-    "state":"AR",
-    "name":"Jackson County"
+    "population":17640,
+    "county":"Jackson County"
   },
   {
-    "id":5071,
+    "state":"AR",
+    "FIPS":5071,
     "number":2368,
     "rate":12.7,
-    "state":"AR",
-    "name":"Johnson County"
+    "population":25864,
+    "county":"Johnson County"
   },
   {
-    "id":5069,
+    "state":"AR",
+    "FIPS":5069,
     "number":8230,
     "rate":15,
-    "state":"AR",
-    "name":"Jefferson County"
+    "population":74580,
+    "county":"Jefferson County"
   },
   {
-    "id":5073,
+    "state":"AR",
+    "FIPS":5073,
     "number":864,
     "rate":15.3,
-    "state":"AR",
-    "name":"Lafayette County"
+    "population":7431,
+    "county":"Lafayette County"
   },
   {
-    "id":5075,
+    "state":"AR",
+    "FIPS":5075,
     "number":1533,
     "rate":12.1,
-    "state":"AR",
-    "name":"Lawrence County"
+    "population":17039,
+    "county":"Lawrence County"
   },
   {
-    "id":5077,
+    "state":"AR",
+    "FIPS":5077,
     "number":1032,
     "rate":13.1,
-    "state":"AR",
-    "name":"Lee County"
+    "population":10190,
+    "county":"Lee County"
   },
   {
-    "id":5079,
+    "state":"AR",
+    "FIPS":5079,
     "number":1248,
     "rate":11.1,
-    "state":"AR",
-    "name":"Lincoln County"
+    "population":14149,
+    "county":"Lincoln County"
   },
   {
-    "id":5081,
+    "state":"AR",
+    "FIPS":5081,
     "number":1225,
     "rate":12.8,
-    "state":"AR",
-    "name":"Little River County"
+    "population":12905,
+    "county":"Little River County"
   },
   {
-    "id":5083,
+    "state":"AR",
+    "FIPS":5083,
     "number":2074,
     "rate":12.7,
-    "state":"AR",
-    "name":"Logan County"
+    "population":22005,
+    "county":"Logan County"
   },
   {
-    "id":5085,
+    "state":"AR",
+    "FIPS":5085,
     "number":6221,
     "rate":12.6,
-    "state":"AR",
-    "name":"Lonoke County"
+    "population":70087,
+    "county":"Lonoke County"
   },
   {
-    "id":5087,
+    "state":"AR",
+    "FIPS":5087,
     "number":1467,
     "rate":12.7,
-    "state":"AR",
-    "name":"Madison County"
+    "population":15636,
+    "county":"Madison County"
   },
   {
-    "id":5089,
+    "state":"AR",
+    "FIPS":5089,
     "number":1648,
     "rate":12.3,
-    "state":"AR",
-    "name":"Marion County"
+    "population":16595,
+    "county":"Marion County"
   },
   {
-    "id":5091,
+    "state":"AR",
+    "FIPS":5091,
     "number":3792,
     "rate":11.8,
-    "state":"AR",
-    "name":"Miller County"
+    "population":43617,
+    "county":"Miller County"
   },
   {
-    "id":5093,
+    "state":"AR",
+    "FIPS":5093,
     "number":4699,
     "rate":14.7,
-    "state":"AR",
-    "name":"Mississippi County"
+    "population":45550,
+    "county":"Mississippi County"
   },
   {
-    "id":5095,
+    "state":"AR",
+    "FIPS":5095,
     "number":986,
     "rate":16.5,
-    "state":"AR",
-    "name":"Monroe County"
+    "population":7840,
+    "county":"Monroe County"
   },
   {
-    "id":5097,
+    "state":"AR",
+    "FIPS":5097,
     "number":907,
     "rate":12.5,
-    "state":"AR",
-    "name":"Montgomery County"
+    "population":9315,
+    "county":"Montgomery County"
   },
   {
-    "id":5099,
+    "state":"AR",
+    "FIPS":5099,
     "number":926,
     "rate":13.9,
-    "state":"AR",
-    "name":"Nevada County"
+    "population":8903,
+    "county":"Nevada County"
   },
   {
-    "id":5101,
+    "state":"AR",
+    "FIPS":5101,
     "number":740,
     "rate":11.7,
-    "state":"AR",
-    "name":"Newton County"
+    "population":8084,
+    "county":"Newton County"
   },
   {
-    "id":5103,
+    "state":"AR",
+    "FIPS":5103,
     "number":2535,
     "rate":13.4,
-    "state":"AR",
-    "name":"Ouachita County"
+    "population":25411,
+    "county":"Ouachita County"
   },
   {
-    "id":5105,
+    "state":"AR",
+    "FIPS":5105,
     "number":944,
     "rate":12.1,
-    "state":"AR",
-    "name":"Perry County"
+    "population":10326,
+    "county":"Perry County"
   },
   {
-    "id":5107,
+    "state":"AR",
+    "FIPS":5107,
     "number":2206,
     "rate":15.2,
-    "state":"AR",
-    "name":"Phillips County"
+    "population":20772,
+    "county":"Phillips County"
   },
   {
-    "id":5109,
+    "state":"AR",
+    "FIPS":5109,
     "number":1015,
     "rate":12.3,
-    "state":"AR",
-    "name":"Pike County"
+    "population":11266,
+    "county":"Pike County"
   },
   {
-    "id":5111,
+    "state":"AR",
+    "FIPS":5111,
     "number":2267,
     "rate":12.7,
-    "state":"AR",
-    "name":"Poinsett County"
+    "population":24325,
+    "county":"Poinsett County"
   },
   {
-    "id":5113,
+    "state":"AR",
+    "FIPS":5113,
     "number":1946,
     "rate":12.8,
-    "state":"AR",
-    "name":"Polk County"
+    "population":20440,
+    "county":"Polk County"
   },
   {
-    "id":5115,
+    "state":"AR",
+    "FIPS":5115,
     "number":5387,
     "rate":11.8,
-    "state":"AR",
-    "name":"Pope County"
+    "population":62717,
+    "county":"Pope County"
   },
   {
-    "id":5117,
+    "state":"AR",
+    "FIPS":5117,
     "number":886,
     "rate":13.6,
-    "state":"AR",
-    "name":"Prairie County"
+    "population":8446,
+    "county":"Prairie County"
   },
   {
-    "id":5119,
+    "state":"AR",
+    "FIPS":5119,
     "number":32251,
     "rate":11.2,
-    "state":"AR",
-    "name":"Pulaski County"
+    "population":389058,
+    "county":"Pulaski County"
   },
   {
-    "id":5121,
+    "state":"AR",
+    "FIPS":5121,
     "number":1480,
     "rate":11,
-    "state":"AR",
-    "name":"Randolph County"
+    "population":17851,
+    "county":"Randolph County"
   },
   {
-    "id":5125,
+    "state":"AR",
+    "FIPS":5125,
     "number":8689,
     "rate":10.5,
-    "state":"AR",
-    "name":"Saline County"
+    "population":111668,
+    "county":"Saline County"
   },
   {
-    "id":5127,
+    "state":"AR",
+    "FIPS":5127,
     "number":986,
     "rate":12.3,
-    "state":"AR",
-    "name":"Scott County"
+    "population":11007,
+    "county":"Scott County"
   },
   {
-    "id":5129,
+    "state":"AR",
+    "FIPS":5129,
     "number":799,
     "rate":12.8,
-    "state":"AR",
-    "name":"Searcy County"
+    "population":7995,
+    "county":"Searcy County"
   },
   {
-    "id":5131,
+    "state":"AR",
+    "FIPS":5131,
     "number":11806,
     "rate":12.8,
-    "state":"AR",
-    "name":"Sebastian County"
+    "population":127370,
+    "county":"Sebastian County"
   },
   {
-    "id":5133,
+    "state":"AR",
+    "FIPS":5133,
     "number":1434,
     "rate":12.2,
-    "state":"AR",
-    "name":"Sevier County"
+    "population":17174,
+    "county":"Sevier County"
   },
   {
-    "id":5135,
+    "state":"AR",
+    "FIPS":5135,
     "number":1691,
     "rate":12.9,
-    "state":"AR",
-    "name":"Sharp County"
+    "population":17053,
+    "county":"Sharp County"
   },
   {
-    "id":5123,
+    "state":"AR",
+    "FIPS":5123,
     "number":2841,
     "rate":13.7,
-    "state":"AR",
-    "name":"St. Francis County"
+    "population":27883,
+    "county":"St. Francis County"
   },
   {
-    "id":5137,
+    "state":"AR",
+    "FIPS":5137,
     "number":1286,
     "rate":13.2,
-    "state":"AR",
-    "name":"Stone County"
+    "population":12628,
+    "county":"Stone County"
   },
   {
-    "id":5139,
+    "state":"AR",
+    "FIPS":5139,
     "number":3963,
     "rate":13.1,
-    "state":"AR",
-    "name":"Union County"
+    "population":40904,
+    "county":"Union County"
   },
   {
-    "id":5141,
+    "state":"AR",
+    "FIPS":5141,
     "number":1805,
     "rate":13.6,
-    "state":"AR",
-    "name":"Van Buren County"
+    "population":17155,
+    "county":"Van Buren County"
   },
   {
-    "id":5143,
+    "state":"AR",
+    "FIPS":5143,
     "number":11726,
     "rate":7.9,
-    "state":"AR",
-    "name":"Washington County"
+    "population":211734,
+    "county":"Washington County"
   },
   {
-    "id":5145,
+    "state":"AR",
+    "FIPS":5145,
     "number":5751,
     "rate":10.1,
-    "state":"AR",
-    "name":"White County"
+    "population":78652,
+    "county":"White County"
   },
   {
-    "id":5147,
+    "state":"AR",
+    "FIPS":5147,
     "number":741,
     "rate":13.9,
-    "state":"AR",
-    "name":"Woodruff County"
+    "population":7071,
+    "county":"Woodruff County"
   },
   {
-    "id":5149,
+    "state":"AR",
+    "FIPS":5149,
     "number":1948,
     "rate":12.3,
-    "state":"AR",
-    "name":"Yell County"
+    "population":21811,
+    "county":"Yell County"
   },
   {
-    "id":4001,
+    "state":"AZ",
+    "FIPS":4001,
     "number":7363,
     "rate":15.3,
-    "state":"AZ",
-    "name":"Apache County"
+    "population":72911,
+    "county":"Apache County"
   },
   {
-    "id":4003,
+    "state":"AZ",
+    "FIPS":4003,
     "number":9600,
     "rate":9.8,
-    "state":"AZ",
-    "name":"Cochise County"
+    "population":131919,
+    "county":"Cochise County"
   },
   {
-    "id":4005,
+    "state":"AZ",
+    "FIPS":4005,
     "number":7304,
     "rate":7.5,
-    "state":"AZ",
-    "name":"Coconino County"
+    "population":135949,
+    "county":"Coconino County"
   },
   {
-    "id":4007,
+    "state":"AZ",
+    "FIPS":4007,
     "number":4801,
     "rate":11.8,
-    "state":"AZ",
-    "name":"Gila County"
+    "population":53027,
+    "county":"Gila County"
   },
   {
-    "id":4009,
+    "state":"AZ",
+    "FIPS":4009,
     "number":2504,
     "rate":9.9,
-    "state":"AZ",
-    "name":"Graham County"
+    "population":36945,
+    "county":"Graham County"
   },
   {
-    "id":4011,
+    "state":"AZ",
+    "FIPS":4011,
     "number":552,
     "rate":9.2,
-    "state":"AZ",
-    "name":"Greenlee County"
+    "population":8775,
+    "county":"Greenlee County"
   },
   {
-    "id":4012,
+    "state":"AZ",
+    "FIPS":4012,
     "number":2235,
     "rate":13.7,
-    "state":"AZ",
-    "name":"La Paz County"
+    "population":20289,
+    "county":"La Paz County"
   },
   {
-    "id":4013,
+    "state":"AZ",
+    "FIPS":4013,
     "number":240523,
     "rate":8.5,
-    "state":"AZ",
-    "name":"Maricopa County"
+    "population":3942868,
+    "county":"Maricopa County"
   },
   {
-    "id":4015,
+    "state":"AZ",
+    "FIPS":4015,
     "number":18913,
     "rate":11.9,
-    "state":"AZ",
-    "name":"Mohave County"
+    "population":203174,
+    "county":"Mohave County"
   },
   {
-    "id":4017,
+    "state":"AZ",
+    "FIPS":4017,
     "number":9105,
     "rate":12.4,
-    "state":"AZ",
-    "name":"Navajo County"
+    "population":106973,
+    "county":"Navajo County"
   },
   {
-    "id":4019,
+    "state":"AZ",
+    "FIPS":4019,
     "number":62949,
     "rate":8.5,
-    "state":"AZ",
-    "name":"Pima County"
+    "population":993094,
+    "county":"Pima County"
   },
   {
-    "id":4021,
+    "state":"AZ",
+    "FIPS":4021,
     "number":34897,
     "rate":12.5,
-    "state":"AZ",
-    "name":"Pinal County"
+    "population":388106,
+    "county":"Pinal County"
   },
   {
-    "id":4023,
+    "state":"AZ",
+    "FIPS":4023,
     "number":2183,
     "rate":6.9,
-    "state":"AZ",
-    "name":"Santa Cruz County"
+    "population":47433,
+    "county":"Santa Cruz County"
   },
   {
-    "id":4025,
+    "state":"AZ",
+    "FIPS":4025,
     "number":17618,
     "rate":10.4,
-    "state":"AZ",
-    "name":"Yavapai County"
+    "population":212509,
+    "county":"Yavapai County"
   },
   {
-    "id":4027,
+    "state":"AZ",
+    "FIPS":4027,
     "number":15046,
     "rate":10.7,
-    "state":"AZ",
-    "name":"Yuma County"
+    "population":202264,
+    "county":"Yuma County"
   },
   {
-    "id":6001,
+    "state":"CA",
+    "FIPS":6001,
     "number":96007,
     "rate":8.2,
-    "state":"CA",
-    "name":"Alameda County"
+    "population":1556249,
+    "county":"Alameda County"
   },
   {
-    "id":6003,
+    "state":"CA",
+    "FIPS":6003,
     "number":91,
     "rate":10.4,
-    "state":"CA",
-    "name":"Alpine County"
+    "population":1127,
+    "county":"Alpine County"
   },
   {
-    "id":6005,
+    "state":"CA",
+    "FIPS":6005,
     "number":2785,
     "rate":9.1,
-    "state":"CA",
-    "name":"Amador County"
+    "population":37072,
+    "county":"Amador County"
   },
   {
-    "id":6007,
+    "state":"CA",
+    "FIPS":6007,
     "number":16176,
     "rate":9.7,
-    "state":"CA",
-    "name":"Butte County"
+    "population":221279,
+    "county":"Butte County"
   },
   {
-    "id":6009,
+    "state":"CA",
+    "FIPS":6009,
     "number":3411,
     "rate":9.6,
-    "state":"CA",
-    "name":"Calaveras County"
+    "population":44774,
+    "county":"Calaveras County"
   },
   {
-    "id":6011,
+    "state":"CA",
+    "FIPS":6011,
     "number":1334,
     "rate":9.2,
-    "state":"CA",
-    "name":"Colusa County"
+    "population":21397,
+    "county":"Colusa County"
   },
   {
-    "id":6013,
+    "state":"CA",
+    "FIPS":6013,
     "number":71764,
     "rate":9.1,
-    "state":"CA",
-    "name":"Contra Costa County"
+    "population":1079358,
+    "county":"Contra Costa County"
   },
   {
-    "id":6015,
+    "state":"CA",
+    "FIPS":6015,
     "number":1950,
     "rate":9,
-    "state":"CA",
-    "name":"Del Norte County"
+    "population":28226,
+    "county":"Del Norte County"
   },
   {
-    "id":6017,
+    "state":"CA",
+    "FIPS":6017,
     "number":10808,
     "rate":7.9,
-    "state":"CA",
-    "name":"El Dorado County"
+    "population":180605,
+    "county":"El Dorado County"
   },
   {
-    "id":6019,
+    "state":"CA",
+    "FIPS":6019,
     "number":57294,
     "rate":8.9,
-    "state":"CA",
-    "name":"Fresno County"
+    "population":948240,
+    "county":"Fresno County"
   },
   {
-    "id":6021,
+    "state":"CA",
+    "FIPS":6021,
     "number":1694,
     "rate":8.7,
-    "state":"CA",
-    "name":"Glenn County"
+    "population":27938,
+    "county":"Glenn County"
   },
   {
-    "id":6023,
+    "state":"CA",
+    "FIPS":6023,
     "number":9265,
     "rate":9,
-    "state":"CA",
-    "name":"Humboldt County"
+    "population":134680,
+    "county":"Humboldt County"
   },
   {
-    "id":6025,
+    "state":"CA",
+    "FIPS":6025,
     "number":9717,
     "rate":8.1,
-    "state":"CA",
-    "name":"Imperial County"
+    "population":177443,
+    "county":"Imperial County"
   },
   {
-    "id":6027,
+    "state":"CA",
+    "FIPS":6027,
     "number":1410,
     "rate":9.9,
-    "state":"CA",
-    "name":"Inyo County"
+    "population":18416,
+    "county":"Inyo County"
   },
   {
-    "id":6029,
+    "state":"CA",
+    "FIPS":6029,
     "number":51580,
     "rate":9,
-    "state":"CA",
-    "name":"Kern County"
+    "population":856502,
+    "county":"Kern County"
   },
   {
-    "id":6031,
+    "state":"CA",
+    "FIPS":6031,
     "number":8347,
     "rate":7.9,
-    "state":"CA",
-    "name":"Kings County"
+    "population":151340,
+    "county":"Kings County"
   },
   {
-    "id":6033,
+    "state":"CA",
+    "FIPS":6033,
     "number":5171,
     "rate":10.5,
-    "state":"CA",
-    "name":"Lake County"
+    "population":63984,
+    "county":"Lake County"
   },
   {
-    "id":6035,
+    "state":"CA",
+    "FIPS":6035,
     "number":2068,
     "rate":7.6,
-    "state":"CA",
-    "name":"Lassen County"
+    "population":33679,
+    "county":"Lassen County"
   },
   {
-    "id":6037,
+    "state":"CA",
+    "FIPS":6037,
     "number":618803,
     "rate":8.5,
-    "state":"CA",
-    "name":"Los Angeles County"
+    "population":9974868,
+    "county":"Los Angeles County"
   },
   {
-    "id":6039,
+    "state":"CA",
+    "FIPS":6039,
     "number":8696,
     "rate":8.3,
-    "state":"CA",
-    "name":"Madera County"
+    "population":152244,
+    "county":"Madera County"
   },
   {
-    "id":6041,
+    "state":"CA",
+    "FIPS":6041,
     "number":13658,
     "rate":6.9,
-    "state":"CA",
-    "name":"Marin County"
+    "population":256143,
+    "county":"Marin County"
   },
   {
-    "id":6043,
+    "state":"CA",
+    "FIPS":6043,
     "number":1489,
     "rate":10.3,
-    "state":"CA",
-    "name":"Mariposa County"
+    "population":17845,
+    "county":"Mariposa County"
   },
   {
-    "id":6045,
+    "state":"CA",
+    "FIPS":6045,
     "number":5636,
     "rate":8.5,
-    "state":"CA",
-    "name":"Mendocino County"
+    "population":87497,
+    "county":"Mendocino County"
   },
   {
-    "id":6047,
+    "state":"CA",
+    "FIPS":6047,
     "number":15394,
     "rate":8.9,
-    "state":"CA",
-    "name":"Merced County"
+    "population":261783,
+    "county":"Merced County"
   },
   {
-    "id":6049,
+    "state":"CA",
+    "FIPS":6049,
     "number":699,
     "rate":9.8,
-    "state":"CA",
-    "name":"Modoc County"
+    "population":9332,
+    "county":"Modoc County"
   },
   {
-    "id":6051,
+    "state":"CA",
+    "FIPS":6051,
     "number":808,
     "rate":7.3,
-    "state":"CA",
-    "name":"Mono County"
+    "population":14306,
+    "county":"Mono County"
   },
   {
-    "id":6053,
+    "state":"CA",
+    "FIPS":6053,
     "number":21381,
     "rate":7.1,
-    "state":"CA",
-    "name":"Monterey County"
+    "population":426411,
+    "county":"Monterey County"
   },
   {
-    "id":6055,
+    "state":"CA",
+    "FIPS":6055,
     "number":8106,
     "rate":7.8,
-    "state":"CA",
-    "name":"Napa County"
+    "population":139135,
+    "county":"Napa County"
   },
   {
-    "id":6057,
+    "state":"CA",
+    "FIPS":6057,
     "number":5661,
     "rate":7.2,
-    "state":"CA",
-    "name":"Nevada County"
+    "population":98333,
+    "county":"Nevada County"
   },
   {
-    "id":6059,
+    "state":"CA",
+    "FIPS":6059,
     "number":174950,
     "rate":7.7,
-    "state":"CA",
-    "name":"Orange County"
+    "population":3089893,
+    "county":"Orange County"
   },
   {
-    "id":6061,
+    "state":"CA",
+    "FIPS":6061,
     "number":21280,
     "rate":8,
-    "state":"CA",
-    "name":"Placer County"
+    "population":361446,
+    "county":"Placer County"
   },
   {
-    "id":6063,
+    "state":"CA",
+    "FIPS":6063,
     "number":1440,
     "rate":9.3,
-    "state":"CA",
-    "name":"Plumas County"
+    "population":19341,
+    "county":"Plumas County"
   },
   {
-    "id":6065,
+    "state":"CA",
+    "FIPS":6065,
     "number":146853,
     "rate":9.3,
-    "state":"CA",
-    "name":"Riverside County"
+    "population":2268019,
+    "county":"Riverside County"
   },
   {
-    "id":6067,
+    "state":"CA",
+    "FIPS":6067,
     "number":87701,
     "rate":8.3,
-    "state":"CA",
-    "name":"Sacramento County"
+    "population":1448771,
+    "county":"Sacramento County"
   },
   {
-    "id":6069,
+    "state":"CA",
+    "FIPS":6069,
     "number":2849,
     "rate":7.2,
-    "state":"CA",
-    "name":"San Benito County"
+    "population":56871,
+    "county":"San Benito County"
   },
   {
-    "id":6071,
+    "state":"CA",
+    "FIPS":6071,
     "number":131498,
     "rate":9.2,
-    "state":"CA",
-    "name":"San Bernardino County"
+    "population":2080651,
+    "county":"San Bernardino County"
   },
   {
-    "id":6073,
+    "state":"CA",
+    "FIPS":6073,
     "number":171503,
     "rate":7.3,
-    "state":"CA",
-    "name":"San Diego County"
+    "population":3183413,
+    "county":"San Diego County"
   },
   {
-    "id":6075,
+    "state":"CA",
+    "FIPS":6075,
     "number":51351,
     "rate":7.3,
-    "state":"CA",
-    "name":"San Francisco County"
+    "population":829691,
+    "county":"San Francisco County"
   },
   {
-    "id":6077,
+    "state":"CA",
+    "FIPS":6077,
     "number":51190,
     "rate":10.7,
-    "state":"CA",
-    "name":"San Joaquin County"
+    "population":701635,
+    "county":"San Joaquin County"
   },
   {
-    "id":6079,
+    "state":"CA",
+    "FIPS":6079,
     "number":17259,
     "rate":8.2,
-    "state":"CA",
-    "name":"San Luis Obispo County"
+    "population":274528,
+    "county":"San Luis Obispo County"
   },
   {
-    "id":6081,
+    "state":"CA",
+    "FIPS":6081,
     "number":43949,
     "rate":7.8,
-    "state":"CA",
-    "name":"San Mateo County"
+    "population":740738,
+    "county":"San Mateo County"
   },
   {
-    "id":6083,
+    "state":"CA",
+    "FIPS":6083,
     "number":20941,
     "rate":6.7,
-    "state":"CA",
-    "name":"Santa Barbara County"
+    "population":430728,
+    "county":"Santa Barbara County"
   },
   {
-    "id":6085,
+    "state":"CA",
+    "FIPS":6085,
     "number":107945,
     "rate":8,
-    "state":"CA",
-    "name":"Santa Clara County"
+    "population":1841098,
+    "county":"Santa Clara County"
   },
   {
-    "id":6087,
+    "state":"CA",
+    "FIPS":6087,
     "number":12732,
     "rate":6.4,
-    "state":"CA",
-    "name":"Santa Cruz County"
+    "population":266632,
+    "county":"Santa Cruz County"
   },
   {
-    "id":6089,
+    "state":"CA",
+    "FIPS":6089,
     "number":13137,
     "rate":9.7,
-    "state":"CA",
-    "name":"Shasta County"
+    "population":178421,
+    "county":"Shasta County"
   },
   {
-    "id":6091,
+    "state":"CA",
+    "FIPS":6091,
     "number":254,
     "rate":10.1,
-    "state":"CA",
-    "name":"Sierra County"
+    "population":3076,
+    "county":"Sierra County"
   },
   {
-    "id":6093,
+    "state":"CA",
+    "FIPS":6093,
     "number":2930,
     "rate":8.6,
-    "state":"CA",
-    "name":"Siskiyou County"
+    "population":44214,
+    "county":"Siskiyou County"
   },
   {
-    "id":6095,
+    "state":"CA",
+    "FIPS":6095,
     "number":31473,
     "rate":10.1,
-    "state":"CA",
-    "name":"Solano County"
+    "population":420724,
+    "county":"Solano County"
   },
   {
-    "id":6097,
+    "state":"CA",
+    "FIPS":6097,
     "number":25600,
     "rate":6.9,
-    "state":"CA",
-    "name":"Sonoma County"
+    "population":490838,
+    "county":"Sonoma County"
   },
   {
-    "id":6099,
+    "state":"CA",
+    "FIPS":6099,
     "number":33650,
     "rate":9.3,
-    "state":"CA",
-    "name":"Stanislaus County"
+    "population":522134,
+    "county":"Stanislaus County"
   },
   {
-    "id":6101,
+    "state":"CA",
+    "FIPS":6101,
     "number":5861,
     "rate":8.8,
-    "state":"CA",
-    "name":"Sutter County"
+    "population":94637,
+    "county":"Sutter County"
   },
   {
-    "id":6103,
+    "state":"CA",
+    "FIPS":6103,
     "number":4415,
     "rate":9.6,
-    "state":"CA",
-    "name":"Tehama County"
+    "population":63263,
+    "county":"Tehama County"
   },
   {
-    "id":6105,
+    "state":"CA",
+    "FIPS":6105,
     "number":1041,
     "rate":9.5,
-    "state":"CA",
-    "name":"Trinity County"
+    "population":13495,
+    "county":"Trinity County"
   },
   {
-    "id":6107,
+    "state":"CA",
+    "FIPS":6107,
     "number":21147,
     "rate":7.2,
-    "state":"CA",
-    "name":"Tulare County"
+    "population":451499,
+    "county":"Tulare County"
   },
   {
-    "id":6109,
+    "state":"CA",
+    "FIPS":6109,
     "number":4310,
     "rate":9.9,
-    "state":"CA",
-    "name":"Tuolumne County"
+    "population":54100,
+    "county":"Tuolumne County"
   },
   {
-    "id":6111,
+    "state":"CA",
+    "FIPS":6111,
     "number":44990,
     "rate":7.5,
-    "state":"CA",
-    "name":"Ventura County"
+    "population":835476,
+    "county":"Ventura County"
   },
   {
-    "id":6113,
+    "state":"CA",
+    "FIPS":6113,
     "number":9777,
     "rate":6.6,
-    "state":"CA",
-    "name":"Yolo County"
+    "population":204265,
+    "county":"Yolo County"
   },
   {
-    "id":6115,
+    "state":"CA",
+    "FIPS":6115,
     "number":4299,
     "rate":8.6,
-    "state":"CA",
-    "name":"Yuba County"
+    "population":72977,
+    "county":"Yuba County"
   },
   {
-    "id":8001,
+    "state":"CO",
+    "FIPS":8001,
     "number":22403,
     "rate":7,
-    "state":"CO",
-    "name":"Adams County"
+    "population":460653,
+    "county":"Adams County"
   },
   {
-    "id":8003,
+    "state":"CO",
+    "FIPS":8003,
     "number":741,
     "rate":6.6,
-    "state":"CO",
-    "name":"Alamosa County"
+    "population":16113,
+    "county":"Alamosa County"
   },
   {
-    "id":8005,
+    "state":"CO",
+    "FIPS":8005,
     "number":25428,
     "rate":5.9,
-    "state":"CO",
-    "name":"Arapahoe County"
+    "population":596051,
+    "county":"Arapahoe County"
   },
   {
-    "id":8007,
+    "state":"CO",
+    "FIPS":8007,
     "number":570,
     "rate":6,
-    "state":"CO",
-    "name":"Archuleta County"
+    "population":12129,
+    "county":"Archuleta County"
   },
   {
-    "id":8009,
+    "state":"CO",
+    "FIPS":8009,
     "number":236,
     "rate":8.2,
-    "state":"CO",
-    "name":"Baca County"
+    "population":3756,
+    "county":"Baca County"
   },
   {
-    "id":8011,
+    "state":"CO",
+    "FIPS":8011,
     "number":318,
     "rate":6.8,
-    "state":"CO",
-    "name":"Bent County"
+    "population":5807,
+    "county":"Bent County"
   },
   {
-    "id":8013,
+    "state":"CO",
+    "FIPS":8013,
     "number":10179,
     "rate":4.5,
-    "state":"CO",
-    "name":"Boulder County"
+    "population":305483,
+    "county":"Boulder County"
   },
   {
-    "id":8014,
+    "state":"CO",
+    "FIPS":8014,
     "number":2475,
     "rate":5.8,
-    "state":"CO",
-    "name":"Broomfield County"
+    "population":58992,
+    "county":"Broomfield County"
   },
   {
-    "id":8015,
+    "state":"CO",
+    "FIPS":8015,
     "number":967,
     "rate":6.5,
-    "state":"CO",
-    "name":"Chaffee County"
+    "population":18103,
+    "county":"Chaffee County"
   },
   {
-    "id":8017,
+    "state":"CO",
+    "FIPS":8017,
     "number":97,
     "rate":7.2,
-    "state":"CO",
-    "name":"Cheyenne County"
+    "population":1887,
+    "county":"Cheyenne County"
   },
   {
-    "id":8019,
+    "state":"CO",
+    "FIPS":8019,
     "number":527,
     "rate":7.1,
-    "state":"CO",
-    "name":"Clear Creek County"
+    "population":9091,
+    "county":"Clear Creek County"
   },
   {
-    "id":8021,
+    "state":"CO",
+    "FIPS":8021,
     "number":380,
     "rate":6.6,
-    "state":"CO",
-    "name":"Conejos County"
+    "population":8273,
+    "county":"Conejos County"
   },
   {
-    "id":8023,
+    "state":"CO",
+    "FIPS":8023,
     "number":231,
     "rate":8.3,
-    "state":"CO",
-    "name":"Costilla County"
+    "population":3605,
+    "county":"Costilla County"
   },
   {
-    "id":8025,
+    "state":"CO",
+    "FIPS":8025,
     "number":285,
     "rate":6.2,
-    "state":"CO",
-    "name":"Crowley County"
+    "population":5412,
+    "county":"Crowley County"
   },
   {
-    "id":8027,
+    "state":"CO",
+    "FIPS":8027,
     "number":271,
     "rate":7.7,
-    "state":"CO",
-    "name":"Custer County"
+    "population":4240,
+    "county":"Custer County"
   },
   {
-    "id":8029,
+    "state":"CO",
+    "FIPS":8029,
     "number":1836,
     "rate":7.9,
-    "state":"CO",
-    "name":"Delta County"
+    "population":30449,
+    "county":"Delta County"
   },
   {
-    "id":8031,
+    "state":"CO",
+    "FIPS":8031,
     "number":30383,
     "rate":6.2,
-    "state":"CO",
-    "name":"Denver County"
+    "population":633868,
+    "county":"Denver County"
   },
   {
-    "id":8033,
+    "state":"CO",
+    "FIPS":8033,
     "number":120,
     "rate":7.9,
-    "state":"CO",
-    "name":"Dolores County"
+    "population":1991,
+    "county":"Dolores County"
   },
   {
-    "id":8035,
+    "state":"CO",
+    "FIPS":8035,
     "number":9824,
     "rate":4.8,
-    "state":"CO",
-    "name":"Douglas County"
+    "population":298576,
+    "county":"Douglas County"
   },
   {
-    "id":8037,
+    "state":"CO",
+    "FIPS":8037,
     "number":1403,
     "rate":3.6,
-    "state":"CO",
-    "name":"Eagle County"
+    "population":51951,
+    "county":"Eagle County"
   },
   {
-    "id":8041,
+    "state":"CO",
+    "FIPS":8041,
     "number":30209,
     "rate":6.6,
-    "state":"CO",
-    "name":"El Paso County"
+    "population":645724,
+    "county":"El Paso County"
   },
   {
-    "id":8039,
+    "state":"CO",
+    "FIPS":8039,
     "number":960,
     "rate":5.6,
-    "state":"CO",
-    "name":"Elbert County"
+    "population":23432,
+    "county":"Elbert County"
   },
   {
-    "id":8043,
+    "state":"CO",
+    "FIPS":8043,
     "number":3048,
     "rate":8,
-    "state":"CO",
-    "name":"Fremont County"
+    "population":47114,
+    "county":"Fremont County"
   },
   {
-    "id":8045,
+    "state":"CO",
+    "FIPS":8045,
     "number":1915,
     "rate":4.8,
-    "state":"CO",
-    "name":"Garfield County"
+    "population":56777,
+    "county":"Garfield County"
   },
   {
-    "id":8047,
+    "state":"CO",
+    "FIPS":8047,
     "number":291,
     "rate":6.5,
-    "state":"CO",
-    "name":"Gilpin County"
+    "population":5453,
+    "county":"Gilpin County"
   },
   {
-    "id":8049,
+    "state":"CO",
+    "FIPS":8049,
     "number":600,
     "rate":5.4,
-    "state":"CO",
-    "name":"Grand County"
+    "population":14182,
+    "county":"Grand County"
   },
   {
-    "id":8051,
+    "state":"CO",
+    "FIPS":8051,
     "number":573,
     "rate":4.8,
-    "state":"CO",
-    "name":"Gunnison County"
+    "population":15463,
+    "county":"Gunnison County"
   },
   {
-    "id":8053,
+    "state":"CO",
+    "FIPS":8053,
     "number":44,
     "rate":6.9,
-    "state":"CO",
-    "name":"Hinsdale County"
+    "population":801,
+    "county":"Hinsdale County"
   },
   {
-    "id":8055,
+    "state":"CO",
+    "FIPS":8055,
     "number":432,
     "rate":8,
-    "state":"CO",
-    "name":"Huerfano County"
+    "population":6588,
+    "county":"Huerfano County"
   },
   {
-    "id":8057,
+    "state":"CO",
+    "FIPS":8057,
     "number":70,
     "rate":6.4,
-    "state":"CO",
-    "name":"Jackson County"
+    "population":1347,
+    "county":"Jackson County"
   },
   {
-    "id":8059,
+    "state":"CO",
+    "FIPS":8059,
     "number":22187,
     "rate":5.3,
-    "state":"CO",
-    "name":"Jefferson County"
+    "population":545621,
+    "county":"Jefferson County"
   },
   {
-    "id":8061,
+    "state":"CO",
+    "FIPS":8061,
     "number":89,
     "rate":8.2,
-    "state":"CO",
-    "name":"Kiowa County"
+    "population":1437,
+    "county":"Kiowa County"
   },
   {
-    "id":8063,
+    "state":"CO",
+    "FIPS":8063,
     "number":512,
     "rate":8.4,
-    "state":"CO",
-    "name":"Kit Carson County"
+    "population":8093,
+    "county":"Kit Carson County"
   },
   {
-    "id":8067,
+    "state":"CO",
+    "FIPS":8067,
     "number":2148,
     "rate":5.4,
-    "state":"CO",
-    "name":"La Plata County"
+    "population":52305,
+    "county":"La Plata County"
   },
   {
-    "id":8065,
+    "state":"CO",
+    "FIPS":8065,
     "number":269,
     "rate":5,
-    "state":"CO",
-    "name":"Lake County"
+    "population":7274,
+    "county":"Lake County"
   },
   {
-    "id":8069,
+    "state":"CO",
+    "FIPS":8069,
     "number":11864,
     "rate":5.1,
-    "state":"CO",
-    "name":"Larimer County"
+    "population":310835,
+    "county":"Larimer County"
   },
   {
-    "id":8071,
+    "state":"CO",
+    "FIPS":8071,
     "number":810,
     "rate":7,
-    "state":"CO",
-    "name":"Las Animas County"
+    "population":14986,
+    "county":"Las Animas County"
   },
   {
-    "id":8073,
+    "state":"CO",
+    "FIPS":8073,
     "number":332,
     "rate":7.8,
-    "state":"CO",
-    "name":"Lincoln County"
+    "population":5446,
+    "county":"Lincoln County"
   },
   {
-    "id":8075,
+    "state":"CO",
+    "FIPS":8075,
     "number":1224,
     "rate":7.1,
-    "state":"CO",
-    "name":"Logan County"
+    "population":22613,
+    "county":"Logan County"
   },
   {
-    "id":8077,
+    "state":"CO",
+    "FIPS":8077,
     "number":7932,
     "rate":7.3,
-    "state":"CO",
-    "name":"Mesa County"
+    "population":147724,
+    "county":"Mesa County"
   },
   {
-    "id":8079,
+    "state":"CO",
+    "FIPS":8079,
     "number":44,
     "rate":7.3,
-    "state":"CO",
-    "name":"Mineral County"
+    "population":709,
+    "county":"Mineral County"
   },
   {
-    "id":8081,
+    "state":"CO",
+    "FIPS":8081,
     "number":574,
     "rate":6.1,
-    "state":"CO",
-    "name":"Moffat County"
+    "population":13167,
+    "county":"Moffat County"
   },
   {
-    "id":8083,
+    "state":"CO",
+    "FIPS":8083,
     "number":1295,
     "rate":6.8,
-    "state":"CO",
-    "name":"Montezuma County"
+    "population":25424,
+    "county":"Montezuma County"
   },
   {
-    "id":8085,
+    "state":"CO",
+    "FIPS":8085,
     "number":1966,
     "rate":6.5,
-    "state":"CO",
-    "name":"Montrose County"
+    "population":40722,
+    "county":"Montrose County"
   },
   {
-    "id":8087,
+    "state":"CO",
+    "FIPS":8087,
     "number":1589,
     "rate":8,
-    "state":"CO",
-    "name":"Morgan County"
+    "population":28355,
+    "county":"Morgan County"
   },
   {
-    "id":8089,
+    "state":"CO",
+    "FIPS":8089,
     "number":972,
     "rate":7.2,
-    "state":"CO",
-    "name":"Otero County"
+    "population":18712,
+    "county":"Otero County"
   },
   {
-    "id":8091,
+    "state":"CO",
+    "FIPS":8091,
     "number":237,
     "rate":6.4,
-    "state":"CO",
-    "name":"Ouray County"
+    "population":4545,
+    "county":"Ouray County"
   },
   {
-    "id":8093,
+    "state":"CO",
+    "FIPS":8093,
     "number":823,
     "rate":6.3,
-    "state":"CO",
-    "name":"Park County"
+    "population":16043,
+    "county":"Park County"
   },
   {
-    "id":8095,
+    "state":"CO",
+    "FIPS":8095,
     "number":250,
     "rate":7.8,
-    "state":"CO",
-    "name":"Phillips County"
+    "population":4376,
+    "county":"Phillips County"
   },
   {
-    "id":8097,
+    "state":"CO",
+    "FIPS":8097,
     "number":693,
     "rate":4.9,
-    "state":"CO",
-    "name":"Pitkin County"
+    "population":17232,
+    "county":"Pitkin County"
   },
   {
-    "id":8099,
+    "state":"CO",
+    "FIPS":8099,
     "number":614,
     "rate":7.1,
-    "state":"CO",
-    "name":"Prowers County"
+    "population":12405,
+    "county":"Prowers County"
   },
   {
-    "id":8101,
+    "state":"CO",
+    "FIPS":8101,
     "number":10990,
     "rate":9.3,
-    "state":"CO",
-    "name":"Pueblo County"
+    "population":160840,
+    "county":"Pueblo County"
   },
   {
-    "id":8103,
+    "state":"CO",
+    "FIPS":8103,
     "number":291,
     "rate":6,
-    "state":"CO",
-    "name":"Rio Grande County"
+    "population":6793,
+    "county":"Rio Grande County"
   },
   {
-    "id":8105,
+    "state":"",
+    "FIPS":8105,
     "number":607,
     "rate":7,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":8107,
+    "state":"CO",
+    "FIPS":8107,
     "number":720,
     "rate":4,
-    "state":"CO",
-    "name":"Routt County"
+    "population":23207,
+    "county":"Routt County"
   },
   {
-    "id":8109,
+    "state":"CO",
+    "FIPS":8109,
     "number":306,
     "rate":6.5,
-    "state":"CO",
-    "name":"Saguache County"
+    "population":6319,
+    "county":"Saguache County"
   },
   {
-    "id":8111,
+    "state":"CO",
+    "FIPS":8111,
     "number":36,
     "rate":6.2,
-    "state":"CO",
-    "name":"San Juan County"
+    "population":695,
+    "county":"San Juan County"
   },
   {
-    "id":8113,
+    "state":"CO",
+    "FIPS":8113,
     "number":288,
     "rate":4.8,
-    "state":"CO",
-    "name":"San Miguel County"
+    "population":7604,
+    "county":"San Miguel County"
   },
   {
-    "id":8115,
+    "state":"CO",
+    "FIPS":8115,
     "number":153,
     "rate":8.2,
-    "state":"CO",
-    "name":"Sedgwick County"
+    "population":2377,
+    "county":"Sedgwick County"
   },
   {
-    "id":8117,
+    "state":"CO",
+    "FIPS":8117,
     "number":912,
     "rate":4,
-    "state":"CO",
-    "name":"Summit County"
+    "population":28228,
+    "county":"Summit County"
   },
   {
-    "id":8119,
+    "state":"CO",
+    "FIPS":8119,
     "number":1082,
     "rate":5.9,
-    "state":"CO",
-    "name":"Teller County"
+    "population":23376,
+    "county":"Teller County"
   },
   {
-    "id":8121,
+    "state":"CO",
+    "FIPS":8121,
     "number":248,
     "rate":6.9,
-    "state":"CO",
-    "name":"Washington County"
+    "population":4736,
+    "county":"Washington County"
   },
   {
-    "id":8123,
+    "state":"CO",
+    "FIPS":8123,
     "number":11943,
     "rate":6.5,
-    "state":"CO",
-    "name":"Weld County"
+    "population":264189,
+    "county":"Weld County"
   },
   {
-    "id":8125,
+    "state":"CO",
+    "FIPS":8125,
     "number":454,
     "rate":6.3,
-    "state":"CO",
-    "name":"Yuma County"
+    "population":10117,
+    "county":"Yuma County"
   },
   {
-    "id":9001,
+    "state":"CT",
+    "FIPS":9001,
     "number":54161,
     "rate":7.9,
-    "state":"CT",
-    "name":"Fairfield County"
+    "population":935290,
+    "county":"Fairfield County"
   },
   {
-    "id":9003,
+    "state":"CT",
+    "FIPS":9003,
     "number":62845,
     "rate":9.3,
-    "state":"CT",
-    "name":"Hartford County"
+    "population":897698,
+    "county":"Hartford County"
   },
   {
-    "id":9005,
+    "state":"CT",
+    "FIPS":9005,
     "number":10400,
     "rate":7.2,
-    "state":"CT",
-    "name":"Litchfield County"
+    "population":187415,
+    "county":"Litchfield County"
   },
   {
-    "id":9007,
+    "state":"CT",
+    "FIPS":9007,
     "number":10835,
     "rate":8.5,
-    "state":"CT",
-    "name":"Middlesex County"
+    "population":165520,
+    "county":"Middlesex County"
   },
   {
-    "id":9009,
+    "state":"CT",
+    "FIPS":9009,
     "number":60796,
     "rate":9.4,
-    "state":"CT",
-    "name":"New Haven County"
+    "population":864031,
+    "county":"New Haven County"
   },
   {
-    "id":9011,
+    "state":"CT",
+    "FIPS":9011,
     "number":18491,
     "rate":8.8,
-    "state":"CT",
-    "name":"New London County"
+    "population":274544,
+    "county":"New London County"
   },
   {
-    "id":9013,
+    "state":"CT",
+    "FIPS":9013,
     "number":8060,
     "rate":7.1,
-    "state":"CT",
-    "name":"Tolland County"
+    "population":151925,
+    "county":"Tolland County"
   },
   {
-    "id":9015,
+    "state":"CT",
+    "FIPS":9015,
     "number":9123,
     "rate":10.3,
-    "state":"CT",
-    "name":"Windham County"
+    "population":117939,
+    "county":"Windham County"
   },
   {
-    "id":11001,
+    "state":"DC",
+    "FIPS":11001,
     "number":40849,
     "rate":8.1,
-    "state":"DC",
-    "name":"District of Columbia"
+    "population":635040,
+    "county":"District of Columbia"
   },
   {
-    "id":10001,
+    "state":"DE",
+    "FIPS":10001,
     "number":14990,
     "rate":12.3,
-    "state":"DE",
-    "name":"Kent County"
+    "population":167666,
+    "county":"Kent County"
   },
   {
-    "id":10003,
+    "state":"DE",
+    "FIPS":10003,
     "number":36030,
     "rate":8.9,
-    "state":"DE",
-    "name":"New Castle County"
+    "population":546021,
+    "county":"New Castle County"
   },
   {
-    "id":10005,
+    "state":"DE",
+    "FIPS":10005,
     "number":19641,
     "rate":12.4,
-    "state":"DE",
-    "name":"Sussex County"
+    "population":203194,
+    "county":"Sussex County"
   },
   {
-    "id":12001,
+    "state":"FL",
+    "FIPS":12001,
     "number":15997,
     "rate":8.3,
-    "state":"FL",
-    "name":"Alachua County"
+    "population":251713,
+    "county":"Alachua County"
   },
   {
-    "id":12003,
+    "state":"FL",
+    "FIPS":12003,
     "number":2603,
     "rate":13.3,
-    "state":"FL",
-    "name":"Baker County"
+    "population":27041,
+    "county":"Baker County"
   },
   {
-    "id":12007,
+    "state":"FL",
+    "FIPS":12007,
     "number":2973,
     "rate":14.1,
-    "state":"FL",
-    "name":"Bradford County"
+    "population":27132,
+    "county":"Bradford County"
   },
   {
-    "id":12005,
+    "state":"FL",
+    "FIPS":12005,
     "number":14720,
     "rate":11.2,
-    "state":"FL",
-    "name":"Bay County"
+    "population":171994,
+    "county":"Bay County"
   },
   {
-    "id":12009,
+    "state":"FL",
+    "FIPS":12009,
     "number":51846,
     "rate":12,
-    "state":"FL",
-    "name":"Brevard County"
+    "population":547669,
+    "county":"Brevard County"
   },
   {
-    "id":12011,
+    "state":"FL",
+    "FIPS":12011,
     "number":129759,
     "rate":9.4,
-    "state":"FL",
-    "name":"Broward County"
+    "population":1819773,
+    "county":"Broward County"
   },
   {
-    "id":12013,
+    "state":"FL",
+    "FIPS":12013,
     "number":1798,
     "rate":15.9,
-    "state":"FL",
-    "name":"Calhoun County"
+    "population":14709,
+    "county":"Calhoun County"
   },
   {
-    "id":12015,
+    "state":"FL",
+    "FIPS":12015,
     "number":19831,
     "rate":14.4,
-    "state":"FL",
-    "name":"Charlotte County"
+    "population":162792,
+    "county":"Charlotte County"
   },
   {
-    "id":12017,
+    "state":"FL",
+    "FIPS":12017,
     "number":15780,
     "rate":13.7,
-    "state":"FL",
-    "name":"Citrus County"
+    "population":139290,
+    "county":"Citrus County"
   },
   {
-    "id":12019,
+    "state":"FL",
+    "FIPS":12019,
     "number":17046,
     "rate":12.1,
-    "state":"FL",
-    "name":"Clay County"
+    "population":194294,
+    "county":"Clay County"
   },
   {
-    "id":12021,
+    "state":"FL",
+    "FIPS":12021,
     "number":23644,
     "rate":9,
-    "state":"FL",
-    "name":"Collier County"
+    "population":332873,
+    "county":"Collier County"
   },
   {
-    "id":12023,
+    "state":"FL",
+    "FIPS":12023,
     "number":6603,
     "rate":12.8,
-    "state":"FL",
-    "name":"Columbia County"
+    "population":67943,
+    "county":"Columbia County"
   },
   {
-    "id":12027,
+    "state":"FL",
+    "FIPS":12027,
     "number":3607,
     "rate":13.7,
-    "state":"FL",
-    "name":"Desoto County"
+    "population":34745,
+    "county":"Desoto County"
   },
   {
-    "id":12029,
+    "state":"FL",
+    "FIPS":12029,
     "number":1901,
     "rate":15,
-    "state":"FL",
-    "name":"Dixie County"
+    "population":16063,
+    "county":"Dixie County"
   },
   {
-    "id":12031,
+    "state":"FL",
+    "FIPS":12031,
     "number":70613,
     "rate":10.8,
-    "state":"FL",
-    "name":"Duval County"
+    "population":880595,
+    "county":"Duval County"
   },
   {
-    "id":12033,
+    "state":"FL",
+    "FIPS":12033,
     "number":29315,
     "rate":12.9,
-    "state":"FL",
-    "name":"Escambia County"
+    "population":304214,
+    "county":"Escambia County"
   },
   {
-    "id":12035,
+    "state":"FL",
+    "FIPS":12035,
     "number":9365,
     "rate":12,
-    "state":"FL",
-    "name":"Flagler County"
+    "population":98510,
+    "county":"Flagler County"
   },
   {
-    "id":12037,
+    "state":"FL",
+    "FIPS":12037,
     "number":1054,
     "rate":11.1,
-    "state":"FL",
-    "name":"Franklin County"
+    "population":11671,
+    "county":"Franklin County"
   },
   {
-    "id":12039,
+    "state":"FL",
+    "FIPS":12039,
     "number":5893,
     "rate":16.8,
-    "state":"FL",
-    "name":"Gadsden County"
+    "population":46653,
+    "county":"Gadsden County"
   },
   {
-    "id":12041,
+    "state":"FL",
+    "FIPS":12041,
     "number":1092,
     "rate":8.6,
-    "state":"FL",
-    "name":"Gilchrist County"
+    "population":16872,
+    "county":"Gilchrist County"
   },
   {
-    "id":12043,
+    "state":"FL",
+    "FIPS":12043,
     "number":1530,
     "rate":14.4,
-    "state":"FL",
-    "name":"Glades County"
+    "population":13026,
+    "county":"Glades County"
   },
   {
-    "id":12045,
+    "state":"FL",
+    "FIPS":12045,
     "number":1489,
     "rate":11.5,
-    "state":"FL",
-    "name":"Gulf County"
+    "population":15670,
+    "county":"Gulf County"
   },
   {
-    "id":12047,
+    "state":"FL",
+    "FIPS":12047,
     "number":1506,
     "rate":13,
-    "state":"FL",
-    "name":"Hamilton County"
+    "population":14699,
+    "county":"Hamilton County"
   },
   {
-    "id":12049,
+    "state":"FL",
+    "FIPS":12049,
     "number":2511,
     "rate":13,
-    "state":"FL",
-    "name":"Hardee County"
+    "population":27414,
+    "county":"Hardee County"
   },
   {
-    "id":12051,
+    "state":"FL",
+    "FIPS":12051,
     "number":3668,
     "rate":14.1,
-    "state":"FL",
-    "name":"Hendry County"
+    "population":37686,
+    "county":"Hendry County"
   },
   {
-    "id":12053,
+    "state":"FL",
+    "FIPS":12053,
     "number":18439,
     "rate":13.5,
-    "state":"FL",
-    "name":"Hernando County"
+    "population":173102,
+    "county":"Hernando County"
   },
   {
-    "id":12055,
+    "state":"FL",
+    "FIPS":12055,
     "number":11339,
     "rate":14.5,
-    "state":"FL",
-    "name":"Highlands County"
+    "population":98087,
+    "county":"Highlands County"
   },
   {
-    "id":12057,
+    "state":"FL",
+    "FIPS":12057,
     "number":99791,
     "rate":10.5,
-    "state":"FL",
-    "name":"Hillsborough County"
+    "population":1282032,
+    "county":"Hillsborough County"
   },
   {
-    "id":12059,
+    "state":"FL",
+    "FIPS":12059,
     "number":2264,
     "rate":14.8,
-    "state":"FL",
-    "name":"Holmes County"
+    "population":19725,
+    "county":"Holmes County"
   },
   {
-    "id":12061,
+    "state":"FL",
+    "FIPS":12061,
     "number":12919,
     "rate":11.5,
-    "state":"FL",
-    "name":"Indian River County"
+    "population":140608,
+    "county":"Indian River County"
   },
   {
-    "id":12063,
+    "state":"FL",
+    "FIPS":12063,
     "number":4393,
     "rate":11.4,
-    "state":"FL",
-    "name":"Jackson County"
+    "population":48980,
+    "county":"Jackson County"
   },
   {
-    "id":12065,
+    "state":"FL",
+    "FIPS":12065,
     "number":1391,
     "rate":12.2,
-    "state":"FL",
-    "name":"Jefferson County"
+    "population":14193,
+    "county":"Jefferson County"
   },
   {
-    "id":12067,
+    "state":"FL",
+    "FIPS":12067,
     "number":849,
     "rate":12.5,
-    "state":"FL",
-    "name":"Lafayette County"
+    "population":8802,
+    "county":"Lafayette County"
   },
   {
-    "id":12069,
+    "state":"FL",
+    "FIPS":12069,
     "number":32754,
     "rate":13.9,
-    "state":"FL",
-    "name":"Lake County"
+    "population":303450,
+    "county":"Lake County"
   },
   {
-    "id":12071,
+    "state":"FL",
+    "FIPS":12071,
     "number":48931,
     "rate":9.6,
-    "state":"FL",
-    "name":"Lee County"
+    "population":644988,
+    "county":"Lee County"
   },
   {
-    "id":12073,
+    "state":"FL",
+    "FIPS":12073,
     "number":17045,
     "rate":8,
-    "state":"FL",
-    "name":"Leon County"
+    "population":283854,
+    "county":"Leon County"
   },
   {
-    "id":12075,
+    "state":"FL",
+    "FIPS":12075,
     "number":4385,
     "rate":14.1,
-    "state":"FL",
-    "name":"Levy County"
+    "population":39997,
+    "county":"Levy County"
   },
   {
-    "id":12077,
+    "state":"FL",
+    "FIPS":12077,
     "number":875,
     "rate":13.6,
-    "state":"FL",
-    "name":"Liberty County"
+    "population":8247,
+    "county":"Liberty County"
   },
   {
-    "id":12079,
+    "state":"FL",
+    "FIPS":12079,
     "number":2300,
     "rate":15.7,
-    "state":"FL",
-    "name":"Madison County"
+    "population":18915,
+    "county":"Madison County"
   },
   {
-    "id":12081,
+    "state":"FL",
+    "FIPS":12081,
     "number":26656,
     "rate":10.2,
-    "state":"FL",
-    "name":"Manatee County"
+    "population":334071,
+    "county":"Manatee County"
   },
   {
-    "id":12083,
+    "state":"FL",
+    "FIPS":12083,
     "number":34138,
     "rate":12.9,
-    "state":"FL",
-    "name":"Marion County"
+    "population":334495,
+    "county":"Marion County"
   },
   {
-    "id":12085,
+    "state":"FL",
+    "FIPS":12085,
     "number":13479,
     "rate":11.2,
-    "state":"FL",
-    "name":"Martin County"
+    "population":148846,
+    "county":"Martin County"
   },
   {
-    "id":12086,
+    "state":"FL",
+    "FIPS":12086,
     "number":158849,
     "rate":8,
-    "state":"FL",
-    "name":"Miami-Dade County"
+    "population":2610960,
+    "county":"Miami-Dade County"
   },
   {
-    "id":12087,
+    "state":"FL",
+    "FIPS":12087,
     "number":5291,
     "rate":8.5,
-    "state":"FL",
-    "name":"Monroe County"
+    "population":74991,
+    "county":"Monroe County"
   },
   {
-    "id":12089,
+    "state":"FL",
+    "FIPS":12089,
     "number":6192,
     "rate":10.8,
-    "state":"FL",
-    "name":"Nassau County"
+    "population":74640,
+    "county":"Nassau County"
   },
   {
-    "id":12091,
+    "state":"FL",
+    "FIPS":12091,
     "number":13790,
     "rate":9.6,
-    "state":"FL",
-    "name":"Okaloosa County"
+    "population":190437,
+    "county":"Okaloosa County"
   },
   {
-    "id":12093,
+    "state":"FL",
+    "FIPS":12093,
     "number":3280,
     "rate":11.2,
-    "state":"FL",
-    "name":"Okeechobee County"
+    "population":39285,
+    "county":"Okeechobee County"
   },
   {
-    "id":12095,
+    "state":"FL",
+    "FIPS":12095,
     "number":76796,
     "rate":8.7,
-    "state":"FL",
-    "name":"Orange County"
+    "population":1202076,
+    "county":"Orange County"
   },
   {
-    "id":12097,
+    "state":"FL",
+    "FIPS":12097,
     "number":23172,
     "rate":11.2,
-    "state":"FL",
-    "name":"Osceola County"
+    "population":288970,
+    "county":"Osceola County"
   },
   {
-    "id":12099,
+    "state":"FL",
+    "FIPS":12099,
     "number":104685,
     "rate":10,
-    "state":"FL",
-    "name":"Palm Beach County"
+    "population":1358613,
+    "county":"Palm Beach County"
   },
   {
-    "id":12101,
+    "state":"FL",
+    "FIPS":12101,
     "number":43506,
     "rate":12,
-    "state":"FL",
-    "name":"Pasco County"
+    "population":470604,
+    "county":"Pasco County"
   },
   {
-    "id":12103,
+    "state":"FL",
+    "FIPS":12103,
     "number":80026,
     "rate":10.8,
-    "state":"FL",
-    "name":"Pinellas County"
+    "population":922265,
+    "county":"Pinellas County"
   },
   {
-    "id":12105,
+    "state":"FL",
+    "FIPS":12105,
     "number":60210,
     "rate":13.1,
-    "state":"FL",
-    "name":"Polk County"
+    "population":615764,
+    "county":"Polk County"
   },
   {
-    "id":12107,
+    "state":"FL",
+    "FIPS":12107,
     "number":7156,
     "rate":12.9,
-    "state":"FL",
-    "name":"Putnam County"
+    "population":73119,
+    "county":"Putnam County"
   },
   {
-    "id":12113,
+    "state":"FL",
+    "FIPS":12113,
     "number":10342,
     "rate":8.7,
-    "state":"FL",
-    "name":"Santa Rosa County"
+    "population":158398,
+    "county":"Santa Rosa County"
   },
   {
-    "id":12115,
+    "state":"FL",
+    "FIPS":12115,
     "number":36058,
     "rate":11.3,
-    "state":"FL",
-    "name":"Sarasota County"
+    "population":386050,
+    "county":"Sarasota County"
   },
   {
-    "id":12117,
+    "state":"FL",
+    "FIPS":12117,
     "number":32862,
     "rate":10.1,
-    "state":"FL",
-    "name":"Seminole County"
+    "population":431405,
+    "county":"Seminole County"
   },
   {
-    "id":12109,
+    "state":"FL",
+    "FIPS":12109,
     "number":13275,
     "rate":8.7,
-    "state":"FL",
-    "name":"St. Johns County"
+    "population":202264,
+    "county":"St. Johns County"
   },
   {
-    "id":12111,
+    "state":"FL",
+    "FIPS":12111,
     "number":24891,
     "rate":11.5,
-    "state":"FL",
-    "name":"St. Lucie County"
+    "population":283559,
+    "county":"St. Lucie County"
   },
   {
-    "id":12119,
+    "state":"FL",
+    "FIPS":12119,
     "number":13340,
     "rate":14.4,
-    "state":"FL",
-    "name":"Sumter County"
+    "population":102823,
+    "county":"Sumter County"
   },
   {
-    "id":12121,
+    "state":"FL",
+    "FIPS":12121,
     "number":4657,
     "rate":14,
-    "state":"FL",
-    "name":"Suwannee County"
+    "population":43576,
+    "county":"Suwannee County"
   },
   {
-    "id":12123,
+    "state":"FL",
+    "FIPS":12123,
     "number":2799,
     "rate":15.6,
-    "state":"FL",
-    "name":"Taylor County"
+    "population":22739,
+    "county":"Taylor County"
   },
   {
-    "id":12125,
+    "state":"FL",
+    "FIPS":12125,
     "number":1518,
     "rate":12.7,
-    "state":"FL",
-    "name":"Union County"
+    "population":15239,
+    "county":"Union County"
   },
   {
-    "id":12127,
+    "state":"FL",
+    "FIPS":12127,
     "number":45175,
     "rate":11.5,
-    "state":"FL",
-    "name":"Volusia County"
+    "population":497092,
+    "county":"Volusia County"
   },
   {
-    "id":12129,
+    "state":"FL",
+    "FIPS":12129,
     "number":2763,
     "rate":11.8,
-    "state":"FL",
-    "name":"Wakulla County"
+    "population":30823,
+    "county":"Wakulla County"
   },
   {
-    "id":12131,
+    "state":"FL",
+    "FIPS":12131,
     "number":5082,
     "rate":11.3,
-    "state":"FL",
-    "name":"Walton County"
+    "population":57275,
+    "county":"Walton County"
   },
   {
-    "id":12133,
+    "state":"FL",
+    "FIPS":12133,
     "number":2487,
     "rate":12.9,
-    "state":"FL",
-    "name":"Washington County"
+    "population":24857,
+    "county":"Washington County"
   },
   {
-    "id":13001,
+    "state":"GA",
+    "FIPS":13001,
     "number":1924,
     "rate":14.4,
-    "state":"GA",
-    "name":"Appling County"
+    "population":18379,
+    "county":"Appling County"
   },
   {
-    "id":13003,
+    "state":"GA",
+    "FIPS":13003,
     "number":650,
     "rate":11.4,
-    "state":"GA",
-    "name":"Atkinson County"
+    "population":8247,
+    "county":"Atkinson County"
   },
   {
-    "id":13005,
+    "state":"GA",
+    "FIPS":13005,
     "number":845,
     "rate":10.6,
-    "state":"GA",
-    "name":"Bacon County"
+    "population":11186,
+    "county":"Bacon County"
   },
   {
-    "id":13007,
+    "state":"GA",
+    "FIPS":13007,
     "number":361,
     "rate":14.3,
-    "state":"GA",
-    "name":"Baker County"
+    "population":3369,
+    "county":"Baker County"
   },
   {
-    "id":13009,
+    "state":"GA",
+    "FIPS":13009,
     "number":4350,
     "rate":12.7,
-    "state":"GA",
-    "name":"Baldwin County"
+    "population":46455,
+    "county":"Baldwin County"
   },
   {
-    "id":13011,
+    "state":"GA",
+    "FIPS":13011,
     "number":1455,
     "rate":10.8,
-    "state":"GA",
-    "name":"Banks County"
+    "population":18232,
+    "county":"Banks County"
   },
   {
-    "id":13013,
+    "state":"GA",
+    "FIPS":13013,
     "number":5530,
     "rate":11.2,
-    "state":"GA",
-    "name":"Bartow County"
+    "population":70171,
+    "county":"Bartow County"
   },
   {
-    "id":13015,
+    "state":"",
+    "FIPS":13015,
     "number":8663,
     "rate":12,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":13017,
+    "state":"GA",
+    "FIPS":13017,
     "number":1747,
     "rate":13.9,
-    "state":"GA",
-    "name":"Ben Hill County"
+    "population":17545,
+    "county":"Ben Hill County"
   },
   {
-    "id":13019,
+    "state":"GA",
+    "FIPS":13019,
     "number":1757,
     "rate":12.5,
-    "state":"GA",
-    "name":"Berrien County"
+    "population":19063,
+    "county":"Berrien County"
   },
   {
-    "id":13021,
+    "state":"GA",
+    "FIPS":13021,
     "number":13019,
     "rate":11.6,
-    "state":"GA",
-    "name":"Bibb County"
+    "population":156184,
+    "county":"Bibb County"
   },
   {
-    "id":13023,
+    "state":"GA",
+    "FIPS":13023,
     "number":1326,
     "rate":14.3,
-    "state":"GA",
-    "name":"Bleckley County"
+    "population":12897,
+    "county":"Bleckley County"
   },
   {
-    "id":13025,
+    "state":"GA",
+    "FIPS":13025,
     "number":1491,
     "rate":11.1,
-    "state":"GA",
-    "name":"Brantley County"
+    "population":18555,
+    "county":"Brantley County"
   },
   {
-    "id":13027,
+    "state":"GA",
+    "FIPS":13027,
     "number":1753,
     "rate":14.9,
-    "state":"GA",
-    "name":"Brooks County"
+    "population":15537,
+    "county":"Brooks County"
   },
   {
-    "id":13029,
+    "state":"GA",
+    "FIPS":13029,
     "number":2564,
     "rate":11.6,
-    "state":"GA",
-    "name":"Bryan County"
+    "population":32246,
+    "county":"Bryan County"
   },
   {
-    "id":13031,
+    "state":"GA",
+    "FIPS":13031,
     "number":6105,
     "rate":11.7,
-    "state":"GA",
-    "name":"Bulloch County"
+    "population":72824,
+    "county":"Bulloch County"
   },
   {
-    "id":13033,
+    "state":"GA",
+    "FIPS":13033,
     "number":2322,
     "rate":14.2,
-    "state":"GA",
-    "name":"Burke County"
+    "population":23128,
+    "county":"Burke County"
   },
   {
-    "id":13035,
+    "state":"GA",
+    "FIPS":13035,
     "number":2126,
     "rate":12,
-    "state":"GA",
-    "name":"Butts County"
+    "population":23454,
+    "county":"Butts County"
   },
   {
-    "id":13037,
+    "state":"GA",
+    "FIPS":13037,
     "number":699,
     "rate":13.7,
-    "state":"GA",
-    "name":"Calhoun County"
+    "population":6502,
+    "county":"Calhoun County"
   },
   {
-    "id":13039,
+    "state":"GA",
+    "FIPS":13039,
     "number":3758,
     "rate":10.3,
-    "state":"GA",
-    "name":"Camden County"
+    "population":51402,
+    "county":"Camden County"
   },
   {
-    "id":13043,
+    "state":"GA",
+    "FIPS":13043,
     "number":978,
     "rate":12.4,
-    "state":"GA",
-    "name":"Candler County"
+    "population":11125,
+    "county":"Candler County"
   },
   {
-    "id":13045,
+    "state":"GA",
+    "FIPS":13045,
     "number":9167,
     "rate":11.6,
-    "state":"GA",
-    "name":"Carroll County"
+    "population":111453,
+    "county":"Carroll County"
   },
   {
-    "id":13047,
+    "state":"GA",
+    "FIPS":13047,
     "number":5985,
     "rate":12.5,
-    "state":"GA",
-    "name":"Catoosa County"
+    "population":64961,
+    "county":"Catoosa County"
   },
   {
-    "id":13049,
+    "state":"GA",
+    "FIPS":13049,
     "number":1185,
     "rate":11.4,
-    "state":"GA",
-    "name":"Charlton County"
+    "population":13308,
+    "county":"Charlton County"
   },
   {
-    "id":13051,
+    "state":"GA",
+    "FIPS":13051,
     "number":21364,
     "rate":10.4,
-    "state":"GA",
-    "name":"Chatham County"
+    "population":276710,
+    "county":"Chatham County"
   },
   {
-    "id":13053,
+    "state":"GA",
+    "FIPS":13053,
     "number":584,
     "rate":6.6,
-    "state":"GA",
-    "name":"Chattahoochee County"
+    "population":12570,
+    "county":"Chattahoochee County"
   },
   {
-    "id":13055,
+    "state":"GA",
+    "FIPS":13055,
     "number":2309,
     "rate":12,
-    "state":"GA",
-    "name":"Chattooga County"
+    "population":25676,
+    "county":"Chattooga County"
   },
   {
-    "id":13057,
+    "state":"GA",
+    "FIPS":13057,
     "number":14288,
     "rate":9.1,
-    "state":"GA",
-    "name":"Cherokee County"
+    "population":220914,
+    "county":"Cherokee County"
   },
   {
-    "id":13059,
+    "state":"GA",
+    "FIPS":13059,
     "number":7829,
     "rate":8.8,
-    "state":"GA",
-    "name":"Clarke County"
+    "population":120270,
+    "county":"Clarke County"
   },
   {
-    "id":13061,
+    "state":"GA",
+    "FIPS":13061,
     "number":392,
     "rate":16.5,
-    "state":"GA",
-    "name":"Clay County"
+    "population":3102,
+    "county":"Clay County"
   },
   {
-    "id":13063,
+    "state":"GA",
+    "FIPS":13063,
     "number":20477,
     "rate":11.2,
-    "state":"GA",
-    "name":"Clayton County"
+    "population":266253,
+    "county":"Clayton County"
   },
   {
-    "id":13065,
+    "state":"GA",
+    "FIPS":13065,
     "number":665,
     "rate":13.8,
-    "state":"GA",
-    "name":"Clinch County"
+    "population":6715,
+    "county":"Clinch County"
   },
   {
-    "id":13067,
+    "state":"GA",
+    "FIPS":13067,
     "number":45757,
     "rate":8.9,
-    "state":"GA",
-    "name":"Cobb County"
+    "population":708036,
+    "county":"Cobb County"
   },
   {
-    "id":13069,
+    "state":"GA",
+    "FIPS":13069,
     "number":3418,
     "rate":11,
-    "state":"GA",
-    "name":"Coffee County"
+    "population":43093,
+    "county":"Coffee County"
   },
   {
-    "id":13071,
+    "state":"GA",
+    "FIPS":13071,
     "number":3927,
     "rate":12.1,
-    "state":"GA",
-    "name":"Colquitt County"
+    "population":46095,
+    "county":"Colquitt County"
   },
   {
-    "id":13073,
+    "state":"GA",
+    "FIPS":13073,
     "number":9407,
     "rate":10.1,
-    "state":"GA",
-    "name":"Columbia County"
+    "population":132556,
+    "county":"Columbia County"
   },
   {
-    "id":13075,
+    "state":"GA",
+    "FIPS":13075,
     "number":1553,
     "rate":12.9,
-    "state":"GA",
-    "name":"Cook County"
+    "population":16859,
+    "county":"Cook County"
   },
   {
-    "id":13077,
+    "state":"GA",
+    "FIPS":13077,
     "number":10356,
     "rate":11.1,
-    "state":"GA",
-    "name":"Coweta County"
+    "population":130878,
+    "county":"Coweta County"
   },
   {
-    "id":13079,
+    "state":"GA",
+    "FIPS":13079,
     "number":1262,
     "rate":13.2,
-    "state":"GA",
-    "name":"Crawford County"
+    "population":12619,
+    "county":"Crawford County"
   },
   {
-    "id":13081,
+    "state":"GA",
+    "FIPS":13081,
     "number":2392,
     "rate":14,
-    "state":"GA",
-    "name":"Crisp County"
+    "population":23657,
+    "county":"Crisp County"
   },
   {
-    "id":13083,
+    "state":"GA",
+    "FIPS":13083,
     "number":1527,
     "rate":12.3,
-    "state":"GA",
-    "name":"Dade County"
+    "population":16551,
+    "county":"Dade County"
   },
   {
-    "id":13085,
+    "state":"GA",
+    "FIPS":13085,
     "number":1842,
     "rate":10.9,
-    "state":"GA",
-    "name":"Dawson County"
+    "population":22376,
+    "county":"Dawson County"
   },
   {
-    "id":13087,
+    "state":"GA",
+    "FIPS":13087,
     "number":2397,
     "rate":12.1,
-    "state":"GA",
-    "name":"Decatur County"
+    "population":27463,
+    "county":"Decatur County"
   },
   {
-    "id":13089,
+    "state":"GA",
+    "FIPS":13089,
     "number":51602,
     "rate":9.9,
-    "state":"GA",
-    "name":"Dekalb County"
+    "population":708304,
+    "county":"Dekalb County"
   },
   {
-    "id":13091,
+    "state":"GA",
+    "FIPS":13091,
     "number":2278,
     "rate":14.2,
-    "state":"GA",
-    "name":"Dodge County"
+    "population":21353,
+    "county":"Dodge County"
   },
   {
-    "id":13093,
+    "state":"GA",
+    "FIPS":13093,
     "number":1572,
     "rate":14.2,
-    "state":"GA",
-    "name":"Dooly County"
+    "population":14326,
+    "county":"Dooly County"
   },
   {
-    "id":13095,
+    "state":"GA",
+    "FIPS":13095,
     "number":8209,
     "rate":12.2,
-    "state":"GA",
-    "name":"Dougherty County"
+    "population":94542,
+    "county":"Dougherty County"
   },
   {
-    "id":13097,
+    "state":"GA",
+    "FIPS":13097,
     "number":10800,
     "rate":11.5,
-    "state":"GA",
-    "name":"Douglas County"
+    "population":133926,
+    "county":"Douglas County"
   },
   {
-    "id":13099,
+    "state":"GA",
+    "FIPS":13099,
     "number":1034,
     "rate":13.5,
-    "state":"GA",
-    "name":"Early County"
+    "population":10605,
+    "county":"Early County"
   },
   {
-    "id":13101,
+    "state":"GA",
+    "FIPS":13101,
     "number":302,
     "rate":10.7,
-    "state":"GA",
-    "name":"Echols County"
+    "population":3965,
+    "county":"Echols County"
   },
   {
-    "id":13103,
+    "state":"GA",
+    "FIPS":13103,
     "number":4023,
     "rate":10.8,
-    "state":"GA",
-    "name":"Effingham County"
+    "population":53337,
+    "county":"Effingham County"
   },
   {
-    "id":13105,
+    "state":"GA",
+    "FIPS":13105,
     "number":1878,
     "rate":12.7,
-    "state":"GA",
-    "name":"Elbert County"
+    "population":19593,
+    "county":"Elbert County"
   },
   {
-    "id":13107,
+    "state":"GA",
+    "FIPS":13107,
     "number":1863,
     "rate":11.2,
-    "state":"GA",
-    "name":"Emanuel County"
+    "population":22849,
+    "county":"Emanuel County"
   },
   {
-    "id":13109,
+    "state":"GA",
+    "FIPS":13109,
     "number":1098,
     "rate":14.3,
-    "state":"GA",
-    "name":"Evans County"
+    "population":10660,
+    "county":"Evans County"
   },
   {
-    "id":13111,
+    "state":"GA",
+    "FIPS":13111,
     "number":2131,
     "rate":11.4,
-    "state":"GA",
-    "name":"Fannin County"
+    "population":23467,
+    "county":"Fannin County"
   },
   {
-    "id":13113,
+    "state":"GA",
+    "FIPS":13113,
     "number":8586,
     "rate":11.1,
-    "state":"GA",
-    "name":"Fayette County"
+    "population":107432,
+    "county":"Fayette County"
   },
   {
-    "id":13115,
+    "state":"GA",
+    "FIPS":13115,
     "number":9058,
     "rate":13,
-    "state":"GA",
-    "name":"Floyd County"
+    "population":96066,
+    "county":"Floyd County"
   },
   {
-    "id":13117,
+    "state":"GA",
+    "FIPS":13117,
     "number":13252,
     "rate":10.4,
-    "state":"GA",
-    "name":"Forsyth County"
+    "population":187826,
+    "county":"Forsyth County"
   },
   {
-    "id":13119,
+    "state":"GA",
+    "FIPS":13119,
     "number":1936,
     "rate":11.8,
-    "state":"GA",
-    "name":"Franklin County"
+    "population":21923,
+    "county":"Franklin County"
   },
   {
-    "id":13121,
+    "state":"GA",
+    "FIPS":13121,
     "number":57454,
     "rate":8,
-    "state":"GA",
-    "name":"Fulton County"
+    "population":977950,
+    "county":"Fulton County"
   },
   {
-    "id":13123,
+    "state":"GA",
+    "FIPS":13123,
     "number":2517,
     "rate":11.6,
-    "state":"GA",
-    "name":"Gilmer County"
+    "population":28205,
+    "county":"Gilmer County"
   },
   {
-    "id":13125,
+    "state":"GA",
+    "FIPS":13125,
     "number":272,
     "rate":12.1,
-    "state":"GA",
-    "name":"Glascock County"
+    "population":3120,
+    "county":"Glascock County"
   },
   {
-    "id":13127,
+    "state":"GA",
+    "FIPS":13127,
     "number":6508,
     "rate":10.8,
-    "state":"GA",
-    "name":"Glynn County"
+    "population":80960,
+    "county":"Glynn County"
   },
   {
-    "id":13129,
+    "state":"GA",
+    "FIPS":13129,
     "number":4052,
     "rate":10.2,
-    "state":"GA",
-    "name":"Gordon County"
+    "population":55740,
+    "county":"Gordon County"
   },
   {
-    "id":13131,
+    "state":"GA",
+    "FIPS":13131,
     "number":2119,
     "rate":11.6,
-    "state":"GA",
-    "name":"Grady County"
+    "population":25366,
+    "county":"Grady County"
   },
   {
-    "id":13133,
+    "state":"GA",
+    "FIPS":13133,
     "number":1962,
     "rate":15.5,
-    "state":"GA",
-    "name":"Greene County"
+    "population":16132,
+    "county":"Greene County"
   },
   {
-    "id":13135,
+    "state":"GA",
+    "FIPS":13135,
     "number":47000,
     "rate":8.1,
-    "state":"GA",
-    "name":"Gwinnett County"
+    "population":840221,
+    "county":"Gwinnett County"
   },
   {
-    "id":13137,
+    "state":"GA",
+    "FIPS":13137,
     "number":3563,
     "rate":11.1,
-    "state":"GA",
-    "name":"Habersham County"
+    "population":43463,
+    "county":"Habersham County"
   },
   {
-    "id":13139,
+    "state":"GA",
+    "FIPS":13139,
     "number":15170,
     "rate":11.7,
-    "state":"GA",
-    "name":"Hall County"
+    "population":185084,
+    "county":"Hall County"
   },
   {
-    "id":13141,
+    "state":"GA",
+    "FIPS":13141,
     "number":1103,
     "rate":15.2,
-    "state":"GA",
-    "name":"Hancock County"
+    "population":9030,
+    "county":"Hancock County"
   },
   {
-    "id":13143,
+    "state":"GA",
+    "FIPS":13143,
     "number":2439,
     "rate":11.8,
-    "state":"GA",
-    "name":"Haralson County"
+    "population":28388,
+    "county":"Haralson County"
   },
   {
-    "id":13145,
+    "state":"GA",
+    "FIPS":13145,
     "number":3459,
     "rate":14.2,
-    "state":"GA",
-    "name":"Harris County"
+    "population":32613,
+    "county":"Harris County"
   },
   {
-    "id":13147,
+    "state":"GA",
+    "FIPS":13147,
     "number":2407,
     "rate":12.4,
-    "state":"GA",
-    "name":"Hart County"
+    "population":25549,
+    "county":"Hart County"
   },
   {
-    "id":13149,
+    "state":"GA",
+    "FIPS":13149,
     "number":1011,
     "rate":11.9,
-    "state":"GA",
-    "name":"Heard County"
+    "population":11644,
+    "county":"Heard County"
   },
   {
-    "id":13151,
+    "state":"GA",
+    "FIPS":13151,
     "number":15926,
     "rate":11.1,
-    "state":"GA",
-    "name":"Henry County"
+    "population":208443,
+    "county":"Henry County"
   },
   {
-    "id":13153,
+    "state":"GA",
+    "FIPS":13153,
     "number":11719,
     "rate":11.3,
-    "state":"GA",
-    "name":"Houston County"
+    "population":146200,
+    "county":"Houston County"
   },
   {
-    "id":13155,
+    "state":"GA",
+    "FIPS":13155,
     "number":887,
     "rate":12.2,
-    "state":"GA",
-    "name":"Irwin County"
+    "population":9600,
+    "county":"Irwin County"
   },
   {
-    "id":13157,
+    "state":"GA",
+    "FIPS":13157,
     "number":4011,
     "rate":9.2,
-    "state":"GA",
-    "name":"Jackson County"
+    "population":60472,
+    "county":"Jackson County"
   },
   {
-    "id":13159,
+    "state":"GA",
+    "FIPS":13159,
     "number":1151,
     "rate":11.5,
-    "state":"GA",
-    "name":"Jasper County"
+    "population":13596,
+    "county":"Jasper County"
   },
   {
-    "id":13161,
+    "state":"GA",
+    "FIPS":13161,
     "number":1392,
     "rate":13.1,
-    "state":"GA",
-    "name":"Jeff Davis County"
+    "population":15114,
+    "county":"Jeff Davis County"
   },
   {
-    "id":13163,
+    "state":"GA",
+    "FIPS":13163,
     "number":1776,
     "rate":14.8,
-    "state":"GA",
-    "name":"Jefferson County"
+    "population":16422,
+    "county":"Jefferson County"
   },
   {
-    "id":13165,
+    "state":"GA",
+    "FIPS":13165,
     "number":853,
     "rate":12.5,
-    "state":"GA",
-    "name":"Jenkins County"
+    "population":9133,
+    "county":"Jenkins County"
   },
   {
-    "id":13167,
+    "state":"GA",
+    "FIPS":13167,
     "number":976,
     "rate":12.7,
-    "state":"GA",
-    "name":"Johnson County"
+    "population":9882,
+    "county":"Johnson County"
   },
   {
-    "id":13169,
+    "state":"GA",
+    "FIPS":13169,
     "number":2761,
     "rate":13.3,
-    "state":"GA",
-    "name":"Jones County"
+    "population":28795,
+    "county":"Jones County"
   },
   {
-    "id":13171,
+    "state":"GA",
+    "FIPS":13171,
     "number":1590,
     "rate":12.1,
-    "state":"GA",
-    "name":"Lamar County"
+    "population":18039,
+    "county":"Lamar County"
   },
   {
-    "id":13173,
+    "state":"GA",
+    "FIPS":13173,
     "number":807,
     "rate":10.6,
-    "state":"GA",
-    "name":"Lanier County"
+    "population":10444,
+    "county":"Lanier County"
   },
   {
-    "id":13175,
+    "state":"GA",
+    "FIPS":13175,
     "number":4480,
     "rate":12.9,
-    "state":"GA",
-    "name":"Laurens County"
+    "population":47970,
+    "county":"Laurens County"
   },
   {
-    "id":13177,
+    "state":"GA",
+    "FIPS":13177,
     "number":2173,
     "rate":10.8,
-    "state":"GA",
-    "name":"Lee County"
+    "population":28727,
+    "county":"Lee County"
   },
   {
-    "id":13179,
+    "state":"GA",
+    "FIPS":13179,
     "number":4129,
     "rate":9.3,
-    "state":"GA",
-    "name":"Liberty County"
+    "population":65391,
+    "county":"Liberty County"
   },
   {
-    "id":13181,
+    "state":"GA",
+    "FIPS":13181,
     "number":851,
     "rate":14,
-    "state":"GA",
-    "name":"Lincoln County"
+    "population":7770,
+    "county":"Lincoln County"
   },
   {
-    "id":13183,
+    "state":"GA",
+    "FIPS":13183,
     "number":1050,
     "rate":9.5,
-    "state":"GA",
-    "name":"Long County"
+    "population":16161,
+    "county":"Long County"
   },
   {
-    "id":13185,
+    "state":"GA",
+    "FIPS":13185,
     "number":8354,
     "rate":10.4,
-    "state":"GA",
-    "name":"Lowndes County"
+    "population":114668,
+    "county":"Lowndes County"
   },
   {
-    "id":13187,
+    "state":"GA",
+    "FIPS":13187,
     "number":2275,
     "rate":10,
-    "state":"GA",
-    "name":"Lumpkin County"
+    "population":30721,
+    "county":"Lumpkin County"
   },
   {
-    "id":13193,
+    "state":"GA",
+    "FIPS":13193,
     "number":1421,
     "rate":13,
-    "state":"GA",
-    "name":"Macon County"
+    "population":14274,
+    "county":"Macon County"
   },
   {
-    "id":13195,
+    "state":"GA",
+    "FIPS":13195,
     "number":2568,
     "rate":12.4,
-    "state":"GA",
-    "name":"Madison County"
+    "population":28018,
+    "county":"Madison County"
   },
   {
-    "id":13197,
+    "state":"GA",
+    "FIPS":13197,
     "number":946,
     "rate":14.7,
-    "state":"GA",
-    "name":"Marion County"
+    "population":8751,
+    "county":"Marion County"
   },
   {
-    "id":13189,
+    "state":"GA",
+    "FIPS":13189,
     "number":2664,
     "rate":17.1,
-    "state":"GA",
-    "name":"McDuffie County"
+    "population":21581,
+    "county":"McDuffie County"
   },
   {
-    "id":13191,
+    "state":"GA",
+    "FIPS":13191,
     "number":1586,
     "rate":14.7,
-    "state":"GA",
-    "name":"McIntosh County"
+    "population":13922,
+    "county":"McIntosh County"
   },
   {
-    "id":13199,
+    "state":"GA",
+    "FIPS":13199,
     "number":2091,
     "rate":13.1,
-    "state":"GA",
-    "name":"Meriwether County"
+    "population":21316,
+    "county":"Meriwether County"
   },
   {
-    "id":13201,
+    "state":"GA",
+    "FIPS":13201,
     "number":576,
     "rate":13,
-    "state":"GA",
-    "name":"Miller County"
+    "population":5982,
+    "county":"Miller County"
   },
   {
-    "id":13205,
+    "state":"GA",
+    "FIPS":13205,
     "number":2171,
     "rate":12.8,
-    "state":"GA",
-    "name":"Mitchell County"
+    "population":23121,
+    "county":"Mitchell County"
   },
   {
-    "id":13207,
+    "state":"GA",
+    "FIPS":13207,
     "number":2671,
     "rate":13.2,
-    "state":"GA",
-    "name":"Monroe County"
+    "population":26741,
+    "county":"Monroe County"
   },
   {
-    "id":13209,
+    "state":"GA",
+    "FIPS":13209,
     "number":912,
     "rate":13.7,
-    "state":"GA",
-    "name":"Montgomery County"
+    "population":8909,
+    "county":"Montgomery County"
   },
   {
-    "id":13211,
+    "state":"GA",
+    "FIPS":13211,
     "number":1606,
     "rate":12.2,
-    "state":"GA",
-    "name":"Morgan County"
+    "population":17823,
+    "county":"Morgan County"
   },
   {
-    "id":13213,
+    "state":"GA",
+    "FIPS":13213,
     "number":3335,
     "rate":11.8,
-    "state":"GA",
-    "name":"Murray County"
+    "population":39394,
+    "county":"Murray County"
   },
   {
-    "id":13215,
+    "state":"GA",
+    "FIPS":13215,
     "number":18156,
     "rate":12.7,
-    "state":"GA",
-    "name":"Muscogee County"
+    "population":200041,
+    "county":"Muscogee County"
   },
   {
-    "id":13217,
+    "state":"GA",
+    "FIPS":13217,
     "number":7801,
     "rate":11.1,
-    "state":"GA",
-    "name":"Newton County"
+    "population":101016,
+    "county":"Newton County"
   },
   {
-    "id":13219,
+    "state":"GA",
+    "FIPS":13219,
     "number":2302,
     "rate":9.8,
-    "state":"GA",
-    "name":"Oconee County"
+    "population":33520,
+    "county":"Oconee County"
   },
   {
-    "id":13221,
+    "state":"GA",
+    "FIPS":13221,
     "number":1371,
     "rate":12.5,
-    "state":"GA",
-    "name":"Oglethorpe County"
+    "population":14597,
+    "county":"Oglethorpe County"
   },
   {
-    "id":13223,
+    "state":"GA",
+    "FIPS":13223,
     "number":12177,
     "rate":12.3,
-    "state":"GA",
-    "name":"Paulding County"
+    "population":145066,
+    "county":"Paulding County"
   },
   {
-    "id":13227,
+    "state":"GA",
+    "FIPS":13227,
     "number":2839,
     "rate":12.6,
-    "state":"GA",
-    "name":"Pickens County"
+    "population":29316,
+    "county":"Pickens County"
   },
   {
-    "id":13229,
+    "state":"GA",
+    "FIPS":13229,
     "number":1558,
     "rate":11.4,
-    "state":"GA",
-    "name":"Pierce County"
+    "population":18835,
+    "county":"Pierce County"
   },
   {
-    "id":13231,
+    "state":"GA",
+    "FIPS":13231,
     "number":1520,
     "rate":11.9,
-    "state":"GA",
-    "name":"Pike County"
+    "population":17804,
+    "county":"Pike County"
   },
   {
-    "id":13225,
+    "state":"GA",
+    "FIPS":13225,
     "number":2496,
     "rate":12.7,
-    "state":"GA",
-    "name":"Peach County"
+    "population":27510,
+    "county":"Peach County"
   },
   {
-    "id":13233,
+    "state":"GA",
+    "FIPS":13233,
     "number":3427,
     "rate":11.6,
-    "state":"GA",
-    "name":"Polk County"
+    "population":41127,
+    "county":"Polk County"
   },
   {
-    "id":13235,
+    "state":"GA",
+    "FIPS":13235,
     "number":1227,
     "rate":13.5,
-    "state":"GA",
-    "name":"Pulaski County"
+    "population":11680,
+    "county":"Pulaski County"
   },
   {
-    "id":13237,
+    "state":"GA",
+    "FIPS":13237,
     "number":2103,
     "rate":13,
-    "state":"GA",
-    "name":"Putnam County"
+    "population":21161,
+    "county":"Putnam County"
   },
   {
-    "id":13239,
+    "state":"GA",
+    "FIPS":13239,
     "number":316,
     "rate":16.8,
-    "state":"GA",
-    "name":"Quitman County"
+    "population":2398,
+    "county":"Quitman County"
   },
   {
-    "id":13241,
+    "state":"GA",
+    "FIPS":13241,
     "number":1768,
     "rate":13.9,
-    "state":"GA",
-    "name":"Rabun County"
+    "population":16307,
+    "county":"Rabun County"
   },
   {
-    "id":13243,
+    "state":"GA",
+    "FIPS":13243,
     "number":901,
     "rate":16.4,
-    "state":"GA",
-    "name":"Randolph County"
+    "population":7308,
+    "county":"Randolph County"
   },
   {
-    "id":13245,
+    "state":"GA",
+    "FIPS":13245,
     "number":18114,
     "rate":12.3,
-    "state":"GA",
-    "name":"Richmond County"
+    "population":201966,
+    "county":"Richmond County"
   },
   {
-    "id":13247,
+    "state":"GA",
+    "FIPS":13247,
     "number":8474,
     "rate":13.9,
-    "state":"GA",
-    "name":"Rockdale County"
+    "population":85684,
+    "county":"Rockdale County"
   },
   {
-    "id":13249,
+    "state":"GA",
+    "FIPS":13249,
     "number":441,
     "rate":12.7,
-    "state":"GA",
-    "name":"Schley County"
+    "population":4989,
+    "county":"Schley County"
   },
   {
-    "id":13251,
+    "state":"GA",
+    "FIPS":13251,
     "number":1352,
     "rate":12.9,
-    "state":"GA",
-    "name":"Screven County"
+    "population":14200,
+    "county":"Screven County"
   },
   {
-    "id":13253,
+    "state":"GA",
+    "FIPS":13253,
     "number":954,
     "rate":14.2,
-    "state":"GA",
-    "name":"Seminole County"
+    "population":8915,
+    "county":"Seminole County"
   },
   {
-    "id":13255,
+    "state":"GA",
+    "FIPS":13255,
     "number":6255,
     "rate":13.4,
-    "state":"GA",
-    "name":"Spalding County"
+    "population":63799,
+    "county":"Spalding County"
   },
   {
-    "id":13257,
+    "state":"GA",
+    "FIPS":13257,
     "number":2665,
     "rate":13.8,
-    "state":"GA",
-    "name":"Stephens County"
+    "population":25725,
+    "county":"Stephens County"
   },
   {
-    "id":13259,
+    "state":"GA",
+    "FIPS":13259,
     "number":654,
     "rate":13,
-    "state":"GA",
-    "name":"Stewart County"
+    "population":6090,
+    "county":"Stewart County"
   },
   {
-    "id":13261,
+    "state":"GA",
+    "FIPS":13261,
     "number":2906,
     "rate":12.9,
-    "state":"GA",
-    "name":"Sumter County"
+    "population":31631,
+    "county":"Sumter County"
   },
   {
-    "id":13263,
+    "state":"GA",
+    "FIPS":13263,
     "number":866,
     "rate":16.9,
-    "state":"GA",
-    "name":"Talbot County"
+    "population":6538,
+    "county":"Talbot County"
   },
   {
-    "id":13265,
+    "state":"GA",
+    "FIPS":13265,
     "number":214,
     "rate":16,
-    "state":"GA",
-    "name":"Taliaferro County"
+    "population":1681,
+    "county":"Taliaferro County"
   },
   {
-    "id":13267,
+    "state":"GA",
+    "FIPS":13267,
     "number":2027,
     "rate":10.5,
-    "state":"GA",
-    "name":"Tattnall County"
+    "population":25305,
+    "county":"Tattnall County"
   },
   {
-    "id":13269,
+    "state":"GA",
+    "FIPS":13269,
     "number":828,
     "rate":13.2,
-    "state":"GA",
-    "name":"Taylor County"
+    "population":8381,
+    "county":"Taylor County"
   },
   {
-    "id":13271,
+    "state":"GA",
+    "FIPS":13271,
     "number":1602,
     "rate":12.3,
-    "state":"GA",
-    "name":"Telfair County"
+    "population":16429,
+    "county":"Telfair County"
   },
   {
-    "id":13273,
+    "state":"GA",
+    "FIPS":13273,
     "number":977,
     "rate":14.6,
-    "state":"GA",
-    "name":"Terrell County"
+    "population":9247,
+    "county":"Terrell County"
   },
   {
-    "id":13275,
+    "state":"GA",
+    "FIPS":13275,
     "number":4622,
     "rate":14.1,
-    "state":"GA",
-    "name":"Thomas County"
+    "population":44530,
+    "county":"Thomas County"
   },
   {
-    "id":13277,
+    "state":"GA",
+    "FIPS":13277,
     "number":3879,
     "rate":13.3,
-    "state":"GA",
-    "name":"Tift County"
+    "population":40994,
+    "county":"Tift County"
   },
   {
-    "id":13279,
+    "state":"GA",
+    "FIPS":13279,
     "number":2682,
     "rate":14.1,
-    "state":"GA",
-    "name":"Toombs County"
+    "population":27217,
+    "county":"Toombs County"
   },
   {
-    "id":13281,
+    "state":"GA",
+    "FIPS":13281,
     "number":1089,
     "rate":13,
-    "state":"GA",
-    "name":"Towns County"
+    "population":10487,
+    "county":"Towns County"
   },
   {
-    "id":13283,
+    "state":"GA",
+    "FIPS":13283,
     "number":594,
     "rate":11.9,
-    "state":"GA",
-    "name":"Treutlen County"
+    "population":6751,
+    "county":"Treutlen County"
   },
   {
-    "id":13285,
+    "state":"GA",
+    "FIPS":13285,
     "number":6418,
     "rate":13.2,
-    "state":"GA",
-    "name":"Troup County"
+    "population":68472,
+    "county":"Troup County"
   },
   {
-    "id":13287,
+    "state":"GA",
+    "FIPS":13287,
     "number":788,
     "rate":12.9,
-    "state":"GA",
-    "name":"Turner County"
+    "population":8369,
+    "county":"Turner County"
   },
   {
-    "id":13289,
+    "state":"GA",
+    "FIPS":13289,
     "number":1003,
     "rate":15,
-    "state":"GA",
-    "name":"Twiggs County"
+    "population":8501,
+    "county":"Twiggs County"
   },
   {
-    "id":13291,
+    "state":"GA",
+    "FIPS":13291,
     "number":2718,
     "rate":15.6,
-    "state":"GA",
-    "name":"Union County"
+    "population":21481,
+    "county":"Union County"
   },
   {
-    "id":13293,
+    "state":"GA",
+    "FIPS":13293,
     "number":2527,
     "rate":12.7,
-    "state":"GA",
-    "name":"Upson County"
+    "population":26615,
+    "county":"Upson County"
   },
   {
-    "id":13295,
+    "state":"GA",
+    "FIPS":13295,
     "number":6872,
     "rate":13.5,
-    "state":"GA",
-    "name":"Walker County"
+    "population":68184,
+    "county":"Walker County"
   },
   {
-    "id":13297,
+    "state":"GA",
+    "FIPS":13297,
     "number":6970,
     "rate":11.6,
-    "state":"GA",
-    "name":"Walton County"
+    "population":84867,
+    "county":"Walton County"
   },
   {
-    "id":13299,
+    "state":"GA",
+    "FIPS":13299,
     "number":3459,
     "rate":13,
-    "state":"GA",
-    "name":"Ware County"
+    "population":35814,
+    "county":"Ware County"
   },
   {
-    "id":13301,
+    "state":"GA",
+    "FIPS":13301,
     "number":634,
     "rate":15.1,
-    "state":"GA",
-    "name":"Warren County"
+    "population":5563,
+    "county":"Warren County"
   },
   {
-    "id":13303,
+    "state":"GA",
+    "FIPS":13303,
     "number":2133,
     "rate":13.7,
-    "state":"GA",
-    "name":"Washington County"
+    "population":20857,
+    "county":"Washington County"
   },
   {
-    "id":13305,
+    "state":"GA",
+    "FIPS":13305,
     "number":2874,
     "rate":12.9,
-    "state":"GA",
-    "name":"Wayne County"
+    "population":30371,
+    "county":"Wayne County"
   },
   {
-    "id":13307,
+    "state":"GA",
+    "FIPS":13307,
     "number":298,
     "rate":14.4,
-    "state":"GA",
-    "name":"Webster County"
+    "population":2792,
+    "county":"Webster County"
   },
   {
-    "id":13309,
+    "state":"GA",
+    "FIPS":13309,
     "number":718,
     "rate":11.2,
-    "state":"GA",
-    "name":"Wheeler County"
+    "population":7908,
+    "county":"Wheeler County"
   },
   {
-    "id":13311,
+    "state":"GA",
+    "FIPS":13311,
     "number":2300,
     "rate":11.1,
-    "state":"GA",
-    "name":"White County"
+    "population":27577,
+    "county":"White County"
   },
   {
-    "id":13313,
+    "state":"GA",
+    "FIPS":13313,
     "number":8189,
     "rate":11.4,
-    "state":"GA",
-    "name":"Whitfield County"
+    "population":103187,
+    "county":"Whitfield County"
   },
   {
-    "id":13315,
+    "state":"GA",
+    "FIPS":13315,
     "number":786,
     "rate":11.1,
-    "state":"GA",
-    "name":"Wilcox County"
+    "population":9027,
+    "county":"Wilcox County"
   },
   {
-    "id":13317,
+    "state":"GA",
+    "FIPS":13317,
     "number":1258,
     "rate":16.5,
-    "state":"GA",
-    "name":"Wilkes County"
+    "population":10046,
+    "county":"Wilkes County"
   },
   {
-    "id":13319,
+    "state":"GA",
+    "FIPS":13319,
     "number":941,
     "rate":13.3,
-    "state":"GA",
-    "name":"Wilkinson County"
+    "population":9542,
+    "county":"Wilkinson County"
   },
   {
-    "id":13321,
+    "state":"GA",
+    "FIPS":13321,
     "number":2162,
     "rate":13.5,
-    "state":"GA",
-    "name":"Worth County"
+    "population":21470,
+    "county":"Worth County"
   },
   {
-    "id":15001,
+    "state":"HI",
+    "FIPS":15001,
     "number":11040,
     "rate":7.8,
-    "state":"HI",
-    "name":"Hawaii County"
+    "population":188946,
+    "county":"Hawaii County"
   },
   {
-    "id":15003,
+    "state":"HI",
+    "FIPS":15003,
     "number":59786,
     "rate":8.1,
-    "state":"HI",
-    "name":"Honolulu County"
+    "population":976746,
+    "county":"Honolulu County"
   },
   {
-    "id":15005,
+    "state":"HI",
+    "FIPS":15005,
     "number":11,
     "rate":12,
-    "state":"HI",
-    "name":"Kalawao County"
+    "population":89,
+    "county":"Kalawao County"
   },
   {
-    "id":15007,
+    "state":"HI",
+    "FIPS":15007,
     "number":4428,
     "rate":8.6,
-    "state":"HI",
-    "name":"Kauai County"
+    "population":68553,
+    "county":"Kauai County"
   },
   {
-    "id":15009,
+    "state":"HI",
+    "FIPS":15009,
     "number":9305,
     "rate":7.8,
-    "state":"HI",
-    "name":"Maui County"
+    "population":158432,
+    "county":"Maui County"
   },
   {
-    "id":19001,
+    "state":"IA",
+    "FIPS":19001,
     "number":706,
     "rate":12.4,
-    "state":"IA",
-    "name":"Adair County"
+    "population":7515,
+    "county":"Adair County"
   },
   {
-    "id":19003,
+    "state":"IA",
+    "FIPS":19003,
     "number":302,
     "rate":10,
-    "state":"IA",
-    "name":"Adams County"
+    "population":3904,
+    "county":"Adams County"
   },
   {
-    "id":19005,
+    "state":"IA",
+    "FIPS":19005,
     "number":971,
     "rate":9.1,
-    "state":"IA",
-    "name":"Allamakee County"
+    "population":14131,
+    "county":"Allamakee County"
   },
   {
-    "id":19007,
+    "state":"IA",
+    "FIPS":19007,
     "number":1128,
     "rate":11.7,
-    "state":"IA",
-    "name":"Appanoose County"
+    "population":12711,
+    "county":"Appanoose County"
   },
   {
-    "id":19009,
+    "state":"IA",
+    "FIPS":19009,
     "number":488,
     "rate":10.8,
-    "state":"IA",
-    "name":"Audubon County"
+    "population":5876,
+    "county":"Audubon County"
   },
   {
-    "id":19011,
+    "state":"IA",
+    "FIPS":19011,
     "number":1881,
     "rate":10,
-    "state":"IA",
-    "name":"Benton County"
+    "population":25861,
+    "county":"Benton County"
   },
   {
-    "id":19013,
+    "state":"IA",
+    "FIPS":19013,
     "number":9050,
     "rate":9.2,
-    "state":"IA",
-    "name":"Black Hawk County"
+    "population":131661,
+    "county":"Black Hawk County"
   },
   {
-    "id":19015,
+    "state":"IA",
+    "FIPS":19015,
     "number":1887,
     "rate":9.6,
-    "state":"IA",
-    "name":"Boone County"
+    "population":26234,
+    "county":"Boone County"
   },
   {
-    "id":19017,
+    "state":"IA",
+    "FIPS":19017,
     "number":1674,
     "rate":9.3,
-    "state":"IA",
-    "name":"Bremer County"
+    "population":24463,
+    "county":"Bremer County"
   },
   {
-    "id":19019,
+    "state":"IA",
+    "FIPS":19019,
     "number":1447,
     "rate":9.7,
-    "state":"IA",
-    "name":"Buchanan County"
+    "population":20942,
+    "county":"Buchanan County"
   },
   {
-    "id":19021,
+    "state":"IA",
+    "FIPS":19021,
     "number":1460,
     "rate":10,
-    "state":"IA",
-    "name":"Buena Vista County"
+    "population":20548,
+    "county":"Buena Vista County"
   },
   {
-    "id":19023,
+    "state":"IA",
+    "FIPS":19023,
     "number":1132,
     "rate":10.2,
-    "state":"IA",
-    "name":"Butler County"
+    "population":14977,
+    "county":"Butler County"
   },
   {
-    "id":19025,
+    "state":"IA",
+    "FIPS":19025,
     "number":874,
     "rate":11.4,
-    "state":"IA",
-    "name":"Calhoun County"
+    "population":9910,
+    "county":"Calhoun County"
   },
   {
-    "id":19027,
+    "state":"IA",
+    "FIPS":19027,
     "number":1554,
     "rate":10.3,
-    "state":"IA",
-    "name":"Carroll County"
+    "population":20674,
+    "county":"Carroll County"
   },
   {
-    "id":19029,
+    "state":"IA",
+    "FIPS":19029,
     "number":1025,
     "rate":9.9,
-    "state":"IA",
-    "name":"Cass County"
+    "population":13720,
+    "county":"Cass County"
   },
   {
-    "id":19031,
+    "state":"IA",
+    "FIPS":19031,
     "number":1464,
     "rate":10.7,
-    "state":"IA",
-    "name":"Cedar County"
+    "population":18425,
+    "county":"Cedar County"
   },
   {
-    "id":19033,
+    "state":"IA",
+    "FIPS":19033,
     "number":3826,
     "rate":11.5,
-    "state":"IA",
-    "name":"Cerro Gordo County"
+    "population":43711,
+    "county":"Cerro Gordo County"
   },
   {
-    "id":19035,
+    "state":"IA",
+    "FIPS":19035,
     "number":1035,
     "rate":11.2,
-    "state":"IA",
-    "name":"Cherokee County"
+    "population":11981,
+    "county":"Cherokee County"
   },
   {
-    "id":19037,
+    "state":"IA",
+    "FIPS":19037,
     "number":934,
     "rate":10.3,
-    "state":"IA",
-    "name":"Chickasaw County"
+    "population":12270,
+    "county":"Chickasaw County"
   },
   {
-    "id":19039,
+    "state":"IA",
+    "FIPS":19039,
     "number":667,
     "rate":9.8,
-    "state":"IA",
-    "name":"Clarke County"
+    "population":9340,
+    "county":"Clarke County"
   },
   {
-    "id":19041,
+    "state":"IA",
+    "FIPS":19041,
     "number":1199,
     "rate":9.6,
-    "state":"IA",
-    "name":"Clay County"
+    "population":16563,
+    "county":"Clay County"
   },
   {
-    "id":19043,
+    "state":"IA",
+    "FIPS":19043,
     "number":1211,
     "rate":9,
-    "state":"IA",
-    "name":"Clayton County"
+    "population":17934,
+    "county":"Clayton County"
   },
   {
-    "id":19045,
+    "state":"IA",
+    "FIPS":19045,
     "number":4325,
     "rate":12,
-    "state":"IA",
-    "name":"Clinton County"
+    "population":48723,
+    "county":"Clinton County"
   },
   {
-    "id":19047,
+    "state":"IA",
+    "FIPS":19047,
     "number":1286,
     "rate":10.5,
-    "state":"IA",
-    "name":"Crawford County"
+    "population":17306,
+    "county":"Crawford County"
   },
   {
-    "id":19049,
+    "state":"IA",
+    "FIPS":19049,
     "number":3980,
     "rate":8,
-    "state":"IA",
-    "name":"Dallas County"
+    "population":72121,
+    "county":"Dallas County"
   },
   {
-    "id":19051,
+    "state":"IA",
+    "FIPS":19051,
     "number":681,
     "rate":11.3,
-    "state":"IA",
-    "name":"Davis County"
+    "population":8709,
+    "county":"Davis County"
   },
   {
-    "id":19053,
+    "state":"IA",
+    "FIPS":19053,
     "number":623,
     "rate":10.4,
-    "state":"IA",
-    "name":"Decatur County"
+    "population":8250,
+    "county":"Decatur County"
   },
   {
-    "id":19055,
+    "state":"IA",
+    "FIPS":19055,
     "number":1357,
     "rate":10.5,
-    "state":"IA",
-    "name":"Delaware County"
+    "population":17572,
+    "county":"Delaware County"
   },
   {
-    "id":19057,
+    "state":"IA",
+    "FIPS":19057,
     "number":3480,
     "rate":11.5,
-    "state":"IA",
-    "name":"Des Moines County"
+    "population":40271,
+    "county":"Des Moines County"
   },
   {
-    "id":19059,
+    "state":"IA",
+    "FIPS":19059,
     "number":1330,
     "rate":10,
-    "state":"IA",
-    "name":"Dickinson County"
+    "population":16965,
+    "county":"Dickinson County"
   },
   {
-    "id":19061,
+    "state":"IA",
+    "FIPS":19061,
     "number":6939,
     "rate":9.9,
-    "state":"IA",
-    "name":"Dubuque County"
+    "population":95147,
+    "county":"Dubuque County"
   },
   {
-    "id":19063,
+    "state":"IA",
+    "FIPS":19063,
     "number":806,
     "rate":10.8,
-    "state":"IA",
-    "name":"Emmet County"
+    "population":9997,
+    "county":"Emmet County"
   },
   {
-    "id":19065,
+    "state":"IA",
+    "FIPS":19065,
     "number":1627,
     "rate":10.5,
-    "state":"IA",
-    "name":"Fayette County"
+    "population":20794,
+    "county":"Fayette County"
   },
   {
-    "id":19067,
+    "state":"IA",
+    "FIPS":19067,
     "number":1498,
     "rate":12.5,
-    "state":"IA",
-    "name":"Floyd County"
+    "population":16136,
+    "county":"Floyd County"
   },
   {
-    "id":19069,
+    "state":"IA",
+    "FIPS":19069,
     "number":821,
     "rate":10.5,
-    "state":"IA",
-    "name":"Franklin County"
+    "population":10526,
+    "county":"Franklin County"
   },
   {
-    "id":19071,
+    "state":"IA",
+    "FIPS":19071,
     "number":576,
     "rate":10.6,
-    "state":"IA",
-    "name":"Fremont County"
+    "population":7134,
+    "county":"Fremont County"
   },
   {
-    "id":19073,
+    "state":"IA",
+    "FIPS":19073,
     "number":708,
     "rate":10.3,
-    "state":"IA",
-    "name":"Greene County"
+    "population":9161,
+    "county":"Greene County"
   },
   {
-    "id":19075,
+    "state":"IA",
+    "FIPS":19075,
     "number":961,
     "rate":10.4,
-    "state":"IA",
-    "name":"Grundy County"
+    "population":12423,
+    "county":"Grundy County"
   },
   {
-    "id":19077,
+    "state":"IA",
+    "FIPS":19077,
     "number":786,
     "rate":9.7,
-    "state":"IA",
-    "name":"Guthrie County"
+    "population":10771,
+    "county":"Guthrie County"
   },
   {
-    "id":19079,
+    "state":"IA",
+    "FIPS":19079,
     "number":1296,
     "rate":11.4,
-    "state":"IA",
-    "name":"Hamilton County"
+    "population":15308,
+    "county":"Hamilton County"
   },
   {
-    "id":19081,
+    "state":"IA",
+    "FIPS":19081,
     "number":855,
     "rate":10.2,
-    "state":"IA",
-    "name":"Hancock County"
+    "population":11164,
+    "county":"Hancock County"
   },
   {
-    "id":19083,
+    "state":"IA",
+    "FIPS":19083,
     "number":1340,
     "rate":10.3,
-    "state":"IA",
-    "name":"Hardin County"
+    "population":17378,
+    "county":"Hardin County"
   },
   {
-    "id":19085,
+    "state":"IA",
+    "FIPS":19085,
     "number":1160,
     "rate":10.7,
-    "state":"IA",
-    "name":"Harrison County"
+    "population":14520,
+    "county":"Harrison County"
   },
   {
-    "id":19087,
+    "state":"IA",
+    "FIPS":19087,
     "number":1643,
     "rate":11,
-    "state":"IA",
-    "name":"Henry County"
+    "population":20112,
+    "county":"Henry County"
   },
   {
-    "id":19089,
+    "state":"IA",
+    "FIPS":19089,
     "number":765,
     "rate":11,
-    "state":"IA",
-    "name":"Howard County"
+    "population":9582,
+    "county":"Howard County"
   },
   {
-    "id":19091,
+    "state":"IA",
+    "FIPS":19091,
     "number":753,
     "rate":10.4,
-    "state":"IA",
-    "name":"Humboldt County"
+    "population":9733,
+    "county":"Humboldt County"
   },
   {
-    "id":19093,
+    "state":"IA",
+    "FIPS":19093,
     "number":573,
     "rate":10.9,
-    "state":"IA",
-    "name":"Ida County"
+    "population":7091,
+    "county":"Ida County"
   },
   {
-    "id":19095,
+    "state":"IA",
+    "FIPS":19095,
     "number":1122,
     "rate":9.3,
-    "state":"IA",
-    "name":"Iowa County"
+    "population":16206,
+    "county":"Iowa County"
   },
   {
-    "id":19097,
+    "state":"IA",
+    "FIPS":19097,
     "number":1721,
     "rate":11.7,
-    "state":"IA",
-    "name":"Jackson County"
+    "population":19689,
+    "county":"Jackson County"
   },
   {
-    "id":19099,
+    "state":"IA",
+    "FIPS":19099,
     "number":2911,
     "rate":10.5,
-    "state":"IA",
-    "name":"Jasper County"
+    "population":36544,
+    "county":"Jasper County"
   },
   {
-    "id":19101,
+    "state":"IA",
+    "FIPS":19101,
     "number":1413,
     "rate":10.5,
-    "state":"IA",
-    "name":"Jefferson County"
+    "population":17084,
+    "county":"Jefferson County"
   },
   {
-    "id":19103,
+    "state":"IA",
+    "FIPS":19103,
     "number":5114,
     "rate":5,
-    "state":"IA",
-    "name":"Johnson County"
+    "population":136913,
+    "county":"Johnson County"
   },
   {
-    "id":19105,
+    "state":"IA",
+    "FIPS":19105,
     "number":1486,
     "rate":9.5,
-    "state":"IA",
-    "name":"Jones County"
+    "population":20619,
+    "county":"Jones County"
   },
   {
-    "id":19107,
+    "state":"IA",
+    "FIPS":19107,
     "number":859,
     "rate":11.1,
-    "state":"IA",
-    "name":"Keokuk County"
+    "population":10398,
+    "county":"Keokuk County"
   },
   {
-    "id":19109,
+    "state":"IA",
+    "FIPS":19109,
     "number":1351,
     "rate":11.7,
-    "state":"IA",
-    "name":"Kossuth County"
+    "population":15351,
+    "county":"Kossuth County"
   },
   {
-    "id":19111,
+    "state":"IA",
+    "FIPS":19111,
     "number":2941,
     "rate":10.8,
-    "state":"IA",
-    "name":"Lee County"
+    "population":35622,
+    "county":"Lee County"
   },
   {
-    "id":19113,
+    "state":"IA",
+    "FIPS":19113,
     "number":14640,
     "rate":9.3,
-    "state":"IA",
-    "name":"Linn County"
+    "population":215206,
+    "county":"Linn County"
   },
   {
-    "id":19115,
+    "state":"IA",
+    "FIPS":19115,
     "number":876,
     "rate":10.7,
-    "state":"IA",
-    "name":"Louisa County"
+    "population":11327,
+    "county":"Louisa County"
   },
   {
-    "id":19117,
+    "state":"IA",
+    "FIPS":19117,
     "number":733,
     "rate":11.3,
-    "state":"IA",
-    "name":"Lucas County"
+    "population":8764,
+    "county":"Lucas County"
   },
   {
-    "id":19119,
+    "state":"IA",
+    "FIPS":19119,
     "number":765,
     "rate":9.3,
-    "state":"IA",
-    "name":"Lyon County"
+    "population":11760,
+    "county":"Lyon County"
   },
   {
-    "id":19121,
+    "state":"IA",
+    "FIPS":19121,
     "number":1231,
     "rate":11,
-    "state":"IA",
-    "name":"Madison County"
+    "population":15627,
+    "county":"Madison County"
   },
   {
-    "id":19123,
+    "state":"IA",
+    "FIPS":19123,
     "number":1703,
     "rate":10.4,
-    "state":"IA",
-    "name":"Mahaska County"
+    "population":22417,
+    "county":"Mahaska County"
   },
   {
-    "id":19125,
+    "state":"IA",
+    "FIPS":19125,
     "number":2420,
     "rate":10.1,
-    "state":"IA",
-    "name":"Marion County"
+    "population":33378,
+    "county":"Marion County"
   },
   {
-    "id":19127,
+    "state":"IA",
+    "FIPS":19127,
     "number":3117,
     "rate":10.5,
-    "state":"IA",
-    "name":"Marshall County"
+    "population":41058,
+    "county":"Marshall County"
   },
   {
-    "id":19129,
+    "state":"IA",
+    "FIPS":19129,
     "number":1001,
     "rate":9.3,
-    "state":"IA",
-    "name":"Mills County"
+    "population":14881,
+    "county":"Mills County"
   },
   {
-    "id":19131,
+    "state":"IA",
+    "FIPS":19131,
     "number":781,
     "rate":9.9,
-    "state":"IA",
-    "name":"Mitchell County"
+    "population":10727,
+    "county":"Mitchell County"
   },
   {
-    "id":19133,
+    "state":"IA",
+    "FIPS":19133,
     "number":771,
     "rate":11,
-    "state":"IA",
-    "name":"Monona County"
+    "population":9142,
+    "county":"Monona County"
   },
   {
-    "id":19135,
+    "state":"IA",
+    "FIPS":19135,
     "number":651,
     "rate":11,
-    "state":"IA",
-    "name":"Monroe County"
+    "population":8071,
+    "county":"Monroe County"
   },
   {
-    "id":19137,
+    "state":"IA",
+    "FIPS":19137,
     "number":884,
     "rate":11.2,
-    "state":"IA",
-    "name":"Montgomery County"
+    "population":10558,
+    "county":"Montgomery County"
   },
   {
-    "id":19139,
+    "state":"IA",
+    "FIPS":19139,
     "number":3017,
     "rate":9.8,
-    "state":"IA",
-    "name":"Muscatine County"
+    "population":42905,
+    "county":"Muscatine County"
   },
   {
-    "id":19141,
+    "state":"IA",
+    "FIPS":19141,
     "number":1032,
     "rate":9.8,
-    "state":"IA",
-    "name":"Obrien County"
+    "population":14163,
+    "county":"Obrien County"
   },
   {
-    "id":19143,
+    "state":"IA",
+    "FIPS":19143,
     "number":532,
     "rate":11.4,
-    "state":"IA",
-    "name":"Osceola County"
+    "population":6190,
+    "county":"Osceola County"
   },
   {
-    "id":19145,
+    "state":"IA",
+    "FIPS":19145,
     "number":1389,
     "rate":11.5,
-    "state":"IA",
-    "name":"Page County"
+    "population":15751,
+    "county":"Page County"
   },
   {
-    "id":19147,
+    "state":"IA",
+    "FIPS":19147,
     "number":766,
     "rate":11,
-    "state":"IA",
-    "name":"Palo Alto County"
+    "population":9281,
+    "county":"Palo Alto County"
   },
   {
-    "id":19149,
+    "state":"IA",
+    "FIPS":19149,
     "number":1972,
     "rate":10.9,
-    "state":"IA",
-    "name":"Plymouth County"
+    "population":24881,
+    "county":"Plymouth County"
   },
   {
-    "id":19151,
+    "state":"IA",
+    "FIPS":19151,
     "number":655,
     "rate":11.9,
-    "state":"IA",
-    "name":"Pocahontas County"
+    "population":7161,
+    "county":"Pocahontas County"
   },
   {
-    "id":19153,
+    "state":"IA",
+    "FIPS":19153,
     "number":26417,
     "rate":8.3,
-    "state":"IA",
-    "name":"Polk County"
+    "population":443984,
+    "county":"Polk County"
   },
   {
-    "id":19155,
+    "state":"IA",
+    "FIPS":19155,
     "number":7984,
     "rate":11.7,
-    "state":"IA",
-    "name":"Pottawattamie County"
+    "population":92918,
+    "county":"Pottawattamie County"
   },
   {
-    "id":19157,
+    "state":"IA",
+    "FIPS":19157,
     "number":1377,
     "rate":9.9,
-    "state":"IA",
-    "name":"Poweshiek County"
+    "population":18759,
+    "county":"Poweshiek County"
   },
   {
-    "id":19159,
+    "state":"IA",
+    "FIPS":19159,
     "number":433,
     "rate":11.5,
-    "state":"IA",
-    "name":"Ringgold County"
+    "population":5085,
+    "county":"Ringgold County"
   },
   {
-    "id":19161,
+    "state":"IA",
+    "FIPS":19161,
     "number":796,
     "rate":10.3,
-    "state":"IA",
-    "name":"Sac County"
+    "population":10162,
+    "county":"Sac County"
   },
   {
-    "id":19163,
+    "state":"IA",
+    "FIPS":19163,
     "number":10414,
     "rate":8.4,
-    "state":"IA",
-    "name":"Scott County"
+    "population":168827,
+    "county":"Scott County"
   },
   {
-    "id":19165,
+    "state":"IA",
+    "FIPS":19165,
     "number":1038,
     "rate":11.5,
-    "state":"IA",
-    "name":"Shelby County"
+    "population":12071,
+    "county":"Shelby County"
   },
   {
-    "id":19167,
+    "state":"IA",
+    "FIPS":19167,
     "number":1983,
     "rate":8.4,
-    "state":"IA",
-    "name":"Sioux County"
+    "population":34348,
+    "county":"Sioux County"
   },
   {
-    "id":19169,
+    "state":"IA",
+    "FIPS":19169,
     "number":4255,
     "rate":6.2,
-    "state":"IA",
-    "name":"Story County"
+    "population":91721,
+    "county":"Story County"
   },
   {
-    "id":19171,
+    "state":"IA",
+    "FIPS":19171,
     "number":1406,
     "rate":11,
-    "state":"IA",
-    "name":"Tama County"
+    "population":17526,
+    "county":"Tama County"
   },
   {
-    "id":19173,
+    "state":"IA",
+    "FIPS":19173,
     "number":479,
     "rate":10.4,
-    "state":"IA",
-    "name":"Taylor County"
+    "population":6223,
+    "county":"Taylor County"
   },
   {
-    "id":19175,
+    "state":"IA",
+    "FIPS":19175,
     "number":1189,
     "rate":12.8,
-    "state":"IA",
-    "name":"Union County"
+    "population":12591,
+    "county":"Union County"
   },
   {
-    "id":19177,
+    "state":"IA",
+    "FIPS":19177,
     "number":594,
     "rate":10.7,
-    "state":"IA",
-    "name":"Van Buren County"
+    "population":7454,
+    "county":"Van Buren County"
   },
   {
-    "id":19179,
+    "state":"IA",
+    "FIPS":19179,
     "number":3029,
     "rate":11.5,
-    "state":"IA",
-    "name":"Wapello County"
+    "population":35349,
+    "county":"Wapello County"
   },
   {
-    "id":19181,
+    "state":"IA",
+    "FIPS":19181,
     "number":3465,
     "rate":10.3,
-    "state":"IA",
-    "name":"Warren County"
+    "population":46950,
+    "county":"Warren County"
   },
   {
-    "id":19183,
+    "state":"IA",
+    "FIPS":19183,
     "number":1623,
     "rate":10.2,
-    "state":"IA",
-    "name":"Washington County"
+    "population":21921,
+    "county":"Washington County"
   },
   {
-    "id":19185,
+    "state":"IA",
+    "FIPS":19185,
     "number":563,
     "rate":11.9,
-    "state":"IA",
-    "name":"Wayne County"
+    "population":6355,
+    "county":"Wayne County"
   },
   {
-    "id":19187,
+    "state":"IA",
+    "FIPS":19187,
     "number":2789,
     "rate":10.1,
-    "state":"IA",
-    "name":"Webster County"
+    "population":37253,
+    "county":"Webster County"
   },
   {
-    "id":19189,
+    "state":"IA",
+    "FIPS":19189,
     "number":820,
     "rate":10.2,
-    "state":"IA",
-    "name":"Winnebago County"
+    "population":10626,
+    "county":"Winnebago County"
   },
   {
-    "id":19191,
+    "state":"IA",
+    "FIPS":19191,
     "number":1166,
     "rate":7.4,
-    "state":"IA",
-    "name":"Winneshiek County"
+    "population":21036,
+    "county":"Winneshiek County"
   },
   {
-    "id":19193,
+    "state":"IA",
+    "FIPS":19193,
     "number":7265,
     "rate":10.1,
-    "state":"IA",
-    "name":"Woodbury County"
+    "population":102330,
+    "county":"Woodbury County"
   },
   {
-    "id":19195,
+    "state":"IA",
+    "FIPS":19195,
     "number":594,
     "rate":10.5,
-    "state":"IA",
-    "name":"Worth County"
+    "population":7519,
+    "county":"Worth County"
   },
   {
-    "id":19197,
+    "state":"IA",
+    "FIPS":19197,
     "number":903,
     "rate":9.3,
-    "state":"IA",
-    "name":"Wright County"
+    "population":13008,
+    "county":"Wright County"
   },
   {
-    "id":16001,
+    "state":"ID",
+    "FIPS":16001,
     "number":22513,
     "rate":7.7,
-    "state":"ID",
-    "name":"Ada County"
+    "population":408891,
+    "county":"Ada County"
   },
   {
-    "id":16003,
+    "state":"ID",
+    "FIPS":16003,
     "number":372,
     "rate":11.8,
-    "state":"ID",
-    "name":"Adams County"
+    "population":3908,
+    "county":"Adams County"
   },
   {
-    "id":16005,
+    "state":"ID",
+    "FIPS":16005,
     "number":5986,
     "rate":10.2,
-    "state":"ID",
-    "name":"Bannock County"
+    "population":83741,
+    "county":"Bannock County"
   },
   {
-    "id":16007,
+    "state":"ID",
+    "FIPS":16007,
     "number":380,
     "rate":9.2,
-    "state":"ID",
-    "name":"Bear Lake County"
+    "population":5889,
+    "county":"Bear Lake County"
   },
   {
-    "id":16009,
+    "state":"ID",
+    "FIPS":16009,
     "number":730,
     "rate":10.6,
-    "state":"ID",
-    "name":"Benewah County"
+    "population":9125,
+    "county":"Benewah County"
   },
   {
-    "id":16011,
+    "state":"ID",
+    "FIPS":16011,
     "number":3444,
     "rate":11.7,
-    "state":"ID",
-    "name":"Bingham County"
+    "population":45493,
+    "county":"Bingham County"
   },
   {
-    "id":16013,
+    "state":"ID",
+    "FIPS":16013,
     "number":1016,
     "rate":6.5,
-    "state":"ID",
-    "name":"Blaine County"
+    "population":21140,
+    "county":"Blaine County"
   },
   {
-    "id":16015,
+    "state":"ID",
+    "FIPS":16015,
     "number":523,
     "rate":9.8,
-    "state":"ID",
-    "name":"Boise County"
+    "population":6803,
+    "county":"Boise County"
   },
   {
-    "id":16017,
+    "state":"ID",
+    "FIPS":16017,
     "number":2715,
     "rate":8.7,
-    "state":"ID",
-    "name":"Bonner County"
+    "population":40447,
+    "county":"Bonner County"
   },
   {
-    "id":16019,
+    "state":"ID",
+    "FIPS":16019,
     "number":6512,
     "rate":9.2,
-    "state":"ID",
-    "name":"Bonneville County"
+    "population":106880,
+    "county":"Bonneville County"
   },
   {
-    "id":16021,
+    "state":"ID",
+    "FIPS":16021,
     "number":783,
     "rate":9.8,
-    "state":"ID",
-    "name":"Boundary County"
+    "population":10835,
+    "county":"Boundary County"
   },
   {
-    "id":16023,
+    "state":"ID",
+    "FIPS":16023,
     "number":197,
     "rate":10.1,
-    "state":"ID",
-    "name":"Butte County"
+    "population":2722,
+    "county":"Butte County"
   },
   {
-    "id":16025,
+    "state":"ID",
+    "FIPS":16025,
     "number":77,
     "rate":9.7,
-    "state":"ID",
-    "name":"Camas County"
+    "population":1075,
+    "county":"Camas County"
   },
   {
-    "id":16027,
+    "state":"ID",
+    "FIPS":16027,
     "number":13567,
     "rate":10.5,
-    "state":"ID",
-    "name":"Canyon County"
+    "population":193856,
+    "county":"Canyon County"
   },
   {
-    "id":16029,
+    "state":"ID",
+    "FIPS":16029,
     "number":470,
     "rate":10,
-    "state":"ID",
-    "name":"Caribou County"
+    "population":6785,
+    "county":"Caribou County"
   },
   {
-    "id":16031,
+    "state":"ID",
+    "FIPS":16031,
     "number":1560,
     "rate":10.3,
-    "state":"ID",
-    "name":"Cassia County"
+    "population":23270,
+    "county":"Cassia County"
   },
   {
-    "id":16033,
+    "state":"ID",
+    "FIPS":16033,
     "number":58,
     "rate":9.6,
-    "state":"ID",
-    "name":"Clark County"
+    "population":873,
+    "county":"Clark County"
   },
   {
-    "id":16035,
+    "state":"ID",
+    "FIPS":16035,
     "number":791,
     "rate":11.3,
-    "state":"ID",
-    "name":"Clearwater County"
+    "population":8582,
+    "county":"Clearwater County"
   },
   {
-    "id":16037,
+    "state":"ID",
+    "FIPS":16037,
     "number":348,
     "rate":10.1,
-    "state":"ID",
-    "name":"Custer County"
+    "population":4338,
+    "county":"Custer County"
   },
   {
-    "id":16039,
+    "state":"ID",
+    "FIPS":16039,
     "number":1732,
     "rate":9.4,
-    "state":"ID",
-    "name":"Elmore County"
+    "population":26199,
+    "county":"Elmore County"
   },
   {
-    "id":16041,
+    "state":"ID",
+    "FIPS":16041,
     "number":667,
     "rate":8.3,
-    "state":"ID",
-    "name":"Franklin County"
+    "population":12811,
+    "county":"Franklin County"
   },
   {
-    "id":16043,
+    "state":"ID",
+    "FIPS":16043,
     "number":783,
     "rate":8.9,
-    "state":"ID",
-    "name":"Fremont County"
+    "population":12979,
+    "county":"Fremont County"
   },
   {
-    "id":16045,
+    "state":"ID",
+    "FIPS":16045,
     "number":1239,
     "rate":10,
-    "state":"ID",
-    "name":"Gem County"
+    "population":16692,
+    "county":"Gem County"
   },
   {
-    "id":16047,
+    "state":"ID",
+    "FIPS":16047,
     "number":1132,
     "rate":10.9,
-    "state":"ID",
-    "name":"Gooding County"
+    "population":15216,
+    "county":"Gooding County"
   },
   {
-    "id":16049,
+    "state":"ID",
+    "FIPS":16049,
     "number":1402,
     "rate":11.1,
-    "state":"ID",
-    "name":"Idaho County"
+    "population":16399,
+    "county":"Idaho County"
   },
   {
-    "id":16051,
+    "state":"ID",
+    "FIPS":16051,
     "number":1515,
     "rate":9.1,
-    "state":"ID",
-    "name":"Jefferson County"
+    "population":26657,
+    "county":"Jefferson County"
   },
   {
-    "id":16053,
+    "state":"ID",
+    "FIPS":16053,
     "number":1283,
     "rate":8.6,
-    "state":"ID",
-    "name":"Jerome County"
+    "population":22515,
+    "county":"Jerome County"
   },
   {
-    "id":16055,
+    "state":"ID",
+    "FIPS":16055,
     "number":9672,
     "rate":9.2,
-    "state":"ID",
-    "name":"Kootenai County"
+    "population":142297,
+    "county":"Kootenai County"
   },
   {
-    "id":16057,
+    "state":"ID",
+    "FIPS":16057,
     "number":1991,
     "rate":7,
-    "state":"ID",
-    "name":"Latah County"
+    "population":38157,
+    "county":"Latah County"
   },
   {
-    "id":16059,
+    "state":"ID",
+    "FIPS":16059,
     "number":744,
     "rate":12,
-    "state":"ID",
-    "name":"Lemhi County"
+    "population":7763,
+    "county":"Lemhi County"
   },
   {
-    "id":16061,
+    "state":"ID",
+    "FIPS":16061,
     "number":326,
     "rate":11.1,
-    "state":"ID",
-    "name":"Lewis County"
+    "population":3836,
+    "county":"Lewis County"
   },
   {
-    "id":16063,
+    "state":"ID",
+    "FIPS":16063,
     "number":292,
     "rate":8.4,
-    "state":"ID",
-    "name":"Lincoln County"
+    "population":5256,
+    "county":"Lincoln County"
   },
   {
-    "id":16065,
+    "state":"ID",
+    "FIPS":16065,
     "number":1357,
     "rate":5.5,
-    "state":"ID",
-    "name":"Madison County"
+    "population":37680,
+    "county":"Madison County"
   },
   {
-    "id":16067,
+    "state":"ID",
+    "FIPS":16067,
     "number":1649,
     "rate":12,
-    "state":"ID",
-    "name":"Minidoka County"
+    "population":20089,
+    "county":"Minidoka County"
   },
   {
-    "id":16069,
+    "state":"ID",
+    "FIPS":16069,
     "number":3338,
     "rate":11.1,
-    "state":"ID",
-    "name":"Nez Perce County"
+    "population":39577,
+    "county":"Nez Perce County"
   },
   {
-    "id":16071,
+    "state":"ID",
+    "FIPS":16071,
     "number":355,
     "rate":12.1,
-    "state":"ID",
-    "name":"Oneida County"
+    "population":4223,
+    "county":"Oneida County"
   },
   {
-    "id":16073,
+    "state":"ID",
+    "FIPS":16073,
     "number":855,
     "rate":10.8,
-    "state":"ID",
-    "name":"Owyhee County"
+    "population":11409,
+    "county":"Owyhee County"
   },
   {
-    "id":16075,
+    "state":"ID",
+    "FIPS":16075,
     "number":1467,
     "rate":9.3,
-    "state":"ID",
-    "name":"Payette County"
+    "population":22673,
+    "county":"Payette County"
   },
   {
-    "id":16077,
+    "state":"ID",
+    "FIPS":16077,
     "number":451,
     "rate":8.7,
-    "state":"ID",
-    "name":"Power County"
+    "population":7779,
+    "county":"Power County"
   },
   {
-    "id":16079,
+    "state":"ID",
+    "FIPS":16079,
     "number":1067,
     "rate":10.8,
-    "state":"ID",
-    "name":"Shoshone County"
+    "population":12699,
+    "county":"Shoshone County"
   },
   {
-    "id":16081,
+    "state":"ID",
+    "FIPS":16081,
     "number":456,
     "rate":6.6,
-    "state":"ID",
-    "name":"Teton County"
+    "population":10087,
+    "county":"Teton County"
   },
   {
-    "id":16083,
+    "state":"ID",
+    "FIPS":16083,
     "number":4782,
     "rate":8.7,
-    "state":"ID",
-    "name":"Twin Falls County"
+    "population":78392,
+    "county":"Twin Falls County"
   },
   {
-    "id":16085,
+    "state":"ID",
+    "FIPS":16085,
     "number":689,
     "rate":9.1,
-    "state":"ID",
-    "name":"Valley County"
+    "population":9511,
+    "county":"Valley County"
   },
   {
-    "id":16087,
+    "state":"ID",
+    "FIPS":16087,
     "number":854,
     "rate":11.6,
-    "state":"ID",
-    "name":"Washington County"
+    "population":10041,
+    "county":"Washington County"
   },
   {
-    "id":17001,
+    "state":"IL",
+    "FIPS":17001,
     "number":4814,
     "rate":9.6,
-    "state":"IL",
-    "name":"Adams County"
+    "population":67199,
+    "county":"Adams County"
   },
   {
-    "id":17003,
+    "state":"IL",
+    "FIPS":17003,
     "number":747,
     "rate":12.8,
-    "state":"IL",
-    "name":"Alexander County"
+    "population":7750,
+    "county":"Alexander County"
   },
   {
-    "id":17005,
+    "state":"IL",
+    "FIPS":17005,
     "number":1459,
     "rate":10.8,
-    "state":"IL",
-    "name":"Bond County"
+    "population":17621,
+    "county":"Bond County"
   },
   {
-    "id":17007,
+    "state":"IL",
+    "FIPS":17007,
     "number":3668,
     "rate":9.8,
-    "state":"IL",
-    "name":"Boone County"
+    "population":53880,
+    "county":"Boone County"
   },
   {
-    "id":17009,
+    "state":"IL",
+    "FIPS":17009,
     "number":518,
     "rate":9.1,
-    "state":"IL",
-    "name":"Brown County"
+    "population":6912,
+    "county":"Brown County"
   },
   {
-    "id":17011,
+    "state":"IL",
+    "FIPS":17011,
     "number":3001,
     "rate":11.6,
-    "state":"IL",
-    "name":"Bureau County"
+    "population":34337,
+    "county":"Bureau County"
   },
   {
-    "id":17013,
+    "state":"IL",
+    "FIPS":17013,
     "number":421,
     "rate":10.9,
-    "state":"IL",
-    "name":"Calhoun County"
+    "population":5022,
+    "county":"Calhoun County"
   },
   {
-    "id":17015,
+    "state":"IL",
+    "FIPS":17015,
     "number":1384,
     "rate":11.8,
-    "state":"IL",
-    "name":"Carroll County"
+    "population":15003,
+    "county":"Carroll County"
   },
   {
-    "id":17017,
+    "state":"IL",
+    "FIPS":17017,
     "number":1024,
     "rate":10.5,
-    "state":"IL",
-    "name":"Cass County"
+    "population":13422,
+    "county":"Cass County"
   },
   {
-    "id":17019,
+    "state":"IL",
+    "FIPS":17019,
     "number":11735,
     "rate":7.8,
-    "state":"IL",
-    "name":"Champaign County"
+    "population":204009,
+    "county":"Champaign County"
   },
   {
-    "id":17021,
+    "state":"IL",
+    "FIPS":17021,
     "number":2935,
     "rate":11.2,
-    "state":"IL",
-    "name":"Christian County"
+    "population":34511,
+    "county":"Christian County"
   },
   {
-    "id":17023,
+    "state":"IL",
+    "FIPS":17023,
     "number":1316,
     "rate":10.8,
-    "state":"IL",
-    "name":"Clark County"
+    "population":16304,
+    "county":"Clark County"
   },
   {
-    "id":17025,
+    "state":"IL",
+    "FIPS":17025,
     "number":1194,
     "rate":11.5,
-    "state":"IL",
-    "name":"Clay County"
+    "population":13733,
+    "county":"Clay County"
   },
   {
-    "id":17027,
+    "state":"IL",
+    "FIPS":17027,
     "number":2458,
     "rate":8.5,
-    "state":"IL",
-    "name":"Clinton County"
+    "population":38057,
+    "county":"Clinton County"
   },
   {
-    "id":17029,
+    "state":"IL",
+    "FIPS":17029,
     "number":3390,
     "rate":8.3,
-    "state":"IL",
-    "name":"Coles County"
+    "population":53631,
+    "county":"Coles County"
   },
   {
-    "id":17031,
+    "state":"IL",
+    "FIPS":17031,
     "number":328064,
     "rate":8.5,
-    "state":"IL",
-    "name":"Cook County"
+    "population":5232340,
+    "county":"Cook County"
   },
   {
-    "id":17033,
+    "state":"IL",
+    "FIPS":17033,
     "number":1698,
     "rate":11.1,
-    "state":"IL",
-    "name":"Crawford County"
+    "population":19627,
+    "county":"Crawford County"
   },
   {
-    "id":17035,
+    "state":"IL",
+    "FIPS":17035,
     "number":916,
     "rate":11.2,
-    "state":"IL",
-    "name":"Cumberland County"
+    "population":10936,
+    "county":"Cumberland County"
   },
   {
-    "id":17039,
+    "state":"IL",
+    "FIPS":17039,
     "number":1421,
     "rate":11.4,
-    "state":"IL",
-    "name":"De Witt County"
+    "population":16492,
+    "county":"De Witt County"
   },
   {
-    "id":17037,
+    "state":"IL",
+    "FIPS":17037,
     "number":6106,
     "rate":8.1,
-    "state":"IL",
-    "name":"Dekalb County"
+    "population":104693,
+    "county":"Dekalb County"
   },
   {
-    "id":17041,
+    "state":"IL",
+    "FIPS":17041,
     "number":1497,
     "rate":10.4,
-    "state":"IL",
-    "name":"Douglas County"
+    "population":19832,
+    "county":"Douglas County"
   },
   {
-    "id":17043,
+    "state":"IL",
+    "FIPS":17043,
     "number":57437,
     "rate":8.5,
-    "state":"IL",
-    "name":"Dupage County"
+    "population":926933,
+    "county":"Dupage County"
   },
   {
-    "id":17045,
+    "state":"IL",
+    "FIPS":17045,
     "number":1578,
     "rate":11.4,
-    "state":"IL",
-    "name":"Edgar County"
+    "population":18153,
+    "county":"Edgar County"
   },
   {
-    "id":17047,
+    "state":"IL",
+    "FIPS":17047,
     "number":534,
     "rate":10.6,
-    "state":"IL",
-    "name":"Edwards County"
+    "population":6731,
+    "county":"Edwards County"
   },
   {
-    "id":17049,
+    "state":"IL",
+    "FIPS":17049,
     "number":2567,
     "rate":10.2,
-    "state":"IL",
-    "name":"Effingham County"
+    "population":34322,
+    "county":"Effingham County"
   },
   {
-    "id":17051,
+    "state":"IL",
+    "FIPS":17051,
     "number":1927,
     "rate":11.6,
-    "state":"IL",
-    "name":"Fayette County"
+    "population":22022,
+    "county":"Fayette County"
   },
   {
-    "id":17053,
+    "state":"IL",
+    "FIPS":17053,
     "number":1161,
     "rate":11.1,
-    "state":"IL",
-    "name":"Ford County"
+    "population":13998,
+    "county":"Ford County"
   },
   {
-    "id":17055,
+    "state":"IL",
+    "FIPS":17055,
     "number":3490,
     "rate":11.7,
-    "state":"IL",
-    "name":"Franklin County"
+    "population":39862,
+    "county":"Franklin County"
   },
   {
-    "id":17057,
+    "state":"IL",
+    "FIPS":17057,
     "number":3221,
     "rate":11.4,
-    "state":"IL",
-    "name":"Fulton County"
+    "population":36659,
+    "county":"Fulton County"
   },
   {
-    "id":17059,
+    "state":"IL",
+    "FIPS":17059,
     "number":490,
     "rate":11.5,
-    "state":"IL",
-    "name":"Gallatin County"
+    "population":5414,
+    "county":"Gallatin County"
   },
   {
-    "id":17061,
+    "state":"IL",
+    "FIPS":17061,
     "number":1200,
     "rate":11.7,
-    "state":"IL",
-    "name":"Greene County"
+    "population":13616,
+    "county":"Greene County"
   },
   {
-    "id":17063,
+    "state":"IL",
+    "FIPS":17063,
     "number":3460,
     "rate":9.7,
-    "state":"IL",
-    "name":"Grundy County"
+    "population":50150,
+    "county":"Grundy County"
   },
   {
-    "id":17065,
+    "state":"IL",
+    "FIPS":17065,
     "number":696,
     "rate":11,
-    "state":"IL",
-    "name":"Hamilton County"
+    "population":8364,
+    "county":"Hamilton County"
   },
   {
-    "id":17067,
+    "state":"IL",
+    "FIPS":17067,
     "number":1527,
     "rate":10.6,
-    "state":"IL",
-    "name":"Hancock County"
+    "population":18835,
+    "county":"Hancock County"
   },
   {
-    "id":17069,
+    "state":"IL",
+    "FIPS":17069,
     "number":400,
     "rate":12.1,
-    "state":"IL",
-    "name":"Hardin County"
+    "population":4257,
+    "county":"Hardin County"
   },
   {
-    "id":17071,
+    "state":"IL",
+    "FIPS":17071,
     "number":647,
     "rate":11.7,
-    "state":"IL",
-    "name":"Henderson County"
+    "population":7019,
+    "county":"Henderson County"
   },
   {
-    "id":17073,
+    "state":"IL",
+    "FIPS":17073,
     "number":3913,
     "rate":10.5,
-    "state":"IL",
-    "name":"Henry County"
+    "population":50071,
+    "county":"Henry County"
   },
   {
-    "id":17075,
+    "state":"IL",
+    "FIPS":17075,
     "number":2468,
     "rate":11.3,
-    "state":"IL",
-    "name":"Iroquois County"
+    "population":29289,
+    "county":"Iroquois County"
   },
   {
-    "id":17077,
+    "state":"IL",
+    "FIPS":17077,
     "number":4156,
     "rate":9,
-    "state":"IL",
-    "name":"Jackson County"
+    "population":60214,
+    "county":"Jackson County"
   },
   {
-    "id":17079,
+    "state":"IL",
+    "FIPS":17079,
     "number":807,
     "rate":11.1,
-    "state":"IL",
-    "name":"Jasper County"
+    "population":9644,
+    "county":"Jasper County"
   },
   {
-    "id":17081,
+    "state":"IL",
+    "FIPS":17081,
     "number":3393,
     "rate":11.5,
-    "state":"IL",
-    "name":"Jefferson County"
+    "population":38730,
+    "county":"Jefferson County"
   },
   {
-    "id":17083,
+    "state":"IL",
+    "FIPS":17083,
     "number":1761,
     "rate":10.3,
-    "state":"IL",
-    "name":"Jersey County"
+    "population":22732,
+    "county":"Jersey County"
   },
   {
-    "id":17085,
+    "state":"IL",
+    "FIPS":17085,
     "number":2009,
     "rate":11.5,
-    "state":"IL",
-    "name":"Jo Daviess County"
+    "population":22380,
+    "county":"Jo Daviess County"
   },
   {
-    "id":17087,
+    "state":"IL",
+    "FIPS":17087,
     "number":1097,
     "rate":10.9,
-    "state":"IL",
-    "name":"Johnson County"
+    "population":12756,
+    "county":"Johnson County"
   },
   {
-    "id":17089,
+    "state":"IL",
+    "FIPS":17089,
     "number":28324,
     "rate":7.8,
-    "state":"IL",
-    "name":"Kane County"
+    "population":521843,
+    "county":"Kane County"
   },
   {
-    "id":17091,
+    "state":"IL",
+    "FIPS":17091,
     "number":8173,
     "rate":10,
-    "state":"IL",
-    "name":"Kankakee County"
+    "population":112926,
+    "county":"Kankakee County"
   },
   {
-    "id":17093,
+    "state":"IL",
+    "FIPS":17093,
     "number":6172,
     "rate":7.8,
-    "state":"IL",
-    "name":"Kendall County"
+    "population":118145,
+    "county":"Kendall County"
   },
   {
-    "id":17095,
+    "state":"IL",
+    "FIPS":17095,
     "number":3942,
     "rate":9.8,
-    "state":"IL",
-    "name":"Knox County"
+    "population":52314,
+    "county":"Knox County"
   },
   {
-    "id":17097,
+    "state":"IL",
+    "FIPS":17097,
     "number":44376,
     "rate":9,
-    "state":"IL",
-    "name":"Lake County"
+    "population":701513,
+    "county":"Lake County"
   },
   {
-    "id":17099,
+    "state":"IL",
+    "FIPS":17099,
     "number":9468,
     "rate":11.2,
-    "state":"IL",
-    "name":"La Salle County"
+    "population":112882,
+    "county":"La Salle County"
   },
   {
-    "id":17101,
+    "state":"IL",
+    "FIPS":17101,
     "number":1555,
     "rate":11.9,
-    "state":"IL",
-    "name":"Lawrence County"
+    "population":16698,
+    "county":"Lawrence County"
   },
   {
-    "id":17105,
+    "state":"IL",
+    "FIPS":17105,
     "number":3021,
     "rate":10.4,
-    "state":"IL",
-    "name":"Livingston County"
+    "population":38535,
+    "county":"Livingston County"
   },
   {
-    "id":17107,
+    "state":"IL",
+    "FIPS":17107,
     "number":2290,
     "rate":9.9,
-    "state":"IL",
-    "name":"Logan County"
+    "population":30003,
+    "county":"Logan County"
   },
   {
-    "id":17115,
+    "state":"IL",
+    "FIPS":17115,
     "number":8622,
     "rate":10.5,
-    "state":"IL",
-    "name":"Macon County"
+    "population":110043,
+    "county":"Macon County"
   },
   {
-    "id":17103,
+    "state":"IL",
+    "FIPS":17103,
     "number":2861,
     "rate":10.6,
-    "state":"IL",
-    "name":"Lee County"
+    "population":35141,
+    "county":"Lee County"
   },
   {
-    "id":17117,
+    "state":"IL",
+    "FIPS":17117,
     "number":4265,
     "rate":12,
-    "state":"IL",
-    "name":"Macoupin County"
+    "population":47208,
+    "county":"Macoupin County"
   },
   {
-    "id":17119,
+    "state":"IL",
+    "FIPS":17119,
     "number":22767,
     "rate":11.3,
-    "state":"IL",
-    "name":"Madison County"
+    "population":268039,
+    "county":"Madison County"
   },
   {
-    "id":17121,
+    "state":"IL",
+    "FIPS":17121,
     "number":2874,
     "rate":9.9,
-    "state":"IL",
-    "name":"Marion County"
+    "population":38923,
+    "county":"Marion County"
   },
   {
-    "id":17123,
+    "state":"IL",
+    "FIPS":17123,
     "number":1105,
     "rate":11.7,
-    "state":"IL",
-    "name":"Marshall County"
+    "population":12301,
+    "county":"Marshall County"
   },
   {
-    "id":17125,
+    "state":"IL",
+    "FIPS":17125,
     "number":1270,
     "rate":11.6,
-    "state":"IL",
-    "name":"Mason County"
+    "population":14339,
+    "county":"Mason County"
   },
   {
-    "id":17127,
+    "state":"IL",
+    "FIPS":17127,
     "number":1364,
     "rate":11.9,
-    "state":"IL",
-    "name":"Massac County"
+    "population":15143,
+    "county":"Massac County"
   },
   {
-    "id":17109,
+    "state":"IL",
+    "FIPS":17109,
     "number":2478,
     "rate":9.9,
-    "state":"IL",
-    "name":"McDonough County"
+    "population":32545,
+    "county":"McDonough County"
   },
   {
-    "id":17111,
+    "state":"IL",
+    "FIPS":17111,
     "number":20803,
     "rate":9.5,
-    "state":"IL",
-    "name":"McHenry County"
+    "population":307775,
+    "county":"McHenry County"
   },
   {
-    "id":17113,
+    "state":"IL",
+    "FIPS":17113,
     "number":9472,
     "rate":7.6,
-    "state":"IL",
-    "name":"Mclean County"
+    "population":172418,
+    "county":"Mclean County"
   },
   {
-    "id":17129,
+    "state":"IL",
+    "FIPS":17129,
     "number":984,
     "rate":10.3,
-    "state":"IL",
-    "name":"Menard County"
+    "population":12709,
+    "county":"Menard County"
   },
   {
-    "id":17131,
+    "state":"IL",
+    "FIPS":17131,
     "number":1416,
     "rate":11.5,
-    "state":"IL",
-    "name":"Mercer County"
+    "population":16176,
+    "county":"Mercer County"
   },
   {
-    "id":17133,
+    "state":"IL",
+    "FIPS":17133,
     "number":2793,
     "rate":11.3,
-    "state":"IL",
-    "name":"Monroe County"
+    "population":33331,
+    "county":"Monroe County"
   },
   {
-    "id":17135,
+    "state":"IL",
+    "FIPS":17135,
     "number":2208,
     "rate":9.7,
-    "state":"IL",
-    "name":"Montgomery County"
+    "population":29725,
+    "county":"Montgomery County"
   },
   {
-    "id":17137,
+    "state":"IL",
+    "FIPS":17137,
     "number":3140,
     "rate":11.7,
-    "state":"IL",
-    "name":"Morgan County"
+    "population":35279,
+    "county":"Morgan County"
   },
   {
-    "id":17139,
+    "state":"IL",
+    "FIPS":17139,
     "number":1123,
     "rate":10.3,
-    "state":"IL",
-    "name":"Moultrie County"
+    "population":14973,
+    "county":"Moultrie County"
   },
   {
-    "id":17141,
+    "state":"IL",
+    "FIPS":17141,
     "number":4421,
     "rate":11.3,
-    "state":"IL",
-    "name":"Ogle County"
+    "population":52839,
+    "county":"Ogle County"
   },
   {
-    "id":17143,
+    "state":"IL",
+    "FIPS":17143,
     "number":12831,
     "rate":9.3,
-    "state":"IL",
-    "name":"Peoria County"
+    "population":187193,
+    "county":"Peoria County"
   },
   {
-    "id":17145,
+    "state":"IL",
+    "FIPS":17145,
     "number":1821,
     "rate":10.7,
-    "state":"IL",
-    "name":"Perry County"
+    "population":22070,
+    "county":"Perry County"
   },
   {
-    "id":17147,
+    "state":"IL",
+    "FIPS":17147,
     "number":1348,
     "rate":10.9,
-    "state":"IL",
-    "name":"Piatt County"
+    "population":16507,
+    "county":"Piatt County"
   },
   {
-    "id":17149,
+    "state":"IL",
+    "FIPS":17149,
     "number":1466,
     "rate":11.9,
-    "state":"IL",
-    "name":"Pike County"
+    "population":16279,
+    "county":"Pike County"
   },
   {
-    "id":17151,
+    "state":"IL",
+    "FIPS":17151,
     "number":383,
     "rate":11.3,
-    "state":"IL",
-    "name":"Pope County"
+    "population":4289,
+    "county":"Pope County"
   },
   {
-    "id":17153,
+    "state":"IL",
+    "FIPS":17153,
     "number":604,
     "rate":13.4,
-    "state":"IL",
-    "name":"Pulaski County"
+    "population":5971,
+    "county":"Pulaski County"
   },
   {
-    "id":17155,
+    "state":"IL",
+    "FIPS":17155,
     "number":499,
     "rate":10.9,
-    "state":"IL",
-    "name":"Putnam County"
+    "population":5875,
+    "county":"Putnam County"
   },
   {
-    "id":17157,
+    "state":"IL",
+    "FIPS":17157,
     "number":2584,
     "rate":10,
-    "state":"IL",
-    "name":"Randolph County"
+    "population":32947,
+    "county":"Randolph County"
   },
   {
-    "id":17159,
+    "state":"IL",
+    "FIPS":17159,
     "number":1388,
     "rate":11.3,
-    "state":"IL",
-    "name":"Richland County"
+    "population":16165,
+    "county":"Richland County"
   },
   {
-    "id":17161,
+    "state":"IL",
+    "FIPS":17161,
     "number":12770,
     "rate":11.5,
-    "state":"IL",
-    "name":"Rock Island County"
+    "population":147065,
+    "county":"Rock Island County"
   },
   {
-    "id":17165,
+    "state":"IL",
+    "FIPS":17165,
     "number":2374,
     "rate":12.6,
-    "state":"IL",
-    "name":"Saline County"
+    "population":24981,
+    "county":"Saline County"
   },
   {
-    "id":17167,
+    "state":"IL",
+    "FIPS":17167,
     "number":16703,
     "rate":11.3,
-    "state":"IL",
-    "name":"Sangamon County"
+    "population":199247,
+    "county":"Sangamon County"
   },
   {
-    "id":17169,
+    "state":"IL",
+    "FIPS":17169,
     "number":619,
     "rate":10.7,
-    "state":"IL",
-    "name":"Schuyler County"
+    "population":7486,
+    "county":"Schuyler County"
   },
   {
-    "id":17171,
+    "state":"IL",
+    "FIPS":17171,
     "number":414,
     "rate":10.5,
-    "state":"IL",
-    "name":"Scott County"
+    "population":5295,
+    "county":"Scott County"
   },
   {
-    "id":17173,
+    "state":"IL",
+    "FIPS":17173,
     "number":1683,
     "rate":10,
-    "state":"IL",
-    "name":"Shelby County"
+    "population":22233,
+    "county":"Shelby County"
   },
   {
-    "id":17163,
+    "state":"IL",
+    "FIPS":17163,
     "number":24131,
     "rate":12.3,
-    "state":"IL",
-    "name":"St. Clair County"
+    "population":268785,
+    "county":"St. Clair County"
   },
   {
-    "id":17175,
+    "state":"IL",
+    "FIPS":17175,
     "number":545,
     "rate":12,
-    "state":"IL",
-    "name":"Stark County"
+    "population":5937,
+    "county":"Stark County"
   },
   {
-    "id":17177,
+    "state":"IL",
+    "FIPS":17177,
     "number":4165,
     "rate":11.7,
-    "state":"IL",
-    "name":"Stephenson County"
+    "population":46973,
+    "county":"Stephenson County"
   },
   {
-    "id":17179,
+    "state":"IL",
+    "FIPS":17179,
     "number":10104,
     "rate":9.9,
-    "state":"IL",
-    "name":"Tazewell County"
+    "population":136094,
+    "county":"Tazewell County"
   },
   {
-    "id":17181,
+    "state":"IL",
+    "FIPS":17181,
     "number":1601,
     "rate":11.8,
-    "state":"IL",
-    "name":"Union County"
+    "population":17632,
+    "county":"Union County"
   },
   {
-    "id":17183,
+    "state":"IL",
+    "FIPS":17183,
     "number":7745,
     "rate":13.1,
-    "state":"IL",
-    "name":"Vermilion County"
+    "population":80764,
+    "county":"Vermilion County"
   },
   {
-    "id":17185,
+    "state":"IL",
+    "FIPS":17185,
     "number":1108,
     "rate":12.4,
-    "state":"IL",
-    "name":"Wabash County"
+    "population":11716,
+    "county":"Wabash County"
   },
   {
-    "id":17187,
+    "state":"IL",
+    "FIPS":17187,
     "number":1403,
     "rate":10.7,
-    "state":"IL",
-    "name":"Warren County"
+    "population":17785,
+    "county":"Warren County"
   },
   {
-    "id":17189,
+    "state":"IL",
+    "FIPS":17189,
     "number":1256,
     "rate":11.2,
-    "state":"IL",
-    "name":"Washington County"
+    "population":14611,
+    "county":"Washington County"
   },
   {
-    "id":17191,
+    "state":"IL",
+    "FIPS":17191,
     "number":1405,
     "rate":11.2,
-    "state":"IL",
-    "name":"Wayne County"
+    "population":16621,
+    "county":"Wayne County"
   },
   {
-    "id":17193,
+    "state":"IL",
+    "FIPS":17193,
     "number":1215,
     "rate":10.9,
-    "state":"IL",
-    "name":"White County"
+    "population":14582,
+    "county":"White County"
   },
   {
-    "id":17195,
+    "state":"IL",
+    "FIPS":17195,
     "number":4598,
     "rate":10.6,
-    "state":"IL",
-    "name":"Whiteside County"
+    "population":57627,
+    "county":"Whiteside County"
   },
   {
-    "id":17197,
+    "state":"IL",
+    "FIPS":17197,
     "number":42573,
     "rate":9,
-    "state":"IL",
-    "name":"Will County"
+    "population":682187,
+    "county":"Will County"
   },
   {
-    "id":17201,
+    "state":"IL",
+    "FIPS":17201,
     "number":25561,
     "rate":12,
-    "state":"IL",
-    "name":"Winnebago County"
+    "population":291923,
+    "county":"Winnebago County"
   },
   {
-    "id":17203,
+    "state":"IL",
+    "FIPS":17203,
     "number":2627,
     "rate":9.3,
-    "state":"IL",
-    "name":"Woodford County"
+    "population":38925,
+    "county":"Woodford County"
   },
   {
-    "id":17199,
+    "state":"IL",
+    "FIPS":17199,
     "number":5241,
     "rate":10.3,
-    "state":"IL",
-    "name":"Williamson County"
+    "population":66770,
+    "county":"Williamson County"
   },
   {
-    "id":18001,
+    "state":"IN",
+    "FIPS":18001,
     "number":2612,
     "rate":11.4,
-    "state":"IN",
-    "name":"Adams County"
+    "population":34401,
+    "county":"Adams County"
   },
   {
-    "id":18003,
+    "state":"IN",
+    "FIPS":18003,
     "number":25577,
     "rate":10,
-    "state":"IN",
-    "name":"Allen County"
+    "population":360832,
+    "county":"Allen County"
   },
   {
-    "id":18005,
+    "state":"IN",
+    "FIPS":18005,
     "number":6292,
     "rate":10.9,
-    "state":"IN",
-    "name":"Bartholomew County"
+    "population":78903,
+    "county":"Bartholomew County"
   },
   {
-    "id":18007,
+    "state":"IN",
+    "FIPS":18007,
     "number":788,
     "rate":12.3,
-    "state":"IN",
-    "name":"Benton County"
+    "population":8834,
+    "county":"Benton County"
   },
   {
-    "id":18009,
+    "state":"IN",
+    "FIPS":18009,
     "number":1256,
     "rate":13.3,
-    "state":"IN",
-    "name":"Blackford County"
+    "population":12548,
+    "county":"Blackford County"
   },
   {
-    "id":18011,
+    "state":"IN",
+    "FIPS":18011,
     "number":3964,
     "rate":9.6,
-    "state":"IN",
-    "name":"Boone County"
+    "population":59076,
+    "county":"Boone County"
   },
   {
-    "id":18013,
+    "state":"IN",
+    "FIPS":18013,
     "number":1415,
     "rate":12.1,
-    "state":"IN",
-    "name":"Brown County"
+    "population":15068,
+    "county":"Brown County"
   },
   {
-    "id":18015,
+    "state":"IN",
+    "FIPS":18015,
     "number":1711,
     "rate":11.5,
-    "state":"IN",
-    "name":"Carroll County"
+    "population":20096,
+    "county":"Carroll County"
   },
   {
-    "id":18017,
+    "state":"IN",
+    "FIPS":18017,
     "number":2737,
     "rate":9.7,
-    "state":"IN",
-    "name":"Cass County"
+    "population":38746,
+    "county":"Cass County"
   },
   {
-    "id":18019,
+    "state":"IN",
+    "FIPS":18019,
     "number":10179,
     "rate":12.2,
-    "state":"IN",
-    "name":"Clark County"
+    "population":111919,
+    "county":"Clark County"
   },
   {
-    "id":18021,
+    "state":"IN",
+    "FIPS":18021,
     "number":2241,
     "rate":11.2,
-    "state":"IN",
-    "name":"Clay County"
+    "population":26855,
+    "county":"Clay County"
   },
   {
-    "id":18023,
+    "state":"IN",
+    "FIPS":18023,
     "number":2889,
     "rate":12.3,
-    "state":"IN",
-    "name":"Clinton County"
+    "population":32957,
+    "county":"Clinton County"
   },
   {
-    "id":18025,
+    "state":"IN",
+    "FIPS":18025,
     "number":1075,
     "rate":13.5,
-    "state":"IN",
-    "name":"Crawford County"
+    "population":10645,
+    "county":"Crawford County"
   },
   {
-    "id":18027,
+    "state":"IN",
+    "FIPS":18027,
     "number":2612,
     "rate":11.9,
-    "state":"IN",
-    "name":"Daviess County"
+    "population":32116,
+    "county":"Daviess County"
   },
   {
-    "id":18029,
+    "state":"IN",
+    "FIPS":18029,
     "number":4152,
     "rate":11.3,
-    "state":"IN",
-    "name":"Dearborn County"
+    "population":49782,
+    "county":"Dearborn County"
   },
   {
-    "id":18031,
+    "state":"IN",
+    "FIPS":18031,
     "number":2464,
     "rate":13,
-    "state":"IN",
-    "name":"Decatur County"
+    "population":26083,
+    "county":"Decatur County"
   },
   {
-    "id":18033,
+    "state":"IN",
+    "FIPS":18033,
     "number":3102,
     "rate":10.2,
-    "state":"IN",
-    "name":"De Kalb County"
+    "population":42255,
+    "county":"De Kalb County"
   },
   {
-    "id":18035,
+    "state":"IN",
+    "FIPS":18035,
     "number":11277,
     "rate":12.8,
-    "state":"IN",
-    "name":"Delaware County"
+    "population":117309,
+    "county":"Delaware County"
   },
   {
-    "id":18037,
+    "state":"IN",
+    "FIPS":18037,
     "number":3268,
     "rate":10.7,
-    "state":"IN",
-    "name":"Dubois County"
+    "population":42094,
+    "county":"Dubois County"
   },
   {
-    "id":18039,
+    "state":"IN",
+    "FIPS":18039,
     "number":13406,
     "rate":9.7,
-    "state":"IN",
-    "name":"Elkhart County"
+    "population":199236,
+    "county":"Elkhart County"
   },
   {
-    "id":18041,
+    "state":"IN",
+    "FIPS":18041,
     "number":2289,
     "rate":12.8,
-    "state":"IN",
-    "name":"Fayette County"
+    "population":23965,
+    "county":"Fayette County"
   },
   {
-    "id":18043,
+    "state":"IN",
+    "FIPS":18043,
     "number":5398,
     "rate":9.6,
-    "state":"IN",
-    "name":"Floyd County"
+    "population":75284,
+    "county":"Floyd County"
   },
   {
-    "id":18045,
+    "state":"IN",
+    "FIPS":18045,
     "number":1697,
     "rate":13.4,
-    "state":"IN",
-    "name":"Fountain County"
+    "population":17100,
+    "county":"Fountain County"
   },
   {
-    "id":18047,
+    "state":"IN",
+    "FIPS":18047,
     "number":1861,
     "rate":11.2,
-    "state":"IN",
-    "name":"Franklin County"
+    "population":22986,
+    "county":"Franklin County"
   },
   {
-    "id":18049,
+    "state":"IN",
+    "FIPS":18049,
     "number":1736,
     "rate":11.4,
-    "state":"IN",
-    "name":"Fulton County"
+    "population":20664,
+    "county":"Fulton County"
   },
   {
-    "id":18051,
+    "state":"IN",
+    "FIPS":18051,
     "number":3126,
     "rate":12.6,
-    "state":"IN",
-    "name":"Gibson County"
+    "population":33551,
+    "county":"Gibson County"
   },
   {
-    "id":18053,
+    "state":"IN",
+    "FIPS":18053,
     "number":7232,
     "rate":14,
-    "state":"IN",
-    "name":"Grant County"
+    "population":69283,
+    "county":"Grant County"
   },
   {
-    "id":18055,
+    "state":"IN",
+    "FIPS":18055,
     "number":3554,
     "rate":14.4,
-    "state":"IN",
-    "name":"Greene County"
+    "population":33029,
+    "county":"Greene County"
   },
   {
-    "id":18057,
+    "state":"IN",
+    "FIPS":18057,
     "number":17167,
     "rate":8.7,
-    "state":"IN",
-    "name":"Hamilton County"
+    "population":289570,
+    "county":"Hamilton County"
   },
   {
-    "id":18059,
+    "state":"IN",
+    "FIPS":18059,
     "number":5664,
     "rate":11,
-    "state":"IN",
-    "name":"Hancock County"
+    "population":70641,
+    "county":"Hancock County"
   },
   {
-    "id":18061,
+    "state":"IN",
+    "FIPS":18061,
     "number":3302,
     "rate":11.3,
-    "state":"IN",
-    "name":"Harrison County"
+    "population":39099,
+    "county":"Harrison County"
   },
   {
-    "id":18063,
+    "state":"IN",
+    "FIPS":18063,
     "number":9418,
     "rate":8.8,
-    "state":"IN",
-    "name":"Hendricks County"
+    "population":150722,
+    "county":"Hendricks County"
   },
   {
-    "id":18065,
+    "state":"IN",
+    "FIPS":18065,
     "number":4413,
     "rate":11.7,
-    "state":"IN",
-    "name":"Henry County"
+    "population":49259,
+    "county":"Henry County"
   },
   {
-    "id":18067,
+    "state":"IN",
+    "FIPS":18067,
     "number":8705,
     "rate":14.1,
-    "state":"IN",
-    "name":"Howard County"
+    "population":82973,
+    "county":"Howard County"
   },
   {
-    "id":18069,
+    "state":"IN",
+    "FIPS":18069,
     "number":3435,
     "rate":12.5,
-    "state":"IN",
-    "name":"Huntington County"
+    "population":36979,
+    "county":"Huntington County"
   },
   {
-    "id":18071,
+    "state":"IN",
+    "FIPS":18071,
     "number":4119,
     "rate":13,
-    "state":"IN",
-    "name":"Jackson County"
+    "population":42990,
+    "county":"Jackson County"
   },
   {
-    "id":18073,
+    "state":"IN",
+    "FIPS":18073,
     "number":2512,
     "rate":10.4,
-    "state":"IN",
-    "name":"Jasper County"
+    "population":33453,
+    "county":"Jasper County"
   },
   {
-    "id":18075,
+    "state":"IN",
+    "FIPS":18075,
     "number":2231,
     "rate":14.7,
-    "state":"IN",
-    "name":"Jay County"
+    "population":21370,
+    "county":"Jay County"
   },
   {
-    "id":18077,
+    "state":"IN",
+    "FIPS":18077,
     "number":3076,
     "rate":12.6,
-    "state":"IN",
-    "name":"Jefferson County"
+    "population":32506,
+    "county":"Jefferson County"
   },
   {
-    "id":18079,
+    "state":"IN",
+    "FIPS":18079,
     "number":2469,
     "rate":12.2,
-    "state":"IN",
-    "name":"Jennings County"
+    "population":28182,
+    "county":"Jennings County"
   },
   {
-    "id":18081,
+    "state":"IN",
+    "FIPS":18081,
     "number":11115,
     "rate":10.8,
-    "state":"IN",
-    "name":"Johnson County"
+    "population":143562,
+    "county":"Johnson County"
   },
   {
-    "id":18083,
+    "state":"IN",
+    "FIPS":18083,
     "number":2878,
     "rate":10.2,
-    "state":"IN",
-    "name":"Knox County"
+    "population":38051,
+    "county":"Knox County"
   },
   {
-    "id":18085,
+    "state":"IN",
+    "FIPS":18085,
     "number":6173,
     "rate":11,
-    "state":"IN",
-    "name":"Kosciusko County"
+    "population":77654,
+    "county":"Kosciusko County"
   },
   {
-    "id":18087,
+    "state":"IN",
+    "FIPS":18087,
     "number":2923,
     "rate":12.3,
-    "state":"IN",
-    "name":"Lagrange County"
+    "population":37635,
+    "county":"Lagrange County"
   },
   {
-    "id":18089,
+    "state":"IN",
+    "FIPS":18089,
     "number":44996,
     "rate":12.6,
-    "state":"IN",
-    "name":"Lake County"
+    "population":493194,
+    "county":"Lake County"
   },
   {
-    "id":18091,
+    "state":"IN",
+    "FIPS":18091,
     "number":8905,
     "rate":10.6,
-    "state":"IN",
-    "name":"La Porte County"
+    "population":111158,
+    "county":"La Porte County"
   },
   {
-    "id":18093,
+    "state":"IN",
+    "FIPS":18093,
     "number":5145,
     "rate":14.9,
-    "state":"IN",
-    "name":"Lawrence County"
+    "population":46045,
+    "county":"Lawrence County"
   },
   {
-    "id":18095,
+    "state":"IN",
+    "FIPS":18095,
     "number":12498,
     "rate":12.8,
-    "state":"IN",
-    "name":"Madison County"
+    "population":130284,
+    "county":"Madison County"
   },
   {
-    "id":18097,
+    "state":"IN",
+    "FIPS":18097,
     "number":70892,
     "rate":10.6,
-    "state":"IN",
-    "name":"Marion County"
+    "population":918581,
+    "county":"Marion County"
   },
   {
-    "id":18099,
+    "state":"IN",
+    "FIPS":18099,
     "number":3547,
     "rate":10.6,
-    "state":"IN",
-    "name":"Marshall County"
+    "population":47025,
+    "county":"Marshall County"
   },
   {
-    "id":18101,
+    "state":"IN",
+    "FIPS":18101,
     "number":1109,
     "rate":14.5,
-    "state":"IN",
-    "name":"Martin County"
+    "population":10322,
+    "county":"Martin County"
   },
   {
-    "id":18103,
+    "state":"IN",
+    "FIPS":18103,
     "number":2991,
     "rate":10.9,
-    "state":"IN",
-    "name":"Miami County"
+    "population":36502,
+    "county":"Miami County"
   },
   {
-    "id":18105,
+    "state":"IN",
+    "FIPS":18105,
     "number":8740,
     "rate":8.1,
-    "state":"IN",
-    "name":"Monroe County"
+    "population":141289,
+    "county":"Monroe County"
   },
   {
-    "id":18107,
+    "state":"IN",
+    "FIPS":18107,
     "number":3475,
     "rate":12.3,
-    "state":"IN",
-    "name":"Montgomery County"
+    "population":38202,
+    "county":"Montgomery County"
   },
   {
-    "id":18109,
+    "state":"IN",
+    "FIPS":18109,
     "number":6701,
     "rate":13.2,
-    "state":"IN",
-    "name":"Morgan County"
+    "population":69216,
+    "county":"Morgan County"
   },
   {
-    "id":18111,
+    "state":"IN",
+    "FIPS":18111,
     "number":1224,
     "rate":11.5,
-    "state":"IN",
-    "name":"Newton County"
+    "population":14079,
+    "county":"Newton County"
   },
   {
-    "id":18113,
+    "state":"IN",
+    "FIPS":18113,
     "number":3832,
     "rate":11.3,
-    "state":"IN",
-    "name":"Noble County"
+    "population":47424,
+    "county":"Noble County"
   },
   {
-    "id":18115,
+    "state":"IN",
+    "FIPS":18115,
     "number":574,
     "rate":12.2,
-    "state":"IN",
-    "name":"Ohio County"
+    "population":6103,
+    "county":"Ohio County"
   },
   {
-    "id":18117,
+    "state":"IN",
+    "FIPS":18117,
     "number":1673,
     "rate":11.6,
-    "state":"IN",
-    "name":"Orange County"
+    "population":19696,
+    "county":"Orange County"
   },
   {
-    "id":18119,
+    "state":"IN",
+    "FIPS":18119,
     "number":1993,
     "rate":12.4,
-    "state":"IN",
-    "name":"Owen County"
+    "population":21363,
+    "county":"Owen County"
   },
   {
-    "id":18121,
+    "state":"IN",
+    "FIPS":18121,
     "number":1519,
     "rate":11.6,
-    "state":"IN",
-    "name":"Parke County"
+    "population":17112,
+    "county":"Parke County"
   },
   {
-    "id":18123,
+    "state":"IN",
+    "FIPS":18123,
     "number":1761,
     "rate":11.7,
-    "state":"IN",
-    "name":"Perry County"
+    "population":19429,
+    "county":"Perry County"
   },
   {
-    "id":18125,
+    "state":"IN",
+    "FIPS":18125,
     "number":1225,
     "rate":12.7,
-    "state":"IN",
-    "name":"Pike County"
+    "population":12774,
+    "county":"Pike County"
   },
   {
-    "id":18127,
+    "state":"IN",
+    "FIPS":18127,
     "number":11767,
     "rate":9.6,
-    "state":"IN",
-    "name":"Porter County"
+    "population":165659,
+    "county":"Porter County"
   },
   {
-    "id":18129,
+    "state":"IN",
+    "FIPS":18129,
     "number":2459,
     "rate":12.9,
-    "state":"IN",
-    "name":"Posey County"
+    "population":25616,
+    "county":"Posey County"
   },
   {
-    "id":18131,
+    "state":"IN",
+    "FIPS":18131,
     "number":1212,
     "rate":12.5,
-    "state":"IN",
-    "name":"Pulaski County"
+    "population":13053,
+    "county":"Pulaski County"
   },
   {
-    "id":18133,
+    "state":"IN",
+    "FIPS":18133,
     "number":3046,
     "rate":10.8,
-    "state":"IN",
-    "name":"Putnam County"
+    "population":37681,
+    "county":"Putnam County"
   },
   {
-    "id":18135,
+    "state":"IN",
+    "FIPS":18135,
     "number":2682,
     "rate":14.1,
-    "state":"IN",
-    "name":"Randolph County"
+    "population":25835,
+    "county":"Randolph County"
   },
   {
-    "id":18137,
+    "state":"IN",
+    "FIPS":18137,
     "number":2748,
     "rate":13.3,
-    "state":"IN",
-    "name":"Ripley County"
+    "population":28529,
+    "county":"Ripley County"
   },
   {
-    "id":18139,
+    "state":"IN",
+    "FIPS":18139,
     "number":1651,
     "rate":13,
-    "state":"IN",
-    "name":"Rush County"
+    "population":17134,
+    "county":"Rush County"
   },
   {
-    "id":18143,
+    "state":"IN",
+    "FIPS":18143,
     "number":2066,
     "rate":11.7,
-    "state":"IN",
-    "name":"Scott County"
+    "population":23784,
+    "county":"Scott County"
   },
   {
-    "id":18145,
+    "state":"IN",
+    "FIPS":18145,
     "number":3688,
     "rate":11.2,
-    "state":"IN",
-    "name":"Shelby County"
+    "population":44382,
+    "county":"Shelby County"
   },
   {
-    "id":18147,
+    "state":"IN",
+    "FIPS":18147,
     "number":1555,
     "rate":10,
-    "state":"IN",
-    "name":"Spencer County"
+    "population":20875,
+    "county":"Spencer County"
   },
   {
-    "id":18141,
+    "state":"IN",
+    "FIPS":18141,
     "number":19057,
     "rate":9.9,
-    "state":"IN",
-    "name":"St. Joseph County"
+    "population":266571,
+    "county":"St. Joseph County"
   },
   {
-    "id":18149,
+    "state":"IN",
+    "FIPS":18149,
     "number":2140,
     "rate":12.5,
-    "state":"IN",
-    "name":"Starke County"
+    "population":23197,
+    "county":"Starke County"
   },
   {
-    "id":18151,
+    "state":"IN",
+    "FIPS":18151,
     "number":2803,
     "rate":11,
-    "state":"IN",
-    "name":"Steuben County"
+    "population":34155,
+    "county":"Steuben County"
   },
   {
-    "id":18153,
+    "state":"IN",
+    "FIPS":18153,
     "number":2100,
     "rate":12.9,
-    "state":"IN",
-    "name":"Sullivan County"
+    "population":21227,
+    "county":"Sullivan County"
   },
   {
-    "id":18155,
+    "state":"IN",
+    "FIPS":18155,
     "number":998,
     "rate":13.1,
-    "state":"IN",
-    "name":"Switzerland County"
+    "population":10402,
+    "county":"Switzerland County"
   },
   {
-    "id":18157,
+    "state":"IN",
+    "FIPS":18157,
     "number":10057,
     "rate":7.7,
-    "state":"IN",
-    "name":"Tippecanoe County"
+    "population":178180,
+    "county":"Tippecanoe County"
   },
   {
-    "id":18159,
+    "state":"IN",
+    "FIPS":18159,
     "number":1369,
     "rate":11.5,
-    "state":"IN",
-    "name":"Tipton County"
+    "population":15721,
+    "county":"Tipton County"
   },
   {
-    "id":18161,
+    "state":"IN",
+    "FIPS":18161,
     "number":666,
     "rate":12.3,
-    "state":"IN",
-    "name":"Union County"
+    "population":7340,
+    "county":"Union County"
   },
   {
-    "id":18163,
+    "state":"IN",
+    "FIPS":18163,
     "number":16889,
     "rate":12.4,
-    "state":"IN",
-    "name":"Vanderburgh County"
+    "population":180781,
+    "county":"Vanderburgh County"
   },
   {
-    "id":18165,
+    "state":"IN",
+    "FIPS":18165,
     "number":1492,
     "rate":12.4,
-    "state":"IN",
-    "name":"Vermillion County"
+    "population":15955,
+    "county":"Vermillion County"
   },
   {
-    "id":18167,
+    "state":"IN",
+    "FIPS":18167,
     "number":8295,
     "rate":10.2,
-    "state":"IN",
-    "name":"Vigo County"
+    "population":108589,
+    "county":"Vigo County"
   },
   {
-    "id":18169,
+    "state":"IN",
+    "FIPS":18169,
     "number":3357,
     "rate":13.9,
-    "state":"IN",
-    "name":"Wabash County"
+    "population":32428,
+    "county":"Wabash County"
   },
   {
-    "id":18171,
+    "state":"IN",
+    "FIPS":18171,
     "number":724,
     "rate":11.4,
-    "state":"IN",
-    "name":"Warren County"
+    "population":8386,
+    "county":"Warren County"
   },
   {
-    "id":18173,
+    "state":"IN",
+    "FIPS":18173,
     "number":4916,
     "rate":11.2,
-    "state":"IN",
-    "name":"Warrick County"
+    "population":60439,
+    "county":"Warrick County"
   },
   {
-    "id":18175,
+    "state":"IN",
+    "FIPS":18175,
     "number":2407,
     "rate":11.7,
-    "state":"IN",
-    "name":"Washington County"
+    "population":27925,
+    "county":"Washington County"
   },
   {
-    "id":18177,
+    "state":"IN",
+    "FIPS":18177,
     "number":6339,
     "rate":12.4,
-    "state":"IN",
-    "name":"Wayne County"
+    "population":68371,
+    "county":"Wayne County"
   },
   {
-    "id":18179,
+    "state":"IN",
+    "FIPS":18179,
     "number":2384,
     "rate":11.7,
-    "state":"IN",
-    "name":"Wells County"
+    "population":27678,
+    "county":"Wells County"
   },
   {
-    "id":18181,
+    "state":"IN",
+    "FIPS":18181,
     "number":2369,
     "rate":13.1,
-    "state":"IN",
-    "name":"White County"
+    "population":24408,
+    "county":"White County"
   },
   {
-    "id":18183,
+    "state":"IN",
+    "FIPS":18183,
     "number":2705,
     "rate":11,
-    "state":"IN",
-    "name":"Whitley County"
+    "population":33270,
+    "county":"Whitley County"
   },
   {
-    "id":20001,
+    "state":"KS",
+    "FIPS":20001,
     "number":1099,
     "rate":11.2,
-    "state":"KS",
-    "name":"Allen County"
+    "population":13341,
+    "county":"Allen County"
   },
   {
-    "id":20003,
+    "state":"KS",
+    "FIPS":20003,
     "number":507,
     "rate":8.8,
-    "state":"KS",
-    "name":"Anderson County"
+    "population":7918,
+    "county":"Anderson County"
   },
   {
-    "id":20005,
+    "state":"KS",
+    "FIPS":20005,
     "number":1222,
     "rate":10.2,
-    "state":"KS",
-    "name":"Atchison County"
+    "population":16800,
+    "county":"Atchison County"
   },
   {
-    "id":20007,
+    "state":"KS",
+    "FIPS":20007,
     "number":346,
     "rate":9.4,
-    "state":"KS",
-    "name":"Barber County"
+    "population":4880,
+    "county":"Barber County"
   },
   {
-    "id":20009,
+    "state":"KS",
+    "FIPS":20009,
     "number":2060,
     "rate":10.3,
-    "state":"KS",
-    "name":"Barton County"
+    "population":27553,
+    "county":"Barton County"
   },
   {
-    "id":20011,
+    "state":"KS",
+    "FIPS":20011,
     "number":1219,
     "rate":11.4,
-    "state":"KS",
-    "name":"Bourbon County"
+    "population":14859,
+    "county":"Bourbon County"
   },
   {
-    "id":20013,
+    "state":"KS",
+    "FIPS":20013,
     "number":849,
     "rate":11.8,
-    "state":"KS",
-    "name":"Brown County"
+    "population":9888,
+    "county":"Brown County"
   },
   {
-    "id":20015,
+    "state":"KS",
+    "FIPS":20015,
     "number":4622,
     "rate":9.9,
-    "state":"KS",
-    "name":"Butler County"
+    "population":65756,
+    "county":"Butler County"
   },
   {
-    "id":20017,
+    "state":"KS",
+    "FIPS":20017,
     "number":247,
     "rate":11.7,
-    "state":"KS",
-    "name":"Chase County"
+    "population":2750,
+    "county":"Chase County"
   },
   {
-    "id":20019,
+    "state":"KS",
+    "FIPS":20019,
     "number":336,
     "rate":12.1,
-    "state":"KS",
-    "name":"Chautauqua County"
+    "population":3566,
+    "county":"Chautauqua County"
   },
   {
-    "id":20021,
+    "state":"KS",
+    "FIPS":20021,
     "number":1939,
     "rate":12.5,
-    "state":"KS",
-    "name":"Cherokee County"
+    "population":21224,
+    "county":"Cherokee County"
   },
   {
-    "id":20023,
+    "state":"KS",
+    "FIPS":20023,
     "number":252,
     "rate":12.3,
-    "state":"KS",
-    "name":"Cheyenne County"
+    "population":2675,
+    "county":"Cheyenne County"
   },
   {
-    "id":20025,
+    "state":"KS",
+    "FIPS":20025,
     "number":192,
     "rate":12.3,
-    "state":"KS",
-    "name":"Clark County"
+    "population":2174,
+    "county":"Clark County"
   },
   {
-    "id":20027,
+    "state":"KS",
+    "FIPS":20027,
     "number":712,
     "rate":11.2,
-    "state":"KS",
-    "name":"Clay County"
+    "population":8517,
+    "county":"Clay County"
   },
   {
-    "id":20029,
+    "state":"KS",
+    "FIPS":20029,
     "number":911,
     "rate":13.2,
-    "state":"KS",
-    "name":"Cloud County"
+    "population":9392,
+    "county":"Cloud County"
   },
   {
-    "id":20031,
+    "state":"KS",
+    "FIPS":20031,
     "number":574,
     "rate":9.1,
-    "state":"KS",
-    "name":"Coffey County"
+    "population":8506,
+    "county":"Coffey County"
   },
   {
-    "id":20033,
+    "state":"KS",
+    "FIPS":20033,
     "number":165,
     "rate":11.7,
-    "state":"KS",
-    "name":"Comanche County"
+    "population":1908,
+    "county":"Comanche County"
   },
   {
-    "id":20035,
+    "state":"KS",
+    "FIPS":20035,
     "number":3140,
     "rate":12,
-    "state":"KS",
-    "name":"Cowley County"
+    "population":36264,
+    "county":"Cowley County"
   },
   {
-    "id":20037,
+    "state":"KS",
+    "FIPS":20037,
     "number":3287,
     "rate":11.4,
-    "state":"KS",
-    "name":"Crawford County"
+    "population":39361,
+    "county":"Crawford County"
   },
   {
-    "id":20039,
+    "state":"KS",
+    "FIPS":20039,
     "number":311,
     "rate":13.5,
-    "state":"KS",
-    "name":"Decatur County"
+    "population":2881,
+    "county":"Decatur County"
   },
   {
-    "id":20041,
+    "state":"KS",
+    "FIPS":20041,
     "number":1681,
     "rate":11.6,
-    "state":"KS",
-    "name":"Dickinson County"
+    "population":19758,
+    "county":"Dickinson County"
   },
   {
-    "id":20043,
+    "state":"KS",
+    "FIPS":20043,
     "number":588,
     "rate":10.3,
-    "state":"KS",
-    "name":"Doniphan County"
+    "population":7877,
+    "county":"Doniphan County"
   },
   {
-    "id":20045,
+    "state":"KS",
+    "FIPS":20045,
     "number":5060,
     "rate":6,
-    "state":"KS",
-    "name":"Douglas County"
+    "population":113339,
+    "county":"Douglas County"
   },
   {
-    "id":20047,
+    "state":"KS",
+    "FIPS":20047,
     "number":232,
     "rate":10.4,
-    "state":"KS",
-    "name":"Edwards County"
+    "population":2974,
+    "county":"Edwards County"
   },
   {
-    "id":20051,
+    "state":"KS",
+    "FIPS":20051,
     "number":1818,
     "rate":8.4,
-    "state":"KS",
-    "name":"Ellis County"
+    "population":29090,
+    "county":"Ellis County"
   },
   {
-    "id":20049,
+    "state":"KS",
+    "FIPS":20049,
     "number":264,
     "rate":12.6,
-    "state":"KS",
-    "name":"Elk County"
+    "population":2669,
+    "county":"Elk County"
   },
   {
-    "id":20053,
+    "state":"KS",
+    "FIPS":20053,
     "number":555,
     "rate":10.8,
-    "state":"KS",
-    "name":"Ellsworth County"
+    "population":6465,
+    "county":"Ellsworth County"
   },
   {
-    "id":20055,
+    "state":"KS",
+    "FIPS":20055,
     "number":2160,
     "rate":8.9,
-    "state":"KS",
-    "name":"Finney County"
+    "population":37130,
+    "county":"Finney County"
   },
   {
-    "id":20057,
+    "state":"KS",
+    "FIPS":20057,
     "number":2019,
     "rate":8.9,
-    "state":"KS",
-    "name":"Ford County"
+    "population":34773,
+    "county":"Ford County"
   },
   {
-    "id":20059,
+    "state":"KS",
+    "FIPS":20059,
     "number":1968,
     "rate":10.6,
-    "state":"KS",
-    "name":"Franklin County"
+    "population":25878,
+    "county":"Franklin County"
   },
   {
-    "id":20061,
+    "state":"KS",
+    "FIPS":20061,
     "number":2006,
     "rate":7.9,
-    "state":"KS",
-    "name":"Geary County"
+    "population":38003,
+    "county":"Geary County"
   },
   {
-    "id":20063,
+    "state":"KS",
+    "FIPS":20063,
     "number":250,
     "rate":12.3,
-    "state":"KS",
-    "name":"Gove County"
+    "population":2721,
+    "county":"Gove County"
   },
   {
-    "id":20065,
+    "state":"KS",
+    "FIPS":20065,
     "number":226,
     "rate":11.1,
-    "state":"KS",
-    "name":"Graham County"
+    "population":2592,
+    "county":"Graham County"
   },
   {
-    "id":20067,
+    "state":"KS",
+    "FIPS":20067,
     "number":460,
     "rate":8.9,
-    "state":"KS",
-    "name":"Grant County"
+    "population":7852,
+    "county":"Grant County"
   },
   {
-    "id":20069,
+    "state":"KS",
+    "FIPS":20069,
     "number":379,
     "rate":9.3,
-    "state":"KS",
-    "name":"Gray County"
+    "population":5994,
+    "county":"Gray County"
   },
   {
-    "id":20071,
+    "state":"KS",
+    "FIPS":20071,
     "number":99,
     "rate":10.4,
-    "state":"KS",
-    "name":"Greeley County"
+    "population":1266,
+    "county":"Greeley County"
   },
   {
-    "id":20073,
+    "state":"KS",
+    "FIPS":20073,
     "number":575,
     "rate":11.6,
-    "state":"KS",
-    "name":"Greenwood County"
+    "population":6446,
+    "county":"Greenwood County"
   },
   {
-    "id":20075,
+    "state":"KS",
+    "FIPS":20075,
     "number":159,
     "rate":8.7,
-    "state":"KS",
-    "name":"Hamilton County"
+    "population":2631,
+    "county":"Hamilton County"
   },
   {
-    "id":20077,
+    "state":"KS",
+    "FIPS":20077,
     "number":481,
     "rate":11,
-    "state":"KS",
-    "name":"Harper County"
+    "population":5874,
+    "county":"Harper County"
   },
   {
-    "id":20079,
+    "state":"KS",
+    "FIPS":20079,
     "number":2557,
     "rate":10.3,
-    "state":"KS",
-    "name":"Harvey County"
+    "population":34831,
+    "county":"Harvey County"
   },
   {
-    "id":20081,
+    "state":"KS",
+    "FIPS":20081,
     "number":246,
     "rate":8.8,
-    "state":"KS",
-    "name":"Haskell County"
+    "population":4221,
+    "county":"Haskell County"
   },
   {
-    "id":20083,
+    "state":"KS",
+    "FIPS":20083,
     "number":176,
     "rate":12.1,
-    "state":"KS",
-    "name":"Hodgeman County"
+    "population":1953,
+    "county":"Hodgeman County"
   },
   {
-    "id":20085,
+    "state":"KS",
+    "FIPS":20085,
     "number":1052,
     "rate":11,
-    "state":"KS",
-    "name":"Jackson County"
+    "population":13448,
+    "county":"Jackson County"
   },
   {
-    "id":20087,
+    "state":"KS",
+    "FIPS":20087,
     "number":1448,
     "rate":10.4,
-    "state":"KS",
-    "name":"Jefferson County"
+    "population":18901,
+    "county":"Jefferson County"
   },
   {
-    "id":20089,
+    "state":"KS",
+    "FIPS":20089,
     "number":309,
     "rate":12.8,
-    "state":"KS",
-    "name":"Jewell County"
+    "population":3037,
+    "county":"Jewell County"
   },
   {
-    "id":20091,
+    "state":"KS",
+    "FIPS":20091,
     "number":28547,
     "rate":7.1,
-    "state":"KS",
-    "name":"Johnson County"
+    "population":559954,
+    "county":"Johnson County"
   },
   {
-    "id":20093,
+    "state":"KS",
+    "FIPS":20093,
     "number":270,
     "rate":10.1,
-    "state":"KS",
-    "name":"Kearny County"
+    "population":3976,
+    "county":"Kearny County"
   },
   {
-    "id":20095,
+    "state":"KS",
+    "FIPS":20095,
     "number":768,
     "rate":13.1,
-    "state":"KS",
-    "name":"Kingman County"
+    "population":7828,
+    "county":"Kingman County"
   },
   {
-    "id":20097,
+    "state":"KS",
+    "FIPS":20097,
     "number":193,
     "rate":10.3,
-    "state":"KS",
-    "name":"Kiowa County"
+    "population":2499,
+    "county":"Kiowa County"
   },
   {
-    "id":20099,
+    "state":"KS",
+    "FIPS":20099,
     "number":1856,
     "rate":11.9,
-    "state":"KS",
-    "name":"Labette County"
+    "population":21219,
+    "county":"Labette County"
   },
   {
-    "id":20101,
+    "state":"KS",
+    "FIPS":20101,
     "number":145,
     "rate":11.2,
-    "state":"KS",
-    "name":"Lane County"
+    "population":1700,
+    "county":"Lane County"
   },
   {
-    "id":20103,
+    "state":"KS",
+    "FIPS":20103,
     "number":5289,
     "rate":9.3,
-    "state":"KS",
-    "name":"Leavenworth County"
+    "population":77729,
+    "county":"Leavenworth County"
   },
   {
-    "id":20105,
+    "state":"KS",
+    "FIPS":20105,
     "number":264,
     "rate":11.3,
-    "state":"KS",
-    "name":"Lincoln County"
+    "population":3159,
+    "county":"Lincoln County"
   },
   {
-    "id":20107,
+    "state":"KS",
+    "FIPS":20107,
     "number":739,
     "rate":10.4,
-    "state":"KS",
-    "name":"Linn County"
+    "population":9481,
+    "county":"Linn County"
   },
   {
-    "id":20109,
+    "state":"KS",
+    "FIPS":20109,
     "number":291,
     "rate":14,
-    "state":"KS",
-    "name":"Logan County"
+    "population":2795,
+    "county":"Logan County"
   },
   {
-    "id":20111,
+    "state":"KS",
+    "FIPS":20111,
     "number":2447,
     "rate":10.1,
-    "state":"KS",
-    "name":"Lyon County"
+    "population":33529,
+    "county":"Lyon County"
   },
   {
-    "id":20115,
+    "state":"KS",
+    "FIPS":20115,
     "number":902,
     "rate":9.7,
-    "state":"KS",
-    "name":"Marion County"
+    "population":12372,
+    "county":"Marion County"
   },
   {
-    "id":20117,
+    "state":"KS",
+    "FIPS":20117,
     "number":766,
     "rate":10.1,
-    "state":"KS",
-    "name":"Marshall County"
+    "population":10066,
+    "county":"Marshall County"
   },
   {
-    "id":20113,
+    "state":"KS",
+    "FIPS":20113,
     "number":2091,
     "rate":9.6,
-    "state":"KS",
-    "name":"McPherson County"
+    "population":29341,
+    "county":"McPherson County"
   },
   {
-    "id":20119,
+    "state":"KS",
+    "FIPS":20119,
     "number":329,
     "rate":10.7,
-    "state":"KS",
-    "name":"Meade County"
+    "population":4415,
+    "county":"Meade County"
   },
   {
-    "id":20121,
+    "state":"KS",
+    "FIPS":20121,
     "number":2270,
     "rate":9.8,
-    "state":"KS",
-    "name":"Miami County"
+    "population":32605,
+    "county":"Miami County"
   },
   {
-    "id":20123,
+    "state":"KS",
+    "FIPS":20123,
     "number":553,
     "rate":11.7,
-    "state":"KS",
-    "name":"Mitchell County"
+    "population":6342,
+    "county":"Mitchell County"
   },
   {
-    "id":20125,
+    "state":"KS",
+    "FIPS":20125,
     "number":3529,
     "rate":14.1,
-    "state":"KS",
-    "name":"Montgomery County"
+    "population":34433,
+    "county":"Montgomery County"
   },
   {
-    "id":20127,
+    "state":"KS",
+    "FIPS":20127,
     "number":475,
     "rate":10.5,
-    "state":"KS",
-    "name":"Morris County"
+    "population":5851,
+    "county":"Morris County"
   },
   {
-    "id":20129,
+    "state":"KS",
+    "FIPS":20129,
     "number":249,
     "rate":11.1,
-    "state":"KS",
-    "name":"Morton County"
+    "population":3139,
+    "county":"Morton County"
   },
   {
-    "id":20131,
+    "state":"KS",
+    "FIPS":20131,
     "number":744,
     "rate":10.3,
-    "state":"KS",
-    "name":"Nemaha County"
+    "population":10104,
+    "county":"Nemaha County"
   },
   {
-    "id":20133,
+    "state":"KS",
+    "FIPS":20133,
     "number":1450,
     "rate":12.2,
-    "state":"KS",
-    "name":"Neosho County"
+    "population":16452,
+    "county":"Neosho County"
   },
   {
-    "id":20135,
+    "state":"KS",
+    "FIPS":20135,
     "number":265,
     "rate":11.4,
-    "state":"KS",
-    "name":"Ness County"
+    "population":3085,
+    "county":"Ness County"
   },
   {
-    "id":20137,
+    "state":"KS",
+    "FIPS":20137,
     "number":473,
     "rate":10.7,
-    "state":"KS",
-    "name":"Norton County"
+    "population":5605,
+    "county":"Norton County"
   },
   {
-    "id":20139,
+    "state":"KS",
+    "FIPS":20139,
     "number":1323,
     "rate":11.2,
-    "state":"KS",
-    "name":"Osage County"
+    "population":16173,
+    "county":"Osage County"
   },
   {
-    "id":20141,
+    "state":"KS",
+    "FIPS":20141,
     "number":353,
     "rate":12,
-    "state":"KS",
-    "name":"Osborne County"
+    "population":3815,
+    "county":"Osborne County"
   },
   {
-    "id":20143,
+    "state":"KS",
+    "FIPS":20143,
     "number":514,
     "rate":11.6,
-    "state":"KS",
-    "name":"Ottawa County"
+    "population":6061,
+    "county":"Ottawa County"
   },
   {
-    "id":20145,
+    "state":"KS",
+    "FIPS":20145,
     "number":607,
     "rate":11.4,
-    "state":"KS",
-    "name":"Pawnee County"
+    "population":6913,
+    "county":"Pawnee County"
   },
   {
-    "id":20147,
+    "state":"KS",
+    "FIPS":20147,
     "number":476,
     "rate":11.6,
-    "state":"KS",
-    "name":"Phillips County"
+    "population":5521,
+    "county":"Phillips County"
   },
   {
-    "id":20149,
+    "state":"KS",
+    "FIPS":20149,
     "number":1629,
     "rate":10.7,
-    "state":"KS",
-    "name":"Pottawatomie County"
+    "population":22351,
+    "county":"Pottawatomie County"
   },
   {
-    "id":20151,
+    "state":"KS",
+    "FIPS":20151,
     "number":791,
     "rate":11.1,
-    "state":"KS",
-    "name":"Pratt County"
+    "population":9787,
+    "county":"Pratt County"
   },
   {
-    "id":20153,
+    "state":"KS",
+    "FIPS":20153,
     "number":264,
     "rate":13,
-    "state":"KS",
-    "name":"Rawlins County"
+    "population":2538,
+    "county":"Rawlins County"
   },
   {
-    "id":20155,
+    "state":"KS",
+    "FIPS":20155,
     "number":5641,
     "rate":11.8,
-    "state":"KS",
-    "name":"Reno County"
+    "population":64217,
+    "county":"Reno County"
   },
   {
-    "id":20157,
+    "state":"KS",
+    "FIPS":20157,
     "number":423,
     "rate":11.1,
-    "state":"KS",
-    "name":"Republic County"
+    "population":4858,
+    "county":"Republic County"
   },
   {
-    "id":20159,
+    "state":"KS",
+    "FIPS":20159,
     "number":818,
     "rate":11.3,
-    "state":"KS",
-    "name":"Rice County"
+    "population":10009,
+    "county":"Rice County"
   },
   {
-    "id":20161,
+    "state":"KS",
+    "FIPS":20161,
     "number":3299,
     "rate":5.8,
-    "state":"KS",
-    "name":"Riley County"
+    "population":76297,
+    "county":"Riley County"
   },
   {
-    "id":20163,
+    "state":"KS",
+    "FIPS":20163,
     "number":412,
     "rate":10.5,
-    "state":"KS",
-    "name":"Rooks County"
+    "population":5197,
+    "county":"Rooks County"
   },
   {
-    "id":20165,
+    "state":"KS",
+    "FIPS":20165,
     "number":273,
     "rate":10.9,
-    "state":"KS",
-    "name":"Rush County"
+    "population":3207,
+    "county":"Rush County"
   },
   {
-    "id":20167,
+    "state":"KS",
+    "FIPS":20167,
     "number":717,
     "rate":13.4,
-    "state":"KS",
-    "name":"Russell County"
+    "population":6963,
+    "county":"Russell County"
   },
   {
-    "id":20169,
+    "state":"KS",
+    "FIPS":20169,
     "number":4706,
     "rate":11.6,
-    "state":"KS",
-    "name":"Saline County"
+    "population":55890,
+    "county":"Saline County"
   },
   {
-    "id":20171,
+    "state":"KS",
+    "FIPS":20171,
     "number":335,
     "rate":9.4,
-    "state":"KS",
-    "name":"Scott County"
+    "population":4900,
+    "county":"Scott County"
   },
   {
-    "id":20173,
+    "state":"KS",
+    "FIPS":20173,
     "number":36806,
     "rate":10.3,
-    "state":"KS",
-    "name":"Sedgwick County"
+    "population":503821,
+    "county":"Sedgwick County"
   },
   {
-    "id":20175,
+    "state":"KS",
+    "FIPS":20175,
     "number":1344,
     "rate":8.9,
-    "state":"KS",
-    "name":"Seward County"
+    "population":23453,
+    "county":"Seward County"
   },
   {
-    "id":20177,
+    "state":"KS",
+    "FIPS":20177,
     "number":13584,
     "rate":10.4,
-    "state":"KS",
-    "name":"Shawnee County"
+    "population":178904,
+    "county":"Shawnee County"
   },
   {
-    "id":20179,
+    "state":"KS",
+    "FIPS":20179,
     "number":228,
     "rate":12,
-    "state":"KS",
-    "name":"Sheridan County"
+    "population":2533,
+    "county":"Sheridan County"
   },
   {
-    "id":20181,
+    "state":"KS",
+    "FIPS":20181,
     "number":462,
     "rate":10.1,
-    "state":"KS",
-    "name":"Sherman County"
+    "population":6125,
+    "county":"Sherman County"
   },
   {
-    "id":20183,
+    "state":"KS",
+    "FIPS":20183,
     "number":345,
     "rate":11.7,
-    "state":"KS",
-    "name":"Smith County"
+    "population":3754,
+    "county":"Smith County"
   },
   {
-    "id":20185,
+    "state":"KS",
+    "FIPS":20185,
     "number":376,
     "rate":11.7,
-    "state":"KS",
-    "name":"Stafford County"
+    "population":4354,
+    "county":"Stafford County"
   },
   {
-    "id":20187,
+    "state":"KS",
+    "FIPS":20187,
     "number":153,
     "rate":10.1,
-    "state":"KS",
-    "name":"Stanton County"
+    "population":2170,
+    "county":"Stanton County"
   },
   {
-    "id":20189,
+    "state":"KS",
+    "FIPS":20189,
     "number":391,
     "rate":10.1,
-    "state":"KS",
-    "name":"Stevens County"
+    "population":5737,
+    "county":"Stevens County"
   },
   {
-    "id":20191,
+    "state":"KS",
+    "FIPS":20191,
     "number":2088,
     "rate":12.2,
-    "state":"KS",
-    "name":"Sumner County"
+    "population":23706,
+    "county":"Sumner County"
   },
   {
-    "id":20193,
+    "state":"KS",
+    "FIPS":20193,
     "number":512,
     "rate":8.9,
-    "state":"KS",
-    "name":"Thomas County"
+    "population":7947,
+    "county":"Thomas County"
   },
   {
-    "id":20195,
+    "state":"KS",
+    "FIPS":20195,
     "number":256,
     "rate":10.9,
-    "state":"KS",
-    "name":"Trego County"
+    "population":2969,
+    "county":"Trego County"
   },
   {
-    "id":20197,
+    "state":"KS",
+    "FIPS":20197,
     "number":468,
     "rate":9.1,
-    "state":"KS",
-    "name":"Wabaunsee County"
+    "population":7018,
+    "county":"Wabaunsee County"
   },
   {
-    "id":20199,
+    "state":"KS",
+    "FIPS":20199,
     "number":129,
     "rate":11.8,
-    "state":"KS",
-    "name":"Wallace County"
+    "population":1524,
+    "county":"Wallace County"
   },
   {
-    "id":20201,
+    "state":"KS",
+    "FIPS":20201,
     "number":488,
     "rate":11.3,
-    "state":"KS",
-    "name":"Washington County"
+    "population":5731,
+    "county":"Washington County"
   },
   {
-    "id":20203,
+    "state":"KS",
+    "FIPS":20203,
     "number":171,
     "rate":10.7,
-    "state":"KS",
-    "name":"Wichita County"
+    "population":2226,
+    "county":"Wichita County"
   },
   {
-    "id":20205,
+    "state":"KS",
+    "FIPS":20205,
     "number":905,
     "rate":13.4,
-    "state":"KS",
-    "name":"Wilson County"
+    "population":9119,
+    "county":"Wilson County"
   },
   {
-    "id":20207,
+    "state":"KS",
+    "FIPS":20207,
     "number":304,
     "rate":12.1,
-    "state":"KS",
-    "name":"Woodson County"
+    "population":3260,
+    "county":"Woodson County"
   },
   {
-    "id":20209,
+    "state":"KS",
+    "FIPS":20209,
     "number":14149,
     "rate":12.8,
-    "state":"KS",
-    "name":"Wyandotte County"
+    "population":159303,
+    "county":"Wyandotte County"
   },
   {
-    "id":21001,
+    "state":"KY",
+    "FIPS":21001,
     "number":1711,
     "rate":12.3,
-    "state":"KY",
-    "name":"Adair County"
+    "population":18971,
+    "county":"Adair County"
   },
   {
-    "id":21003,
+    "state":"KY",
+    "FIPS":21003,
     "number":1785,
     "rate":12,
-    "state":"KY",
-    "name":"Allen County"
+    "population":20231,
+    "county":"Allen County"
   },
   {
-    "id":21005,
+    "state":"KY",
+    "FIPS":21005,
     "number":1770,
     "rate":11.2,
-    "state":"KY",
-    "name":"Anderson County"
+    "population":21663,
+    "county":"Anderson County"
   },
   {
-    "id":21007,
+    "state":"KY",
+    "FIPS":21007,
     "number":871,
     "rate":13.9,
-    "state":"KY",
-    "name":"Ballard County"
+    "population":8304,
+    "county":"Ballard County"
   },
   {
-    "id":21009,
+    "state":"KY",
+    "FIPS":21009,
     "number":3953,
     "rate":12.5,
-    "state":"KY",
-    "name":"Barren County"
+    "population":42669,
+    "county":"Barren County"
   },
   {
-    "id":21011,
+    "state":"KY",
+    "FIPS":21011,
     "number":1078,
     "rate":12.5,
-    "state":"KY",
-    "name":"Bath County"
+    "population":11799,
+    "county":"Bath County"
   },
   {
-    "id":21013,
+    "state":"KY",
+    "FIPS":21013,
     "number":2836,
     "rate":13.2,
-    "state":"KY",
-    "name":"Bell County"
+    "population":28152,
+    "county":"Bell County"
   },
   {
-    "id":21015,
+    "state":"KY",
+    "FIPS":21015,
     "number":9457,
     "rate":11,
-    "state":"KY",
-    "name":"Boone County"
+    "population":123258,
+    "county":"Boone County"
   },
   {
-    "id":21017,
+    "state":"KY",
+    "FIPS":21017,
     "number":2083,
     "rate":14,
-    "state":"KY",
-    "name":"Bourbon County"
+    "population":19996,
+    "county":"Bourbon County"
   },
   {
-    "id":21019,
+    "state":"KY",
+    "FIPS":21019,
     "number":5625,
     "rate":14.9,
-    "state":"KY",
-    "name":"Boyd County"
+    "population":49284,
+    "county":"Boyd County"
   },
   {
-    "id":21021,
+    "state":"KY",
+    "FIPS":21021,
     "number":2509,
     "rate":11.5,
-    "state":"KY",
-    "name":"Boyle County"
+    "population":29048,
+    "county":"Boyle County"
   },
   {
-    "id":21023,
+    "state":"KY",
+    "FIPS":21023,
     "number":807,
     "rate":13,
-    "state":"KY",
-    "name":"Bracken County"
+    "population":8464,
+    "county":"Bracken County"
   },
   {
-    "id":21025,
+    "state":"KY",
+    "FIPS":21025,
     "number":1469,
     "rate":14.2,
-    "state":"KY",
-    "name":"Breathitt County"
+    "population":13645,
+    "county":"Breathitt County"
   },
   {
-    "id":21027,
+    "state":"KY",
+    "FIPS":21027,
     "number":2153,
     "rate":14.5,
-    "state":"KY",
-    "name":"Breckinridge County"
+    "population":20098,
+    "county":"Breckinridge County"
   },
   {
-    "id":21029,
+    "state":"KY",
+    "FIPS":21029,
     "number":6662,
     "rate":11.9,
-    "state":"KY",
-    "name":"Bullitt County"
+    "population":75913,
+    "county":"Bullitt County"
   },
   {
-    "id":21031,
+    "state":"KY",
+    "FIPS":21031,
     "number":1339,
     "rate":14,
-    "state":"KY",
-    "name":"Butler County"
+    "population":12806,
+    "county":"Butler County"
   },
   {
-    "id":21033,
+    "state":"KY",
+    "FIPS":21033,
     "number":1195,
     "rate":12.3,
-    "state":"KY",
-    "name":"Caldwell County"
+    "population":12921,
+    "county":"Caldwell County"
   },
   {
-    "id":21035,
+    "state":"KY",
+    "FIPS":21035,
     "number":2931,
     "rate":10.2,
-    "state":"KY",
-    "name":"Calloway County"
+    "population":38228,
+    "county":"Calloway County"
   },
   {
-    "id":21037,
+    "state":"KY",
+    "FIPS":21037,
     "number":7184,
     "rate":10.6,
-    "state":"KY",
-    "name":"Campbell County"
+    "population":91175,
+    "county":"Campbell County"
   },
   {
-    "id":21039,
+    "state":"KY",
+    "FIPS":21039,
     "number":468,
     "rate":12.3,
-    "state":"KY",
-    "name":"Carlisle County"
+    "population":5042,
+    "county":"Carlisle County"
   },
   {
-    "id":21041,
+    "state":"KY",
+    "FIPS":21041,
     "number":1077,
     "rate":13.6,
-    "state":"KY",
-    "name":"Carroll County"
+    "population":10874,
+    "county":"Carroll County"
   },
   {
-    "id":21043,
+    "state":"KY",
+    "FIPS":21043,
     "number":2825,
     "rate":13.9,
-    "state":"KY",
-    "name":"Carter County"
+    "population":27471,
+    "county":"Carter County"
   },
   {
-    "id":21045,
+    "state":"KY",
+    "FIPS":21045,
     "number":1473,
     "rate":12.3,
-    "state":"KY",
-    "name":"Casey County"
+    "population":16086,
+    "county":"Casey County"
   },
   {
-    "id":21047,
+    "state":"KY",
+    "FIPS":21047,
     "number":5659,
     "rate":10.9,
-    "state":"KY",
-    "name":"Christian County"
+    "population":75770,
+    "county":"Christian County"
   },
   {
-    "id":21049,
+    "state":"KY",
+    "FIPS":21049,
     "number":3234,
     "rate":12.1,
-    "state":"KY",
-    "name":"Clark County"
+    "population":35739,
+    "county":"Clark County"
   },
   {
-    "id":21051,
+    "state":"KY",
+    "FIPS":21051,
     "number":2064,
     "rate":12.6,
-    "state":"KY",
-    "name":"Clay County"
+    "population":21541,
+    "county":"Clay County"
   },
   {
-    "id":21053,
+    "state":"KY",
+    "FIPS":21053,
     "number":896,
     "rate":11.7,
-    "state":"KY",
-    "name":"Clinton County"
+    "population":10233,
+    "county":"Clinton County"
   },
   {
-    "id":21055,
+    "state":"KY",
+    "FIPS":21055,
     "number":898,
     "rate":12.8,
-    "state":"KY",
-    "name":"Crittenden County"
+    "population":9247,
+    "county":"Crittenden County"
   },
   {
-    "id":21057,
+    "state":"KY",
+    "FIPS":21057,
     "number":654,
     "rate":12.6,
-    "state":"KY",
-    "name":"Cumberland County"
+    "population":6859,
+    "county":"Cumberland County"
   },
   {
-    "id":21059,
+    "state":"KY",
+    "FIPS":21059,
     "number":7673,
     "rate":10.7,
-    "state":"KY",
-    "name":"Daviess County"
+    "population":97727,
+    "county":"Daviess County"
   },
   {
-    "id":21061,
+    "state":"KY",
+    "FIPS":21061,
     "number":1295,
     "rate":14,
-    "state":"KY",
-    "name":"Edmonson County"
+    "population":12130,
+    "county":"Edmonson County"
   },
   {
-    "id":21063,
+    "state":"KY",
+    "FIPS":21063,
     "number":750,
     "rate":12.2,
-    "state":"KY",
-    "name":"Elliott County"
+    "population":7748,
+    "county":"Elliott County"
   },
   {
-    "id":21065,
+    "state":"KY",
+    "FIPS":21065,
     "number":1638,
     "rate":14.9,
-    "state":"KY",
-    "name":"Estill County"
+    "population":14486,
+    "county":"Estill County"
   },
   {
-    "id":21067,
+    "state":"KY",
+    "FIPS":21067,
     "number":20729,
     "rate":9,
-    "state":"KY",
-    "name":"Fayette County"
+    "population":305251,
+    "county":"Fayette County"
   },
   {
-    "id":21069,
+    "state":"KY",
+    "FIPS":21069,
     "number":1396,
     "rate":13.1,
-    "state":"KY",
-    "name":"Fleming County"
+    "population":14532,
+    "county":"Fleming County"
   },
   {
-    "id":21071,
+    "state":"KY",
+    "FIPS":21071,
     "number":4284,
     "rate":14.4,
-    "state":"KY",
-    "name":"Floyd County"
+    "population":39141,
+    "county":"Floyd County"
   },
   {
-    "id":21073,
+    "state":"KY",
+    "FIPS":21073,
     "number":4617,
     "rate":12.3,
-    "state":"KY",
-    "name":"Franklin County"
+    "population":49379,
+    "county":"Franklin County"
   },
   {
-    "id":21075,
+    "state":"KY",
+    "FIPS":21075,
     "number":716,
     "rate":14.2,
-    "state":"KY",
-    "name":"Fulton County"
+    "population":6547,
+    "county":"Fulton County"
   },
   {
-    "id":21077,
+    "state":"KY",
+    "FIPS":21077,
     "number":683,
     "rate":11.3,
-    "state":"KY",
-    "name":"Gallatin County"
+    "population":8491,
+    "county":"Gallatin County"
   },
   {
-    "id":21079,
+    "state":"KY",
+    "FIPS":21079,
     "number":1594,
     "rate":12.5,
-    "state":"KY",
-    "name":"Garrard County"
+    "population":16922,
+    "county":"Garrard County"
   },
   {
-    "id":21081,
+    "state":"KY",
+    "FIPS":21081,
     "number":2106,
     "rate":12.3,
-    "state":"KY",
-    "name":"Grant County"
+    "population":24491,
+    "county":"Grant County"
   },
   {
-    "id":21083,
+    "state":"KY",
+    "FIPS":21083,
     "number":3236,
     "rate":11.8,
-    "state":"KY",
-    "name":"Graves County"
+    "population":37535,
+    "county":"Graves County"
   },
   {
-    "id":21085,
+    "state":"KY",
+    "FIPS":21085,
     "number":2490,
     "rate":13,
-    "state":"KY",
-    "name":"Grayson County"
+    "population":25865,
+    "county":"Grayson County"
   },
   {
-    "id":21087,
+    "state":"KY",
+    "FIPS":21087,
     "number":1050,
     "rate":12.3,
-    "state":"KY",
-    "name":"Green County"
+    "population":11300,
+    "county":"Green County"
   },
   {
-    "id":21089,
+    "state":"KY",
+    "FIPS":21089,
     "number":3829,
     "rate":13.7,
-    "state":"KY",
-    "name":"Greenup County"
+    "population":36718,
+    "county":"Greenup County"
   },
   {
-    "id":21091,
+    "state":"KY",
+    "FIPS":21091,
     "number":807,
     "rate":12.9,
-    "state":"KY",
-    "name":"Hancock County"
+    "population":8671,
+    "county":"Hancock County"
   },
   {
-    "id":21093,
+    "state":"KY",
+    "FIPS":21093,
     "number":8896,
     "rate":11.6,
-    "state":"KY",
-    "name":"Hardin County"
+    "population":107052,
+    "county":"Hardin County"
   },
   {
-    "id":21095,
+    "state":"KY",
+    "FIPS":21095,
     "number":3340,
     "rate":15.4,
-    "state":"KY",
-    "name":"Harlan County"
+    "population":28616,
+    "county":"Harlan County"
   },
   {
-    "id":21097,
+    "state":"KY",
+    "FIPS":21097,
     "number":1691,
     "rate":12.2,
-    "state":"KY",
-    "name":"Harrison County"
+    "population":18592,
+    "county":"Harrison County"
   },
   {
-    "id":21099,
+    "state":"KY",
+    "FIPS":21099,
     "number":1812,
     "rate":13.5,
-    "state":"KY",
-    "name":"Hart County"
+    "population":18433,
+    "county":"Hart County"
   },
   {
-    "id":21101,
+    "state":"KY",
+    "FIPS":21101,
     "number":3840,
     "rate":11.1,
-    "state":"KY",
-    "name":"Henderson County"
+    "population":46462,
+    "county":"Henderson County"
   },
   {
-    "id":21103,
+    "state":"KY",
+    "FIPS":21103,
     "number":1291,
     "rate":11.4,
-    "state":"KY",
-    "name":"Henry County"
+    "population":15342,
+    "county":"Henry County"
   },
   {
-    "id":21105,
+    "state":"KY",
+    "FIPS":21105,
     "number":516,
     "rate":13.9,
-    "state":"KY",
-    "name":"Hickman County"
+    "population":4764,
+    "county":"Hickman County"
   },
   {
-    "id":21107,
+    "state":"KY",
+    "FIPS":21107,
     "number":4384,
     "rate":12.6,
-    "state":"KY",
-    "name":"Hopkins County"
+    "population":46702,
+    "county":"Hopkins County"
   },
   {
-    "id":21109,
+    "state":"KY",
+    "FIPS":21109,
     "number":1129,
     "rate":11.3,
-    "state":"KY",
-    "name":"Jackson County"
+    "population":13298,
+    "county":"Jackson County"
   },
   {
-    "id":21111,
+    "state":"KY",
+    "FIPS":21111,
     "number":67071,
     "rate":11.9,
-    "state":"KY",
-    "name":"Jefferson County"
+    "population":751327,
+    "county":"Jefferson County"
   },
   {
-    "id":21113,
+    "state":"KY",
+    "FIPS":21113,
     "number":3590,
     "rate":10.1,
-    "state":"KY",
-    "name":"Jessamine County"
+    "population":49563,
+    "county":"Jessamine County"
   },
   {
-    "id":21115,
+    "state":"KY",
+    "FIPS":21115,
     "number":2712,
     "rate":15.3,
-    "state":"KY",
-    "name":"Johnson County"
+    "population":23415,
+    "county":"Johnson County"
   },
   {
-    "id":21117,
+    "state":"KY",
+    "FIPS":21117,
     "number":11233,
     "rate":9.5,
-    "state":"KY",
-    "name":"Kenton County"
+    "population":161671,
+    "county":"Kenton County"
   },
   {
-    "id":21119,
+    "state":"KY",
+    "FIPS":21119,
     "number":1828,
     "rate":15,
-    "state":"KY",
-    "name":"Knott County"
+    "population":16087,
+    "county":"Knott County"
   },
   {
-    "id":21121,
+    "state":"KY",
+    "FIPS":21121,
     "number":3476,
     "rate":14.9,
-    "state":"KY",
-    "name":"Knox County"
+    "population":31700,
+    "county":"Knox County"
   },
   {
-    "id":21123,
+    "state":"KY",
+    "FIPS":21123,
     "number":1384,
     "rate":13.1,
-    "state":"KY",
-    "name":"Larue County"
+    "population":14085,
+    "county":"Larue County"
   },
   {
-    "id":21125,
+    "state":"KY",
+    "FIPS":21125,
     "number":5560,
     "rate":12.6,
-    "state":"KY",
-    "name":"Laurel County"
+    "population":59587,
+    "county":"Laurel County"
   },
   {
-    "id":21127,
+    "state":"KY",
+    "FIPS":21127,
     "number":1944,
     "rate":16.4,
-    "state":"KY",
-    "name":"Lawrence County"
+    "population":15827,
+    "county":"Lawrence County"
   },
   {
-    "id":21129,
+    "state":"KY",
+    "FIPS":21129,
     "number":765,
     "rate":13.5,
-    "state":"KY",
-    "name":"Lee County"
+    "population":7646,
+    "county":"Lee County"
   },
   {
-    "id":21131,
+    "state":"KY",
+    "FIPS":21131,
     "number":1387,
     "rate":16.2,
-    "state":"KY",
-    "name":"Leslie County"
+    "population":11144,
+    "county":"Leslie County"
   },
   {
-    "id":21133,
+    "state":"KY",
+    "FIPS":21133,
     "number":2818,
     "rate":15.4,
-    "state":"KY",
-    "name":"Letcher County"
+    "population":23946,
+    "county":"Letcher County"
   },
   {
-    "id":21135,
+    "state":"KY",
+    "FIPS":21135,
     "number":1330,
     "rate":12.8,
-    "state":"KY",
-    "name":"Lewis County"
+    "population":13842,
+    "county":"Lewis County"
   },
   {
-    "id":21137,
+    "state":"KY",
+    "FIPS":21137,
     "number":2125,
     "rate":11.8,
-    "state":"KY",
-    "name":"Lincoln County"
+    "population":24408,
+    "county":"Lincoln County"
   },
   {
-    "id":21139,
+    "state":"KY",
+    "FIPS":21139,
     "number":866,
     "rate":11.8,
-    "state":"KY",
-    "name":"Livingston County"
+    "population":9447,
+    "county":"Livingston County"
   },
   {
-    "id":21141,
+    "state":"KY",
+    "FIPS":21141,
     "number":2614,
     "rate":13.3,
-    "state":"KY",
-    "name":"Logan County"
+    "population":26703,
+    "county":"Logan County"
   },
   {
-    "id":21143,
+    "state":"KY",
+    "FIPS":21143,
     "number":956,
     "rate":13.6,
-    "state":"KY",
-    "name":"Lyon County"
+    "population":8437,
+    "county":"Lyon County"
   },
   {
-    "id":21151,
+    "state":"KY",
+    "FIPS":21151,
     "number":6415,
     "rate":10.3,
-    "state":"KY",
-    "name":"Madison County"
+    "population":85206,
+    "county":"Madison County"
   },
   {
-    "id":21153,
+    "state":"KY",
+    "FIPS":21153,
     "number":1334,
     "rate":13.7,
-    "state":"KY",
-    "name":"Magoffin County"
+    "population":13030,
+    "county":"Magoffin County"
   },
   {
-    "id":21155,
+    "state":"KY",
+    "FIPS":21155,
     "number":1594,
     "rate":10.8,
-    "state":"KY",
-    "name":"Marion County"
+    "population":19990,
+    "county":"Marion County"
   },
   {
-    "id":21157,
+    "state":"KY",
+    "FIPS":21157,
     "number":2418,
     "rate":10,
-    "state":"KY",
-    "name":"Marshall County"
+    "population":31268,
+    "county":"Marshall County"
   },
   {
-    "id":21159,
+    "state":"KY",
+    "FIPS":21159,
     "number":1330,
     "rate":13.6,
-    "state":"KY",
-    "name":"Martin County"
+    "population":12763,
+    "county":"Martin County"
   },
   {
-    "id":21161,
+    "state":"KY",
+    "FIPS":21161,
     "number":1891,
     "rate":14.7,
-    "state":"KY",
-    "name":"Mason County"
+    "population":17463,
+    "county":"Mason County"
   },
   {
-    "id":21145,
+    "state":"KY",
+    "FIPS":21145,
     "number":4864,
     "rate":9.8,
-    "state":"KY",
-    "name":"McCracken County"
+    "population":65645,
+    "county":"McCracken County"
   },
   {
-    "id":21147,
+    "state":"KY",
+    "FIPS":21147,
     "number":2084,
     "rate":15.3,
-    "state":"KY",
-    "name":"McCreary County"
+    "population":18035,
+    "county":"McCreary County"
   },
   {
-    "id":21149,
+    "state":"KY",
+    "FIPS":21149,
     "number":1104,
     "rate":15.6,
-    "state":"KY",
-    "name":"McLean County"
+    "population":9520,
+    "county":"McLean County"
   },
   {
-    "id":21163,
+    "state":"KY",
+    "FIPS":21163,
     "number":2165,
     "rate":10.3,
-    "state":"KY",
-    "name":"Meade County"
+    "population":29276,
+    "county":"Meade County"
   },
   {
-    "id":21165,
+    "state":"KY",
+    "FIPS":21165,
     "number":600,
     "rate":12.6,
-    "state":"KY",
-    "name":"Menifee County"
+    "population":6314,
+    "county":"Menifee County"
   },
   {
-    "id":21167,
+    "state":"KY",
+    "FIPS":21167,
     "number":1844,
     "rate":11.6,
-    "state":"KY",
-    "name":"Mercer County"
+    "population":21343,
+    "county":"Mercer County"
   },
   {
-    "id":21169,
+    "state":"KY",
+    "FIPS":21169,
     "number":998,
     "rate":13.5,
-    "state":"KY",
-    "name":"Metcalfe County"
+    "population":9983,
+    "county":"Metcalfe County"
   },
   {
-    "id":21171,
+    "state":"KY",
+    "FIPS":21171,
     "number":946,
     "rate":11.7,
-    "state":"KY",
-    "name":"Monroe County"
+    "population":10859,
+    "county":"Monroe County"
   },
   {
-    "id":21173,
+    "state":"KY",
+    "FIPS":21173,
     "number":2539,
     "rate":12.8,
-    "state":"KY",
-    "name":"Montgomery County"
+    "population":26880,
+    "county":"Montgomery County"
   },
   {
-    "id":21175,
+    "state":"KY",
+    "FIPS":21175,
     "number":1525,
     "rate":14.4,
-    "state":"KY",
-    "name":"Morgan County"
+    "population":13480,
+    "county":"Morgan County"
   },
   {
-    "id":21177,
+    "state":"KY",
+    "FIPS":21177,
     "number":3076,
     "rate":12.8,
-    "state":"KY",
-    "name":"Muhlenberg County"
+    "population":31359,
+    "county":"Muhlenberg County"
   },
   {
-    "id":21179,
+    "state":"KY",
+    "FIPS":21179,
     "number":3315,
     "rate":10.3,
-    "state":"KY",
-    "name":"Nelson County"
+    "population":44351,
+    "county":"Nelson County"
   },
   {
-    "id":21181,
+    "state":"KY",
+    "FIPS":21181,
     "number":651,
     "rate":12.4,
-    "state":"KY",
-    "name":"Nicholas County"
+    "population":7029,
+    "county":"Nicholas County"
   },
   {
-    "id":21183,
+    "state":"KY",
+    "FIPS":21183,
     "number":2637,
     "rate":15,
-    "state":"KY",
-    "name":"Ohio County"
+    "population":24011,
+    "county":"Ohio County"
   },
   {
-    "id":21185,
+    "state":"KY",
+    "FIPS":21185,
     "number":4508,
     "rate":10.4,
-    "state":"KY",
-    "name":"Oldham County"
+    "population":61423,
+    "county":"Oldham County"
   },
   {
-    "id":21187,
+    "state":"KY",
+    "FIPS":21187,
     "number":867,
     "rate":10.9,
-    "state":"KY",
-    "name":"Owen County"
+    "population":10761,
+    "county":"Owen County"
   },
   {
-    "id":21189,
+    "state":"KY",
+    "FIPS":21189,
     "number":503,
     "rate":14.1,
-    "state":"KY",
-    "name":"Owsley County"
+    "population":4694,
+    "county":"Owsley County"
   },
   {
-    "id":21191,
+    "state":"KY",
+    "FIPS":21191,
     "number":1506,
     "rate":13.9,
-    "state":"KY",
-    "name":"Pendleton County"
+    "population":14547,
+    "county":"Pendleton County"
   },
   {
-    "id":21193,
+    "state":"KY",
+    "FIPS":21193,
     "number":2923,
     "rate":13.5,
-    "state":"KY",
-    "name":"Perry County"
+    "population":28279,
+    "county":"Perry County"
   },
   {
-    "id":21195,
+    "state":"KY",
+    "FIPS":21195,
     "number":7416,
     "rate":15.2,
-    "state":"KY",
-    "name":"Pike County"
+    "population":64563,
+    "county":"Pike County"
   },
   {
-    "id":21197,
+    "state":"KY",
+    "FIPS":21197,
     "number":1151,
     "rate":12.5,
-    "state":"KY",
-    "name":"Powell County"
+    "population":12495,
+    "county":"Powell County"
   },
   {
-    "id":21199,
+    "state":"KY",
+    "FIPS":21199,
     "number":6578,
     "rate":13.7,
-    "state":"KY",
-    "name":"Pulaski County"
+    "population":63448,
+    "county":"Pulaski County"
   },
   {
-    "id":21201,
+    "state":"KY",
+    "FIPS":21201,
     "number":245,
     "rate":14.3,
-    "state":"KY",
-    "name":"Robertson County"
+    "population":2215,
+    "county":"Robertson County"
   },
   {
-    "id":21203,
+    "state":"KY",
+    "FIPS":21203,
     "number":1631,
     "rate":12.7,
-    "state":"KY",
-    "name":"Rockcastle County"
+    "population":17069,
+    "county":"Rockcastle County"
   },
   {
-    "id":21205,
+    "state":"KY",
+    "FIPS":21205,
     "number":2072,
     "rate":11.9,
-    "state":"KY",
-    "name":"Rowan County"
+    "population":23414,
+    "county":"Rowan County"
   },
   {
-    "id":21207,
+    "state":"KY",
+    "FIPS":21207,
     "number":1467,
     "rate":11,
-    "state":"KY",
-    "name":"Russell County"
+    "population":17541,
+    "county":"Russell County"
   },
   {
-    "id":21209,
+    "state":"KY",
+    "FIPS":21209,
     "number":3615,
     "rate":10.4,
-    "state":"KY",
-    "name":"Scott County"
+    "population":49028,
+    "county":"Scott County"
   },
   {
-    "id":21211,
+    "state":"KY",
+    "FIPS":21211,
     "number":3439,
     "rate":10.8,
-    "state":"KY",
-    "name":"Shelby County"
+    "population":43603,
+    "county":"Shelby County"
   },
   {
-    "id":21213,
+    "state":"KY",
+    "FIPS":21213,
     "number":1529,
     "rate":11.9,
-    "state":"KY",
-    "name":"Simpson County"
+    "population":17559,
+    "county":"Simpson County"
   },
   {
-    "id":21215,
+    "state":"KY",
+    "FIPS":21215,
     "number":1394,
     "rate":11,
-    "state":"KY",
-    "name":"Spencer County"
+    "population":17409,
+    "county":"Spencer County"
   },
   {
-    "id":21217,
+    "state":"KY",
+    "FIPS":21217,
     "number":2434,
     "rate":13.3,
-    "state":"KY",
-    "name":"Taylor County"
+    "population":25049,
+    "county":"Taylor County"
   },
   {
-    "id":21219,
+    "state":"KY",
+    "FIPS":21219,
     "number":987,
     "rate":11.1,
-    "state":"KY",
-    "name":"Todd County"
+    "population":12640,
+    "county":"Todd County"
   },
   {
-    "id":21221,
+    "state":"KY",
+    "FIPS":21221,
     "number":1398,
     "rate":12.8,
-    "state":"KY",
-    "name":"Trigg County"
+    "population":14392,
+    "county":"Trigg County"
   },
   {
-    "id":21223,
+    "state":"KY",
+    "FIPS":21223,
     "number":769,
     "rate":11.9,
-    "state":"KY",
-    "name":"Trimble County"
+    "population":8842,
+    "county":"Trimble County"
   },
   {
-    "id":21225,
+    "state":"KY",
+    "FIPS":21225,
     "number":1214,
     "rate":11,
-    "state":"KY",
-    "name":"Union County"
+    "population":15119,
+    "county":"Union County"
   },
   {
-    "id":21227,
+    "state":"KY",
+    "FIPS":21227,
     "number":7241,
     "rate":8.5,
-    "state":"KY",
-    "name":"Warren County"
+    "population":117185,
+    "county":"Warren County"
   },
   {
-    "id":21229,
+    "state":"KY",
+    "FIPS":21229,
     "number":1208,
     "rate":13.8,
-    "state":"KY",
-    "name":"Washington County"
+    "population":11882,
+    "county":"Washington County"
   },
   {
-    "id":21231,
+    "state":"KY",
+    "FIPS":21231,
     "number":2047,
     "rate":13,
-    "state":"KY",
-    "name":"Wayne County"
+    "population":20775,
+    "county":"Wayne County"
   },
   {
-    "id":21233,
+    "state":"KY",
+    "FIPS":21233,
     "number":1335,
     "rate":13.2,
-    "state":"KY",
-    "name":"Webster County"
+    "population":13479,
+    "county":"Webster County"
   },
   {
-    "id":21235,
+    "state":"KY",
+    "FIPS":21235,
     "number":3265,
     "rate":12.6,
-    "state":"KY",
-    "name":"Whitley County"
+    "population":35505,
+    "county":"Whitley County"
   },
   {
-    "id":21237,
+    "state":"KY",
+    "FIPS":21237,
     "number":652,
     "rate":12.1,
-    "state":"KY",
-    "name":"Wolfe County"
+    "population":7188,
+    "county":"Wolfe County"
   },
   {
-    "id":21239,
+    "state":"KY",
+    "FIPS":21239,
     "number":2236,
     "rate":12,
-    "state":"KY",
-    "name":"Woodford County"
+    "population":25039,
+    "county":"Woodford County"
   },
   {
-    "id":22001,
+    "state":"LA",
+    "FIPS":22001,
     "number":5069,
     "rate":11.6,
-    "state":"LA",
-    "name":"Acadia Parish"
+    "population":61873,
+    "county":"Acadia Parish"
   },
   {
-    "id":22003,
+    "state":"LA",
+    "FIPS":22003,
     "number":2351,
     "rate":12.3,
-    "state":"LA",
-    "name":"Allen Parish"
+    "population":25613,
+    "county":"Allen Parish"
   },
   {
-    "id":22005,
+    "state":"LA",
+    "FIPS":22005,
     "number":8699,
     "rate":11.2,
-    "state":"LA",
-    "name":"Ascension Parish"
+    "population":112173,
+    "county":"Ascension Parish"
   },
   {
-    "id":22007,
+    "state":"LA",
+    "FIPS":22007,
     "number":2167,
     "rate":12.7,
-    "state":"LA",
-    "name":"Assumption Parish"
+    "population":23073,
+    "county":"Assumption Parish"
   },
   {
-    "id":22009,
+    "state":"LA",
+    "FIPS":22009,
     "number":4768,
     "rate":15.5,
-    "state":"LA",
-    "name":"Avoyelles Parish"
+    "population":41602,
+    "county":"Avoyelles Parish"
   },
   {
-    "id":22011,
+    "state":"LA",
+    "FIPS":22011,
     "number":3498,
     "rate":13.4,
-    "state":"LA",
-    "name":"Beauregard Parish"
+    "population":36254,
+    "county":"Beauregard Parish"
   },
   {
-    "id":22013,
+    "state":"LA",
+    "FIPS":22013,
     "number":1526,
     "rate":14.5,
-    "state":"LA",
-    "name":"Bienville Parish"
+    "population":14163,
+    "county":"Bienville Parish"
   },
   {
-    "id":22015,
+    "state":"LA",
+    "FIPS":22015,
     "number":9332,
     "rate":10.5,
-    "state":"LA",
-    "name":"Bossier Parish"
+    "population":123073,
+    "county":"Bossier Parish"
   },
   {
-    "id":22017,
+    "state":"LA",
+    "FIPS":22017,
     "number":23441,
     "rate":12.5,
-    "state":"LA",
-    "name":"Caddo Parish"
+    "population":257328,
+    "county":"Caddo Parish"
   },
   {
-    "id":22019,
+    "state":"LA",
+    "FIPS":22019,
     "number":17145,
     "rate":12.2,
-    "state":"LA",
-    "name":"Calcasieu Parish"
+    "population":194653,
+    "county":"Calcasieu Parish"
   },
   {
-    "id":22021,
+    "state":"LA",
+    "FIPS":22021,
     "number":924,
     "rate":12.3,
-    "state":"LA",
-    "name":"Caldwell Parish"
+    "population":10000,
+    "county":"Caldwell Parish"
   },
   {
-    "id":22023,
+    "state":"LA",
+    "FIPS":22023,
     "number":629,
     "rate":12.8,
-    "state":"LA",
-    "name":"Cameron Parish"
+    "population":6623,
+    "county":"Cameron Parish"
   },
   {
-    "id":22025,
+    "state":"LA",
+    "FIPS":22025,
     "number":926,
     "rate":12,
-    "state":"LA",
-    "name":"Catahoula Parish"
+    "population":10250,
+    "county":"Catahoula Parish"
   },
   {
-    "id":22027,
+    "state":"LA",
+    "FIPS":22027,
     "number":1735,
     "rate":13,
-    "state":"LA",
-    "name":"Claiborne Parish"
+    "population":16861,
+    "county":"Claiborne Parish"
   },
   {
-    "id":22029,
+    "state":"LA",
+    "FIPS":22029,
     "number":2263,
     "rate":15.1,
-    "state":"LA",
-    "name":"Concordia Parish"
+    "population":20446,
+    "county":"Concordia Parish"
   },
   {
-    "id":22031,
+    "state":"LA",
+    "FIPS":22031,
     "number":2988,
     "rate":15.2,
-    "state":"LA",
-    "name":"De Soto Parish"
+    "population":27035,
+    "county":"De Soto Parish"
   },
   {
-    "id":22033,
+    "state":"LA",
+    "FIPS":22033,
     "number":37369,
     "rate":11.5,
-    "state":"LA",
-    "name":"East Baton Rouge Parish"
+    "population":444296,
+    "county":"East Baton Rouge Parish"
   },
   {
-    "id":22035,
+    "state":"LA",
+    "FIPS":22035,
     "number":921,
     "rate":16.8,
-    "state":"LA",
-    "name":"East Carroll Parish"
+    "population":7578,
+    "county":"East Carroll Parish"
   },
   {
-    "id":22037,
+    "state":"LA",
+    "FIPS":22037,
     "number":2594,
     "rate":16.7,
-    "state":"LA",
-    "name":"East Feliciana Parish"
+    "population":19970,
+    "county":"East Feliciana Parish"
   },
   {
-    "id":22039,
+    "state":"LA",
+    "FIPS":22039,
     "number":3127,
     "rate":13.1,
-    "state":"LA",
-    "name":"Evangeline Parish"
+    "population":33657,
+    "county":"Evangeline Parish"
   },
   {
-    "id":22041,
+    "state":"LA",
+    "FIPS":22041,
     "number":2186,
     "rate":14.7,
-    "state":"LA",
-    "name":"Franklin Parish"
+    "population":20613,
+    "county":"Franklin Parish"
   },
   {
-    "id":22043,
+    "state":"LA",
+    "FIPS":22043,
     "number":2236,
     "rate":13.4,
-    "state":"LA",
-    "name":"Grant Parish"
+    "population":22376,
+    "county":"Grant Parish"
   },
   {
-    "id":22045,
+    "state":"LA",
+    "FIPS":22045,
     "number":6614,
     "rate":12.7,
-    "state":"LA",
-    "name":"Iberia Parish"
+    "population":73916,
+    "county":"Iberia Parish"
   },
   {
-    "id":22047,
+    "state":"LA",
+    "FIPS":22047,
     "number":3280,
     "rate":13,
-    "state":"LA",
-    "name":"Iberville Parish"
+    "population":33350,
+    "county":"Iberville Parish"
   },
   {
-    "id":22049,
+    "state":"LA",
+    "FIPS":22049,
     "number":1651,
     "rate":13.5,
-    "state":"LA",
-    "name":"Jackson Parish"
+    "population":16236,
+    "county":"Jackson Parish"
   },
   {
-    "id":22053,
+    "state":"LA",
+    "FIPS":22053,
     "number":2906,
     "rate":12.9,
-    "state":"LA",
-    "name":"Jefferson Davis Parish"
+    "population":31439,
+    "county":"Jefferson Davis Parish"
   },
   {
-    "id":22051,
+    "state":"LA",
+    "FIPS":22051,
     "number":39352,
     "rate":12,
-    "state":"LA",
-    "name":"Jefferson Parish"
+    "population":434575,
+    "county":"Jefferson Parish"
   },
   {
-    "id":22059,
+    "state":"LA",
+    "FIPS":22059,
     "number":1380,
     "rate":12.4,
-    "state":"LA",
-    "name":"La Salle Parish"
+    "population":14858,
+    "county":"La Salle Parish"
   },
   {
-    "id":22055,
+    "state":"LA",
+    "FIPS":22055,
     "number":15331,
     "rate":9.2,
-    "state":"LA",
-    "name":"Lafayette Parish"
+    "population":227055,
+    "county":"Lafayette Parish"
   },
   {
-    "id":22057,
+    "state":"LA",
+    "FIPS":22057,
     "number":7374,
     "rate":10.4,
-    "state":"LA",
-    "name":"Lafourche Parish"
+    "population":97125,
+    "county":"Lafourche Parish"
   },
   {
-    "id":22061,
+    "state":"LA",
+    "FIPS":22061,
     "number":3619,
     "rate":10.6,
-    "state":"LA",
-    "name":"Lincoln Parish"
+    "population":47146,
+    "county":"Lincoln Parish"
   },
   {
-    "id":22063,
+    "state":"LA",
+    "FIPS":22063,
     "number":11413,
     "rate":12.2,
-    "state":"LA",
-    "name":"Livingston Parish"
+    "population":131944,
+    "county":"Livingston Parish"
   },
   {
-    "id":22065,
+    "state":"LA",
+    "FIPS":22065,
     "number":984,
     "rate":11,
-    "state":"LA",
-    "name":"Madison Parish"
+    "population":12194,
+    "county":"Madison Parish"
   },
   {
-    "id":22067,
+    "state":"LA",
+    "FIPS":22067,
     "number":3588,
     "rate":17.9,
-    "state":"LA",
-    "name":"Morehouse Parish"
+    "population":27431,
+    "county":"Morehouse Parish"
   },
   {
-    "id":22069,
+    "state":"LA",
+    "FIPS":22069,
     "number":3513,
     "rate":12.5,
-    "state":"LA",
-    "name":"Natchitoches Parish"
+    "population":39461,
+    "county":"Natchitoches Parish"
   },
   {
-    "id":22071,
+    "state":"LA",
+    "FIPS":22071,
     "number":33632,
     "rate":11.9,
-    "state":"LA",
-    "name":"Orleans Parish"
+    "population":370167,
+    "county":"Orleans Parish"
   },
   {
-    "id":22073,
+    "state":"LA",
+    "FIPS":22073,
     "number":12687,
     "rate":11.5,
-    "state":"LA",
-    "name":"Ouachita Parish"
+    "population":155350,
+    "county":"Ouachita Parish"
   },
   {
-    "id":22075,
+    "state":"LA",
+    "FIPS":22075,
     "number":1821,
     "rate":10.8,
-    "state":"LA",
-    "name":"Plaquemines Parish"
+    "population":23901,
+    "county":"Plaquemines Parish"
   },
   {
-    "id":22077,
+    "state":"LA",
+    "FIPS":22077,
     "number":2380,
     "rate":14.2,
-    "state":"LA",
-    "name":"Pointe Coupee Parish"
+    "population":22711,
+    "county":"Pointe Coupee Parish"
   },
   {
-    "id":22079,
+    "state":"LA",
+    "FIPS":22079,
     "number":12736,
     "rate":13.4,
-    "state":"LA",
-    "name":"Rapides Parish"
+    "population":132111,
+    "county":"Rapides Parish"
   },
   {
-    "id":22081,
+    "state":"LA",
+    "FIPS":22081,
     "number":837,
     "rate":12.8,
-    "state":"LA",
-    "name":"Red River Parish"
+    "population":9027,
+    "county":"Red River Parish"
   },
   {
-    "id":22083,
+    "state":"LA",
+    "FIPS":22083,
     "number":1919,
     "rate":12.7,
-    "state":"LA",
-    "name":"Richland Parish"
+    "population":20923,
+    "county":"Richland Parish"
   },
   {
-    "id":22085,
+    "state":"LA",
+    "FIPS":22085,
     "number":2596,
     "rate":14.5,
-    "state":"LA",
-    "name":"Sabine Parish"
+    "population":24306,
+    "county":"Sabine Parish"
   },
   {
-    "id":22087,
+    "state":"LA",
+    "FIPS":22087,
     "number":3546,
     "rate":11.9,
-    "state":"LA",
-    "name":"St Bernard Parish"
+    "population":41498,
+    "county":"St Bernard Parish"
   },
   {
-    "id":22091,
+    "state":"LA",
+    "FIPS":22091,
     "number":1301,
     "rate":15.8,
-    "state":"LA",
-    "name":"St Helena Parish"
+    "population":11032,
+    "county":"St Helena Parish"
   },
   {
-    "id":22089,
+    "state":"LA",
+    "FIPS":22089,
     "number":4239,
     "rate":11.3,
-    "state":"LA",
-    "name":"St. Charles Parish"
+    "population":52437,
+    "county":"St. Charles Parish"
   },
   {
-    "id":22093,
+    "state":"LA",
+    "FIPS":22093,
     "number":2269,
     "rate":14.3,
-    "state":"LA",
-    "name":"St. James Parish"
+    "population":21698,
+    "county":"St. James Parish"
   },
   {
-    "id":22095,
+    "state":"LA",
+    "FIPS":22095,
     "number":4510,
     "rate":14.1,
-    "state":"LA",
-    "name":"St. John the Baptist Parish"
+    "population":44753,
+    "county":"St. John the Baptist Parish"
   },
   {
-    "id":22097,
+    "state":"LA",
+    "FIPS":22097,
     "number":8894,
     "rate":15.1,
-    "state":"LA",
-    "name":"St. Landry Parish"
+    "population":83483,
+    "county":"St. Landry Parish"
   },
   {
-    "id":22099,
+    "state":"LA",
+    "FIPS":22099,
     "number":4739,
     "rate":12.5,
-    "state":"LA",
-    "name":"St Martin Parish"
+    "population":52716,
+    "county":"St Martin Parish"
   },
   {
-    "id":22101,
+    "state":"LA",
+    "FIPS":22101,
     "number":5775,
     "rate":14.8,
-    "state":"LA",
-    "name":"St. Mary Parish"
+    "population":53526,
+    "county":"St. Mary Parish"
   },
   {
-    "id":22103,
+    "state":"LA",
+    "FIPS":22103,
     "number":17970,
     "rate":10.3,
-    "state":"LA",
-    "name":"St. Tammany Parish"
+    "population":239346,
+    "county":"St. Tammany Parish"
   },
   {
-    "id":22105,
+    "state":"LA",
+    "FIPS":22105,
     "number":11065,
     "rate":12.5,
-    "state":"LA",
-    "name":"Tangipahoa Parish"
+    "population":123767,
+    "county":"Tangipahoa Parish"
   },
   {
-    "id":22107,
+    "state":"LA",
+    "FIPS":22107,
     "number":546,
     "rate":15.1,
-    "state":"LA",
-    "name":"Tensas Parish"
+    "population":4971,
+    "county":"Tensas Parish"
   },
   {
-    "id":22109,
+    "state":"LA",
+    "FIPS":22109,
     "number":11092,
     "rate":13.8,
-    "state":"LA",
-    "name":"Terrebonne Parish"
+    "population":111731,
+    "county":"Terrebonne Parish"
   },
   {
-    "id":22111,
+    "state":"LA",
+    "FIPS":22111,
     "number":2669,
     "rate":15.8,
-    "state":"LA",
-    "name":"Union Parish"
+    "population":22535,
+    "county":"Union Parish"
   },
   {
-    "id":22115,
+    "state":"LA",
+    "FIPS":22115,
     "number":4242,
     "rate":11.2,
-    "state":"LA",
-    "name":"Vernon Parish"
+    "population":54176,
+    "county":"Vernon Parish"
   },
   {
-    "id":22113,
+    "state":"LA",
+    "FIPS":22113,
     "number":5103,
     "rate":12.2,
-    "state":"LA",
-    "name":"Vermilion Parish"
+    "population":58660,
+    "county":"Vermilion Parish"
   },
   {
-    "id":22117,
+    "state":"LA",
+    "FIPS":22117,
     "number":5583,
     "rate":16.4,
-    "state":"LA",
-    "name":"Washington Parish"
+    "population":46664,
+    "county":"Washington Parish"
   },
   {
-    "id":22119,
+    "state":"LA",
+    "FIPS":22119,
     "number":4233,
     "rate":13.9,
-    "state":"LA",
-    "name":"Webster Parish"
+    "population":40943,
+    "county":"Webster Parish"
   },
   {
-    "id":22121,
+    "state":"LA",
+    "FIPS":22121,
     "number":2370,
     "rate":13.4,
-    "state":"LA",
-    "name":"West Baton Rouge Parish"
+    "population":24068,
+    "county":"West Baton Rouge Parish"
   },
   {
-    "id":22123,
+    "state":"LA",
+    "FIPS":22123,
     "number":1418,
     "rate":16.7,
-    "state":"LA",
-    "name":"West Carroll Parish"
+    "population":11506,
+    "county":"West Carroll Parish"
   },
   {
-    "id":22125,
+    "state":"LA",
+    "FIPS":22125,
     "number":1684,
     "rate":13.4,
-    "state":"LA",
-    "name":"West Feliciana Parish"
+    "population":15449,
+    "county":"West Feliciana Parish"
   },
   {
-    "id":22127,
+    "state":"LA",
+    "FIPS":22127,
     "number":1479,
     "rate":13,
-    "state":"LA",
-    "name":"Winn Parish"
+    "population":15049,
+    "county":"Winn Parish"
   },
   {
-    "id":25001,
+    "state":"MA",
+    "FIPS":25001,
     "number":15486,
     "rate":8.8,
-    "state":"MA",
-    "name":"Barnstable County"
+    "population":214845,
+    "county":"Barnstable County"
   },
   {
-    "id":25003,
+    "state":"MA",
+    "FIPS":25003,
     "number":8957,
     "rate":8.8,
-    "state":"MA",
-    "name":"Berkshire County"
+    "population":130230,
+    "county":"Berkshire County"
   },
   {
-    "id":25005,
+    "state":"MA",
+    "FIPS":25005,
     "number":42663,
     "rate":10.3,
-    "state":"MA",
-    "name":"Bristol County"
+    "population":550765,
+    "county":"Bristol County"
   },
   {
-    "id":25007,
+    "state":"MA",
+    "FIPS":25007,
     "number":972,
     "rate":7.3,
-    "state":"MA",
-    "name":"Dukes County"
+    "population":16796,
+    "county":"Dukes County"
   },
   {
-    "id":25009,
+    "state":"MA",
+    "FIPS":25009,
     "number":53523,
     "rate":9.5,
-    "state":"MA",
-    "name":"Essex County"
+    "population":756763,
+    "county":"Essex County"
   },
   {
-    "id":25011,
+    "state":"MA",
+    "FIPS":25011,
     "number":4574,
     "rate":8.1,
-    "state":"MA",
-    "name":"Franklin County"
+    "population":71544,
+    "county":"Franklin County"
   },
   {
-    "id":25013,
+    "state":"MA",
+    "FIPS":25013,
     "number":36736,
     "rate":10.7,
-    "state":"MA",
-    "name":"Hampden County"
+    "population":466539,
+    "county":"Hampden County"
   },
   {
-    "id":25015,
+    "state":"MA",
+    "FIPS":25015,
     "number":7927,
     "rate":6.5,
-    "state":"MA",
-    "name":"Hampshire County"
+    "population":160351,
+    "county":"Hampshire County"
   },
   {
-    "id":25017,
+    "state":"MA",
+    "FIPS":25017,
     "number":99159,
     "rate":8.5,
-    "state":"MA",
-    "name":"Middlesex County"
+    "population":1540192,
+    "county":"Middlesex County"
   },
   {
-    "id":25019,
+    "state":"MA",
+    "FIPS":25019,
     "number":581,
     "rate":7.3,
-    "state":"MA",
-    "name":"Nantucket County"
+    "population":10342,
+    "county":"Nantucket County"
   },
   {
-    "id":25021,
+    "state":"MA",
+    "FIPS":25021,
     "number":41900,
     "rate":8.2,
-    "state":"MA",
-    "name":"Norfolk County"
+    "population":682749,
+    "county":"Norfolk County"
   },
   {
-    "id":25023,
+    "state":"MA",
+    "FIPS":25023,
     "number":37632,
     "rate":10.2,
-    "state":"MA",
-    "name":"Plymouth County"
+    "population":499076,
+    "county":"Plymouth County"
   },
   {
-    "id":25025,
+    "state":"MA",
+    "FIPS":25025,
     "number":44460,
     "rate":7.6,
-    "state":"MA",
-    "name":"Suffolk County"
+    "population":749504,
+    "county":"Suffolk County"
   },
   {
-    "id":25027,
+    "state":"MA",
+    "FIPS":25027,
     "number":53989,
     "rate":9,
-    "state":"MA",
-    "name":"Worcester County"
+    "population":806133,
+    "county":"Worcester County"
   },
   {
-    "id":24001,
+    "state":"MD",
+    "FIPS":24001,
     "number":7059,
     "rate":12.1,
-    "state":"MD",
-    "name":"Allegany County"
+    "population":73883,
+    "county":"Allegany County"
   },
   {
-    "id":24003,
+    "state":"MD",
+    "FIPS":24003,
     "number":38448,
     "rate":9.4,
-    "state":"MD",
-    "name":"Anne Arundel County"
+    "population":550715,
+    "county":"Anne Arundel County"
   },
   {
-    "id":24510,
+    "state":"MD",
+    "FIPS":24510,
     "number":58631,
     "rate":12.4,
-    "state":"MD",
-    "name":"Baltimore City"
+    "population":622950,
+    "county":"Baltimore City"
   },
   {
-    "id":24005,
+    "state":"MD",
+    "FIPS":24005,
     "number":61443,
     "rate":10,
-    "state":"MD",
-    "name":"Baltimore County"
+    "population":818425,
+    "county":"Baltimore County"
   },
   {
-    "id":24009,
+    "state":"MD",
+    "FIPS":24009,
     "number":5781,
     "rate":8.9,
-    "state":"MD",
-    "name":"Calvert County"
+    "population":89661,
+    "county":"Calvert County"
   },
   {
-    "id":24011,
+    "state":"MD",
+    "FIPS":24011,
     "number":2699,
     "rate":11.3,
-    "state":"MD",
-    "name":"Caroline County"
+    "population":32628,
+    "county":"Caroline County"
   },
   {
-    "id":24013,
+    "state":"MD",
+    "FIPS":24013,
     "number":10453,
     "rate":8.5,
-    "state":"MD",
-    "name":"Carroll County"
+    "population":167190,
+    "county":"Carroll County"
   },
   {
-    "id":24015,
+    "state":"MD",
+    "FIPS":24015,
     "number":8012,
     "rate":10.7,
-    "state":"MD",
-    "name":"Cecil County"
+    "population":101822,
+    "county":"Cecil County"
   },
   {
-    "id":24017,
+    "state":"MD",
+    "FIPS":24017,
     "number":11156,
     "rate":10.3,
-    "state":"MD",
-    "name":"Charles County"
+    "population":150791,
+    "county":"Charles County"
   },
   {
-    "id":24019,
+    "state":"MD",
+    "FIPS":24019,
     "number":3616,
     "rate":14.5,
-    "state":"MD",
-    "name":"Dorchester County"
+    "population":32488,
+    "county":"Dorchester County"
   },
   {
-    "id":24021,
+    "state":"MD",
+    "FIPS":24021,
     "number":15805,
     "rate":9.1,
-    "state":"MD",
-    "name":"Frederick County"
+    "population":239668,
+    "county":"Frederick County"
   },
   {
-    "id":24023,
+    "state":"MD",
+    "FIPS":24023,
     "number":2811,
     "rate":12.3,
-    "state":"MD",
-    "name":"Garrett County"
+    "population":29901,
+    "county":"Garrett County"
   },
   {
-    "id":24025,
+    "state":"MD",
+    "FIPS":24025,
     "number":17856,
     "rate":9.7,
-    "state":"MD",
-    "name":"Harford County"
+    "population":248696,
+    "county":"Harford County"
   },
   {
-    "id":24027,
+    "state":"MD",
+    "FIPS":24027,
     "number":17372,
     "rate":8,
-    "state":"MD",
-    "name":"Howard County"
+    "population":299685,
+    "county":"Howard County"
   },
   {
-    "id":24029,
+    "state":"MD",
+    "FIPS":24029,
     "number":1642,
     "rate":10.4,
-    "state":"MD",
-    "name":"Kent County"
+    "population":19999,
+    "county":"Kent County"
   },
   {
-    "id":24031,
+    "state":"MD",
+    "FIPS":24031,
     "number":56365,
     "rate":7.6,
-    "state":"MD",
-    "name":"Montgomery County"
+    "population":1006547,
+    "county":"Montgomery County"
   },
   {
-    "id":24033,
+    "state":"MD",
+    "FIPS":24033,
     "number":74082,
     "rate":11.4,
-    "state":"MD",
-    "name":"Prince George's County"
+    "population":883764,
+    "county":"Prince George's County"
   },
   {
-    "id":24035,
+    "state":"MD",
+    "FIPS":24035,
     "number":3446,
     "rate":9.5,
-    "state":"MD",
-    "name":"Queen Anne's County"
+    "population":48570,
+    "county":"Queen Anne's County"
   },
   {
-    "id":24039,
+    "state":"MD",
+    "FIPS":24039,
     "number":2543,
     "rate":12.4,
-    "state":"MD",
-    "name":"Somerset County"
+    "population":26153,
+    "county":"Somerset County"
   },
   {
-    "id":24037,
+    "state":"MD",
+    "FIPS":24037,
     "number":7553,
     "rate":9.7,
-    "state":"MD",
-    "name":"St. Mary's County"
+    "population":108999,
+    "county":"St. Mary's County"
   },
   {
-    "id":24041,
+    "state":"MD",
+    "FIPS":24041,
     "number":3407,
     "rate":11.3,
-    "state":"MD",
-    "name":"Talbot County"
+    "population":38062,
+    "county":"Talbot County"
   },
   {
-    "id":24043,
+    "state":"MD",
+    "FIPS":24043,
     "number":14004,
     "rate":12.5,
-    "state":"MD",
-    "name":"Washington County"
+    "population":149162,
+    "county":"Washington County"
   },
   {
-    "id":24045,
+    "state":"MD",
+    "FIPS":24045,
     "number":8126,
     "rate":11.1,
-    "state":"MD",
-    "name":"Wicomico County"
+    "population":100472,
+    "county":"Wicomico County"
   },
   {
-    "id":24047,
+    "state":"MD",
+    "FIPS":24047,
     "number":5196,
     "rate":12.6,
-    "state":"MD",
-    "name":"Worcester County"
+    "population":51588,
+    "county":"Worcester County"
   },
   {
-    "id":23001,
+    "state":"ME",
+    "FIPS":23001,
     "number":8826,
     "rate":10.9,
-    "state":"ME",
-    "name":"Androscoggin County"
+    "population":107506,
+    "county":"Androscoggin County"
   },
   {
-    "id":23003,
+    "state":"ME",
+    "FIPS":23003,
     "number":7833,
     "rate":14.2,
-    "state":"ME",
-    "name":"Aroostook County"
+    "population":70744,
+    "county":"Aroostook County"
   },
   {
-    "id":23005,
+    "state":"ME",
+    "FIPS":23005,
     "number":16519,
     "rate":7.6,
-    "state":"ME",
-    "name":"Cumberland County"
+    "population":284050,
+    "county":"Cumberland County"
   },
   {
-    "id":23007,
+    "state":"ME",
+    "FIPS":23007,
     "number":2124,
     "rate":9,
-    "state":"ME",
-    "name":"Franklin County"
+    "population":30627,
+    "county":"Franklin County"
   },
   {
-    "id":23009,
+    "state":"ME",
+    "FIPS":23009,
     "number":3872,
     "rate":8.9,
-    "state":"ME",
-    "name":"Hancock County"
+    "population":54536,
+    "county":"Hancock County"
   },
   {
-    "id":23011,
+    "state":"ME",
+    "FIPS":23011,
     "number":9844,
     "rate":10.5,
-    "state":"ME",
-    "name":"Kennebec County"
+    "population":121586,
+    "county":"Kennebec County"
   },
   {
-    "id":23013,
+    "state":"ME",
+    "FIPS":23013,
     "number":2690,
     "rate":8.5,
-    "state":"ME",
-    "name":"Knox County"
+    "population":39608,
+    "county":"Knox County"
   },
   {
-    "id":23015,
+    "state":"ME",
+    "FIPS":23015,
     "number":2559,
     "rate":9.3,
-    "state":"ME",
-    "name":"Lincoln County"
+    "population":34195,
+    "county":"Lincoln County"
   },
   {
-    "id":23017,
+    "state":"ME",
+    "FIPS":23017,
     "number":4479,
     "rate":10.1,
-    "state":"ME",
-    "name":"Oxford County"
+    "population":57496,
+    "county":"Oxford County"
   },
   {
-    "id":23019,
+    "state":"ME",
+    "FIPS":23019,
     "number":12562,
     "rate":10.6,
-    "state":"ME",
-    "name":"Penobscot County"
+    "population":153612,
+    "county":"Penobscot County"
   },
   {
-    "id":23021,
+    "state":"ME",
+    "FIPS":23021,
     "number":1717,
     "rate":12.5,
-    "state":"ME",
-    "name":"Piscataquis County"
+    "population":17260,
+    "county":"Piscataquis County"
   },
   {
-    "id":23023,
+    "state":"ME",
+    "FIPS":23023,
     "number":2584,
     "rate":9.4,
-    "state":"ME",
-    "name":"Sagadahoc County"
+    "population":35114,
+    "county":"Sagadahoc County"
   },
   {
-    "id":23025,
+    "state":"ME",
+    "FIPS":23025,
     "number":4757,
     "rate":11.9,
-    "state":"ME",
-    "name":"Somerset County"
+    "population":51829,
+    "county":"Somerset County"
   },
   {
-    "id":23027,
+    "state":"ME",
+    "FIPS":23027,
     "number":2997,
     "rate":10,
-    "state":"ME",
-    "name":"Waldo County"
+    "population":38889,
+    "county":"Waldo County"
   },
   {
-    "id":23029,
+    "state":"ME",
+    "FIPS":23029,
     "number":2779,
     "rate":11,
-    "state":"ME",
-    "name":"Washington County"
+    "population":32485,
+    "county":"Washington County"
   },
   {
-    "id":23031,
+    "state":"ME",
+    "FIPS":23031,
     "number":15011,
     "rate":9.8,
-    "state":"ME",
-    "name":"York County"
+    "population":199055,
+    "county":"York County"
   },
   {
-    "id":26001,
+    "state":"MI",
+    "FIPS":26001,
     "number":1261,
     "rate":14.1,
-    "state":"MI",
-    "name":"Alcona County"
+    "population":10599,
+    "county":"Alcona County"
   },
   {
-    "id":26003,
+    "state":"MI",
+    "FIPS":26003,
     "number":870,
     "rate":11.1,
-    "state":"MI",
-    "name":"Alger County"
+    "population":9494,
+    "county":"Alger County"
   },
   {
-    "id":26005,
+    "state":"MI",
+    "FIPS":26005,
     "number":7605,
     "rate":9.4,
-    "state":"MI",
-    "name":"Allegan County"
+    "population":111939,
+    "county":"Allegan County"
   },
   {
-    "id":26007,
+    "state":"MI",
+    "FIPS":26007,
     "number":2757,
     "rate":12.1,
-    "state":"MI",
-    "name":"Alpena County"
+    "population":29240,
+    "county":"Alpena County"
   },
   {
-    "id":26009,
+    "state":"MI",
+    "FIPS":26009,
     "number":2140,
     "rate":11.7,
-    "state":"MI",
-    "name":"Antrim County"
+    "population":23361,
+    "county":"Antrim County"
   },
   {
-    "id":26011,
+    "state":"MI",
+    "FIPS":26011,
     "number":1673,
     "rate":13.7,
-    "state":"MI",
-    "name":"Arenac County"
+    "population":15512,
+    "county":"Arenac County"
   },
   {
-    "id":26013,
+    "state":"MI",
+    "FIPS":26013,
     "number":807,
     "rate":11.8,
-    "state":"MI",
-    "name":"Baraga County"
+    "population":8706,
+    "county":"Baraga County"
   },
   {
-    "id":26015,
+    "state":"MI",
+    "FIPS":26015,
     "number":4217,
     "rate":9.7,
-    "state":"MI",
-    "name":"Barry County"
+    "population":59073,
+    "county":"Barry County"
   },
   {
-    "id":26017,
+    "state":"MI",
+    "FIPS":26017,
     "number":8586,
     "rate":10.5,
-    "state":"MI",
-    "name":"Bay County"
+    "population":107084,
+    "county":"Bay County"
   },
   {
-    "id":26019,
+    "state":"MI",
+    "FIPS":26019,
     "number":1682,
     "rate":12.3,
-    "state":"MI",
-    "name":"Benzie County"
+    "population":17387,
+    "county":"Benzie County"
   },
   {
-    "id":26021,
+    "state":"MI",
+    "FIPS":26021,
     "number":15013,
     "rate":12.9,
-    "state":"MI",
-    "name":"Berrien County"
+    "population":156057,
+    "county":"Berrien County"
   },
   {
-    "id":26023,
+    "state":"MI",
+    "FIPS":26023,
     "number":3603,
     "rate":11.2,
-    "state":"MI",
-    "name":"Branch County"
+    "population":43756,
+    "county":"Branch County"
   },
   {
-    "id":26025,
+    "state":"MI",
+    "FIPS":26025,
     "number":12085,
     "rate":12.2,
-    "state":"MI",
-    "name":"Calhoun County"
+    "population":134760,
+    "county":"Calhoun County"
   },
   {
-    "id":26027,
+    "state":"MI",
+    "FIPS":26027,
     "number":4588,
     "rate":11.7,
-    "state":"MI",
-    "name":"Cass County"
+    "population":52054,
+    "county":"Cass County"
   },
   {
-    "id":26029,
+    "state":"MI",
+    "FIPS":26029,
     "number":1981,
     "rate":9.9,
-    "state":"MI",
-    "name":"Charlevoix County"
+    "population":26039,
+    "county":"Charlevoix County"
   },
   {
-    "id":26031,
+    "state":"MI",
+    "FIPS":26031,
     "number":2287,
     "rate":11.2,
-    "state":"MI",
-    "name":"Cheboygan County"
+    "population":25774,
+    "county":"Cheboygan County"
   },
   {
-    "id":26033,
+    "state":"MI",
+    "FIPS":26033,
     "number":3473,
     "rate":11.6,
-    "state":"MI",
-    "name":"Chippewa County"
+    "population":38996,
+    "county":"Chippewa County"
   },
   {
-    "id":26035,
+    "state":"MI",
+    "FIPS":26035,
     "number":2803,
     "rate":11.8,
-    "state":"MI",
-    "name":"Clare County"
+    "population":30780,
+    "county":"Clare County"
   },
   {
-    "id":26037,
+    "state":"MI",
+    "FIPS":26037,
     "number":5204,
     "rate":9.2,
-    "state":"MI",
-    "name":"Clinton County"
+    "population":76426,
+    "county":"Clinton County"
   },
   {
-    "id":26039,
+    "state":"MI",
+    "FIPS":26039,
     "number":1276,
     "rate":11.6,
-    "state":"MI",
-    "name":"Crawford County"
+    "population":13985,
+    "county":"Crawford County"
   },
   {
-    "id":26041,
+    "state":"MI",
+    "FIPS":26041,
     "number":3416,
     "rate":12,
-    "state":"MI",
-    "name":"Delta County"
+    "population":36831,
+    "county":"Delta County"
   },
   {
-    "id":26043,
+    "state":"MI",
+    "FIPS":26043,
     "number":2617,
     "rate":12.9,
-    "state":"MI",
-    "name":"Dickinson County"
+    "population":26228,
+    "county":"Dickinson County"
   },
   {
-    "id":26045,
+    "state":"MI",
+    "FIPS":26045,
     "number":9202,
     "rate":11.4,
-    "state":"MI",
-    "name":"Eaton County"
+    "population":107968,
+    "county":"Eaton County"
   },
   {
-    "id":26047,
+    "state":"MI",
+    "FIPS":26047,
     "number":2298,
     "rate":9.2,
-    "state":"MI",
-    "name":"Emmet County"
+    "population":32895,
+    "county":"Emmet County"
   },
   {
-    "id":26049,
+    "state":"MI",
+    "FIPS":26049,
     "number":39947,
     "rate":13,
-    "state":"MI",
-    "name":"Genesee County"
+    "population":418058,
+    "county":"Genesee County"
   },
   {
-    "id":26051,
+    "state":"MI",
+    "FIPS":26051,
     "number":2644,
     "rate":13.2,
-    "state":"MI",
-    "name":"Gladwin County"
+    "population":25508,
+    "county":"Gladwin County"
   },
   {
-    "id":26053,
+    "state":"MI",
+    "FIPS":26053,
     "number":1482,
     "rate":11.3,
-    "state":"MI",
-    "name":"Gogebic County"
+    "population":16050,
+    "county":"Gogebic County"
   },
   {
-    "id":26055,
+    "state":"MI",
+    "FIPS":26055,
     "number":6175,
     "rate":9.1,
-    "state":"MI",
-    "name":"Grand Traverse County"
+    "population":89005,
+    "county":"Grand Traverse County"
   },
   {
-    "id":26057,
+    "state":"MI",
+    "FIPS":26057,
     "number":3452,
     "rate":10.8,
-    "state":"MI",
-    "name":"Gratiot County"
+    "population":42031,
+    "county":"Gratiot County"
   },
   {
-    "id":26059,
+    "state":"MI",
+    "FIPS":26059,
     "number":3623,
     "rate":10.6,
-    "state":"MI",
-    "name":"Hillsdale County"
+    "population":46264,
+    "county":"Hillsdale County"
   },
   {
-    "id":26061,
+    "state":"MI",
+    "FIPS":26061,
     "number":2703,
     "rate":10.1,
-    "state":"MI",
-    "name":"Houghton County"
+    "population":36850,
+    "county":"Houghton County"
   },
   {
-    "id":26063,
+    "state":"MI",
+    "FIPS":26063,
     "number":2990,
     "rate":11.8,
-    "state":"MI",
-    "name":"Huron County"
+    "population":32466,
+    "county":"Huron County"
   },
   {
-    "id":26065,
+    "state":"MI",
+    "FIPS":26065,
     "number":18757,
     "rate":9,
-    "state":"MI",
-    "name":"Ingham County"
+    "population":282272,
+    "county":"Ingham County"
   },
   {
-    "id":26067,
+    "state":"MI",
+    "FIPS":26067,
     "number":4561,
     "rate":9.7,
-    "state":"MI",
-    "name":"Ionia County"
+    "population":63896,
+    "county":"Ionia County"
   },
   {
-    "id":26069,
+    "state":"MI",
+    "FIPS":26069,
     "number":2570,
     "rate":12.5,
-    "state":"MI",
-    "name":"Iosco County"
+    "population":25370,
+    "county":"Iosco County"
   },
   {
-    "id":26071,
+    "state":"MI",
+    "FIPS":26071,
     "number":1256,
     "rate":13.3,
-    "state":"MI",
-    "name":"Iron County"
+    "population":11586,
+    "county":"Iron County"
   },
   {
-    "id":26073,
+    "state":"MI",
+    "FIPS":26073,
     "number":4239,
     "rate":8.1,
-    "state":"MI",
-    "name":"Isabella County"
+    "population":70552,
+    "county":"Isabella County"
   },
   {
-    "id":26075,
+    "state":"MI",
+    "FIPS":26075,
     "number":12923,
     "rate":10.8,
-    "state":"MI",
-    "name":"Jackson County"
+    "population":160156,
+    "county":"Jackson County"
   },
   {
-    "id":26077,
+    "state":"MI",
+    "FIPS":26077,
     "number":15333,
     "rate":8.1,
-    "state":"MI",
-    "name":"Kalamazoo County"
+    "population":255020,
+    "county":"Kalamazoo County"
   },
   {
-    "id":26081,
+    "state":"MI",
+    "FIPS":26081,
     "number":41776,
     "rate":9.5,
-    "state":"MI",
-    "name":"Kent County"
+    "population":614545,
+    "county":"Kent County"
   },
   {
-    "id":26079,
+    "state":"MI",
+    "FIPS":26079,
     "number":1652,
     "rate":12.8,
-    "state":"MI",
-    "name":"Kalkaska County"
+    "population":17082,
+    "county":"Kalkaska County"
   },
   {
-    "id":26083,
+    "state":"MI",
+    "FIPS":26083,
     "number":230,
     "rate":12.8,
-    "state":"MI",
-    "name":"Keweenaw County"
+    "population":2207,
+    "county":"Keweenaw County"
   },
   {
-    "id":26085,
+    "state":"MI",
+    "FIPS":26085,
     "number":1230,
     "rate":13.2,
-    "state":"MI",
-    "name":"Lake County"
+    "population":11468,
+    "county":"Lake County"
   },
   {
-    "id":26087,
+    "state":"MI",
+    "FIPS":26087,
     "number":6364,
     "rate":9.7,
-    "state":"MI",
-    "name":"Lapeer County"
+    "population":88184,
+    "county":"Lapeer County"
   },
   {
-    "id":26089,
+    "state":"MI",
+    "FIPS":26089,
     "number":1762,
     "rate":10.2,
-    "state":"MI",
-    "name":"Leelanau County"
+    "population":21636,
+    "county":"Leelanau County"
   },
   {
-    "id":26091,
+    "state":"MI",
+    "FIPS":26091,
     "number":9064,
     "rate":12.3,
-    "state":"MI",
-    "name":"Lenawee County"
+    "population":99150,
+    "county":"Lenawee County"
   },
   {
-    "id":26093,
+    "state":"MI",
+    "FIPS":26093,
     "number":12449,
     "rate":9.3,
-    "state":"MI",
-    "name":"Livingston County"
+    "population":183013,
+    "county":"Livingston County"
   },
   {
-    "id":26095,
+    "state":"MI",
+    "FIPS":26095,
     "number":702,
     "rate":13.3,
-    "state":"MI",
-    "name":"Luce County"
+    "population":6494,
+    "county":"Luce County"
   },
   {
-    "id":26097,
+    "state":"MI",
+    "FIPS":26097,
     "number":1150,
     "rate":12.9,
-    "state":"MI",
-    "name":"Mackinac County"
+    "population":11129,
+    "county":"Mackinac County"
   },
   {
-    "id":26099,
+    "state":"MI",
+    "FIPS":26099,
     "number":63917,
     "rate":10,
-    "state":"MI",
-    "name":"Macomb County"
+    "population":847750,
+    "county":"Macomb County"
   },
   {
-    "id":26101,
+    "state":"MI",
+    "FIPS":26101,
     "number":2391,
     "rate":12.2,
-    "state":"MI",
-    "name":"Manistee County"
+    "population":24604,
+    "county":"Manistee County"
   },
   {
-    "id":26103,
+    "state":"MI",
+    "FIPS":26103,
     "number":5189,
     "rate":9.9,
-    "state":"MI",
-    "name":"Marquette County"
+    "population":67790,
+    "county":"Marquette County"
   },
   {
-    "id":26105,
+    "state":"MI",
+    "FIPS":26105,
     "number":2649,
     "rate":12.1,
-    "state":"MI",
-    "name":"Mason County"
+    "population":28669,
+    "county":"Mason County"
   },
   {
-    "id":26107,
+    "state":"MI",
+    "FIPS":26107,
     "number":3400,
     "rate":10.6,
-    "state":"MI",
-    "name":"Mecosta County"
+    "population":43482,
+    "county":"Mecosta County"
   },
   {
-    "id":26109,
+    "state":"MI",
+    "FIPS":26109,
     "number":2183,
     "rate":11.8,
-    "state":"MI",
-    "name":"Menominee County"
+    "population":23748,
+    "county":"Menominee County"
   },
   {
-    "id":26111,
+    "state":"MI",
+    "FIPS":26111,
     "number":6447,
     "rate":10.3,
-    "state":"MI",
-    "name":"Midland County"
+    "population":83649,
+    "county":"Midland County"
   },
   {
-    "id":26113,
+    "state":"MI",
+    "FIPS":26113,
     "number":1213,
     "rate":10.9,
-    "state":"MI",
-    "name":"Missaukee County"
+    "population":15037,
+    "county":"Missaukee County"
   },
   {
-    "id":26115,
+    "state":"MI",
+    "FIPS":26115,
     "number":12540,
     "rate":11.2,
-    "state":"MI",
-    "name":"Monroe County"
+    "population":150840,
+    "county":"Monroe County"
   },
   {
-    "id":26117,
+    "state":"MI",
+    "FIPS":26117,
     "number":4838,
     "rate":10.3,
-    "state":"MI",
-    "name":"Montcalm County"
+    "population":63059,
+    "county":"Montcalm County"
   },
   {
-    "id":26119,
+    "state":"MI",
+    "FIPS":26119,
     "number":1078,
     "rate":13.8,
-    "state":"MI",
-    "name":"Montmorency County"
+    "population":9492,
+    "county":"Montmorency County"
   },
   {
-    "id":26121,
+    "state":"MI",
+    "FIPS":26121,
     "number":15930,
     "rate":12.8,
-    "state":"MI",
-    "name":"Muskegon County"
+    "population":170146,
+    "county":"Muskegon County"
   },
   {
-    "id":26123,
+    "state":"MI",
+    "FIPS":26123,
     "number":4020,
     "rate":11.4,
-    "state":"MI",
-    "name":"Newaygo County"
+    "population":47962,
+    "county":"Newaygo County"
   },
   {
-    "id":26125,
+    "state":"MI",
+    "FIPS":26125,
     "number":83225,
     "rate":9.1,
-    "state":"MI",
-    "name":"Oakland County"
+    "population":1220631,
+    "county":"Oakland County"
   },
   {
-    "id":26127,
+    "state":"MI",
+    "FIPS":26127,
     "number":2541,
     "rate":13.2,
-    "state":"MI",
-    "name":"Oceana County"
+    "population":26259,
+    "county":"Oceana County"
   },
   {
-    "id":26129,
+    "state":"MI",
+    "FIPS":26129,
     "number":2276,
     "rate":13.5,
-    "state":"MI",
-    "name":"Ogemaw County"
+    "population":21425,
+    "county":"Ogemaw County"
   },
   {
-    "id":26131,
+    "state":"MI",
+    "FIPS":26131,
     "number":722,
     "rate":13.4,
-    "state":"MI",
-    "name":"Ontonagon County"
+    "population":6404,
+    "county":"Ontonagon County"
   },
   {
-    "id":26133,
+    "state":"MI",
+    "FIPS":26133,
     "number":1879,
     "rate":11,
-    "state":"MI",
-    "name":"Osceola County"
+    "population":23270,
+    "county":"Osceola County"
   },
   {
-    "id":26135,
+    "state":"MI",
+    "FIPS":26135,
     "number":973,
     "rate":14.5,
-    "state":"MI",
-    "name":"Oscoda County"
+    "population":8602,
+    "county":"Oscoda County"
   },
   {
-    "id":26137,
+    "state":"MI",
+    "FIPS":26137,
     "number":2108,
     "rate":11.6,
-    "state":"MI",
-    "name":"Otsego County"
+    "population":24049,
+    "county":"Otsego County"
   },
   {
-    "id":26139,
+    "state":"MI",
+    "FIPS":26139,
     "number":15177,
     "rate":8,
-    "state":"MI",
-    "name":"Ottawa County"
+    "population":269454,
+    "county":"Ottawa County"
   },
   {
-    "id":26141,
+    "state":"MI",
+    "FIPS":26141,
     "number":1530,
     "rate":14.3,
-    "state":"MI",
-    "name":"Presque Isle County"
+    "population":13112,
+    "county":"Presque Isle County"
   },
   {
-    "id":26143,
+    "state":"MI",
+    "FIPS":26143,
     "number":3195,
     "rate":16,
-    "state":"MI",
-    "name":"Roscommon County"
+    "population":24091,
+    "county":"Roscommon County"
   },
   {
-    "id":26145,
+    "state":"MI",
+    "FIPS":26145,
     "number":18546,
     "rate":12.6,
-    "state":"MI",
-    "name":"Saginaw County"
+    "population":198268,
+    "county":"Saginaw County"
   },
   {
-    "id":26151,
+    "state":"MI",
+    "FIPS":26151,
     "number":3105,
     "rate":9.8,
-    "state":"MI",
-    "name":"Sanilac County"
+    "population":42311,
+    "county":"Sanilac County"
   },
   {
-    "id":26153,
+    "state":"MI",
+    "FIPS":26153,
     "number":785,
     "rate":11.9,
-    "state":"MI",
-    "name":"Schoolcraft County"
+    "population":8355,
+    "county":"Schoolcraft County"
   },
   {
-    "id":26155,
+    "state":"MI",
+    "FIPS":26155,
     "number":5272,
     "rate":10.3,
-    "state":"MI",
-    "name":"Shiawassee County"
+    "population":69300,
+    "county":"Shiawassee County"
   },
   {
-    "id":26147,
+    "state":"MI",
+    "FIPS":26147,
     "number":12968,
     "rate":10.8,
-    "state":"MI",
-    "name":"St. Clair County"
+    "population":160564,
+    "county":"St. Clair County"
   },
   {
-    "id":26149,
+    "state":"MI",
+    "FIPS":26149,
     "number":4399,
     "rate":10,
-    "state":"MI",
-    "name":"St Joseph County"
+    "population":60902,
+    "county":"St Joseph County"
   },
   {
-    "id":26157,
+    "state":"MI",
+    "FIPS":26157,
     "number":5153,
     "rate":12.5,
-    "state":"MI",
-    "name":"Tuscola County"
+    "population":54705,
+    "county":"Tuscola County"
   },
   {
-    "id":26159,
+    "state":"MI",
+    "FIPS":26159,
     "number":6663,
     "rate":12.1,
-    "state":"MI",
-    "name":"Van Buren County"
+    "population":75250,
+    "county":"Van Buren County"
   },
   {
-    "id":26161,
+    "state":"MI",
+    "FIPS":26161,
     "number":18635,
     "rate":7.1,
-    "state":"MI",
-    "name":"Washtenaw County"
+    "population":351301,
+    "county":"Washtenaw County"
   },
   {
-    "id":26163,
+    "state":"MI",
+    "FIPS":26163,
     "number":163219,
     "rate":12.5,
-    "state":"MI",
-    "name":"Wayne County"
+    "population":1792770,
+    "county":"Wayne County"
   },
   {
-    "id":26165,
+    "state":"MI",
+    "FIPS":26165,
     "number":2950,
     "rate":12.2,
-    "state":"MI",
-    "name":"Wexford County"
+    "population":32594,
+    "county":"Wexford County"
   },
   {
-    "id":27001,
+    "state":"MN",
+    "FIPS":27001,
     "number":1249,
     "rate":9.7,
-    "state":"MN",
-    "name":"Aitkin County"
+    "population":15945,
+    "county":"Aitkin County"
   },
   {
-    "id":27003,
+    "state":"MN",
+    "FIPS":27003,
     "number":19967,
     "rate":8.2,
-    "state":"MN",
-    "name":"Anoka County"
+    "population":336132,
+    "county":"Anoka County"
   },
   {
-    "id":27005,
+    "state":"MN",
+    "FIPS":27005,
     "number":1976,
     "rate":8.2,
-    "state":"MN",
-    "name":"Becker County"
+    "population":33018,
+    "county":"Becker County"
   },
   {
-    "id":27007,
+    "state":"MN",
+    "FIPS":27007,
     "number":2981,
     "rate":9.3,
-    "state":"MN",
-    "name":"Beltrami County"
+    "population":45241,
+    "county":"Beltrami County"
   },
   {
-    "id":27009,
+    "state":"MN",
+    "FIPS":27009,
     "number":2347,
     "rate":8.2,
-    "state":"MN",
-    "name":"Benton County"
+    "population":38867,
+    "county":"Benton County"
   },
   {
-    "id":27011,
+    "state":"MN",
+    "FIPS":27011,
     "number":367,
     "rate":9.2,
-    "state":"MN",
-    "name":"Big Stone County"
+    "population":5165,
+    "county":"Big Stone County"
   },
   {
-    "id":27013,
+    "state":"MN",
+    "FIPS":27013,
     "number":2703,
     "rate":5.6,
-    "state":"MN",
-    "name":"Blue Earth County"
+    "population":65000,
+    "county":"Blue Earth County"
   },
   {
-    "id":27015,
+    "state":"MN",
+    "FIPS":27015,
     "number":1701,
     "rate":8.9,
-    "state":"MN",
-    "name":"Brown County"
+    "population":25423,
+    "county":"Brown County"
   },
   {
-    "id":27017,
+    "state":"MN",
+    "FIPS":27017,
     "number":2022,
     "rate":7.7,
-    "state":"MN",
-    "name":"Carlton County"
+    "population":35311,
+    "county":"Carlton County"
   },
   {
-    "id":27019,
+    "state":"MN",
+    "FIPS":27019,
     "number":4447,
     "rate":6.9,
-    "state":"MN",
-    "name":"Carver County"
+    "population":93890,
+    "county":"Carver County"
   },
   {
-    "id":27021,
+    "state":"MN",
+    "FIPS":27021,
     "number":2523,
     "rate":11.6,
-    "state":"MN",
-    "name":"Cass County"
+    "population":28398,
+    "county":"Cass County"
   },
   {
-    "id":27023,
+    "state":"MN",
+    "FIPS":27023,
     "number":882,
     "rate":9.7,
-    "state":"MN",
-    "name":"Chippewa County"
+    "population":12149,
+    "county":"Chippewa County"
   },
   {
-    "id":27025,
+    "state":"MN",
+    "FIPS":27025,
     "number":3356,
     "rate":8.6,
-    "state":"MN",
-    "name":"Chisago County"
+    "population":53491,
+    "county":"Chisago County"
   },
   {
-    "id":27027,
+    "state":"MN",
+    "FIPS":27027,
     "number":3243,
     "rate":7.5,
-    "state":"MN",
-    "name":"Clay County"
+    "population":60213,
+    "county":"Clay County"
   },
   {
-    "id":27029,
+    "state":"MN",
+    "FIPS":27029,
     "number":607,
     "rate":9.5,
-    "state":"MN",
-    "name":"Clearwater County"
+    "population":8682,
+    "county":"Clearwater County"
   },
   {
-    "id":27031,
+    "state":"MN",
+    "FIPS":27031,
     "number":400,
     "rate":9.5,
-    "state":"MN",
-    "name":"Cook County"
+    "population":5182,
+    "county":"Cook County"
   },
   {
-    "id":27033,
+    "state":"MN",
+    "FIPS":27033,
     "number":822,
     "rate":9.5,
-    "state":"MN",
-    "name":"Cottonwood County"
+    "population":11648,
+    "county":"Cottonwood County"
   },
   {
-    "id":27035,
+    "state":"MN",
+    "FIPS":27035,
     "number":4679,
     "rate":9.9,
-    "state":"MN",
-    "name":"Crow Wing County"
+    "population":62850,
+    "county":"Crow Wing County"
   },
   {
-    "id":27037,
+    "state":"MN",
+    "FIPS":27037,
     "number":19404,
     "rate":6.6,
-    "state":"MN",
-    "name":"Dakota County"
+    "population":405067,
+    "county":"Dakota County"
   },
   {
-    "id":27039,
+    "state":"MN",
+    "FIPS":27039,
     "number":986,
     "rate":7,
-    "state":"MN",
-    "name":"Dodge County"
+    "population":20237,
+    "county":"Dodge County"
   },
   {
-    "id":27041,
+    "state":"MN",
+    "FIPS":27041,
     "number":2110,
     "rate":7.6,
-    "state":"MN",
-    "name":"Douglas County"
+    "population":36446,
+    "county":"Douglas County"
   },
   {
-    "id":27043,
+    "state":"MN",
+    "FIPS":27043,
     "number":921,
     "rate":8.5,
-    "state":"MN",
-    "name":"Faribault County"
+    "population":14261,
+    "county":"Faribault County"
   },
   {
-    "id":27045,
+    "state":"MN",
+    "FIPS":27045,
     "number":1244,
     "rate":8,
-    "state":"MN",
-    "name":"Fillmore County"
+    "population":20894,
+    "county":"Fillmore County"
   },
   {
-    "id":27047,
+    "state":"MN",
+    "FIPS":27047,
     "number":2216,
     "rate":9.4,
-    "state":"MN",
-    "name":"Freeborn County"
+    "population":31052,
+    "county":"Freeborn County"
   },
   {
-    "id":27049,
+    "state":"MN",
+    "FIPS":27049,
     "number":3302,
     "rate":9.5,
-    "state":"MN",
-    "name":"Goodhue County"
+    "population":46393,
+    "county":"Goodhue County"
   },
   {
-    "id":27051,
+    "state":"MN",
+    "FIPS":27051,
     "number":382,
     "rate":8.4,
-    "state":"MN",
-    "name":"Grant County"
+    "population":5945,
+    "county":"Grant County"
   },
   {
-    "id":27053,
+    "state":"MN",
+    "FIPS":27053,
     "number":60307,
     "rate":6.8,
-    "state":"MN",
-    "name":"Hennepin County"
+    "population":1184787,
+    "county":"Hennepin County"
   },
   {
-    "id":27055,
+    "state":"MN",
+    "FIPS":27055,
     "number":1117,
     "rate":7.8,
-    "state":"MN",
-    "name":"Houston County"
+    "population":18816,
+    "county":"Houston County"
   },
   {
-    "id":27057,
+    "state":"MN",
+    "FIPS":27057,
     "number":1465,
     "rate":9.4,
-    "state":"MN",
-    "name":"Hubbard County"
+    "population":20436,
+    "county":"Hubbard County"
   },
   {
-    "id":27059,
+    "state":"MN",
+    "FIPS":27059,
     "number":2325,
     "rate":8.4,
-    "state":"MN",
-    "name":"Isanti County"
+    "population":38245,
+    "county":"Isanti County"
   },
   {
-    "id":27061,
+    "state":"MN",
+    "FIPS":27061,
     "number":3334,
     "rate":9.6,
-    "state":"MN",
-    "name":"Itasca County"
+    "population":45252,
+    "county":"Itasca County"
   },
   {
-    "id":27063,
+    "state":"MN",
+    "FIPS":27063,
     "number":663,
     "rate":8.6,
-    "state":"MN",
-    "name":"Jackson County"
+    "population":10298,
+    "county":"Jackson County"
   },
   {
-    "id":27065,
+    "state":"MN",
+    "FIPS":27065,
     "number":1096,
     "rate":9.1,
-    "state":"MN",
-    "name":"Kanabec County"
+    "population":15999,
+    "county":"Kanabec County"
   },
   {
-    "id":27067,
+    "state":"MN",
+    "FIPS":27067,
     "number":2638,
     "rate":8.4,
-    "state":"MN",
-    "name":"Kandiyohi County"
+    "population":42399,
+    "county":"Kandiyohi County"
   },
   {
-    "id":27069,
+    "state":"MN",
+    "FIPS":27069,
     "number":318,
     "rate":9.3,
-    "state":"MN",
-    "name":"Kittson County"
+    "population":4505,
+    "county":"Kittson County"
   },
   {
-    "id":27071,
+    "state":"MN",
+    "FIPS":27071,
     "number":1078,
     "rate":10.6,
-    "state":"MN",
-    "name":"Koochiching County"
+    "population":13180,
+    "county":"Koochiching County"
   },
   {
-    "id":27073,
+    "state":"MN",
+    "FIPS":27073,
     "number":511,
     "rate":9.4,
-    "state":"MN",
-    "name":"Lac Qui Parle County"
+    "population":7116,
+    "county":"Lac Qui Parle County"
   },
   {
-    "id":27075,
+    "state":"MN",
+    "FIPS":27075,
     "number":773,
     "rate":9,
-    "state":"MN",
-    "name":"Lake County"
+    "population":10830,
+    "county":"Lake County"
   },
   {
-    "id":27077,
+    "state":"MN",
+    "FIPS":27077,
     "number":280,
     "rate":9,
-    "state":"MN",
-    "name":"Lake of the Woods County"
+    "population":3968,
+    "county":"Lake of the Woods County"
   },
   {
-    "id":27079,
+    "state":"MN",
+    "FIPS":27079,
     "number":1634,
     "rate":8.1,
-    "state":"MN",
-    "name":"Le Sueur County"
+    "population":27647,
+    "county":"Le Sueur County"
   },
   {
-    "id":27081,
+    "state":"MN",
+    "FIPS":27081,
     "number":399,
     "rate":9,
-    "state":"MN",
-    "name":"Lincoln County"
+    "population":5800,
+    "county":"Lincoln County"
   },
   {
-    "id":27083,
+    "state":"MN",
+    "FIPS":27083,
     "number":1474,
     "rate":8,
-    "state":"MN",
-    "name":"Lyon County"
+    "population":25618,
+    "county":"Lyon County"
   },
   {
-    "id":27087,
+    "state":"MN",
+    "FIPS":27087,
     "number":420,
     "rate":11.2,
-    "state":"MN",
-    "name":"Mahnomen County"
+    "population":5521,
+    "county":"Mahnomen County"
   },
   {
-    "id":27089,
+    "state":"MN",
+    "FIPS":27089,
     "number":685,
     "rate":9.7,
-    "state":"MN",
-    "name":"Marshall County"
+    "population":9471,
+    "county":"Marshall County"
   },
   {
-    "id":27091,
+    "state":"MN",
+    "FIPS":27091,
     "number":1319,
     "rate":8.5,
-    "state":"MN",
-    "name":"Martin County"
+    "population":20482,
+    "county":"Martin County"
   },
   {
-    "id":27085,
+    "state":"MN",
+    "FIPS":27085,
     "number":2297,
     "rate":8.7,
-    "state":"MN",
-    "name":"McLeod County"
+    "population":36011,
+    "county":"McLeod County"
   },
   {
-    "id":27093,
+    "state":"MN",
+    "FIPS":27093,
     "number":1686,
     "rate":10,
-    "state":"MN",
-    "name":"Meeker County"
+    "population":23044,
+    "county":"Meeker County"
   },
   {
-    "id":27095,
+    "state":"MN",
+    "FIPS":27095,
     "number":1950,
     "rate":10.4,
-    "state":"MN",
-    "name":"Mille Lacs County"
+    "population":25728,
+    "county":"Mille Lacs County"
   },
   {
-    "id":27097,
+    "state":"MN",
+    "FIPS":27097,
     "number":2137,
     "rate":8.7,
-    "state":"MN",
-    "name":"Morrison County"
+    "population":33097,
+    "county":"Morrison County"
   },
   {
-    "id":27099,
+    "state":"MN",
+    "FIPS":27099,
     "number":2535,
     "rate":8.9,
-    "state":"MN",
-    "name":"Mower County"
+    "population":39377,
+    "county":"Mower County"
   },
   {
-    "id":27101,
+    "state":"MN",
+    "FIPS":27101,
     "number":615,
     "rate":9.4,
-    "state":"MN",
-    "name":"Murray County"
+    "population":8574,
+    "county":"Murray County"
   },
   {
-    "id":27103,
+    "state":"MN",
+    "FIPS":27103,
     "number":1826,
     "rate":7.6,
-    "state":"MN",
-    "name":"Nicollet County"
+    "population":32936,
+    "county":"Nicollet County"
   },
   {
-    "id":27107,
+    "state":"MN",
+    "FIPS":27107,
     "number":443,
     "rate":9,
-    "state":"MN",
-    "name":"Norman County"
+    "population":6637,
+    "county":"Norman County"
   },
   {
-    "id":27105,
+    "state":"MN",
+    "FIPS":27105,
     "number":1277,
     "rate":8.3,
-    "state":"MN",
-    "name":"Nobles County"
+    "population":21674,
+    "county":"Nobles County"
   },
   {
-    "id":27109,
+    "state":"MN",
+    "FIPS":27109,
     "number":7648,
     "rate":7.1,
-    "state":"MN",
-    "name":"Olmsted County"
+    "population":147156,
+    "county":"Olmsted County"
   },
   {
-    "id":27111,
+    "state":"MN",
+    "FIPS":27111,
     "number":3778,
     "rate":8.6,
-    "state":"MN",
-    "name":"Otter Tail County"
+    "population":57292,
+    "county":"Otter Tail County"
   },
   {
-    "id":27113,
+    "state":"MN",
+    "FIPS":27113,
     "number":861,
     "rate":8.2,
-    "state":"MN",
-    "name":"Pennington County"
+    "population":14071,
+    "county":"Pennington County"
   },
   {
-    "id":27115,
+    "state":"MN",
+    "FIPS":27115,
     "number":1894,
     "rate":8.5,
-    "state":"MN",
-    "name":"Pine County"
+    "population":29223,
+    "county":"Pine County"
   },
   {
-    "id":27117,
+    "state":"MN",
+    "FIPS":27117,
     "number":566,
     "rate":8.3,
-    "state":"MN",
-    "name":"Pipestone County"
+    "population":9373,
+    "county":"Pipestone County"
   },
   {
-    "id":27119,
+    "state":"MN",
+    "FIPS":27119,
     "number":2087,
     "rate":9,
-    "state":"MN",
-    "name":"Polk County"
+    "population":31513,
+    "county":"Polk County"
   },
   {
-    "id":27121,
+    "state":"MN",
+    "FIPS":27121,
     "number":772,
     "rate":9.2,
-    "state":"MN",
-    "name":"Pope County"
+    "population":10918,
+    "county":"Pope County"
   },
   {
-    "id":27123,
+    "state":"MN",
+    "FIPS":27123,
     "number":30698,
     "rate":8,
-    "state":"MN",
-    "name":"Ramsey County"
+    "population":520919,
+    "county":"Ramsey County"
   },
   {
-    "id":27125,
+    "state":"MN",
+    "FIPS":27125,
     "number":255,
     "rate":8.5,
-    "state":"MN",
-    "name":"Red Lake County"
+    "population":4075,
+    "county":"Red Lake County"
   },
   {
-    "id":27127,
+    "state":"MN",
+    "FIPS":27127,
     "number":1020,
     "rate":8.8,
-    "state":"MN",
-    "name":"Redwood County"
+    "population":15853,
+    "county":"Redwood County"
   },
   {
-    "id":27129,
+    "state":"MN",
+    "FIPS":27129,
     "number":993,
     "rate":8.6,
-    "state":"MN",
-    "name":"Renville County"
+    "population":15343,
+    "county":"Renville County"
   },
   {
-    "id":27131,
+    "state":"MN",
+    "FIPS":27131,
     "number":3441,
     "rate":7.3,
-    "state":"MN",
-    "name":"Rice County"
+    "population":64904,
+    "county":"Rice County"
   },
   {
-    "id":27133,
+    "state":"MN",
+    "FIPS":27133,
     "number":672,
     "rate":9.7,
-    "state":"MN",
-    "name":"Rock County"
+    "population":9551,
+    "county":"Rock County"
   },
   {
-    "id":27135,
+    "state":"MN",
+    "FIPS":27135,
     "number":1014,
     "rate":9.1,
-    "state":"MN",
-    "name":"Roseau County"
+    "population":15487,
+    "county":"Roseau County"
   },
   {
-    "id":27139,
+    "state":"MN",
+    "FIPS":27139,
     "number":5323,
     "rate":5.8,
-    "state":"MN",
-    "name":"Scott County"
+    "population":135254,
+    "county":"Scott County"
   },
   {
-    "id":27143,
+    "state":"MN",
+    "FIPS":27143,
     "number":986,
     "rate":9,
-    "state":"MN",
-    "name":"Sibley County"
+    "population":15100,
+    "county":"Sibley County"
   },
   {
-    "id":27141,
+    "state":"MN",
+    "FIPS":27141,
     "number":3703,
     "rate":6,
-    "state":"MN",
-    "name":"Sherburne County"
+    "population":89488,
+    "county":"Sherburne County"
   },
   {
-    "id":27137,
+    "state":"MN",
+    "FIPS":27137,
     "number":14577,
     "rate":9.5,
-    "state":"MN",
-    "name":"St. Louis County"
+    "population":200487,
+    "county":"St. Louis County"
   },
   {
-    "id":27145,
+    "state":"MN",
+    "FIPS":27145,
     "number":7770,
     "rate":7.1,
-    "state":"MN",
-    "name":"Stearns County"
+    "population":151646,
+    "county":"Stearns County"
   },
   {
-    "id":27147,
+    "state":"MN",
+    "FIPS":27147,
     "number":1958,
     "rate":7.5,
-    "state":"MN",
-    "name":"Steele County"
+    "population":36301,
+    "county":"Steele County"
   },
   {
-    "id":27149,
+    "state":"MN",
+    "FIPS":27149,
     "number":513,
     "rate":7.3,
-    "state":"MN",
-    "name":"Stevens County"
+    "population":9745,
+    "county":"Stevens County"
   },
   {
-    "id":27151,
+    "state":"MN",
+    "FIPS":27151,
     "number":597,
     "rate":8.2,
-    "state":"MN",
-    "name":"Swift County"
+    "population":9606,
+    "county":"Swift County"
   },
   {
-    "id":27153,
+    "state":"MN",
+    "FIPS":27153,
     "number":1603,
     "rate":8.9,
-    "state":"MN",
-    "name":"Todd County"
+    "population":24546,
+    "county":"Todd County"
   },
   {
-    "id":27155,
+    "state":"MN",
+    "FIPS":27155,
     "number":261,
     "rate":9.9,
-    "state":"MN",
-    "name":"Traverse County"
+    "population":3426,
+    "county":"Traverse County"
   },
   {
-    "id":27157,
+    "state":"MN",
+    "FIPS":27157,
     "number":1271,
     "rate":7.9,
-    "state":"MN",
-    "name":"Wabasha County"
+    "population":21422,
+    "county":"Wabasha County"
   },
   {
-    "id":27159,
+    "state":"MN",
+    "FIPS":27159,
     "number":935,
     "rate":9.2,
-    "state":"MN",
-    "name":"Wadena County"
+    "population":13689,
+    "county":"Wadena County"
   },
   {
-    "id":27161,
+    "state":"MN",
+    "FIPS":27161,
     "number":1056,
     "rate":7.4,
-    "state":"MN",
-    "name":"Waseca County"
+    "population":19194,
+    "county":"Waseca County"
   },
   {
-    "id":27163,
+    "state":"MN",
+    "FIPS":27163,
     "number":13524,
     "rate":7.7,
-    "state":"MN",
-    "name":"Washington County"
+    "population":244112,
+    "county":"Washington County"
   },
   {
-    "id":27165,
+    "state":"MN",
+    "FIPS":27165,
     "number":652,
     "rate":8,
-    "state":"MN",
-    "name":"Watonwan County"
+    "population":11155,
+    "county":"Watonwan County"
   },
   {
-    "id":27167,
+    "state":"MN",
+    "FIPS":27167,
     "number":419,
     "rate":8.6,
-    "state":"MN",
-    "name":"Wilkin County"
+    "population":6608,
+    "county":"Wilkin County"
   },
   {
-    "id":27169,
+    "state":"MN",
+    "FIPS":27169,
     "number":2932,
     "rate":7.6,
-    "state":"MN",
-    "name":"Winona County"
+    "population":51326,
+    "county":"Winona County"
   },
   {
-    "id":27171,
+    "state":"MN",
+    "FIPS":27171,
     "number":5968,
     "rate":6.8,
-    "state":"MN",
-    "name":"Wright County"
+    "population":127316,
+    "county":"Wright County"
   },
   {
-    "id":27173,
+    "state":"MN",
+    "FIPS":27173,
     "number":664,
     "rate":8.8,
-    "state":"MN",
-    "name":"Yellow Medicine County"
+    "population":10168,
+    "county":"Yellow Medicine County"
   },
   {
-    "id":29001,
+    "state":"MO",
+    "FIPS":29001,
     "number":1709,
     "rate":9.2,
-    "state":"MO",
-    "name":"Adair County"
+    "population":25671,
+    "county":"Adair County"
   },
   {
-    "id":29003,
+    "state":"MO",
+    "FIPS":29003,
     "number":1280,
     "rate":9.9,
-    "state":"MO",
-    "name":"Andrew County"
+    "population":17420,
+    "county":"Andrew County"
   },
   {
-    "id":29005,
+    "state":"MO",
+    "FIPS":29005,
     "number":517,
     "rate":12,
-    "state":"MO",
-    "name":"Atchison County"
+    "population":5532,
+    "county":"Atchison County"
   },
   {
-    "id":29007,
+    "state":"MO",
+    "FIPS":29007,
     "number":2356,
     "rate":12.5,
-    "state":"MO",
-    "name":"Audrain County"
+    "population":25610,
+    "county":"Audrain County"
   },
   {
-    "id":29009,
+    "state":"MO",
+    "FIPS":29009,
     "number":3074,
     "rate":11.6,
-    "state":"MO",
-    "name":"Barry County"
+    "population":35646,
+    "county":"Barry County"
   },
   {
-    "id":29011,
+    "state":"MO",
+    "FIPS":29011,
     "number":1190,
     "rate":13.3,
-    "state":"MO",
-    "name":"Barton County"
+    "population":12365,
+    "county":"Barton County"
   },
   {
-    "id":29013,
+    "state":"MO",
+    "FIPS":29013,
     "number":1313,
     "rate":10.7,
-    "state":"MO",
-    "name":"Bates County"
+    "population":16709,
+    "county":"Bates County"
   },
   {
-    "id":29015,
+    "state":"MO",
+    "FIPS":29015,
     "number":2245,
     "rate":14.7,
-    "state":"MO",
-    "name":"Benton County"
+    "population":18958,
+    "county":"Benton County"
   },
   {
-    "id":29017,
+    "state":"MO",
+    "FIPS":29017,
     "number":1110,
     "rate":12,
-    "state":"MO",
-    "name":"Bollinger County"
+    "population":12405,
+    "county":"Bollinger County"
   },
   {
-    "id":29019,
+    "state":"MO",
+    "FIPS":29019,
     "number":9379,
     "rate":7.5,
-    "state":"MO",
-    "name":"Boone County"
+    "population":168592,
+    "county":"Boone County"
   },
   {
-    "id":29021,
+    "state":"MO",
+    "FIPS":29021,
     "number":8018,
     "rate":12.1,
-    "state":"MO",
-    "name":"Buchanan County"
+    "population":89779,
+    "county":"Buchanan County"
   },
   {
-    "id":29023,
+    "state":"MO",
+    "FIPS":29023,
     "number":3894,
     "rate":12.1,
-    "state":"MO",
-    "name":"Butler County"
+    "population":43012,
+    "county":"Butler County"
   },
   {
-    "id":29025,
+    "state":"MO",
+    "FIPS":29025,
     "number":835,
     "rate":12.5,
-    "state":"MO",
-    "name":"Caldwell County"
+    "population":9116,
+    "county":"Caldwell County"
   },
   {
-    "id":29027,
+    "state":"MO",
+    "FIPS":29027,
     "number":3216,
     "rate":9.7,
-    "state":"MO",
-    "name":"Callaway County"
+    "population":44458,
+    "county":"Callaway County"
   },
   {
-    "id":29029,
+    "state":"MO",
+    "FIPS":29029,
     "number":3862,
     "rate":11.1,
-    "state":"MO",
-    "name":"Camden County"
+    "population":43870,
+    "county":"Camden County"
   },
   {
-    "id":29031,
+    "state":"MO",
+    "FIPS":29031,
     "number":6539,
     "rate":11.4,
-    "state":"MO",
-    "name":"Cape Girardeau County"
+    "population":77080,
+    "county":"Cape Girardeau County"
   },
   {
-    "id":29033,
+    "state":"MO",
+    "FIPS":29033,
     "number":828,
     "rate":12.2,
-    "state":"MO",
-    "name":"Carroll County"
+    "population":9095,
+    "county":"Carroll County"
   },
   {
-    "id":29035,
+    "state":"MO",
+    "FIPS":29035,
     "number":563,
     "rate":12.1,
-    "state":"MO",
-    "name":"Carter County"
+    "population":6253,
+    "county":"Carter County"
   },
   {
-    "id":29037,
+    "state":"MO",
+    "FIPS":29037,
     "number":7129,
     "rate":9.9,
-    "state":"MO",
-    "name":"Cass County"
+    "population":100439,
+    "county":"Cass County"
   },
   {
-    "id":29039,
+    "state":"MO",
+    "FIPS":29039,
     "number":1289,
     "rate":12.5,
-    "state":"MO",
-    "name":"Cedar County"
+    "population":13834,
+    "county":"Cedar County"
   },
   {
-    "id":29041,
+    "state":"MO",
+    "FIPS":29041,
     "number":685,
     "rate":11.8,
-    "state":"MO",
-    "name":"Chariton County"
+    "population":7683,
+    "county":"Chariton County"
   },
   {
-    "id":29043,
+    "state":"MO",
+    "FIPS":29043,
     "number":6049,
     "rate":10.7,
-    "state":"MO",
-    "name":"Christian County"
+    "population":79781,
+    "county":"Christian County"
   },
   {
-    "id":29045,
+    "state":"MO",
+    "FIPS":29045,
     "number":595,
     "rate":11.5,
-    "state":"MO",
-    "name":"Clark County"
+    "population":6987,
+    "county":"Clark County"
   },
   {
-    "id":29047,
+    "state":"MO",
+    "FIPS":29047,
     "number":19251,
     "rate":11.7,
-    "state":"MO",
-    "name":"Clay County"
+    "population":227689,
+    "county":"Clay County"
   },
   {
-    "id":29049,
+    "state":"MO",
+    "FIPS":29049,
     "number":1745,
     "rate":11.6,
-    "state":"MO",
-    "name":"Clinton County"
+    "population":20505,
+    "county":"Clinton County"
   },
   {
-    "id":29051,
+    "state":"MO",
+    "FIPS":29051,
     "number":5791,
     "rate":10.2,
-    "state":"MO",
-    "name":"Cole County"
+    "population":76377,
+    "county":"Cole County"
   },
   {
-    "id":29053,
+    "state":"MO",
+    "FIPS":29053,
     "number":1547,
     "rate":11.7,
-    "state":"MO",
-    "name":"Cooper County"
+    "population":17529,
+    "county":"Cooper County"
   },
   {
-    "id":29055,
+    "state":"MO",
+    "FIPS":29055,
     "number":1983,
     "rate":10.8,
-    "state":"MO",
-    "name":"Crawford County"
+    "population":24774,
+    "county":"Crawford County"
   },
   {
-    "id":29057,
+    "state":"MO",
+    "FIPS":29057,
     "number":794,
     "rate":13.8,
-    "state":"MO",
-    "name":"Dade County"
+    "population":7566,
+    "county":"Dade County"
   },
   {
-    "id":29059,
+    "state":"MO",
+    "FIPS":29059,
     "number":1701,
     "rate":13.7,
-    "state":"MO",
-    "name":"Dallas County"
+    "population":16775,
+    "county":"Dallas County"
   },
   {
-    "id":29061,
+    "state":"MO",
+    "FIPS":29061,
     "number":653,
     "rate":11,
-    "state":"MO",
-    "name":"Daviess County"
+    "population":8271,
+    "county":"Daviess County"
   },
   {
-    "id":29063,
+    "state":"MO",
+    "FIPS":29063,
     "number":1290,
     "rate":12.4,
-    "state":"MO",
-    "name":"Dekalb County"
+    "population":12874,
+    "county":"Dekalb County"
   },
   {
-    "id":29065,
+    "state":"MO",
+    "FIPS":29065,
     "number":1455,
     "rate":12.4,
-    "state":"MO",
-    "name":"Dent County"
+    "population":15665,
+    "county":"Dent County"
   },
   {
-    "id":29067,
+    "state":"MO",
+    "FIPS":29067,
     "number":1220,
     "rate":11.7,
-    "state":"MO",
-    "name":"Douglas County"
+    "population":13598,
+    "county":"Douglas County"
   },
   {
-    "id":29069,
+    "state":"MO",
+    "FIPS":29069,
     "number":2688,
     "rate":11.7,
-    "state":"MO",
-    "name":"Dunklin County"
+    "population":31872,
+    "county":"Dunklin County"
   },
   {
-    "id":29073,
+    "state":"MO",
+    "FIPS":29073,
     "number":1337,
     "rate":11.6,
-    "state":"MO",
-    "name":"Gasconade County"
+    "population":14980,
+    "county":"Gasconade County"
   },
   {
-    "id":29071,
+    "state":"MO",
+    "FIPS":29071,
     "number":8009,
     "rate":10.7,
-    "state":"MO",
-    "name":"Franklin County"
+    "population":101386,
+    "county":"Franklin County"
   },
   {
-    "id":29075,
+    "state":"MO",
+    "FIPS":29075,
     "number":585,
     "rate":11.7,
-    "state":"MO",
-    "name":"Gentry County"
+    "population":6799,
+    "county":"Gentry County"
   },
   {
-    "id":29077,
+    "state":"MO",
+    "FIPS":29077,
     "number":17797,
     "rate":8.4,
-    "state":"MO",
-    "name":"Greene County"
+    "population":280686,
+    "county":"Greene County"
   },
   {
-    "id":29079,
+    "state":"MO",
+    "FIPS":29079,
     "number":767,
     "rate":10.2,
-    "state":"MO",
-    "name":"Grundy County"
+    "population":10323,
+    "county":"Grundy County"
   },
   {
-    "id":29081,
+    "state":"MO",
+    "FIPS":29081,
     "number":783,
     "rate":12.1,
-    "state":"MO",
-    "name":"Harrison County"
+    "population":8741,
+    "county":"Harrison County"
   },
   {
-    "id":29083,
+    "state":"MO",
+    "FIPS":29083,
     "number":1868,
     "rate":11.1,
-    "state":"MO",
-    "name":"Henry County"
+    "population":22150,
+    "county":"Henry County"
   },
   {
-    "id":29085,
+    "state":"MO",
+    "FIPS":29085,
     "number":1025,
     "rate":13.4,
-    "state":"MO",
-    "name":"Hickory County"
+    "population":9392,
+    "county":"Hickory County"
   },
   {
-    "id":29087,
+    "state":"MO",
+    "FIPS":29087,
     "number":412,
     "rate":11.3,
-    "state":"MO",
-    "name":"Holt County"
+    "population":4656,
+    "county":"Holt County"
   },
   {
-    "id":29089,
+    "state":"MO",
+    "FIPS":29089,
     "number":868,
     "rate":11.5,
-    "state":"MO",
-    "name":"Howard County"
+    "population":10181,
+    "county":"Howard County"
   },
   {
-    "id":29091,
+    "state":"MO",
+    "FIPS":29091,
     "number":3478,
     "rate":11.7,
-    "state":"MO",
-    "name":"Howell County"
+    "population":40622,
+    "county":"Howell County"
   },
   {
-    "id":29093,
+    "state":"MO",
+    "FIPS":29093,
     "number":913,
     "rate":11.6,
-    "state":"MO",
-    "name":"Iron County"
+    "population":10424,
+    "county":"Iron County"
   },
   {
-    "id":29095,
+    "state":"MO",
+    "FIPS":29095,
     "number":53087,
     "rate":10.7,
-    "state":"MO",
-    "name":"Jackson County"
+    "population":677390,
+    "county":"Jackson County"
   },
   {
-    "id":29097,
+    "state":"MO",
+    "FIPS":29097,
     "number":8757,
     "rate":10.6,
-    "state":"MO",
-    "name":"Jasper County"
+    "population":115382,
+    "county":"Jasper County"
   },
   {
-    "id":29099,
+    "state":"MO",
+    "FIPS":29099,
     "number":15381,
     "rate":9.5,
-    "state":"MO",
-    "name":"Jefferson County"
+    "population":220102,
+    "county":"Jefferson County"
   },
   {
-    "id":29101,
+    "state":"MO",
+    "FIPS":29101,
     "number":3539,
     "rate":8.9,
-    "state":"MO",
-    "name":"Johnson County"
+    "population":54418,
+    "county":"Johnson County"
   },
   {
-    "id":29103,
+    "state":"MO",
+    "FIPS":29103,
     "number":329,
     "rate":11.1,
-    "state":"MO",
-    "name":"Knox County"
+    "population":4084,
+    "county":"Knox County"
   },
   {
-    "id":29105,
+    "state":"MO",
+    "FIPS":29105,
     "number":2936,
     "rate":11.4,
-    "state":"MO",
-    "name":"Laclede County"
+    "population":35412,
+    "county":"Laclede County"
   },
   {
-    "id":29107,
+    "state":"MO",
+    "FIPS":29107,
     "number":2723,
     "rate":11.2,
-    "state":"MO",
-    "name":"Lafayette County"
+    "population":33109,
+    "county":"Lafayette County"
   },
   {
-    "id":29109,
+    "state":"MO",
+    "FIPS":29109,
     "number":3239,
     "rate":11.7,
-    "state":"MO",
-    "name":"Lawrence County"
+    "population":38373,
+    "county":"Lawrence County"
   },
   {
-    "id":29111,
+    "state":"MO",
+    "FIPS":29111,
     "number":871,
     "rate":11.7,
-    "state":"MO",
-    "name":"Lewis County"
+    "population":10160,
+    "county":"Lewis County"
   },
   {
-    "id":29113,
+    "state":"MO",
+    "FIPS":29113,
     "number":4736,
     "rate":12.6,
-    "state":"MO",
-    "name":"Lincoln County"
+    "population":53348,
+    "county":"Lincoln County"
   },
   {
-    "id":29115,
+    "state":"MO",
+    "FIPS":29115,
     "number":999,
     "rate":10.9,
-    "state":"MO",
-    "name":"Linn County"
+    "population":12486,
+    "county":"Linn County"
   },
   {
-    "id":29117,
+    "state":"MO",
+    "FIPS":29117,
     "number":1213,
     "rate":10.5,
-    "state":"MO",
-    "name":"Livingston County"
+    "population":15023,
+    "county":"Livingston County"
   },
   {
-    "id":29121,
+    "state":"MO",
+    "FIPS":29121,
     "number":1480,
     "rate":12.9,
-    "state":"MO",
-    "name":"Macon County"
+    "population":15556,
+    "county":"Macon County"
   },
   {
-    "id":29123,
+    "state":"MO",
+    "FIPS":29123,
     "number":1054,
     "rate":11.4,
-    "state":"MO",
-    "name":"Madison County"
+    "population":12467,
+    "county":"Madison County"
   },
   {
-    "id":29127,
+    "state":"MO",
+    "FIPS":29127,
     "number":2237,
     "rate":10.5,
-    "state":"MO",
-    "name":"Marion County"
+    "population":28809,
+    "county":"Marion County"
   },
   {
-    "id":29119,
+    "state":"MO",
+    "FIPS":29119,
     "number":1815,
     "rate":11.3,
-    "state":"MO",
-    "name":"McDonald County"
+    "population":22920,
+    "county":"McDonald County"
   },
   {
-    "id":29125,
+    "state":"MO",
+    "FIPS":29125,
     "number":805,
     "rate":11.9,
-    "state":"MO",
-    "name":"Maries County"
+    "population":9036,
+    "county":"Maries County"
   },
   {
-    "id":29129,
+    "state":"MO",
+    "FIPS":29129,
     "number":345,
     "rate":12.7,
-    "state":"MO",
-    "name":"Mercer County"
+    "population":3714,
+    "county":"Mercer County"
   },
   {
-    "id":29131,
+    "state":"MO",
+    "FIPS":29131,
     "number":2171,
     "rate":11.9,
-    "state":"MO",
-    "name":"Miller County"
+    "population":24753,
+    "county":"Miller County"
   },
   {
-    "id":29133,
+    "state":"MO",
+    "FIPS":29133,
     "number":1411,
     "rate":13,
-    "state":"MO",
-    "name":"Mississippi County"
+    "population":14305,
+    "county":"Mississippi County"
   },
   {
-    "id":29135,
+    "state":"MO",
+    "FIPS":29135,
     "number":1206,
     "rate":10.6,
-    "state":"MO",
-    "name":"Moniteau County"
+    "population":15671,
+    "county":"Moniteau County"
   },
   {
-    "id":29137,
+    "state":"MO",
+    "FIPS":29137,
     "number":828,
     "rate":12.7,
-    "state":"MO",
-    "name":"Monroe County"
+    "population":8686,
+    "county":"Monroe County"
   },
   {
-    "id":29139,
+    "state":"MO",
+    "FIPS":29139,
     "number":1088,
     "rate":12.1,
-    "state":"MO",
-    "name":"Montgomery County"
+    "population":12024,
+    "county":"Montgomery County"
   },
   {
-    "id":29141,
+    "state":"MO",
+    "FIPS":29141,
     "number":1764,
     "rate":11.5,
-    "state":"MO",
-    "name":"Morgan County"
+    "population":20141,
+    "county":"Morgan County"
   },
   {
-    "id":29143,
+    "state":"MO",
+    "FIPS":29143,
     "number":1809,
     "rate":13.1,
-    "state":"MO",
-    "name":"New Madrid County"
+    "population":18479,
+    "county":"New Madrid County"
   },
   {
-    "id":29145,
+    "state":"MO",
+    "FIPS":29145,
     "number":4646,
     "rate":10.8,
-    "state":"MO",
-    "name":"Newton County"
+    "population":59063,
+    "county":"Newton County"
   },
   {
-    "id":29147,
+    "state":"MO",
+    "FIPS":29147,
     "number":1740,
     "rate":10,
-    "state":"MO",
-    "name":"Nodaway County"
+    "population":23367,
+    "county":"Nodaway County"
   },
   {
-    "id":29149,
+    "state":"MO",
+    "FIPS":29149,
     "number":1010,
     "rate":12.2,
-    "state":"MO",
-    "name":"Oregon County"
+    "population":10997,
+    "county":"Oregon County"
   },
   {
-    "id":29151,
+    "state":"MO",
+    "FIPS":29151,
     "number":1142,
     "rate":11.3,
-    "state":"MO",
-    "name":"Osage County"
+    "population":13860,
+    "county":"Osage County"
   },
   {
-    "id":29153,
+    "state":"MO",
+    "FIPS":29153,
     "number":1107,
     "rate":14.7,
-    "state":"MO",
-    "name":"Ozark County"
+    "population":9624,
+    "county":"Ozark County"
   },
   {
-    "id":29155,
+    "state":"MO",
+    "FIPS":29155,
     "number":1593,
     "rate":12.5,
-    "state":"MO",
-    "name":"Pemiscot County"
+    "population":18117,
+    "county":"Pemiscot County"
   },
   {
-    "id":29157,
+    "state":"MO",
+    "FIPS":29157,
     "number":1520,
     "rate":10.9,
-    "state":"MO",
-    "name":"Perry County"
+    "population":19024,
+    "county":"Perry County"
   },
   {
-    "id":29159,
+    "state":"MO",
+    "FIPS":29159,
     "number":3893,
     "rate":12.8,
-    "state":"MO",
-    "name":"Pettis County"
+    "population":42279,
+    "county":"Pettis County"
   },
   {
-    "id":29161,
+    "state":"MO",
+    "FIPS":29161,
     "number":4013,
     "rate":12.1,
-    "state":"MO",
-    "name":"Phelps County"
+    "population":45183,
+    "county":"Phelps County"
   },
   {
-    "id":29163,
+    "state":"MO",
+    "FIPS":29163,
     "number":1592,
     "rate":11.3,
-    "state":"MO",
-    "name":"Pike County"
+    "population":18551,
+    "county":"Pike County"
   },
   {
-    "id":29165,
+    "state":"MO",
+    "FIPS":29165,
     "number":6918,
     "rate":10.2,
-    "state":"MO",
-    "name":"Platte County"
+    "population":92126,
+    "county":"Platte County"
   },
   {
-    "id":29167,
+    "state":"MO",
+    "FIPS":29167,
     "number":2582,
     "rate":11.6,
-    "state":"MO",
-    "name":"Polk County"
+    "population":31105,
+    "county":"Polk County"
   },
   {
-    "id":29169,
+    "state":"MO",
+    "FIPS":29169,
     "number":3459,
     "rate":9.4,
-    "state":"MO",
-    "name":"Pulaski County"
+    "population":53389,
+    "county":"Pulaski County"
   },
   {
-    "id":29171,
+    "state":"MO",
+    "FIPS":29171,
     "number":461,
     "rate":12.4,
-    "state":"MO",
-    "name":"Putnam County"
+    "population":4930,
+    "county":"Putnam County"
   },
   {
-    "id":29173,
+    "state":"MO",
+    "FIPS":29173,
     "number":1050,
     "rate":13.5,
-    "state":"MO",
-    "name":"Ralls County"
+    "population":10238,
+    "county":"Ralls County"
   },
   {
-    "id":29175,
+    "state":"MO",
+    "FIPS":29175,
     "number":2191,
     "rate":11.6,
-    "state":"MO",
-    "name":"Randolph County"
+    "population":25305,
+    "county":"Randolph County"
   },
   {
-    "id":29177,
+    "state":"MO",
+    "FIPS":29177,
     "number":2140,
     "rate":12.6,
-    "state":"MO",
-    "name":"Ray County"
+    "population":23058,
+    "county":"Ray County"
   },
   {
-    "id":29179,
+    "state":"MO",
+    "FIPS":29179,
     "number":638,
     "rate":12.6,
-    "state":"MO",
-    "name":"Reynolds County"
+    "population":6671,
+    "county":"Reynolds County"
   },
   {
-    "id":29181,
+    "state":"MO",
+    "FIPS":29181,
     "number":1215,
     "rate":11.6,
-    "state":"MO",
-    "name":"Ripley County"
+    "population":14035,
+    "county":"Ripley County"
   },
   {
-    "id":29195,
+    "state":"MO",
+    "FIPS":29195,
     "number":1920,
     "rate":11.1,
-    "state":"MO",
-    "name":"Saline County"
+    "population":23472,
+    "county":"Saline County"
   },
   {
-    "id":29197,
+    "state":"MO",
+    "FIPS":29197,
     "number":380,
     "rate":12,
-    "state":"MO",
-    "name":"Schuyler County"
+    "population":4388,
+    "county":"Schuyler County"
   },
   {
-    "id":29199,
+    "state":"MO",
+    "FIPS":29199,
     "number":385,
     "rate":11.4,
-    "state":"MO",
-    "name":"Scotland County"
+    "population":4872,
+    "county":"Scotland County"
   },
   {
-    "id":29201,
+    "state":"MO",
+    "FIPS":29201,
     "number":3409,
     "rate":11.9,
-    "state":"MO",
-    "name":"Scott County"
+    "population":39149,
+    "county":"Scott County"
   },
   {
-    "id":29203,
+    "state":"MO",
+    "FIPS":29203,
     "number":827,
     "rate":13.2,
-    "state":"MO",
-    "name":"Shannon County"
+    "population":8323,
+    "county":"Shannon County"
   },
   {
-    "id":29205,
+    "state":"MO",
+    "FIPS":29205,
     "number":510,
     "rate":11.2,
-    "state":"MO",
-    "name":"Shelby County"
+    "population":6226,
+    "county":"Shelby County"
   },
   {
-    "id":29183,
+    "state":"MO",
+    "FIPS":29183,
     "number":22323,
     "rate":8.4,
-    "state":"MO",
-    "name":"St. Charles County"
+    "population":368791,
+    "county":"St. Charles County"
   },
   {
-    "id":29185,
+    "state":"MO",
+    "FIPS":29185,
     "number":952,
     "rate":12.8,
-    "state":"MO",
-    "name":"St. Clair County"
+    "population":9530,
+    "county":"St. Clair County"
   },
   {
-    "id":29187,
+    "state":"MO",
+    "FIPS":29187,
     "number":6052,
     "rate":12.1,
-    "state":"MO",
-    "name":"St Francois County"
+    "population":65835,
+    "county":"St Francois County"
   },
   {
-    "id":29510,
+    "state":"MO",
+    "FIPS":29510,
     "number":30184,
     "rate":12.4,
-    "state":"MO",
-    "name":"St. Louis City"
+    "population":319274,
+    "county":"St. Louis City"
   },
   {
-    "id":29189,
+    "state":"MO",
+    "FIPS":29189,
     "number":76753,
     "rate":10.3,
-    "state":"MO",
-    "name":"St. Louis County"
+    "population":1000800,
+    "county":"St. Louis County"
   },
   {
-    "id":29186,
+    "state":"MO",
+    "FIPS":29186,
     "number":1388,
     "rate":10.4,
-    "state":"MO",
-    "name":"Ste Genevieve County"
+    "population":17872,
+    "county":"Ste Genevieve County"
   },
   {
-    "id":29207,
+    "state":"MO",
+    "FIPS":29207,
     "number":2749,
     "rate":12.2,
-    "state":"MO",
-    "name":"Stoddard County"
+    "population":29828,
+    "county":"Stoddard County"
   },
   {
-    "id":29209,
+    "state":"MO",
+    "FIPS":29209,
     "number":3165,
     "rate":12.5,
-    "state":"MO",
-    "name":"Stone County"
+    "population":31613,
+    "county":"Stone County"
   },
   {
-    "id":29211,
+    "state":"MO",
+    "FIPS":29211,
     "number":581,
     "rate":11.9,
-    "state":"MO",
-    "name":"Sullivan County"
+    "population":6525,
+    "county":"Sullivan County"
   },
   {
-    "id":29213,
+    "state":"MO",
+    "FIPS":29213,
     "number":4589,
     "rate":11.5,
-    "state":"MO",
-    "name":"Taney County"
+    "population":53062,
+    "county":"Taney County"
   },
   {
-    "id":29215,
+    "state":"MO",
+    "FIPS":29215,
     "number":2285,
     "rate":11.7,
-    "state":"MO",
-    "name":"Texas County"
+    "population":25748,
+    "county":"Texas County"
   },
   {
-    "id":29217,
+    "state":"MO",
+    "FIPS":29217,
     "number":1887,
     "rate":12.6,
-    "state":"MO",
-    "name":"Vernon County"
+    "population":20798,
+    "county":"Vernon County"
   },
   {
-    "id":29219,
+    "state":"MO",
+    "FIPS":29219,
     "number":2658,
     "rate":11,
-    "state":"MO",
-    "name":"Warren County"
+    "population":32785,
+    "county":"Warren County"
   },
   {
-    "id":29221,
+    "state":"MO",
+    "FIPS":29221,
     "number":2785,
     "rate":14.9,
-    "state":"MO",
-    "name":"Washington County"
+    "population":25091,
+    "county":"Washington County"
   },
   {
-    "id":29223,
+    "state":"MO",
+    "FIPS":29223,
     "number":1396,
     "rate":13.5,
-    "state":"MO",
-    "name":"Wayne County"
+    "population":13377,
+    "county":"Wayne County"
   },
   {
-    "id":29225,
+    "state":"MO",
+    "FIPS":29225,
     "number":2723,
     "rate":10.7,
-    "state":"MO",
-    "name":"Webster County"
+    "population":36334,
+    "county":"Webster County"
   },
   {
-    "id":29227,
+    "state":"MO",
+    "FIPS":29227,
     "number":199,
     "rate":12.3,
-    "state":"MO",
-    "name":"Worth County"
+    "population":2078,
+    "county":"Worth County"
   },
   {
-    "id":29229,
+    "state":"MO",
+    "FIPS":29229,
     "number":1765,
     "rate":13.1,
-    "state":"MO",
-    "name":"Wright County"
+    "population":18610,
+    "county":"Wright County"
   },
   {
-    "id":28001,
+    "state":"MS",
+    "FIPS":28001,
     "number":3566,
     "rate":14.6,
-    "state":"MS",
-    "name":"Adams County"
+    "population":32141,
+    "county":"Adams County"
   },
   {
-    "id":28003,
+    "state":"MS",
+    "FIPS":28003,
     "number":3934,
     "rate":14.3,
-    "state":"MS",
-    "name":"Alcorn County"
+    "population":37237,
+    "county":"Alcorn County"
   },
   {
-    "id":28005,
+    "state":"MS",
+    "FIPS":28005,
     "number":1610,
     "rate":16.4,
-    "state":"MS",
-    "name":"Amite County"
+    "population":12972,
+    "county":"Amite County"
   },
   {
-    "id":28007,
+    "state":"MS",
+    "FIPS":28007,
     "number":2038,
     "rate":14.9,
-    "state":"MS",
-    "name":"Attala County"
+    "population":19123,
+    "county":"Attala County"
   },
   {
-    "id":28009,
+    "state":"MS",
+    "FIPS":28009,
     "number":1042,
     "rate":16.2,
-    "state":"MS",
-    "name":"Benton County"
+    "population":8652,
+    "county":"Benton County"
   },
   {
-    "id":28011,
+    "state":"MS",
+    "FIPS":28011,
     "number":3537,
     "rate":14.5,
-    "state":"MS",
-    "name":"Bolivar County"
+    "population":34061,
+    "county":"Bolivar County"
   },
   {
-    "id":28013,
+    "state":"MS",
+    "FIPS":28013,
     "number":1617,
     "rate":14.9,
-    "state":"MS",
-    "name":"Calhoun County"
+    "population":14848,
+    "county":"Calhoun County"
   },
   {
-    "id":28015,
+    "state":"MS",
+    "FIPS":28015,
     "number":1403,
     "rate":17.3,
-    "state":"MS",
-    "name":"Carroll County"
+    "population":10413,
+    "county":"Carroll County"
   },
   {
-    "id":28017,
+    "state":"MS",
+    "FIPS":28017,
     "number":1928,
     "rate":15.3,
-    "state":"MS",
-    "name":"Chickasaw County"
+    "population":17406,
+    "county":"Chickasaw County"
   },
   {
-    "id":28019,
+    "state":"MS",
+    "FIPS":28019,
     "number":1022,
     "rate":16.5,
-    "state":"MS",
-    "name":"Choctaw County"
+    "population":8355,
+    "county":"Choctaw County"
   },
   {
-    "id":28021,
+    "state":"MS",
+    "FIPS":28021,
     "number":1130,
     "rate":17,
-    "state":"MS",
-    "name":"Claiborne County"
+    "population":9376,
+    "county":"Claiborne County"
   },
   {
-    "id":28023,
+    "state":"MS",
+    "FIPS":28023,
     "number":1850,
     "rate":15.2,
-    "state":"MS",
-    "name":"Clarke County"
+    "population":16495,
+    "county":"Clarke County"
   },
   {
-    "id":28025,
+    "state":"MS",
+    "FIPS":28025,
     "number":2288,
     "rate":15.4,
-    "state":"MS",
-    "name":"Clay County"
+    "population":20395,
+    "county":"Clay County"
   },
   {
-    "id":28027,
+    "state":"MS",
+    "FIPS":28027,
     "number":2949,
     "rate":16.9,
-    "state":"MS",
-    "name":"Coahoma County"
+    "population":25685,
+    "county":"Coahoma County"
   },
   {
-    "id":28029,
+    "state":"MS",
+    "FIPS":28029,
     "number":3155,
     "rate":15.1,
-    "state":"MS",
-    "name":"Copiah County"
+    "population":28902,
+    "county":"Copiah County"
   },
   {
-    "id":28031,
+    "state":"MS",
+    "FIPS":28031,
     "number":2187,
     "rate":15.5,
-    "state":"MS",
-    "name":"Covington County"
+    "population":19523,
+    "county":"Covington County"
   },
   {
-    "id":28033,
+    "state":"MS",
+    "FIPS":28033,
     "number":14686,
     "rate":12.6,
-    "state":"MS",
-    "name":"Desoto County"
+    "population":166355,
+    "county":"Desoto County"
   },
   {
-    "id":28035,
+    "state":"MS",
+    "FIPS":28035,
     "number":5864,
     "rate":10.5,
-    "state":"MS",
-    "name":"Forrest County"
+    "population":76769,
+    "county":"Forrest County"
   },
   {
-    "id":28037,
+    "state":"MS",
+    "FIPS":28037,
     "number":823,
     "rate":14.3,
-    "state":"MS",
-    "name":"Franklin County"
+    "population":7887,
+    "county":"Franklin County"
   },
   {
-    "id":28039,
+    "state":"MS",
+    "FIPS":28039,
     "number":2171,
     "rate":13.3,
-    "state":"MS",
-    "name":"George County"
+    "population":22872,
+    "county":"George County"
   },
   {
-    "id":28041,
+    "state":"MS",
+    "FIPS":28041,
     "number":1489,
     "rate":13.4,
-    "state":"MS",
-    "name":"Greene County"
+    "population":14286,
+    "county":"Greene County"
   },
   {
-    "id":28043,
+    "state":"MS",
+    "FIPS":28043,
     "number":2374,
     "rate":15,
-    "state":"MS",
-    "name":"Grenada County"
+    "population":21616,
+    "county":"Grenada County"
   },
   {
-    "id":28045,
+    "state":"MS",
+    "FIPS":28045,
     "number":4370,
     "rate":12.9,
-    "state":"MS",
-    "name":"Hancock County"
+    "population":45310,
+    "county":"Hancock County"
   },
   {
-    "id":28047,
+    "state":"MS",
+    "FIPS":28047,
     "number":18800,
     "rate":13.3,
-    "state":"MS",
-    "name":"Harrison County"
+    "population":193691,
+    "county":"Harrison County"
   },
   {
-    "id":28049,
+    "state":"MS",
+    "FIPS":28049,
     "number":22144,
     "rate":12.6,
-    "state":"MS",
-    "name":"Hinds County"
+    "population":248298,
+    "county":"Hinds County"
   },
   {
-    "id":28051,
+    "state":"MS",
+    "FIPS":28051,
     "number":2338,
     "rate":18.3,
-    "state":"MS",
-    "name":"Holmes County"
+    "population":19040,
+    "county":"Holmes County"
   },
   {
-    "id":28053,
+    "state":"MS",
+    "FIPS":28053,
     "number":1120,
     "rate":17.4,
-    "state":"MS",
-    "name":"Humphreys County"
+    "population":9208,
+    "county":"Humphreys County"
   },
   {
-    "id":28055,
+    "state":"MS",
+    "FIPS":28055,
     "number":176,
     "rate":15.8,
-    "state":"MS",
-    "name":"Issaquena County"
+    "population":1410,
+    "county":"Issaquena County"
   },
   {
-    "id":28057,
+    "state":"MS",
+    "FIPS":28057,
     "number":2146,
     "rate":12.5,
-    "state":"MS",
-    "name":"Itawamba County"
+    "population":23371,
+    "county":"Itawamba County"
   },
   {
-    "id":28059,
+    "state":"MS",
+    "FIPS":28059,
     "number":13858,
     "rate":13.6,
-    "state":"MS",
-    "name":"Jackson County"
+    "population":139969,
+    "county":"Jackson County"
   },
   {
-    "id":28061,
+    "state":"MS",
+    "FIPS":28061,
     "number":2051,
     "rate":16.8,
-    "state":"MS",
-    "name":"Jasper County"
+    "population":16535,
+    "county":"Jasper County"
   },
   {
-    "id":28063,
+    "state":"MS",
+    "FIPS":28063,
     "number":1053,
     "rate":18.4,
-    "state":"MS",
-    "name":"Jefferson County"
+    "population":7649,
+    "county":"Jefferson County"
   },
   {
-    "id":28065,
+    "state":"MS",
+    "FIPS":28065,
     "number":1358,
     "rate":14.9,
-    "state":"MS",
-    "name":"Jefferson Davis County"
+    "population":12087,
+    "county":"Jefferson Davis County"
   },
   {
-    "id":28067,
+    "state":"MS",
+    "FIPS":28067,
     "number":7073,
     "rate":14.4,
-    "state":"MS",
-    "name":"Jones County"
+    "population":68385,
+    "county":"Jones County"
   },
   {
-    "id":28069,
+    "state":"MS",
+    "FIPS":28069,
     "number":1166,
     "rate":15.3,
-    "state":"MS",
-    "name":"Kemper County"
+    "population":10366,
+    "county":"Kemper County"
   },
   {
-    "id":28071,
+    "state":"MS",
+    "FIPS":28071,
     "number":3638,
     "rate":9.8,
-    "state":"MS",
-    "name":"Lafayette County"
+    "population":50416,
+    "county":"Lafayette County"
   },
   {
-    "id":28073,
+    "state":"MS",
+    "FIPS":28073,
     "number":4374,
     "rate":10.6,
-    "state":"MS",
-    "name":"Lamar County"
+    "population":57864,
+    "county":"Lamar County"
   },
   {
-    "id":28075,
+    "state":"MS",
+    "FIPS":28075,
     "number":8645,
     "rate":14.8,
-    "state":"MS",
-    "name":"Lauderdale County"
+    "population":80271,
+    "county":"Lauderdale County"
   },
   {
-    "id":28077,
+    "state":"MS",
+    "FIPS":28077,
     "number":1504,
     "rate":16.4,
-    "state":"MS",
-    "name":"Lawrence County"
+    "population":12601,
+    "county":"Lawrence County"
   },
   {
-    "id":28079,
+    "state":"MS",
+    "FIPS":28079,
     "number":2463,
     "rate":15.4,
-    "state":"MS",
-    "name":"Leake County"
+    "population":23253,
+    "county":"Leake County"
   },
   {
-    "id":28081,
+    "state":"MS",
+    "FIPS":28081,
     "number":7715,
     "rate":12.7,
-    "state":"MS",
-    "name":"Lee County"
+    "population":85115,
+    "county":"Lee County"
   },
   {
-    "id":28083,
+    "state":"MS",
+    "FIPS":28083,
     "number":3425,
     "rate":15.6,
-    "state":"MS",
-    "name":"Leflore County"
+    "population":31566,
+    "county":"Leflore County"
   },
   {
-    "id":28085,
+    "state":"MS",
+    "FIPS":28085,
     "number":3250,
     "rate":12.9,
-    "state":"MS",
-    "name":"Lincoln County"
+    "population":34849,
+    "county":"Lincoln County"
   },
   {
-    "id":28087,
+    "state":"MS",
+    "FIPS":28087,
     "number":5841,
     "rate":13.5,
-    "state":"MS",
-    "name":"Lowndes County"
+    "population":59641,
+    "county":"Lowndes County"
   },
   {
-    "id":28089,
+    "state":"MS",
+    "FIPS":28089,
     "number":7298,
     "rate":10.4,
-    "state":"MS",
-    "name":"Madison County"
+    "population":98479,
+    "county":"Madison County"
   },
   {
-    "id":28091,
+    "state":"MS",
+    "FIPS":28091,
     "number":2574,
     "rate":13.4,
-    "state":"MS",
-    "name":"Marion County"
+    "population":26398,
+    "county":"Marion County"
   },
   {
-    "id":28093,
+    "state":"MS",
+    "FIPS":28093,
     "number":4033,
     "rate":14.8,
-    "state":"MS",
-    "name":"Marshall County"
+    "population":36587,
+    "county":"Marshall County"
   },
   {
-    "id":28095,
+    "state":"MS",
+    "FIPS":28095,
     "number":3864,
     "rate":14.3,
-    "state":"MS",
-    "name":"Monroe County"
+    "population":36378,
+    "county":"Monroe County"
   },
   {
-    "id":28097,
+    "state":"MS",
+    "FIPS":28097,
     "number":1138,
     "rate":14.5,
-    "state":"MS",
-    "name":"Montgomery County"
+    "population":10557,
+    "county":"Montgomery County"
   },
   {
-    "id":28099,
+    "state":"MS",
+    "FIPS":28099,
     "number":3029,
     "rate":14.8,
-    "state":"MS",
-    "name":"Neshoba County"
+    "population":29679,
+    "county":"Neshoba County"
   },
   {
-    "id":28101,
+    "state":"MS",
+    "FIPS":28101,
     "number":2333,
     "rate":15.2,
-    "state":"MS",
-    "name":"Newton County"
+    "population":21625,
+    "county":"Newton County"
   },
   {
-    "id":28103,
+    "state":"MS",
+    "FIPS":28103,
     "number":1515,
     "rate":19,
-    "state":"MS",
-    "name":"Noxubee County"
+    "population":11175,
+    "county":"Noxubee County"
   },
   {
-    "id":28105,
+    "state":"MS",
+    "FIPS":28105,
     "number":3517,
     "rate":9.7,
-    "state":"MS",
-    "name":"Oktibbeha County"
+    "population":48956,
+    "county":"Oktibbeha County"
   },
   {
-    "id":28107,
+    "state":"MS",
+    "FIPS":28107,
     "number":3519,
     "rate":14.4,
-    "state":"MS",
-    "name":"Panola County"
+    "population":34464,
+    "county":"Panola County"
   },
   {
-    "id":28109,
+    "state":"MS",
+    "FIPS":28109,
     "number":5800,
     "rate":14.3,
-    "state":"MS",
-    "name":"Pearl River County"
+    "population":55090,
+    "county":"Pearl River County"
   },
   {
-    "id":28111,
+    "state":"MS",
+    "FIPS":28111,
     "number":1176,
     "rate":13.2,
-    "state":"MS",
-    "name":"Perry County"
+    "population":12080,
+    "county":"Perry County"
   },
   {
-    "id":28113,
+    "state":"MS",
+    "FIPS":28113,
     "number":4498,
     "rate":16,
-    "state":"MS",
-    "name":"Pike County"
+    "population":40111,
+    "county":"Pike County"
   },
   {
-    "id":28115,
+    "state":"MS",
+    "FIPS":28115,
     "number":2932,
     "rate":13.5,
-    "state":"MS",
-    "name":"Pontotoc County"
+    "population":30345,
+    "county":"Pontotoc County"
   },
   {
-    "id":28117,
+    "state":"MS",
+    "FIPS":28117,
     "number":2852,
     "rate":15.3,
-    "state":"MS",
-    "name":"Prentiss County"
+    "population":25310,
+    "county":"Prentiss County"
   },
   {
-    "id":28119,
+    "state":"MS",
+    "FIPS":28119,
     "number":905,
     "rate":16.2,
-    "state":"MS",
-    "name":"Quitman County"
+    "population":7802,
+    "county":"Quitman County"
   },
   {
-    "id":28121,
+    "state":"MS",
+    "FIPS":28121,
     "number":12454,
     "rate":11.7,
-    "state":"MS",
-    "name":"Rankin County"
+    "population":145604,
+    "county":"Rankin County"
   },
   {
-    "id":28123,
+    "state":"MS",
+    "FIPS":28123,
     "number":2914,
     "rate":14.5,
-    "state":"MS",
-    "name":"Scott County"
+    "population":28248,
+    "county":"Scott County"
   },
   {
-    "id":28125,
+    "state":"MS",
+    "FIPS":28125,
     "number":600,
     "rate":17.3,
-    "state":"MS",
-    "name":"Sharkey County"
+    "population":4787,
+    "county":"Sharkey County"
   },
   {
-    "id":28127,
+    "state":"MS",
+    "FIPS":28127,
     "number":2780,
     "rate":14.1,
-    "state":"MS",
-    "name":"Simpson County"
+    "population":27334,
+    "county":"Simpson County"
   },
   {
-    "id":28129,
+    "state":"MS",
+    "FIPS":28129,
     "number":1675,
     "rate":14,
-    "state":"MS",
-    "name":"Smith County"
+    "population":16333,
+    "county":"Smith County"
   },
   {
-    "id":28131,
+    "state":"MS",
+    "FIPS":28131,
     "number":1721,
     "rate":13.3,
-    "state":"MS",
-    "name":"Stone County"
+    "population":18049,
+    "county":"Stone County"
   },
   {
-    "id":28133,
+    "state":"MS",
+    "FIPS":28133,
     "number":2944,
     "rate":14.2,
-    "state":"MS",
-    "name":"Sunflower County"
+    "population":28473,
+    "county":"Sunflower County"
   },
   {
-    "id":28135,
+    "state":"MS",
+    "FIPS":28135,
     "number":1754,
     "rate":15.2,
-    "state":"MS",
-    "name":"Tallahatchie County"
+    "population":15103,
+    "county":"Tallahatchie County"
   },
   {
-    "id":28137,
+    "state":"MS",
+    "FIPS":28137,
     "number":3371,
     "rate":16.7,
-    "state":"MS",
-    "name":"Tate County"
+    "population":28506,
+    "county":"Tate County"
   },
   {
-    "id":28139,
+    "state":"MS",
+    "FIPS":28139,
     "number":1945,
     "rate":12.2,
-    "state":"MS",
-    "name":"Tippah County"
+    "population":21965,
+    "county":"Tippah County"
   },
   {
-    "id":28141,
+    "state":"MS",
+    "FIPS":28141,
     "number":2055,
     "rate":13.9,
-    "state":"MS",
-    "name":"Tishomingo County"
+    "population":19589,
+    "county":"Tishomingo County"
   },
   {
-    "id":28143,
+    "state":"MS",
+    "FIPS":28143,
     "number":1182,
     "rate":16.6,
-    "state":"MS",
-    "name":"Tunica County"
+    "population":10458,
+    "county":"Tunica County"
   },
   {
-    "id":28145,
+    "state":"MS",
+    "FIPS":28145,
     "number":2384,
     "rate":12,
-    "state":"MS",
-    "name":"Union County"
+    "population":27352,
+    "county":"Union County"
   },
   {
-    "id":28147,
+    "state":"MS",
+    "FIPS":28147,
     "number":1912,
     "rate":17.5,
-    "state":"MS",
-    "name":"Walthall County"
+    "population":15088,
+    "county":"Walthall County"
   },
   {
-    "id":28149,
+    "state":"MS",
+    "FIPS":28149,
     "number":4910,
     "rate":14.1,
-    "state":"MS",
-    "name":"Warren County"
+    "population":48120,
+    "county":"Warren County"
   },
   {
-    "id":28151,
+    "state":"MS",
+    "FIPS":28151,
     "number":5305,
     "rate":15.2,
-    "state":"MS",
-    "name":"Washington County"
+    "population":50051,
+    "county":"Washington County"
   },
   {
-    "id":28153,
+    "state":"MS",
+    "FIPS":28153,
     "number":2359,
     "rate":15.9,
-    "state":"MS",
-    "name":"Wayne County"
+    "population":20635,
+    "county":"Wayne County"
   },
   {
-    "id":28155,
+    "state":"MS",
+    "FIPS":28155,
     "number":1071,
     "rate":14.4,
-    "state":"MS",
-    "name":"Webster County"
+    "population":10051,
+    "county":"Webster County"
   },
   {
-    "id":28157,
+    "state":"MS",
+    "FIPS":28157,
     "number":1368,
     "rate":19.1,
-    "state":"MS",
-    "name":"Wilkinson County"
+    "population":9451,
+    "county":"Wilkinson County"
   },
   {
-    "id":28159,
+    "state":"MS",
+    "FIPS":28159,
     "number":2179,
     "rate":15.5,
-    "state":"MS",
-    "name":"Winston County"
+    "population":18985,
+    "county":"Winston County"
   },
   {
-    "id":28161,
+    "state":"MS",
+    "FIPS":28161,
     "number":1536,
     "rate":16.6,
-    "state":"MS",
-    "name":"Yalobusha County"
+    "population":12373,
+    "county":"Yalobusha County"
   },
   {
-    "id":28163,
+    "state":"MS",
+    "FIPS":28163,
     "number":2823,
     "rate":13.6,
-    "state":"MS",
-    "name":"Yazoo County"
+    "population":28282,
+    "county":"Yazoo County"
   },
   {
-    "id":30001,
+    "state":"MT",
+    "FIPS":30001,
     "number":562,
     "rate":7.8,
-    "state":"MT",
-    "name":"Beaverhead County"
+    "population":9356,
+    "county":"Beaverhead County"
   },
   {
-    "id":30003,
+    "state":"MT",
+    "FIPS":30003,
     "number":1167,
     "rate":14.1,
-    "state":"MT",
-    "name":"Big Horn County"
+    "population":13008,
+    "county":"Big Horn County"
   },
   {
-    "id":30005,
+    "state":"MT",
+    "FIPS":30005,
     "number":493,
     "rate":11,
-    "state":"MT",
-    "name":"Blaine County"
+    "population":6637,
+    "county":"Blaine County"
   },
   {
-    "id":30007,
+    "state":"MT",
+    "FIPS":30007,
     "number":357,
     "rate":8.2,
-    "state":"MT",
-    "name":"Broadwater County"
+    "population":5762,
+    "county":"Broadwater County"
   },
   {
-    "id":30009,
+    "state":"MT",
+    "FIPS":30009,
     "number":713,
     "rate":8.9,
-    "state":"MT",
-    "name":"Carbon County"
+    "population":10109,
+    "county":"Carbon County"
   },
   {
-    "id":30011,
+    "state":"MT",
+    "FIPS":30011,
     "number":83,
     "rate":8.7,
-    "state":"MT",
-    "name":"Carter County"
+    "population":1174,
+    "county":"Carter County"
   },
   {
-    "id":30013,
+    "state":"MT",
+    "FIPS":30013,
     "number":5348,
     "rate":8.7,
-    "state":"MT",
-    "name":"Cascade County"
+    "population":81765,
+    "county":"Cascade County"
   },
   {
-    "id":30015,
+    "state":"MT",
+    "FIPS":30015,
     "number":348,
     "rate":8.2,
-    "state":"MT",
-    "name":"Chouteau County"
+    "population":5927,
+    "county":"Chouteau County"
   },
   {
-    "id":30017,
+    "state":"MT",
+    "FIPS":30017,
     "number":867,
     "rate":9.7,
-    "state":"MT",
-    "name":"Custer County"
+    "population":11845,
+    "county":"Custer County"
   },
   {
-    "id":30019,
+    "state":"MT",
+    "FIPS":30019,
     "number":129,
     "rate":9.4,
-    "state":"MT",
-    "name":"Daniels County"
+    "population":1779,
+    "county":"Daniels County"
   },
   {
-    "id":30021,
+    "state":"MT",
+    "FIPS":30021,
     "number":553,
     "rate":7.9,
-    "state":"MT",
-    "name":"Dawson County"
+    "population":9239,
+    "county":"Dawson County"
   },
   {
-    "id":30023,
+    "state":"MT",
+    "FIPS":30023,
     "number":633,
     "rate":8.6,
-    "state":"MT",
-    "name":"Deer Lodge County"
+    "population":9222,
+    "county":"Deer Lodge County"
   },
   {
-    "id":30025,
+    "state":"MT",
+    "FIPS":30025,
     "number":174,
     "rate":7.8,
-    "state":"MT",
-    "name":"Fallon County"
+    "population":3031,
+    "county":"Fallon County"
   },
   {
-    "id":30027,
+    "state":"MT",
+    "FIPS":30027,
     "number":782,
     "rate":8.7,
-    "state":"MT",
-    "name":"Fergus County"
+    "population":11439,
+    "county":"Fergus County"
   },
   {
-    "id":30029,
+    "state":"MT",
+    "FIPS":30029,
     "number":5081,
     "rate":7.4,
-    "state":"MT",
-    "name":"Flathead County"
+    "population":91692,
+    "county":"Flathead County"
   },
   {
-    "id":30031,
+    "state":"MT",
+    "FIPS":30031,
     "number":2891,
     "rate":4.2,
-    "state":"MT",
-    "name":"Gallatin County"
+    "population":92604,
+    "county":"Gallatin County"
   },
   {
-    "id":30033,
+    "state":"MT",
+    "FIPS":30033,
     "number":72,
     "rate":7.6,
-    "state":"MT",
-    "name":"Garfield County"
+    "population":1264,
+    "county":"Garfield County"
   },
   {
-    "id":30035,
+    "state":"MT",
+    "FIPS":30035,
     "number":1140,
     "rate":12.7,
-    "state":"MT",
-    "name":"Glacier County"
+    "population":13684,
+    "county":"Glacier County"
   },
   {
-    "id":30037,
+    "state":"MT",
+    "FIPS":30037,
     "number":63,
     "rate":9.7,
-    "state":"MT",
-    "name":"Golden Valley County"
+    "population":842,
+    "county":"Golden Valley County"
   },
   {
-    "id":30039,
+    "state":"MT",
+    "FIPS":30039,
     "number":229,
     "rate":8.9,
-    "state":"MT",
-    "name":"Granite County"
+    "population":3107,
+    "county":"Granite County"
   },
   {
-    "id":30041,
+    "state":"MT",
+    "FIPS":30041,
     "number":1120,
     "rate":9.7,
-    "state":"MT",
-    "name":"Hill County"
+    "population":16427,
+    "county":"Hill County"
   },
   {
-    "id":30043,
+    "state":"MT",
+    "FIPS":30043,
     "number":665,
     "rate":7.6,
-    "state":"MT",
-    "name":"Jefferson County"
+    "population":11400,
+    "county":"Jefferson County"
   },
   {
-    "id":30045,
+    "state":"MT",
+    "FIPS":30045,
     "number":141,
     "rate":8.9,
-    "state":"MT",
-    "name":"Judith Basin County"
+    "population":2021,
+    "county":"Judith Basin County"
   },
   {
-    "id":30047,
+    "state":"MT",
+    "FIPS":30047,
     "number":2241,
     "rate":10.6,
-    "state":"MT",
-    "name":"Lake County"
+    "population":28999,
+    "county":"Lake County"
   },
   {
-    "id":30049,
+    "state":"MT",
+    "FIPS":30049,
     "number":3560,
     "rate":7.3,
-    "state":"MT",
-    "name":"Lewis and Clark County"
+    "population":64845,
+    "county":"Lewis and Clark County"
   },
   {
-    "id":30051,
+    "state":"MT",
+    "FIPS":30051,
     "number":154,
     "rate":8.5,
-    "state":"MT",
-    "name":"Liberty County"
+    "population":2395,
+    "county":"Liberty County"
   },
   {
-    "id":30053,
+    "state":"MT",
+    "FIPS":30053,
     "number":1705,
     "rate":11,
-    "state":"MT",
-    "name":"Lincoln County"
+    "population":19469,
+    "county":"Lincoln County"
   },
   {
-    "id":30057,
+    "state":"MT",
+    "FIPS":30057,
     "number":491,
     "rate":7.8,
-    "state":"MT",
-    "name":"Madison County"
+    "population":7725,
+    "county":"Madison County"
   },
   {
-    "id":30055,
+    "state":"MT",
+    "FIPS":30055,
     "number":115,
     "rate":8.8,
-    "state":"MT",
-    "name":"McCone County"
+    "population":1693,
+    "county":"McCone County"
   },
   {
-    "id":30059,
+    "state":"MT",
+    "FIPS":30059,
     "number":132,
     "rate":8.8,
-    "state":"MT",
-    "name":"Meagher County"
+    "population":1897,
+    "county":"Meagher County"
   },
   {
-    "id":30061,
+    "state":"MT",
+    "FIPS":30061,
     "number":329,
     "rate":9.7,
-    "state":"MT",
-    "name":"Mineral County"
+    "population":4164,
+    "county":"Mineral County"
   },
   {
-    "id":30063,
+    "state":"MT",
+    "FIPS":30063,
     "number":3995,
     "rate":4.7,
-    "state":"MT",
-    "name":"Missoula County"
+    "population":111054,
+    "county":"Missoula County"
   },
   {
-    "id":30065,
+    "state":"MT",
+    "FIPS":30065,
     "number":317,
     "rate":8.8,
-    "state":"MT",
-    "name":"Musselshell County"
+    "population":4675,
+    "county":"Musselshell County"
   },
   {
-    "id":30067,
+    "state":"MT",
+    "FIPS":30067,
     "number":872,
     "rate":7.1,
-    "state":"MT",
-    "name":"Park County"
+    "population":15580,
+    "county":"Park County"
   },
   {
-    "id":30069,
+    "state":"MT",
+    "FIPS":30069,
     "number":36,
     "rate":9.3,
-    "state":"MT",
-    "name":"Petroleum County"
+    "population":509,
+    "county":"Petroleum County"
   },
   {
-    "id":30071,
+    "state":"MT",
+    "FIPS":30071,
     "number":296,
     "rate":9.5,
-    "state":"MT",
-    "name":"Phillips County"
+    "population":4127,
+    "county":"Phillips County"
   },
   {
-    "id":30073,
+    "state":"MT",
+    "FIPS":30073,
     "number":467,
     "rate":10.4,
-    "state":"MT",
-    "name":"Pondera County"
+    "population":6193,
+    "county":"Pondera County"
   },
   {
-    "id":30075,
+    "state":"MT",
+    "FIPS":30075,
     "number":106,
     "rate":7.6,
-    "state":"MT",
-    "name":"Powder River County"
+    "population":1755,
+    "county":"Powder River County"
   },
   {
-    "id":30077,
+    "state":"MT",
+    "FIPS":30077,
     "number":498,
     "rate":8.6,
-    "state":"MT",
-    "name":"Powell County"
+    "population":7085,
+    "county":"Powell County"
   },
   {
-    "id":30079,
+    "state":"MT",
+    "FIPS":30079,
     "number":95,
     "rate":10.1,
-    "state":"MT",
-    "name":"Prairie County"
+    "population":1157,
+    "county":"Prairie County"
   },
   {
-    "id":30081,
+    "state":"MT",
+    "FIPS":30081,
     "number":2428,
     "rate":7.8,
-    "state":"MT",
-    "name":"Ravalli County"
+    "population":40637,
+    "county":"Ravalli County"
   },
   {
-    "id":30083,
+    "state":"MT",
+    "FIPS":30083,
     "number":594,
     "rate":7.4,
-    "state":"MT",
-    "name":"Richland County"
+    "population":10794,
+    "county":"Richland County"
   },
   {
-    "id":30085,
+    "state":"MT",
+    "FIPS":30085,
     "number":916,
     "rate":12.9,
-    "state":"MT",
-    "name":"Roosevelt County"
+    "population":10885,
+    "county":"Roosevelt County"
   },
   {
-    "id":30087,
+    "state":"MT",
+    "FIPS":30087,
     "number":704,
     "rate":11,
-    "state":"MT",
-    "name":"Rosebud County"
+    "population":9382,
+    "county":"Rosebud County"
   },
   {
-    "id":30089,
+    "state":"MT",
+    "FIPS":30089,
     "number":903,
     "rate":10.1,
-    "state":"MT",
-    "name":"Sanders County"
+    "population":11383,
+    "county":"Sanders County"
   },
   {
-    "id":30091,
+    "state":"MT",
+    "FIPS":30091,
     "number":296,
     "rate":10.6,
-    "state":"MT",
-    "name":"Sheridan County"
+    "population":3580,
+    "county":"Sheridan County"
   },
   {
-    "id":30093,
+    "state":"MT",
+    "FIPS":30093,
     "number":2198,
     "rate":8.4,
-    "state":"MT",
-    "name":"Silver Bow County"
+    "population":34493,
+    "county":"Silver Bow County"
   },
   {
-    "id":30095,
+    "state":"MT",
+    "FIPS":30095,
     "number":544,
     "rate":7.8,
-    "state":"MT",
-    "name":"Stillwater County"
+    "population":9195,
+    "county":"Stillwater County"
   },
   {
-    "id":30097,
+    "state":"MT",
+    "FIPS":30097,
     "number":229,
     "rate":8.5,
-    "state":"MT",
-    "name":"Sweet Grass County"
+    "population":3587,
+    "county":"Sweet Grass County"
   },
   {
-    "id":30099,
+    "state":"MT",
+    "FIPS":30099,
     "number":414,
     "rate":9.2,
-    "state":"MT",
-    "name":"Teton County"
+    "population":6072,
+    "county":"Teton County"
   },
   {
-    "id":30101,
+    "state":"MT",
+    "FIPS":30101,
     "number":322,
     "rate":8,
-    "state":"MT",
-    "name":"Toole County"
+    "population":5231,
+    "county":"Toole County"
   },
   {
-    "id":30103,
+    "state":"MT",
+    "FIPS":30103,
     "number":53,
     "rate":9.1,
-    "state":"MT",
-    "name":"Treasure County"
+    "population":730,
+    "county":"Treasure County"
   },
   {
-    "id":30105,
+    "state":"MT",
+    "FIPS":30105,
     "number":531,
     "rate":9.4,
-    "state":"MT",
-    "name":"Valley County"
+    "population":7494,
+    "county":"Valley County"
   },
   {
-    "id":30107,
+    "state":"MT",
+    "FIPS":30107,
     "number":126,
     "rate":8.2,
-    "state":"MT",
-    "name":"Wheatland County"
+    "population":2099,
+    "county":"Wheatland County"
   },
   {
-    "id":30109,
+    "state":"MT",
+    "FIPS":30109,
     "number":75,
     "rate":9.3,
-    "state":"MT",
-    "name":"Wibaux County"
+    "population":1057,
+    "county":"Wibaux County"
   },
   {
-    "id":30111,
+    "state":"MT",
+    "FIPS":30111,
     "number":9597,
     "rate":8.5,
-    "state":"MT",
-    "name":"Yellowstone County"
+    "population":151888,
+    "county":"Yellowstone County"
   },
   {
-    "id":37001,
+    "state":"NC",
+    "FIPS":37001,
     "number":13657,
     "rate":12.1,
-    "state":"NC",
-    "name":"Alamance County"
+    "population":153672,
+    "county":"Alamance County"
   },
   {
-    "id":37003,
+    "state":"NC",
+    "FIPS":37003,
     "number":3174,
     "rate":11.3,
-    "state":"NC",
-    "name":"Alexander County"
+    "population":37012,
+    "county":"Alexander County"
   },
   {
-    "id":37005,
+    "state":"NC",
+    "FIPS":37005,
     "number":1044,
     "rate":12.1,
-    "state":"NC",
-    "name":"Alleghany County"
+    "population":10925,
+    "county":"Alleghany County"
   },
   {
-    "id":37007,
+    "state":"NC",
+    "FIPS":37007,
     "number":2826,
     "rate":14,
-    "state":"NC",
-    "name":"Anson County"
+    "population":26351,
+    "county":"Anson County"
   },
   {
-    "id":37009,
+    "state":"NC",
+    "FIPS":37009,
     "number":2204,
     "rate":10.2,
-    "state":"NC",
-    "name":"Ashe County"
+    "population":27150,
+    "county":"Ashe County"
   },
   {
-    "id":37011,
+    "state":"NC",
+    "FIPS":37011,
     "number":1428,
     "rate":10,
-    "state":"NC",
-    "name":"Avery County"
+    "population":17656,
+    "county":"Avery County"
   },
   {
-    "id":37013,
+    "state":"NC",
+    "FIPS":37013,
     "number":5197,
     "rate":14.3,
-    "state":"NC",
-    "name":"Beaufort County"
+    "population":47491,
+    "county":"Beaufort County"
   },
   {
-    "id":37017,
+    "state":"NC",
+    "FIPS":37017,
     "number":3918,
     "rate":14.9,
-    "state":"NC",
-    "name":"Bladen County"
+    "population":34906,
+    "county":"Bladen County"
   },
   {
-    "id":37015,
+    "state":"NC",
+    "FIPS":37015,
     "number":2267,
     "rate":14.1,
-    "state":"NC",
-    "name":"Bertie County"
+    "population":20601,
+    "county":"Bertie County"
   },
   {
-    "id":37019,
+    "state":"NC",
+    "FIPS":37019,
     "number":10263,
     "rate":11.4,
-    "state":"NC",
-    "name":"Brunswick County"
+    "population":112138,
+    "county":"Brunswick County"
   },
   {
-    "id":37021,
+    "state":"NC",
+    "FIPS":37021,
     "number":17561,
     "rate":9.3,
-    "state":"NC",
-    "name":"Buncombe County"
+    "population":244363,
+    "county":"Buncombe County"
   },
   {
-    "id":37023,
+    "state":"NC",
+    "FIPS":37023,
     "number":8753,
     "rate":12.8,
-    "state":"NC",
-    "name":"Burke County"
+    "population":90235,
+    "county":"Burke County"
   },
   {
-    "id":37025,
+    "state":"NC",
+    "FIPS":37025,
     "number":12782,
     "rate":9.8,
-    "state":"NC",
-    "name":"Cabarrus County"
+    "population":184487,
+    "county":"Cabarrus County"
   },
   {
-    "id":37027,
+    "state":"NC",
+    "FIPS":37027,
     "number":8692,
     "rate":13.9,
-    "state":"NC",
-    "name":"Caldwell County"
+    "population":81946,
+    "county":"Caldwell County"
   },
   {
-    "id":37029,
+    "state":"NC",
+    "FIPS":37029,
     "number":834,
     "rate":11.4,
-    "state":"NC",
-    "name":"Camden County"
+    "population":10054,
+    "county":"Camden County"
   },
   {
-    "id":37031,
+    "state":"NC",
+    "FIPS":37031,
     "number":5801,
     "rate":10.8,
-    "state":"NC",
-    "name":"Carteret County"
+    "population":67779,
+    "county":"Carteret County"
   },
   {
-    "id":37033,
+    "state":"NC",
+    "FIPS":37033,
     "number":2393,
     "rate":13.2,
-    "state":"NC",
-    "name":"Caswell County"
+    "population":23183,
+    "county":"Caswell County"
   },
   {
-    "id":37035,
+    "state":"NC",
+    "FIPS":37035,
     "number":15394,
     "rate":13.4,
-    "state":"NC",
-    "name":"Catawba County"
+    "population":154518,
+    "county":"Catawba County"
   },
   {
-    "id":37037,
+    "state":"NC",
+    "FIPS":37037,
     "number":5717,
     "rate":11.2,
-    "state":"NC",
-    "name":"Chatham County"
+    "population":65811,
+    "county":"Chatham County"
   },
   {
-    "id":37039,
+    "state":"NC",
+    "FIPS":37039,
     "number":3110,
     "rate":14.5,
-    "state":"NC",
-    "name":"Cherokee County"
+    "population":26972,
+    "county":"Cherokee County"
   },
   {
-    "id":37041,
+    "state":"NC",
+    "FIPS":37041,
     "number":1578,
     "rate":14.1,
-    "state":"NC",
-    "name":"Chowan County"
+    "population":14695,
+    "county":"Chowan County"
   },
   {
-    "id":37043,
+    "state":"NC",
+    "FIPS":37043,
     "number":1054,
     "rate":12.4,
-    "state":"NC",
-    "name":"Clay County"
+    "population":10656,
+    "county":"Clay County"
   },
   {
-    "id":37045,
+    "state":"NC",
+    "FIPS":37045,
     "number":8860,
     "rate":12.2,
-    "state":"NC",
-    "name":"Cleveland County"
+    "population":97515,
+    "county":"Cleveland County"
   },
   {
-    "id":37047,
+    "state":"NC",
+    "FIPS":37047,
     "number":6435,
     "rate":14.9,
-    "state":"NC",
-    "name":"Columbus County"
+    "population":57604,
+    "county":"Columbus County"
   },
   {
-    "id":37049,
+    "state":"NC",
+    "FIPS":37049,
     "number":8282,
     "rate":10.6,
-    "state":"NC",
-    "name":"Craven County"
+    "population":105309,
+    "county":"Craven County"
   },
   {
-    "id":37051,
+    "state":"NC",
+    "FIPS":37051,
     "number":26508,
     "rate":11.6,
-    "state":"NC",
-    "name":"Cumberland County"
+    "population":323099,
+    "county":"Cumberland County"
   },
   {
-    "id":37053,
+    "state":"NC",
+    "FIPS":37053,
     "number":1946,
     "rate":10.8,
-    "state":"NC",
-    "name":"Currituck County"
+    "population":24092,
+    "county":"Currituck County"
   },
   {
-    "id":37055,
+    "state":"NC",
+    "FIPS":37055,
     "number":2813,
     "rate":10.4,
-    "state":"NC",
-    "name":"Dare County"
+    "population":34458,
+    "county":"Dare County"
   },
   {
-    "id":37057,
+    "state":"NC",
+    "FIPS":37057,
     "number":14564,
     "rate":12,
-    "state":"NC",
-    "name":"Davidson County"
+    "population":163542,
+    "county":"Davidson County"
   },
   {
-    "id":37059,
+    "state":"NC",
+    "FIPS":37059,
     "number":3712,
     "rate":11.9,
-    "state":"NC",
-    "name":"Davie County"
+    "population":41366,
+    "county":"Davie County"
   },
   {
-    "id":37061,
+    "state":"NC",
+    "FIPS":37061,
     "number":5464,
     "rate":12.6,
-    "state":"NC",
-    "name":"Duplin County"
+    "population":59667,
+    "county":"Duplin County"
   },
   {
-    "id":37063,
+    "state":"NC",
+    "FIPS":37063,
     "number":19766,
     "rate":9.4,
-    "state":"NC",
-    "name":"Durham County"
+    "population":282308,
+    "county":"Durham County"
   },
   {
-    "id":37065,
+    "state":"NC",
+    "FIPS":37065,
     "number":6543,
     "rate":16,
-    "state":"NC",
-    "name":"Edgecombe County"
+    "population":55714,
+    "county":"Edgecombe County"
   },
   {
-    "id":37067,
+    "state":"NC",
+    "FIPS":37067,
     "number":27268,
     "rate":10.4,
-    "state":"NC",
-    "name":"Forsyth County"
+    "population":357967,
+    "county":"Forsyth County"
   },
   {
-    "id":37069,
+    "state":"NC",
+    "FIPS":37069,
     "number":6018,
     "rate":13.3,
-    "state":"NC",
-    "name":"Franklin County"
+    "population":61571,
+    "county":"Franklin County"
   },
   {
-    "id":37071,
+    "state":"NC",
+    "FIPS":37071,
     "number":22643,
     "rate":14.7,
-    "state":"NC",
-    "name":"Gaston County"
+    "population":208204,
+    "county":"Gaston County"
   },
   {
-    "id":37073,
+    "state":"NC",
+    "FIPS":37073,
     "number":1140,
     "rate":12.7,
-    "state":"NC",
-    "name":"Gates County"
+    "population":11909,
+    "county":"Gates County"
   },
   {
-    "id":37075,
+    "state":"NC",
+    "FIPS":37075,
     "number":788,
     "rate":11.8,
-    "state":"NC",
-    "name":"Graham County"
+    "population":8696,
+    "county":"Graham County"
   },
   {
-    "id":37077,
+    "state":"NC",
+    "FIPS":37077,
     "number":5914,
     "rate":13.6,
-    "state":"NC",
-    "name":"Granville County"
+    "population":57818,
+    "county":"Granville County"
   },
   {
-    "id":37079,
+    "state":"NC",
+    "FIPS":37079,
     "number":2062,
     "rate":12.7,
-    "state":"NC",
-    "name":"Greene County"
+    "population":21391,
+    "county":"Greene County"
   },
   {
-    "id":37081,
+    "state":"NC",
+    "FIPS":37081,
     "number":35635,
     "rate":9.7,
-    "state":"NC",
-    "name":"Guilford County"
+    "population":500894,
+    "county":"Guilford County"
   },
   {
-    "id":37083,
+    "state":"NC",
+    "FIPS":37083,
     "number":6108,
     "rate":15,
-    "state":"NC",
-    "name":"Halifax County"
+    "population":53923,
+    "county":"Halifax County"
   },
   {
-    "id":37085,
+    "state":"NC",
+    "FIPS":37085,
     "number":9744,
     "rate":11.5,
-    "state":"NC",
-    "name":"Harnett County"
+    "population":122213,
+    "county":"Harnett County"
   },
   {
-    "id":37087,
+    "state":"NC",
+    "FIPS":37087,
     "number":5676,
     "rate":12.2,
-    "state":"NC",
-    "name":"Haywood County"
+    "population":58782,
+    "county":"Haywood County"
   },
   {
-    "id":37089,
+    "state":"NC",
+    "FIPS":37089,
     "number":9089,
     "rate":10.8,
-    "state":"NC",
-    "name":"Henderson County"
+    "population":108115,
+    "county":"Henderson County"
   },
   {
-    "id":37091,
+    "state":"NC",
+    "FIPS":37091,
     "number":2666,
     "rate":14.4,
-    "state":"NC",
-    "name":"Hertford County"
+    "population":24432,
+    "county":"Hertford County"
   },
   {
-    "id":37093,
+    "state":"NC",
+    "FIPS":37093,
     "number":3975,
     "rate":11.5,
-    "state":"NC",
-    "name":"Hoke County"
+    "population":50467,
+    "county":"Hoke County"
   },
   {
-    "id":37095,
+    "state":"NC",
+    "FIPS":37095,
     "number":578,
     "rate":12.6,
-    "state":"NC",
-    "name":"Hyde County"
+    "population":5738,
+    "county":"Hyde County"
   },
   {
-    "id":37097,
+    "state":"NC",
+    "FIPS":37097,
     "number":11516,
     "rate":9.7,
-    "state":"NC",
-    "name":"Iredell County"
+    "population":162724,
+    "county":"Iredell County"
   },
   {
-    "id":37099,
+    "state":"NC",
+    "FIPS":37099,
     "number":4123,
     "rate":13.4,
-    "state":"NC",
-    "name":"Jackson County"
+    "population":40516,
+    "county":"Jackson County"
   },
   {
-    "id":37101,
+    "state":"NC",
+    "FIPS":37101,
     "number":15301,
     "rate":12.4,
-    "state":"NC",
-    "name":"Johnston County"
+    "population":174893,
+    "county":"Johnston County"
   },
   {
-    "id":37103,
+    "state":"NC",
+    "FIPS":37103,
     "number":1232,
     "rate":15.3,
-    "state":"NC",
-    "name":"Jones County"
+    "population":10276,
+    "county":"Jones County"
   },
   {
-    "id":37105,
+    "state":"NC",
+    "FIPS":37105,
     "number":5777,
     "rate":13.6,
-    "state":"NC",
-    "name":"Lee County"
+    "population":59368,
+    "county":"Lee County"
   },
   {
-    "id":37107,
+    "state":"NC",
+    "FIPS":37107,
     "number":6508,
     "rate":14.9,
-    "state":"NC",
-    "name":"Lenoir County"
+    "population":59181,
+    "county":"Lenoir County"
   },
   {
-    "id":37109,
+    "state":"NC",
+    "FIPS":37109,
     "number":6779,
     "rate":11.4,
-    "state":"NC",
-    "name":"Lincoln County"
+    "population":78973,
+    "county":"Lincoln County"
   },
   {
-    "id":37113,
+    "state":"NC",
+    "FIPS":37113,
     "number":2990,
     "rate":11.2,
-    "state":"NC",
-    "name":"Macon County"
+    "population":33796,
+    "county":"Macon County"
   },
   {
-    "id":37115,
+    "state":"NC",
+    "FIPS":37115,
     "number":1670,
     "rate":10.4,
-    "state":"NC",
-    "name":"Madison County"
+    "population":20882,
+    "county":"Madison County"
   },
   {
-    "id":37117,
+    "state":"NC",
+    "FIPS":37117,
     "number":2959,
     "rate":16.2,
-    "state":"NC",
-    "name":"Martin County"
+    "population":23886,
+    "county":"Martin County"
   },
   {
-    "id":37111,
+    "state":"NC",
+    "FIPS":37111,
     "number":4776,
     "rate":13.9,
-    "state":"NC",
-    "name":"McDowell County"
+    "population":44967,
+    "county":"McDowell County"
   },
   {
-    "id":37119,
+    "state":"NC",
+    "FIPS":37119,
     "number":59154,
     "rate":8.4,
-    "state":"NC",
-    "name":"Mecklenburg County"
+    "population":968779,
+    "county":"Mecklenburg County"
   },
   {
-    "id":37121,
+    "state":"NC",
+    "FIPS":37121,
     "number":1719,
     "rate":14.1,
-    "state":"NC",
-    "name":"Mitchell County"
+    "population":15367,
+    "county":"Mitchell County"
   },
   {
-    "id":37123,
+    "state":"NC",
+    "FIPS":37123,
     "number":2732,
     "rate":13.4,
-    "state":"NC",
-    "name":"Montgomery County"
+    "population":27637,
+    "county":"Montgomery County"
   },
   {
-    "id":37125,
+    "state":"NC",
+    "FIPS":37125,
     "number":8021,
     "rate":11.6,
-    "state":"NC",
-    "name":"Moore County"
+    "population":90320,
+    "county":"Moore County"
   },
   {
-    "id":37127,
+    "state":"NC",
+    "FIPS":37127,
     "number":8473,
     "rate":12,
-    "state":"NC",
-    "name":"Nash County"
+    "population":95320,
+    "county":"Nash County"
   },
   {
-    "id":37129,
+    "state":"NC",
+    "FIPS":37129,
     "number":13503,
     "rate":8.4,
-    "state":"NC",
-    "name":"New Hanover County"
+    "population":209134,
+    "county":"New Hanover County"
   },
   {
-    "id":37131,
+    "state":"NC",
+    "FIPS":37131,
     "number":2619,
     "rate":15.8,
-    "state":"NC",
-    "name":"Northampton County"
+    "population":21311,
+    "county":"Northampton County"
   },
   {
-    "id":37133,
+    "state":"NC",
+    "FIPS":37133,
     "number":11485,
     "rate":8.8,
-    "state":"NC",
-    "name":"Onslow County"
+    "population":183888,
+    "county":"Onslow County"
   },
   {
-    "id":37135,
+    "state":"NC",
+    "FIPS":37135,
     "number":7667,
     "rate":7.6,
-    "state":"NC",
-    "name":"Orange County"
+    "population":137728,
+    "county":"Orange County"
   },
   {
-    "id":37137,
+    "state":"NC",
+    "FIPS":37137,
     "number":1587,
     "rate":15,
-    "state":"NC",
-    "name":"Pamlico County"
+    "population":13045,
+    "county":"Pamlico County"
   },
   {
-    "id":37139,
+    "state":"NC",
+    "FIPS":37139,
     "number":4319,
     "rate":14.4,
-    "state":"NC",
-    "name":"Pasquotank County"
+    "population":40528,
+    "county":"Pasquotank County"
   },
   {
-    "id":37141,
+    "state":"NC",
+    "FIPS":37141,
     "number":4985,
     "rate":12.2,
-    "state":"NC",
-    "name":"Pender County"
+    "population":53967,
+    "county":"Pender County"
   },
   {
-    "id":37143,
+    "state":"NC",
+    "FIPS":37143,
     "number":1555,
     "rate":14.8,
-    "state":"NC",
-    "name":"Perquimans County"
+    "population":13532,
+    "county":"Perquimans County"
   },
   {
-    "id":37145,
+    "state":"NC",
+    "FIPS":37145,
     "number":3845,
     "rate":13,
-    "state":"NC",
-    "name":"Person County"
+    "population":39179,
+    "county":"Person County"
   },
   {
-    "id":37147,
+    "state":"NC",
+    "FIPS":37147,
     "number":11407,
     "rate":9,
-    "state":"NC",
-    "name":"Pitt County"
+    "population":172895,
+    "county":"Pitt County"
   },
   {
-    "id":37149,
+    "state":"NC",
+    "FIPS":37149,
     "number":2019,
     "rate":12.5,
-    "state":"NC",
-    "name":"Polk County"
+    "population":20248,
+    "county":"Polk County"
   },
   {
-    "id":37151,
+    "state":"NC",
+    "FIPS":37151,
     "number":12859,
     "rate":12.2,
-    "state":"NC",
-    "name":"Randolph County"
+    "population":142326,
+    "county":"Randolph County"
   },
   {
-    "id":37153,
+    "state":"NC",
+    "FIPS":37153,
     "number":4115,
     "rate":12.1,
-    "state":"NC",
-    "name":"Richmond County"
+    "population":46381,
+    "county":"Richmond County"
   },
   {
-    "id":37155,
+    "state":"NC",
+    "FIPS":37155,
     "number":15346,
     "rate":16.1,
-    "state":"NC",
-    "name":"Robeson County"
+    "population":135368,
+    "county":"Robeson County"
   },
   {
-    "id":37157,
+    "state":"NC",
+    "FIPS":37157,
     "number":9362,
     "rate":13.2,
-    "state":"NC",
-    "name":"Rockingham County"
+    "population":92646,
+    "county":"Rockingham County"
   },
   {
-    "id":37159,
+    "state":"NC",
+    "FIPS":37159,
     "number":12686,
     "rate":12.4,
-    "state":"NC",
-    "name":"Rowan County"
+    "population":137915,
+    "county":"Rowan County"
   },
   {
-    "id":37161,
+    "state":"NC",
+    "FIPS":37161,
     "number":6605,
     "rate":12.9,
-    "state":"NC",
-    "name":"Rutherford County"
+    "population":67243,
+    "county":"Rutherford County"
   },
   {
-    "id":37163,
+    "state":"NC",
+    "FIPS":37163,
     "number":6302,
     "rate":13.6,
-    "state":"NC",
-    "name":"Sampson County"
+    "population":63895,
+    "county":"Sampson County"
   },
   {
-    "id":37165,
+    "state":"NC",
+    "FIPS":37165,
     "number":3376,
     "rate":12.8,
-    "state":"NC",
-    "name":"Scotland County"
+    "population":36157,
+    "county":"Scotland County"
   },
   {
-    "id":37167,
+    "state":"NC",
+    "FIPS":37167,
     "number":5318,
     "rate":11.7,
-    "state":"NC",
-    "name":"Stanly County"
+    "population":60493,
+    "county":"Stanly County"
   },
   {
-    "id":37169,
+    "state":"NC",
+    "FIPS":37169,
     "number":4554,
     "rate":12.7,
-    "state":"NC",
-    "name":"Stokes County"
+    "population":46756,
+    "county":"Stokes County"
   },
   {
-    "id":37171,
+    "state":"NC",
+    "FIPS":37171,
     "number":7193,
     "rate":13.1,
-    "state":"NC",
-    "name":"Surry County"
+    "population":73568,
+    "county":"Surry County"
   },
   {
-    "id":37173,
+    "state":"NC",
+    "FIPS":37173,
     "number":1688,
     "rate":16.1,
-    "state":"NC",
-    "name":"Swain County"
+    "population":14080,
+    "county":"Swain County"
   },
   {
-    "id":37175,
+    "state":"NC",
+    "FIPS":37175,
     "number":2859,
     "rate":10.9,
-    "state":"NC",
-    "name":"Transylvania County"
+    "population":32854,
+    "county":"Transylvania County"
   },
   {
-    "id":37177,
+    "state":"NC",
+    "FIPS":37177,
     "number":450,
     "rate":13.6,
-    "state":"NC",
-    "name":"Tyrrell County"
+    "population":4131,
+    "county":"Tyrrell County"
   },
   {
-    "id":37179,
+    "state":"NC",
+    "FIPS":37179,
     "number":13016,
     "rate":9.2,
-    "state":"NC",
-    "name":"Union County"
+    "population":208393,
+    "county":"Union County"
   },
   {
-    "id":37181,
+    "state":"NC",
+    "FIPS":37181,
     "number":4381,
     "rate":13.4,
-    "state":"NC",
-    "name":"Vance County"
+    "population":45074,
+    "county":"Vance County"
   },
   {
-    "id":37183,
+    "state":"NC",
+    "FIPS":37183,
     "number":57857,
     "rate":8.5,
-    "state":"NC",
-    "name":"Wake County"
+    "population":952611,
+    "county":"Wake County"
   },
   {
-    "id":37185,
+    "state":"NC",
+    "FIPS":37185,
     "number":2463,
     "rate":15.3,
-    "state":"NC",
-    "name":"Warren County"
+    "population":20594,
+    "county":"Warren County"
   },
   {
-    "id":37187,
+    "state":"NC",
+    "FIPS":37187,
     "number":1433,
     "rate":14.8,
-    "state":"NC",
-    "name":"Washington County"
+    "population":12726,
+    "county":"Washington County"
   },
   {
-    "id":37189,
+    "state":"NC",
+    "FIPS":37189,
     "number":3304,
     "rate":8.2,
-    "state":"NC",
-    "name":"Watauga County"
+    "population":52064,
+    "county":"Watauga County"
   },
   {
-    "id":37191,
+    "state":"NC",
+    "FIPS":37191,
     "number":11566,
     "rate":12.8,
-    "state":"NC",
-    "name":"Wayne County"
+    "population":124504,
+    "county":"Wayne County"
   },
   {
-    "id":37193,
+    "state":"NC",
+    "FIPS":37193,
     "number":5836,
     "rate":11.1,
-    "state":"NC",
-    "name":"Wilkes County"
+    "population":69210,
+    "county":"Wilkes County"
   },
   {
-    "id":37195,
+    "state":"NC",
+    "FIPS":37195,
     "number":8169,
     "rate":13.6,
-    "state":"NC",
-    "name":"Wilson County"
+    "population":81768,
+    "county":"Wilson County"
   },
   {
-    "id":37197,
+    "state":"NC",
+    "FIPS":37197,
     "number":2989,
     "rate":10.4,
-    "state":"NC",
-    "name":"Yadkin County"
+    "population":38056,
+    "county":"Yadkin County"
   },
   {
-    "id":37199,
+    "state":"NC",
+    "FIPS":37199,
     "number":1629,
     "rate":11.8,
-    "state":"NC",
-    "name":"Yancey County"
+    "population":17633,
+    "county":"Yancey County"
   },
   {
-    "id":38001,
+    "state":"ND",
+    "FIPS":38001,
     "number":201,
     "rate":11,
-    "state":"ND",
-    "name":"Adams County"
+    "population":2302,
+    "county":"Adams County"
   },
   {
-    "id":38003,
+    "state":"ND",
+    "FIPS":38003,
     "number":793,
     "rate":9.4,
-    "state":"ND",
-    "name":"Barnes County"
+    "population":11013,
+    "county":"Barnes County"
   },
   {
-    "id":38005,
+    "state":"ND",
+    "FIPS":38005,
     "number":496,
     "rate":11.6,
-    "state":"ND",
-    "name":"Benson County"
+    "population":6762,
+    "county":"Benson County"
   },
   {
-    "id":38007,
+    "state":"ND",
+    "FIPS":38007,
     "number":64,
     "rate":8.8,
-    "state":"ND",
-    "name":"Billings County"
+    "population":913,
+    "county":"Billings County"
   },
   {
-    "id":38009,
+    "state":"ND",
+    "FIPS":38009,
     "number":484,
     "rate":9.6,
-    "state":"ND",
-    "name":"Bottineau County"
+    "population":6583,
+    "county":"Bottineau County"
   },
   {
-    "id":38011,
+    "state":"ND",
+    "FIPS":38011,
     "number":245,
     "rate":10.2,
-    "state":"ND",
-    "name":"Bowman County"
+    "population":3220,
+    "county":"Bowman County"
   },
   {
-    "id":38013,
+    "state":"ND",
+    "FIPS":38013,
     "number":157,
     "rate":9.5,
-    "state":"ND",
-    "name":"Burke County"
+    "population":2170,
+    "county":"Burke County"
   },
   {
-    "id":38015,
+    "state":"ND",
+    "FIPS":38015,
     "number":5128,
     "rate":8,
-    "state":"ND",
-    "name":"Burleigh County"
+    "population":86073,
+    "county":"Burleigh County"
   },
   {
-    "id":38017,
+    "state":"ND",
+    "FIPS":38017,
     "number":8533,
     "rate":7.3,
-    "state":"ND",
-    "name":"Cass County"
+    "population":156839,
+    "county":"Cass County"
   },
   {
-    "id":38019,
+    "state":"ND",
+    "FIPS":38019,
     "number":344,
     "rate":11.2,
-    "state":"ND",
-    "name":"Cavalier County"
+    "population":3943,
+    "county":"Cavalier County"
   },
   {
-    "id":38021,
+    "state":"ND",
+    "FIPS":38021,
     "number":442,
     "rate":11.4,
-    "state":"ND",
-    "name":"Dickey County"
+    "population":5245,
+    "county":"Dickey County"
   },
   {
-    "id":38023,
+    "state":"ND",
+    "FIPS":38023,
     "number":178,
     "rate":10,
-    "state":"ND",
-    "name":"Divide County"
+    "population":2233,
+    "county":"Divide County"
   },
   {
-    "id":38025,
+    "state":"ND",
+    "FIPS":38025,
     "number":317,
     "rate":10.6,
-    "state":"ND",
-    "name":"Dunn County"
+    "population":3974,
+    "county":"Dunn County"
   },
   {
-    "id":38027,
+    "state":"ND",
+    "FIPS":38027,
     "number":203,
     "rate":11.1,
-    "state":"ND",
-    "name":"Eddy County"
+    "population":2377,
+    "county":"Eddy County"
   },
   {
-    "id":38029,
+    "state":"ND",
+    "FIPS":38029,
     "number":310,
     "rate":11.6,
-    "state":"ND",
-    "name":"Emmons County"
+    "population":3483,
+    "county":"Emmons County"
   },
   {
-    "id":38031,
+    "state":"ND",
+    "FIPS":38031,
     "number":287,
     "rate":11.1,
-    "state":"ND",
-    "name":"Foster County"
+    "population":3392,
+    "county":"Foster County"
   },
   {
-    "id":38033,
+    "state":"ND",
+    "FIPS":38033,
     "number":123,
     "rate":9.2,
-    "state":"ND",
-    "name":"Golden Valley County"
+    "population":1799,
+    "county":"Golden Valley County"
   },
   {
-    "id":38035,
+    "state":"ND",
+    "FIPS":38035,
     "number":3343,
     "rate":6.6,
-    "state":"ND",
-    "name":"Grand Forks County"
+    "population":67701,
+    "county":"Grand Forks County"
   },
   {
-    "id":38037,
+    "state":"ND",
+    "FIPS":38037,
     "number":210,
     "rate":11.3,
-    "state":"ND",
-    "name":"Grant County"
+    "population":2337,
+    "county":"Grant County"
   },
   {
-    "id":38039,
+    "state":"ND",
+    "FIPS":38039,
     "number":219,
     "rate":11.6,
-    "state":"ND",
-    "name":"Griggs County"
+    "population":2351,
+    "county":"Griggs County"
   },
   {
-    "id":38041,
+    "state":"ND",
+    "FIPS":38041,
     "number":193,
     "rate":9.8,
-    "state":"ND",
-    "name":"Hettinger County"
+    "population":2553,
+    "county":"Hettinger County"
   },
   {
-    "id":38043,
+    "state":"ND",
+    "FIPS":38043,
     "number":171,
     "rate":9.2,
-    "state":"ND",
-    "name":"Kidder County"
+    "population":2434,
+    "county":"Kidder County"
   },
   {
-    "id":38045,
+    "state":"ND",
+    "FIPS":38045,
     "number":371,
     "rate":11.6,
-    "state":"ND",
-    "name":"Lamoure County"
+    "population":4103,
+    "county":"Lamoure County"
   },
   {
-    "id":38047,
+    "state":"ND",
+    "FIPS":38047,
     "number":170,
     "rate":11.4,
-    "state":"ND",
-    "name":"Logan County"
+    "population":1932,
+    "county":"Logan County"
   },
   {
-    "id":38049,
+    "state":"ND",
+    "FIPS":38049,
     "number":378,
     "rate":8.6,
-    "state":"ND",
-    "name":"McHenry County"
+    "population":5784,
+    "county":"McHenry County"
   },
   {
-    "id":38051,
+    "state":"ND",
+    "FIPS":38051,
     "number":230,
     "rate":10.5,
-    "state":"ND",
-    "name":"McIntosh County"
+    "population":2774,
+    "county":"McIntosh County"
   },
   {
-    "id":38053,
+    "state":"ND",
+    "FIPS":38053,
     "number":515,
     "rate":9.2,
-    "state":"ND",
-    "name":"McKenzie County"
+    "population":7965,
+    "county":"McKenzie County"
   },
   {
-    "id":38055,
+    "state":"ND",
+    "FIPS":38055,
     "number":753,
     "rate":10.4,
-    "state":"ND",
-    "name":"McLean County"
+    "population":9371,
+    "county":"McLean County"
   },
   {
-    "id":38057,
+    "state":"ND",
+    "FIPS":38057,
     "number":599,
     "rate":9.3,
-    "state":"ND",
-    "name":"Mercer County"
+    "population":8486,
+    "county":"Mercer County"
   },
   {
-    "id":38059,
+    "state":"ND",
+    "FIPS":38059,
     "number":1680,
     "rate":8.1,
-    "state":"ND",
-    "name":"Morton County"
+    "population":28045,
+    "county":"Morton County"
   },
   {
-    "id":38061,
+    "state":"ND",
+    "FIPS":38061,
     "number":709,
     "rate":11,
-    "state":"ND",
-    "name":"Mountrail County"
+    "population":8750,
+    "county":"Mountrail County"
   },
   {
-    "id":38063,
+    "state":"ND",
+    "FIPS":38063,
     "number":276,
     "rate":11.2,
-    "state":"ND",
-    "name":"Nelson County"
+    "population":3081,
+    "county":"Nelson County"
   },
   {
-    "id":38065,
+    "state":"ND",
+    "FIPS":38065,
     "number":162,
     "rate":11.7,
-    "state":"ND",
-    "name":"Oliver County"
+    "population":1832,
+    "county":"Oliver County"
   },
   {
-    "id":38067,
+    "state":"ND",
+    "FIPS":38067,
     "number":692,
     "rate":12.4,
-    "state":"ND",
-    "name":"Pembina County"
+    "population":7261,
+    "county":"Pembina County"
   },
   {
-    "id":38069,
+    "state":"ND",
+    "FIPS":38069,
     "number":370,
     "rate":10.9,
-    "state":"ND",
-    "name":"Pierce County"
+    "population":4466,
+    "county":"Pierce County"
   },
   {
-    "id":38071,
+    "state":"ND",
+    "FIPS":38071,
     "number":825,
     "rate":9.5,
-    "state":"ND",
-    "name":"Ramsey County"
+    "population":11555,
+    "county":"Ramsey County"
   },
   {
-    "id":38073,
+    "state":"ND",
+    "FIPS":38073,
     "number":448,
     "rate":11,
-    "state":"ND",
-    "name":"Ransom County"
+    "population":5474,
+    "county":"Ransom County"
   },
   {
-    "id":38075,
+    "state":"ND",
+    "FIPS":38075,
     "number":208,
     "rate":10.8,
-    "state":"ND",
-    "name":"Renville County"
+    "population":2554,
+    "county":"Renville County"
   },
   {
-    "id":38077,
+    "state":"ND",
+    "FIPS":38077,
     "number":1068,
     "rate":9,
-    "state":"ND",
-    "name":"Richland County"
+    "population":16210,
+    "county":"Richland County"
   },
   {
-    "id":38079,
+    "state":"ND",
+    "FIPS":38079,
     "number":1215,
     "rate":13.3,
-    "state":"ND",
-    "name":"Rolette County"
+    "population":14350,
+    "county":"Rolette County"
   },
   {
-    "id":38081,
+    "state":"ND",
+    "FIPS":38081,
     "number":282,
     "rate":9.6,
-    "state":"ND",
-    "name":"Sargent County"
+    "population":3895,
+    "county":"Sargent County"
   },
   {
-    "id":38083,
+    "state":"ND",
+    "FIPS":38083,
     "number":132,
     "rate":12.7,
-    "state":"ND",
-    "name":"Sheridan County"
+    "population":1270,
+    "county":"Sheridan County"
   },
   {
-    "id":38085,
+    "state":"ND",
+    "FIPS":38085,
     "number":347,
     "rate":13.4,
-    "state":"ND",
-    "name":"Sioux County"
+    "population":4343,
+    "county":"Sioux County"
   },
   {
-    "id":38087,
+    "state":"ND",
+    "FIPS":38087,
     "number":52,
     "rate":9,
-    "state":"ND",
-    "name":"Slope County"
+    "population":759,
+    "county":"Slope County"
   },
   {
-    "id":38089,
+    "state":"ND",
+    "FIPS":38089,
     "number":1744,
     "rate":8.7,
-    "state":"ND",
-    "name":"Stark County"
+    "population":26921,
+    "county":"Stark County"
   },
   {
-    "id":38093,
+    "state":"ND",
+    "FIPS":38093,
     "number":1429,
     "rate":8.9,
-    "state":"ND",
-    "name":"Stutsman County"
+    "population":20958,
+    "county":"Stutsman County"
   },
   {
-    "id":38091,
+    "state":"ND",
+    "FIPS":38091,
     "number":182,
     "rate":11.8,
-    "state":"ND",
-    "name":"Steele County"
+    "population":1993,
+    "county":"Steele County"
   },
   {
-    "id":38095,
+    "state":"ND",
+    "FIPS":38095,
     "number":193,
     "rate":10.6,
-    "state":"ND",
-    "name":"Towner County"
+    "population":2323,
+    "county":"Towner County"
   },
   {
-    "id":38097,
+    "state":"ND",
+    "FIPS":38097,
     "number":603,
     "rate":10,
-    "state":"ND",
-    "name":"Traill County"
+    "population":8073,
+    "county":"Traill County"
   },
   {
-    "id":38099,
+    "state":"ND",
+    "FIPS":38099,
     "number":889,
     "rate":10.6,
-    "state":"ND",
-    "name":"Walsh County"
+    "population":11054,
+    "county":"Walsh County"
   },
   {
-    "id":38101,
+    "state":"ND",
+    "FIPS":38101,
     "number":3849,
     "rate":8,
-    "state":"ND",
-    "name":"Ward County"
+    "population":65480,
+    "county":"Ward County"
   },
   {
-    "id":38103,
+    "state":"ND",
+    "FIPS":38103,
     "number":405,
     "rate":12,
-    "state":"ND",
-    "name":"Wells County"
+    "population":4260,
+    "county":"Wells County"
   },
   {
-    "id":38105,
+    "state":"ND",
+    "FIPS":38105,
     "number":1757,
     "rate":8.9,
-    "state":"ND",
-    "name":"Williams County"
+    "population":26686,
+    "county":"Williams County"
   },
   {
-    "id":31001,
+    "state":"NE",
+    "FIPS":31001,
     "number":2118,
     "rate":9.3,
-    "state":"NE",
-    "name":"Adams County"
+    "population":31384,
+    "county":"Adams County"
   },
   {
-    "id":31003,
+    "state":"NE",
+    "FIPS":31003,
     "number":517,
     "rate":10.7,
-    "state":"NE",
-    "name":"Antelope County"
+    "population":6520,
+    "county":"Antelope County"
   },
   {
-    "id":31005,
+    "state":"NE",
+    "FIPS":31005,
     "number":29,
     "rate":8.9,
-    "state":"NE",
-    "name":"Arthur County"
+    "population":482,
+    "county":"Arthur County"
   },
   {
-    "id":31007,
+    "state":"NE",
+    "FIPS":31007,
     "number":70,
     "rate":11.7,
-    "state":"NE",
-    "name":"Banner County"
+    "population":773,
+    "county":"Banner County"
   },
   {
-    "id":31009,
+    "state":"NE",
+    "FIPS":31009,
     "number":35,
     "rate":9.2,
-    "state":"NE",
-    "name":"Blaine County"
+    "population":512,
+    "county":"Blaine County"
   },
   {
-    "id":31011,
+    "state":"NE",
+    "FIPS":31011,
     "number":415,
     "rate":10.3,
-    "state":"NE",
-    "name":"Boone County"
+    "population":5407,
+    "county":"Boone County"
   },
   {
-    "id":31013,
+    "state":"NE",
+    "FIPS":31013,
     "number":917,
     "rate":11.2,
-    "state":"NE",
-    "name":"Box Butte County"
+    "population":11291,
+    "county":"Box Butte County"
   },
   {
-    "id":31015,
+    "state":"NE",
+    "FIPS":31015,
     "number":186,
     "rate":11.7,
-    "state":"NE",
-    "name":"Boyd County"
+    "population":2059,
+    "county":"Boyd County"
   },
   {
-    "id":31017,
+    "state":"NE",
+    "FIPS":31017,
     "number":256,
     "rate":11.1,
-    "state":"NE",
-    "name":"Brown County"
+    "population":3021,
+    "county":"Brown County"
   },
   {
-    "id":31019,
+    "state":"NE",
+    "FIPS":31019,
     "number":2297,
     "rate":6.7,
-    "state":"NE",
-    "name":"Buffalo County"
+    "population":47644,
+    "county":"Buffalo County"
   },
   {
-    "id":31021,
+    "state":"NE",
+    "FIPS":31021,
     "number":523,
     "rate":10.4,
-    "state":"NE",
-    "name":"Burt County"
+    "population":6672,
+    "county":"Burt County"
   },
   {
-    "id":31023,
+    "state":"NE",
+    "FIPS":31023,
     "number":511,
     "rate":8.4,
-    "state":"NE",
-    "name":"Butler County"
+    "population":8308,
+    "county":"Butler County"
   },
   {
-    "id":31025,
+    "state":"NE",
+    "FIPS":31025,
     "number":1636,
     "rate":8.9,
-    "state":"NE",
-    "name":"Cass County"
+    "population":25159,
+    "county":"Cass County"
   },
   {
-    "id":31027,
+    "state":"NE",
+    "FIPS":31027,
     "number":575,
     "rate":9,
-    "state":"NE",
-    "name":"Cedar County"
+    "population":8770,
+    "county":"Cedar County"
   },
   {
-    "id":31029,
+    "state":"NE",
+    "FIPS":31029,
     "number":285,
     "rate":9.6,
-    "state":"NE",
-    "name":"Chase County"
+    "population":4033,
+    "county":"Chase County"
   },
   {
-    "id":31031,
+    "state":"NE",
+    "FIPS":31031,
     "number":356,
     "rate":8.2,
-    "state":"NE",
-    "name":"Cherry County"
+    "population":5738,
+    "county":"Cherry County"
   },
   {
-    "id":31033,
+    "state":"NE",
+    "FIPS":31033,
     "number":592,
     "rate":8,
-    "state":"NE",
-    "name":"Cheyenne County"
+    "population":10062,
+    "county":"Cheyenne County"
   },
   {
-    "id":31035,
+    "state":"NE",
+    "FIPS":31035,
     "number":420,
     "rate":8.9,
-    "state":"NE",
-    "name":"Clay County"
+    "population":6407,
+    "county":"Clay County"
   },
   {
-    "id":31037,
+    "state":"NE",
+    "FIPS":31037,
     "number":558,
     "rate":7.8,
-    "state":"NE",
-    "name":"Colfax County"
+    "population":10541,
+    "county":"Colfax County"
   },
   {
-    "id":31039,
+    "state":"NE",
+    "FIPS":31039,
     "number":499,
     "rate":7.5,
-    "state":"NE",
-    "name":"Cuming County"
+    "population":9090,
+    "county":"Cuming County"
   },
   {
-    "id":31041,
+    "state":"NE",
+    "FIPS":31041,
     "number":832,
     "rate":10.4,
-    "state":"NE",
-    "name":"Custer County"
+    "population":10788,
+    "county":"Custer County"
   },
   {
-    "id":31043,
+    "state":"NE",
+    "FIPS":31043,
     "number":1332,
     "rate":9.4,
-    "state":"NE",
-    "name":"Dakota County"
+    "population":20837,
+    "county":"Dakota County"
   },
   {
-    "id":31045,
+    "state":"NE",
+    "FIPS":31045,
     "number":661,
     "rate":9.8,
-    "state":"NE",
-    "name":"Dawes County"
+    "population":9167,
+    "county":"Dawes County"
   },
   {
-    "id":31047,
+    "state":"NE",
+    "FIPS":31047,
     "number":1552,
     "rate":9.3,
-    "state":"NE",
-    "name":"Dawson County"
+    "population":24100,
+    "county":"Dawson County"
   },
   {
-    "id":31049,
+    "state":"NE",
+    "FIPS":31049,
     "number":163,
     "rate":10.8,
-    "state":"NE",
-    "name":"Deuel County"
+    "population":1973,
+    "county":"Deuel County"
   },
   {
-    "id":31051,
+    "state":"NE",
+    "FIPS":31051,
     "number":372,
     "rate":8.7,
-    "state":"NE",
-    "name":"Dixon County"
+    "population":5907,
+    "county":"Dixon County"
   },
   {
-    "id":31053,
+    "state":"NE",
+    "FIPS":31053,
     "number":2506,
     "rate":9.3,
-    "state":"NE",
-    "name":"Dodge County"
+    "population":36670,
+    "county":"Dodge County"
   },
   {
-    "id":31055,
+    "state":"NE",
+    "FIPS":31055,
     "number":33157,
     "rate":8.7,
-    "state":"NE",
-    "name":"Douglas County"
+    "population":531309,
+    "county":"Douglas County"
   },
   {
-    "id":31057,
+    "state":"NE",
+    "FIPS":31057,
     "number":163,
     "rate":10.9,
-    "state":"NE",
-    "name":"Dundy County"
+    "population":1991,
+    "county":"Dundy County"
   },
   {
-    "id":31059,
+    "state":"NE",
+    "FIPS":31059,
     "number":414,
     "rate":9.5,
-    "state":"NE",
-    "name":"Fillmore County"
+    "population":5748,
+    "county":"Fillmore County"
   },
   {
-    "id":31061,
+    "state":"NE",
+    "FIPS":31061,
     "number":247,
     "rate":10.1,
-    "state":"NE",
-    "name":"Franklin County"
+    "population":3190,
+    "county":"Franklin County"
   },
   {
-    "id":31063,
+    "state":"NE",
+    "FIPS":31063,
     "number":189,
     "rate":9.3,
-    "state":"NE",
-    "name":"Frontier County"
+    "population":2731,
+    "county":"Frontier County"
   },
   {
-    "id":31065,
+    "state":"NE",
+    "FIPS":31065,
     "number":451,
     "rate":12.2,
-    "state":"NE",
-    "name":"Furnas County"
+    "population":4903,
+    "county":"Furnas County"
   },
   {
-    "id":31067,
+    "state":"NE",
+    "FIPS":31067,
     "number":1807,
     "rate":11,
-    "state":"NE",
-    "name":"Gage County"
+    "population":21735,
+    "county":"Gage County"
   },
   {
-    "id":31069,
+    "state":"NE",
+    "FIPS":31069,
     "number":165,
     "rate":10.4,
-    "state":"NE",
-    "name":"Garden County"
+    "population":1962,
+    "county":"Garden County"
   },
   {
-    "id":31071,
+    "state":"NE",
+    "FIPS":31071,
     "number":154,
     "rate":9.9,
-    "state":"NE",
-    "name":"Garfield County"
+    "population":1991,
+    "county":"Garfield County"
   },
   {
-    "id":31073,
+    "state":"NE",
+    "FIPS":31073,
     "number":146,
     "rate":9.7,
-    "state":"NE",
-    "name":"Gosper County"
+    "population":2038,
+    "county":"Gosper County"
   },
   {
-    "id":31075,
+    "state":"NE",
+    "FIPS":31075,
     "number":49,
     "rate":9.9,
-    "state":"NE",
-    "name":"Grant County"
+    "population":615,
+    "county":"Grant County"
   },
   {
-    "id":31077,
+    "state":"NE",
+    "FIPS":31077,
     "number":170,
     "rate":9.2,
-    "state":"NE",
-    "name":"Greeley County"
+    "population":2457,
+    "county":"Greeley County"
   },
   {
-    "id":31079,
+    "state":"NE",
+    "FIPS":31079,
     "number":3689,
     "rate":8.7,
-    "state":"NE",
-    "name":"Hall County"
+    "population":60335,
+    "county":"Hall County"
   },
   {
-    "id":31081,
+    "state":"NE",
+    "FIPS":31081,
     "number":479,
     "rate":7.3,
-    "state":"NE",
-    "name":"Hamilton County"
+    "population":9025,
+    "county":"Hamilton County"
   },
   {
-    "id":31083,
+    "state":"NE",
+    "FIPS":31083,
     "number":256,
     "rate":9.7,
-    "state":"NE",
-    "name":"Harlan County"
+    "population":3426,
+    "county":"Harlan County"
   },
   {
-    "id":31085,
+    "state":"NE",
+    "FIPS":31085,
     "number":75,
     "rate":10.2,
-    "state":"NE",
-    "name":"Hayes County"
+    "population":947,
+    "county":"Hayes County"
   },
   {
-    "id":31087,
+    "state":"NE",
+    "FIPS":31087,
     "number":227,
     "rate":10.2,
-    "state":"NE",
-    "name":"Hitchcock County"
+    "population":2883,
+    "county":"Hitchcock County"
   },
   {
-    "id":31089,
+    "state":"NE",
+    "FIPS":31089,
     "number":641,
     "rate":8.3,
-    "state":"NE",
-    "name":"Holt County"
+    "population":10409,
+    "county":"Holt County"
   },
   {
-    "id":31091,
+    "state":"NE",
+    "FIPS":31091,
     "number":58,
     "rate":10.5,
-    "state":"NE",
-    "name":"Hooker County"
+    "population":711,
+    "county":"Hooker County"
   },
   {
-    "id":31093,
+    "state":"NE",
+    "FIPS":31093,
     "number":486,
     "rate":10.4,
-    "state":"NE",
-    "name":"Howard County"
+    "population":6305,
+    "county":"Howard County"
   },
   {
-    "id":31095,
+    "state":"NE",
+    "FIPS":31095,
     "number":641,
     "rate":11.2,
-    "state":"NE",
-    "name":"Jefferson County"
+    "population":7551,
+    "county":"Jefferson County"
   },
   {
-    "id":31097,
+    "state":"NE",
+    "FIPS":31097,
     "number":365,
     "rate":9,
-    "state":"NE",
-    "name":"Johnson County"
+    "population":5164,
+    "county":"Johnson County"
   },
   {
-    "id":31099,
+    "state":"NE",
+    "FIPS":31099,
     "number":384,
     "rate":8,
-    "state":"NE",
-    "name":"Kearney County"
+    "population":6534,
+    "county":"Kearney County"
   },
   {
-    "id":31101,
+    "state":"NE",
+    "FIPS":31101,
     "number":564,
     "rate":8.9,
-    "state":"NE",
-    "name":"Keith County"
+    "population":8210,
+    "county":"Keith County"
   },
   {
-    "id":31103,
+    "state":"NE",
+    "FIPS":31103,
     "number":65,
     "rate":10.6,
-    "state":"NE",
-    "name":"Keya Paha County"
+    "population":799,
+    "county":"Keya Paha County"
   },
   {
-    "id":31105,
+    "state":"NE",
+    "FIPS":31105,
     "number":285,
     "rate":10.1,
-    "state":"NE",
-    "name":"Kimball County"
+    "population":3785,
+    "county":"Kimball County"
   },
   {
-    "id":31107,
+    "state":"NE",
+    "FIPS":31107,
     "number":638,
     "rate":10.1,
-    "state":"NE",
-    "name":"Knox County"
+    "population":8579,
+    "county":"Knox County"
   },
   {
-    "id":31109,
+    "state":"NE",
+    "FIPS":31109,
     "number":15870,
     "rate":7.4,
-    "state":"NE",
-    "name":"Lancaster County"
+    "population":293469,
+    "county":"Lancaster County"
   },
   {
-    "id":31111,
+    "state":"NE",
+    "FIPS":31111,
     "number":2663,
     "rate":10.1,
-    "state":"NE",
-    "name":"Lincoln County"
+    "population":36029,
+    "county":"Lincoln County"
   },
   {
-    "id":31113,
+    "state":"NE",
+    "FIPS":31113,
     "number":50,
     "rate":8.9,
-    "state":"NE",
-    "name":"Logan County"
+    "population":771,
+    "county":"Logan County"
   },
   {
-    "id":31115,
+    "state":"NE",
+    "FIPS":31115,
     "number":48,
     "rate":10.6,
-    "state":"NE",
-    "name":"Loup County"
+    "population":600,
+    "county":"Loup County"
   },
   {
-    "id":31119,
+    "state":"NE",
+    "FIPS":31119,
     "number":2241,
     "rate":8.8,
-    "state":"NE",
-    "name":"Madison County"
+    "population":35122,
+    "county":"Madison County"
   },
   {
-    "id":31117,
+    "state":"NE",
+    "FIPS":31117,
     "number":35,
     "rate":9.9,
-    "state":"NE",
-    "name":"McPherson County"
+    "population":505,
+    "county":"McPherson County"
   },
   {
-    "id":31121,
+    "state":"NE",
+    "FIPS":31121,
     "number":617,
     "rate":10.8,
-    "state":"NE",
-    "name":"Merrick County"
+    "population":7797,
+    "county":"Merrick County"
   },
   {
-    "id":31123,
+    "state":"NE",
+    "FIPS":31123,
     "number":316,
     "rate":8.9,
-    "state":"NE",
-    "name":"Morrill County"
+    "population":4875,
+    "county":"Morrill County"
   },
   {
-    "id":31125,
+    "state":"NE",
+    "FIPS":31125,
     "number":335,
     "rate":12,
-    "state":"NE",
-    "name":"Nance County"
+    "population":3703,
+    "county":"Nance County"
   },
   {
-    "id":31127,
+    "state":"NE",
+    "FIPS":31127,
     "number":505,
     "rate":9.5,
-    "state":"NE",
-    "name":"Nemaha County"
+    "population":7197,
+    "county":"Nemaha County"
   },
   {
-    "id":31129,
+    "state":"NE",
+    "FIPS":31129,
     "number":355,
     "rate":10.3,
-    "state":"NE",
-    "name":"Nuckolls County"
+    "population":4431,
+    "county":"Nuckolls County"
   },
   {
-    "id":31131,
+    "state":"NE",
+    "FIPS":31131,
     "number":1323,
     "rate":11.3,
-    "state":"NE",
-    "name":"Otoe County"
+    "population":15704,
+    "county":"Otoe County"
   },
   {
-    "id":31133,
+    "state":"NE",
+    "FIPS":31133,
     "number":251,
     "rate":11.8,
-    "state":"NE",
-    "name":"Pawnee County"
+    "population":2782,
+    "county":"Pawnee County"
   },
   {
-    "id":31135,
+    "state":"NE",
+    "FIPS":31135,
     "number":199,
     "rate":9.1,
-    "state":"NE",
-    "name":"Perkins County"
+    "population":2947,
+    "county":"Perkins County"
   },
   {
-    "id":31137,
+    "state":"NE",
+    "FIPS":31137,
     "number":685,
     "rate":10.1,
-    "state":"NE",
-    "name":"Phelps County"
+    "population":9216,
+    "county":"Phelps County"
   },
   {
-    "id":31139,
+    "state":"NE",
+    "FIPS":31139,
     "number":554,
     "rate":10.7,
-    "state":"NE",
-    "name":"Pierce County"
+    "population":7180,
+    "county":"Pierce County"
   },
   {
-    "id":31141,
+    "state":"NE",
+    "FIPS":31141,
     "number":1858,
     "rate":8,
-    "state":"NE",
-    "name":"Platte County"
+    "population":32558,
+    "county":"Platte County"
   },
   {
-    "id":31143,
+    "state":"NE",
+    "FIPS":31143,
     "number":380,
     "rate":9.7,
-    "state":"NE",
-    "name":"Polk County"
+    "population":5282,
+    "county":"Polk County"
   },
   {
-    "id":31145,
+    "state":"NE",
+    "FIPS":31145,
     "number":766,
     "rate":9.4,
-    "state":"NE",
-    "name":"Red Willow County"
+    "population":11013,
+    "county":"Red Willow County"
   },
   {
-    "id":31147,
+    "state":"NE",
+    "FIPS":31147,
     "number":694,
     "rate":10.9,
-    "state":"NE",
-    "name":"Richardson County"
+    "population":8267,
+    "county":"Richardson County"
   },
   {
-    "id":31149,
+    "state":"NE",
+    "FIPS":31149,
     "number":125,
     "rate":11.6,
-    "state":"NE",
-    "name":"Rock County"
+    "population":1393,
+    "county":"Rock County"
   },
   {
-    "id":31151,
+    "state":"NE",
+    "FIPS":31151,
     "number":847,
     "rate":8.2,
-    "state":"NE",
-    "name":"Saline County"
+    "population":14447,
+    "county":"Saline County"
   },
   {
-    "id":31153,
+    "state":"NE",
+    "FIPS":31153,
     "number":9825,
     "rate":8.6,
-    "state":"NE",
-    "name":"Sarpy County"
+    "population":165822,
+    "county":"Sarpy County"
   },
   {
-    "id":31155,
+    "state":"NE",
+    "FIPS":31155,
     "number":1233,
     "rate":8.2,
-    "state":"NE",
-    "name":"Saunders County"
+    "population":20807,
+    "county":"Saunders County"
   },
   {
-    "id":31157,
+    "state":"NE",
+    "FIPS":31157,
     "number":2854,
     "rate":10.6,
-    "state":"NE",
-    "name":"Scotts Bluff County"
+    "population":36902,
+    "county":"Scotts Bluff County"
   },
   {
-    "id":31159,
+    "state":"NE",
+    "FIPS":31159,
     "number":957,
     "rate":7.9,
-    "state":"NE",
-    "name":"Seward County"
+    "population":16965,
+    "county":"Seward County"
   },
   {
-    "id":31161,
+    "state":"NE",
+    "FIPS":31161,
     "number":431,
     "rate":10.7,
-    "state":"NE",
-    "name":"Sheridan County"
+    "population":5355,
+    "county":"Sheridan County"
   },
   {
-    "id":31163,
+    "state":"NE",
+    "FIPS":31163,
     "number":252,
     "rate":10.6,
-    "state":"NE",
-    "name":"Sherman County"
+    "population":3124,
+    "county":"Sherman County"
   },
   {
-    "id":31165,
+    "state":"NE",
+    "FIPS":31165,
     "number":85,
     "rate":8.6,
-    "state":"NE",
-    "name":"Sioux County"
+    "population":1321,
+    "county":"Sioux County"
   },
   {
-    "id":31167,
+    "state":"NE",
+    "FIPS":31167,
     "number":416,
     "rate":9.6,
-    "state":"NE",
-    "name":"Stanton County"
+    "population":6093,
+    "county":"Stanton County"
   },
   {
-    "id":31169,
+    "state":"NE",
+    "FIPS":31169,
     "number":422,
     "rate":10.6,
-    "state":"NE",
-    "name":"Thayer County"
+    "population":5154,
+    "county":"Thayer County"
   },
   {
-    "id":31171,
+    "state":"NE",
+    "FIPS":31171,
     "number":49,
     "rate":9.7,
-    "state":"NE",
-    "name":"Thomas County"
+    "population":691,
+    "county":"Thomas County"
   },
   {
-    "id":31173,
+    "state":"NE",
+    "FIPS":31173,
     "number":692,
     "rate":16.3,
-    "state":"NE",
-    "name":"Thurston County"
+    "population":6923,
+    "county":"Thurston County"
   },
   {
-    "id":31175,
+    "state":"NE",
+    "FIPS":31175,
     "number":361,
     "rate":11.3,
-    "state":"NE",
-    "name":"Valley County"
+    "population":4229,
+    "county":"Valley County"
   },
   {
-    "id":31177,
+    "state":"NE",
+    "FIPS":31177,
     "number":1243,
     "rate":8.5,
-    "state":"NE",
-    "name":"Washington County"
+    "population":20291,
+    "county":"Washington County"
   },
   {
-    "id":31179,
+    "state":"NE",
+    "FIPS":31179,
     "number":457,
     "rate":6.7,
-    "state":"NE",
-    "name":"Wayne County"
+    "population":9514,
+    "county":"Wayne County"
   },
   {
-    "id":31181,
+    "state":"NE",
+    "FIPS":31181,
     "number":279,
     "rate":9.9,
-    "state":"NE",
-    "name":"Webster County"
+    "population":3753,
+    "county":"Webster County"
   },
   {
-    "id":31183,
+    "state":"NE",
+    "FIPS":31183,
     "number":59,
     "rate":9.9,
-    "state":"NE",
-    "name":"Wheeler County"
+    "population":792,
+    "county":"Wheeler County"
   },
   {
-    "id":31185,
+    "state":"NE",
+    "FIPS":31185,
     "number":900,
     "rate":8.7,
-    "state":"NE",
-    "name":"York County"
+    "population":13815,
+    "county":"York County"
   },
   {
-    "id":33001,
+    "state":"NH",
+    "FIPS":33001,
     "number":4479,
     "rate":9.5,
-    "state":"NH",
-    "name":"Belknap County"
+    "population":60394,
+    "county":"Belknap County"
   },
   {
-    "id":33003,
+    "state":"NH",
+    "FIPS":33003,
     "number":3817,
     "rate":9.9,
-    "state":"NH",
-    "name":"Carroll County"
+    "population":47667,
+    "county":"Carroll County"
   },
   {
-    "id":33005,
+    "state":"NH",
+    "FIPS":33005,
     "number":5112,
     "rate":8.7,
-    "state":"NH",
-    "name":"Cheshire County"
+    "population":76758,
+    "county":"Cheshire County"
   },
   {
-    "id":33007,
+    "state":"NH",
+    "FIPS":33007,
     "number":2905,
     "rate":11.3,
-    "state":"NH",
-    "name":"Coos County"
+    "population":31977,
+    "county":"Coos County"
   },
   {
-    "id":33009,
+    "state":"NH",
+    "FIPS":33009,
     "number":6297,
     "rate":9.1,
-    "state":"NH",
-    "name":"Grafton County"
+    "population":89342,
+    "county":"Grafton County"
   },
   {
-    "id":33011,
+    "state":"NH",
+    "FIPS":33011,
     "number":27718,
     "rate":9.2,
-    "state":"NH",
-    "name":"Hillsborough County"
+    "population":402600,
+    "county":"Hillsborough County"
   },
   {
-    "id":33013,
+    "state":"NH",
+    "FIPS":33013,
     "number":10329,
     "rate":9.2,
-    "state":"NH",
-    "name":"Merrimack County"
+    "population":146987,
+    "county":"Merrimack County"
   },
   {
-    "id":33015,
+    "state":"NH",
+    "FIPS":33015,
     "number":20161,
     "rate":8.9,
-    "state":"NH",
-    "name":"Rockingham County"
+    "population":297841,
+    "county":"Rockingham County"
   },
   {
-    "id":33017,
+    "state":"NH",
+    "FIPS":33017,
     "number":9876,
     "rate":10.6,
-    "state":"NH",
-    "name":"Strafford County"
+    "population":124543,
+    "county":"Strafford County"
   },
   {
-    "id":33019,
+    "state":"NH",
+    "FIPS":33019,
     "number":3287,
     "rate":9.8,
-    "state":"NH",
-    "name":"Sullivan County"
+    "population":43188,
+    "county":"Sullivan County"
   },
   {
-    "id":34001,
+    "state":"NJ",
+    "FIPS":34001,
     "number":21761,
     "rate":10.6,
-    "state":"NJ",
-    "name":"Atlantic County"
+    "population":275566,
+    "county":"Atlantic County"
   },
   {
-    "id":34003,
+    "state":"NJ",
+    "FIPS":34003,
     "number":52747,
     "rate":7.6,
-    "state":"NJ",
-    "name":"Bergen County"
+    "population":920440,
+    "county":"Bergen County"
   },
   {
-    "id":34005,
+    "state":"NJ",
+    "FIPS":34005,
     "number":32387,
     "rate":9.5,
-    "state":"NJ",
-    "name":"Burlington County"
+    "population":451207,
+    "county":"Burlington County"
   },
   {
-    "id":34007,
+    "state":"NJ",
+    "FIPS":34007,
     "number":38113,
     "rate":10,
-    "state":"NJ",
-    "name":"Camden County"
+    "population":513104,
+    "county":"Camden County"
   },
   {
-    "id":34009,
+    "state":"NJ",
+    "FIPS":34009,
     "number":8747,
     "rate":11.4,
-    "state":"NJ",
-    "name":"Cape May County"
+    "population":96398,
+    "county":"Cape May County"
   },
   {
-    "id":34011,
+    "state":"NJ",
+    "FIPS":34011,
     "number":13525,
     "rate":11.6,
-    "state":"NJ",
-    "name":"Cumberland County"
+    "population":157794,
+    "county":"Cumberland County"
   },
   {
-    "id":34013,
+    "state":"NJ",
+    "FIPS":34013,
     "number":58341,
     "rate":10.2,
-    "state":"NJ",
-    "name":"Essex County"
+    "population":788425,
+    "county":"Essex County"
   },
   {
-    "id":34015,
+    "state":"NJ",
+    "FIPS":34015,
     "number":23225,
     "rate":10.9,
-    "state":"NJ",
-    "name":"Gloucester County"
+    "population":289671,
+    "county":"Gloucester County"
   },
   {
-    "id":34017,
+    "state":"NJ",
+    "FIPS":34017,
     "number":37536,
     "rate":7.4,
-    "state":"NJ",
-    "name":"Hudson County"
+    "population":656879,
+    "county":"Hudson County"
   },
   {
-    "id":34019,
+    "state":"NJ",
+    "FIPS":34019,
     "number":6060,
     "rate":6.4,
-    "state":"NJ",
-    "name":"Hunterdon County"
+    "population":126593,
+    "county":"Hunterdon County"
   },
   {
-    "id":34021,
+    "state":"NJ",
+    "FIPS":34021,
     "number":26282,
     "rate":9.6,
-    "state":"NJ",
-    "name":"Mercer County"
+    "population":369057,
+    "county":"Mercer County"
   },
   {
-    "id":34023,
+    "state":"NJ",
+    "FIPS":34023,
     "number":58321,
     "rate":9.5,
-    "state":"NJ",
-    "name":"Middlesex County"
+    "population":824447,
+    "county":"Middlesex County"
   },
   {
-    "id":34025,
+    "state":"NJ",
+    "FIPS":34025,
     "number":41276,
     "rate":8.8,
-    "state":"NJ",
-    "name":"Monmouth County"
+    "population":629176,
+    "county":"Monmouth County"
   },
   {
-    "id":34027,
+    "state":"NJ",
+    "FIPS":34027,
     "number":27963,
     "rate":7.6,
-    "state":"NJ",
-    "name":"Morris County"
+    "population":497630,
+    "county":"Morris County"
   },
   {
-    "id":34029,
+    "state":"NJ",
+    "FIPS":34029,
     "number":47249,
     "rate":10.9,
-    "state":"NJ",
-    "name":"Ocean County"
+    "population":580709,
+    "county":"Ocean County"
   },
   {
-    "id":34031,
+    "state":"NJ",
+    "FIPS":34031,
     "number":32922,
     "rate":9,
-    "state":"NJ",
-    "name":"Passaic County"
+    "population":505013,
+    "county":"Passaic County"
   },
   {
-    "id":34033,
+    "state":"NJ",
+    "FIPS":34033,
     "number":5701,
     "rate":11.6,
-    "state":"NJ",
-    "name":"Salem County"
+    "population":65664,
+    "county":"Salem County"
   },
   {
-    "id":34035,
+    "state":"NJ",
+    "FIPS":34035,
     "number":20112,
     "rate":8.3,
-    "state":"NJ",
-    "name":"Somerset County"
+    "population":328691,
+    "county":"Somerset County"
   },
   {
-    "id":34037,
+    "state":"NJ",
+    "FIPS":34037,
     "number":9038,
     "rate":8.2,
-    "state":"NJ",
-    "name":"Sussex County"
+    "population":146985,
+    "county":"Sussex County"
   },
   {
-    "id":34039,
+    "state":"NJ",
+    "FIPS":34039,
     "number":31495,
     "rate":7.9,
-    "state":"NJ",
-    "name":"Union County"
+    "population":545001,
+    "county":"Union County"
   },
   {
-    "id":34041,
+    "state":"NJ",
+    "FIPS":34041,
     "number":7006,
     "rate":8.7,
-    "state":"NJ",
-    "name":"Warren County"
+    "population":107550,
+    "county":"Warren County"
   },
   {
-    "id":35001,
+    "state":"NM",
+    "FIPS":35001,
     "number":32409,
     "rate":6.5,
-    "state":"NM",
-    "name":"Bernalillo County"
+    "population":672995,
+    "county":"Bernalillo County"
   },
   {
-    "id":35003,
+    "state":"NM",
+    "FIPS":35003,
     "number":312,
     "rate":10.2,
-    "state":"NM",
-    "name":"Catron County"
+    "population":3652,
+    "county":"Catron County"
   },
   {
-    "id":35005,
+    "state":"NM",
+    "FIPS":35005,
     "number":4834,
     "rate":10.6,
-    "state":"NM",
-    "name":"Chaves County"
+    "population":65828,
+    "county":"Chaves County"
   },
   {
-    "id":35006,
+    "state":"NM",
+    "FIPS":35006,
     "number":2563,
     "rate":13,
-    "state":"NM",
-    "name":"Cibola County"
+    "population":27318,
+    "county":"Cibola County"
   },
   {
-    "id":35007,
+    "state":"NM",
+    "FIPS":35007,
     "number":1006,
     "rate":9.8,
-    "state":"NM",
-    "name":"Colfax County"
+    "population":13230,
+    "county":"Colfax County"
   },
   {
-    "id":35009,
+    "state":"NM",
+    "FIPS":35009,
     "number":2929,
     "rate":8.3,
-    "state":"NM",
-    "name":"Curry County"
+    "population":50674,
+    "county":"Curry County"
   },
   {
-    "id":35011,
+    "state":"NM",
+    "FIPS":35011,
     "number":134,
     "rate":9.1,
-    "state":"NM",
-    "name":"De Baca County"
+    "population":1935,
+    "county":"De Baca County"
   },
   {
-    "id":35013,
+    "state":"NM",
+    "FIPS":35013,
     "number":9967,
     "rate":6.7,
-    "state":"NM",
-    "name":"Dona Ana County"
+    "population":214208,
+    "county":"Dona Ana County"
   },
   {
-    "id":35015,
+    "state":"NM",
+    "FIPS":35015,
     "number":3617,
     "rate":9.3,
-    "state":"NM",
-    "name":"Eddy County"
+    "population":54370,
+    "county":"Eddy County"
   },
   {
-    "id":35017,
+    "state":"NM",
+    "FIPS":35017,
     "number":2037,
     "rate":9.1,
-    "state":"NM",
-    "name":"Grant County"
+    "population":29339,
+    "county":"Grant County"
   },
   {
-    "id":35019,
+    "state":"NM",
+    "FIPS":35019,
     "number":308,
     "rate":8.7,
-    "state":"NM",
-    "name":"Guadalupe County"
+    "population":4607,
+    "county":"Guadalupe County"
   },
   {
-    "id":35021,
+    "state":"NM",
+    "FIPS":35021,
     "number":62,
     "rate":10.7,
-    "state":"NM",
-    "name":"Harding County"
+    "population":701,
+    "county":"Harding County"
   },
   {
-    "id":35023,
+    "state":"NM",
+    "FIPS":35023,
     "number":323,
     "rate":9.3,
-    "state":"NM",
-    "name":"Hidalgo County"
+    "population":4789,
+    "county":"Hidalgo County"
   },
   {
-    "id":35025,
+    "state":"NM",
+    "FIPS":35025,
     "number":3528,
     "rate":7.9,
-    "state":"NM",
-    "name":"Lea County"
+    "population":66286,
+    "county":"Lea County"
   },
   {
-    "id":35027,
+    "state":"NM",
+    "FIPS":35027,
     "number":1297,
     "rate":8.1,
-    "state":"NM",
-    "name":"Lincoln County"
+    "population":20208,
+    "county":"Lincoln County"
   },
   {
-    "id":35028,
+    "state":"NM",
+    "FIPS":35028,
     "number":944,
     "rate":7,
-    "state":"NM",
-    "name":"Los Alamos County"
+    "population":18162,
+    "county":"Los Alamos County"
   },
   {
-    "id":35029,
+    "state":"NM",
+    "FIPS":35029,
     "number":1732,
     "rate":9.8,
-    "state":"NM",
-    "name":"Luna County"
+    "population":25019,
+    "county":"Luna County"
   },
   {
-    "id":35031,
+    "state":"NM",
+    "FIPS":35031,
     "number":6837,
     "rate":14.2,
-    "state":"NM",
-    "name":"Mckinley County"
+    "population":72716,
+    "county":"Mckinley County"
   },
   {
-    "id":35033,
+    "state":"NM",
+    "FIPS":35033,
     "number":384,
     "rate":10.6,
-    "state":"NM",
-    "name":"Mora County"
+    "population":4679,
+    "county":"Mora County"
   },
   {
-    "id":35035,
+    "state":"NM",
+    "FIPS":35035,
     "number":4770,
     "rate":10,
-    "state":"NM",
-    "name":"Otero County"
+    "population":66102,
+    "county":"Otero County"
   },
   {
-    "id":35037,
+    "state":"NM",
+    "FIPS":35037,
     "number":700,
     "rate":10.4,
-    "state":"NM",
-    "name":"Quay County"
+    "population":8798,
+    "county":"Quay County"
   },
   {
-    "id":35039,
+    "state":"NM",
+    "FIPS":35039,
     "number":2626,
     "rate":8.9,
-    "state":"NM",
-    "name":"Rio Arriba County"
+    "population":40260,
+    "county":"Rio Arriba County"
   },
   {
-    "id":35041,
+    "state":"NM",
+    "FIPS":35041,
     "number":1336,
     "rate":9.6,
-    "state":"NM",
-    "name":"Roosevelt County"
+    "population":20336,
+    "county":"Roosevelt County"
   },
   {
-    "id":35045,
+    "state":"NM",
+    "FIPS":35045,
     "number":8684,
     "rate":9.8,
-    "state":"NM",
-    "name":"San Juan County"
+    "population":128367,
+    "county":"San Juan County"
   },
   {
-    "id":35047,
+    "state":"NM",
+    "FIPS":35047,
     "number":1952,
     "rate":8.9,
-    "state":"NM",
-    "name":"San Miguel County"
+    "population":28953,
+    "county":"San Miguel County"
   },
   {
-    "id":35043,
+    "state":"NM",
+    "FIPS":35043,
     "number":7857,
     "rate":8.1,
-    "state":"NM",
-    "name":"Sandoval County"
+    "population":135319,
+    "county":"Sandoval County"
   },
   {
-    "id":35049,
+    "state":"NM",
+    "FIPS":35049,
     "number":5611,
     "rate":4.9,
-    "state":"NM",
-    "name":"Santa Fe County"
+    "population":146385,
+    "county":"Santa Fe County"
   },
   {
-    "id":35051,
+    "state":"NM",
+    "FIPS":35051,
     "number":1013,
     "rate":10.4,
-    "state":"NM",
-    "name":"Sierra County"
+    "population":11893,
+    "county":"Sierra County"
   },
   {
-    "id":35053,
+    "state":"NM",
+    "FIPS":35053,
     "number":1248,
     "rate":9.8,
-    "state":"NM",
-    "name":"Socorro County"
+    "population":17527,
+    "county":"Socorro County"
   },
   {
-    "id":35055,
+    "state":"NM",
+    "FIPS":35055,
     "number":1871,
     "rate":7.3,
-    "state":"NM",
-    "name":"Taos County"
+    "population":32817,
+    "county":"Taos County"
   },
   {
-    "id":35057,
+    "state":"NM",
+    "FIPS":35057,
     "number":1146,
     "rate":9.6,
-    "state":"NM",
-    "name":"Torrance County"
+    "population":16072,
+    "county":"Torrance County"
   },
   {
-    "id":35059,
+    "state":"NM",
+    "FIPS":35059,
     "number":271,
     "rate":7.8,
-    "state":"NM",
-    "name":"Union County"
+    "population":4419,
+    "county":"Union County"
   },
   {
-    "id":35061,
+    "state":"NM",
+    "FIPS":35061,
     "number":4979,
     "rate":9,
-    "state":"NM",
-    "name":"Valencia County"
+    "population":76630,
+    "county":"Valencia County"
   },
   {
-    "id":32510,
+    "state":"NV",
+    "FIPS":32510,
     "number":3530,
     "rate":8.4,
-    "state":"NV",
-    "name":"Carson City"
+    "population":54578,
+    "county":"Carson City"
   },
   {
-    "id":32001,
+    "state":"NV",
+    "FIPS":32001,
     "number":1717,
     "rate":9.6,
-    "state":"NV",
-    "name":"Churchill County"
+    "population":24317,
+    "county":"Churchill County"
   },
   {
-    "id":32003,
+    "state":"NV",
+    "FIPS":32003,
     "number":125100,
     "rate":8.5,
-    "state":"NV",
-    "name":"Clark County"
+    "population":1998646,
+    "county":"Clark County"
   },
   {
-    "id":32005,
+    "state":"NV",
+    "FIPS":32005,
     "number":2845,
     "rate":7.7,
-    "state":"NV",
-    "name":"Douglas County"
+    "population":46991,
+    "county":"Douglas County"
   },
   {
-    "id":32007,
+    "state":"NV",
+    "FIPS":32007,
     "number":2746,
     "rate":7.8,
-    "state":"NV",
-    "name":"Elko County"
+    "population":51078,
+    "county":"Elko County"
   },
   {
-    "id":32009,
+    "state":"NV",
+    "FIPS":32009,
     "number":68,
     "rate":10.8,
-    "state":"NV",
-    "name":"Esmeralda County"
+    "population":763,
+    "county":"Esmeralda County"
   },
   {
-    "id":32013,
+    "state":"NV",
+    "FIPS":32013,
     "number":744,
     "rate":6.2,
-    "state":"NV",
-    "name":"Humboldt County"
+    "population":17101,
+    "county":"Humboldt County"
   },
   {
-    "id":32015,
+    "state":"NV",
+    "FIPS":32015,
     "number":329,
     "rate":7.9,
-    "state":"NV",
-    "name":"Lander County"
+    "population":5929,
+    "county":"Lander County"
   },
   {
-    "id":32011,
+    "state":"NV",
+    "FIPS":32011,
     "number":130,
     "rate":8.7,
-    "state":"NV",
-    "name":"Eureka County"
+    "population":1996,
+    "county":"Eureka County"
   },
   {
-    "id":32017,
+    "state":"NV",
+    "FIPS":32017,
     "number":331,
     "rate":8.5,
-    "state":"NV",
-    "name":"Lincoln County"
+    "population":5348,
+    "county":"Lincoln County"
   },
   {
-    "id":32019,
+    "state":"NV",
+    "FIPS":32019,
     "number":3615,
     "rate":9.5,
-    "state":"NV",
-    "name":"Lyon County"
+    "population":51158,
+    "county":"Lyon County"
   },
   {
-    "id":32021,
+    "state":"NV",
+    "FIPS":32021,
     "number":391,
     "rate":10.5,
-    "state":"NV",
-    "name":"Mineral County"
+    "population":4662,
+    "county":"Mineral County"
   },
   {
-    "id":32023,
+    "state":"NV",
+    "FIPS":32023,
     "number":3786,
     "rate":11.2,
-    "state":"NV",
-    "name":"Nye County"
+    "population":42923,
+    "county":"Nye County"
   },
   {
-    "id":32027,
+    "state":"NV",
+    "FIPS":32027,
     "number":442,
     "rate":8.2,
-    "state":"NV",
-    "name":"Pershing County"
+    "population":6765,
+    "county":"Pershing County"
   },
   {
-    "id":32029,
+    "state":"NV",
+    "FIPS":32029,
     "number":330,
     "rate":10,
-    "state":"NV",
-    "name":"Storey County"
+    "population":3915,
+    "county":"Storey County"
   },
   {
-    "id":32031,
+    "state":"NV",
+    "FIPS":32031,
     "number":22356,
     "rate":7,
-    "state":"NV",
-    "name":"Washoe County"
+    "population":429086,
+    "county":"Washoe County"
   },
   {
-    "id":32033,
+    "state":"NV",
+    "FIPS":32033,
     "number":634,
     "rate":8.3,
-    "state":"NV",
-    "name":"White Pine County"
+    "population":9989,
+    "county":"White Pine County"
   },
   {
-    "id":36001,
+    "state":"NY",
+    "FIPS":36001,
     "number":22820,
     "rate":9.8,
-    "state":"NY",
-    "name":"Albany County"
+    "population":306186,
+    "county":"Albany County"
   },
   {
-    "id":36003,
+    "state":"NY",
+    "FIPS":36003,
     "number":3575,
     "rate":10.2,
-    "state":"NY",
-    "name":"Allegany County"
+    "population":48289,
+    "county":"Allegany County"
   },
   {
-    "id":36005,
+    "state":"NY",
+    "FIPS":36005,
     "number":113337,
     "rate":11.4,
-    "state":"NY",
-    "name":"Bronx County"
+    "population":1414225,
+    "county":"Bronx County"
   },
   {
-    "id":36007,
+    "state":"NY",
+    "FIPS":36007,
     "number":16027,
     "rate":10.6,
-    "state":"NY",
-    "name":"Broome County"
+    "population":198670,
+    "county":"Broome County"
   },
   {
-    "id":36009,
+    "state":"NY",
+    "FIPS":36009,
     "number":6150,
     "rate":10.5,
-    "state":"NY",
-    "name":"Cattaraugus County"
+    "population":79342,
+    "county":"Cattaraugus County"
   },
   {
-    "id":36013,
+    "state":"NY",
+    "FIPS":36013,
     "number":10330,
     "rate":10.3,
-    "state":"NY",
-    "name":"Chautauqua County"
+    "population":133458,
+    "county":"Chautauqua County"
   },
   {
-    "id":36011,
+    "state":"NY",
+    "FIPS":36011,
     "number":6097,
     "rate":10,
-    "state":"NY",
-    "name":"Cayuga County"
+    "population":79617,
+    "county":"Cayuga County"
   },
   {
-    "id":36015,
+    "state":"NY",
+    "FIPS":36015,
     "number":7108,
     "rate":10.6,
-    "state":"NY",
-    "name":"Chemung County"
+    "population":89231,
+    "county":"Chemung County"
   },
   {
-    "id":36017,
+    "state":"NY",
+    "FIPS":36017,
     "number":4117,
     "rate":10.9,
-    "state":"NY",
-    "name":"Chenango County"
+    "population":49849,
+    "county":"Chenango County"
   },
   {
-    "id":36021,
+    "state":"NY",
+    "FIPS":36021,
     "number":4928,
     "rate":10,
-    "state":"NY",
-    "name":"Columbia County"
+    "population":62554,
+    "county":"Columbia County"
   },
   {
-    "id":36019,
+    "state":"NY",
+    "FIPS":36019,
     "number":6167,
     "rate":9.8,
-    "state":"NY",
-    "name":"Clinton County"
+    "population":81826,
+    "county":"Clinton County"
   },
   {
-    "id":36023,
+    "state":"NY",
+    "FIPS":36023,
     "number":3256,
     "rate":9,
-    "state":"NY",
-    "name":"Cortland County"
+    "population":49203,
+    "county":"Cortland County"
   },
   {
-    "id":36025,
+    "state":"NY",
+    "FIPS":36025,
     "number":3714,
     "rate":10.2,
-    "state":"NY",
-    "name":"Delaware County"
+    "population":47166,
+    "county":"Delaware County"
   },
   {
-    "id":36027,
+    "state":"NY",
+    "FIPS":36027,
     "number":20457,
     "rate":9.2,
-    "state":"NY",
-    "name":"Dutchess County"
+    "population":297340,
+    "county":"Dutchess County"
   },
   {
-    "id":36029,
+    "state":"NY",
+    "FIPS":36029,
     "number":64276,
     "rate":9.2,
-    "state":"NY",
-    "name":"Erie County"
+    "population":920205,
+    "county":"Erie County"
   },
   {
-    "id":36031,
+    "state":"NY",
+    "FIPS":36031,
     "number":3239,
     "rate":10.4,
-    "state":"NY",
-    "name":"Essex County"
+    "population":39066,
+    "county":"Essex County"
   },
   {
-    "id":36033,
+    "state":"NY",
+    "FIPS":36033,
     "number":4199,
     "rate":10.5,
-    "state":"NY",
-    "name":"Franklin County"
+    "population":51813,
+    "county":"Franklin County"
   },
   {
-    "id":36035,
+    "state":"NY",
+    "FIPS":36035,
     "number":4392,
     "rate":10.5,
-    "state":"NY",
-    "name":"Fulton County"
+    "population":55013,
+    "county":"Fulton County"
   },
   {
-    "id":36037,
+    "state":"NY",
+    "FIPS":36037,
     "number":4589,
     "rate":10.1,
-    "state":"NY",
-    "name":"Genesee County"
+    "population":59874,
+    "county":"Genesee County"
   },
   {
-    "id":36039,
+    "state":"NY",
+    "FIPS":36039,
     "number":3652,
     "rate":9.5,
-    "state":"NY",
-    "name":"Greene County"
+    "population":48656,
+    "county":"Greene County"
   },
   {
-    "id":36041,
+    "state":"NY",
+    "FIPS":36041,
     "number":457,
     "rate":11.6,
-    "state":"NY",
-    "name":"Hamilton County"
+    "population":4787,
+    "county":"Hamilton County"
   },
   {
-    "id":36043,
+    "state":"NY",
+    "FIPS":36043,
     "number":4893,
     "rate":10,
-    "state":"NY",
-    "name":"Herkimer County"
+    "population":64572,
+    "county":"Herkimer County"
   },
   {
-    "id":36045,
+    "state":"NY",
+    "FIPS":36045,
     "number":8575,
     "rate":9.8,
-    "state":"NY",
-    "name":"Jefferson County"
+    "population":120916,
+    "county":"Jefferson County"
   },
   {
-    "id":36047,
+    "state":"NY",
+    "FIPS":36047,
     "number":198412,
     "rate":10.4,
-    "state":"NY",
-    "name":"Kings County"
+    "population":2574864,
+    "county":"Kings County"
   },
   {
-    "id":36049,
+    "state":"NY",
+    "FIPS":36049,
     "number":2197,
     "rate":11,
-    "state":"NY",
-    "name":"Lewis County"
+    "population":27259,
+    "county":"Lewis County"
   },
   {
-    "id":36051,
+    "state":"NY",
+    "FIPS":36051,
     "number":4988,
     "rate":10.2,
-    "state":"NY",
-    "name":"Livingston County"
+    "population":64862,
+    "county":"Livingston County"
   },
   {
-    "id":36053,
+    "state":"NY",
+    "FIPS":36053,
     "number":5207,
     "rate":9.7,
-    "state":"NY",
-    "name":"Madison County"
+    "population":72420,
+    "county":"Madison County"
   },
   {
-    "id":36055,
+    "state":"NY",
+    "FIPS":36055,
     "number":54680,
     "rate":9.8,
-    "state":"NY",
-    "name":"Monroe County"
+    "population":748582,
+    "county":"Monroe County"
   },
   {
-    "id":36057,
+    "state":"NY",
+    "FIPS":36057,
     "number":3569,
     "rate":9.6,
-    "state":"NY",
-    "name":"Montgomery County"
+    "population":49891,
+    "county":"Montgomery County"
   },
   {
-    "id":36059,
+    "state":"NY",
+    "FIPS":36059,
     "number":86437,
     "rate":8.6,
-    "state":"NY",
-    "name":"Nassau County"
+    "population":1350923,
+    "county":"Nassau County"
   },
   {
-    "id":36061,
+    "state":"NY",
+    "FIPS":36061,
     "number":86062,
     "rate":6.4,
-    "state":"NY",
-    "name":"New York County"
+    "population":1625198,
+    "county":"New York County"
   },
   {
-    "id":36063,
+    "state":"NY",
+    "FIPS":36063,
     "number":16964,
     "rate":10.3,
-    "state":"NY",
-    "name":"Niagara County"
+    "population":214862,
+    "county":"Niagara County"
   },
   {
-    "id":36065,
+    "state":"NY",
+    "FIPS":36065,
     "number":17418,
     "rate":9.9,
-    "state":"NY",
-    "name":"Oneida County"
+    "population":233981,
+    "county":"Oneida County"
   },
   {
-    "id":36067,
+    "state":"NY",
+    "FIPS":36067,
     "number":36195,
     "rate":10.4,
-    "state":"NY",
-    "name":"Onondaga County"
+    "population":467182,
+    "county":"Onondaga County"
   },
   {
-    "id":36069,
+    "state":"NY",
+    "FIPS":36069,
     "number":6550,
     "rate":8,
-    "state":"NY",
-    "name":"Ontario County"
+    "population":108824,
+    "county":"Ontario County"
   },
   {
-    "id":36071,
+    "state":"NY",
+    "FIPS":36071,
     "number":27948,
     "rate":10.6,
-    "state":"NY",
-    "name":"Orange County"
+    "population":373936,
+    "county":"Orange County"
   },
   {
-    "id":36073,
+    "state":"NY",
+    "FIPS":36073,
     "number":3466,
     "rate":10.7,
-    "state":"NY",
-    "name":"Orleans County"
+    "population":42517,
+    "county":"Orleans County"
   },
   {
-    "id":36075,
+    "state":"NY",
+    "FIPS":36075,
     "number":8471,
     "rate":9.4,
-    "state":"NY",
-    "name":"Oswego County"
+    "population":121654,
+    "county":"Oswego County"
   },
   {
-    "id":36077,
+    "state":"NY",
+    "FIPS":36077,
     "number":5188,
     "rate":11,
-    "state":"NY",
-    "name":"Otsego County"
+    "population":61880,
+    "county":"Otsego County"
   },
   {
-    "id":36079,
+    "state":"NY",
+    "FIPS":36079,
     "number":6691,
     "rate":8.9,
-    "state":"NY",
-    "name":"Putnam County"
+    "population":99657,
+    "county":"Putnam County"
   },
   {
-    "id":36081,
+    "state":"NY",
+    "FIPS":36081,
     "number":191472,
     "rate":10.9,
-    "state":"NY",
-    "name":"Queens County"
+    "population":2280639,
+    "county":"Queens County"
   },
   {
-    "id":36083,
+    "state":"NY",
+    "FIPS":36083,
     "number":11437,
     "rate":9.4,
-    "state":"NY",
-    "name":"Rensselaer County"
+    "population":159572,
+    "county":"Rensselaer County"
   },
   {
-    "id":36085,
+    "state":"NY",
+    "FIPS":36085,
     "number":34392,
     "rate":9.8,
-    "state":"NY",
-    "name":"Richmond County"
+    "population":470977,
+    "county":"Richmond County"
   },
   {
-    "id":36087,
+    "state":"NY",
+    "FIPS":36087,
     "number":24283,
     "rate":11,
-    "state":"NY",
-    "name":"Rockland County"
+    "population":317825,
+    "county":"Rockland County"
   },
   {
-    "id":36091,
+    "state":"NY",
+    "FIPS":36091,
     "number":14177,
     "rate":8.4,
-    "state":"NY",
-    "name":"Saratoga County"
+    "population":222413,
+    "county":"Saratoga County"
   },
   {
-    "id":36093,
+    "state":"NY",
+    "FIPS":36093,
     "number":12457,
     "rate":10.7,
-    "state":"NY",
-    "name":"Schenectady County"
+    "population":155051,
+    "county":"Schenectady County"
   },
   {
-    "id":36095,
+    "state":"NY",
+    "FIPS":36095,
     "number":2366,
     "rate":9.6,
-    "state":"NY",
-    "name":"Schoharie County"
+    "population":32048,
+    "county":"Schoharie County"
   },
   {
-    "id":36097,
+    "state":"NY",
+    "FIPS":36097,
     "number":1534,
     "rate":10.7,
-    "state":"NY",
-    "name":"Schuyler County"
+    "population":18549,
+    "county":"Schuyler County"
   },
   {
-    "id":36099,
+    "state":"NY",
+    "FIPS":36099,
     "number":2780,
     "rate":10.2,
-    "state":"NY",
-    "name":"Seneca County"
+    "population":35381,
+    "county":"Seneca County"
   },
   {
-    "id":36089,
+    "state":"NY",
+    "FIPS":36089,
     "number":9264,
     "rate":11.1,
-    "state":"NY",
-    "name":"St. Lawrence County"
+    "population":112466,
+    "county":"St. Lawrence County"
   },
   {
-    "id":36101,
+    "state":"NY",
+    "FIPS":36101,
     "number":8019,
     "rate":10.8,
-    "state":"NY",
-    "name":"Steuben County"
+    "population":99048,
+    "county":"Steuben County"
   },
   {
-    "id":36103,
+    "state":"NY",
+    "FIPS":36103,
     "number":91800,
     "rate":8.3,
-    "state":"NY",
-    "name":"Suffolk County"
+    "population":1500422,
+    "county":"Suffolk County"
   },
   {
-    "id":36107,
+    "state":"NY",
+    "FIPS":36107,
     "number":3821,
     "rate":10.1,
-    "state":"NY",
-    "name":"Tioga County"
+    "population":50335,
+    "county":"Tioga County"
   },
   {
-    "id":36105,
+    "state":"NY",
+    "FIPS":36105,
     "number":6332,
     "rate":10.9,
-    "state":"NY",
-    "name":"Sullivan County"
+    "population":76951,
+    "county":"Sullivan County"
   },
   {
-    "id":36109,
+    "state":"NY",
+    "FIPS":36109,
     "number":6166,
     "rate":8,
-    "state":"NY",
-    "name":"Tompkins County"
+    "population":103044,
+    "county":"Tompkins County"
   },
   {
-    "id":36111,
+    "state":"NY",
+    "FIPS":36111,
     "number":14487,
     "rate":10.2,
-    "state":"NY",
-    "name":"Ulster County"
+    "population":181708,
+    "county":"Ulster County"
   },
   {
-    "id":36113,
+    "state":"NY",
+    "FIPS":36113,
     "number":5228,
     "rate":10.2,
-    "state":"NY",
-    "name":"Warren County"
+    "population":65430,
+    "county":"Warren County"
   },
   {
-    "id":36115,
+    "state":"NY",
+    "FIPS":36115,
     "number":4765,
     "rate":9.7,
-    "state":"NY",
-    "name":"Washington County"
+    "population":63046,
+    "county":"Washington County"
   },
   {
-    "id":36117,
+    "state":"NY",
+    "FIPS":36117,
     "number":6806,
     "rate":9.8,
-    "state":"NY",
-    "name":"Wayne County"
+    "population":93009,
+    "county":"Wayne County"
   },
   {
-    "id":36119,
+    "state":"NY",
+    "FIPS":36119,
     "number":61590,
     "rate":8.7,
-    "state":"NY",
-    "name":"Westchester County"
+    "population":961849,
+    "county":"Westchester County"
   },
   {
-    "id":36121,
+    "state":"NY",
+    "FIPS":36121,
     "number":2687,
     "rate":8.2,
-    "state":"NY",
-    "name":"Wyoming County"
+    "population":41762,
+    "county":"Wyoming County"
   },
   {
-    "id":36123,
+    "state":"NY",
+    "FIPS":36123,
     "number":1661,
     "rate":9,
-    "state":"NY",
-    "name":"Yates County"
+    "population":25265,
+    "county":"Yates County"
   },
   {
-    "id":39001,
+    "state":"OH",
+    "FIPS":39001,
     "number":2278,
     "rate":11,
-    "state":"OH",
-    "name":"Adams County"
+    "population":28366,
+    "county":"Adams County"
   },
   {
-    "id":39003,
+    "state":"OH",
+    "FIPS":39003,
     "number":10175,
     "rate":13.2,
-    "state":"OH",
-    "name":"Allen County"
+    "population":105283,
+    "county":"Allen County"
   },
   {
-    "id":39005,
+    "state":"OH",
+    "FIPS":39005,
     "number":4451,
     "rate":11.4,
-    "state":"OH",
-    "name":"Ashland County"
+    "population":53240,
+    "county":"Ashland County"
   },
   {
-    "id":39007,
+    "state":"OH",
+    "FIPS":39007,
     "number":9849,
     "rate":13.1,
-    "state":"OH",
-    "name":"Ashtabula County"
+    "population":100264,
+    "county":"Ashtabula County"
   },
   {
-    "id":39009,
+    "state":"OH",
+    "FIPS":39009,
     "number":5192,
     "rate":10.8,
-    "state":"OH",
-    "name":"Athens County"
+    "population":64638,
+    "county":"Athens County"
   },
   {
-    "id":39011,
+    "state":"OH",
+    "FIPS":39011,
     "number":3666,
     "rate":10.9,
-    "state":"OH",
-    "name":"Auglaize County"
+    "population":45866,
+    "county":"Auglaize County"
   },
   {
-    "id":39013,
+    "state":"OH",
+    "FIPS":39013,
     "number":8544,
     "rate":15.6,
-    "state":"OH",
-    "name":"Belmont County"
+    "population":69624,
+    "county":"Belmont County"
   },
   {
-    "id":39015,
+    "state":"OH",
+    "FIPS":39015,
     "number":4356,
     "rate":13.3,
-    "state":"OH",
-    "name":"Brown County"
+    "population":44404,
+    "county":"Brown County"
   },
   {
-    "id":39017,
+    "state":"OH",
+    "FIPS":39017,
     "number":30470,
     "rate":11.4,
-    "state":"OH",
-    "name":"Butler County"
+    "population":370833,
+    "county":"Butler County"
   },
   {
-    "id":39019,
+    "state":"OH",
+    "FIPS":39019,
     "number":2825,
     "rate":13.1,
-    "state":"OH",
-    "name":"Carroll County"
+    "population":28560,
+    "county":"Carroll County"
   },
   {
-    "id":39021,
+    "state":"OH",
+    "FIPS":39021,
     "number":3378,
     "rate":11.6,
-    "state":"OH",
-    "name":"Champaign County"
+    "population":39586,
+    "county":"Champaign County"
   },
   {
-    "id":39023,
+    "state":"OH",
+    "FIPS":39023,
     "number":13333,
     "rate":13.2,
-    "state":"OH",
-    "name":"Clark County"
+    "population":137194,
+    "county":"Clark County"
   },
   {
-    "id":39025,
+    "state":"OH",
+    "FIPS":39025,
     "number":16530,
     "rate":11.4,
-    "state":"OH",
-    "name":"Clermont County"
+    "population":199219,
+    "county":"Clermont County"
   },
   {
-    "id":39027,
+    "state":"OH",
+    "FIPS":39027,
     "number":3366,
     "rate":11,
-    "state":"OH",
-    "name":"Clinton County"
+    "population":41831,
+    "county":"Clinton County"
   },
   {
-    "id":39029,
+    "state":"OH",
+    "FIPS":39029,
     "number":9005,
     "rate":11,
-    "state":"OH",
-    "name":"Columbiana County"
+    "population":106438,
+    "county":"Columbiana County"
   },
   {
-    "id":39031,
+    "state":"OH",
+    "FIPS":39031,
     "number":3796,
     "rate":13.9,
-    "state":"OH",
-    "name":"Coshocton County"
+    "population":36806,
+    "county":"Coshocton County"
   },
   {
-    "id":39033,
+    "state":"OH",
+    "FIPS":39033,
     "number":4219,
     "rate":13.1,
-    "state":"OH",
-    "name":"Crawford County"
+    "population":42847,
+    "county":"Crawford County"
   },
   {
-    "id":39035,
+    "state":"OH",
+    "FIPS":39035,
     "number":108724,
     "rate":11.4,
-    "state":"OH",
-    "name":"Cuyahoga County"
+    "population":1265889,
+    "county":"Cuyahoga County"
   },
   {
-    "id":39037,
+    "state":"OH",
+    "FIPS":39037,
     "number":4838,
     "rate":12.6,
-    "state":"OH",
-    "name":"Darke County"
+    "population":52506,
+    "county":"Darke County"
   },
   {
-    "id":39039,
+    "state":"OH",
+    "FIPS":39039,
     "number":3206,
     "rate":11.3,
-    "state":"OH",
-    "name":"Delaware County"
+    "population":38818,
+    "county":"Delaware County"
   },
   {
-    "id":39041,
+    "state":"",
+    "FIPS":39041,
     "number":11244,
     "rate":9,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":39043,
+    "state":"OH",
+    "FIPS":39043,
     "number":6389,
     "rate":11,
-    "state":"OH",
-    "name":"Erie County"
+    "population":76442,
+    "county":"Erie County"
   },
   {
-    "id":39045,
+    "state":"OH",
+    "FIPS":39045,
     "number":11073,
     "rate":10.4,
-    "state":"OH",
-    "name":"Fairfield County"
+    "population":147446,
+    "county":"Fairfield County"
   },
   {
-    "id":39047,
+    "state":"OH",
+    "FIPS":39047,
     "number":2724,
     "rate":12.8,
-    "state":"OH",
-    "name":"Fayette County"
+    "population":28850,
+    "county":"Fayette County"
   },
   {
-    "id":39049,
+    "state":"OH",
+    "FIPS":39049,
     "number":82651,
     "rate":9.4,
-    "state":"OH",
-    "name":"Franklin County"
+    "population":1196936,
+    "county":"Franklin County"
   },
   {
-    "id":39051,
+    "state":"OH",
+    "FIPS":39051,
     "number":3592,
     "rate":11.6,
-    "state":"OH",
-    "name":"Fulton County"
+    "population":42516,
+    "county":"Fulton County"
   },
   {
-    "id":39053,
+    "state":"OH",
+    "FIPS":39053,
     "number":2983,
     "rate":13.1,
-    "state":"OH",
-    "name":"Gallia County"
+    "population":30805,
+    "county":"Gallia County"
   },
   {
-    "id":39055,
+    "state":"OH",
+    "FIPS":39055,
     "number":7319,
     "rate":10.8,
-    "state":"OH",
-    "name":"Geauga County"
+    "population":93917,
+    "county":"Geauga County"
   },
   {
-    "id":39057,
+    "state":"OH",
+    "FIPS":39057,
     "number":13204,
     "rate":10.8,
-    "state":"OH",
-    "name":"Greene County"
+    "population":164145,
+    "county":"Greene County"
   },
   {
-    "id":39059,
+    "state":"OH",
+    "FIPS":39059,
     "number":4054,
     "rate":13.7,
-    "state":"OH",
-    "name":"Guernsey County"
+    "population":39813,
+    "county":"Guernsey County"
   },
   {
-    "id":39061,
+    "state":"OH",
+    "FIPS":39061,
     "number":66588,
     "rate":11.2,
-    "state":"OH",
-    "name":"Hamilton County"
+    "population":802355,
+    "county":"Hamilton County"
   },
   {
-    "id":39063,
+    "state":"OH",
+    "FIPS":39063,
     "number":6326,
     "rate":11.3,
-    "state":"OH",
-    "name":"Hancock County"
+    "population":75647,
+    "county":"Hancock County"
   },
   {
-    "id":39065,
+    "state":"OH",
+    "FIPS":39065,
     "number":2252,
     "rate":9.8,
-    "state":"OH",
-    "name":"Hardin County"
+    "population":31643,
+    "county":"Hardin County"
   },
   {
-    "id":39067,
+    "state":"OH",
+    "FIPS":39067,
     "number":1564,
     "rate":13,
-    "state":"OH",
-    "name":"Harrison County"
+    "population":15694,
+    "county":"Harrison County"
   },
   {
-    "id":39069,
+    "state":"OH",
+    "FIPS":39069,
     "number":2254,
     "rate":10.9,
-    "state":"OH",
-    "name":"Henry County"
+    "population":28060,
+    "county":"Henry County"
   },
   {
-    "id":39071,
+    "state":"OH",
+    "FIPS":39071,
     "number":3538,
     "rate":11.2,
-    "state":"OH",
-    "name":"Highland County"
+    "population":43024,
+    "county":"Highland County"
   },
   {
-    "id":39073,
+    "state":"OH",
+    "FIPS":39073,
     "number":2890,
     "rate":13.2,
-    "state":"OH",
-    "name":"Hocking County"
+    "population":29291,
+    "county":"Hocking County"
   },
   {
-    "id":39075,
+    "state":"OH",
+    "FIPS":39075,
     "number":2665,
     "rate":9.7,
-    "state":"OH",
-    "name":"Holmes County"
+    "population":43105,
+    "county":"Holmes County"
   },
   {
-    "id":39077,
+    "state":"OH",
+    "FIPS":39077,
     "number":4772,
     "rate":11.2,
-    "state":"OH",
-    "name":"Huron County"
+    "population":59295,
+    "county":"Huron County"
   },
   {
-    "id":39079,
+    "state":"OH",
+    "FIPS":39079,
     "number":3505,
     "rate":14.5,
-    "state":"OH",
-    "name":"Jackson County"
+    "population":32873,
+    "county":"Jackson County"
   },
   {
-    "id":39081,
+    "state":"OH",
+    "FIPS":39081,
     "number":8296,
     "rate":15.7,
-    "state":"OH",
-    "name":"Jefferson County"
+    "population":68347,
+    "county":"Jefferson County"
   },
   {
-    "id":39083,
+    "state":"OH",
+    "FIPS":39083,
     "number":4583,
     "rate":10.4,
-    "state":"OH",
-    "name":"Knox County"
+    "population":60817,
+    "county":"Knox County"
   },
   {
-    "id":39085,
+    "state":"OH",
+    "FIPS":39085,
     "number":18885,
     "rate":10.8,
-    "state":"OH",
-    "name":"Lake County"
+    "population":229365,
+    "county":"Lake County"
   },
   {
-    "id":39087,
+    "state":"OH",
+    "FIPS":39087,
     "number":6657,
     "rate":14.3,
-    "state":"OH",
-    "name":"Lawrence County"
+    "population":62108,
+    "county":"Lawrence County"
   },
   {
-    "id":39089,
+    "state":"OH",
+    "FIPS":39089,
     "number":13525,
     "rate":11,
-    "state":"OH",
-    "name":"Licking County"
+    "population":167719,
+    "county":"Licking County"
   },
   {
-    "id":39091,
+    "state":"OH",
+    "FIPS":39091,
     "number":4443,
     "rate":13.4,
-    "state":"OH",
-    "name":"Logan County"
+    "population":45454,
+    "county":"Logan County"
   },
   {
-    "id":39093,
+    "state":"OH",
+    "FIPS":39093,
     "number":25572,
     "rate":11.5,
-    "state":"OH",
-    "name":"Lorain County"
+    "population":301695,
+    "county":"Lorain County"
   },
   {
-    "id":39095,
+    "state":"OH",
+    "FIPS":39095,
     "number":36739,
     "rate":11.4,
-    "state":"OH",
-    "name":"Lucas County"
+    "population":437376,
+    "county":"Lucas County"
   },
   {
-    "id":39097,
+    "state":"OH",
+    "FIPS":39097,
     "number":3155,
     "rate":9.7,
-    "state":"OH",
-    "name":"Madison County"
+    "population":42959,
+    "county":"Madison County"
   },
   {
-    "id":39099,
+    "state":"OH",
+    "FIPS":39099,
     "number":22292,
     "rate":12.3,
-    "state":"OH",
-    "name":"Mahoning County"
+    "population":235787,
+    "county":"Mahoning County"
   },
   {
-    "id":39101,
+    "state":"OH",
+    "FIPS":39101,
     "number":6334,
     "rate":12.5,
-    "state":"OH",
-    "name":"Marion County"
+    "population":66235,
+    "county":"Marion County"
   },
   {
-    "id":39103,
+    "state":"OH",
+    "FIPS":39103,
     "number":12708,
     "rate":10,
-    "state":"OH",
-    "name":"Medina County"
+    "population":173704,
+    "county":"Medina County"
   },
   {
-    "id":39105,
+    "state":"OH",
+    "FIPS":39105,
     "number":2839,
     "rate":15.9,
-    "state":"OH",
-    "name":"Meigs County"
+    "population":23600,
+    "county":"Meigs County"
   },
   {
-    "id":39107,
+    "state":"OH",
+    "FIPS":39107,
     "number":3130,
     "rate":10.7,
-    "state":"OH",
-    "name":"Mercer County"
+    "population":40827,
+    "county":"Mercer County"
   },
   {
-    "id":39109,
+    "state":"OH",
+    "FIPS":39109,
     "number":8184,
     "rate":10.7,
-    "state":"OH",
-    "name":"Miami County"
+    "population":103118,
+    "county":"Miami County"
   },
   {
-    "id":39111,
+    "state":"OH",
+    "FIPS":39111,
     "number":1646,
     "rate":14.6,
-    "state":"OH",
-    "name":"Monroe County"
+    "population":14579,
+    "county":"Monroe County"
   },
   {
-    "id":39113,
+    "state":"OH",
+    "FIPS":39113,
     "number":51460,
     "rate":12.8,
-    "state":"OH",
-    "name":"Montgomery County"
+    "population":534971,
+    "county":"Montgomery County"
   },
   {
-    "id":39115,
+    "state":"OH",
+    "FIPS":39115,
     "number":1623,
     "rate":14.5,
-    "state":"OH",
-    "name":"Morgan County"
+    "population":14945,
+    "county":"Morgan County"
   },
   {
-    "id":39117,
+    "state":"OH",
+    "FIPS":39117,
     "number":3194,
     "rate":12.6,
-    "state":"OH",
-    "name":"Morrow County"
+    "population":35003,
+    "county":"Morrow County"
   },
   {
-    "id":39119,
+    "state":"OH",
+    "FIPS":39119,
     "number":7808,
     "rate":12.3,
-    "state":"OH",
-    "name":"Muskingum County"
+    "population":85838,
+    "county":"Muskingum County"
   },
   {
-    "id":39121,
+    "state":"OH",
+    "FIPS":39121,
     "number":1659,
     "rate":14.4,
-    "state":"OH",
-    "name":"Noble County"
+    "population":14577,
+    "county":"Noble County"
   },
   {
-    "id":39123,
+    "state":"OH",
+    "FIPS":39123,
     "number":3666,
     "rate":11.4,
-    "state":"OH",
-    "name":"Ottawa County"
+    "population":41361,
+    "county":"Ottawa County"
   },
   {
-    "id":39125,
+    "state":"OH",
+    "FIPS":39125,
     "number":1623,
     "rate":11.5,
-    "state":"OH",
-    "name":"Paulding County"
+    "population":19287,
+    "county":"Paulding County"
   },
   {
-    "id":39127,
+    "state":"OH",
+    "FIPS":39127,
     "number":3124,
     "rate":12,
-    "state":"OH",
-    "name":"Perry County"
+    "population":35997,
+    "county":"Perry County"
   },
   {
-    "id":39129,
+    "state":"OH",
+    "FIPS":39129,
     "number":4655,
     "rate":11.1,
-    "state":"OH",
-    "name":"Pickaway County"
+    "population":56346,
+    "county":"Pickaway County"
   },
   {
-    "id":39131,
+    "state":"OH",
+    "FIPS":39131,
     "number":2934,
     "rate":14,
-    "state":"OH",
-    "name":"Pike County"
+    "population":28501,
+    "county":"Pike County"
   },
   {
-    "id":39133,
+    "state":"OH",
+    "FIPS":39133,
     "number":11240,
     "rate":9.2,
-    "state":"OH",
-    "name":"Portage County"
+    "population":161336,
+    "county":"Portage County"
   },
   {
-    "id":39135,
+    "state":"OH",
+    "FIPS":39135,
     "number":3465,
     "rate":11.2,
-    "state":"OH",
-    "name":"Preble County"
+    "population":41895,
+    "county":"Preble County"
   },
   {
-    "id":39137,
+    "state":"OH",
+    "FIPS":39137,
     "number":2577,
     "rate":10.5,
-    "state":"OH",
-    "name":"Putnam County"
+    "population":34181,
+    "county":"Putnam County"
   },
   {
-    "id":39139,
+    "state":"OH",
+    "FIPS":39139,
     "number":11599,
     "rate":12.5,
-    "state":"OH",
-    "name":"Richland County"
+    "population":122588,
+    "county":"Richland County"
   },
   {
-    "id":39141,
+    "state":"OH",
+    "FIPS":39141,
     "number":7677,
     "rate":13.1,
-    "state":"OH",
-    "name":"Ross County"
+    "population":77485,
+    "county":"Ross County"
   },
   {
-    "id":39143,
+    "state":"OH",
+    "FIPS":39143,
     "number":5354,
     "rate":12,
-    "state":"OH",
-    "name":"Sandusky County"
+    "population":60560,
+    "county":"Sandusky County"
   },
   {
-    "id":39145,
+    "state":"OH",
+    "FIPS":39145,
     "number":7777,
     "rate":13.2,
-    "state":"OH",
-    "name":"Scioto County"
+    "population":78572,
+    "county":"Scioto County"
   },
   {
-    "id":39147,
+    "state":"OH",
+    "FIPS":39147,
     "number":5425,
     "rate":13.2,
-    "state":"OH",
-    "name":"Seneca County"
+    "population":56025,
+    "county":"Seneca County"
   },
   {
-    "id":39149,
+    "state":"OH",
+    "FIPS":39149,
     "number":3685,
     "rate":10.6,
-    "state":"OH",
-    "name":"Shelby County"
+    "population":49142,
+    "county":"Shelby County"
   },
   {
-    "id":39151,
+    "state":"OH",
+    "FIPS":39151,
     "number":35030,
     "rate":12.4,
-    "state":"OH",
-    "name":"Stark County"
+    "population":374844,
+    "county":"Stark County"
   },
   {
-    "id":39153,
+    "state":"OH",
+    "FIPS":39153,
     "number":40041,
     "rate":9.8,
-    "state":"OH",
-    "name":"Summit County"
+    "population":540867,
+    "county":"Summit County"
   },
   {
-    "id":39155,
+    "state":"OH",
+    "FIPS":39155,
     "number":20478,
     "rate":12.9,
-    "state":"OH",
-    "name":"Trumbull County"
+    "population":207439,
+    "county":"Trumbull County"
   },
   {
-    "id":39157,
+    "state":"OH",
+    "FIPS":39157,
     "number":7293,
     "rate":10.6,
-    "state":"OH",
-    "name":"Tuscarawas County"
+    "population":92488,
+    "county":"Tuscarawas County"
   },
   {
-    "id":39159,
+    "state":"OH",
+    "FIPS":39159,
     "number":3890,
     "rate":10.4,
-    "state":"OH",
-    "name":"Union County"
+    "population":52815,
+    "county":"Union County"
   },
   {
-    "id":39161,
+    "state":"OH",
+    "FIPS":39161,
     "number":2969,
     "rate":14.1,
-    "state":"OH",
-    "name":"Van Wert County"
+    "population":28729,
+    "county":"Van Wert County"
   },
   {
-    "id":39163,
+    "state":"OH",
+    "FIPS":39163,
     "number":1364,
     "rate":13.9,
-    "state":"OH",
-    "name":"Vinton County"
+    "population":13233,
+    "county":"Vinton County"
   },
   {
-    "id":39165,
+    "state":"OH",
+    "FIPS":39165,
     "number":14223,
     "rate":9.2,
-    "state":"OH",
-    "name":"Warren County"
+    "population":217653,
+    "county":"Warren County"
   },
   {
-    "id":39167,
+    "state":"OH",
+    "FIPS":39167,
     "number":6057,
     "rate":12.8,
-    "state":"OH",
-    "name":"Washington County"
+    "population":61508,
+    "county":"Washington County"
   },
   {
-    "id":39169,
+    "state":"OH",
+    "FIPS":39169,
     "number":9377,
     "rate":11.3,
-    "state":"OH",
-    "name":"Wayne County"
+    "population":114990,
+    "county":"Wayne County"
   },
   {
-    "id":39171,
+    "state":"OH",
+    "FIPS":39171,
     "number":3713,
     "rate":13.3,
-    "state":"OH",
-    "name":"Williams County"
+    "population":37568,
+    "county":"Williams County"
   },
   {
-    "id":39173,
+    "state":"OH",
+    "FIPS":39173,
     "number":11016,
     "rate":11.6,
-    "state":"OH",
-    "name":"Wood County"
+    "population":128659,
+    "county":"Wood County"
   },
   {
-    "id":39175,
+    "state":"OH",
+    "FIPS":39175,
     "number":2068,
     "rate":12.4,
-    "state":"OH",
-    "name":"Wyandot County"
+    "population":22592,
+    "county":"Wyandot County"
   },
   {
-    "id":40001,
+    "state":"OK",
+    "FIPS":40001,
     "number":2239,
     "rate":14.3,
-    "state":"OK",
-    "name":"Adair County"
+    "population":22248,
+    "county":"Adair County"
   },
   {
-    "id":40003,
+    "state":"OK",
+    "FIPS":40003,
     "number":603,
     "rate":13.3,
-    "state":"OK",
-    "name":"Alfalfa County"
+    "population":5643,
+    "county":"Alfalfa County"
   },
   {
-    "id":40005,
+    "state":"OK",
+    "FIPS":40005,
     "number":1309,
     "rate":12.5,
-    "state":"OK",
-    "name":"Atoka County"
+    "population":13960,
+    "county":"Atoka County"
   },
   {
-    "id":40007,
+    "state":"OK",
+    "FIPS":40007,
     "number":528,
     "rate":13,
-    "state":"OK",
-    "name":"Beaver County"
+    "population":5592,
+    "county":"Beaver County"
   },
   {
-    "id":40009,
+    "state":"OK",
+    "FIPS":40009,
     "number":1558,
     "rate":9.2,
-    "state":"OK",
-    "name":"Beckham County"
+    "population":23117,
+    "county":"Beckham County"
   },
   {
-    "id":40011,
+    "state":"OK",
+    "FIPS":40011,
     "number":1005,
     "rate":14.2,
-    "state":"OK",
-    "name":"Blaine County"
+    "population":9819,
+    "county":"Blaine County"
   },
   {
-    "id":40013,
+    "state":"OK",
+    "FIPS":40013,
     "number":3798,
     "rate":11.8,
-    "state":"OK",
-    "name":"Bryan County"
+    "population":43462,
+    "county":"Bryan County"
   },
   {
-    "id":40015,
+    "state":"OK",
+    "FIPS":40015,
     "number":2478,
     "rate":11.6,
-    "state":"OK",
-    "name":"Caddo County"
+    "population":29672,
+    "county":"Caddo County"
   },
   {
-    "id":40017,
+    "state":"OK",
+    "FIPS":40017,
     "number":9855,
     "rate":11.3,
-    "state":"OK",
-    "name":"Canadian County"
+    "population":122605,
+    "county":"Canadian County"
   },
   {
-    "id":40019,
+    "state":"OK",
+    "FIPS":40019,
     "number":4567,
     "rate":13.1,
-    "state":"OK",
-    "name":"Carter County"
+    "population":48114,
+    "county":"Carter County"
   },
   {
-    "id":40021,
+    "state":"OK",
+    "FIPS":40021,
     "number":4657,
     "rate":13.4,
-    "state":"OK",
-    "name":"Cherokee County"
+    "population":48085,
+    "county":"Cherokee County"
   },
   {
-    "id":40023,
+    "state":"OK",
+    "FIPS":40023,
     "number":1798,
     "rate":16,
-    "state":"OK",
-    "name":"Choctaw County"
+    "population":15170,
+    "county":"Choctaw County"
   },
   {
-    "id":40025,
+    "state":"OK",
+    "FIPS":40025,
     "number":222,
     "rate":12.5,
-    "state":"OK",
-    "name":"Cimarron County"
+    "population":2392,
+    "county":"Cimarron County"
   },
   {
-    "id":40027,
+    "state":"OK",
+    "FIPS":40027,
     "number":19965,
     "rate":10.2,
-    "state":"OK",
-    "name":"Cleveland County"
+    "population":266122,
+    "county":"Cleveland County"
   },
   {
-    "id":40029,
+    "state":"OK",
+    "FIPS":40029,
     "number":551,
     "rate":12.8,
-    "state":"OK",
-    "name":"Coal County"
+    "population":5918,
+    "county":"Coal County"
   },
   {
-    "id":40031,
+    "state":"OK",
+    "FIPS":40031,
     "number":10410,
     "rate":11.5,
-    "state":"OK",
-    "name":"Comanche County"
+    "population":126611,
+    "county":"Comanche County"
   },
   {
-    "id":40033,
+    "state":"OK",
+    "FIPS":40033,
     "number":636,
     "rate":13.9,
-    "state":"OK",
-    "name":"Cotton County"
+    "population":6147,
+    "county":"Cotton County"
   },
   {
-    "id":40035,
+    "state":"OK",
+    "FIPS":40035,
     "number":1506,
     "rate":13.5,
-    "state":"OK",
-    "name":"Craig County"
+    "population":14721,
+    "county":"Craig County"
   },
   {
-    "id":40037,
+    "state":"OK",
+    "FIPS":40037,
     "number":6589,
     "rate":12.7,
-    "state":"OK",
-    "name":"Creek County"
+    "population":70854,
+    "county":"Creek County"
   },
   {
-    "id":40039,
+    "state":"OK",
+    "FIPS":40039,
     "number":2291,
     "rate":11.1,
-    "state":"OK",
-    "name":"Custer County"
+    "population":28518,
+    "county":"Custer County"
   },
   {
-    "id":40041,
+    "state":"OK",
+    "FIPS":40041,
     "number":4885,
     "rate":15.5,
-    "state":"OK",
-    "name":"Delaware County"
+    "population":41373,
+    "county":"Delaware County"
   },
   {
-    "id":40043,
+    "state":"OK",
+    "FIPS":40043,
     "number":478,
     "rate":13.7,
-    "state":"OK",
-    "name":"Dewey County"
+    "population":4779,
+    "county":"Dewey County"
   },
   {
-    "id":40045,
+    "state":"OK",
+    "FIPS":40045,
     "number":381,
     "rate":12.7,
-    "state":"OK",
-    "name":"Ellis County"
+    "population":4075,
+    "county":"Ellis County"
   },
   {
-    "id":40047,
+    "state":"OK",
+    "FIPS":40047,
     "number":4632,
     "rate":10.4,
-    "state":"OK",
-    "name":"Garfield County"
+    "population":61318,
+    "county":"Garfield County"
   },
   {
-    "id":40049,
+    "state":"OK",
+    "FIPS":40049,
     "number":2692,
     "rate":13.5,
-    "state":"OK",
-    "name":"Garvin County"
+    "population":27270,
+    "county":"Garvin County"
   },
   {
-    "id":40051,
+    "state":"OK",
+    "FIPS":40051,
     "number":4397,
     "rate":11.4,
-    "state":"OK",
-    "name":"Grady County"
+    "population":53054,
+    "county":"Grady County"
   },
   {
-    "id":40053,
+    "state":"OK",
+    "FIPS":40053,
     "number":444,
     "rate":13.2,
-    "state":"OK",
-    "name":"Grant County"
+    "population":4510,
+    "county":"Grant County"
   },
   {
-    "id":40055,
+    "state":"OK",
+    "FIPS":40055,
     "number":609,
     "rate":12.6,
-    "state":"OK",
-    "name":"Greer County"
+    "population":6056,
+    "county":"Greer County"
   },
   {
-    "id":40057,
+    "state":"OK",
+    "FIPS":40057,
     "number":277,
     "rate":13.3,
-    "state":"OK",
-    "name":"Harmon County"
+    "population":2900,
+    "county":"Harmon County"
   },
   {
-    "id":40059,
+    "state":"OK",
+    "FIPS":40059,
     "number":316,
     "rate":11.7,
-    "state":"OK",
-    "name":"Harper County"
+    "population":3693,
+    "county":"Harper County"
   },
   {
-    "id":40061,
+    "state":"OK",
+    "FIPS":40061,
     "number":1537,
     "rate":16.3,
-    "state":"OK",
-    "name":"Haskell County"
+    "population":12867,
+    "county":"Haskell County"
   },
   {
-    "id":40063,
+    "state":"OK",
+    "FIPS":40063,
     "number":1539,
     "rate":14.6,
-    "state":"OK",
-    "name":"Hughes County"
+    "population":13785,
+    "county":"Hughes County"
   },
   {
-    "id":40065,
+    "state":"OK",
+    "FIPS":40065,
     "number":2261,
     "rate":12.1,
-    "state":"OK",
-    "name":"Jackson County"
+    "population":26261,
+    "county":"Jackson County"
   },
   {
-    "id":40067,
+    "state":"OK",
+    "FIPS":40067,
     "number":594,
     "rate":12.4,
-    "state":"OK",
-    "name":"Jefferson County"
+    "population":6335,
+    "county":"Jefferson County"
   },
   {
-    "id":40069,
+    "state":"OK",
+    "FIPS":40069,
     "number":1027,
     "rate":12.8,
-    "state":"OK",
-    "name":"Johnston County"
+    "population":11005,
+    "county":"Johnston County"
   },
   {
-    "id":40071,
+    "state":"OK",
+    "FIPS":40071,
     "number":4136,
     "rate":12.5,
-    "state":"OK",
-    "name":"Kay County"
+    "population":45657,
+    "county":"Kay County"
   },
   {
-    "id":40073,
+    "state":"OK",
+    "FIPS":40073,
     "number":1195,
     "rate":11.2,
-    "state":"OK",
-    "name":"Kingfisher County"
+    "population":14996,
+    "county":"Kingfisher County"
   },
   {
-    "id":40075,
+    "state":"OK",
+    "FIPS":40075,
     "number":1031,
     "rate":14.8,
-    "state":"OK",
-    "name":"Kiowa County"
+    "population":9343,
+    "county":"Kiowa County"
   },
   {
-    "id":40077,
+    "state":"OK",
+    "FIPS":40077,
     "number":1145,
     "rate":14.2,
-    "state":"OK",
-    "name":"Latimer County"
+    "population":10941,
+    "county":"Latimer County"
   },
   {
-    "id":40079,
+    "state":"OK",
+    "FIPS":40079,
     "number":5444,
     "rate":14.9,
-    "state":"OK",
-    "name":"Le Flore County"
+    "population":49935,
+    "county":"Le Flore County"
   },
   {
-    "id":40081,
+    "state":"OK",
+    "FIPS":40081,
     "number":3282,
     "rate":13.2,
-    "state":"OK",
-    "name":"Lincoln County"
+    "population":34215,
+    "county":"Lincoln County"
   },
   {
-    "id":40083,
+    "state":"OK",
+    "FIPS":40083,
     "number":4232,
     "rate":13.5,
-    "state":"OK",
-    "name":"Logan County"
+    "population":43668,
+    "county":"Logan County"
   },
   {
-    "id":40085,
+    "state":"OK",
+    "FIPS":40085,
     "number":936,
     "rate":13.4,
-    "state":"OK",
-    "name":"Love County"
+    "population":9563,
+    "county":"Love County"
   },
   {
-    "id":40093,
+    "state":"OK",
+    "FIPS":40093,
     "number":675,
     "rate":12,
-    "state":"OK",
-    "name":"Major County"
+    "population":7659,
+    "county":"Major County"
   },
   {
-    "id":40095,
+    "state":"OK",
+    "FIPS":40095,
     "number":1476,
     "rate":12.6,
-    "state":"OK",
-    "name":"Marshall County"
+    "population":15913,
+    "county":"Marshall County"
   },
   {
-    "id":40087,
+    "state":"OK",
+    "FIPS":40087,
     "number":2810,
     "rate":11.1,
-    "state":"OK",
-    "name":"McClain County"
+    "population":35587,
+    "county":"McClain County"
   },
   {
-    "id":40097,
+    "state":"OK",
+    "FIPS":40097,
     "number":4076,
     "rate":13.7,
-    "state":"OK",
-    "name":"Mayes County"
+    "population":41111,
+    "county":"Mayes County"
   },
   {
-    "id":40089,
+    "state":"OK",
+    "FIPS":40089,
     "number":3134,
     "rate":13.2,
-    "state":"OK",
-    "name":"McCurtain County"
+    "population":33229,
+    "county":"McCurtain County"
   },
   {
-    "id":40091,
+    "state":"OK",
+    "FIPS":40091,
     "number":2290,
     "rate":14.4,
-    "state":"OK",
-    "name":"McIntosh County"
+    "population":20522,
+    "county":"McIntosh County"
   },
   {
-    "id":40099,
+    "state":"OK",
+    "FIPS":40099,
     "number":1324,
     "rate":13,
-    "state":"OK",
-    "name":"Murray County"
+    "population":13640,
+    "county":"Murray County"
   },
   {
-    "id":40101,
+    "state":"OK",
+    "FIPS":40101,
     "number":7134,
     "rate":13.9,
-    "state":"OK",
-    "name":"Muskogee County"
+    "population":70528,
+    "county":"Muskogee County"
   },
   {
-    "id":40103,
+    "state":"OK",
+    "FIPS":40103,
     "number":1092,
     "rate":12.9,
-    "state":"OK",
-    "name":"Noble County"
+    "population":11505,
+    "county":"Noble County"
   },
   {
-    "id":40105,
+    "state":"OK",
+    "FIPS":40105,
     "number":1104,
     "rate":14,
-    "state":"OK",
-    "name":"Nowata County"
+    "population":10582,
+    "county":"Nowata County"
   },
   {
-    "id":40107,
+    "state":"OK",
+    "FIPS":40107,
     "number":1118,
     "rate":12.3,
-    "state":"OK",
-    "name":"Okfuskee County"
+    "population":12303,
+    "county":"Okfuskee County"
   },
   {
-    "id":40109,
+    "state":"OK",
+    "FIPS":40109,
     "number":55737,
     "rate":10.4,
-    "state":"OK",
-    "name":"Oklahoma County"
+    "population":742635,
+    "county":"Oklahoma County"
   },
   {
-    "id":40111,
+    "state":"OK",
+    "FIPS":40111,
     "number":3538,
     "rate":12.3,
-    "state":"OK",
-    "name":"Okmulgee County"
+    "population":39587,
+    "county":"Okmulgee County"
   },
   {
-    "id":40113,
+    "state":"OK",
+    "FIPS":40113,
     "number":4914,
     "rate":13.8,
-    "state":"OK",
-    "name":"Osage County"
+    "population":48010,
+    "county":"Osage County"
   },
   {
-    "id":40115,
+    "state":"OK",
+    "FIPS":40115,
     "number":3133,
     "rate":13.5,
-    "state":"OK",
-    "name":"Ottawa County"
+    "population":32252,
+    "county":"Ottawa County"
   },
   {
-    "id":40117,
+    "state":"OK",
+    "FIPS":40117,
     "number":1660,
     "rate":13.7,
-    "state":"OK",
-    "name":"Pawnee County"
+    "population":16483,
+    "county":"Pawnee County"
   },
   {
-    "id":40119,
+    "state":"OK",
+    "FIPS":40119,
     "number":4131,
     "rate":7.1,
-    "state":"OK",
-    "name":"Payne County"
+    "population":78479,
+    "county":"Payne County"
   },
   {
-    "id":40121,
+    "state":"OK",
+    "FIPS":40121,
     "number":4362,
     "rate":12.8,
-    "state":"OK",
-    "name":"Pittsburg County"
+    "population":45131,
+    "county":"Pittsburg County"
   },
   {
-    "id":40123,
+    "state":"OK",
+    "FIPS":40123,
     "number":2837,
     "rate":10.3,
-    "state":"OK",
-    "name":"Pontotoc County"
+    "population":38006,
+    "county":"Pontotoc County"
   },
   {
-    "id":40125,
+    "state":"OK",
+    "FIPS":40125,
     "number":7111,
     "rate":13.9,
-    "state":"OK",
-    "name":"Pottawatomie County"
+    "population":70703,
+    "county":"Pottawatomie County"
   },
   {
-    "id":40127,
+    "state":"OK",
+    "FIPS":40127,
     "number":1243,
     "rate":14.6,
-    "state":"OK",
-    "name":"Pushmataha County"
+    "population":11233,
+    "county":"Pushmataha County"
   },
   {
-    "id":40129,
+    "state":"OK",
+    "FIPS":40129,
     "number":334,
     "rate":12.3,
-    "state":"OK",
-    "name":"Roger Mills County"
+    "population":3774,
+    "county":"Roger Mills County"
   },
   {
-    "id":40131,
+    "state":"OK",
+    "FIPS":40131,
     "number":6743,
     "rate":10.6,
-    "state":"OK",
-    "name":"Rogers County"
+    "population":88445,
+    "county":"Rogers County"
   },
   {
-    "id":40133,
+    "state":"OK",
+    "FIPS":40133,
     "number":2406,
     "rate":13.2,
-    "state":"OK",
-    "name":"Seminole County"
+    "population":25469,
+    "county":"Seminole County"
   },
   {
-    "id":40135,
+    "state":"OK",
+    "FIPS":40135,
     "number":3939,
     "rate":13,
-    "state":"OK",
-    "name":"Sequoyah County"
+    "population":41466,
+    "county":"Sequoyah County"
   },
   {
-    "id":40137,
+    "state":"OK",
+    "FIPS":40137,
     "number":4353,
     "rate":13.1,
-    "state":"OK",
-    "name":"Stephens County"
+    "population":44837,
+    "county":"Stephens County"
   },
   {
-    "id":40139,
+    "state":"OK",
+    "FIPS":40139,
     "number":1320,
     "rate":8.9,
-    "state":"OK",
-    "name":"Texas County"
+    "population":21533,
+    "county":"Texas County"
   },
   {
-    "id":40141,
+    "state":"OK",
+    "FIPS":40141,
     "number":783,
     "rate":13.8,
-    "state":"OK",
-    "name":"Tillman County"
+    "population":7784,
+    "county":"Tillman County"
   },
   {
-    "id":40143,
+    "state":"OK",
+    "FIPS":40143,
     "number":46559,
     "rate":10.5,
-    "state":"OK",
-    "name":"Tulsa County"
+    "population":614460,
+    "county":"Tulsa County"
   },
   {
-    "id":40145,
+    "state":"OK",
+    "FIPS":40145,
     "number":6687,
     "rate":12.4,
-    "state":"OK",
-    "name":"Wagoner County"
+    "population":74997,
+    "county":"Wagoner County"
   },
   {
-    "id":40147,
+    "state":"OK",
+    "FIPS":40147,
     "number":5280,
     "rate":13.9,
-    "state":"OK",
-    "name":"Washington County"
+    "population":51710,
+    "county":"Washington County"
   },
   {
-    "id":40149,
+    "state":"OK",
+    "FIPS":40149,
     "number":1011,
     "rate":12.1,
-    "state":"OK",
-    "name":"Washita County"
+    "population":11638,
+    "county":"Washita County"
   },
   {
-    "id":40151,
+    "state":"OK",
+    "FIPS":40151,
     "number":734,
     "rate":10.9,
-    "state":"OK",
-    "name":"Woods County"
+    "population":8832,
+    "county":"Woods County"
   },
   {
-    "id":40153,
+    "state":"OK",
+    "FIPS":40153,
     "number":1713,
     "rate":11.4,
-    "state":"OK",
-    "name":"Woodward County"
+    "population":20647,
+    "county":"Woodward County"
   },
   {
-    "id":41001,
+    "state":"OR",
+    "FIPS":41001,
     "number":1465,
     "rate":11.8,
-    "state":"OR",
-    "name":"Baker County"
+    "population":15961,
+    "county":"Baker County"
   },
   {
-    "id":41003,
+    "state":"OR",
+    "FIPS":41003,
     "number":4652,
     "rate":7,
-    "state":"OR",
-    "name":"Benton County"
+    "population":86380,
+    "county":"Benton County"
   },
   {
-    "id":41005,
+    "state":"OR",
+    "FIPS":41005,
     "number":26705,
     "rate":9.3,
-    "state":"OR",
-    "name":"Clackamas County"
+    "population":383540,
+    "county":"Clackamas County"
   },
   {
-    "id":41007,
+    "state":"OR",
+    "FIPS":41007,
     "number":3087,
     "rate":10.6,
-    "state":"OR",
-    "name":"Clatsop County"
+    "population":37343,
+    "county":"Clatsop County"
   },
   {
-    "id":41009,
+    "state":"OR",
+    "FIPS":41009,
     "number":3806,
     "rate":10.3,
-    "state":"OR",
-    "name":"Columbia County"
+    "population":49208,
+    "county":"Columbia County"
   },
   {
-    "id":41011,
+    "state":"OR",
+    "FIPS":41011,
     "number":5368,
     "rate":10.8,
-    "state":"OR",
-    "name":"Coos County"
+    "population":62690,
+    "county":"Coos County"
   },
   {
-    "id":41013,
+    "state":"OR",
+    "FIPS":41013,
     "number":1855,
     "rate":11.5,
-    "state":"OR",
-    "name":"Crook County"
+    "population":20636,
+    "county":"Crook County"
   },
   {
-    "id":41015,
+    "state":"OR",
+    "FIPS":41015,
     "number":2112,
     "rate":11.5,
-    "state":"OR",
-    "name":"Curry County"
+    "population":22249,
+    "county":"Curry County"
   },
   {
-    "id":41017,
+    "state":"OR",
+    "FIPS":41017,
     "number":10336,
     "rate":8.4,
-    "state":"OR",
-    "name":"Deschutes County"
+    "population":161746,
+    "county":"Deschutes County"
   },
   {
-    "id":41019,
+    "state":"OR",
+    "FIPS":41019,
     "number":10140,
     "rate":12.1,
-    "state":"OR",
-    "name":"Douglas County"
+    "population":107082,
+    "county":"Douglas County"
   },
   {
-    "id":41021,
+    "state":"OR",
+    "FIPS":41021,
     "number":171,
     "rate":11.1,
-    "state":"OR",
-    "name":"Gilliam County"
+    "population":1941,
+    "county":"Gilliam County"
   },
   {
-    "id":41023,
+    "state":"OR",
+    "FIPS":41023,
     "number":666,
     "rate":11.5,
-    "state":"OR",
-    "name":"Grant County"
+    "population":7317,
+    "county":"Grant County"
   },
   {
-    "id":41025,
+    "state":"OR",
+    "FIPS":41025,
     "number":638,
     "rate":11.6,
-    "state":"OR",
-    "name":"Harney County"
+    "population":7228,
+    "county":"Harney County"
   },
   {
-    "id":41027,
+    "state":"OR",
+    "FIPS":41027,
     "number":1357,
     "rate":8.3,
-    "state":"OR",
-    "name":"Hood River County"
+    "population":22628,
+    "county":"Hood River County"
   },
   {
-    "id":41029,
+    "state":"OR",
+    "FIPS":41029,
     "number":15490,
     "rate":9.8,
-    "state":"OR",
-    "name":"Jackson County"
+    "population":206363,
+    "county":"Jackson County"
   },
   {
-    "id":41031,
+    "state":"OR",
+    "FIPS":41031,
     "number":1538,
     "rate":10.1,
-    "state":"OR",
-    "name":"Jefferson County"
+    "population":21759,
+    "county":"Jefferson County"
   },
   {
-    "id":41033,
+    "state":"OR",
+    "FIPS":41033,
     "number":6178,
     "rate":9.6,
-    "state":"OR",
-    "name":"Josephine County"
+    "population":82782,
+    "county":"Josephine County"
   },
   {
-    "id":41035,
+    "state":"OR",
+    "FIPS":41035,
     "number":5240,
     "rate":10.5,
-    "state":"OR",
-    "name":"Klamath County"
+    "population":66042,
+    "county":"Klamath County"
   },
   {
-    "id":41037,
+    "state":"OR",
+    "FIPS":41037,
     "number":661,
     "rate":10.7,
-    "state":"OR",
-    "name":"Lake County"
+    "population":7790,
+    "county":"Lake County"
   },
   {
-    "id":41039,
+    "state":"OR",
+    "FIPS":41039,
     "number":23029,
     "rate":8.4,
-    "state":"OR",
-    "name":"Lane County"
+    "population":354481,
+    "county":"Lane County"
   },
   {
-    "id":41041,
+    "state":"OR",
+    "FIPS":41041,
     "number":5204,
     "rate":13.9,
-    "state":"OR",
-    "name":"Lincoln County"
+    "population":46152,
+    "county":"Lincoln County"
   },
   {
-    "id":41043,
+    "state":"OR",
+    "FIPS":41043,
     "number":8789,
     "rate":10,
-    "state":"OR",
-    "name":"Linn County"
+    "population":118360,
+    "county":"Linn County"
   },
   {
-    "id":41045,
+    "state":"OR",
+    "FIPS":41045,
     "number":2057,
     "rate":9.3,
-    "state":"OR",
-    "name":"Malheur County"
+    "population":30606,
+    "county":"Malheur County"
   },
   {
-    "id":41047,
+    "state":"OR",
+    "FIPS":41047,
     "number":22598,
     "rate":9.9,
-    "state":"OR",
-    "name":"Marion County"
+    "population":320085,
+    "county":"Marion County"
   },
   {
-    "id":41049,
+    "state":"OR",
+    "FIPS":41049,
     "number":758,
     "rate":9.7,
-    "state":"OR",
-    "name":"Morrow County"
+    "population":11240,
+    "county":"Morrow County"
   },
   {
-    "id":41051,
+    "state":"OR",
+    "FIPS":41051,
     "number":44624,
     "rate":7.6,
-    "state":"OR",
-    "name":"Multnomah County"
+    "population":758817,
+    "county":"Multnomah County"
   },
   {
-    "id":41053,
+    "state":"OR",
+    "FIPS":41053,
     "number":5656,
     "rate":10.2,
-    "state":"OR",
-    "name":"Polk County"
+    "population":76254,
+    "county":"Polk County"
   },
   {
-    "id":41055,
+    "state":"OR",
+    "FIPS":41055,
     "number":153,
     "rate":11.2,
-    "state":"OR",
-    "name":"Sherman County"
+    "population":1735,
+    "county":"Sherman County"
   },
   {
-    "id":41057,
+    "state":"OR",
+    "FIPS":41057,
     "number":1928,
     "rate":9.7,
-    "state":"OR",
-    "name":"Tillamook County"
+    "population":25326,
+    "county":"Tillamook County"
   },
   {
-    "id":41059,
+    "state":"OR",
+    "FIPS":41059,
     "number":5760,
     "rate":10.5,
-    "state":"OR",
-    "name":"Umatilla County"
+    "population":76920,
+    "county":"Umatilla County"
   },
   {
-    "id":41061,
+    "state":"OR",
+    "FIPS":41061,
     "number":1835,
     "rate":9.6,
-    "state":"OR",
-    "name":"Union County"
+    "population":25818,
+    "county":"Union County"
   },
   {
-    "id":41063,
+    "state":"OR",
+    "FIPS":41063,
     "number":635,
     "rate":11.6,
-    "state":"OR",
-    "name":"Wallowa County"
+    "population":6814,
+    "county":"Wallowa County"
   },
   {
-    "id":41065,
+    "state":"OR",
+    "FIPS":41065,
     "number":2023,
     "rate":10.6,
-    "state":"OR",
-    "name":"Wasco County"
+    "population":25457,
+    "county":"Wasco County"
   },
   {
-    "id":41067,
+    "state":"OR",
+    "FIPS":41067,
     "number":32645,
     "rate":8.2,
-    "state":"OR",
-    "name":"Washington County"
+    "population":547737,
+    "county":"Washington County"
   },
   {
-    "id":41069,
+    "state":"OR",
+    "FIPS":41069,
     "number":140,
     "rate":12.2,
-    "state":"OR",
-    "name":"Wheeler County"
+    "population":1426,
+    "county":"Wheeler County"
   },
   {
-    "id":41071,
+    "state":"OR",
+    "FIPS":41071,
     "number":6777,
     "rate":9.3,
-    "state":"OR",
-    "name":"Yamhill County"
+    "population":100771,
+    "county":"Yamhill County"
   },
   {
-    "id":42001,
+    "state":"PA",
+    "FIPS":42001,
     "number":8891,
     "rate":11.6,
-    "state":"PA",
-    "name":"Adams County"
+    "population":101538,
+    "county":"Adams County"
   },
   {
-    "id":42003,
+    "state":"PA",
+    "FIPS":42003,
     "number":86177,
     "rate":9,
-    "state":"PA",
-    "name":"Allegheny County"
+    "population":1230383,
+    "county":"Allegheny County"
   },
   {
-    "id":42005,
+    "state":"PA",
+    "FIPS":42005,
     "number":6390,
     "rate":12,
-    "state":"PA",
-    "name":"Armstrong County"
+    "population":68362,
+    "county":"Armstrong County"
   },
   {
-    "id":42007,
+    "state":"PA",
+    "FIPS":42007,
     "number":14456,
     "rate":10.9,
-    "state":"PA",
-    "name":"Beaver County"
+    "population":170224,
+    "county":"Beaver County"
   },
   {
-    "id":42009,
+    "state":"PA",
+    "FIPS":42009,
     "number":4789,
     "rate":12.6,
-    "state":"PA",
-    "name":"Bedford County"
+    "population":49399,
+    "county":"Bedford County"
   },
   {
-    "id":42011,
+    "state":"PA",
+    "FIPS":42011,
     "number":31896,
     "rate":10.5,
-    "state":"PA",
-    "name":"Berks County"
+    "population":413252,
+    "county":"Berks County"
   },
   {
-    "id":42013,
+    "state":"PA",
+    "FIPS":42013,
     "number":10302,
     "rate":10.6,
-    "state":"PA",
-    "name":"Blair County"
+    "population":126999,
+    "county":"Blair County"
   },
   {
-    "id":42015,
+    "state":"PA",
+    "FIPS":42015,
     "number":5089,
     "rate":10.7,
-    "state":"PA",
-    "name":"Bradford County"
+    "population":62813,
+    "county":"Bradford County"
   },
   {
-    "id":42019,
+    "state":"PA",
+    "FIPS":42019,
     "number":12778,
     "rate":9.2,
-    "state":"PA",
-    "name":"Butler County"
+    "population":185089,
+    "county":"Butler County"
   },
   {
-    "id":42021,
+    "state":"PA",
+    "FIPS":42021,
     "number":13520,
     "rate":12.3,
-    "state":"PA",
-    "name":"Cambria County"
+    "population":141531,
+    "county":"Cambria County"
   },
   {
-    "id":42017,
+    "state":"PA",
+    "FIPS":42017,
     "number":44056,
     "rate":9.3,
-    "state":"PA",
-    "name":"Bucks County"
+    "population":626189,
+    "county":"Bucks County"
   },
   {
-    "id":42023,
+    "state":"PA",
+    "FIPS":42023,
     "number":450,
     "rate":11.4,
-    "state":"PA",
-    "name":"Cameron County"
+    "population":4942,
+    "county":"Cameron County"
   },
   {
-    "id":42025,
+    "state":"PA",
+    "FIPS":42025,
     "number":5076,
     "rate":10,
-    "state":"PA",
-    "name":"Carbon County"
+    "population":64927,
+    "county":"Carbon County"
   },
   {
-    "id":42027,
+    "state":"PA",
+    "FIPS":42027,
     "number":9184,
     "rate":7.7,
-    "state":"PA",
-    "name":"Centre County"
+    "population":155582,
+    "county":"Centre County"
   },
   {
-    "id":42029,
+    "state":"PA",
+    "FIPS":42029,
     "number":28910,
     "rate":7.8,
-    "state":"PA",
-    "name":"Chester County"
+    "population":506317,
+    "county":"Chester County"
   },
   {
-    "id":42031,
+    "state":"PA",
+    "FIPS":42031,
     "number":3361,
     "rate":11.1,
-    "state":"PA",
-    "name":"Clarion County"
+    "population":39450,
+    "county":"Clarion County"
   },
   {
-    "id":42033,
+    "state":"PA",
+    "FIPS":42033,
     "number":7866,
     "rate":12.3,
-    "state":"PA",
-    "name":"Clearfield County"
+    "population":81503,
+    "county":"Clearfield County"
   },
   {
-    "id":42035,
+    "state":"PA",
+    "FIPS":42035,
     "number":2996,
     "rate":10.1,
-    "state":"PA",
-    "name":"Clinton County"
+    "population":39730,
+    "county":"Clinton County"
   },
   {
-    "id":42037,
+    "state":"PA",
+    "FIPS":42037,
     "number":6059,
     "rate":11.9,
-    "state":"PA",
-    "name":"Columbia County"
+    "population":66924,
+    "county":"Columbia County"
   },
   {
-    "id":42039,
+    "state":"PA",
+    "FIPS":42039,
     "number":7680,
     "rate":11.7,
-    "state":"PA",
-    "name":"Crawford County"
+    "population":87660,
+    "county":"Crawford County"
   },
   {
-    "id":42041,
+    "state":"PA",
+    "FIPS":42041,
     "number":16949,
     "rate":9.3,
-    "state":"PA",
-    "name":"Cumberland County"
+    "population":239198,
+    "county":"Cumberland County"
   },
   {
-    "id":42043,
+    "state":"PA",
+    "FIPS":42043,
     "number":23531,
     "rate":11.6,
-    "state":"PA",
-    "name":"Dauphin County"
+    "population":269857,
+    "county":"Dauphin County"
   },
   {
-    "id":42045,
+    "state":"PA",
+    "FIPS":42045,
     "number":35697,
     "rate":8.6,
-    "state":"PA",
-    "name":"Delaware County"
+    "population":560916,
+    "county":"Delaware County"
   },
   {
-    "id":42047,
+    "state":"PA",
+    "FIPS":42047,
     "number":2669,
     "rate":10.9,
-    "state":"PA",
-    "name":"Elk County"
+    "population":31623,
+    "county":"Elk County"
   },
   {
-    "id":42049,
+    "state":"PA",
+    "FIPS":42049,
     "number":24249,
     "rate":11.6,
-    "state":"PA",
-    "name":"Erie County"
+    "population":280801,
+    "county":"Erie County"
   },
   {
-    "id":42051,
+    "state":"PA",
+    "FIPS":42051,
     "number":15639,
     "rate":14.8,
-    "state":"PA",
-    "name":"Fayette County"
+    "population":135479,
+    "county":"Fayette County"
   },
   {
-    "id":42053,
+    "state":"PA",
+    "FIPS":42053,
     "number":762,
     "rate":11.2,
-    "state":"PA",
-    "name":"Forest County"
+    "population":7670,
+    "county":"Forest County"
   },
   {
-    "id":42055,
+    "state":"PA",
+    "FIPS":42055,
     "number":11692,
     "rate":10.4,
-    "state":"PA",
-    "name":"Franklin County"
+    "population":151589,
+    "county":"Franklin County"
   },
   {
-    "id":42057,
+    "state":"PA",
+    "FIPS":42057,
     "number":1275,
     "rate":11.4,
-    "state":"PA",
-    "name":"Fulton County"
+    "population":14764,
+    "county":"Fulton County"
   },
   {
-    "id":42059,
+    "state":"PA",
+    "FIPS":42059,
     "number":3295,
     "rate":11.1,
-    "state":"PA",
-    "name":"Greene County"
+    "population":38084,
+    "county":"Greene County"
   },
   {
-    "id":42061,
+    "state":"PA",
+    "FIPS":42061,
     "number":3849,
     "rate":10.8,
-    "state":"PA",
-    "name":"Huntingdon County"
+    "population":46018,
+    "county":"Huntingdon County"
   },
   {
-    "id":42063,
+    "state":"PA",
+    "FIPS":42063,
     "number":6331,
     "rate":9.4,
-    "state":"PA",
-    "name":"Indiana County"
+    "population":88209,
+    "county":"Indiana County"
   },
   {
-    "id":42065,
+    "state":"PA",
+    "FIPS":42065,
     "number":3967,
     "rate":11.6,
-    "state":"PA",
-    "name":"Jefferson County"
+    "population":44872,
+    "county":"Jefferson County"
   },
   {
-    "id":42067,
+    "state":"PA",
+    "FIPS":42067,
     "number":2355,
     "rate":12.6,
-    "state":"PA",
-    "name":"Juniata County"
+    "population":24915,
+    "county":"Juniata County"
   },
   {
-    "id":42069,
+    "state":"PA",
+    "FIPS":42069,
     "number":19356,
     "rate":11.7,
-    "state":"PA",
-    "name":"Lackawanna County"
+    "population":214510,
+    "county":"Lackawanna County"
   },
   {
-    "id":42071,
+    "state":"PA",
+    "FIPS":42071,
     "number":34177,
     "rate":8.9,
-    "state":"PA",
-    "name":"Lancaster County"
+    "population":526766,
+    "county":"Lancaster County"
   },
   {
-    "id":42073,
+    "state":"PA",
+    "FIPS":42073,
     "number":8121,
     "rate":11.8,
-    "state":"PA",
-    "name":"Lawrence County"
+    "population":89797,
+    "county":"Lawrence County"
   },
   {
-    "id":42075,
+    "state":"PA",
+    "FIPS":42075,
     "number":10800,
     "rate":10.7,
-    "state":"PA",
-    "name":"Lebanon County"
+    "population":135582,
+    "county":"Lebanon County"
   },
   {
-    "id":42077,
+    "state":"PA",
+    "FIPS":42077,
     "number":28014,
     "rate":10.6,
-    "state":"PA",
-    "name":"Lehigh County"
+    "population":355269,
+    "county":"Lehigh County"
   },
   {
-    "id":42079,
+    "state":"PA",
+    "FIPS":42079,
     "number":29102,
     "rate":11.7,
-    "state":"PA",
-    "name":"Luzerne County"
+    "population":321276,
+    "county":"Luzerne County"
   },
   {
-    "id":42081,
+    "state":"PA",
+    "FIPS":42081,
     "number":8921,
     "rate":9.9,
-    "state":"PA",
-    "name":"Lycoming County"
+    "population":117296,
+    "county":"Lycoming County"
   },
   {
-    "id":42083,
+    "state":"PA",
+    "FIPS":42083,
     "number":2993,
     "rate":9.1,
-    "state":"PA",
-    "name":"McKean County"
+    "population":43234,
+    "county":"McKean County"
   },
   {
-    "id":42085,
+    "state":"PA",
+    "FIPS":42085,
     "number":10609,
     "rate":12.1,
-    "state":"PA",
-    "name":"Mercer County"
+    "population":115747,
+    "county":"Mercer County"
   },
   {
-    "id":42087,
+    "state":"PA",
+    "FIPS":42087,
     "number":4291,
     "rate":12.2,
-    "state":"PA",
-    "name":"Mifflin County"
+    "population":46829,
+    "county":"Mifflin County"
   },
   {
-    "id":42089,
+    "state":"PA",
+    "FIPS":42089,
     "number":12747,
     "rate":10.2,
-    "state":"PA",
-    "name":"Monroe County"
+    "population":168465,
+    "county":"Monroe County"
   },
   {
-    "id":42091,
+    "state":"PA",
+    "FIPS":42091,
     "number":44112,
     "rate":7.3,
-    "state":"PA",
-    "name":"Montgomery County"
+    "population":809618,
+    "county":"Montgomery County"
   },
   {
-    "id":42093,
+    "state":"PA",
+    "FIPS":42093,
     "number":1718,
     "rate":12.1,
-    "state":"PA",
-    "name":"Montour County"
+    "population":18491,
+    "county":"Montour County"
   },
   {
-    "id":42095,
+    "state":"PA",
+    "FIPS":42095,
     "number":23351,
     "rate":10.3,
-    "state":"PA",
-    "name":"Northampton County"
+    "population":299363,
+    "county":"Northampton County"
   },
   {
-    "id":42097,
+    "state":"PA",
+    "FIPS":42097,
     "number":9084,
     "rate":12.3,
-    "state":"PA",
-    "name":"Northumberland County"
+    "population":94556,
+    "county":"Northumberland County"
   },
   {
-    "id":42099,
+    "state":"PA",
+    "FIPS":42099,
     "number":3501,
     "rate":10.2,
-    "state":"PA",
-    "name":"Perry County"
+    "population":45772,
+    "county":"Perry County"
   },
   {
-    "id":42101,
+    "state":"PA",
+    "FIPS":42101,
     "number":130938,
     "rate":11.4,
-    "state":"PA",
-    "name":"Philadelphia County"
+    "population":1550396,
+    "county":"Philadelphia County"
   },
   {
-    "id":42103,
+    "state":"PA",
+    "FIPS":42103,
     "number":4547,
     "rate":10.5,
-    "state":"PA",
-    "name":"Pike County"
+    "population":56762,
+    "county":"Pike County"
   },
   {
-    "id":42105,
+    "state":"PA",
+    "FIPS":42105,
     "number":1551,
     "rate":11.6,
-    "state":"PA",
-    "name":"Potter County"
+    "population":17625,
+    "county":"Potter County"
   },
   {
-    "id":42107,
+    "state":"PA",
+    "FIPS":42107,
     "number":12906,
     "rate":11.2,
-    "state":"PA",
-    "name":"Schuylkill County"
+    "population":147288,
+    "county":"Schuylkill County"
   },
   {
-    "id":42109,
+    "state":"PA",
+    "FIPS":42109,
     "number":2950,
     "rate":10,
-    "state":"PA",
-    "name":"Snyder County"
+    "population":39796,
+    "county":"Snyder County"
   },
   {
-    "id":42113,
+    "state":"PA",
+    "FIPS":42113,
     "number":677,
     "rate":12.8,
-    "state":"PA",
-    "name":"Sullivan County"
+    "population":6453,
+    "county":"Sullivan County"
   },
   {
-    "id":42111,
+    "state":"PA",
+    "FIPS":42111,
     "number":7315,
     "rate":12,
-    "state":"PA",
-    "name":"Somerset County"
+    "population":77110,
+    "county":"Somerset County"
   },
   {
-    "id":42115,
+    "state":"PA",
+    "FIPS":42115,
     "number":3459,
     "rate":10.5,
-    "state":"PA",
-    "name":"Susquehanna County"
+    "population":42773,
+    "county":"Susquehanna County"
   },
   {
-    "id":42117,
+    "state":"PA",
+    "FIPS":42117,
     "number":3613,
     "rate":11.1,
-    "state":"PA",
-    "name":"Tioga County"
+    "population":42611,
+    "county":"Tioga County"
   },
   {
-    "id":42119,
+    "state":"PA",
+    "FIPS":42119,
     "number":3482,
     "rate":10,
-    "state":"PA",
-    "name":"Union County"
+    "population":45139,
+    "county":"Union County"
   },
   {
-    "id":42121,
+    "state":"PA",
+    "FIPS":42121,
     "number":5247,
     "rate":12.5,
-    "state":"PA",
-    "name":"Venango County"
+    "population":54235,
+    "county":"Venango County"
   },
   {
-    "id":42123,
+    "state":"PA",
+    "FIPS":42123,
     "number":3782,
     "rate":11.8,
-    "state":"PA",
-    "name":"Warren County"
+    "population":41212,
+    "county":"Warren County"
   },
   {
-    "id":42125,
+    "state":"PA",
+    "FIPS":42125,
     "number":19626,
     "rate":12.2,
-    "state":"PA",
-    "name":"Washington County"
+    "population":208431,
+    "county":"Washington County"
   },
   {
-    "id":42127,
+    "state":"PA",
+    "FIPS":42127,
     "number":4895,
     "rate":11.9,
-    "state":"PA",
-    "name":"Wayne County"
+    "population":51685,
+    "county":"Wayne County"
   },
   {
-    "id":42129,
+    "state":"PA",
+    "FIPS":42129,
     "number":31818,
     "rate":11.2,
-    "state":"PA",
-    "name":"Westmoreland County"
+    "population":363100,
+    "county":"Westmoreland County"
   },
   {
-    "id":42131,
+    "state":"PA",
+    "FIPS":42131,
     "number":2222,
     "rate":10.3,
-    "state":"PA",
-    "name":"Wyoming County"
+    "population":28348,
+    "county":"Wyoming County"
   },
   {
-    "id":42133,
+    "state":"PA",
+    "FIPS":42133,
     "number":32540,
     "rate":10,
-    "state":"PA",
-    "name":"York County"
+    "population":437699,
+    "county":"York County"
   },
   {
-    "id":72001,
+    "state":"PR",
+    "FIPS":72001,
     "number":2893,
     "rate":20.7,
-    "state":"PR",
-    "name":"Adjuntas"
+    "population":0,
+    "county":"Adjuntas"
   },
   {
-    "id":72003,
+    "state":"PR",
+    "FIPS":72003,
     "number":4736,
     "rate":15.3,
-    "state":"PR",
-    "name":"Aguada Municipio"
+    "population":0,
+    "county":"Aguada Municipio"
   },
   {
-    "id":72005,
+    "state":"PR",
+    "FIPS":72005,
     "number":6677,
     "rate":15.1,
-    "state":"PR",
-    "name":"Aguadilla Municipio"
+    "population":0,
+    "county":"Aguadilla Municipio"
   },
   {
-    "id":72007,
+    "state":"PR",
+    "FIPS":72007,
     "number":3351,
     "rate":16.2,
-    "state":"PR",
-    "name":"Aguas Buenas Municipio"
+    "population":0,
+    "county":"Aguas Buenas Municipio"
   },
   {
-    "id":72009,
+    "state":"PR",
+    "FIPS":72009,
     "number":2690,
     "rate":14.3,
-    "state":"PR",
-    "name":"Aibonito Municipio"
+    "population":0,
+    "county":"Aibonito Municipio"
   },
   {
-    "id":72011,
+    "state":"PR",
+    "FIPS":72011,
     "number":3689,
     "rate":17.1,
-    "state":"PR",
-    "name":"A�asco Municipio"
+    "population":0,
+    "county":"A�asco Municipio"
   },
   {
-    "id":72013,
+    "state":"PR",
+    "FIPS":72013,
     "number":10980,
     "rate":15.5,
-    "state":"PR",
-    "name":"Arecibo Municipio"
+    "population":0,
+    "county":"Arecibo Municipio"
   },
   {
-    "id":72015,
+    "state":"PR",
+    "FIPS":72015,
     "number":2521,
     "rate":18.2,
-    "state":"PR",
-    "name":"Arroyo Municipio"
+    "population":0,
+    "county":"Arroyo Municipio"
   },
   {
-    "id":72017,
+    "state":"PR",
+    "FIPS":72017,
     "number":3238,
     "rate":17.7,
-    "state":"PR",
-    "name":"Barceloneta"
+    "population":0,
+    "county":"Barceloneta"
   },
   {
-    "id":72019,
+    "state":"PR",
+    "FIPS":72019,
     "number":3031,
     "rate":14.3,
-    "state":"PR",
-    "name":"Barranquitas Municipio"
+    "population":0,
+    "county":"Barranquitas Municipio"
   },
   {
-    "id":72023,
+    "state":"PR",
+    "FIPS":72023,
     "number":6050,
     "rate":15.9,
-    "state":"PR",
-    "name":"Cabo Rojo Municipio"
+    "population":0,
+    "county":"Cabo Rojo Municipio"
   },
   {
-    "id":72025,
+    "state":"PR",
+    "FIPS":72025,
     "number":14600,
     "rate":14,
-    "state":"PR",
-    "name":"Caguas Municipio"
+    "population":0,
+    "county":"Caguas Municipio"
   },
   {
-    "id":72027,
+    "state":"PR",
+    "FIPS":72027,
     "number":4179,
     "rate":16.4,
-    "state":"PR",
-    "name":"Camuy Municipio"
+    "population":0,
+    "county":"Camuy Municipio"
   },
   {
-    "id":72029,
+    "state":"PR",
+    "FIPS":72029,
     "number":5580,
     "rate":16.3,
-    "state":"PR",
-    "name":"Canovanas"
+    "population":0,
+    "county":"Canovanas"
   },
   {
-    "id":72031,
+    "state":"PR",
+    "FIPS":72031,
     "number":20450,
     "rate":15.8,
-    "state":"PR",
-    "name":"Carolina"
+    "population":0,
+    "county":"Carolina"
   },
   {
-    "id":72033,
+    "state":"PR",
+    "FIPS":72033,
     "number":3149,
     "rate":15.9,
-    "state":"PR",
-    "name":"Catano"
+    "population":0,
+    "county":"Catano"
   },
   {
-    "id":72035,
+    "state":"PR",
+    "FIPS":72035,
     "number":4925,
     "rate":13.9,
-    "state":"PR",
-    "name":"Cayey Municipio"
+    "population":0,
+    "county":"Cayey Municipio"
   },
   {
-    "id":72037,
+    "state":"PR",
+    "FIPS":72037,
     "number":1749,
     "rate":18,
-    "state":"PR",
-    "name":"Ceiba Municipio"
+    "population":0,
+    "county":"Ceiba Municipio"
   },
   {
-    "id":72021,
+    "state":"PR",
+    "FIPS":72021,
     "number":23160,
     "rate":15.1,
-    "state":"PR",
-    "name":"Bayam�n Municipio"
+    "population":0,
+    "county":"Bayam�n Municipio"
   },
   {
-    "id":72039,
+    "state":"PR",
+    "FIPS":72039,
     "number":2229,
     "rate":16.7,
-    "state":"PR",
-    "name":"Ciales Municipio"
+    "population":0,
+    "county":"Ciales Municipio"
   },
   {
-    "id":72041,
+    "state":"PR",
+    "FIPS":72041,
     "number":4081,
     "rate":12.9,
-    "state":"PR",
-    "name":"Cidra Municipio"
+    "population":0,
+    "county":"Cidra Municipio"
   },
   {
-    "id":72043,
+    "state":"PR",
+    "FIPS":72043,
     "number":4669,
     "rate":15.9,
-    "state":"PR",
-    "name":"Coamo Municipio"
+    "population":0,
+    "county":"Coamo Municipio"
   },
   {
-    "id":72045,
+    "state":"PR",
+    "FIPS":72045,
     "number":2265,
     "rate":15.1,
-    "state":"PR",
-    "name":"Comer�o Municipio"
+    "population":0,
+    "county":"Comer�o Municipio"
   },
   {
-    "id":72047,
+    "state":"PR",
+    "FIPS":72047,
     "number":4077,
     "rate":15.4,
-    "state":"PR",
-    "name":"Corozal Municipio"
+    "population":0,
+    "county":"Corozal Municipio"
   },
   {
-    "id":72049,
+    "state":"PR",
+    "FIPS":72049,
     "number":281,
     "rate":20.4,
-    "state":"PR",
-    "name":"Culebra Municipio"
+    "population":0,
+    "county":"Culebra Municipio"
   },
   {
-    "id":72051,
+    "state":"PR",
+    "FIPS":72051,
     "number":4062,
     "rate":14.7,
-    "state":"PR",
-    "name":"Dorado Municipio"
+    "population":0,
+    "county":"Dorado Municipio"
   },
   {
-    "id":72053,
+    "state":"PR",
+    "FIPS":72053,
     "number":4672,
     "rate":17.9,
-    "state":"PR",
-    "name":"Fajardo Municipio"
+    "population":0,
+    "county":"Fajardo Municipio"
   },
   {
-    "id":72054,
+    "state":"PR",
+    "FIPS":72054,
     "number":1400,
     "rate":15.3,
-    "state":"PR",
-    "name":"Florida Municipio"
+    "population":0,
+    "county":"Florida Municipio"
   },
   {
-    "id":72055,
+    "state":"PR",
+    "FIPS":72055,
     "number":2583,
     "rate":18.8,
-    "state":"PR",
-    "name":"Gu�nica Municipio"
+    "population":0,
+    "county":"Gu�nica Municipio"
   },
   {
-    "id":72057,
+    "state":"PR",
+    "FIPS":72057,
     "number":5199,
     "rate":16.3,
-    "state":"PR",
-    "name":"Guayama Municipio"
+    "population":0,
+    "county":"Guayama Municipio"
   },
   {
-    "id":72059,
+    "state":"",
+    "FIPS":72059,
     "number":2652,
     "rate":17.4,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":72061,
+    "state":"PR",
+    "FIPS":72061,
     "number":9274,
     "rate":12.6,
-    "state":"PR",
-    "name":"Guaynabo Municipio"
+    "population":0,
+    "county":"Guaynabo Municipio"
   },
   {
-    "id":72063,
+    "state":"PR",
+    "FIPS":72063,
     "number":4839,
     "rate":14.3,
-    "state":"PR",
-    "name":"Gurabo Municipio"
+    "population":0,
+    "county":"Gurabo Municipio"
   },
   {
-    "id":72065,
+    "state":"PR",
+    "FIPS":72065,
     "number":4979,
     "rate":16,
-    "state":"PR",
-    "name":"Hatillo Municipio"
+    "population":0,
+    "county":"Hatillo Municipio"
   },
   {
-    "id":72067,
+    "state":"PR",
+    "FIPS":72067,
     "number":2569,
     "rate":19.5,
-    "state":"PR",
-    "name":"Hormigueros Municipio"
+    "population":0,
+    "county":"Hormigueros Municipio"
   },
   {
-    "id":72069,
+    "state":"PR",
+    "FIPS":72069,
     "number":6710,
     "rate":15.7,
-    "state":"PR",
-    "name":"Humacao Municipio"
+    "population":0,
+    "county":"Humacao Municipio"
   },
   {
-    "id":72071,
+    "state":"PR",
+    "FIPS":72071,
     "number":5538,
     "rate":16.5,
-    "state":"PR",
-    "name":"Isabela Municipio"
+    "population":0,
+    "county":"Isabela Municipio"
   },
   {
-    "id":72073,
+    "state":"PR",
+    "FIPS":72073,
     "number":1794,
     "rate":15.6,
-    "state":"PR",
-    "name":"Jayuya Municipio"
+    "population":0,
+    "county":"Jayuya Municipio"
   },
   {
-    "id":72075,
+    "state":"PR",
+    "FIPS":72075,
     "number":5603,
     "rate":15.7,
-    "state":"PR",
-    "name":"Juana D�az Municipio"
+    "population":0,
+    "county":"Juana D�az Municipio"
   },
   {
-    "id":72077,
+    "state":"PR",
+    "FIPS":72077,
     "number":4115,
     "rate":14.2,
-    "state":"PR",
-    "name":"Juncos Municipio"
+    "population":0,
+    "county":"Juncos Municipio"
   },
   {
-    "id":72079,
+    "state":"PR",
+    "FIPS":72079,
     "number":3589,
     "rate":18.9,
-    "state":"PR",
-    "name":"Lajas Municipio"
+    "population":0,
+    "county":"Lajas Municipio"
   },
   {
-    "id":72081,
+    "state":"PR",
+    "FIPS":72081,
     "number":3756,
     "rate":17.1,
-    "state":"PR",
-    "name":"Lares Municipio"
+    "population":0,
+    "county":"Lares Municipio"
   },
   {
-    "id":72083,
+    "state":"PR",
+    "FIPS":72083,
     "number":1246,
     "rate":17.8,
-    "state":"PR",
-    "name":"Las Mar�as Municipio"
+    "population":0,
+    "county":"Las Mar�as Municipio"
   },
   {
-    "id":72085,
+    "state":"PR",
+    "FIPS":72085,
     "number":4296,
     "rate":15.1,
-    "state":"PR",
-    "name":"Las Piedras Municipio"
+    "population":0,
+    "county":"Las Piedras Municipio"
   },
   {
-    "id":72087,
+    "state":"PR",
+    "FIPS":72087,
     "number":3504,
     "rate":16.8,
-    "state":"PR",
-    "name":"Lo�za Municipio"
+    "population":0,
+    "county":"Lo�za Municipio"
   },
   {
-    "id":72089,
+    "state":"PR",
+    "FIPS":72089,
     "number":2477,
     "rate":17.1,
-    "state":"PR",
-    "name":"Luquillo Municipio"
+    "population":0,
+    "county":"Luquillo Municipio"
   },
   {
-    "id":72091,
+    "state":"PR",
+    "FIPS":72091,
     "number":6173,
     "rate":19.6,
-    "state":"PR",
-    "name":"Manat� Municipio"
+    "population":0,
+    "county":"Manat� Municipio"
   },
   {
-    "id":72093,
+    "state":"PR",
+    "FIPS":72093,
     "number":816,
     "rate":18,
-    "state":"PR",
-    "name":"Maricao"
+    "population":0,
+    "county":"Maricao"
   },
   {
-    "id":72095,
+    "state":"PR",
+    "FIPS":72095,
     "number":1552,
     "rate":17.5,
-    "state":"PR",
-    "name":"Maunabo Municipio"
+    "population":0,
+    "county":"Maunabo Municipio"
   },
   {
-    "id":72097,
+    "state":"PR",
+    "FIPS":72097,
     "number":10140,
     "rate":15.6,
-    "state":"PR",
-    "name":"Mayag�ez Municipio"
+    "population":0,
+    "county":"Mayag�ez Municipio"
   },
   {
-    "id":72099,
+    "state":"PR",
+    "FIPS":72099,
     "number":4479,
     "rate":15.6,
-    "state":"PR",
-    "name":"Moca Municipio"
+    "population":0,
+    "county":"Moca Municipio"
   },
   {
-    "id":72101,
+    "state":"PR",
+    "FIPS":72101,
     "number":3628,
     "rate":15.7,
-    "state":"PR",
-    "name":"Morovis Municipio"
+    "population":0,
+    "county":"Morovis Municipio"
   },
   {
-    "id":72103,
+    "state":"PR",
+    "FIPS":72103,
     "number":3327,
     "rate":17.2,
-    "state":"PR",
-    "name":""
+    "population":0,
+    "county":""
   },
   {
-    "id":72105,
+    "state":"PR",
+    "FIPS":72105,
     "number":3481,
     "rate":15.8,
-    "state":"PR",
-    "name":"Naranjito Municipio"
+    "population":0,
+    "county":"Naranjito Municipio"
   },
   {
-    "id":72107,
+    "state":"PR",
+    "FIPS":72107,
     "number":2469,
     "rate":15.1,
-    "state":"PR",
-    "name":"Orocovis Municipio"
+    "population":0,
+    "county":"Orocovis Municipio"
   },
   {
-    "id":72109,
+    "state":"PR",
+    "FIPS":72109,
     "number":2708,
     "rate":19.4,
-    "state":"PR",
-    "name":"Patillas"
+    "population":0,
+    "county":"Patillas"
   },
   {
-    "id":72111,
+    "state":"PR",
+    "FIPS":72111,
     "number":2739,
     "rate":16.6,
-    "state":"PR",
-    "name":"Pe�uelas Municipio"
+    "population":0,
+    "county":"Pe�uelas Municipio"
   },
   {
-    "id":72113,
+    "state":"PR",
+    "FIPS":72113,
     "number":18320,
     "rate":15.6,
-    "state":"PR",
-    "name":"Ponce Municipio"
+    "population":0,
+    "county":"Ponce Municipio"
   },
   {
-    "id":72115,
+    "state":"PR",
+    "FIPS":72115,
     "number":3220,
     "rate":17.1,
-    "state":"PR",
-    "name":"Quebradillas Municipio"
+    "population":0,
+    "county":"Quebradillas Municipio"
   },
   {
-    "id":72117,
+    "state":"PR",
+    "FIPS":72117,
     "number":2029,
     "rate":17.7,
-    "state":"PR",
-    "name":"Rinc�n Municipio"
+    "population":0,
+    "county":"Rinc�n Municipio"
   },
   {
-    "id":72119,
+    "state":"PR",
+    "FIPS":72119,
     "number":5975,
     "rate":15,
-    "state":"PR",
-    "name":"R�o Grande Municipio"
+    "population":0,
+    "county":"R�o Grande Municipio"
   },
   {
-    "id":72121,
+    "state":"PR",
+    "FIPS":72121,
     "number":3234,
     "rate":17.8,
-    "state":"PR",
-    "name":"Sabana Grande Municipio"
+    "population":0,
+    "county":"Sabana Grande Municipio"
   },
   {
-    "id":72123,
+    "state":"PR",
+    "FIPS":72123,
     "number":4007,
     "rate":18.4,
-    "state":"PR",
-    "name":"Salinas Municipio"
+    "population":0,
+    "county":"Salinas Municipio"
   },
   {
-    "id":72125,
+    "state":"PR",
+    "FIPS":72125,
     "number":4381,
     "rate":16.8,
-    "state":"PR",
-    "name":"San Germ�n Municipio"
+    "population":0,
+    "county":"San Germ�n Municipio"
   },
   {
-    "id":72127,
+    "state":"PR",
+    "FIPS":72127,
     "number":39830,
     "rate":13.7,
-    "state":"PR",
-    "name":"San Juan Municipio"
+    "population":0,
+    "county":"San Juan Municipio"
   },
   {
-    "id":72129,
+    "state":"PR",
+    "FIPS":72129,
     "number":4522,
     "rate":15.1,
-    "state":"PR",
-    "name":"San Lorenzo Municipio"
+    "population":0,
+    "county":"San Lorenzo Municipio"
   },
   {
-    "id":72131,
+    "state":"PR",
+    "FIPS":72131,
     "number":5998,
     "rate":19.5,
-    "state":"PR",
-    "name":"San Sebasti�n Municipio"
+    "population":0,
+    "county":"San Sebasti�n Municipio"
   },
   {
-    "id":72133,
+    "state":"PR",
+    "FIPS":72133,
     "number":2161,
     "rate":13.4,
-    "state":"PR",
-    "name":"Santa Isabel"
+    "population":0,
+    "county":"Santa Isabel"
   },
   {
-    "id":72135,
+    "state":"PR",
+    "FIPS":72135,
     "number":6995,
     "rate":13.1,
-    "state":"PR",
-    "name":"Toa Alta"
+    "population":0,
+    "county":"Toa Alta"
   },
   {
-    "id":72137,
+    "state":"PR",
+    "FIPS":72137,
     "number":9375,
     "rate":14.6,
-    "state":"PR",
-    "name":"Toa Baja Municipio"
+    "population":0,
+    "county":"Toa Baja Municipio"
   },
   {
-    "id":72139,
+    "state":"PR",
+    "FIPS":72139,
     "number":6958,
     "rate":12.9,
-    "state":"PR",
-    "name":"Trujillo Alto Municipio"
+    "population":0,
+    "county":"Trujillo Alto Municipio"
   },
   {
-    "id":72141,
+    "state":"PR",
+    "FIPS":72141,
     "number":3691,
     "rate":15.6,
-    "state":"PR",
-    "name":"Utuado Municipio"
+    "population":0,
+    "county":"Utuado Municipio"
   },
   {
-    "id":72143,
+    "state":"PR",
+    "FIPS":72143,
     "number":4583,
     "rate":16,
-    "state":"PR",
-    "name":"Vega Alta Municipio"
+    "population":0,
+    "county":"Vega Alta Municipio"
   },
   {
-    "id":72145,
+    "state":"PR",
+    "FIPS":72145,
     "number":7107,
     "rate":16.7,
-    "state":"PR",
-    "name":"Vega Baja Municipio"
+    "population":0,
+    "county":"Vega Baja Municipio"
   },
   {
-    "id":72147,
+    "state":"PR",
+    "FIPS":72147,
     "number":1326,
     "rate":19.2,
-    "state":"PR",
-    "name":"Vieques Municipio"
+    "population":0,
+    "county":"Vieques Municipio"
   },
   {
-    "id":72149,
+    "state":"PR",
+    "FIPS":72149,
     "number":2716,
     "rate":15.2,
-    "state":"PR",
-    "name":"Villalba Municipio"
+    "population":0,
+    "county":"Villalba Municipio"
   },
   {
-    "id":72151,
+    "state":"PR",
+    "FIPS":72151,
     "number":4175,
     "rate":15.4,
-    "state":"PR",
-    "name":"Yabucoa Municipio"
+    "population":0,
+    "county":"Yabucoa Municipio"
   },
   {
-    "id":72153,
+    "state":"PR",
+    "FIPS":72153,
     "number":5159,
     "rate":17.1,
-    "state":"PR",
-    "name":"Yauco Municipio"
+    "population":0,
+    "county":"Yauco Municipio"
   },
   {
-    "id":44001,
+    "state":"RI",
+    "FIPS":44001,
     "number":3239,
     "rate":8.7,
-    "state":"RI",
-    "name":"Bristol County"
+    "population":49238,
+    "county":"Bristol County"
   },
   {
-    "id":44003,
+    "state":"RI",
+    "FIPS":44003,
     "number":12076,
     "rate":9.4,
-    "state":"RI",
-    "name":"Kent County"
+    "population":164900,
+    "county":"Kent County"
   },
   {
-    "id":44005,
+    "state":"RI",
+    "FIPS":44005,
     "number":5162,
     "rate":8.1,
-    "state":"RI",
-    "name":"Newport County"
+    "population":82884,
+    "county":"Newport County"
   },
   {
-    "id":44007,
+    "state":"RI",
+    "FIPS":44007,
     "number":44620,
     "rate":9.5,
-    "state":"RI",
-    "name":"Providence County"
+    "population":629368,
+    "county":"Providence County"
   },
   {
-    "id":44009,
+    "state":"RI",
+    "FIPS":44009,
     "number":8154,
     "rate":8.5,
-    "state":"RI",
-    "name":"Washington County"
+    "population":126247,
+    "county":"Washington County"
   },
   {
-    "id":45001,
+    "state":"SC",
+    "FIPS":45001,
     "number":2669,
     "rate":14.2,
-    "state":"SC",
-    "name":"Abbeville County"
+    "population":25065,
+    "county":"Abbeville County"
   },
   {
-    "id":45003,
+    "state":"SC",
+    "FIPS":45003,
     "number":14827,
     "rate":12.1,
-    "state":"SC",
-    "name":"Aiken County"
+    "population":163426,
+    "county":"Aiken County"
   },
   {
-    "id":45005,
+    "state":"SC",
+    "FIPS":45005,
     "number":1325,
     "rate":17.2,
-    "state":"SC",
-    "name":"Allendale County"
+    "population":10004,
+    "county":"Allendale County"
   },
   {
-    "id":45007,
+    "state":"SC",
+    "FIPS":45007,
     "number":17650,
     "rate":12.6,
-    "state":"SC",
-    "name":"Anderson County"
+    "population":189365,
+    "county":"Anderson County"
   },
   {
-    "id":45009,
+    "state":"SC",
+    "FIPS":45009,
     "number":2092,
     "rate":17.9,
-    "state":"SC",
-    "name":"Bamberg County"
+    "population":15790,
+    "county":"Bamberg County"
   },
   {
-    "id":45011,
+    "state":"SC",
+    "FIPS":45011,
     "number":2501,
     "rate":15.5,
-    "state":"SC",
-    "name":"Barnwell County"
+    "population":22294,
+    "county":"Barnwell County"
   },
   {
-    "id":45013,
+    "state":"SC",
+    "FIPS":45013,
     "number":12251,
     "rate":9.5,
-    "state":"SC",
-    "name":"Beaufort County"
+    "population":167782,
+    "county":"Beaufort County"
   },
   {
-    "id":45015,
+    "state":"SC",
+    "FIPS":45015,
     "number":18513,
     "rate":13.5,
-    "state":"SC",
-    "name":"Berkeley County"
+    "population":189493,
+    "county":"Berkeley County"
   },
   {
-    "id":45017,
+    "state":"SC",
+    "FIPS":45017,
     "number":2050,
     "rate":17.8,
-    "state":"SC",
-    "name":"Calhoun County"
+    "population":14922,
+    "county":"Calhoun County"
   },
   {
-    "id":45019,
+    "state":"SC",
+    "FIPS":45019,
     "number":31090,
     "rate":11.1,
-    "state":"SC",
-    "name":"Charleston County"
+    "population":365472,
+    "county":"Charleston County"
   },
   {
-    "id":45021,
+    "state":"SC",
+    "FIPS":45021,
     "number":5740,
     "rate":14.1,
-    "state":"SC",
-    "name":"Cherokee County"
+    "population":55671,
+    "county":"Cherokee County"
   },
   {
-    "id":45023,
+    "state":"SC",
+    "FIPS":45023,
     "number":3434,
     "rate":14.1,
-    "state":"SC",
-    "name":"Chester County"
+    "population":32645,
+    "county":"Chester County"
   },
   {
-    "id":45025,
+    "state":"SC",
+    "FIPS":45025,
     "number":5274,
     "rate":15.4,
-    "state":"SC",
-    "name":"Chesterfield County"
+    "population":46100,
+    "county":"Chesterfield County"
   },
   {
-    "id":45027,
+    "state":"SC",
+    "FIPS":45027,
     "number":4315,
     "rate":16.5,
-    "state":"SC",
-    "name":"Clarendon County"
+    "population":34269,
+    "county":"Clarendon County"
   },
   {
-    "id":45029,
+    "state":"SC",
+    "FIPS":45029,
     "number":5102,
     "rate":18,
-    "state":"SC",
-    "name":"Colleton County"
+    "population":38230,
+    "county":"Colleton County"
   },
   {
-    "id":45031,
+    "state":"SC",
+    "FIPS":45031,
     "number":7305,
     "rate":14.5,
-    "state":"SC",
-    "name":"Darlington County"
+    "population":68165,
+    "county":"Darlington County"
   },
   {
-    "id":45033,
+    "state":"SC",
+    "FIPS":45033,
     "number":3584,
     "rate":16,
-    "state":"SC",
-    "name":"Dillon County"
+    "population":31447,
+    "county":"Dillon County"
   },
   {
-    "id":45035,
+    "state":"SC",
+    "FIPS":45035,
     "number":10070,
     "rate":9.9,
-    "state":"SC",
-    "name":"Dorchester County"
+    "population":142470,
+    "county":"Dorchester County"
   },
   {
-    "id":45037,
+    "state":"SC",
+    "FIPS":45037,
     "number":2815,
     "rate":13.8,
-    "state":"SC",
-    "name":"Edgefield County"
+    "population":26328,
+    "county":"Edgefield County"
   },
   {
-    "id":45039,
+    "state":"SC",
+    "FIPS":45039,
     "number":3015,
     "rate":17,
-    "state":"SC",
-    "name":"Fairfield County"
+    "population":23371,
+    "county":"Fairfield County"
   },
   {
-    "id":45041,
+    "state":"SC",
+    "FIPS":45041,
     "number":14884,
     "rate":14.7,
-    "state":"SC",
-    "name":"Florence County"
+    "population":138060,
+    "county":"Florence County"
   },
   {
-    "id":45043,
+    "state":"SC",
+    "FIPS":45043,
     "number":6803,
     "rate":14.6,
-    "state":"SC",
-    "name":"Georgetown County"
+    "population":60284,
+    "county":"Georgetown County"
   },
   {
-    "id":45045,
+    "state":"SC",
+    "FIPS":45045,
     "number":36892,
     "rate":10.8,
-    "state":"SC",
-    "name":"Greenville County"
+    "population":466758,
+    "county":"Greenville County"
   },
   {
-    "id":45047,
+    "state":"SC",
+    "FIPS":45047,
     "number":6355,
     "rate":12.4,
-    "state":"SC",
-    "name":"Greenwood County"
+    "population":69833,
+    "county":"Greenwood County"
   },
   {
-    "id":45049,
+    "state":"SC",
+    "FIPS":45049,
     "number":2634,
     "rate":17,
-    "state":"SC",
-    "name":"Hampton County"
+    "population":20719,
+    "county":"Hampton County"
   },
   {
-    "id":45051,
+    "state":"SC",
+    "FIPS":45051,
     "number":23754,
     "rate":10.8,
-    "state":"SC",
-    "name":"Horry County"
+    "population":281990,
+    "county":"Horry County"
   },
   {
-    "id":45053,
+    "state":"SC",
+    "FIPS":45053,
     "number":2755,
     "rate":14.3,
-    "state":"SC",
-    "name":"Jasper County"
+    "population":25973,
+    "county":"Jasper County"
   },
   {
-    "id":45055,
+    "state":"SC",
+    "FIPS":45055,
     "number":5853,
     "rate":12.8,
-    "state":"SC",
-    "name":"Kershaw County"
+    "population":62232,
+    "county":"Kershaw County"
   },
   {
-    "id":45057,
+    "state":"SC",
+    "FIPS":45057,
     "number":8051,
     "rate":13.5,
-    "state":"SC",
-    "name":"Lancaster County"
+    "population":79193,
+    "county":"Lancaster County"
   },
   {
-    "id":45059,
+    "state":"SC",
+    "FIPS":45059,
     "number":7325,
     "rate":14.9,
-    "state":"SC",
-    "name":"Laurens County"
+    "population":66258,
+    "county":"Laurens County"
   },
   {
-    "id":45061,
+    "state":"SC",
+    "FIPS":45061,
     "number":2247,
     "rate":15.8,
-    "state":"SC",
-    "name":"Lee County"
+    "population":18669,
+    "county":"Lee County"
   },
   {
-    "id":45063,
+    "state":"SC",
+    "FIPS":45063,
     "number":20981,
     "rate":10.5,
-    "state":"SC",
-    "name":"Lexington County"
+    "population":270114,
+    "county":"Lexington County"
   },
   {
-    "id":45067,
+    "state":"SC",
+    "FIPS":45067,
     "number":3996,
     "rate":16.7,
-    "state":"SC",
-    "name":"Marion County"
+    "population":32391,
+    "county":"Marion County"
   },
   {
-    "id":45069,
+    "state":"SC",
+    "FIPS":45069,
     "number":3315,
     "rate":15.4,
-    "state":"SC",
-    "name":"Marlboro County"
+    "population":28157,
+    "county":"Marlboro County"
   },
   {
-    "id":45065,
+    "state":"SC",
+    "FIPS":45065,
     "number":1384,
     "rate":16.4,
-    "state":"SC",
-    "name":"Mccormick County"
+    "population":9949,
+    "county":"Mccormick County"
   },
   {
-    "id":45071,
+    "state":"SC",
+    "FIPS":45071,
     "number":4121,
     "rate":14.7,
-    "state":"SC",
-    "name":"Newberry County"
+    "population":37563,
+    "county":"Newberry County"
   },
   {
-    "id":45073,
+    "state":"SC",
+    "FIPS":45073,
     "number":7776,
     "rate":13.5,
-    "state":"SC",
-    "name":"Oconee County"
+    "population":74583,
+    "county":"Oconee County"
   },
   {
-    "id":45075,
+    "state":"SC",
+    "FIPS":45075,
     "number":10819,
     "rate":16,
-    "state":"SC",
-    "name":"Orangeburg County"
+    "population":91429,
+    "county":"Orangeburg County"
   },
   {
-    "id":45077,
+    "state":"SC",
+    "FIPS":45077,
     "number":10070,
     "rate":11.3,
-    "state":"SC",
-    "name":"Pickens County"
+    "population":119656,
+    "county":"Pickens County"
   },
   {
-    "id":45079,
+    "state":"SC",
+    "FIPS":45079,
     "number":30862,
     "rate":10.7,
-    "state":"SC",
-    "name":"Richland County"
+    "population":393677,
+    "county":"Richland County"
   },
   {
-    "id":45081,
+    "state":"SC",
+    "FIPS":45081,
     "number":2027,
     "rate":13.5,
-    "state":"SC",
-    "name":"Saluda County"
+    "population":19963,
+    "county":"Saluda County"
   },
   {
-    "id":45083,
+    "state":"SC",
+    "FIPS":45083,
     "number":28068,
     "rate":13.3,
-    "state":"SC",
-    "name":"Spartanburg County"
+    "population":288421,
+    "county":"Spartanburg County"
   },
   {
-    "id":45085,
+    "state":"SC",
+    "FIPS":45085,
     "number":11203,
     "rate":14.3,
-    "state":"SC",
-    "name":"Sumter County"
+    "population":108060,
+    "county":"Sumter County"
   },
   {
-    "id":45087,
+    "state":"SC",
+    "FIPS":45087,
     "number":3237,
     "rate":15.1,
-    "state":"SC",
-    "name":"Union County"
+    "population":28222,
+    "county":"Union County"
   },
   {
-    "id":45089,
+    "state":"SC",
+    "FIPS":45089,
     "number":4485,
     "rate":17.8,
-    "state":"SC",
-    "name":"Williamsburg County"
+    "population":33592,
+    "county":"Williamsburg County"
   },
   {
-    "id":45091,
+    "state":"SC",
+    "FIPS":45091,
     "number":17924,
     "rate":10.6,
-    "state":"SC",
-    "name":"York County"
+    "population":234566,
+    "county":"York County"
   },
   {
-    "id":46003,
+    "state":"SD",
+    "FIPS":46003,
     "number":181,
     "rate":9.2,
-    "state":"SD",
-    "name":"Aurora County"
+    "population":2751,
+    "county":"Aurora County"
   },
   {
-    "id":46005,
+    "state":"SD",
+    "FIPS":46005,
     "number":1247,
     "rate":9.6,
-    "state":"SD",
-    "name":"Beadle County"
+    "population":18000,
+    "county":"Beadle County"
   },
   {
-    "id":46007,
+    "state":"SD",
+    "FIPS":46007,
     "number":327,
     "rate":15.1,
-    "state":"SD",
-    "name":"Bennett County"
+    "population":3438,
+    "county":"Bennett County"
   },
   {
-    "id":46009,
+    "state":"SD",
+    "FIPS":46009,
     "number":501,
     "rate":9.1,
-    "state":"SD",
-    "name":"Bon Homme County"
+    "population":7038,
+    "county":"Bon Homme County"
   },
   {
-    "id":46011,
+    "state":"SD",
+    "FIPS":46011,
     "number":1466,
     "rate":6.2,
-    "state":"SD",
-    "name":"Brookings County"
+    "population":32686,
+    "county":"Brookings County"
   },
   {
-    "id":46013,
+    "state":"SD",
+    "FIPS":46013,
     "number":2400,
     "rate":8.7,
-    "state":"SD",
-    "name":"Brown County"
+    "population":37514,
+    "county":"Brown County"
   },
   {
-    "id":46015,
+    "state":"SD",
+    "FIPS":46015,
     "number":410,
     "rate":10.8,
-    "state":"SD",
-    "name":"Brule County"
+    "population":5304,
+    "county":"Brule County"
   },
   {
-    "id":46017,
+    "state":"SD",
+    "FIPS":46017,
     "number":208,
     "rate":17.8,
-    "state":"SD",
-    "name":"Buffalo County"
+    "population":2026,
+    "county":"Buffalo County"
   },
   {
-    "id":46019,
+    "state":"SD",
+    "FIPS":46019,
     "number":633,
     "rate":8.4,
-    "state":"SD",
-    "name":"Butte County"
+    "population":10238,
+    "county":"Butte County"
   },
   {
-    "id":46021,
+    "state":"SD",
+    "FIPS":46021,
     "number":118,
     "rate":10.5,
-    "state":"SD",
-    "name":"Campbell County"
+    "population":1389,
+    "county":"Campbell County"
   },
   {
-    "id":46023,
+    "state":"SD",
+    "FIPS":46023,
     "number":766,
     "rate":12.3,
-    "state":"SD",
-    "name":"Charles Mix County"
+    "population":9210,
+    "county":"Charles Mix County"
   },
   {
-    "id":46025,
+    "state":"SD",
+    "FIPS":46025,
     "number":258,
     "rate":9.6,
-    "state":"SD",
-    "name":"Clark County"
+    "population":3583,
+    "county":"Clark County"
   },
   {
-    "id":46027,
+    "state":"SD",
+    "FIPS":46027,
     "number":810,
     "rate":7.8,
-    "state":"SD",
-    "name":"Clay County"
+    "population":14091,
+    "county":"Clay County"
   },
   {
-    "id":46029,
+    "state":"SD",
+    "FIPS":46029,
     "number":1694,
     "rate":8.4,
-    "state":"SD",
-    "name":"Codington County"
+    "population":27581,
+    "county":"Codington County"
   },
   {
-    "id":46031,
+    "state":"SD",
+    "FIPS":46031,
     "number":398,
     "rate":15.4,
-    "state":"SD",
-    "name":"Corson County"
+    "population":4082,
+    "county":"Corson County"
   },
   {
-    "id":46033,
+    "state":"SD",
+    "FIPS":46033,
     "number":723,
     "rate":10.8,
-    "state":"SD",
-    "name":"Custer County"
+    "population":8315,
+    "county":"Custer County"
   },
   {
-    "id":46035,
+    "state":"SD",
+    "FIPS":46035,
     "number":1381,
     "rate":9.4,
-    "state":"SD",
-    "name":"Davison County"
+    "population":19798,
+    "county":"Davison County"
   },
   {
-    "id":46037,
+    "state":"SD",
+    "FIPS":46037,
     "number":504,
     "rate":11.7,
-    "state":"SD",
-    "name":"Day County"
+    "population":5636,
+    "county":"Day County"
   },
   {
-    "id":46039,
+    "state":"SD",
+    "FIPS":46039,
     "number":317,
     "rate":9.7,
-    "state":"SD",
-    "name":"Deuel County"
+    "population":4368,
+    "county":"Deuel County"
   },
   {
-    "id":46041,
+    "state":"SD",
+    "FIPS":46041,
     "number":534,
     "rate":15.4,
-    "state":"SD",
-    "name":"Dewey County"
+    "population":5544,
+    "county":"Dewey County"
   },
   {
-    "id":46043,
+    "state":"SD",
+    "FIPS":46043,
     "number":247,
     "rate":11,
-    "state":"SD",
-    "name":"Douglas County"
+    "population":2972,
+    "county":"Douglas County"
   },
   {
-    "id":46045,
+    "state":"SD",
+    "FIPS":46045,
     "number":265,
     "rate":8.8,
-    "state":"SD",
-    "name":"Edmunds County"
+    "population":4028,
+    "county":"Edmunds County"
   },
   {
-    "id":46047,
+    "state":"SD",
+    "FIPS":46047,
     "number":627,
     "rate":11.2,
-    "state":"SD",
-    "name":"Fall River County"
+    "population":6999,
+    "county":"Fall River County"
   },
   {
-    "id":46049,
+    "state":"SD",
+    "FIPS":46049,
     "number":185,
     "rate":10.4,
-    "state":"SD",
-    "name":"Faulk County"
+    "population":2379,
+    "county":"Faulk County"
   },
   {
-    "id":46051,
+    "state":"SD",
+    "FIPS":46051,
     "number":504,
     "rate":9.2,
-    "state":"SD",
-    "name":"Grant County"
+    "population":7268,
+    "county":"Grant County"
   },
   {
-    "id":46053,
+    "state":"SD",
+    "FIPS":46053,
     "number":340,
     "rate":10.6,
-    "state":"SD",
-    "name":"Gregory County"
+    "population":4248,
+    "county":"Gregory County"
   },
   {
-    "id":46055,
+    "state":"SD",
+    "FIPS":46055,
     "number":148,
     "rate":10.2,
-    "state":"SD",
-    "name":"Haakon County"
+    "population":1909,
+    "county":"Haakon County"
   },
   {
-    "id":46057,
+    "state":"SD",
+    "FIPS":46057,
     "number":372,
     "rate":9.3,
-    "state":"SD",
-    "name":"Hamlin County"
+    "population":5941,
+    "county":"Hamlin County"
   },
   {
-    "id":46059,
+    "state":"SD",
+    "FIPS":46059,
     "number":295,
     "rate":11.4,
-    "state":"SD",
-    "name":"Hand County"
+    "population":3385,
+    "county":"Hand County"
   },
   {
-    "id":46061,
+    "state":"SD",
+    "FIPS":46061,
     "number":190,
     "rate":8.6,
-    "state":"SD",
-    "name":"Hanson County"
+    "population":3394,
+    "county":"Hanson County"
   },
   {
-    "id":46063,
+    "state":"SD",
+    "FIPS":46063,
     "number":87,
     "rate":8.7,
-    "state":"SD",
-    "name":"Harding County"
+    "population":1315,
+    "county":"Harding County"
   },
   {
-    "id":46065,
+    "state":"SD",
+    "FIPS":46065,
     "number":1221,
     "rate":9.4,
-    "state":"SD",
-    "name":"Hughes County"
+    "population":17441,
+    "county":"Hughes County"
   },
   {
-    "id":46067,
+    "state":"SD",
+    "FIPS":46067,
     "number":574,
     "rate":10.7,
-    "state":"SD",
-    "name":"Hutchinson County"
+    "population":7206,
+    "county":"Hutchinson County"
   },
   {
-    "id":46069,
+    "state":"SD",
+    "FIPS":46069,
     "number":120,
     "rate":11,
-    "state":"SD",
-    "name":"Hyde County"
+    "population":1431,
+    "county":"Hyde County"
   },
   {
-    "id":46071,
+    "state":"SD",
+    "FIPS":46071,
     "number":246,
     "rate":12.1,
-    "state":"SD",
-    "name":"Jackson County"
+    "population":3177,
+    "county":"Jackson County"
   },
   {
-    "id":46073,
+    "state":"SD",
+    "FIPS":46073,
     "number":159,
     "rate":10.2,
-    "state":"SD",
-    "name":"Jerauld County"
+    "population":2040,
+    "county":"Jerauld County"
   },
   {
-    "id":46075,
+    "state":"SD",
+    "FIPS":46075,
     "number":82,
     "rate":10.6,
-    "state":"SD",
-    "name":"Jones County"
+    "population":1010,
+    "county":"Jones County"
   },
   {
-    "id":46077,
+    "state":"SD",
+    "FIPS":46077,
     "number":395,
     "rate":10.1,
-    "state":"SD",
-    "name":"Kingsbury County"
+    "population":5240,
+    "county":"Kingsbury County"
   },
   {
-    "id":46079,
+    "state":"SD",
+    "FIPS":46079,
     "number":788,
     "rate":8.8,
-    "state":"SD",
-    "name":"Lake County"
+    "population":11832,
+    "county":"Lake County"
   },
   {
-    "id":46081,
+    "state":"SD",
+    "FIPS":46081,
     "number":1456,
     "rate":7.8,
-    "state":"SD",
-    "name":"Lawrence County"
+    "population":24360,
+    "county":"Lawrence County"
   },
   {
-    "id":46083,
+    "state":"SD",
+    "FIPS":46083,
     "number":2200,
     "rate":6.6,
-    "state":"SD",
-    "name":"Lincoln County"
+    "population":48302,
+    "county":"Lincoln County"
   },
   {
-    "id":46085,
+    "state":"SD",
+    "FIPS":46085,
     "number":308,
     "rate":11.8,
-    "state":"SD",
-    "name":"Lyman County"
+    "population":3793,
+    "county":"Lyman County"
   },
   {
-    "id":46091,
+    "state":"SD",
+    "FIPS":46091,
     "number":351,
     "rate":9.9,
-    "state":"SD",
-    "name":"Marshall County"
+    "population":4656,
+    "county":"Marshall County"
   },
   {
-    "id":46087,
+    "state":"SD",
+    "FIPS":46087,
     "number":376,
     "rate":9.4,
-    "state":"SD",
-    "name":"McCook County"
+    "population":5603,
+    "county":"McCook County"
   },
   {
-    "id":46089,
+    "state":"SD",
+    "FIPS":46089,
     "number":226,
     "rate":12.2,
-    "state":"SD",
-    "name":"McPherson County"
+    "population":2429,
+    "county":"McPherson County"
   },
   {
-    "id":46093,
+    "state":"SD",
+    "FIPS":46093,
     "number":1562,
     "rate":8.2,
-    "state":"SD",
-    "name":"Meade County"
+    "population":25924,
+    "county":"Meade County"
   },
   {
-    "id":46095,
+    "state":"SD",
+    "FIPS":46095,
     "number":177,
     "rate":12.7,
-    "state":"SD",
-    "name":"Mellette County"
+    "population":2092,
+    "county":"Mellette County"
   },
   {
-    "id":46097,
+    "state":"SD",
+    "FIPS":46097,
     "number":177,
     "rate":10.3,
-    "state":"SD",
-    "name":"Miner County"
+    "population":2323,
+    "county":"Miner County"
   },
   {
-    "id":46099,
+    "state":"SD",
+    "FIPS":46099,
     "number":11055,
     "rate":8.7,
-    "state":"SD",
-    "name":"Minnehaha County"
+    "population":175511,
+    "county":"Minnehaha County"
   },
   {
-    "id":46101,
+    "state":"SD",
+    "FIPS":46101,
     "number":479,
     "rate":10.3,
-    "state":"SD",
-    "name":"Moody County"
+    "population":6447,
+    "county":"Moody County"
   },
   {
-    "id":46103,
+    "state":"SD",
+    "FIPS":46103,
     "number":6671,
     "rate":8.7,
-    "state":"SD",
-    "name":"Pennington County"
+    "population":104552,
+    "county":"Pennington County"
   },
   {
-    "id":46105,
+    "state":"SD",
+    "FIPS":46105,
     "number":230,
     "rate":9.9,
-    "state":"SD",
-    "name":"Perkins County"
+    "population":3020,
+    "county":"Perkins County"
   },
   {
-    "id":46107,
+    "state":"SD",
+    "FIPS":46107,
     "number":203,
     "rate":11,
-    "state":"SD",
-    "name":"Potter County"
+    "population":2349,
+    "county":"Potter County"
   },
   {
-    "id":46109,
+    "state":"SD",
+    "FIPS":46109,
     "number":895,
     "rate":12.7,
-    "state":"SD",
-    "name":"Roberts County"
+    "population":10348,
+    "county":"Roberts County"
   },
   {
-    "id":46111,
+    "state":"SD",
+    "FIPS":46111,
     "number":180,
     "rate":10,
-    "state":"SD",
-    "name":"Sanborn County"
+    "population":2325,
+    "county":"Sanborn County"
   },
   {
-    "id":46113,
+    "state":"SD",
+    "FIPS":46113,
     "number":1433,
     "rate":17.6,
-    "state":"SD",
-    "name":"Shannon County"
+    "population":14076,
+    "county":"Shannon County"
   },
   {
-    "id":46115,
+    "state":"SD",
+    "FIPS":46115,
     "number":477,
     "rate":9.8,
-    "state":"SD",
-    "name":"Spink County"
+    "population":6652,
+    "county":"Spink County"
   },
   {
-    "id":46117,
+    "state":"SD",
+    "FIPS":46117,
     "number":236,
     "rate":10.7,
-    "state":"SD",
-    "name":"Stanley County"
+    "population":2977,
+    "county":"Stanley County"
   },
   {
-    "id":46119,
+    "state":"SD",
+    "FIPS":46119,
     "number":109,
     "rate":10,
-    "state":"SD",
-    "name":"Sully County"
+    "population":1445,
+    "county":"Sully County"
   },
   {
-    "id":46121,
+    "state":"SD",
+    "FIPS":46121,
     "number":983,
     "rate":17.5,
-    "state":"SD",
-    "name":"Todd County"
+    "population":9935,
+    "county":"Todd County"
   },
   {
-    "id":46123,
+    "state":"SD",
+    "FIPS":46123,
     "number":452,
     "rate":11,
-    "state":"SD",
-    "name":"Tripp County"
+    "population":5485,
+    "county":"Tripp County"
   },
   {
-    "id":46125,
+    "state":"SD",
+    "FIPS":46125,
     "number":564,
     "rate":9.2,
-    "state":"SD",
-    "name":"Turner County"
+    "population":8332,
+    "county":"Turner County"
   },
   {
-    "id":46127,
+    "state":"SD",
+    "FIPS":46127,
     "number":1003,
     "rate":9.5,
-    "state":"SD",
-    "name":"Union County"
+    "population":14841,
+    "county":"Union County"
   },
   {
-    "id":46129,
+    "state":"SD",
+    "FIPS":46129,
     "number":475,
     "rate":11.4,
-    "state":"SD",
-    "name":"Walworth County"
+    "population":5460,
+    "county":"Walworth County"
   },
   {
-    "id":46135,
+    "state":"SD",
+    "FIPS":46135,
     "number":1375,
     "rate":8,
-    "state":"SD",
-    "name":"Yankton County"
+    "population":22591,
+    "county":"Yankton County"
   },
   {
-    "id":46137,
+    "state":"SD",
+    "FIPS":46137,
     "number":272,
     "rate":16.1,
-    "state":"SD",
-    "name":"Ziebach County"
+    "population":2869,
+    "county":"Ziebach County"
   },
   {
-    "id":47001,
+    "state":"TN",
+    "FIPS":47001,
     "number":7926,
     "rate":13.7,
-    "state":"TN",
-    "name":"Anderson County"
+    "population":75349,
+    "county":"Anderson County"
   },
   {
-    "id":47003,
+    "state":"TN",
+    "FIPS":47003,
     "number":3798,
     "rate":11.7,
-    "state":"TN",
-    "name":"Bedford County"
+    "population":45400,
+    "county":"Bedford County"
   },
   {
-    "id":47005,
+    "state":"TN",
+    "FIPS":47005,
     "number":1870,
     "rate":14.7,
-    "state":"TN",
-    "name":"Benton County"
+    "population":16369,
+    "county":"Benton County"
   },
   {
-    "id":47007,
+    "state":"TN",
+    "FIPS":47007,
     "number":1203,
     "rate":12.1,
-    "state":"TN",
-    "name":"Bledsoe County"
+    "population":12781,
+    "county":"Bledsoe County"
   },
   {
-    "id":47009,
+    "state":"TN",
+    "FIPS":47009,
     "number":12287,
     "rate":13,
-    "state":"TN",
-    "name":"Blount County"
+    "population":124016,
+    "county":"Blount County"
   },
   {
-    "id":47011,
+    "state":"TN",
+    "FIPS":47011,
     "number":10638,
     "rate":14.1,
-    "state":"TN",
-    "name":"Bradley County"
+    "population":101117,
+    "county":"Bradley County"
   },
   {
-    "id":47013,
+    "state":"TN",
+    "FIPS":47013,
     "number":4104,
     "rate":13.2,
-    "state":"TN",
-    "name":"Campbell County"
+    "population":40429,
+    "county":"Campbell County"
   },
   {
-    "id":47015,
+    "state":"TN",
+    "FIPS":47015,
     "number":1295,
     "rate":12.2,
-    "state":"TN",
-    "name":"Cannon County"
+    "population":13842,
+    "county":"Cannon County"
   },
   {
-    "id":47017,
+    "state":"TN",
+    "FIPS":47017,
     "number":2935,
     "rate":13.7,
-    "state":"TN",
-    "name":"Carroll County"
+    "population":28623,
+    "county":"Carroll County"
   },
   {
-    "id":47019,
+    "state":"TN",
+    "FIPS":47019,
     "number":6670,
     "rate":14.9,
-    "state":"TN",
-    "name":"Carter County"
+    "population":57376,
+    "county":"Carter County"
   },
   {
-    "id":47021,
+    "state":"TN",
+    "FIPS":47021,
     "number":3334,
     "rate":11.6,
-    "state":"TN",
-    "name":"Cheatham County"
+    "population":39275,
+    "county":"Cheatham County"
   },
   {
-    "id":47023,
+    "state":"TN",
+    "FIPS":47023,
     "number":1848,
     "rate":14.8,
-    "state":"TN",
-    "name":"Chester County"
+    "population":17225,
+    "county":"Chester County"
   },
   {
-    "id":47025,
+    "state":"TN",
+    "FIPS":47025,
     "number":3509,
     "rate":14.3,
-    "state":"TN",
-    "name":"Claiborne County"
+    "population":31716,
+    "county":"Claiborne County"
   },
   {
-    "id":47027,
+    "state":"TN",
+    "FIPS":47027,
     "number":835,
     "rate":13.7,
-    "state":"TN",
-    "name":"Clay County"
+    "population":7800,
+    "county":"Clay County"
   },
   {
-    "id":47029,
+    "state":"TN",
+    "FIPS":47029,
     "number":4167,
     "rate":15.2,
-    "state":"TN",
-    "name":"Cocke County"
+    "population":35488,
+    "county":"Cocke County"
   },
   {
-    "id":47031,
+    "state":"TN",
+    "FIPS":47031,
     "number":5259,
     "rate":13.4,
-    "state":"TN",
-    "name":"Coffee County"
+    "population":53137,
+    "county":"Coffee County"
   },
   {
-    "id":47033,
+    "state":"TN",
+    "FIPS":47033,
     "number":1510,
     "rate":14,
-    "state":"TN",
-    "name":"Crockett County"
+    "population":14602,
+    "county":"Crockett County"
   },
   {
-    "id":47035,
+    "state":"TN",
+    "FIPS":47035,
     "number":7729,
     "rate":17,
-    "state":"TN",
-    "name":"Cumberland County"
+    "population":57037,
+    "county":"Cumberland County"
   },
   {
-    "id":47037,
+    "state":"TN",
+    "FIPS":47037,
     "number":50829,
     "rate":10.4,
-    "state":"TN",
-    "name":"Davidson County"
+    "population":649142,
+    "county":"Davidson County"
   },
   {
-    "id":47039,
+    "state":"TN",
+    "FIPS":47039,
     "number":1399,
     "rate":15.6,
-    "state":"TN",
-    "name":"Decatur County"
+    "population":11648,
+    "county":"Decatur County"
   },
   {
-    "id":47041,
+    "state":"TN",
+    "FIPS":47041,
     "number":2063,
     "rate":14.4,
-    "state":"TN",
-    "name":"De Kalb County"
+    "population":18920,
+    "county":"De Kalb County"
   },
   {
-    "id":47043,
+    "state":"TN",
+    "FIPS":47043,
     "number":4948,
     "rate":13.4,
-    "state":"TN",
-    "name":"Dickson County"
+    "population":50167,
+    "county":"Dickson County"
   },
   {
-    "id":47045,
+    "state":"TN",
+    "FIPS":47045,
     "number":3806,
     "rate":13.6,
-    "state":"TN",
-    "name":"Dyer County"
+    "population":38223,
+    "county":"Dyer County"
   },
   {
-    "id":47047,
+    "state":"TN",
+    "FIPS":47047,
     "number":4679,
     "rate":15.9,
-    "state":"TN",
-    "name":"Fayette County"
+    "population":38609,
+    "county":"Fayette County"
   },
   {
-    "id":47049,
+    "state":"TN",
+    "FIPS":47049,
     "number":1825,
     "rate":13.5,
-    "state":"TN",
-    "name":"Fentress County"
+    "population":17911,
+    "county":"Fentress County"
   },
   {
-    "id":47051,
+    "state":"TN",
+    "FIPS":47051,
     "number":3735,
     "rate":12.1,
-    "state":"TN",
-    "name":"Franklin County"
+    "population":40785,
+    "county":"Franklin County"
   },
   {
-    "id":47053,
+    "state":"TN",
+    "FIPS":47053,
     "number":4409,
     "rate":12.1,
-    "state":"TN",
-    "name":"Gibson County"
+    "population":49670,
+    "county":"Gibson County"
   },
   {
-    "id":47055,
+    "state":"TN",
+    "FIPS":47055,
     "number":2855,
     "rate":13,
-    "state":"TN",
-    "name":"Giles County"
+    "population":28948,
+    "county":"Giles County"
   },
   {
-    "id":47057,
+    "state":"TN",
+    "FIPS":47057,
     "number":2218,
     "rate":12.9,
-    "state":"TN",
-    "name":"Grainger County"
+    "population":22640,
+    "county":"Grainger County"
   },
   {
-    "id":47059,
+    "state":"TN",
+    "FIPS":47059,
     "number":7152,
     "rate":13.6,
-    "state":"TN",
-    "name":"Greene County"
+    "population":68634,
+    "county":"Greene County"
   },
   {
-    "id":47061,
+    "state":"TN",
+    "FIPS":47061,
     "number":1514,
     "rate":14.7,
-    "state":"TN",
-    "name":"Grundy County"
+    "population":13630,
+    "county":"Grundy County"
   },
   {
-    "id":47063,
+    "state":"TN",
+    "FIPS":47063,
     "number":6277,
     "rate":13.4,
-    "state":"TN",
-    "name":"Hamblen County"
+    "population":62733,
+    "county":"Hamblen County"
   },
   {
-    "id":47065,
+    "state":"TN",
+    "FIPS":47065,
     "number":33286,
     "rate":12.7,
-    "state":"TN",
-    "name":"Hamilton County"
+    "population":345657,
+    "county":"Hamilton County"
   },
   {
-    "id":47067,
+    "state":"TN",
+    "FIPS":47067,
     "number":704,
     "rate":13.6,
-    "state":"TN",
-    "name":"Hancock County"
+    "population":6679,
+    "county":"Hancock County"
   },
   {
-    "id":47069,
+    "state":"TN",
+    "FIPS":47069,
     "number":2985,
     "rate":14.5,
-    "state":"TN",
-    "name":"Hardeman County"
+    "population":26532,
+    "county":"Hardeman County"
   },
   {
-    "id":47071,
+    "state":"TN",
+    "FIPS":47071,
     "number":2934,
     "rate":14.7,
-    "state":"TN",
-    "name":"Hardin County"
+    "population":26025,
+    "county":"Hardin County"
   },
   {
-    "id":47073,
+    "state":"TN",
+    "FIPS":47073,
     "number":5820,
     "rate":13.5,
-    "state":"TN",
-    "name":"Hawkins County"
+    "population":56601,
+    "county":"Hawkins County"
   },
   {
-    "id":47075,
+    "state":"TN",
+    "FIPS":47075,
     "number":2287,
     "rate":17.1,
-    "state":"TN",
-    "name":"Haywood County"
+    "population":18243,
+    "county":"Haywood County"
   },
   {
-    "id":47077,
+    "state":"TN",
+    "FIPS":47077,
     "number":3270,
     "rate":15.8,
-    "state":"TN",
-    "name":"Henderson County"
+    "population":28019,
+    "county":"Henderson County"
   },
   {
-    "id":47079,
+    "state":"TN",
+    "FIPS":47079,
     "number":3761,
     "rate":15.2,
-    "state":"TN",
-    "name":"Henry County"
+    "population":32334,
+    "county":"Henry County"
   },
   {
-    "id":47081,
+    "state":"TN",
+    "FIPS":47081,
     "number":2410,
     "rate":13.1,
-    "state":"TN",
-    "name":"Hickman County"
+    "population":24152,
+    "county":"Hickman County"
   },
   {
-    "id":47083,
+    "state":"TN",
+    "FIPS":47083,
     "number":900,
     "rate":14.3,
-    "state":"TN",
-    "name":"Houston County"
+    "population":8423,
+    "county":"Houston County"
   },
   {
-    "id":47085,
+    "state":"TN",
+    "FIPS":47085,
     "number":1920,
     "rate":13.9,
-    "state":"TN",
-    "name":"Humphreys County"
+    "population":18280,
+    "county":"Humphreys County"
   },
   {
-    "id":47087,
+    "state":"TN",
+    "FIPS":47087,
     "number":1095,
     "rate":12.2,
-    "state":"TN",
-    "name":"Jackson County"
+    "population":11529,
+    "county":"Jackson County"
   },
   {
-    "id":47089,
+    "state":"TN",
+    "FIPS":47089,
     "number":4526,
     "rate":11.5,
-    "state":"TN",
-    "name":"Jefferson County"
+    "population":52309,
+    "county":"Jefferson County"
   },
   {
-    "id":47091,
+    "state":"TN",
+    "FIPS":47091,
     "number":2168,
     "rate":14.9,
-    "state":"TN",
-    "name":"Johnson County"
+    "population":18119,
+    "county":"Johnson County"
   },
   {
-    "id":47093,
+    "state":"TN",
+    "FIPS":47093,
     "number":36387,
     "rate":11,
-    "state":"TN",
-    "name":"Knox County"
+    "population":441136,
+    "county":"Knox County"
   },
   {
-    "id":47095,
+    "state":"TN",
+    "FIPS":47095,
     "number":773,
     "rate":12.3,
-    "state":"TN",
-    "name":"Lake County"
+    "population":7703,
+    "county":"Lake County"
   },
   {
-    "id":47097,
+    "state":"TN",
+    "FIPS":47097,
     "number":2929,
     "rate":14.2,
-    "state":"TN",
-    "name":"Lauderdale County"
+    "population":27681,
+    "county":"Lauderdale County"
   },
   {
-    "id":47099,
+    "state":"TN",
+    "FIPS":47099,
     "number":4140,
     "rate":13.5,
-    "state":"TN",
-    "name":"Lawrence County"
+    "population":42129,
+    "county":"Lawrence County"
   },
   {
-    "id":47101,
+    "state":"TN",
+    "FIPS":47101,
     "number":1187,
     "rate":13.3,
-    "state":"TN",
-    "name":"Lewis County"
+    "population":11899,
+    "county":"Lewis County"
   },
   {
-    "id":47103,
+    "state":"TN",
+    "FIPS":47103,
     "number":3207,
     "rate":12.7,
-    "state":"TN",
-    "name":"Lincoln County"
+    "population":33436,
+    "county":"Lincoln County"
   },
   {
-    "id":47105,
+    "state":"TN",
+    "FIPS":47105,
     "number":5315,
     "rate":13.7,
-    "state":"TN",
-    "name":"Loudon County"
+    "population":49743,
+    "county":"Loudon County"
   },
   {
-    "id":47111,
+    "state":"TN",
+    "FIPS":47111,
     "number":2014,
     "rate":12.3,
-    "state":"TN",
-    "name":"Macon County"
+    "population":22512,
+    "county":"Macon County"
   },
   {
-    "id":47113,
+    "state":"TN",
+    "FIPS":47113,
     "number":10386,
     "rate":14.5,
-    "state":"TN",
-    "name":"Madison County"
+    "population":98551,
+    "county":"Madison County"
   },
   {
-    "id":47115,
+    "state":"TN",
+    "FIPS":47115,
     "number":3370,
     "rate":15.6,
-    "state":"TN",
-    "name":"Marion County"
+    "population":28227,
+    "county":"Marion County"
   },
   {
-    "id":47117,
+    "state":"TN",
+    "FIPS":47117,
     "number":3330,
     "rate":14.6,
-    "state":"TN",
-    "name":"Marshall County"
+    "population":30934,
+    "county":"Marshall County"
   },
   {
-    "id":47119,
+    "state":"TN",
+    "FIPS":47119,
     "number":7206,
     "rate":11.8,
-    "state":"TN",
-    "name":"Maury County"
+    "population":81944,
+    "county":"Maury County"
   },
   {
-    "id":47107,
+    "state":"TN",
+    "FIPS":47107,
     "number":5559,
     "rate":14,
-    "state":"TN",
-    "name":"McMinn County"
+    "population":52452,
+    "county":"McMinn County"
   },
   {
-    "id":47109,
+    "state":"TN",
+    "FIPS":47109,
     "number":3155,
     "rate":16.1,
-    "state":"TN",
-    "name":"McNairy County"
+    "population":26171,
+    "county":"McNairy County"
   },
   {
-    "id":47121,
+    "state":"TN",
+    "FIPS":47121,
     "number":1265,
     "rate":14,
-    "state":"TN",
-    "name":"Meigs County"
+    "population":11678,
+    "county":"Meigs County"
   },
   {
-    "id":47123,
+    "state":"TN",
+    "FIPS":47123,
     "number":4533,
     "rate":13.2,
-    "state":"TN",
-    "name":"Monroe County"
+    "population":45108,
+    "county":"Monroe County"
   },
   {
-    "id":47125,
+    "state":"TN",
+    "FIPS":47125,
     "number":11748,
     "rate":9.1,
-    "state":"TN",
-    "name":"Montgomery County"
+    "population":185360,
+    "county":"Montgomery County"
   },
   {
-    "id":47127,
+    "state":"TN",
+    "FIPS":47127,
     "number":650,
     "rate":13.4,
-    "state":"TN",
-    "name":"Moore County"
+    "population":6348,
+    "county":"Moore County"
   },
   {
-    "id":47129,
+    "state":"TN",
+    "FIPS":47129,
     "number":2127,
     "rate":12.4,
-    "state":"TN",
-    "name":"Morgan County"
+    "population":21945,
+    "county":"Morgan County"
   },
   {
-    "id":47131,
+    "state":"TN",
+    "FIPS":47131,
     "number":3620,
     "rate":15.3,
-    "state":"TN",
-    "name":"Obion County"
+    "population":31351,
+    "county":"Obion County"
   },
   {
-    "id":47133,
+    "state":"TN",
+    "FIPS":47133,
     "number":2526,
     "rate":15.2,
-    "state":"TN",
-    "name":"Overton County"
+    "population":22211,
+    "county":"Overton County"
   },
   {
-    "id":47135,
+    "state":"TN",
+    "FIPS":47135,
     "number":937,
     "rate":15.9,
-    "state":"TN",
-    "name":"Perry County"
+    "population":7830,
+    "county":"Perry County"
   },
   {
-    "id":47137,
+    "state":"TN",
+    "FIPS":47137,
     "number":597,
     "rate":14.8,
-    "state":"TN",
-    "name":"Pickett County"
+    "population":5088,
+    "county":"Pickett County"
   },
   {
-    "id":47139,
+    "state":"TN",
+    "FIPS":47139,
     "number":1630,
     "rate":12.9,
-    "state":"TN",
-    "name":"Polk County"
+    "population":16613,
+    "county":"Polk County"
   },
   {
-    "id":47141,
+    "state":"TN",
+    "FIPS":47141,
     "number":7441,
     "rate":13.6,
-    "state":"TN",
-    "name":"Putnam County"
+    "population":73071,
+    "county":"Putnam County"
   },
   {
-    "id":47143,
+    "state":"TN",
+    "FIPS":47143,
     "number":3463,
     "rate":14.5,
-    "state":"TN",
-    "name":"Rhea County"
+    "population":32307,
+    "county":"Rhea County"
   },
   {
-    "id":47145,
+    "state":"TN",
+    "FIPS":47145,
     "number":4864,
     "rate":11.7,
-    "state":"TN",
-    "name":"Roane County"
+    "population":53426,
+    "county":"Roane County"
   },
   {
-    "id":47147,
+    "state":"TN",
+    "FIPS":47147,
     "number":5950,
     "rate":12.3,
-    "state":"TN",
-    "name":"Robertson County"
+    "population":66719,
+    "county":"Robertson County"
   },
   {
-    "id":47149,
+    "state":"TN",
+    "FIPS":47149,
     "number":18672,
     "rate":9.6,
-    "state":"TN",
-    "name":"Rutherford County"
+    "population":274208,
+    "county":"Rutherford County"
   },
   {
-    "id":47151,
+    "state":"TN",
+    "FIPS":47151,
     "number":2189,
     "rate":13.5,
-    "state":"TN",
-    "name":"Scott County"
+    "population":22166,
+    "county":"Scott County"
   },
   {
-    "id":47153,
+    "state":"TN",
+    "FIPS":47153,
     "number":1449,
     "rate":13.3,
-    "state":"TN",
-    "name":"Sequatchie County"
+    "population":14417,
+    "county":"Sequatchie County"
   },
   {
-    "id":47155,
+    "state":"TN",
+    "FIPS":47155,
     "number":8757,
     "rate":12.4,
-    "state":"TN",
-    "name":"Sevier County"
+    "population":92532,
+    "county":"Sevier County"
   },
   {
-    "id":47157,
+    "state":"TN",
+    "FIPS":47157,
     "number":83619,
     "rate":12.5,
-    "state":"TN",
-    "name":"Shelby County"
+    "population":939942,
+    "county":"Shelby County"
   },
   {
-    "id":47159,
+    "state":"TN",
+    "FIPS":47159,
     "number":1677,
     "rate":11.9,
-    "state":"TN",
-    "name":"Smith County"
+    "population":19120,
+    "county":"Smith County"
   },
   {
-    "id":47161,
+    "state":"TN",
+    "FIPS":47161,
     "number":1511,
     "rate":14.9,
-    "state":"TN",
-    "name":"Stewart County"
+    "population":13336,
+    "county":"Stewart County"
   },
   {
-    "id":47163,
+    "state":"TN",
+    "FIPS":47163,
     "number":17739,
     "rate":14.6,
-    "state":"TN",
-    "name":"Sullivan County"
+    "population":156673,
+    "county":"Sullivan County"
   },
   {
-    "id":47165,
+    "state":"TN",
+    "FIPS":47165,
     "number":13410,
     "rate":11.1,
-    "state":"TN",
-    "name":"Sumner County"
+    "population":166156,
+    "county":"Sumner County"
   },
   {
-    "id":47167,
+    "state":"TN",
+    "FIPS":47167,
     "number":5272,
     "rate":12.1,
-    "state":"TN",
-    "name":"Tipton County"
+    "population":61576,
+    "county":"Tipton County"
   },
   {
-    "id":47169,
+    "state":"TN",
+    "FIPS":47169,
     "number":733,
     "rate":12.7,
-    "state":"TN",
-    "name":"Trousdale County"
+    "population":7791,
+    "county":"Trousdale County"
   },
   {
-    "id":47171,
+    "state":"TN",
+    "FIPS":47171,
     "number":1964,
     "rate":13.7,
-    "state":"TN",
-    "name":"Unicoi County"
+    "population":18251,
+    "county":"Unicoi County"
   },
   {
-    "id":47173,
+    "state":"TN",
+    "FIPS":47173,
     "number":1923,
     "rate":13.5,
-    "state":"TN",
-    "name":"Union County"
+    "population":19133,
+    "county":"Union County"
   },
   {
-    "id":47175,
+    "state":"TN",
+    "FIPS":47175,
     "number":610,
     "rate":13.9,
-    "state":"TN",
-    "name":"Van Buren County"
+    "population":5620,
+    "county":"Van Buren County"
   },
   {
-    "id":47177,
+    "state":"TN",
+    "FIPS":47177,
     "number":4242,
     "rate":14.4,
-    "state":"TN",
-    "name":"Warren County"
+    "population":39755,
+    "county":"Warren County"
   },
   {
-    "id":47179,
+    "state":"TN",
+    "FIPS":47179,
     "number":10836,
     "rate":11.3,
-    "state":"TN",
-    "name":"Washington County"
+    "population":124897,
+    "county":"Washington County"
   },
   {
-    "id":47181,
+    "state":"TN",
+    "FIPS":47181,
     "number":1607,
     "rate":11.9,
-    "state":"TN",
-    "name":"Wayne County"
+    "population":16990,
+    "county":"Wayne County"
   },
   {
-    "id":47183,
+    "state":"TN",
+    "FIPS":47183,
     "number":3923,
     "rate":15,
-    "state":"TN",
-    "name":"Weakley County"
+    "population":34712,
+    "county":"Weakley County"
   },
   {
-    "id":47185,
+    "state":"TN",
+    "FIPS":47185,
     "number":2509,
     "rate":12.7,
-    "state":"TN",
-    "name":"White County"
+    "population":26060,
+    "county":"White County"
   },
   {
-    "id":47187,
+    "state":"TN",
+    "FIPS":47187,
     "number":12468,
     "rate":9.4,
-    "state":"TN",
-    "name":"Williamson County"
+    "population":193037,
+    "county":"Williamson County"
   },
   {
-    "id":47189,
+    "state":"TN",
+    "FIPS":47189,
     "number":10442,
     "rate":12,
-    "state":"TN",
-    "name":"Wilson County"
+    "population":119088,
+    "county":"Wilson County"
   },
   {
-    "id":48001,
+    "state":"TX",
+    "FIPS":48001,
     "number":5397,
     "rate":11.8,
-    "state":"TX",
-    "name":"Anderson County"
+    "population":58026,
+    "county":"Anderson County"
   },
   {
-    "id":48003,
+    "state":"TX",
+    "FIPS":48003,
     "number":1078,
     "rate":9.9,
-    "state":"TX",
-    "name":"Andrews County"
+    "population":16119,
+    "county":"Andrews County"
   },
   {
-    "id":48005,
+    "state":"TX",
+    "FIPS":48005,
     "number":7107,
     "rate":11.4,
-    "state":"TX",
-    "name":"Angelina County"
+    "population":87585,
+    "county":"Angelina County"
   },
   {
-    "id":48007,
+    "state":"TX",
+    "FIPS":48007,
     "number":2273,
     "rate":12,
-    "state":"TX",
-    "name":"Aransas County"
+    "population":23707,
+    "county":"Aransas County"
   },
   {
-    "id":48009,
+    "state":"TX",
+    "FIPS":48009,
     "number":722,
     "rate":11.1,
-    "state":"TX",
-    "name":"Archer County"
+    "population":8772,
+    "county":"Archer County"
   },
   {
-    "id":48011,
+    "state":"TX",
+    "FIPS":48011,
     "number":165,
     "rate":11.2,
-    "state":"TX",
-    "name":"Armstrong County"
+    "population":1948,
+    "county":"Armstrong County"
   },
   {
-    "id":48013,
+    "state":"TX",
+    "FIPS":48013,
     "number":3205,
     "rate":10,
-    "state":"TX",
-    "name":"Atascosa County"
+    "population":46436,
+    "county":"Atascosa County"
   },
   {
-    "id":48015,
+    "state":"TX",
+    "FIPS":48015,
     "number":2225,
     "rate":10.6,
-    "state":"TX",
-    "name":"Austin County"
+    "population":28622,
+    "county":"Austin County"
   },
   {
-    "id":48017,
+    "state":"TX",
+    "FIPS":48017,
     "number":456,
     "rate":9.7,
-    "state":"TX",
-    "name":"Bailey County"
+    "population":7101,
+    "county":"Bailey County"
   },
   {
-    "id":48019,
+    "state":"TX",
+    "FIPS":48019,
     "number":2068,
     "rate":12.6,
-    "state":"TX",
-    "name":"Bandera County"
+    "population":20608,
+    "county":"Bandera County"
   },
   {
-    "id":48021,
+    "state":"TX",
+    "FIPS":48021,
     "number":5326,
     "rate":9.9,
-    "state":"TX",
-    "name":"Bastrop County"
+    "population":74886,
+    "county":"Bastrop County"
   },
   {
-    "id":48023,
+    "state":"TX",
+    "FIPS":48023,
     "number":330,
     "rate":11.8,
-    "state":"TX",
-    "name":"Baylor County"
+    "population":3615,
+    "county":"Baylor County"
   },
   {
-    "id":48025,
+    "state":"TX",
+    "FIPS":48025,
     "number":2181,
     "rate":8.9,
-    "state":"TX",
-    "name":"Bee County"
+    "population":32451,
+    "county":"Bee County"
   },
   {
-    "id":48027,
+    "state":"TX",
+    "FIPS":48027,
     "number":20371,
     "rate":9.1,
-    "state":"TX",
-    "name":"Bell County"
+    "population":323147,
+    "county":"Bell County"
   },
   {
-    "id":48029,
+    "state":"TX",
+    "FIPS":48029,
     "number":112429,
     "rate":8.9,
-    "state":"TX",
-    "name":"Bexar County"
+    "population":1788858,
+    "county":"Bexar County"
   },
   {
-    "id":48031,
+    "state":"TX",
+    "FIPS":48031,
     "number":939,
     "rate":11.4,
-    "state":"TX",
-    "name":"Blanco County"
+    "population":10616,
+    "county":"Blanco County"
   },
   {
-    "id":48033,
+    "state":"TX",
+    "FIPS":48033,
     "number":57,
     "rate":12,
-    "state":"TX",
-    "name":"Borden County"
+    "population":613,
+    "county":"Borden County"
   },
   {
-    "id":48035,
+    "state":"TX",
+    "FIPS":48035,
     "number":1463,
     "rate":10.7,
-    "state":"TX",
-    "name":"Bosque County"
+    "population":18111,
+    "county":"Bosque County"
   },
   {
-    "id":48037,
+    "state":"TX",
+    "FIPS":48037,
     "number":8539,
     "rate":12.5,
-    "state":"TX",
-    "name":"Bowie County"
+    "population":93088,
+    "county":"Bowie County"
   },
   {
-    "id":48039,
+    "state":"TX",
+    "FIPS":48039,
     "number":21243,
     "rate":9.3,
-    "state":"TX",
-    "name":"Brazoria County"
+    "population":324697,
+    "county":"Brazoria County"
   },
   {
-    "id":48041,
+    "state":"TX",
+    "FIPS":48041,
     "number":10226,
     "rate":7,
-    "state":"TX",
-    "name":"Brazos County"
+    "population":200567,
+    "county":"Brazos County"
   },
   {
-    "id":48043,
+    "state":"TX",
+    "FIPS":48043,
     "number":672,
     "rate":9.4,
-    "state":"TX",
-    "name":"Brewster County"
+    "population":9254,
+    "county":"Brewster County"
   },
   {
-    "id":48047,
+    "state":"TX",
+    "FIPS":48047,
     "number":539,
     "rate":10.9,
-    "state":"TX",
-    "name":"Brooks County"
+    "population":7168,
+    "county":"Brooks County"
   },
   {
-    "id":48045,
+    "state":"TX",
+    "FIPS":48045,
     "number":144,
     "rate":12.4,
-    "state":"TX",
-    "name":"Briscoe County"
+    "population":1560,
+    "county":"Briscoe County"
   },
   {
-    "id":48049,
+    "state":"TX",
+    "FIPS":48049,
     "number":2824,
     "rate":10.1,
-    "state":"TX",
-    "name":"Brown County"
+    "population":37857,
+    "county":"Brown County"
   },
   {
-    "id":48051,
+    "state":"TX",
+    "FIPS":48051,
     "number":1647,
     "rate":12.8,
-    "state":"TX",
-    "name":"Burleson County"
+    "population":17316,
+    "county":"Burleson County"
   },
   {
-    "id":48053,
+    "state":"TX",
+    "FIPS":48053,
     "number":3582,
     "rate":10.9,
-    "state":"TX",
-    "name":"Burnet County"
+    "population":44078,
+    "county":"Burnet County"
   },
   {
-    "id":48055,
+    "state":"TX",
+    "FIPS":48055,
     "number":2681,
     "rate":9.7,
-    "state":"TX",
-    "name":"Caldwell County"
+    "population":38711,
+    "county":"Caldwell County"
   },
   {
-    "id":48057,
+    "state":"TX",
+    "FIPS":48057,
     "number":1774,
     "rate":11.5,
-    "state":"TX",
-    "name":"Calhoun County"
+    "population":21567,
+    "county":"Calhoun County"
   },
   {
-    "id":48059,
+    "state":"TX",
+    "FIPS":48059,
     "number":1107,
     "rate":10.9,
-    "state":"TX",
-    "name":"Callahan County"
+    "population":13515,
+    "county":"Callahan County"
   },
   {
-    "id":48061,
+    "state":"TX",
+    "FIPS":48061,
     "number":24201,
     "rate":9,
-    "state":"TX",
-    "name":"Cameron County"
+    "population":416048,
+    "county":"Cameron County"
   },
   {
-    "id":48063,
+    "state":"TX",
+    "FIPS":48063,
     "number":1101,
     "rate":12.4,
-    "state":"TX",
-    "name":"Camp County"
+    "population":12460,
+    "county":"Camp County"
   },
   {
-    "id":48065,
+    "state":"TX",
+    "FIPS":48065,
     "number":503,
     "rate":11.3,
-    "state":"TX",
-    "name":"Carson County"
+    "population":6109,
+    "county":"Carson County"
   },
   {
-    "id":48067,
+    "state":"TX",
+    "FIPS":48067,
     "number":2936,
     "rate":13,
-    "state":"TX",
-    "name":"Cass County"
+    "population":30187,
+    "county":"Cass County"
   },
   {
-    "id":48069,
+    "state":"TX",
+    "FIPS":48069,
     "number":543,
     "rate":10.1,
-    "state":"TX",
-    "name":"Castro County"
+    "population":8179,
+    "county":"Castro County"
   },
   {
-    "id":48071,
+    "state":"TX",
+    "FIPS":48071,
     "number":2537,
     "rate":10.1,
-    "state":"TX",
-    "name":"Chambers County"
+    "population":36388,
+    "county":"Chambers County"
   },
   {
-    "id":48073,
+    "state":"TX",
+    "FIPS":48073,
     "number":3802,
     "rate":10.4,
-    "state":"TX",
-    "name":"Cherokee County"
+    "population":51152,
+    "county":"Cherokee County"
   },
   {
-    "id":48075,
+    "state":"TX",
+    "FIPS":48075,
     "number":505,
     "rate":9.3,
-    "state":"TX",
-    "name":"Childress County"
+    "population":7096,
+    "county":"Childress County"
   },
   {
-    "id":48077,
+    "state":"TX",
+    "FIPS":48077,
     "number":948,
     "rate":11.9,
-    "state":"TX",
-    "name":"Clay County"
+    "population":10512,
+    "county":"Clay County"
   },
   {
-    "id":48079,
+    "state":"TX",
+    "FIPS":48079,
     "number":231,
     "rate":11.2,
-    "state":"TX",
-    "name":"Cochran County"
+    "population":3017,
+    "county":"Cochran County"
   },
   {
-    "id":48081,
+    "state":"TX",
+    "FIPS":48081,
     "number":318,
     "rate":12.6,
-    "state":"TX",
-    "name":"Coke County"
+    "population":3224,
+    "county":"Coke County"
   },
   {
-    "id":48083,
+    "state":"TX",
+    "FIPS":48083,
     "number":816,
     "rate":12.4,
-    "state":"TX",
-    "name":"Coleman County"
+    "population":8675,
+    "county":"Coleman County"
   },
   {
-    "id":48085,
+    "state":"TX",
+    "FIPS":48085,
     "number":51762,
     "rate":8.9,
-    "state":"TX",
-    "name":"Collin County"
+    "population":837476,
+    "county":"Collin County"
   },
   {
-    "id":48087,
+    "state":"TX",
+    "FIPS":48087,
     "number":232,
     "rate":11,
-    "state":"TX",
-    "name":"Collingsworth County"
+    "population":3020,
+    "county":"Collingsworth County"
   },
   {
-    "id":48089,
+    "state":"TX",
+    "FIPS":48089,
     "number":1828,
     "rate":11.9,
-    "state":"TX",
-    "name":"Colorado County"
+    "population":20685,
+    "county":"Colorado County"
   },
   {
-    "id":48091,
+    "state":"TX",
+    "FIPS":48091,
     "number":8281,
     "rate":9.7,
-    "state":"TX",
-    "name":"Comal County"
+    "population":115097,
+    "county":"Comal County"
   },
   {
-    "id":48093,
+    "state":"TX",
+    "FIPS":48093,
     "number":1137,
     "rate":11.1,
-    "state":"TX",
-    "name":"Comanche County"
+    "population":13746,
+    "county":"Comanche County"
   },
   {
-    "id":48095,
+    "state":"TX",
+    "FIPS":48095,
     "number":317,
     "rate":9.2,
-    "state":"TX",
-    "name":"Concho County"
+    "population":4065,
+    "county":"Concho County"
   },
   {
-    "id":48097,
+    "state":"TX",
+    "FIPS":48097,
     "number":2983,
     "rate":10.6,
-    "state":"TX",
-    "name":"Cooke County"
+    "population":38733,
+    "county":"Cooke County"
   },
   {
-    "id":48099,
+    "state":"TX",
+    "FIPS":48099,
     "number":4651,
     "rate":8.5,
-    "state":"TX",
-    "name":"Coryell County"
+    "population":77136,
+    "county":"Coryell County"
   },
   {
-    "id":48101,
+    "state":"TX",
+    "FIPS":48101,
     "number":144,
     "rate":12.9,
-    "state":"TX",
-    "name":"Cottle County"
+    "population":1479,
+    "county":"Cottle County"
   },
   {
-    "id":48103,
+    "state":"TX",
+    "FIPS":48103,
     "number":303,
     "rate":9.6,
-    "state":"TX",
-    "name":"Crane County"
+    "population":4567,
+    "county":"Crane County"
   },
   {
-    "id":48105,
+    "state":"TX",
+    "FIPS":48105,
     "number":279,
     "rate":10.5,
-    "state":"TX",
-    "name":"Crockett County"
+    "population":3716,
+    "county":"Crockett County"
   },
   {
-    "id":48107,
+    "state":"TX",
+    "FIPS":48107,
     "number":427,
     "rate":10.1,
-    "state":"TX",
-    "name":"Crosby County"
+    "population":6099,
+    "county":"Crosby County"
   },
   {
-    "id":48109,
+    "state":"TX",
+    "FIPS":48109,
     "number":174,
     "rate":10.6,
-    "state":"TX",
-    "name":"Culberson County"
+    "population":2303,
+    "county":"Culberson County"
   },
   {
-    "id":48111,
+    "state":"TX",
+    "FIPS":48111,
     "number":388,
     "rate":8.4,
-    "state":"TX",
-    "name":"Dallam County"
+    "population":6996,
+    "county":"Dallam County"
   },
   {
-    "id":48113,
+    "state":"TX",
+    "FIPS":48113,
     "number":148840,
     "rate":8.6,
-    "state":"TX",
-    "name":"Dallas County"
+    "population":2456693,
+    "county":"Dallas County"
   },
   {
-    "id":48115,
+    "state":"TX",
+    "FIPS":48115,
     "number":929,
     "rate":9.3,
-    "state":"TX",
-    "name":"Dawson County"
+    "population":13663,
+    "county":"Dawson County"
   },
   {
-    "id":48117,
+    "state":"TX",
+    "FIPS":48117,
     "number":1171,
     "rate":9.3,
-    "state":"TX",
-    "name":"Deaf Smith County"
+    "population":19358,
+    "county":"Deaf Smith County"
   },
   {
-    "id":48119,
+    "state":"TX",
+    "FIPS":48119,
     "number":486,
     "rate":12.1,
-    "state":"TX",
-    "name":"Delta County"
+    "population":5307,
+    "county":"Delta County"
   },
   {
-    "id":48121,
+    "state":"TX",
+    "FIPS":48121,
     "number":42910,
     "rate":8.6,
-    "state":"TX",
-    "name":"Denton County"
+    "population":707962,
+    "county":"Denton County"
   },
   {
-    "id":48123,
+    "state":"TX",
+    "FIPS":48123,
     "number":1765,
     "rate":11.4,
-    "state":"TX",
-    "name":"De Witt County"
+    "population":20456,
+    "county":"De Witt County"
   },
   {
-    "id":48125,
+    "state":"TX",
+    "FIPS":48125,
     "number":188,
     "rate":10.3,
-    "state":"TX",
-    "name":"Dickens County"
+    "population":2325,
+    "county":"Dickens County"
   },
   {
-    "id":48127,
+    "state":"TX",
+    "FIPS":48127,
     "number":723,
     "rate":10.2,
-    "state":"TX",
-    "name":"Dimmit County"
+    "population":10510,
+    "county":"Dimmit County"
   },
   {
-    "id":48129,
+    "state":"TX",
+    "FIPS":48129,
     "number":309,
     "rate":11.6,
-    "state":"TX",
-    "name":"Donley County"
+    "population":3652,
+    "county":"Donley County"
   },
   {
-    "id":48131,
+    "state":"TX",
+    "FIPS":48131,
     "number":824,
     "rate":10,
-    "state":"TX",
-    "name":"Duval County"
+    "population":11573,
+    "county":"Duval County"
   },
   {
-    "id":48133,
+    "state":"TX",
+    "FIPS":48133,
     "number":1712,
     "rate":12.6,
-    "state":"TX",
-    "name":"Eastland County"
+    "population":18403,
+    "county":"Eastland County"
   },
   {
-    "id":48135,
+    "state":"TX",
+    "FIPS":48135,
     "number":10008,
     "rate":10.2,
-    "state":"TX",
-    "name":"Ector County"
+    "population":144444,
+    "county":"Ector County"
   },
   {
-    "id":48137,
+    "state":"TX",
+    "FIPS":48137,
     "number":176,
     "rate":11.6,
-    "state":"TX",
-    "name":"Edwards County"
+    "population":1968,
+    "county":"Edwards County"
   },
   {
-    "id":48141,
+    "state":"TX",
+    "FIPS":48141,
     "number":50487,
     "rate":9,
-    "state":"TX",
-    "name":"El Paso County"
+    "population":831144,
+    "county":"El Paso County"
   },
   {
-    "id":48139,
+    "state":"TX",
+    "FIPS":48139,
     "number":10836,
     "rate":10.2,
-    "state":"TX",
-    "name":"Ellis County"
+    "population":153826,
+    "county":"Ellis County"
   },
   {
-    "id":48143,
+    "state":"TX",
+    "FIPS":48143,
     "number":2573,
     "rate":9,
-    "state":"TX",
-    "name":"Erath County"
+    "population":39456,
+    "county":"Erath County"
   },
   {
-    "id":48145,
+    "state":"TX",
+    "FIPS":48145,
     "number":1577,
     "rate":11.7,
-    "state":"TX",
-    "name":"Falls County"
+    "population":17600,
+    "county":"Falls County"
   },
   {
-    "id":48147,
+    "state":"TX",
+    "FIPS":48147,
     "number":2741,
     "rate":10.7,
-    "state":"TX",
-    "name":"Fannin County"
+    "population":33667,
+    "county":"Fannin County"
   },
   {
-    "id":48149,
+    "state":"TX",
+    "FIPS":48149,
     "number":2235,
     "rate":11.8,
-    "state":"TX",
-    "name":"Fayette County"
+    "population":24720,
+    "county":"Fayette County"
   },
   {
-    "id":48151,
+    "state":"TX",
+    "FIPS":48151,
     "number":372,
     "rate":12.6,
-    "state":"TX",
-    "name":"Fisher County"
+    "population":3833,
+    "county":"Fisher County"
   },
   {
-    "id":48153,
+    "state":"TX",
+    "FIPS":48153,
     "number":520,
     "rate":11.9,
-    "state":"TX",
-    "name":"Floyd County"
+    "population":6349,
+    "county":"Floyd County"
   },
   {
-    "id":48155,
+    "state":"TX",
+    "FIPS":48155,
     "number":124,
     "rate":12.3,
-    "state":"TX",
-    "name":"Foard County"
+    "population":1305,
+    "county":"Foard County"
   },
   {
-    "id":48157,
+    "state":"TX",
+    "FIPS":48157,
     "number":32872,
     "rate":7.7,
-    "state":"TX",
-    "name":"Fort Bend County"
+    "population":626704,
+    "county":"Fort Bend County"
   },
   {
-    "id":48159,
+    "state":"TX",
+    "FIPS":48159,
     "number":859,
     "rate":11,
-    "state":"TX",
-    "name":"Franklin County"
+    "population":10636,
+    "county":"Franklin County"
   },
   {
-    "id":48161,
+    "state":"TX",
+    "FIPS":48161,
     "number":1687,
     "rate":11.6,
-    "state":"TX",
-    "name":"Freestone County"
+    "population":19481,
+    "county":"Freestone County"
   },
   {
-    "id":48163,
+    "state":"TX",
+    "FIPS":48163,
     "number":1234,
     "rate":9.6,
-    "state":"TX",
-    "name":"Frio County"
+    "population":17829,
+    "county":"Frio County"
   },
   {
-    "id":48165,
+    "state":"TX",
+    "FIPS":48165,
     "number":1112,
     "rate":9.7,
-    "state":"TX",
-    "name":"Gaines County"
+    "population":18452,
+    "county":"Gaines County"
   },
   {
-    "id":48167,
+    "state":"TX",
+    "FIPS":48167,
     "number":20324,
     "rate":9.3,
-    "state":"TX",
-    "name":"Galveston County"
+    "population":301469,
+    "county":"Galveston County"
   },
   {
-    "id":48169,
+    "state":"TX",
+    "FIPS":48169,
     "number":444,
     "rate":9,
-    "state":"TX",
-    "name":"Garza County"
+    "population":6450,
+    "county":"Garza County"
   },
   {
-    "id":48171,
+    "state":"TX",
+    "FIPS":48171,
     "number":2284,
     "rate":11.6,
-    "state":"TX",
-    "name":"Gillespie County"
+    "population":25150,
+    "county":"Gillespie County"
   },
   {
-    "id":48173,
+    "state":"TX",
+    "FIPS":48173,
     "number":85,
     "rate":9.8,
-    "state":"TX",
-    "name":"Glasscock County"
+    "population":1256,
+    "county":"Glasscock County"
   },
   {
-    "id":48175,
+    "state":"TX",
+    "FIPS":48175,
     "number":650,
     "rate":11.7,
-    "state":"TX",
-    "name":"Goliad County"
+    "population":7338,
+    "county":"Goliad County"
   },
   {
-    "id":48177,
+    "state":"TX",
+    "FIPS":48177,
     "number":1667,
     "rate":11.8,
-    "state":"TX",
-    "name":"Gonzales County"
+    "population":19971,
+    "county":"Gonzales County"
   },
   {
-    "id":48179,
+    "state":"TX",
+    "FIPS":48179,
     "number":1855,
     "rate":11.1,
-    "state":"TX",
-    "name":"Gray County"
+    "population":22833,
+    "county":"Gray County"
   },
   {
-    "id":48181,
+    "state":"TX",
+    "FIPS":48181,
     "number":8912,
     "rate":10,
-    "state":"TX",
-    "name":"Grayson County"
+    "population":121631,
+    "county":"Grayson County"
   },
   {
-    "id":48183,
+    "state":"TX",
+    "FIPS":48183,
     "number":9624,
     "rate":11,
-    "state":"TX",
-    "name":"Gregg County"
+    "population":122896,
+    "county":"Gregg County"
   },
   {
-    "id":48185,
+    "state":"TX",
+    "FIPS":48185,
     "number":2444,
     "rate":12.1,
-    "state":"TX",
-    "name":"Grimes County"
+    "population":26724,
+    "county":"Grimes County"
   },
   {
-    "id":48187,
+    "state":"TX",
+    "FIPS":48187,
     "number":9214,
     "rate":9.4,
-    "state":"TX",
-    "name":"Guadalupe County"
+    "population":139714,
+    "county":"Guadalupe County"
   },
   {
-    "id":48189,
+    "state":"TX",
+    "FIPS":48189,
     "number":2913,
     "rate":11.8,
-    "state":"TX",
-    "name":"Hale County"
+    "population":36316,
+    "county":"Hale County"
   },
   {
-    "id":48191,
+    "state":"TX",
+    "FIPS":48191,
     "number":305,
     "rate":12.8,
-    "state":"TX",
-    "name":"Hall County"
+    "population":3298,
+    "county":"Hall County"
   },
   {
-    "id":48193,
+    "state":"TX",
+    "FIPS":48193,
     "number":809,
     "rate":12.6,
-    "state":"TX",
-    "name":"Hamilton County"
+    "population":8290,
+    "county":"Hamilton County"
   },
   {
-    "id":48195,
+    "state":"TX",
+    "FIPS":48195,
     "number":381,
     "rate":10.2,
-    "state":"TX",
-    "name":"Hansford County"
+    "population":5502,
+    "county":"Hansford County"
   },
   {
-    "id":48197,
+    "state":"TX",
+    "FIPS":48197,
     "number":361,
     "rate":12,
-    "state":"TX",
-    "name":"Hardeman County"
+    "population":4048,
+    "county":"Hardeman County"
   },
   {
-    "id":48199,
+    "state":"TX",
+    "FIPS":48199,
     "number":3898,
     "rate":9.8,
-    "state":"TX",
-    "name":"Hardin County"
+    "population":55149,
+    "county":"Hardin County"
   },
   {
-    "id":48201,
+    "state":"TX",
+    "FIPS":48201,
     "number":241536,
     "rate":8.1,
-    "state":"TX",
-    "name":"Harris County"
+    "population":4263060,
+    "county":"Harris County"
   },
   {
-    "id":48203,
+    "state":"TX",
+    "FIPS":48203,
     "number":5589,
     "rate":11.6,
-    "state":"TX",
-    "name":"Harrison County"
+    "population":67284,
+    "county":"Harrison County"
   },
   {
-    "id":48205,
+    "state":"TX",
+    "FIPS":48205,
     "number":480,
     "rate":10,
-    "state":"TX",
-    "name":"Hartley County"
+    "population":6153,
+    "county":"Hartley County"
   },
   {
-    "id":48207,
+    "state":"TX",
+    "FIPS":48207,
     "number":512,
     "rate":11.3,
-    "state":"TX",
-    "name":"Haskell County"
+    "population":5880,
+    "county":"Haskell County"
   },
   {
-    "id":48209,
+    "state":"TX",
+    "FIPS":48209,
     "number":9104,
     "rate":7.6,
-    "state":"TX",
-    "name":"Hays County"
+    "population":168855,
+    "county":"Hays County"
   },
   {
-    "id":48211,
+    "state":"TX",
+    "FIPS":48211,
     "number":268,
     "rate":9.8,
-    "state":"TX",
-    "name":"Hemphill County"
+    "population":4082,
+    "county":"Hemphill County"
   },
   {
-    "id":48213,
+    "state":"TX",
+    "FIPS":48213,
     "number":6225,
     "rate":10.5,
-    "state":"TX",
-    "name":"Henderson County"
+    "population":78942,
+    "county":"Henderson County"
   },
   {
-    "id":48215,
+    "state":"TX",
+    "FIPS":48215,
     "number":47075,
     "rate":9.3,
-    "state":"TX",
-    "name":"Hidalgo County"
+    "population":807725,
+    "county":"Hidalgo County"
   },
   {
-    "id":48217,
+    "state":"TX",
+    "FIPS":48217,
     "number":2561,
     "rate":9.9,
-    "state":"TX",
-    "name":"Hill County"
+    "population":35109,
+    "county":"Hill County"
   },
   {
-    "id":48219,
+    "state":"TX",
+    "FIPS":48219,
     "number":1426,
     "rate":8.9,
-    "state":"TX",
-    "name":"Hockley County"
+    "population":23122,
+    "county":"Hockley County"
   },
   {
-    "id":48221,
+    "state":"TX",
+    "FIPS":48221,
     "number":4291,
     "rate":10.7,
-    "state":"TX",
-    "name":"Hood County"
+    "population":52136,
+    "county":"Hood County"
   },
   {
-    "id":48223,
+    "state":"TX",
+    "FIPS":48223,
     "number":2592,
     "rate":10.1,
-    "state":"TX",
-    "name":"Hopkins County"
+    "population":35420,
+    "county":"Hopkins County"
   },
   {
-    "id":48225,
+    "state":"TX",
+    "FIPS":48225,
     "number":2207,
     "rate":12.1,
-    "state":"TX",
-    "name":"Houston County"
+    "population":23149,
+    "county":"Houston County"
   },
   {
-    "id":48227,
+    "state":"TX",
+    "FIPS":48227,
     "number":2710,
     "rate":10.2,
-    "state":"TX",
-    "name":"Howard County"
+    "population":35536,
+    "county":"Howard County"
   },
   {
-    "id":48229,
+    "state":"TX",
+    "FIPS":48229,
     "number":253,
     "rate":10.8,
-    "state":"TX",
-    "name":"Hudspeth County"
+    "population":3333,
+    "county":"Hudspeth County"
   },
   {
-    "id":48231,
+    "state":"TX",
+    "FIPS":48231,
     "number":6257,
     "rate":9.9,
-    "state":"TX",
-    "name":"Hunt County"
+    "population":87211,
+    "county":"Hunt County"
   },
   {
-    "id":48233,
+    "state":"TX",
+    "FIPS":48233,
     "number":1757,
     "rate":11.3,
-    "state":"TX",
-    "name":"Hutchinson County"
+    "population":21948,
+    "county":"Hutchinson County"
   },
   {
-    "id":48235,
+    "state":"TX",
+    "FIPS":48235,
     "number":130,
     "rate":11,
-    "state":"TX",
-    "name":"Irion County"
+    "population":1576,
+    "county":"Irion County"
   },
   {
-    "id":48239,
+    "state":"TX",
+    "FIPS":48239,
     "number":1224,
     "rate":12,
-    "state":"TX",
-    "name":"Jackson County"
+    "population":14249,
+    "county":"Jackson County"
   },
   {
-    "id":48237,
+    "state":"TX",
+    "FIPS":48237,
     "number":669,
     "rate":9.9,
-    "state":"TX",
-    "name":"Jack County"
+    "population":9005,
+    "county":"Jack County"
   },
   {
-    "id":48241,
+    "state":"TX",
+    "FIPS":48241,
     "number":3269,
     "rate":12.5,
-    "state":"TX",
-    "name":"Jasper County"
+    "population":35856,
+    "county":"Jasper County"
   },
   {
-    "id":48243,
+    "state":"TX",
+    "FIPS":48243,
     "number":237,
     "rate":12.3,
-    "state":"TX",
-    "name":"Jeff Davis County"
+    "population":2312,
+    "county":"Jeff Davis County"
   },
   {
-    "id":48245,
+    "state":"TX",
+    "FIPS":48245,
     "number":22229,
     "rate":12.1,
-    "state":"TX",
-    "name":"Jefferson County"
+    "population":251404,
+    "county":"Jefferson County"
   },
   {
-    "id":48247,
+    "state":"TX",
+    "FIPS":48247,
     "number":390,
     "rate":10.8,
-    "state":"TX",
-    "name":"Jim Hogg County"
+    "population":5265,
+    "county":"Jim Hogg County"
   },
   {
-    "id":48249,
+    "state":"TX",
+    "FIPS":48249,
     "number":2639,
     "rate":9.2,
-    "state":"TX",
-    "name":"Jim Wells County"
+    "population":41644,
+    "county":"Jim Wells County"
   },
   {
-    "id":48251,
+    "state":"TX",
+    "FIPS":48251,
     "number":12517,
     "rate":11.5,
-    "state":"TX",
-    "name":"Johnson County"
+    "population":153530,
+    "county":"Johnson County"
   },
   {
-    "id":48253,
+    "state":"TX",
+    "FIPS":48253,
     "number":1521,
     "rate":9.6,
-    "state":"TX",
-    "name":"Jones County"
+    "population":19910,
+    "county":"Jones County"
   },
   {
-    "id":48255,
+    "state":"TX",
+    "FIPS":48255,
     "number":1054,
     "rate":9.2,
-    "state":"TX",
-    "name":"Karnes County"
+    "population":14896,
+    "county":"Karnes County"
   },
   {
-    "id":48257,
+    "state":"TX",
+    "FIPS":48257,
     "number":7115,
     "rate":9.6,
-    "state":"TX",
-    "name":"Kaufman County"
+    "population":106680,
+    "county":"Kaufman County"
   },
   {
-    "id":48259,
+    "state":"TX",
+    "FIPS":48259,
     "number":2691,
     "rate":10.2,
-    "state":"TX",
-    "name":"Kendall County"
+    "population":35759,
+    "county":"Kendall County"
   },
   {
-    "id":48261,
+    "state":"TX",
+    "FIPS":48261,
     "number":33,
     "rate":10.2,
-    "state":"TX",
-    "name":"Kenedy County"
+    "population":432,
+    "county":"Kenedy County"
   },
   {
-    "id":48263,
+    "state":"TX",
+    "FIPS":48263,
     "number":81,
     "rate":12.8,
-    "state":"TX",
-    "name":"Kent County"
+    "population":839,
+    "county":"Kent County"
   },
   {
-    "id":48265,
+    "state":"TX",
+    "FIPS":48265,
     "number":4734,
     "rate":12.2,
-    "state":"TX",
-    "name":"Kerr County"
+    "population":49798,
+    "county":"Kerr County"
   },
   {
-    "id":48267,
+    "state":"TX",
+    "FIPS":48267,
     "number":436,
     "rate":12.2,
-    "state":"TX",
-    "name":"Kimble County"
+    "population":4534,
+    "county":"Kimble County"
   },
   {
-    "id":48269,
+    "state":"TX",
+    "FIPS":48269,
     "number":23,
     "rate":10.8,
-    "state":"TX",
-    "name":"King County"
+    "population":271,
+    "county":"King County"
   },
   {
-    "id":48271,
+    "state":"TX",
+    "FIPS":48271,
     "number":322,
     "rate":11.5,
-    "state":"TX",
-    "name":"Kinney County"
+    "population":3628,
+    "county":"Kinney County"
   },
   {
-    "id":48273,
+    "state":"TX",
+    "FIPS":48273,
     "number":1871,
     "rate":8.4,
-    "state":"TX",
-    "name":"Kleberg County"
+    "population":32180,
+    "county":"Kleberg County"
   },
   {
-    "id":48275,
+    "state":"TX",
+    "FIPS":48275,
     "number":305,
     "rate":11.2,
-    "state":"TX",
-    "name":"Knox County"
+    "population":3768,
+    "county":"Knox County"
   },
   {
-    "id":48283,
+    "state":"TX",
+    "FIPS":48283,
     "number":486,
     "rate":9,
-    "state":"TX",
-    "name":"La Salle County"
+    "population":7126,
+    "county":"La Salle County"
   },
   {
-    "id":48277,
+    "state":"TX",
+    "FIPS":48277,
     "number":4930,
     "rate":13.4,
-    "state":"TX",
-    "name":"Lamar County"
+    "population":49856,
+    "county":"Lamar County"
   },
   {
-    "id":48279,
+    "state":"TX",
+    "FIPS":48279,
     "number":976,
     "rate":10.3,
-    "state":"TX",
-    "name":"Lamb County"
+    "population":13931,
+    "county":"Lamb County"
   },
   {
-    "id":48281,
+    "state":"TX",
+    "FIPS":48281,
     "number":1605,
     "rate":10.9,
-    "state":"TX",
-    "name":"Lampasas County"
+    "population":20081,
+    "county":"Lampasas County"
   },
   {
-    "id":48285,
+    "state":"TX",
+    "FIPS":48285,
     "number":1837,
     "rate":12.7,
-    "state":"TX",
-    "name":"Lavaca County"
+    "population":19455,
+    "county":"Lavaca County"
   },
   {
-    "id":48287,
+    "state":"TX",
+    "FIPS":48287,
     "number":1325,
     "rate":11,
-    "state":"TX",
-    "name":"Lee County"
+    "population":16548,
+    "county":"Lee County"
   },
   {
-    "id":48289,
+    "state":"TX",
+    "FIPS":48289,
     "number":1692,
     "rate":13.3,
-    "state":"TX",
-    "name":"Leon County"
+    "population":16763,
+    "county":"Leon County"
   },
   {
-    "id":48291,
+    "state":"TX",
+    "FIPS":48291,
     "number":5598,
     "rate":10.1,
-    "state":"TX",
-    "name":"Liberty County"
+    "population":76511,
+    "county":"Liberty County"
   },
   {
-    "id":48293,
+    "state":"TX",
+    "FIPS":48293,
     "number":2088,
     "rate":11.9,
-    "state":"TX",
-    "name":"Limestone County"
+    "population":23664,
+    "county":"Limestone County"
   },
   {
-    "id":48295,
+    "state":"TX",
+    "FIPS":48295,
     "number":236,
     "rate":9.9,
-    "state":"TX",
-    "name":"Lipscomb County"
+    "population":3432,
+    "county":"Lipscomb County"
   },
   {
-    "id":48297,
+    "state":"TX",
+    "FIPS":48297,
     "number":1097,
     "rate":12,
-    "state":"TX",
-    "name":"Live Oak County"
+    "population":11668,
+    "county":"Live Oak County"
   },
   {
-    "id":48299,
+    "state":"TX",
+    "FIPS":48299,
     "number":2097,
     "rate":13.3,
-    "state":"TX",
-    "name":"Llano County"
+    "population":19121,
+    "county":"Llano County"
   },
   {
-    "id":48301,
+    "state":"TX",
+    "FIPS":48301,
     "number":7,
     "rate":11.2,
-    "state":"TX",
-    "name":"Loving County"
+    "population":83,
+    "county":"Loving County"
   },
   {
-    "id":48303,
+    "state":"TX",
+    "FIPS":48303,
     "number":17662,
     "rate":8.6,
-    "state":"TX",
-    "name":"Lubbock County"
+    "population":286096,
+    "county":"Lubbock County"
   },
   {
-    "id":48305,
+    "state":"TX",
+    "FIPS":48305,
     "number":443,
     "rate":10.9,
-    "state":"TX",
-    "name":"Lynn County"
+    "population":5777,
+    "county":"Lynn County"
   },
   {
-    "id":48313,
+    "state":"TX",
+    "FIPS":48313,
     "number":997,
     "rate":9.6,
-    "state":"TX",
-    "name":"Madison County"
+    "population":13712,
+    "county":"Madison County"
   },
   {
-    "id":48315,
+    "state":"TX",
+    "FIPS":48315,
     "number":1076,
     "rate":13.2,
-    "state":"TX",
-    "name":"Marion County"
+    "population":10323,
+    "county":"Marion County"
   },
   {
-    "id":48317,
+    "state":"TX",
+    "FIPS":48317,
     "number":324,
     "rate":9.6,
-    "state":"TX",
-    "name":"Martin County"
+    "population":5002,
+    "county":"Martin County"
   },
   {
-    "id":48319,
+    "state":"TX",
+    "FIPS":48319,
     "number":399,
     "rate":12.8,
-    "state":"TX",
-    "name":"Mason County"
+    "population":4044,
+    "county":"Mason County"
   },
   {
-    "id":48321,
+    "state":"TX",
+    "FIPS":48321,
     "number":2925,
     "rate":11.1,
-    "state":"TX",
-    "name":"Matagorda County"
+    "population":36566,
+    "county":"Matagorda County"
   },
   {
-    "id":48323,
+    "state":"TX",
+    "FIPS":48323,
     "number":3055,
     "rate":8.7,
-    "state":"TX",
-    "name":"Maverick County"
+    "population":55766,
+    "county":"Maverick County"
   },
   {
-    "id":48307,
+    "state":"TX",
+    "FIPS":48307,
     "number":677,
     "rate":11,
-    "state":"TX",
-    "name":"McCulloch County"
+    "population":8275,
+    "county":"McCulloch County"
   },
   {
-    "id":48309,
+    "state":"TX",
+    "FIPS":48309,
     "number":15248,
     "rate":9,
-    "state":"TX",
-    "name":"Mclennan County"
+    "population":239511,
+    "county":"Mclennan County"
   },
   {
-    "id":48311,
+    "state":"TX",
+    "FIPS":48311,
     "number":73,
     "rate":12.6,
-    "state":"TX",
-    "name":"McMullen County"
+    "population":738,
+    "county":"McMullen County"
   },
   {
-    "id":48325,
+    "state":"TX",
+    "FIPS":48325,
     "number":3398,
     "rate":10,
-    "state":"TX",
-    "name":"Medina County"
+    "population":46867,
+    "county":"Medina County"
   },
   {
-    "id":48327,
+    "state":"TX",
+    "FIPS":48327,
     "number":230,
     "rate":13,
-    "state":"TX",
-    "name":"Menard County"
+    "population":2221,
+    "county":"Menard County"
   },
   {
-    "id":48329,
+    "state":"TX",
+    "FIPS":48329,
     "number":8888,
     "rate":8.7,
-    "state":"TX",
-    "name":"Midland County"
+    "population":147090,
+    "county":"Midland County"
   },
   {
-    "id":48331,
+    "state":"TX",
+    "FIPS":48331,
     "number":2136,
     "rate":12.3,
-    "state":"TX",
-    "name":"Milam County"
+    "population":24143,
+    "county":"Milam County"
   },
   {
-    "id":48333,
+    "state":"TX",
+    "FIPS":48333,
     "number":450,
     "rate":12.4,
-    "state":"TX",
-    "name":"Mills County"
+    "population":4831,
+    "county":"Mills County"
   },
   {
-    "id":48335,
+    "state":"TX",
+    "FIPS":48335,
     "number":696,
     "rate":9.6,
-    "state":"TX",
-    "name":"Mitchell County"
+    "population":9312,
+    "county":"Mitchell County"
   },
   {
-    "id":48337,
+    "state":"TX",
+    "FIPS":48337,
     "number":1646,
     "rate":11.2,
-    "state":"TX",
-    "name":"Montague County"
+    "population":19529,
+    "county":"Montague County"
   },
   {
-    "id":48339,
+    "state":"TX",
+    "FIPS":48339,
     "number":35479,
     "rate":10.4,
-    "state":"TX",
-    "name":"Montgomery County"
+    "population":485119,
+    "county":"Montgomery County"
   },
   {
-    "id":48341,
+    "state":"TX",
+    "FIPS":48341,
     "number":1387,
     "rate":9.5,
-    "state":"TX",
-    "name":"Moore County"
+    "population":22399,
+    "county":"Moore County"
   },
   {
-    "id":48343,
+    "state":"TX",
+    "FIPS":48343,
     "number":1144,
     "rate":12,
-    "state":"TX",
-    "name":"Morris County"
+    "population":12757,
+    "county":"Morris County"
   },
   {
-    "id":48345,
+    "state":"TX",
+    "FIPS":48345,
     "number":122,
     "rate":13.3,
-    "state":"TX",
-    "name":"Motley County"
+    "population":1195,
+    "county":"Motley County"
   },
   {
-    "id":48347,
+    "state":"TX",
+    "FIPS":48347,
     "number":4835,
     "rate":10.5,
-    "state":"TX",
-    "name":"Nacogdoches County"
+    "population":65841,
+    "county":"Nacogdoches County"
   },
   {
-    "id":48349,
+    "state":"TX",
+    "FIPS":48349,
     "number":3937,
     "rate":11.6,
-    "state":"TX",
-    "name":"Navarro County"
+    "population":48131,
+    "county":"Navarro County"
   },
   {
-    "id":48351,
+    "state":"TX",
+    "FIPS":48351,
     "number":1366,
     "rate":12.8,
-    "state":"TX",
-    "name":"Newton County"
+    "population":14328,
+    "county":"Newton County"
   },
   {
-    "id":48353,
+    "state":"TX",
+    "FIPS":48353,
     "number":1162,
     "rate":10.9,
-    "state":"TX",
-    "name":"Nolan County"
+    "population":14877,
+    "county":"Nolan County"
   },
   {
-    "id":48355,
+    "state":"TX",
+    "FIPS":48355,
     "number":25105,
     "rate":10.1,
-    "state":"TX",
-    "name":"Nueces County"
+    "population":347933,
+    "county":"Nueces County"
   },
   {
-    "id":48357,
+    "state":"TX",
+    "FIPS":48357,
     "number":602,
     "rate":8.7,
-    "state":"TX",
-    "name":"Ochiltree County"
+    "population":10621,
+    "county":"Ochiltree County"
   },
   {
-    "id":48359,
+    "state":"TX",
+    "FIPS":48359,
     "number":136,
     "rate":10.1,
-    "state":"TX",
-    "name":"Oldham County"
+    "population":2047,
+    "county":"Oldham County"
   },
   {
-    "id":48361,
+    "state":"TX",
+    "FIPS":48361,
     "number":5834,
     "rate":9.7,
-    "state":"TX",
-    "name":"Orange County"
+    "population":82951,
+    "county":"Orange County"
   },
   {
-    "id":48363,
+    "state":"TX",
+    "FIPS":48363,
     "number":2496,
     "rate":12.3,
-    "state":"TX",
-    "name":"Palo Pinto County"
+    "population":27883,
+    "county":"Palo Pinto County"
   },
   {
-    "id":48365,
+    "state":"TX",
+    "FIPS":48365,
     "number":1979,
     "rate":11.3,
-    "state":"TX",
-    "name":"Panola County"
+    "population":23998,
+    "county":"Panola County"
   },
   {
-    "id":48367,
+    "state":"TX",
+    "FIPS":48367,
     "number":9448,
     "rate":10.8,
-    "state":"TX",
-    "name":"Parker County"
+    "population":119757,
+    "county":"Parker County"
   },
   {
-    "id":48369,
+    "state":"TX",
+    "FIPS":48369,
     "number":591,
     "rate":8.7,
-    "state":"TX",
-    "name":"Parmer County"
+    "population":10162,
+    "county":"Parmer County"
   },
   {
-    "id":48371,
+    "state":"TX",
+    "FIPS":48371,
     "number":1214,
     "rate":10.6,
-    "state":"TX",
-    "name":"Pecos County"
+    "population":15591,
+    "county":"Pecos County"
   },
   {
-    "id":48373,
+    "state":"TX",
+    "FIPS":48373,
     "number":4152,
     "rate":11.8,
-    "state":"TX",
-    "name":"Polk County"
+    "population":45745,
+    "county":"Polk County"
   },
   {
-    "id":48375,
+    "state":"TX",
+    "FIPS":48375,
     "number":8058,
     "rate":9.4,
-    "state":"TX",
-    "name":"Potter County"
+    "population":122754,
+    "county":"Potter County"
   },
   {
-    "id":48377,
+    "state":"TX",
+    "FIPS":48377,
     "number":511,
     "rate":9.8,
-    "state":"TX",
-    "name":"Presidio County"
+    "population":7540,
+    "county":"Presidio County"
   },
   {
-    "id":48379,
+    "state":"TX",
+    "FIPS":48379,
     "number":1023,
     "rate":12.1,
-    "state":"TX",
-    "name":"Rains County"
+    "population":10938,
+    "county":"Rains County"
   },
   {
-    "id":48381,
+    "state":"TX",
+    "FIPS":48381,
     "number":7536,
     "rate":8.3,
-    "state":"TX",
-    "name":"Randall County"
+    "population":124897,
+    "county":"Randall County"
   },
   {
-    "id":48383,
+    "state":"TX",
+    "FIPS":48383,
     "number":225,
     "rate":9.6,
-    "state":"TX",
-    "name":"Reagan County"
+    "population":3476,
+    "county":"Reagan County"
   },
   {
-    "id":48385,
+    "state":"TX",
+    "FIPS":48385,
     "number":332,
     "rate":12.3,
-    "state":"TX",
-    "name":"Real County"
+    "population":3372,
+    "county":"Real County"
   },
   {
-    "id":48387,
+    "state":"TX",
+    "FIPS":48387,
     "number":1216,
     "rate":12.4,
-    "state":"TX",
-    "name":"Red River County"
+    "population":12712,
+    "county":"Red River County"
   },
   {
-    "id":48389,
+    "state":"TX",
+    "FIPS":48389,
     "number":895,
     "rate":8.6,
-    "state":"TX",
-    "name":"Reeves County"
+    "population":13892,
+    "county":"Reeves County"
   },
   {
-    "id":48391,
+    "state":"TX",
+    "FIPS":48391,
     "number":610,
     "rate":11.4,
-    "state":"TX",
-    "name":"Refugio County"
+    "population":7238,
+    "county":"Refugio County"
   },
   {
-    "id":48393,
+    "state":"TX",
+    "FIPS":48393,
     "number":69,
     "rate":11.2,
-    "state":"TX",
-    "name":"Roberts County"
+    "population":950,
+    "county":"Roberts County"
   },
   {
-    "id":48395,
+    "state":"TX",
+    "FIPS":48395,
     "number":1415,
     "rate":11.8,
-    "state":"TX",
-    "name":"Robertson County"
+    "population":16490,
+    "county":"Robertson County"
   },
   {
-    "id":48397,
+    "state":"TX",
+    "FIPS":48397,
     "number":5059,
     "rate":8.9,
-    "state":"TX",
-    "name":"Rockwall County"
+    "population":82992,
+    "county":"Rockwall County"
   },
   {
-    "id":48399,
+    "state":"TX",
+    "FIPS":48399,
     "number":869,
     "rate":11.4,
-    "state":"TX",
-    "name":"Runnels County"
+    "population":10422,
+    "county":"Runnels County"
   },
   {
-    "id":48401,
+    "state":"TX",
+    "FIPS":48401,
     "number":4834,
     "rate":12,
-    "state":"TX",
-    "name":"Rusk County"
+    "population":55743,
+    "county":"Rusk County"
   },
   {
-    "id":48403,
+    "state":"TX",
+    "FIPS":48403,
     "number":1159,
     "rate":14,
-    "state":"TX",
-    "name":"Sabine County"
+    "population":10469,
+    "county":"Sabine County"
   },
   {
-    "id":48405,
+    "state":"TX",
+    "FIPS":48405,
     "number":953,
     "rate":13.9,
-    "state":"TX",
-    "name":"San Augustine County"
+    "population":8836,
+    "county":"San Augustine County"
   },
   {
-    "id":48407,
+    "state":"TX",
+    "FIPS":48407,
     "number":2590,
     "rate":12.9,
-    "state":"TX",
-    "name":"San Jacinto County"
+    "population":27000,
+    "county":"San Jacinto County"
   },
   {
-    "id":48409,
+    "state":"TX",
+    "FIPS":48409,
     "number":5117,
     "rate":11.3,
-    "state":"TX",
-    "name":"San Patricio County"
+    "population":65372,
+    "county":"San Patricio County"
   },
   {
-    "id":48411,
+    "state":"TX",
+    "FIPS":48411,
     "number":482,
     "rate":10.4,
-    "state":"TX",
-    "name":"San Saba County"
+    "population":5988,
+    "county":"San Saba County"
   },
   {
-    "id":48413,
+    "state":"TX",
+    "FIPS":48413,
     "number":226,
     "rate":10.3,
-    "state":"TX",
-    "name":"Schleicher County"
+    "population":3249,
+    "county":"Schleicher County"
   },
   {
-    "id":48415,
+    "state":"TX",
+    "FIPS":48415,
     "number":1096,
     "rate":8.9,
-    "state":"TX",
-    "name":"Scurry County"
+    "population":17106,
+    "county":"Scurry County"
   },
   {
-    "id":48417,
+    "state":"TX",
+    "FIPS":48417,
     "number":270,
     "rate":10.9,
-    "state":"TX",
-    "name":"Shackelford County"
+    "population":3370,
+    "county":"Shackelford County"
   },
   {
-    "id":48419,
+    "state":"TX",
+    "FIPS":48419,
     "number":2159,
     "rate":11.7,
-    "state":"TX",
-    "name":"Shelby County"
+    "population":25988,
+    "county":"Shelby County"
   },
   {
-    "id":48421,
+    "state":"TX",
+    "FIPS":48421,
     "number":218,
     "rate":10.5,
-    "state":"TX",
-    "name":"Sherman County"
+    "population":3067,
+    "county":"Sherman County"
   },
   {
-    "id":48423,
+    "state":"TX",
+    "FIPS":48423,
     "number":16576,
     "rate":10.8,
-    "state":"TX",
-    "name":"Smith County"
+    "population":214941,
+    "county":"Smith County"
   },
   {
-    "id":48425,
+    "state":"TX",
+    "FIPS":48425,
     "number":694,
     "rate":11.1,
-    "state":"TX",
-    "name":"Somervell County"
+    "population":8594,
+    "county":"Somervell County"
   },
   {
-    "id":48427,
+    "state":"TX",
+    "FIPS":48427,
     "number":3399,
     "rate":8.8,
-    "state":"TX",
-    "name":"Starr County"
+    "population":61951,
+    "county":"Starr County"
   },
   {
-    "id":48429,
+    "state":"TX",
+    "FIPS":48429,
     "number":780,
     "rate":11.1,
-    "state":"TX",
-    "name":"Stephens County"
+    "population":9570,
+    "county":"Stephens County"
   },
   {
-    "id":48431,
+    "state":"TX",
+    "FIPS":48431,
     "number":94,
     "rate":10.8,
-    "state":"TX",
-    "name":"Sterling County"
+    "population":1188,
+    "county":"Sterling County"
   },
   {
-    "id":48433,
+    "state":"TX",
+    "FIPS":48433,
     "number":141,
     "rate":12.6,
-    "state":"TX",
-    "name":"Stonewall County"
+    "population":1470,
+    "county":"Stonewall County"
   },
   {
-    "id":48435,
+    "state":"TX",
+    "FIPS":48435,
     "number":306,
     "rate":10.9,
-    "state":"TX",
-    "name":"Sutton County"
+    "population":3930,
+    "county":"Sutton County"
   },
   {
-    "id":48437,
+    "state":"TX",
+    "FIPS":48437,
     "number":606,
     "rate":10.7,
-    "state":"TX",
-    "name":"Swisher County"
+    "population":7882,
+    "county":"Swisher County"
   },
   {
-    "id":48439,
+    "state":"TX",
+    "FIPS":48439,
     "number":146809,
     "rate":11.2,
-    "state":"TX",
-    "name":"Tarrant County"
+    "population":1882822,
+    "county":"Tarrant County"
   },
   {
-    "id":48441,
+    "state":"TX",
+    "FIPS":48441,
     "number":9454,
     "rate":9.9,
-    "state":"TX",
-    "name":"Taylor County"
+    "population":134104,
+    "county":"Taylor County"
   },
   {
-    "id":48443,
+    "state":"TX",
+    "FIPS":48443,
     "number":77,
     "rate":10.8,
-    "state":"TX",
-    "name":"Terrell County"
+    "population":926,
+    "county":"Terrell County"
   },
   {
-    "id":48445,
+    "state":"TX",
+    "FIPS":48445,
     "number":968,
     "rate":10.8,
-    "state":"TX",
-    "name":"Terry County"
+    "population":12610,
+    "county":"Terry County"
   },
   {
-    "id":48447,
+    "state":"TX",
+    "FIPS":48447,
     "number":143,
     "rate":11.7,
-    "state":"TX",
-    "name":"Throckmorton County"
+    "population":1601,
+    "county":"Throckmorton County"
   },
   {
-    "id":48449,
+    "state":"TX",
+    "FIPS":48449,
     "number":2131,
     "rate":9.7,
-    "state":"TX",
-    "name":"Titus County"
+    "population":32693,
+    "county":"Titus County"
   },
   {
-    "id":48451,
+    "state":"TX",
+    "FIPS":48451,
     "number":7976,
     "rate":9.6,
-    "state":"TX",
-    "name":"Tom Green County"
+    "population":113521,
+    "county":"Tom Green County"
   },
   {
-    "id":48453,
+    "state":"TX",
+    "FIPS":48453,
     "number":49351,
     "rate":6.1,
-    "state":"TX",
-    "name":"Travis County"
+    "population":1097104,
+    "county":"Travis County"
   },
   {
-    "id":48455,
+    "state":"TX",
+    "FIPS":48455,
     "number":1330,
     "rate":12,
-    "state":"TX",
-    "name":"Trinity County"
+    "population":14300,
+    "county":"Trinity County"
   },
   {
-    "id":48457,
+    "state":"TX",
+    "FIPS":48457,
     "number":1989,
     "rate":11.9,
-    "state":"TX",
-    "name":"Tyler County"
+    "population":21452,
+    "county":"Tyler County"
   },
   {
-    "id":48459,
+    "state":"TX",
+    "FIPS":48459,
     "number":3488,
     "rate":11.9,
-    "state":"TX",
-    "name":"Upshur County"
+    "population":39952,
+    "county":"Upshur County"
   },
   {
-    "id":48461,
+    "state":"TX",
+    "FIPS":48461,
     "number":237,
     "rate":10.3,
-    "state":"TX",
-    "name":"Upton County"
+    "population":3254,
+    "county":"Upton County"
   },
   {
-    "id":48463,
+    "state":"TX",
+    "FIPS":48463,
     "number":1969,
     "rate":10.8,
-    "state":"TX",
-    "name":"Uvalde County"
+    "population":26760,
+    "county":"Uvalde County"
   },
   {
-    "id":48465,
+    "state":"TX",
+    "FIPS":48465,
     "number":3052,
     "rate":9.3,
-    "state":"TX",
-    "name":"Val Verde County"
+    "population":48953,
+    "county":"Val Verde County"
   },
   {
-    "id":48467,
+    "state":"TX",
+    "FIPS":48467,
     "number":4460,
     "rate":11.5,
-    "state":"TX",
-    "name":"Van Zandt County"
+    "population":52355,
+    "county":"Van Zandt County"
   },
   {
-    "id":48469,
+    "state":"TX",
+    "FIPS":48469,
     "number":7465,
     "rate":11.8,
-    "state":"TX",
-    "name":"Victoria County"
+    "population":89276,
+    "county":"Victoria County"
   },
   {
-    "id":48471,
+    "state":"TX",
+    "FIPS":48471,
     "number":4828,
     "rate":8.9,
-    "state":"TX",
-    "name":"Walker County"
+    "population":68656,
+    "county":"Walker County"
   },
   {
-    "id":48473,
+    "state":"TX",
+    "FIPS":48473,
     "number":3224,
     "rate":10.6,
-    "state":"TX",
-    "name":"Waller County"
+    "population":44353,
+    "county":"Waller County"
   },
   {
-    "id":48475,
+    "state":"TX",
+    "FIPS":48475,
     "number":758,
     "rate":10,
-    "state":"TX",
-    "name":"Ward County"
+    "population":10876,
+    "county":"Ward County"
   },
   {
-    "id":48477,
+    "state":"TX",
+    "FIPS":48477,
     "number":2916,
     "rate":11.6,
-    "state":"TX",
-    "name":"Washington County"
+    "population":33866,
+    "county":"Washington County"
   },
   {
-    "id":48479,
+    "state":"TX",
+    "FIPS":48479,
     "number":15375,
     "rate":9.6,
-    "state":"TX",
-    "name":"Webb County"
+    "population":259986,
+    "county":"Webb County"
   },
   {
-    "id":48483,
+    "state":"TX",
+    "FIPS":48483,
     "number":426,
     "rate":10.6,
-    "state":"TX",
-    "name":"Wheeler County"
+    "population":5607,
+    "county":"Wheeler County"
   },
   {
-    "id":48481,
+    "state":"TX",
+    "FIPS":48481,
     "number":3166,
     "rate":10.8,
-    "state":"TX",
-    "name":"Wharton County"
+    "population":41147,
+    "county":"Wharton County"
   },
   {
-    "id":48485,
+    "state":"TX",
+    "FIPS":48485,
     "number":9910,
     "rate":10.3,
-    "state":"TX",
-    "name":"Wichita County"
+    "population":131702,
+    "county":"Wichita County"
   },
   {
-    "id":48487,
+    "state":"TX",
+    "FIPS":48487,
     "number":1086,
     "rate":11.3,
-    "state":"TX",
-    "name":"Wilbarger County"
+    "population":13262,
+    "county":"Wilbarger County"
   },
   {
-    "id":48489,
+    "state":"TX",
+    "FIPS":48489,
     "number":1305,
     "rate":8.4,
-    "state":"TX",
-    "name":"Willacy County"
+    "population":22107,
+    "county":"Willacy County"
   },
   {
-    "id":48491,
+    "state":"TX",
+    "FIPS":48491,
     "number":26138,
     "rate":8.2,
-    "state":"TX",
-    "name":"Williamson County"
+    "population":456593,
+    "county":"Williamson County"
   },
   {
-    "id":48493,
+    "state":"TX",
+    "FIPS":48493,
     "number":3091,
     "rate":9.7,
-    "state":"TX",
-    "name":"Wilson County"
+    "population":44432,
+    "county":"Wilson County"
   },
   {
-    "id":48495,
+    "state":"TX",
+    "FIPS":48495,
     "number":463,
     "rate":9.4,
-    "state":"TX",
-    "name":"Winkler County"
+    "population":7344,
+    "county":"Winkler County"
   },
   {
-    "id":48497,
+    "state":"TX",
+    "FIPS":48497,
     "number":4345,
     "rate":10,
-    "state":"TX",
-    "name":"Wise County"
+    "population":60387,
+    "county":"Wise County"
   },
   {
-    "id":48499,
+    "state":"TX",
+    "FIPS":48499,
     "number":4054,
     "rate":12.4,
-    "state":"TX",
-    "name":"Wood County"
+    "population":42525,
+    "county":"Wood County"
   },
   {
-    "id":48501,
+    "state":"TX",
+    "FIPS":48501,
     "number":494,
     "rate":9.4,
-    "state":"TX",
-    "name":"Yoakum County"
+    "population":8018,
+    "county":"Yoakum County"
   },
   {
-    "id":48503,
+    "state":"TX",
+    "FIPS":48503,
     "number":1441,
     "rate":10.6,
-    "state":"TX",
-    "name":"Young County"
+    "population":18290,
+    "county":"Young County"
   },
   {
-    "id":48505,
+    "state":"TX",
+    "FIPS":48505,
     "number":814,
     "rate":9,
-    "state":"TX",
-    "name":"Zapata County"
+    "population":14232,
+    "county":"Zapata County"
   },
   {
-    "id":48507,
+    "state":"TX",
+    "FIPS":48507,
     "number":744,
     "rate":9.4,
-    "state":"TX",
-    "name":"Zavala County"
+    "population":11996,
+    "county":"Zavala County"
   },
   {
-    "id":49001,
+    "state":"UT",
+    "FIPS":49001,
     "number":338,
     "rate":8.1,
-    "state":"UT",
-    "name":"Beaver County"
+    "population":6486,
+    "county":"Beaver County"
   },
   {
-    "id":49003,
+    "state":"UT",
+    "FIPS":49003,
     "number":3069,
     "rate":9.5,
-    "state":"UT",
-    "name":"Box Elder County"
+    "population":50269,
+    "county":"Box Elder County"
   },
   {
-    "id":49005,
+    "state":"UT",
+    "FIPS":49005,
     "number":4796,
     "rate":6.4,
-    "state":"UT",
-    "name":"Cache County"
+    "population":115958,
+    "county":"Cache County"
   },
   {
-    "id":49007,
+    "state":"UT",
+    "FIPS":49007,
     "number":1401,
     "rate":9.4,
-    "state":"UT",
-    "name":"Carbon County"
+    "population":21254,
+    "county":"Carbon County"
   },
   {
-    "id":49009,
+    "state":"UT",
+    "FIPS":49009,
     "number":82,
     "rate":10.2,
-    "state":"UT",
-    "name":"Daggett County"
+    "population":1086,
+    "county":"Daggett County"
   },
   {
-    "id":49011,
+    "state":"UT",
+    "FIPS":49011,
     "number":14428,
     "rate":7.2,
-    "state":"UT",
-    "name":"Davis County"
+    "population":316018,
+    "county":"Davis County"
   },
   {
-    "id":49013,
+    "state":"UT",
+    "FIPS":49013,
     "number":948,
     "rate":7.7,
-    "state":"UT",
-    "name":"Duchesne County"
+    "population":19061,
+    "county":"Duchesne County"
   },
   {
-    "id":49015,
+    "state":"UT",
+    "FIPS":49015,
     "number":560,
     "rate":7.7,
-    "state":"UT",
-    "name":"Emery County"
+    "population":10901,
+    "county":"Emery County"
   },
   {
-    "id":49017,
+    "state":"UT",
+    "FIPS":49017,
     "number":368,
     "rate":10,
-    "state":"UT",
-    "name":"Garfield County"
+    "population":5088,
+    "county":"Garfield County"
   },
   {
-    "id":49019,
+    "state":"UT",
+    "FIPS":49019,
     "number":548,
     "rate":7.8,
-    "state":"UT",
-    "name":"Grand County"
+    "population":9341,
+    "county":"Grand County"
   },
   {
-    "id":49021,
+    "state":"UT",
+    "FIPS":49021,
     "number":2131,
     "rate":6.9,
-    "state":"UT",
-    "name":"Iron County"
+    "population":46730,
+    "county":"Iron County"
   },
   {
-    "id":49023,
+    "state":"UT",
+    "FIPS":49023,
     "number":543,
     "rate":8.6,
-    "state":"UT",
-    "name":"Juab County"
+    "population":10328,
+    "county":"Juab County"
   },
   {
-    "id":49025,
+    "state":"UT",
+    "FIPS":49025,
     "number":522,
     "rate":9.7,
-    "state":"UT",
-    "name":"Kane County"
+    "population":7217,
+    "county":"Kane County"
   },
   {
-    "id":49027,
+    "state":"UT",
+    "FIPS":49027,
     "number":803,
     "rate":9.8,
-    "state":"UT",
-    "name":"Millard County"
+    "population":12543,
+    "county":"Millard County"
   },
   {
-    "id":49029,
+    "state":"UT",
+    "FIPS":49029,
     "number":475,
     "rate":7.8,
-    "state":"UT",
-    "name":"Morgan County"
+    "population":9802,
+    "county":"Morgan County"
   },
   {
-    "id":49031,
+    "state":"UT",
+    "FIPS":49031,
     "number":109,
     "rate":10.2,
-    "state":"UT",
-    "name":"Piute County"
+    "population":1528,
+    "county":"Piute County"
   },
   {
-    "id":49033,
+    "state":"UT",
+    "FIPS":49033,
     "number":139,
     "rate":9.2,
-    "state":"UT",
-    "name":"Rich County"
+    "population":2279,
+    "county":"Rich County"
   },
   {
-    "id":49035,
+    "state":"UT",
+    "FIPS":49035,
     "number":51938,
     "rate":7.1,
-    "state":"UT",
-    "name":"Salt Lake County"
+    "population":1064402,
+    "county":"Salt Lake County"
   },
   {
-    "id":49037,
+    "state":"UT",
+    "FIPS":49037,
     "number":994,
     "rate":10.5,
-    "state":"UT",
-    "name":"San Juan County"
+    "population":14899,
+    "county":"San Juan County"
   },
   {
-    "id":49039,
+    "state":"UT",
+    "FIPS":49039,
     "number":1466,
     "rate":7.9,
-    "state":"UT",
-    "name":"Sanpete County"
+    "population":28029,
+    "county":"Sanpete County"
   },
   {
-    "id":49041,
+    "state":"UT",
+    "FIPS":49041,
     "number":1382,
     "rate":10,
-    "state":"UT",
-    "name":"Sevier County"
+    "population":20735,
+    "county":"Sevier County"
   },
   {
-    "id":49043,
+    "state":"UT",
+    "FIPS":49043,
     "number":1188,
     "rate":4.4,
-    "state":"UT",
-    "name":"Summit County"
+    "population":37893,
+    "county":"Summit County"
   },
   {
-    "id":49045,
+    "state":"UT",
+    "FIPS":49045,
     "number":3409,
     "rate":9.2,
-    "state":"UT",
-    "name":"Tooele County"
+    "population":59820,
+    "county":"Tooele County"
   },
   {
-    "id":49047,
+    "state":"UT",
+    "FIPS":49047,
     "number":1903,
     "rate":8.6,
-    "state":"UT",
-    "name":"Uintah County"
+    "population":34636,
+    "county":"Uintah County"
   },
   {
-    "id":49049,
+    "state":"UT",
+    "FIPS":49049,
     "number":18811,
     "rate":5.7,
-    "state":"UT",
-    "name":"Utah County"
+    "population":539602,
+    "county":"Utah County"
   },
   {
-    "id":49051,
+    "state":"UT",
+    "FIPS":49051,
     "number":1041,
     "rate":6.4,
-    "state":"UT",
-    "name":"Wasatch County"
+    "population":25374,
+    "county":"Wasatch County"
   },
   {
-    "id":49053,
+    "state":"UT",
+    "FIPS":49053,
     "number":7065,
     "rate":7.2,
-    "state":"UT",
-    "name":"Washington County"
+    "population":144643,
+    "county":"Washington County"
   },
   {
-    "id":49055,
+    "state":"UT",
+    "FIPS":49055,
     "number":166,
     "rate":8.8,
-    "state":"UT",
-    "name":"Wayne County"
+    "population":2732,
+    "county":"Wayne County"
   },
   {
-    "id":49057,
+    "state":"UT",
+    "FIPS":49057,
     "number":13311,
     "rate":8.3,
-    "state":"UT",
-    "name":"Weber County"
+    "population":236540,
+    "county":"Weber County"
   },
   {
-    "id":51001,
+    "state":"VA",
+    "FIPS":51001,
     "number":3109,
     "rate":12.1,
-    "state":"VA",
-    "name":"Accomack County"
+    "population":33313,
+    "county":"Accomack County"
   },
   {
-    "id":51510,
+    "state":"VA",
+    "FIPS":51510,
     "number":7360,
     "rate":6.2,
-    "state":"VA",
-    "name":"Alexandria city"
+    "population":146934,
+    "county":"Alexandria city"
   },
   {
-    "id":51003,
+    "state":"VA",
+    "FIPS":51003,
     "number":6828,
     "rate":9.1,
-    "state":"VA",
-    "name":"Albemarle County"
+    "population":102030,
+    "county":"Albemarle County"
   },
   {
-    "id":51005,
+    "state":"VA",
+    "FIPS":51005,
     "number":1410,
     "rate":11.2,
-    "state":"VA",
-    "name":"Alleghany County"
+    "population":16183,
+    "county":"Alleghany County"
   },
   {
-    "id":51007,
+    "state":"VA",
+    "FIPS":51007,
     "number":1162,
     "rate":12,
-    "state":"VA",
-    "name":"Amelia County"
+    "population":12745,
+    "county":"Amelia County"
   },
   {
-    "id":51009,
+    "state":"VA",
+    "FIPS":51009,
     "number":3556,
     "rate":14.4,
-    "state":"VA",
-    "name":"Amherst County"
+    "population":32445,
+    "county":"Amherst County"
   },
   {
-    "id":51011,
+    "state":"VA",
+    "FIPS":51011,
     "number":1260,
     "rate":10.9,
-    "state":"VA",
-    "name":"Appomattox County"
+    "population":15144,
+    "county":"Appomattox County"
   },
   {
-    "id":51013,
+    "state":"VA",
+    "FIPS":51013,
     "number":8891,
     "rate":4.9,
-    "state":"VA",
-    "name":"Arlington County"
+    "population":221947,
+    "county":"Arlington County"
   },
   {
-    "id":51015,
+    "state":"VA",
+    "FIPS":51015,
     "number":6259,
     "rate":11,
-    "state":"VA",
-    "name":"Augusta County"
+    "population":73603,
+    "county":"Augusta County"
   },
   {
-    "id":51017,
+    "state":"VA",
+    "FIPS":51017,
     "number":429,
     "rate":11.3,
-    "state":"VA",
-    "name":"Bath County"
+    "population":4655,
+    "county":"Bath County"
   },
   {
-    "id":51515,
+    "state":"",
+    "FIPS":51515,
     "number":571,
     "rate":12.4,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":51019,
+    "state":"VA",
+    "FIPS":51019,
     "number":5818,
     "rate":10.9,
-    "state":"VA",
-    "name":"Bedford County"
+    "population":75431,
+    "county":"Bedford County"
   },
   {
-    "id":51021,
+    "state":"VA",
+    "FIPS":51021,
     "number":621,
     "rate":11.4,
-    "state":"VA",
-    "name":"Bland County"
+    "population":6710,
+    "county":"Bland County"
   },
   {
-    "id":51023,
+    "state":"VA",
+    "FIPS":51023,
     "number":2888,
     "rate":11.4,
-    "state":"VA",
-    "name":"Botetourt County"
+    "population":33157,
+    "county":"Botetourt County"
   },
   {
-    "id":51520,
+    "state":"VA",
+    "FIPS":51520,
     "number":1577,
     "rate":11.5,
-    "state":"VA",
-    "name":"Bristol City"
+    "population":17724,
+    "county":"Bristol City"
   },
   {
-    "id":51025,
+    "state":"VA",
+    "FIPS":51025,
     "number":1654,
     "rate":12.3,
-    "state":"VA",
-    "name":"Brunswick County"
+    "population":17063,
+    "county":"Brunswick County"
   },
   {
-    "id":51027,
+    "state":"VA",
+    "FIPS":51027,
     "number":2360,
     "rate":12.4,
-    "state":"VA",
-    "name":"Buchanan County"
+    "population":23837,
+    "county":"Buchanan County"
   },
   {
-    "id":51029,
+    "state":"VA",
+    "FIPS":51029,
     "number":1960,
     "rate":14.5,
-    "state":"VA",
-    "name":"Buckingham County"
+    "population":17043,
+    "county":"Buckingham County"
   },
   {
-    "id":51530,
+    "state":"VA",
+    "FIPS":51530,
     "number":513,
     "rate":10.3,
-    "state":"VA",
-    "name":"Buena Vista City"
+    "population":6768,
+    "county":"Buena Vista City"
   },
   {
-    "id":51031,
+    "state":"VA",
+    "FIPS":51031,
     "number":4439,
     "rate":10.5,
-    "state":"VA",
-    "name":"Campbell County"
+    "population":54726,
+    "county":"Campbell County"
   },
   {
-    "id":51033,
+    "state":"VA",
+    "FIPS":51033,
     "number":2388,
     "rate":11.1,
-    "state":"VA",
-    "name":"Caroline County"
+    "population":28939,
+    "county":"Caroline County"
   },
   {
-    "id":51035,
+    "state":"VA",
+    "FIPS":51035,
     "number":2640,
     "rate":11.3,
-    "state":"VA",
-    "name":"Carroll County"
+    "population":29873,
+    "county":"Carroll County"
   },
   {
-    "id":51036,
+    "state":"VA",
+    "FIPS":51036,
     "number":875,
     "rate":15,
-    "state":"VA",
-    "name":"Charles City County"
+    "population":7148,
+    "county":"Charles City County"
   },
   {
-    "id":51037,
+    "state":"VA",
+    "FIPS":51037,
     "number":1139,
     "rate":12.1,
-    "state":"VA",
-    "name":"Charlotte County"
+    "population":12411,
+    "county":"Charlotte County"
   },
   {
-    "id":51540,
+    "state":"VA",
+    "FIPS":51540,
     "number":2916,
     "rate":8.1,
-    "state":"VA",
-    "name":"Charlottesville City"
+    "population":44521,
+    "county":"Charlottesville City"
   },
   {
-    "id":51550,
+    "state":"VA",
+    "FIPS":51550,
     "number":17920,
     "rate":10.8,
-    "state":"VA",
-    "name":"Chesapeake City"
+    "population":228188,
+    "county":"Chesapeake City"
   },
   {
-    "id":51041,
+    "state":"VA",
+    "FIPS":51041,
     "number":21135,
     "rate":9.1,
-    "state":"VA",
-    "name":"Chesterfield County"
+    "population":323850,
+    "county":"Chesterfield County"
   },
   {
-    "id":51043,
+    "state":"VA",
+    "FIPS":51043,
     "number":1192,
     "rate":11,
-    "state":"VA",
-    "name":"Clarke County"
+    "population":14316,
+    "county":"Clarke County"
   },
   {
-    "id":51570,
+    "state":"VA",
+    "FIPS":51570,
     "number":1482,
     "rate":11.3,
-    "state":"VA",
-    "name":"Colonial Heights City"
+    "population":17510,
+    "county":"Colonial Heights City"
   },
   {
-    "id":51580,
+    "state":"",
+    "FIPS":51580,
     "number":500,
     "rate":11.3,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":51045,
+    "state":"VA",
+    "FIPS":51045,
     "number":448,
     "rate":11,
-    "state":"VA",
-    "name":"Craig County"
+    "population":5198,
+    "county":"Craig County"
   },
   {
-    "id":51047,
+    "state":"VA",
+    "FIPS":51047,
     "number":3835,
     "rate":11.2,
-    "state":"VA",
-    "name":"Culpeper County"
+    "population":47767,
+    "county":"Culpeper County"
   },
   {
-    "id":51049,
+    "state":"VA",
+    "FIPS":51049,
     "number":975,
     "rate":13,
-    "state":"VA",
-    "name":"Cumberland County"
+    "population":9851,
+    "county":"Cumberland County"
   },
   {
-    "id":51590,
+    "state":"VA",
+    "FIPS":51590,
     "number":4588,
     "rate":14.1,
-    "state":"VA",
-    "name":"Danville City"
+    "population":42786,
+    "county":"Danville City"
   },
   {
-    "id":51051,
+    "state":"VA",
+    "FIPS":51051,
     "number":1340,
     "rate":11,
-    "state":"VA",
-    "name":"Dickenson County"
+    "population":15668,
+    "county":"Dickenson County"
   },
   {
-    "id":51053,
+    "state":"VA",
+    "FIPS":51053,
     "number":2777,
     "rate":13,
-    "state":"VA",
-    "name":"Dinwiddie County"
+    "population":28100,
+    "county":"Dinwiddie County"
   },
   {
-    "id":51595,
+    "state":"VA",
+    "FIPS":51595,
     "number":561,
     "rate":13.5,
-    "state":"VA",
-    "name":"Emporia City"
+    "population":5704,
+    "county":"Emporia City"
   },
   {
-    "id":51057,
+    "state":"VA",
+    "FIPS":51057,
     "number":1186,
     "rate":13.8,
-    "state":"VA",
-    "name":"Essex County"
+    "population":11167,
+    "county":"Essex County"
   },
   {
-    "id":51600,
+    "state":"VA",
+    "FIPS":51600,
     "number":1407,
     "rate":7.9,
-    "state":"VA",
-    "name":"Fairfax City"
+    "population":23461,
+    "county":"Fairfax City"
   },
   {
-    "id":51059,
+    "state":"VA",
+    "FIPS":51059,
     "number":53869,
     "rate":6.6,
-    "state":"VA",
-    "name":"Fairfax County"
+    "population":1121050,
+    "county":"Fairfax County"
   },
   {
-    "id":51610,
+    "state":"VA",
+    "FIPS":51610,
     "number":1008,
     "rate":10.6,
-    "state":"VA",
-    "name":"Falls Church City"
+    "population":13136,
+    "county":"Falls Church City"
   },
   {
-    "id":51061,
+    "state":"VA",
+    "FIPS":51061,
     "number":5126,
     "rate":10.5,
-    "state":"VA",
-    "name":"Fauquier County"
+    "population":66603,
+    "county":"Fauquier County"
   },
   {
-    "id":51063,
+    "state":"VA",
+    "FIPS":51063,
     "number":1217,
     "rate":10.3,
-    "state":"VA",
-    "name":"Floyd County"
+    "population":15426,
+    "county":"Floyd County"
   },
   {
-    "id":51065,
+    "state":"VA",
+    "FIPS":51065,
     "number":2170,
     "rate":11,
-    "state":"VA",
-    "name":"Fluvanna County"
+    "population":25943,
+    "county":"Fluvanna County"
   },
   {
-    "id":51620,
+    "state":"VA",
+    "FIPS":51620,
     "number":910,
     "rate":14.7,
-    "state":"VA",
-    "name":"Franklin City"
+    "population":8494,
+    "county":"Franklin City"
   },
   {
-    "id":51067,
+    "state":"VA",
+    "FIPS":51067,
     "number":5330,
     "rate":12.3,
-    "state":"VA",
-    "name":"Franklin County"
+    "population":56392,
+    "county":"Franklin County"
   },
   {
-    "id":51069,
+    "state":"VA",
+    "FIPS":51069,
     "number":5560,
     "rate":9.4,
-    "state":"VA",
-    "name":"Frederick County"
+    "population":80161,
+    "county":"Frederick County"
   },
   {
-    "id":51630,
+    "state":"VA",
+    "FIPS":51630,
     "number":1819,
     "rate":9.1,
-    "state":"VA",
-    "name":"Fredericksburg City"
+    "population":27113,
+    "county":"Fredericksburg City"
   },
   {
-    "id":51640,
+    "state":"VA",
+    "FIPS":51640,
     "number":595,
     "rate":11.5,
-    "state":"VA",
-    "name":"Galax City"
+    "population":6921,
+    "county":"Galax City"
   },
   {
-    "id":51071,
+    "state":"VA",
+    "FIPS":51071,
     "number":1480,
     "rate":11.3,
-    "state":"VA",
-    "name":"Giles County"
+    "population":16968,
+    "county":"Giles County"
   },
   {
-    "id":51073,
+    "state":"VA",
+    "FIPS":51073,
     "number":3630,
     "rate":12.8,
-    "state":"VA",
-    "name":"Gloucester County"
+    "population":36894,
+    "county":"Gloucester County"
   },
   {
-    "id":51075,
+    "state":"VA",
+    "FIPS":51075,
     "number":1957,
     "rate":11.7,
-    "state":"VA",
-    "name":"Goochland County"
+    "population":21350,
+    "county":"Goochland County"
   },
   {
-    "id":51077,
+    "state":"VA",
+    "FIPS":51077,
     "number":1395,
     "rate":11.5,
-    "state":"VA",
-    "name":"Grayson County"
+    "population":15179,
+    "county":"Grayson County"
   },
   {
-    "id":51079,
+    "state":"VA",
+    "FIPS":51079,
     "number":1352,
     "rate":9.8,
-    "state":"VA",
-    "name":"Greene County"
+    "population":18807,
+    "county":"Greene County"
   },
   {
-    "id":51081,
+    "state":"VA",
+    "FIPS":51081,
     "number":1335,
     "rate":13.9,
-    "state":"VA",
-    "name":"Greensville County"
+    "population":11824,
+    "county":"Greensville County"
   },
   {
-    "id":51083,
+    "state":"VA",
+    "FIPS":51083,
     "number":4130,
     "rate":15.1,
-    "state":"VA",
-    "name":"Halifax County"
+    "population":35774,
+    "county":"Halifax County"
   },
   {
-    "id":51650,
+    "state":"VA",
+    "FIPS":51650,
     "number":12650,
     "rate":12.4,
-    "state":"VA",
-    "name":"Hampton City"
+    "population":136843,
+    "county":"Hampton City"
   },
   {
-    "id":51085,
+    "state":"VA",
+    "FIPS":51085,
     "number":7096,
     "rate":9.6,
-    "state":"VA",
-    "name":"Hanover County"
+    "population":100432,
+    "county":"Hanover County"
   },
   {
-    "id":51660,
+    "state":"VA",
+    "FIPS":51660,
     "number":2596,
     "rate":7,
-    "state":"VA",
-    "name":"Harrisonburg City"
+    "population":51224,
+    "county":"Harrisonburg City"
   },
   {
-    "id":51087,
+    "state":"VA",
+    "FIPS":51087,
     "number":22726,
     "rate":9.7,
-    "state":"VA",
-    "name":"Henrico County"
+    "population":315431,
+    "county":"Henrico County"
   },
   {
-    "id":51089,
+    "state":"VA",
+    "FIPS":51089,
     "number":6129,
     "rate":14.9,
-    "state":"VA",
-    "name":"Henry County"
+    "population":52824,
+    "county":"Henry County"
   },
   {
-    "id":51670,
+    "state":"VA",
+    "FIPS":51670,
     "number":2281,
     "rate":14,
-    "state":"VA",
-    "name":"Hopewell City"
+    "population":22322,
+    "county":"Hopewell City"
   },
   {
-    "id":51091,
+    "state":"VA",
+    "FIPS":51091,
     "number":243,
     "rate":12.8,
-    "state":"VA",
-    "name":"Highland County"
+    "population":2249,
+    "county":"Highland County"
   },
   {
-    "id":51093,
+    "state":"VA",
+    "FIPS":51093,
     "number":3452,
     "rate":12.8,
-    "state":"VA",
-    "name":"Isle of Wight County"
+    "population":35380,
+    "county":"Isle of Wight County"
   },
   {
-    "id":51095,
+    "state":"VA",
+    "FIPS":51095,
     "number":5747,
     "rate":10.9,
-    "state":"VA",
-    "name":"James City County"
+    "population":69532,
+    "county":"James City County"
   },
   {
-    "id":51097,
+    "state":"VA",
+    "FIPS":51097,
     "number":696,
     "rate":12.6,
-    "state":"VA",
-    "name":"King and Queen County"
+    "population":7068,
+    "county":"King and Queen County"
   },
   {
-    "id":51099,
+    "state":"VA",
+    "FIPS":51099,
     "number":1777,
     "rate":10.3,
-    "state":"VA",
-    "name":"King George County"
+    "population":24608,
+    "county":"King George County"
   },
   {
-    "id":51101,
+    "state":"VA",
+    "FIPS":51101,
     "number":1283,
     "rate":10.9,
-    "state":"VA",
-    "name":"King William County"
+    "population":15977,
+    "county":"King William County"
   },
   {
-    "id":51103,
+    "state":"VA",
+    "FIPS":51103,
     "number":1277,
     "rate":13.7,
-    "state":"VA",
-    "name":"Lancaster County"
+    "population":11230,
+    "county":"Lancaster County"
   },
   {
-    "id":51105,
+    "state":"VA",
+    "FIPS":51105,
     "number":2247,
     "rate":11.2,
-    "state":"VA",
-    "name":"Lee County"
+    "population":25539,
+    "county":"Lee County"
   },
   {
-    "id":51678,
+    "state":"",
+    "FIPS":51678,
     "number":442,
     "rate":8.8,
-    "state":"",
-    "name":""
+    "population":null,
+    "county":""
   },
   {
-    "id":51107,
+    "state":"VA",
+    "FIPS":51107,
     "number":16152,
     "rate":7.1,
-    "state":"VA",
-    "name":"Loudoun County"
+    "population":338165,
+    "county":"Loudoun County"
   },
   {
-    "id":51109,
+    "state":"VA",
+    "FIPS":51109,
     "number":2710,
     "rate":10.6,
-    "state":"VA",
-    "name":"Louisa County"
+    "population":33517,
+    "county":"Louisa County"
   },
   {
-    "id":51111,
+    "state":"VA",
+    "FIPS":51111,
     "number":1302,
     "rate":13,
-    "state":"VA",
-    "name":"Lunenburg County"
+    "population":12599,
+    "county":"Lunenburg County"
   },
   {
-    "id":51680,
+    "state":"VA",
+    "FIPS":51680,
     "number":6365,
     "rate":11.3,
-    "state":"VA",
-    "name":"Lynchburg City"
+    "population":77788,
+    "county":"Lynchburg City"
   },
   {
-    "id":51113,
+    "state":"VA",
+    "FIPS":51113,
     "number":1210,
     "rate":12,
-    "state":"VA",
-    "name":"Madison County"
+    "population":13207,
+    "county":"Madison County"
   },
   {
-    "id":51683,
+    "state":"VA",
+    "FIPS":51683,
     "number":2408,
     "rate":8.5,
-    "state":"VA",
-    "name":"Manassas City"
+    "population":40742,
+    "county":"Manassas City"
   },
   {
-    "id":51685,
+    "state":"VA",
+    "FIPS":51685,
     "number":979,
     "rate":8.9,
-    "state":"VA",
-    "name":"Manassas Park City"
+    "population":15079,
+    "county":"Manassas Park City"
   },
   {
-    "id":51690,
+    "state":"VA",
+    "FIPS":51690,
     "number":1401,
     "rate":13.5,
-    "state":"VA",
-    "name":"Martinsville City"
+    "population":13747,
+    "county":"Martinsville City"
   },
   {
-    "id":51115,
+    "state":"VA",
+    "FIPS":51115,
     "number":920,
     "rate":12.8,
-    "state":"VA",
-    "name":"Mathews County"
+    "population":8921,
+    "county":"Mathews County"
   },
   {
-    "id":51117,
+    "state":"VA",
+    "FIPS":51117,
     "number":3291,
     "rate":13.2,
-    "state":"VA",
-    "name":"Mecklenburg County"
+    "population":31758,
+    "county":"Mecklenburg County"
   },
   {
-    "id":51119,
+    "state":"VA",
+    "FIPS":51119,
     "number":1145,
     "rate":12.8,
-    "state":"VA",
-    "name":"Middlesex County"
+    "population":10827,
+    "county":"Middlesex County"
   },
   {
-    "id":51121,
+    "state":"VA",
+    "FIPS":51121,
     "number":5229,
     "rate":7.2,
-    "state":"VA",
-    "name":"Montgomery County"
+    "population":95651,
+    "county":"Montgomery County"
   },
   {
-    "id":51125,
+    "state":"VA",
+    "FIPS":51125,
     "number":1517,
     "rate":12.9,
-    "state":"VA",
-    "name":"Nelson County"
+    "population":14807,
+    "county":"Nelson County"
   },
   {
-    "id":51127,
+    "state":"VA",
+    "FIPS":51127,
     "number":1564,
     "rate":10.7,
-    "state":"VA",
-    "name":"New Kent County"
+    "population":19132,
+    "county":"New Kent County"
   },
   {
-    "id":51700,
+    "state":"VA",
+    "FIPS":51700,
     "number":17783,
     "rate":13.5,
-    "state":"VA",
-    "name":"Newport News City"
+    "population":180487,
+    "county":"Newport News City"
   },
   {
-    "id":51710,
+    "state":"VA",
+    "FIPS":51710,
     "number":18520,
     "rate":10,
-    "state":"VA",
-    "name":"Norfolk City"
+    "population":246150,
+    "county":"Norfolk City"
   },
   {
-    "id":51131,
+    "state":"VA",
+    "FIPS":51131,
     "number":1523,
     "rate":15.8,
-    "state":"VA",
-    "name":"Northampton County"
+    "population":12237,
+    "county":"Northampton County"
   },
   {
-    "id":51133,
+    "state":"VA",
+    "FIPS":51133,
     "number":1425,
     "rate":14,
-    "state":"VA",
-    "name":"Northumberland County"
+    "population":12354,
+    "county":"Northumberland County"
   },
   {
-    "id":51720,
+    "state":"VA",
+    "FIPS":51720,
     "number":318,
     "rate":10.4,
-    "state":"VA",
-    "name":"Norton City"
+    "population":4049,
+    "county":"Norton City"
   },
   {
-    "id":51135,
+    "state":"VA",
+    "FIPS":51135,
     "number":1690,
     "rate":13.6,
-    "state":"VA",
-    "name":"Nottoway County"
+    "population":15776,
+    "county":"Nottoway County"
   },
   {
-    "id":51137,
+    "state":"VA",
+    "FIPS":51137,
     "number":2749,
     "rate":10.7,
-    "state":"VA",
-    "name":"Orange County"
+    "population":34187,
+    "county":"Orange County"
   },
   {
-    "id":51139,
+    "state":"VA",
+    "FIPS":51139,
     "number":2036,
     "rate":11,
-    "state":"VA",
-    "name":"Page County"
+    "population":23872,
+    "county":"Page County"
   },
   {
-    "id":51141,
+    "state":"VA",
+    "FIPS":51141,
     "number":1839,
     "rate":12.5,
-    "state":"VA",
-    "name":"Patrick County"
+    "population":18403,
+    "county":"Patrick County"
   },
   {
-    "id":51730,
+    "state":"VA",
+    "FIPS":51730,
     "number":3909,
     "rate":15.9,
-    "state":"VA",
-    "name":"Petersburg City"
+    "population":32167,
+    "county":"Petersburg City"
   },
   {
-    "id":51143,
+    "state":"VA",
+    "FIPS":51143,
     "number":6821,
     "rate":14,
-    "state":"VA",
-    "name":"Pittsylvania County"
+    "population":62898,
+    "county":"Pittsylvania County"
   },
   {
-    "id":51735,
+    "state":"VA",
+    "FIPS":51735,
     "number":999,
     "rate":11.1,
-    "state":"VA",
-    "name":"Poquoson City"
+    "population":12134,
+    "county":"Poquoson City"
   },
   {
-    "id":51740,
+    "state":"VA",
+    "FIPS":51740,
     "number":10402,
     "rate":14.5,
-    "state":"VA",
-    "name":"Portsmouth City"
+    "population":96546,
+    "county":"Portsmouth City"
   },
   {
-    "id":51145,
+    "state":"VA",
+    "FIPS":51145,
     "number":2372,
     "rate":11,
-    "state":"VA",
-    "name":"Powhatan County"
+    "population":28116,
+    "county":"Powhatan County"
   },
   {
-    "id":51147,
+    "state":"VA",
+    "FIPS":51147,
     "number":2006,
     "rate":11.7,
-    "state":"VA",
-    "name":"Prince Edward County"
+    "population":23211,
+    "county":"Prince Edward County"
   },
   {
-    "id":51149,
+    "state":"VA",
+    "FIPS":51149,
     "number":3710,
     "rate":13.2,
-    "state":"VA",
-    "name":"Prince George County"
+    "population":37036,
+    "county":"Prince George County"
   },
   {
-    "id":51153,
+    "state":"VA",
+    "FIPS":51153,
     "number":23035,
     "rate":7.8,
-    "state":"VA",
-    "name":"Prince William County"
+    "population":431226,
+    "county":"Prince William County"
   },
   {
-    "id":51155,
+    "state":"VA",
+    "FIPS":51155,
     "number":3303,
     "rate":12,
-    "state":"VA",
-    "name":"Pulaski County"
+    "population":34747,
+    "county":"Pulaski County"
   },
   {
-    "id":51750,
+    "state":"VA",
+    "FIPS":51750,
     "number":966,
     "rate":7.9,
-    "state":"VA",
-    "name":"Radford City"
+    "population":16766,
+    "county":"Radford City"
   },
   {
-    "id":51157,
+    "state":"VA",
+    "FIPS":51157,
     "number":692,
     "rate":11.7,
-    "state":"VA",
-    "name":"Rappahannock County"
+    "population":7430,
+    "county":"Rappahannock County"
   },
   {
-    "id":51760,
+    "state":"VA",
+    "FIPS":51760,
     "number":17298,
     "rate":10.6,
-    "state":"VA",
-    "name":"Richmond City"
+    "population":211526,
+    "county":"Richmond City"
   },
   {
-    "id":51159,
+    "state":"VA",
+    "FIPS":51159,
     "number":930,
     "rate":12.6,
-    "state":"VA",
-    "name":"Richmond County"
+    "population":9052,
+    "county":"Richmond County"
   },
   {
-    "id":51770,
+    "state":"VA",
+    "FIPS":51770,
     "number":8460,
     "rate":11.4,
-    "state":"VA",
-    "name":"Roanoke City"
+    "population":97879,
+    "county":"Roanoke City"
   },
   {
-    "id":51161,
+    "state":"VA",
+    "FIPS":51161,
     "number":8627,
     "rate":12.1,
-    "state":"VA",
-    "name":"Roanoke County"
+    "population":93031,
+    "county":"Roanoke County"
   },
   {
-    "id":51163,
+    "state":"VA",
+    "FIPS":51163,
     "number":2237,
     "rate":12.5,
-    "state":"VA",
-    "name":"Rockbridge County"
+    "population":22392,
+    "county":"Rockbridge County"
   },
   {
-    "id":51165,
+    "state":"VA",
+    "FIPS":51165,
     "number":6207,
     "rate":10.8,
-    "state":"VA",
-    "name":"Rockingham County"
+    "population":77375,
+    "county":"Rockingham County"
   },
   {
-    "id":51167,
+    "state":"VA",
+    "FIPS":51167,
     "number":2727,
     "rate":12.3,
-    "state":"VA",
-    "name":"Russell County"
+    "population":28426,
+    "county":"Russell County"
   },
   {
-    "id":51775,
+    "state":"VA",
+    "FIPS":51775,
     "number":1878,
     "rate":9.9,
-    "state":"VA",
-    "name":"Salem City"
+    "population":25053,
+    "county":"Salem City"
   },
   {
-    "id":51169,
+    "state":"VA",
+    "FIPS":51169,
     "number":2432,
     "rate":13.5,
-    "state":"VA",
-    "name":"Scott County"
+    "population":22801,
+    "county":"Scott County"
   },
   {
-    "id":51173,
+    "state":"VA",
+    "FIPS":51173,
     "number":2558,
     "rate":10.4,
-    "state":"VA",
-    "name":"Smyth County"
+    "population":31863,
+    "county":"Smyth County"
   },
   {
-    "id":51171,
+    "state":"VA",
+    "FIPS":51171,
     "number":3934,
     "rate":12.1,
-    "state":"VA",
-    "name":"Shenandoah County"
+    "population":42641,
+    "county":"Shenandoah County"
   },
   {
-    "id":51175,
+    "state":"VA",
+    "FIPS":51175,
     "number":2040,
     "rate":14.3,
-    "state":"VA",
-    "name":"Southampton County"
+    "population":18417,
+    "county":"Southampton County"
   },
   {
-    "id":51177,
+    "state":"VA",
+    "FIPS":51177,
     "number":11106,
     "rate":12.5,
-    "state":"VA",
-    "name":"Spotsylvania County"
+    "population":126137,
+    "county":"Spotsylvania County"
   },
   {
-    "id":51179,
+    "state":"VA",
+    "FIPS":51179,
     "number":7410,
     "rate":7.9,
-    "state":"VA",
-    "name":"Stafford County"
+    "population":134374,
+    "county":"Stafford County"
   },
   {
-    "id":51790,
+    "state":"VA",
+    "FIPS":51790,
     "number":2113,
     "rate":11.3,
-    "state":"VA",
-    "name":"Staunton City"
+    "population":23921,
+    "county":"Staunton City"
   },
   {
-    "id":51800,
+    "state":"VA",
+    "FIPS":51800,
     "number":6718,
     "rate":10.9,
-    "state":"VA",
-    "name":"Suffolk City"
+    "population":85183,
+    "county":"Suffolk City"
   },
   {
-    "id":51181,
+    "state":"VA",
+    "FIPS":51181,
     "number":782,
     "rate":14.6,
-    "state":"VA",
-    "name":"Surry County"
+    "population":6840,
+    "county":"Surry County"
   },
   {
-    "id":51183,
+    "state":"VA",
+    "FIPS":51183,
     "number":1441,
     "rate":14.8,
-    "state":"VA",
-    "name":"Sussex County"
+    "population":11941,
+    "county":"Sussex County"
   },
   {
-    "id":51185,
+    "state":"VA",
+    "FIPS":51185,
     "number":5044,
     "rate":14.6,
-    "state":"VA",
-    "name":"Tazewell County"
+    "population":44248,
+    "county":"Tazewell County"
   },
   {
-    "id":51810,
+    "state":"VA",
+    "FIPS":51810,
     "number":28174,
     "rate":8.5,
-    "state":"VA",
-    "name":"Virginia Beach City"
+    "population":445769,
+    "county":"Virginia Beach City"
   },
   {
-    "id":51187,
+    "state":"VA",
+    "FIPS":51187,
     "number":2811,
     "rate":10,
-    "state":"VA",
-    "name":"Warren County"
+    "population":37963,
+    "county":"Warren County"
   },
   {
-    "id":51191,
+    "state":"VA",
+    "FIPS":51191,
     "number":5601,
     "rate":13.1,
-    "state":"VA",
-    "name":"Washington County"
+    "population":55073,
+    "county":"Washington County"
   },
   {
-    "id":51820,
+    "state":"VA",
+    "FIPS":51820,
     "number":1677,
     "rate":10.7,
-    "state":"VA",
-    "name":"Waynesboro City"
+    "population":21105,
+    "county":"Waynesboro City"
   },
   {
-    "id":51193,
+    "state":"VA",
+    "FIPS":51193,
     "number":1849,
     "rate":13.4,
-    "state":"VA",
-    "name":"Westmoreland County"
+    "population":17497,
+    "county":"Westmoreland County"
   },
   {
-    "id":51830,
+    "state":"VA",
+    "FIPS":51830,
     "number":1093,
     "rate":9.6,
-    "state":"VA",
-    "name":"Williamsburg City"
+    "population":14617,
+    "county":"Williamsburg City"
   },
   {
-    "id":51840,
+    "state":"VA",
+    "FIPS":51840,
     "number":1945,
     "rate":9.8,
-    "state":"VA",
-    "name":"Winchester City"
+    "population":27178,
+    "county":"Winchester City"
   },
   {
-    "id":51195,
+    "state":"VA",
+    "FIPS":51195,
     "number":4323,
     "rate":13.8,
-    "state":"VA",
-    "name":"Wise County"
+    "population":40828,
+    "county":"Wise County"
   },
   {
-    "id":51197,
+    "state":"VA",
+    "FIPS":51197,
     "number":2750,
     "rate":12.1,
-    "state":"VA",
-    "name":"Wythe County"
+    "population":29351,
+    "county":"Wythe County"
   },
   {
-    "id":51199,
+    "state":"VA",
+    "FIPS":51199,
     "number":4590,
     "rate":9.6,
-    "state":"VA",
-    "name":"York County"
+    "population":65746,
+    "county":"York County"
   },
   {
-    "id":50001,
+    "state":"VT",
+    "FIPS":50001,
     "number":2073,
     "rate":7.4,
-    "state":"VT",
-    "name":"Addison County"
+    "population":36837,
+    "county":"Addison County"
   },
   {
-    "id":50003,
+    "state":"VT",
+    "FIPS":50003,
     "number":2634,
     "rate":9.3,
-    "state":"VT",
-    "name":"Bennington County"
+    "population":36669,
+    "county":"Bennington County"
   },
   {
-    "id":50005,
+    "state":"VT",
+    "FIPS":50005,
     "number":1857,
     "rate":7.9,
-    "state":"VT",
-    "name":"Caledonia County"
+    "population":31095,
+    "county":"Caledonia County"
   },
   {
-    "id":50007,
+    "state":"VT",
+    "FIPS":50007,
     "number":7497,
     "rate":6.3,
-    "state":"VT",
-    "name":"Chittenden County"
+    "population":158641,
+    "county":"Chittenden County"
   },
   {
-    "id":50009,
+    "state":"VT",
+    "FIPS":50009,
     "number":509,
     "rate":10.2,
-    "state":"VT",
-    "name":"Essex County"
+    "population":6216,
+    "county":"Essex County"
   },
   {
-    "id":50011,
+    "state":"VT",
+    "FIPS":50011,
     "number":2887,
     "rate":8.1,
-    "state":"VT",
-    "name":"Franklin County"
+    "population":48253,
+    "county":"Franklin County"
   },
   {
-    "id":50013,
+    "state":"VT",
+    "FIPS":50013,
     "number":416,
     "rate":7.6,
-    "state":"VT",
-    "name":"Grand Isle County"
+    "population":6980,
+    "county":"Grand Isle County"
   },
   {
-    "id":50015,
+    "state":"VT",
+    "FIPS":50015,
     "number":1357,
     "rate":7.3,
-    "state":"VT",
-    "name":"Lamoille County"
+    "population":24905,
+    "county":"Lamoille County"
   },
   {
-    "id":50017,
+    "state":"VT",
+    "FIPS":50017,
     "number":1620,
     "rate":7.3,
-    "state":"VT",
-    "name":"Orange County"
+    "population":28933,
+    "county":"Orange County"
   },
   {
-    "id":50019,
+    "state":"VT",
+    "FIPS":50019,
     "number":1850,
     "rate":8.8,
-    "state":"VT",
-    "name":"Orleans County"
+    "population":27159,
+    "county":"Orleans County"
   },
   {
-    "id":50021,
+    "state":"VT",
+    "FIPS":50021,
     "number":4543,
     "rate":9.5,
-    "state":"VT",
-    "name":"Rutland County"
+    "population":60875,
+    "county":"Rutland County"
   },
   {
-    "id":50023,
+    "state":"VT",
+    "FIPS":50023,
     "number":3761,
     "rate":8.3,
-    "state":"VT",
-    "name":"Washington County"
+    "population":59351,
+    "county":"Washington County"
   },
   {
-    "id":50025,
+    "state":"VT",
+    "FIPS":50025,
     "number":2671,
     "rate":7.8,
-    "state":"VT",
-    "name":"Windham County"
+    "population":43997,
+    "county":"Windham County"
   },
   {
-    "id":50027,
+    "state":"VT",
+    "FIPS":50027,
     "number":3569,
     "rate":8.1,
-    "state":"VT",
-    "name":"Windsor County"
+    "population":56227,
+    "county":"Windsor County"
   },
   {
-    "id":53001,
+    "state":"WA",
+    "FIPS":53001,
     "number":1213,
     "rate":10.4,
-    "state":"WA",
-    "name":"Adams County"
+    "population":18914,
+    "county":"Adams County"
   },
   {
-    "id":53003,
+    "state":"WA",
+    "FIPS":53003,
     "number":2032,
     "rate":12.1,
-    "state":"WA",
-    "name":"Asotin County"
+    "population":21873,
+    "county":"Asotin County"
   },
   {
-    "id":53005,
+    "state":"WA",
+    "FIPS":53005,
     "number":12447,
     "rate":9.7,
-    "state":"WA",
-    "name":"Benton County"
+    "population":182396,
+    "county":"Benton County"
   },
   {
-    "id":53007,
+    "state":"WA",
+    "FIPS":53007,
     "number":5056,
     "rate":9.4,
-    "state":"WA",
-    "name":"Chelan County"
+    "population":73670,
+    "county":"Chelan County"
   },
   {
-    "id":53009,
+    "state":"WA",
+    "FIPS":53009,
     "number":6555,
     "rate":11.4,
-    "state":"WA",
-    "name":"Clallam County"
+    "population":71848,
+    "county":"Clallam County"
   },
   {
-    "id":53011,
+    "state":"WA",
+    "FIPS":53011,
     "number":28236,
     "rate":9,
-    "state":"WA",
-    "name":"Clark County"
+    "population":437505,
+    "county":"Clark County"
   },
   {
-    "id":53013,
+    "state":"WA",
+    "FIPS":53013,
     "number":369,
     "rate":11.7,
-    "state":"WA",
-    "name":"Columbia County"
+    "population":4001,
+    "county":"Columbia County"
   },
   {
-    "id":53015,
+    "state":"WA",
+    "FIPS":53015,
     "number":8740,
     "rate":11.5,
-    "state":"WA",
-    "name":"Cowlitz County"
+    "population":101777,
+    "county":"Cowlitz County"
   },
   {
-    "id":53017,
+    "state":"WA",
+    "FIPS":53017,
     "number":2436,
     "rate":8.8,
-    "state":"WA",
-    "name":"Douglas County"
+    "population":39325,
+    "county":"Douglas County"
   },
   {
-    "id":53019,
+    "state":"WA",
+    "FIPS":53019,
     "number":607,
     "rate":10.1,
-    "state":"WA",
-    "name":"Ferry County"
+    "population":7719,
+    "county":"Ferry County"
   },
   {
-    "id":53021,
+    "state":"WA",
+    "FIPS":53021,
     "number":3930,
     "rate":7.2,
-    "state":"WA",
-    "name":"Franklin County"
+    "population":85831,
+    "county":"Franklin County"
   },
   {
-    "id":53023,
+    "state":"WA",
+    "FIPS":53023,
     "number":259,
     "rate":14.8,
-    "state":"WA",
-    "name":"Garfield County"
+    "population":2225,
+    "county":"Garfield County"
   },
   {
-    "id":53025,
+    "state":"WA",
+    "FIPS":53025,
     "number":5163,
     "rate":8.5,
-    "state":"WA",
-    "name":"Grant County"
+    "population":91688,
+    "county":"Grant County"
   },
   {
-    "id":53027,
+    "state":"WA",
+    "FIPS":53027,
     "number":7262,
     "rate":13.2,
-    "state":"WA",
-    "name":"Grays Harbor County"
+    "population":71705,
+    "county":"Grays Harbor County"
   },
   {
-    "id":53029,
+    "state":"WA",
+    "FIPS":53029,
     "number":6051,
     "rate":9.8,
-    "state":"WA",
-    "name":"Island County"
+    "population":79230,
+    "county":"Island County"
   },
   {
-    "id":53031,
+    "state":"WA",
+    "FIPS":53031,
     "number":2551,
     "rate":10.1,
-    "state":"WA",
-    "name":"Jefferson County"
+    "population":29823,
+    "county":"Jefferson County"
   },
   {
-    "id":53033,
+    "state":"WA",
+    "FIPS":53033,
     "number":107296,
     "rate":7,
-    "state":"WA",
-    "name":"King County"
+    "population":2008526,
+    "county":"King County"
   },
   {
-    "id":53035,
+    "state":"WA",
+    "FIPS":53035,
     "number":16486,
     "rate":8.5,
-    "state":"WA",
-    "name":"Kitsap County"
+    "population":254659,
+    "county":"Kitsap County"
   },
   {
-    "id":53037,
+    "state":"WA",
+    "FIPS":53037,
     "number":2230,
     "rate":7,
-    "state":"WA",
-    "name":"Kittitas County"
+    "population":41638,
+    "county":"Kittitas County"
   },
   {
-    "id":53039,
+    "state":"WA",
+    "FIPS":53039,
     "number":1597,
     "rate":10.1,
-    "state":"WA",
-    "name":"Klickitat County"
+    "population":20613,
+    "county":"Klickitat County"
   },
   {
-    "id":53041,
+    "state":"WA",
+    "FIPS":53041,
     "number":5827,
     "rate":10.3,
-    "state":"WA",
-    "name":"Lewis County"
+    "population":75532,
+    "county":"Lewis County"
   },
   {
-    "id":53043,
+    "state":"WA",
+    "FIPS":53043,
     "number":855,
     "rate":10.8,
-    "state":"WA",
-    "name":"Lincoln County"
+    "population":10437,
+    "county":"Lincoln County"
   },
   {
-    "id":53045,
+    "state":"WA",
+    "FIPS":53045,
     "number":4859,
     "rate":10.2,
-    "state":"WA",
-    "name":"Mason County"
+    "population":60751,
+    "county":"Mason County"
   },
   {
-    "id":53047,
+    "state":"WA",
+    "FIPS":53047,
     "number":2818,
     "rate":9.2,
-    "state":"WA",
-    "name":"Okanogan County"
+    "population":41218,
+    "county":"Okanogan County"
   },
   {
-    "id":53049,
+    "state":"WA",
+    "FIPS":53049,
     "number":2103,
     "rate":12.7,
-    "state":"WA",
-    "name":"Pacific County"
+    "population":20563,
+    "county":"Pacific County"
   },
   {
-    "id":53051,
+    "state":"WA",
+    "FIPS":53051,
     "number":1215,
     "rate":12.2,
-    "state":"WA",
-    "name":"Pend Oreille County"
+    "population":12998,
+    "county":"Pend Oreille County"
   },
   {
-    "id":53053,
+    "state":"WA",
+    "FIPS":53053,
     "number":58824,
     "rate":9.9,
-    "state":"WA",
-    "name":"Pierce County"
+    "population":812363,
+    "county":"Pierce County"
   },
   {
-    "id":53055,
+    "state":"WA",
+    "FIPS":53055,
     "number":1078,
     "rate":8.2,
-    "state":"WA",
-    "name":"San Juan County"
+    "population":15792,
+    "county":"San Juan County"
   },
   {
-    "id":53057,
+    "state":"WA",
+    "FIPS":53057,
     "number":7762,
     "rate":8.8,
-    "state":"WA",
-    "name":"Skagit County"
+    "population":118005,
+    "county":"Skagit County"
   },
   {
-    "id":53059,
+    "state":"WA",
+    "FIPS":53059,
     "number":724,
     "rate":8.5,
-    "state":"WA",
-    "name":"Skamania County"
+    "population":11151,
+    "county":"Skamania County"
   },
   {
-    "id":53061,
+    "state":"WA",
+    "FIPS":53061,
     "number":52523,
     "rate":9.7,
-    "state":"WA",
-    "name":"Snohomish County"
+    "population":732942,
+    "county":"Snohomish County"
   },
   {
-    "id":53063,
+    "state":"WA",
+    "FIPS":53063,
     "number":32133,
     "rate":9.1,
-    "state":"WA",
-    "name":"Spokane County"
+    "population":475704,
+    "county":"Spokane County"
   },
   {
-    "id":53065,
+    "state":"WA",
+    "FIPS":53065,
     "number":3422,
     "rate":10.5,
-    "state":"WA",
-    "name":"Stevens County"
+    "population":43610,
+    "county":"Stevens County"
   },
   {
-    "id":53067,
+    "state":"WA",
+    "FIPS":53067,
     "number":17905,
     "rate":9.2,
-    "state":"WA",
-    "name":"Thurston County"
+    "population":258713,
+    "county":"Thurston County"
   },
   {
-    "id":53069,
+    "state":"WA",
+    "FIPS":53069,
     "number":377,
     "rate":11.8,
-    "state":"WA",
-    "name":"Wahkiakum County"
+    "population":3984,
+    "county":"Wahkiakum County"
   },
   {
-    "id":53071,
+    "state":"WA",
+    "FIPS":53071,
     "number":4108,
     "rate":9.4,
-    "state":"WA",
-    "name":"Walla Walla County"
+    "population":59458,
+    "county":"Walla Walla County"
   },
   {
-    "id":53073,
+    "state":"WA",
+    "FIPS":53073,
     "number":13207,
     "rate":8.5,
-    "state":"WA",
-    "name":"Whatcom County"
+    "population":204827,
+    "county":"Whatcom County"
   },
   {
-    "id":53075,
+    "state":"WA",
+    "FIPS":53075,
     "number":2241,
     "rate":6.5,
-    "state":"WA",
-    "name":"Whitman County"
+    "population":46590,
+    "county":"Whitman County"
   },
   {
-    "id":53077,
+    "state":"WA",
+    "FIPS":53077,
     "number":15994,
     "rate":9.7,
-    "state":"WA",
-    "name":"Yakima County"
+    "population":246721,
+    "county":"Yakima County"
   },
   {
-    "id":55001,
+    "state":"WI",
+    "FIPS":55001,
     "number":1979,
     "rate":11.6,
-    "state":"WI",
-    "name":"Adams County"
+    "population":20528,
+    "county":"Adams County"
   },
   {
-    "id":55003,
+    "state":"WI",
+    "FIPS":55003,
     "number":1182,
     "rate":10,
-    "state":"WI",
-    "name":"Ashland County"
+    "population":15907,
+    "county":"Ashland County"
   },
   {
-    "id":55005,
+    "state":"WI",
+    "FIPS":55005,
     "number":3212,
     "rate":9.2,
-    "state":"WI",
-    "name":"Barron County"
+    "population":45777,
+    "county":"Barron County"
   },
   {
-    "id":55007,
+    "state":"WI",
+    "FIPS":55007,
     "number":1134,
     "rate":9.5,
-    "state":"WI",
-    "name":"Bayfield County"
+    "population":15090,
+    "county":"Bayfield County"
   },
   {
-    "id":55009,
+    "state":"WI",
+    "FIPS":55009,
     "number":18034,
     "rate":9.8,
-    "state":"WI",
-    "name":"Brown County"
+    "population":253014,
+    "county":"Brown County"
   },
   {
-    "id":55011,
+    "state":"WI",
+    "FIPS":55011,
     "number":923,
     "rate":9.1,
-    "state":"WI",
-    "name":"Buffalo County"
+    "population":13332,
+    "county":"Buffalo County"
   },
   {
-    "id":55013,
+    "state":"WI",
+    "FIPS":55013,
     "number":1287,
     "rate":10.6,
-    "state":"WI",
-    "name":"Burnett County"
+    "population":15357,
+    "county":"Burnett County"
   },
   {
-    "id":55015,
+    "state":"WI",
+    "FIPS":55015,
     "number":2714,
     "rate":7.6,
-    "state":"WI",
-    "name":"Calumet County"
+    "population":49704,
+    "county":"Calumet County"
   },
   {
-    "id":55017,
+    "state":"WI",
+    "FIPS":55017,
     "number":3479,
     "rate":7.4,
-    "state":"WI",
-    "name":"Chippewa County"
+    "population":63051,
+    "county":"Chippewa County"
   },
   {
-    "id":55019,
+    "state":"WI",
+    "FIPS":55019,
     "number":2199,
     "rate":9.3,
-    "state":"WI",
-    "name":"Clark County"
+    "population":34465,
+    "county":"Clark County"
   },
   {
-    "id":55021,
+    "state":"WI",
+    "FIPS":55021,
     "number":3783,
     "rate":8.9,
-    "state":"WI",
-    "name":"Columbia County"
+    "population":56461,
+    "county":"Columbia County"
   },
   {
-    "id":55023,
+    "state":"WI",
+    "FIPS":55023,
     "number":1183,
     "rate":9.4,
-    "state":"WI",
-    "name":"Crawford County"
+    "population":16531,
+    "county":"Crawford County"
   },
   {
-    "id":55025,
+    "state":"WI",
+    "FIPS":55025,
     "number":23936,
     "rate":6.3,
-    "state":"WI",
-    "name":"Dane County"
+    "population":503293,
+    "county":"Dane County"
   },
   {
-    "id":55027,
+    "state":"WI",
+    "FIPS":55027,
     "number":6285,
     "rate":9.3,
-    "state":"WI",
-    "name":"Dodge County"
+    "population":88576,
+    "county":"Dodge County"
   },
   {
-    "id":55029,
+    "state":"WI",
+    "FIPS":55029,
     "number":2185,
     "rate":9.8,
-    "state":"WI",
-    "name":"Door County"
+    "population":27710,
+    "county":"Door County"
   },
   {
-    "id":55031,
+    "state":"WI",
+    "FIPS":55031,
     "number":3137,
     "rate":9.4,
-    "state":"WI",
-    "name":"Douglas County"
+    "population":43816,
+    "county":"Douglas County"
   },
   {
-    "id":55033,
+    "state":"WI",
+    "FIPS":55033,
     "number":2716,
     "rate":8.4,
-    "state":"WI",
-    "name":"Dunn County"
+    "population":43930,
+    "county":"Dunn County"
   },
   {
-    "id":55035,
+    "state":"WI",
+    "FIPS":55035,
     "number":5769,
     "rate":7.7,
-    "state":"WI",
-    "name":"Eau Claire County"
+    "population":100840,
+    "county":"Eau Claire County"
   },
   {
-    "id":55037,
+    "state":"WI",
+    "FIPS":55037,
     "number":408,
     "rate":11.1,
-    "state":"WI",
-    "name":"Florence County"
+    "population":4472,
+    "county":"Florence County"
   },
   {
-    "id":55041,
+    "state":"WI",
+    "FIPS":55041,
     "number":840,
     "rate":12,
-    "state":"WI",
-    "name":"Forest County"
+    "population":9183,
+    "county":"Forest County"
   },
   {
-    "id":55043,
+    "state":"WI",
+    "FIPS":55043,
     "number":3167,
     "rate":8.4,
-    "state":"WI",
-    "name":"Grant County"
+    "population":50991,
+    "county":"Grant County"
   },
   {
-    "id":55045,
+    "state":"WI",
+    "FIPS":55045,
     "number":2754,
     "rate":10,
-    "state":"WI",
-    "name":"Green County"
+    "population":36881,
+    "county":"Green County"
   },
   {
-    "id":55047,
+    "state":"WI",
+    "FIPS":55047,
     "number":1422,
     "rate":9.9,
-    "state":"WI",
-    "name":"Green Lake County"
+    "population":19075,
+    "county":"Green Lake County"
   },
   {
-    "id":55049,
+    "state":"WI",
+    "FIPS":55049,
     "number":1622,
     "rate":9.2,
-    "state":"WI",
-    "name":"Iowa County"
+    "population":23766,
+    "county":"Iowa County"
   },
   {
-    "id":55051,
+    "state":"WI",
+    "FIPS":55051,
     "number":633,
     "rate":13,
-    "state":"WI",
-    "name":"Iron County"
+    "population":5938,
+    "county":"Iron County"
   },
   {
-    "id":55039,
+    "state":"WI",
+    "FIPS":55039,
     "number":6660,
     "rate":8.7,
-    "state":"WI",
-    "name":"Fond Du Lac County"
+    "population":101702,
+    "county":"Fond Du Lac County"
   },
   {
-    "id":55053,
+    "state":"WI",
+    "FIPS":55053,
     "number":1504,
     "rate":9.8,
-    "state":"WI",
-    "name":"Jackson County"
+    "population":20477,
+    "county":"Jackson County"
   },
   {
-    "id":55055,
+    "state":"WI",
+    "FIPS":55055,
     "number":4834,
     "rate":7.8,
-    "state":"WI",
-    "name":"Jefferson County"
+    "population":84408,
+    "county":"Jefferson County"
   },
   {
-    "id":55057,
+    "state":"WI",
+    "FIPS":55057,
     "number":2189,
     "rate":10.6,
-    "state":"WI",
-    "name":"Juneau County"
+    "population":26746,
+    "county":"Juneau County"
   },
   {
-    "id":55059,
+    "state":"WI",
+    "FIPS":55059,
     "number":9515,
     "rate":7.9,
-    "state":"WI",
-    "name":"Kenosha County"
+    "population":167352,
+    "county":"Kenosha County"
   },
   {
-    "id":55061,
+    "state":"WI",
+    "FIPS":55061,
     "number":1370,
     "rate":8.9,
-    "state":"WI",
-    "name":"Kewaunee County"
+    "population":20618,
+    "county":"Kewaunee County"
   },
   {
-    "id":55063,
+    "state":"WI",
+    "FIPS":55063,
     "number":6611,
     "rate":7.6,
-    "state":"WI",
-    "name":"La Crosse County"
+    "population":116831,
+    "county":"La Crosse County"
   },
   {
-    "id":55065,
+    "state":"WI",
+    "FIPS":55065,
     "number":1075,
     "rate":8.8,
-    "state":"WI",
-    "name":"Lafayette County"
+    "population":16872,
+    "county":"Lafayette County"
   },
   {
-    "id":55067,
+    "state":"WI",
+    "FIPS":55067,
     "number":1446,
     "rate":9.5,
-    "state":"WI",
-    "name":"Langlade County"
+    "population":19729,
+    "county":"Langlade County"
   },
   {
-    "id":55069,
+    "state":"WI",
+    "FIPS":55069,
     "number":2099,
     "rate":9.6,
-    "state":"WI",
-    "name":"Lincoln County"
+    "population":28472,
+    "county":"Lincoln County"
   },
   {
-    "id":55071,
+    "state":"WI",
+    "FIPS":55071,
     "number":5742,
     "rate":9.3,
-    "state":"WI",
-    "name":"Manitowoc County"
+    "population":80816,
+    "county":"Manitowoc County"
   },
   {
-    "id":55073,
+    "state":"WI",
+    "FIPS":55073,
     "number":9465,
     "rate":9.5,
-    "state":"WI",
-    "name":"Marathon County"
+    "population":134689,
+    "county":"Marathon County"
   },
   {
-    "id":55075,
+    "state":"WI",
+    "FIPS":55075,
     "number":3632,
     "rate":11.2,
-    "state":"WI",
-    "name":"Marinette County"
+    "population":41488,
+    "county":"Marinette County"
   },
   {
-    "id":55077,
+    "state":"WI",
+    "FIPS":55077,
     "number":1307,
     "rate":11,
-    "state":"WI",
-    "name":"Marquette County"
+    "population":15186,
+    "county":"Marquette County"
   },
   {
-    "id":55078,
+    "state":"WI",
+    "FIPS":55078,
     "number":388,
     "rate":13.8,
-    "state":"WI",
-    "name":"Menominee County"
+    "population":4373,
+    "county":"Menominee County"
   },
   {
-    "id":55079,
+    "state":"WI",
+    "FIPS":55079,
     "number":67535,
     "rate":9.8,
-    "state":"WI",
-    "name":"Milwaukee County"
+    "population":954521,
+    "county":"Milwaukee County"
   },
   {
-    "id":55081,
+    "state":"WI",
+    "FIPS":55081,
     "number":2895,
     "rate":8.9,
-    "state":"WI",
-    "name":"Monroe County"
+    "population":45087,
+    "county":"Monroe County"
   },
   {
-    "id":55083,
+    "state":"WI",
+    "FIPS":55083,
     "number":2673,
     "rate":9.3,
-    "state":"WI",
-    "name":"Oconto County"
+    "population":37420,
+    "county":"Oconto County"
   },
   {
-    "id":55085,
+    "state":"WI",
+    "FIPS":55085,
     "number":2885,
     "rate":10.1,
-    "state":"WI",
-    "name":"Oneida County"
+    "population":35746,
+    "county":"Oneida County"
   },
   {
-    "id":55087,
+    "state":"WI",
+    "FIPS":55087,
     "number":9968,
     "rate":7.6,
-    "state":"WI",
-    "name":"Outagamie County"
+    "population":178877,
+    "county":"Outagamie County"
   },
   {
-    "id":55089,
+    "state":"WI",
+    "FIPS":55089,
     "number":5689,
     "rate":8.8,
-    "state":"WI",
-    "name":"Ozaukee County"
+    "population":87030,
+    "county":"Ozaukee County"
   },
   {
-    "id":55091,
+    "state":"WI",
+    "FIPS":55091,
     "number":559,
     "rate":10,
-    "state":"WI",
-    "name":"Pepin County"
+    "population":7387,
+    "county":"Pepin County"
   },
   {
-    "id":55093,
+    "state":"WI",
+    "FIPS":55093,
     "number":2430,
     "rate":8.2,
-    "state":"WI",
-    "name":"Pierce County"
+    "population":40674,
+    "county":"Pierce County"
   },
   {
-    "id":55095,
+    "state":"WI",
+    "FIPS":55095,
     "number":3497,
     "rate":10.7,
-    "state":"WI",
-    "name":"Polk County"
+    "population":43525,
+    "county":"Polk County"
   },
   {
-    "id":55097,
+    "state":"WI",
+    "FIPS":55097,
     "number":3854,
     "rate":7.3,
-    "state":"WI",
-    "name":"Portage County"
+    "population":70481,
+    "county":"Portage County"
   },
   {
-    "id":55099,
+    "state":"WI",
+    "FIPS":55099,
     "number":1327,
     "rate":12,
-    "state":"WI",
-    "name":"Price County"
+    "population":13870,
+    "county":"Price County"
   },
   {
-    "id":55101,
+    "state":"WI",
+    "FIPS":55101,
     "number":14354,
     "rate":10.1,
-    "state":"WI",
-    "name":"Racine County"
+    "population":194683,
+    "county":"Racine County"
   },
   {
-    "id":55103,
+    "state":"WI",
+    "FIPS":55103,
     "number":1387,
     "rate":10.4,
-    "state":"WI",
-    "name":"Richland County"
+    "population":17799,
+    "county":"Richland County"
   },
   {
-    "id":55105,
+    "state":"WI",
+    "FIPS":55105,
     "number":11216,
     "rate":9.6,
-    "state":"WI",
-    "name":"Rock County"
+    "population":160271,
+    "county":"Rock County"
   },
   {
-    "id":55107,
+    "state":"WI",
+    "FIPS":55107,
     "number":970,
     "rate":8.9,
-    "state":"WI",
-    "name":"Rusk County"
+    "population":14302,
+    "county":"Rusk County"
   },
   {
-    "id":55111,
+    "state":"WI",
+    "FIPS":55111,
     "number":5212,
     "rate":11.2,
-    "state":"WI",
-    "name":"Sauk County"
+    "population":62540,
+    "county":"Sauk County"
   },
   {
-    "id":55113,
+    "state":"WI",
+    "FIPS":55113,
     "number":1293,
     "rate":10.1,
-    "state":"WI",
-    "name":"Sawyer County"
+    "population":16540,
+    "county":"Sawyer County"
   },
   {
-    "id":55115,
+    "state":"WI",
+    "FIPS":55115,
     "number":3057,
     "rate":9.7,
-    "state":"WI",
-    "name":"Shawano County"
+    "population":41603,
+    "county":"Shawano County"
   },
   {
-    "id":55117,
+    "state":"WI",
+    "FIPS":55117,
     "number":8654,
     "rate":10.1,
-    "state":"WI",
-    "name":"Sheboygan County"
+    "population":114952,
+    "county":"Sheboygan County"
   },
   {
-    "id":55109,
+    "state":"WI",
+    "FIPS":55109,
     "number":4812,
     "rate":7.9,
-    "state":"WI",
-    "name":"St Croix County"
+    "population":85220,
+    "county":"St Croix County"
   },
   {
-    "id":55119,
+    "state":"WI",
+    "FIPS":55119,
     "number":1143,
     "rate":7.6,
-    "state":"WI",
-    "name":"Taylor County"
+    "population":20474,
+    "county":"Taylor County"
   },
   {
-    "id":55121,
+    "state":"WI",
+    "FIPS":55121,
     "number":2067,
     "rate":9.6,
-    "state":"WI",
-    "name":"Trempealeau County"
+    "population":29371,
+    "county":"Trempealeau County"
   },
   {
-    "id":55123,
+    "state":"WI",
+    "FIPS":55123,
     "number":1828,
     "rate":8.4,
-    "state":"WI",
-    "name":"Vernon County"
+    "population":30203,
+    "county":"Vernon County"
   },
   {
-    "id":55125,
+    "state":"WI",
+    "FIPS":55125,
     "number":2012,
     "rate":11.7,
-    "state":"WI",
-    "name":"Vilas County"
+    "population":21281,
+    "county":"Vilas County"
   },
   {
-    "id":55127,
+    "state":"WI",
+    "FIPS":55127,
     "number":6207,
     "rate":8.2,
-    "state":"WI",
-    "name":"Walworth County"
+    "population":103052,
+    "county":"Walworth County"
   },
   {
-    "id":55129,
+    "state":"WI",
+    "FIPS":55129,
     "number":1207,
     "rate":9.8,
-    "state":"WI",
-    "name":"Washburn County"
+    "population":15835,
+    "county":"Washburn County"
   },
   {
-    "id":55131,
+    "state":"WI",
+    "FIPS":55131,
     "number":8518,
     "rate":8.7,
-    "state":"WI",
-    "name":"Washington County"
+    "population":132581,
+    "county":"Washington County"
   },
   {
-    "id":55133,
+    "state":"WI",
+    "FIPS":55133,
     "number":21429,
     "rate":7.3,
-    "state":"WI",
-    "name":"Waukesha County"
+    "population":392623,
+    "county":"Waukesha County"
   },
   {
-    "id":55135,
+    "state":"WI",
+    "FIPS":55135,
     "number":3709,
     "rate":9.4,
-    "state":"WI",
-    "name":"Waupaca County"
+    "population":52028,
+    "county":"Waupaca County"
   },
   {
-    "id":55137,
+    "state":"WI",
+    "FIPS":55137,
     "number":1879,
     "rate":9.8,
-    "state":"WI",
-    "name":"Waushara County"
+    "population":24477,
+    "county":"Waushara County"
   },
   {
-    "id":55139,
+    "state":"WI",
+    "FIPS":55139,
     "number":10212,
     "rate":8,
-    "state":"WI",
-    "name":"Winnebago County"
+    "population":168634,
+    "county":"Winnebago County"
   },
   {
-    "id":55141,
+    "state":"WI",
+    "FIPS":55141,
     "number":5079,
     "rate":9,
-    "state":"WI",
-    "name":"Wood County"
+    "population":74354,
+    "county":"Wood County"
   },
   {
-    "id":54001,
+    "state":"WV",
+    "FIPS":54001,
     "number":1721,
     "rate":13.5,
-    "state":"WV",
-    "name":"Barbour County"
+    "population":16860,
+    "county":"Barbour County"
   },
   {
-    "id":54003,
+    "state":"WV",
+    "FIPS":54003,
     "number":9180,
     "rate":11.7,
-    "state":"WV",
-    "name":"Berkeley County"
+    "population":107062,
+    "county":"Berkeley County"
   },
   {
-    "id":54005,
+    "state":"WV",
+    "FIPS":54005,
     "number":2720,
     "rate":14.8,
-    "state":"WV",
-    "name":"Boone County"
+    "population":24397,
+    "county":"Boone County"
   },
   {
-    "id":54007,
+    "state":"WV",
+    "FIPS":54007,
     "number":1684,
     "rate":14.9,
-    "state":"WV",
-    "name":"Braxton County"
+    "population":14485,
+    "county":"Braxton County"
   },
   {
-    "id":54009,
+    "state":"WV",
+    "FIPS":54009,
     "number":2691,
     "rate":14.4,
-    "state":"WV",
-    "name":"Brooke County"
+    "population":23791,
+    "county":"Brooke County"
   },
   {
-    "id":54011,
+    "state":"WV",
+    "FIPS":54011,
     "number":10275,
     "rate":13.8,
-    "state":"WV",
-    "name":"Cabell County"
+    "population":96935,
+    "county":"Cabell County"
   },
   {
-    "id":54013,
+    "state":"WV",
+    "FIPS":54013,
     "number":927,
     "rate":15.6,
-    "state":"WV",
-    "name":"Calhoun County"
+    "population":7591,
+    "county":"Calhoun County"
   },
   {
-    "id":54015,
+    "state":"WV",
+    "FIPS":54015,
     "number":913,
     "rate":13.2,
-    "state":"WV",
-    "name":"Clay County"
+    "population":9251,
+    "county":"Clay County"
   },
   {
-    "id":54017,
+    "state":"WV",
+    "FIPS":54017,
     "number":781,
     "rate":12.2,
-    "state":"WV",
-    "name":"Doddridge County"
+    "population":8220,
+    "county":"Doddridge County"
   },
   {
-    "id":54019,
+    "state":"WV",
+    "FIPS":54019,
     "number":4384,
     "rate":12.4,
-    "state":"WV",
-    "name":"Fayette County"
+    "population":45898,
+    "county":"Fayette County"
   },
   {
-    "id":54021,
+    "state":"WV",
+    "FIPS":54021,
     "number":819,
     "rate":11.4,
-    "state":"WV",
-    "name":"Gilmer County"
+    "population":8778,
+    "county":"Gilmer County"
   },
   {
-    "id":54023,
+    "state":"WV",
+    "FIPS":54023,
     "number":1475,
     "rate":16.1,
-    "state":"WV",
-    "name":"Grant County"
+    "population":11841,
+    "county":"Grant County"
   },
   {
-    "id":54025,
+    "state":"WV",
+    "FIPS":54025,
     "number":3490,
     "rate":12.5,
-    "state":"WV",
-    "name":"Greenbrier County"
+    "population":35806,
+    "county":"Greenbrier County"
   },
   {
-    "id":54027,
+    "state":"WV",
+    "FIPS":54027,
     "number":2195,
     "rate":12.1,
-    "state":"WV",
-    "name":"Hampshire County"
+    "population":23678,
+    "county":"Hampshire County"
   },
   {
-    "id":54029,
+    "state":"WV",
+    "FIPS":54029,
     "number":2907,
     "rate":12.3,
-    "state":"WV",
-    "name":"Hancock County"
+    "population":30328,
+    "county":"Hancock County"
   },
   {
-    "id":54031,
+    "state":"WV",
+    "FIPS":54031,
     "number":1546,
     "rate":14.4,
-    "state":"WV",
-    "name":"Hardy County"
+    "population":13870,
+    "county":"Hardy County"
   },
   {
-    "id":54033,
+    "state":"WV",
+    "FIPS":54033,
     "number":7080,
     "rate":13.4,
-    "state":"WV",
-    "name":"Harrison County"
+    "population":69148,
+    "county":"Harrison County"
   },
   {
-    "id":54035,
+    "state":"WV",
+    "FIPS":54035,
     "number":2826,
     "rate":12.7,
-    "state":"WV",
-    "name":"Jackson County"
+    "population":29280,
+    "county":"Jackson County"
   },
   {
-    "id":54037,
+    "state":"WV",
+    "FIPS":54037,
     "number":4529,
     "rate":11.3,
-    "state":"WV",
-    "name":"Jefferson County"
+    "population":54566,
+    "county":"Jefferson County"
   },
   {
-    "id":54039,
+    "state":"WV",
+    "FIPS":54039,
     "number":20569,
     "rate":13.8,
-    "state":"WV",
-    "name":"Kanawha County"
+    "population":192152,
+    "county":"Kanawha County"
   },
   {
-    "id":54041,
+    "state":"WV",
+    "FIPS":54041,
     "number":1627,
     "rate":12.8,
-    "state":"WV",
-    "name":"Lewis County"
+    "population":16426,
+    "county":"Lewis County"
   },
   {
-    "id":54043,
+    "state":"WV",
+    "FIPS":54043,
     "number":2634,
     "rate":16.1,
-    "state":"WV",
-    "name":"Lincoln County"
+    "population":21638,
+    "county":"Lincoln County"
   },
   {
-    "id":54045,
+    "state":"WV",
+    "FIPS":54045,
     "number":4331,
     "rate":15.4,
-    "state":"WV",
-    "name":"Logan County"
+    "population":36336,
+    "county":"Logan County"
   },
   {
-    "id":54049,
+    "state":"WV",
+    "FIPS":54049,
     "number":5402,
     "rate":12.3,
-    "state":"WV",
-    "name":"Marion County"
+    "population":56787,
+    "county":"Marion County"
   },
   {
-    "id":54051,
+    "state":"WV",
+    "FIPS":54051,
     "number":3153,
     "rate":12.4,
-    "state":"WV",
-    "name":"Marshall County"
+    "population":32684,
+    "county":"Marshall County"
   },
   {
-    "id":54053,
+    "state":"WV",
+    "FIPS":54053,
     "number":2657,
     "rate":12.7,
-    "state":"WV",
-    "name":"Mason County"
+    "population":27222,
+    "county":"Mason County"
   },
   {
-    "id":54047,
+    "state":"WV",
+    "FIPS":54047,
     "number":3001,
     "rate":18,
-    "state":"WV",
-    "name":"McDowell County"
+    "population":21314,
+    "county":"McDowell County"
   },
   {
-    "id":54055,
+    "state":"WV",
+    "FIPS":54055,
     "number":7231,
     "rate":15.1,
-    "state":"WV",
-    "name":"Mercer County"
+    "population":62358,
+    "county":"Mercer County"
   },
   {
-    "id":54057,
+    "state":"WV",
+    "FIPS":54057,
     "number":2674,
     "rate":12.6,
-    "state":"WV",
-    "name":"Mineral County"
+    "population":27933,
+    "county":"Mineral County"
   },
   {
-    "id":54059,
+    "state":"WV",
+    "FIPS":54059,
     "number":2702,
     "rate":13.5,
-    "state":"WV",
-    "name":"Mingo County"
+    "population":26122,
+    "county":"Mingo County"
   },
   {
-    "id":54061,
+    "state":"WV",
+    "FIPS":54061,
     "number":7312,
     "rate":9.3,
-    "state":"WV",
-    "name":"Monongalia County"
+    "population":100531,
+    "county":"Monongalia County"
   },
   {
-    "id":54063,
+    "state":"WV",
+    "FIPS":54063,
     "number":1389,
     "rate":13.3,
-    "state":"WV",
-    "name":"Monroe County"
+    "population":13492,
+    "county":"Monroe County"
   },
   {
-    "id":54065,
+    "state":"WV",
+    "FIPS":54065,
     "number":1905,
     "rate":13.9,
-    "state":"WV",
-    "name":"Morgan County"
+    "population":17433,
+    "county":"Morgan County"
   },
   {
-    "id":54067,
+    "state":"WV",
+    "FIPS":54067,
     "number":2883,
     "rate":14.2,
-    "state":"WV",
-    "name":"Nicholas County"
+    "population":26252,
+    "county":"Nicholas County"
   },
   {
-    "id":54069,
+    "state":"WV",
+    "FIPS":54069,
     "number":4114,
     "rate":12.1,
-    "state":"WV",
-    "name":"Ohio County"
+    "population":44056,
+    "county":"Ohio County"
   },
   {
-    "id":54071,
+    "state":"WV",
+    "FIPS":54071,
     "number":824,
     "rate":13.7,
-    "state":"WV",
-    "name":"Pendleton County"
+    "population":7532,
+    "county":"Pendleton County"
   },
   {
-    "id":54073,
+    "state":"WV",
+    "FIPS":54073,
     "number":811,
     "rate":13.7,
-    "state":"WV",
-    "name":"Pleasants County"
+    "population":7592,
+    "county":"Pleasants County"
   },
   {
-    "id":54075,
+    "state":"WV",
+    "FIPS":54075,
     "number":969,
     "rate":13.8,
-    "state":"WV",
-    "name":"Pocahontas County"
+    "population":8697,
+    "county":"Pocahontas County"
   },
   {
-    "id":54077,
+    "state":"WV",
+    "FIPS":54077,
     "number":2837,
     "rate":10.6,
-    "state":"WV",
-    "name":"Preston County"
+    "population":33910,
+    "county":"Preston County"
   },
   {
-    "id":54079,
+    "state":"WV",
+    "FIPS":54079,
     "number":5050,
     "rate":12,
-    "state":"WV",
-    "name":"Putnam County"
+    "population":56589,
+    "county":"Putnam County"
   },
   {
-    "id":54081,
+    "state":"WV",
+    "FIPS":54081,
     "number":8393,
     "rate":13.8,
-    "state":"WV",
-    "name":"Raleigh County"
+    "population":79122,
+    "county":"Raleigh County"
   },
   {
-    "id":54083,
+    "state":"WV",
+    "FIPS":54083,
     "number":2690,
     "rate":11.7,
-    "state":"WV",
-    "name":"Randolph County"
+    "population":29420,
+    "county":"Randolph County"
   },
   {
-    "id":54085,
+    "state":"WV",
+    "FIPS":54085,
     "number":1153,
     "rate":14.6,
-    "state":"WV",
-    "name":"Ritchie County"
+    "population":10269,
+    "county":"Ritchie County"
   },
   {
-    "id":54087,
+    "state":"WV",
+    "FIPS":54087,
     "number":1730,
     "rate":15.3,
-    "state":"WV",
-    "name":"Roane County"
+    "population":14710,
+    "county":"Roane County"
   },
   {
-    "id":54089,
+    "state":"WV",
+    "FIPS":54089,
     "number":1620,
     "rate":14.6,
-    "state":"WV",
-    "name":"Summers County"
+    "population":13761,
+    "county":"Summers County"
   },
   {
-    "id":54091,
+    "state":"WV",
+    "FIPS":54091,
     "number":1609,
     "rate":12.2,
-    "state":"WV",
-    "name":"Taylor County"
+    "population":16984,
+    "county":"Taylor County"
   },
   {
-    "id":54093,
+    "state":"WV",
+    "FIPS":54093,
     "number":730,
     "rate":13.2,
-    "state":"WV",
-    "name":"Tucker County"
+    "population":6941,
+    "county":"Tucker County"
   },
   {
-    "id":54095,
+    "state":"WV",
+    "FIPS":54095,
     "number":921,
     "rate":13.1,
-    "state":"WV",
-    "name":"Tyler County"
+    "population":9033,
+    "county":"Tyler County"
   },
   {
-    "id":54097,
+    "state":"WV",
+    "FIPS":54097,
     "number":2341,
     "rate":12.6,
-    "state":"WV",
-    "name":"Upshur County"
+    "population":24506,
+    "county":"Upshur County"
   },
   {
-    "id":54099,
+    "state":"WV",
+    "FIPS":54099,
     "number":5050,
     "rate":15.9,
-    "state":"WV",
-    "name":"Wayne County"
+    "population":41672,
+    "county":"Wayne County"
   },
   {
-    "id":54101,
+    "state":"WV",
+    "FIPS":54101,
     "number":1118,
     "rate":16,
-    "state":"WV",
-    "name":"Webster County"
+    "population":9016,
+    "county":"Webster County"
   },
   {
-    "id":54103,
+    "state":"WV",
+    "FIPS":54103,
     "number":1614,
     "rate":12.7,
-    "state":"WV",
-    "name":"Wetzel County"
+    "population":16420,
+    "county":"Wetzel County"
   },
   {
-    "id":54105,
+    "state":"WV",
+    "FIPS":54105,
     "number":674,
     "rate":15,
-    "state":"WV",
-    "name":"Wirt County"
+    "population":5806,
+    "county":"Wirt County"
   },
   {
-    "id":54107,
+    "state":"WV",
+    "FIPS":54107,
     "number":9082,
     "rate":13.7,
-    "state":"WV",
-    "name":"Wood County"
+    "population":86561,
+    "county":"Wood County"
   },
   {
-    "id":54109,
+    "state":"WV",
+    "FIPS":54109,
     "number":2489,
     "rate":14,
-    "state":"WV",
-    "name":"Wyoming County"
+    "population":23251,
+    "county":"Wyoming County"
   },
   {
-    "id":56001,
+    "state":"WY",
+    "FIPS":56001,
     "number":1668,
     "rate":5.8,
-    "state":"WY",
-    "name":"Albany County"
+    "population":37363,
+    "county":"Albany County"
   },
   {
-    "id":56003,
+    "state":"WY",
+    "FIPS":56003,
     "number":926,
     "rate":10.9,
-    "state":"WY",
-    "name":"Big Horn County"
+    "population":11778,
+    "county":"Big Horn County"
   },
   {
-    "id":56005,
+    "state":"WY",
+    "FIPS":56005,
     "number":2325,
     "rate":7,
-    "state":"WY",
-    "name":"Campbell County"
+    "population":47897,
+    "county":"Campbell County"
   },
   {
-    "id":56007,
+    "state":"WY",
+    "FIPS":56007,
     "number":1023,
     "rate":8.7,
-    "state":"WY",
-    "name":"Carbon County"
+    "population":15679,
+    "county":"Carbon County"
   },
   {
-    "id":56009,
+    "state":"WY",
+    "FIPS":56009,
     "number":976,
     "rate":9.6,
-    "state":"WY",
-    "name":"Converse County"
+    "population":14005,
+    "county":"Converse County"
   },
   {
-    "id":56011,
+    "state":"WY",
+    "FIPS":56011,
     "number":488,
     "rate":9.1,
-    "state":"WY",
-    "name":"Crook County"
+    "population":7139,
+    "county":"Crook County"
   },
   {
-    "id":56013,
+    "state":"WY",
+    "FIPS":56013,
     "number":2858,
     "rate":9.6,
-    "state":"WY",
-    "name":"Fremont County"
+    "population":41125,
+    "county":"Fremont County"
   },
   {
-    "id":56015,
+    "state":"WY",
+    "FIPS":56015,
     "number":961,
     "rate":9.1,
-    "state":"WY",
-    "name":"Goshen County"
+    "population":13670,
+    "county":"Goshen County"
   },
   {
-    "id":56017,
+    "state":"WY",
+    "FIPS":56017,
     "number":388,
     "rate":10.3,
-    "state":"WY",
-    "name":"Hot Springs County"
+    "population":4845,
+    "county":"Hot Springs County"
   },
   {
-    "id":56019,
+    "state":"WY",
+    "FIPS":56019,
     "number":620,
     "rate":9.5,
-    "state":"WY",
-    "name":"Johnson County"
+    "population":8606,
+    "county":"Johnson County"
   },
   {
-    "id":56021,
+    "state":"WY",
+    "FIPS":56021,
     "number":6533,
     "rate":9.3,
-    "state":"WY",
-    "name":"Laramie County"
+    "population":94849,
+    "county":"Laramie County"
   },
   {
-    "id":56023,
+    "state":"WY",
+    "FIPS":56023,
     "number":924,
     "rate":7.3,
-    "state":"WY",
-    "name":"Lincoln County"
+    "population":17926,
+    "county":"Lincoln County"
   },
   {
-    "id":56025,
+    "state":"WY",
+    "FIPS":56025,
     "number":5174,
     "rate":8.9,
-    "state":"WY",
-    "name":"Natrona County"
+    "population":78686,
+    "county":"Natrona County"
   },
   {
-    "id":56027,
+    "state":"WY",
+    "FIPS":56027,
     "number":173,
     "rate":8.7,
-    "state":"WY",
-    "name":"Niobrara County"
+    "population":2475,
+    "county":"Niobrara County"
   },
   {
-    "id":56029,
+    "state":"WY",
+    "FIPS":56029,
     "number":1671,
     "rate":7.6,
-    "state":"WY",
-    "name":"Park County"
+    "population":28805,
+    "county":"Park County"
   },
   {
-    "id":56031,
+    "state":"WY",
+    "FIPS":56031,
     "number":587,
     "rate":8.6,
-    "state":"WY",
-    "name":"Platte County"
+    "population":8735,
+    "county":"Platte County"
   },
   {
-    "id":56033,
+    "state":"WY",
+    "FIPS":56033,
     "number":2010,
     "rate":9,
-    "state":"WY",
-    "name":"Sheridan County"
+    "population":29598,
+    "county":"Sheridan County"
   },
   {
-    "id":56035,
+    "state":"WY",
+    "FIPS":56035,
     "number":487,
     "rate":6.3,
-    "state":"WY",
-    "name":"Sublette County"
+    "population":10412,
+    "county":"Sublette County"
   },
   {
-    "id":56037,
+    "state":"WY",
+    "FIPS":56037,
     "number":2549,
     "rate":8,
-    "state":"WY",
-    "name":"Sweetwater County"
+    "population":45115,
+    "county":"Sweetwater County"
   },
   {
-    "id":56039,
+    "state":"WY",
+    "FIPS":56039,
     "number":820,
     "rate":4.8,
-    "state":"WY",
-    "name":"Teton County"
+    "population":21704,
+    "county":"Teton County"
   },
   {
-    "id":56041,
+    "state":"WY",
+    "FIPS":56041,
     "number":1235,
     "rate":8.7,
-    "state":"WY",
-    "name":"Uinta County"
+    "population":20989,
+    "county":"Uinta County"
   },
   {
-    "id":56043,
+    "state":"WY",
+    "FIPS":56043,
     "number":681,
     "rate":11.1,
-    "state":"WY",
-    "name":"Washakie County"
+    "population":8441,
+    "county":"Washakie County"
   },
   {
-    "id":56045,
+    "state":"WY",
+    "FIPS":56045,
     "number":526,
     "rate":9.8,
-    "state":"WY",
-    "name":"Weston County"
+    "population":7051,
+    "county":"Weston County"
   }
 ]
-
     return diabetes;
-    // return $resource('/api/unemployments/');
 
   });
 

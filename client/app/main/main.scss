@@ -238,7 +238,7 @@ md-radio-group {
 
 md-card {
   background: rgba(158,202,225,0.3);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .footer {
@@ -263,7 +263,7 @@ md-card {
 }
 
 .infoFrame {
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .fade.ng-hide-remove {
@@ -272,8 +272,8 @@ md-card {
   }
 
 .fade.ng-hide-remove {
-    -webkit-animation: flipInX 1.5s;
-    animation: flipInX 1.5s;
+    -webkit-animation: fadeIn 1.75s;
+    animation: fadeIn 1.75s;
 }
 
 
