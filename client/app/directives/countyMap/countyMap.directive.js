@@ -62,18 +62,6 @@ angular.module('foglightApp')
 				var frameWidth = d3.select('#countyMap')[0][0].clientWidth,
 				margin = (frameWidth-width/2);
 
-		        //tooltip template
-		        var tooltip = d3.select('body').append('div')
-		        .style('position', 'absolute')
-		        .style("height", "150px")
-		        .style("width", "260px")
-		        .style('padding', '10px')
-		        // .style('background', '#4d4d4d')
-		        .style('background', 'black')
-		        .style('border-radius', '3px')
-		        .style('color', 'white')
-		        .style('opacity', '0.5')
-		        .style('font-size', '1.25rem')
 
 				var projection = d3.geo.albersUsa()
 				.scale(1280)
@@ -94,6 +82,20 @@ angular.module('foglightApp')
 
 
 				var renderMap =  function(displayDataSet){
+
+				// d3.select('.tooltip').remove()
+		        //tooltip template
+		        var tooltip = d3.select('body').append('div')
+		        .attr("class", "tooltip")
+		        .style('position', 'absolute')
+		        .style("height", "170px")
+		        .style("width", "260px")
+		        .style('padding', '15px')
+		        .style('background', '#1D2024')
+		        .style('border-radius', '4px')
+		        .style('color', 'white')
+		        .style('opacity', '0.5')
+		        .style('font-size', '1.25rem')
 
 					var dMap = dataMaps[scope.year]['diabetes'],
 						pMap = dataMaps[scope.year]['payments'],
@@ -139,13 +141,25 @@ angular.module('foglightApp')
 						setRate = function(val){
 							if (!val){ return 0};
 							return val.rate;
+						},
+						countyFormat = function(str){
+							var arr = str.split(' ');
+							var lastIndex = arr.length - 1;
+							var last = arr[lastIndex].toLowerCase();
+							if(last === "county"){
+								var subArr = arr.slice(0,lastIndex);
+								subArr.push('Cty');
+								var newStr = subArr.join(' ');
+								return newStr;
+							}
+							return str;
 						}
 
 					// County Specific Tooltip
 					d3.selectAll('.county')
 					.on('mouseover', function(d) {
 
-						var countyState = dMap.get(d.id).county + ', ' + dMap.get(d.id).state,
+						var countyState = countyFormat(dMap.get(d.id).county) + ', ' + dMap.get(d.id).state,
 							population = dMap.get(d.id).population,
 							dTotal = setNum(dMap.get(d.id)),
 							dRate = setRate(dMap.get(d.id)),
@@ -156,21 +170,19 @@ angular.module('foglightApp')
 							tTotal = setNum(tMap.get(d.id)),
 							tRate = setRate(tMap.get(d.id));
 
-						
 						d3.select(this).style('opacity', 0.7)
 						tooltip.transition()
-						.style('opacity', .8)
+						.style('opacity', .85)
 						tooltip.html(function() {
-							return "<strong style='color:red; font-size: 1.75rem'>" + countyState + "</strong><br>" +
-							"&nbsp&nbsp&nbsp&nbsp(" + "<span style='font-size: 1rem'>pop. est. </span><span style='font-size: 1.25rem'>" + numberFormat(population) + "</span>" + ")<br>" + 
-							"<strong>Diabetes:</strong> <span style='color:blue'>" + numberFormat(dTotal) + "&nbsp&nbsp (" + dRate +"%)"+ "</span><br>" +
-							"Payments: <strong style='color:green'>" + currencyFormat(pTotal) + "</strong>&nbsp&nbsp (" + currencyFormat(pRate) + "</span><span style='font-size: 1rem'>/ 1k res.</span>)<br>" +
-							"<strong>Grants:</strong> <span style='color:green'>" + currencyFormat(gTotal) + "&nbsp&nbsp (" + currencyFormat(gRate) + "</span><span style='font-size: 1rem'>/ 1k res.</span>)<br>" +
-							"<strong>Total:</strong> <span style='color:green'>" + currencyFormat(tTotal) + "&nbsp&nbsp (" + currencyFormat(tRate) + "</span><span style='font-size: 1rem'>/ 1k res.</span>)";
+							return "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + countyState + " (" + scope.year + ")</strong>" +	
+							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Diabetes Cases: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + numberFormat(dTotal) + "&nbsp (" + dRate + "%)</strong>*</div>" +
+							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Payments: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(pTotal) + "&nbsp (" + currencyFormat(pRate) + ")</strong>**</div>" +
+							"<div><strong style='font-size: 1.3rem; margin-top: -35px'>Grants: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(gTotal) + "&nbsp (" + currencyFormat(gRate) + ")</strong>**</div>" +
+							"<div><strong style='font-size: 1.3rem; margin-top: -35px'>Totals: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(tTotal) + "&nbsp (" + currencyFormat(tRate) + ")</strong>**</div>" +
+							"<div style='color: white; font-size: 1rem; margin-top: 0.4rem'>&nbsp&nbsp*2012 estimated population: <span style='color: #F75707'>" + numberFormat(population) + "</span></div>" + 
+							"<div style='color: white; font-size: 1rem'>&nbsp&nbsp**rate per 1,000 residents</div>";
 						})
 					})
-
-
 					.on('mousemove',function(d){
 						tooltip
 						.style('left', (d3.event.pageX - 300) + 'px')
@@ -199,6 +211,12 @@ angular.module('foglightApp')
 			      scope.$watch("dataset", function(newVal, oldVal){
 			      	if(newVal !== oldVal){
 			      		renderMap(newVal);
+			      	}
+			      })
+
+			      scope.$watch("year", function(newVal, oldVal){
+			      	if(newVal !== oldVal){
+			      		renderMap(scope.dataset);
 			      	}
 			      })
 

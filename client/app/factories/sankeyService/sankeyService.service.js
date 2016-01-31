@@ -86,12 +86,10 @@ d3.sankey = function(width) {
   // Also, if the source and target are not objects, assume they are indices.
   function computeNodeLinks() {
     nodes.forEach(function(node) {
-      // console.log("this is node inside computeNodeLinks: ", node)
       node.sourceLinks = [];
       node.targetLinks = [];
     });
     links.forEach(function(link) {
-      // console.log("this is link inside computeNodeLinks: ", link)
       var source = link.source,
           target = link.target;
       if (typeof source === "number") source = link.source = nodes[link.source];
@@ -119,8 +117,6 @@ d3.sankey = function(width) {
     var remainingNodes = nodes,
         nextNodes,
         x = 0;
-
-    // console.log("this is remainingNodes in computeNodeBreadths: ", remainingNodes)
 
     while (remainingNodes.length) {
       nextNodes = [];

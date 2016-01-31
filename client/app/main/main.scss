@@ -238,6 +238,7 @@ md-radio-group {
 
 md-card {
   background: rgba(158,202,225,0.3);
+  // background: rgba(254,80,0,0.4);
   border-radius: 3px;
 }
 
@@ -252,7 +253,8 @@ md-card {
 }
 
 .fade, .dashCard {
-  background: rgba(158,202,225,0.65);
+  background: rgba(254,80,0,0.65);
+  // background: rgba(158,202,225,0.65);
 }
 
 .fade {
@@ -272,8 +274,8 @@ md-card {
   }
 
 .fade.ng-hide-remove {
-    -webkit-animation: fadeIn 1.75s;
-    animation: fadeIn 1.75s;
+    -webkit-animation: flipInX 1.75s;
+    animation: flipInX 1.75s;
 }
 
 

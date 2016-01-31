@@ -36,12 +36,6 @@ angular.module('foglightApp')
 					height = 500 + numLinks*18 - margin.top - margin.bottom;
 
 
-					// var frameWidth = d3.select('#sankeyContent')[0].parentNode.clientWidth;
-					// console.log("frameWidth: ", frameWidth)
-
-
-
-
 					var formatNumber = d3.format(",.0f"),    // zero decimal places
 					format = function(d) { return units + "" +formatNumber(d); },
 					color = d3.scale.category20();
@@ -96,7 +90,6 @@ angular.module('foglightApp')
 				     //now loop through each nodes to make nodes an array of objects
 				     // rather than an array of strings
 				     graph.nodes = [];
-
 				     for (var key in subGraph){
 				     	graph.nodes.push(subGraph[key][0])
 				     }
@@ -115,11 +108,82 @@ angular.module('foglightApp')
 					.style("stroke-width", function(d) { return Math.max(1, d.dy); })
 					.sort(function(a, b) { return b.dy - a.dy; });
 
+					// d3.select('.tooltip').remove()
+
+			        //tooltip template
+			        var tooltipSankey = d3.select('#tooltipSankey')
+			        .attr("class", "tooltip")
+			        .style('position', 'absolute')
+			        .style("height", "90px")
+			        .style("width", "260px")
+			        .style('padding', '15px')
+			        .style('background', '#1D2024')
+			        .style('border-radius', '4px')
+			        .style('color', 'white')
+			        .style('opacity', '0.5')
+			        .style('font-size', '1.25rem')
+
+					// County Specific Tooltip
+					d3.selectAll('.link')
+					.on('mouseover', function(d) {
+
+						console.log("d: ", d)
+
+						// var countyState = countyFormat(dMap.get(d.id).county) + ', ' + dMap.get(d.id).state,
+						// 	population = dMap.get(d.id).population,
+						// 	dTotal = setNum(dMap.get(d.id)),
+						// 	dRate = setRate(dMap.get(d.id)),
+						// 	pTotal = setNum(pMap.get(d.id)),
+						// 	pRate = setRate(pMap.get(d.id)),
+						// 	gTotal = setNum(gMap.get(d.id)),
+						// 	gRate = setRate(gMap.get(d.id)),
+						// 	tTotal = setNum(tMap.get(d.id)),
+						// 	tRate = setRate(tMap.get(d.id));
+
+						d3.select(this).style('opacity', 0.7)
+						tooltipSankey.transition()
+						.style('opacity', .85)
+						tooltipSankey.html(function() {
+
+
+							return "<strong>" + d.source.name + " → " + d.nature + " → " + 
+								d.target.name + "\n" + format(d.value) + "</strong>";
+							// return "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + countyState + " (" + scope.year + ")</strong>" +	
+							// "<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Diabetes Cases: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + numberFormat(dTotal) + "&nbsp (" + dRate + "%)</strong>*</div>" +
+							// "<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Payments: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(pTotal) + "&nbsp (" + currencyFormat(pRate) + ")</strong>**</div>" +
+							// "<div><strong style='font-size: 1.3rem; margin-top: -35px'>Grants: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(gTotal) + "&nbsp (" + currencyFormat(gRate) + ")</strong>**</div>" +
+							// "<div><strong style='font-size: 1.3rem; margin-top: -35px'>Totals: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(tTotal) + "&nbsp (" + currencyFormat(tRate) + ")</strong>**</div>" +
+							// "<div style='color: white; font-size: 1rem; margin-top: 0.4rem'>&nbsp&nbsp*2012 estimated population: <span style='color: #F75707'>" + numberFormat(population) + "</span></div>" + 
+							// "<div style='color: white; font-size: 1rem'>&nbsp&nbsp**rate per 1,000 residents</div>";
+						})
+					})
+					.on('mousemove',function(d){
+						tooltipSankey
+						.style('left', (d3.event.pageX - 420) + 'px')
+						.style('top', (d3.event.pageY - 160) + 'px')
+					})
+					.on('mouseout', function(d) {
+						d3.select(this)
+						.style('opacity', 1)
+						tooltipSankey.transition().duration(300)
+						.style('opacity', 0)
+					})
+					// .on('click', function(d) {
+
+					// 	var countyState = dMap.get(d.id).county + ', ' + dMap.get(d.id).state;
+					// 	scope.countyinfo = countyState;
+					// 	scope.bins = [];
+					// 	scope.onCountyClick({FIPS: d.id, county: countyState});
+					// })
+
+
+
+
 					// add the link titles
-					link.append("title")
-					.text(function(d) {
-						return d.source.name + " → " + d.nature + " → " + 
-						d.target.name + "\n" + format(d.value); });
+					// link.append("title")
+					// .text(function(d) {
+					// 	return d.source.name + " → " + d.nature + " → " + 
+					// 	d.target.name + "\n" + format(d.value); });
 
 					// add in the nodes
 					var node = svg.append("g").selectAll(".node")
