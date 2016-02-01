@@ -61,7 +61,19 @@ angular.module('foglightApp')
 
 				var frameWidth = d3.select('#countyMap')[0][0].clientWidth,
 				margin = (frameWidth-width/2);
-
+		        
+		        //tooltip template
+		        var tooltip = d3.select('body').append('div')
+		        .attr("class", "tooltip")
+		        .style('position', 'absolute')
+		        .style("height", "170px")
+		        .style("width", "260px")
+		        .style('padding', '15px')
+		        .style('background', '#1D2024')
+		        .style('border-radius', '4px')
+		        .style('color', 'white')
+		        .style('opacity', '0.5')
+		        .style('font-size', '1.25rem')
 
 				var projection = d3.geo.albersUsa()
 				.scale(1280)
@@ -82,20 +94,6 @@ angular.module('foglightApp')
 
 
 				var renderMap =  function(displayDataSet){
-
-				// d3.select('.tooltip').remove()
-		        //tooltip template
-		        var tooltip = d3.select('body').append('div')
-		        .attr("class", "tooltip")
-		        .style('position', 'absolute')
-		        .style("height", "170px")
-		        .style("width", "260px")
-		        .style('padding', '15px')
-		        .style('background', '#1D2024')
-		        .style('border-radius', '4px')
-		        .style('color', 'white')
-		        .style('opacity', '0.5')
-		        .style('font-size', '1.25rem')
 
 					var dMap = dataMaps[scope.year]['diabetes'],
 						pMap = dataMaps[scope.year]['payments'],

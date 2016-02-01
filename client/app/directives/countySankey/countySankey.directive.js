@@ -127,34 +127,73 @@ angular.module('foglightApp')
 					d3.selectAll('.link')
 					.on('mouseover', function(d) {
 
-						console.log("d: ", d)
+						var linkMarkup = '',
+							drug = '',
+							mfr = '',
+							target = '',
+							value = 0,
+							source = '',
+							nature = ''
 
-						// var countyState = countyFormat(dMap.get(d.id).county) + ', ' + dMap.get(d.id).state,
-						// 	population = dMap.get(d.id).population,
-						// 	dTotal = setNum(dMap.get(d.id)),
-						// 	dRate = setRate(dMap.get(d.id)),
-						// 	pTotal = setNum(pMap.get(d.id)),
-						// 	pRate = setRate(pMap.get(d.id)),
-						// 	gTotal = setNum(gMap.get(d.id)),
-						// 	gRate = setRate(gMap.get(d.id)),
-						// 	tTotal = setNum(tMap.get(d.id)),
-						// 	tRate = setRate(tMap.get(d.id));
+						if (d.linkType === 'mfr_drug'){
+							// newLink["source"] = formatMfr(mfrKey);
+							// newLink["mfr_fullName"] = mfrKey;
+							// newLink["target"] = drugKey;
+							// newLink["value"] = value;
+
+
+							var
+
+							source = mfr_fullName;
+							drug = d.target;
+
+
+						}
+
+						if (d.linkType === 'mfr_recipient'){
+							// newLink["source"] = formatMfr(mfrKey);
+							// newLink["target"] = recipientKey;
+							// newLink["value"] = value;
+							// newLink["nature"] = natureKey;
+						}
+
+
+						if (d.linkType === 'drug_recipient'){
+							// mfr = d.source.targetLinks[0].source.name;
+							// newLink["source"] = drugKey;
+							// newLink["target"] = recipientKey;
+							// newLink["value"] = value;
+							// newLink["nature"] = natureKey;
+							console.log("d: ", d)
+
+							linkMarkup = "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + d.source.name + "</strong>" +	
+							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Manufacturer: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + d.source.targetLinks[0].source.name + "</strong>*</div>" +
+							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Payment Amount: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.value + "</strong>**</div>" +
+							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Recipient: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.target.name + "</strong>**</div>" +
+							"<div><strong style='font-size: 1.3rem; margin-top: -35px'>Nature of Payment: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.nature + "</strong>**</div>";
+						}
+
+
+						if (d.linkType === 'misc_recipient'){
+							// console.log("misc natures: ", d.natures)
+							// console.log("misc mfrs: ", d.mfrs)
+							// console.log("misc drugs: ", d.drugs)
+							// newLink["target"] = recipientKey;
+							// newLink["value"] = recipientBin.value;
+							// newLink["mfrs"] = recipientBin.mfrs;
+							// newLink["drugs"] = recipientBin.drugs;
+							// newLink["natures"] = recipientBin.natures;
+
+						}
+
 
 						d3.select(this).style('opacity', 0.7)
-						tooltipSankey.transition()
+						tooltipSankey.transition().duration(100)
 						.style('opacity', .85)
+						.style("height", function() {if (d.nature){ if(d.nature.length < 70){return '175px'}; if (d.nature.length < 120){return '225px'}; return '275px' };  return '175px'; })
 						tooltipSankey.html(function() {
 
-
-							return "<strong>" + d.source.name + " → " + d.nature + " → " + 
-								d.target.name + "\n" + format(d.value) + "</strong>";
-							// return "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + countyState + " (" + scope.year + ")</strong>" +	
-							// "<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Diabetes Cases: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + numberFormat(dTotal) + "&nbsp (" + dRate + "%)</strong>*</div>" +
-							// "<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Payments: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(pTotal) + "&nbsp (" + currencyFormat(pRate) + ")</strong>**</div>" +
-							// "<div><strong style='font-size: 1.3rem; margin-top: -35px'>Grants: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(gTotal) + "&nbsp (" + currencyFormat(gRate) + ")</strong>**</div>" +
-							// "<div><strong style='font-size: 1.3rem; margin-top: -35px'>Totals: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(tTotal) + "&nbsp (" + currencyFormat(tRate) + ")</strong>**</div>" +
-							// "<div style='color: white; font-size: 1rem; margin-top: 0.4rem'>&nbsp&nbsp*2012 estimated population: <span style='color: #F75707'>" + numberFormat(population) + "</span></div>" + 
-							// "<div style='color: white; font-size: 1rem'>&nbsp&nbsp**rate per 1,000 residents</div>";
+							return linkMarkup;
 						})
 					})
 					.on('mousemove',function(d){

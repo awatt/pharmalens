@@ -131,8 +131,6 @@ angular.module('foglightApp')
           return totalAmount;
         }
 
-        console.log("dataObj_drug: ", dataObj_drug)
-
         var bin = dataObj[objectBin],
             bin_mfr = dataObj_mfr[objectBin],
             bin_drug = dataObj_drug[objectBin],
