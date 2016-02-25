@@ -193,15 +193,21 @@ md-radio-group {
   width: 150px; 
 }
 
+.sankeyDialog {
+  overflow-y: hidden;
+}
+
 .sankeyTitle {
   font-weight: bold;
   font-size: 22px;
+  max-height: 50px;
 }
 
 .sankeyHeaders {
   font-weight: bolder;
   font-size: 16px;
   background-color: #9a169d;
+  min-height: 22px;
 }
 
 .fa-long-arrow-right {
@@ -266,6 +272,7 @@ md-card {
 
 .infoFrame {
   min-height: 140px;
+  margin-bottom: 40px;
 }
 
 .fade.ng-hide-remove {
@@ -274,8 +281,8 @@ md-card {
   }
 
 .fade.ng-hide-remove {
-    -webkit-animation: flipInX 1.75s;
-    animation: flipInX 1.75s;
+    -webkit-animation: fadeIn 1.75s;
+    animation: fadeIn 1.75s;
 }
 
 

@@ -30,8 +30,12 @@ angular.module('foglightApp')
 
 					var units = "$";
 
-					var margin = {top: 10, right: 160, bottom: 10, left: 10},
-					frameWidth = d3.select('#sankeyContent')[0].parentNode.clientWidth,
+					var testSelection = d3.select('.sankeyDialog')[0][0].clientWidth;
+
+					console.log("testSelection: ", testSelection)
+
+					var margin = {top: 10, right: 15, bottom: 10, left: 10},
+					frameWidth = d3.select('.sankeyDialog')[0][0].clientWidth,
 					width = frameWidth - margin.left - margin.right,
 					height = 500 + numLinks*18 - margin.top - margin.bottom;
 
@@ -70,7 +74,10 @@ angular.module('foglightApp')
 							"target": d.target,
 							"value": +d.value,
 							"nature": getNature(d),
-							"linkType": d.linkType });
+							"linkType": d.linkType,
+							"drugs": d.drugs,
+							"mfrs": d.mfrs,
+							"natures": d.natures});
 					});
 
 					var subGraph = d3.nest()
@@ -122,10 +129,34 @@ angular.module('foglightApp')
 			        .style('color', 'white')
 			        .style('opacity', '0.5')
 			        .style('font-size', '1.25rem')
+			        .style("z-index", 10000)
 
 					// County Specific Tooltip
 					d3.selectAll('.link')
 					.on('mouseover', function(d) {
+
+						var currencyFormat = d3.format("$,.2f");
+
+						var sizeToolTip = function() {
+							if(d.linkType === 'mfr_drug'){
+								return '90px'
+							};
+							if(d.linkType === 'misc_recipient'){
+								console.log("misc d: ", d)
+								var rows = Math.ceil((d.natures.toString().length + d.drugs.toString().length + d.mfrs.toString().length - 20)/22);
+								return 115 + rows*16 + 'px';
+							}; 
+							if (d.linkType === 'mfr_recipient'){
+								var rows = Math.ceil((d.nature.length - 10)/22);
+								return 110 + rows*16 + 'px';
+							}
+							if (d.linkType === 'drug_recipient'){
+								var rows = Math.ceil((d.nature.length - 10)/22);
+								return 125 + rows*16 + 'px';
+							}
+							return 140 + 'px';
+						}
+
 
 						var linkMarkup = '',
 							drug = '',
@@ -136,61 +167,39 @@ angular.module('foglightApp')
 							nature = ''
 
 						if (d.linkType === 'mfr_drug'){
-							// newLink["source"] = formatMfr(mfrKey);
-							// newLink["mfr_fullName"] = mfrKey;
-							// newLink["target"] = drugKey;
-							// newLink["value"] = value;
-
-
-							var
-
-							source = mfr_fullName;
-							drug = d.target;
-
-
+							linkMarkup = "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + d.source.name + "</strong>" +	
+							"<div><strong style='font-size: 1.3rem, margin-top: 0.8rem'>Total Amount: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(d.value) + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Related Drug: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.target.name + "</strong></div>";
 						}
 
 						if (d.linkType === 'mfr_recipient'){
-							// newLink["source"] = formatMfr(mfrKey);
-							// newLink["target"] = recipientKey;
-							// newLink["value"] = value;
-							// newLink["nature"] = natureKey;
+							linkMarkup = "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + d.source.name + "</strong>" +	
+							"<div><strong style='font-size: 1.3rem, margin-top: 0.8rem'>Payment Amount: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(d.value) + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Recipient: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.target.name + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Nature of Payment: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.nature + "</strong></div>";							
 						}
-
 
 						if (d.linkType === 'drug_recipient'){
-							// mfr = d.source.targetLinks[0].source.name;
-							// newLink["source"] = drugKey;
-							// newLink["target"] = recipientKey;
-							// newLink["value"] = value;
-							// newLink["nature"] = natureKey;
-							console.log("d: ", d)
-
 							linkMarkup = "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + d.source.name + "</strong>" +	
-							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Manufacturer: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + d.source.targetLinks[0].source.name + "</strong>*</div>" +
-							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Payment Amount: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.value + "</strong>**</div>" +
-							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Recipient: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.target.name + "</strong>**</div>" +
-							"<div><strong style='font-size: 1.3rem; margin-top: -35px'>Nature of Payment: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.nature + "</strong>**</div>";
+							"<div><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Manufacturer: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + d.source.targetLinks[0].source.name + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Payment Amount: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(d.value) + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Recipient: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.target.name + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Nature of Payment: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.nature + "</strong></div>";
 						}
-
 
 						if (d.linkType === 'misc_recipient'){
-							// console.log("misc natures: ", d.natures)
-							// console.log("misc mfrs: ", d.mfrs)
-							// console.log("misc drugs: ", d.drugs)
-							// newLink["target"] = recipientKey;
-							// newLink["value"] = recipientBin.value;
-							// newLink["mfrs"] = recipientBin.mfrs;
-							// newLink["drugs"] = recipientBin.drugs;
-							// newLink["natures"] = recipientBin.natures;
-
+							linkMarkup = "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>Miscellaneous Payments</strong>" +	
+							"<div><strong style='font-size: 1.3rem, margin-top: 0.8rem'>Total Payments: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(d.value) + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Recipient: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.target.name + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Natures of Payments: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.natures.join(", ") + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Manufacturers: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.mfrs.join(", ") + "</strong></div>" +
+							"<div><strong style='font-size: 1.3rem'>Related Drugs: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + d.drugs.join(", ") + "</strong></div>";
 						}
-
 
 						d3.select(this).style('opacity', 0.7)
 						tooltipSankey.transition().duration(100)
 						.style('opacity', .85)
-						.style("height", function() {if (d.nature){ if(d.nature.length < 70){return '175px'}; if (d.nature.length < 120){return '225px'}; return '275px' };  return '175px'; })
+						.style("height", sizeToolTip)
 						tooltipSankey.html(function() {
 
 							return linkMarkup;
@@ -198,8 +207,8 @@ angular.module('foglightApp')
 					})
 					.on('mousemove',function(d){
 						tooltipSankey
-						.style('left', (d3.event.pageX - 420) + 'px')
-						.style('top', (d3.event.pageY - 160) + 'px')
+						.style('left', function(){if (d.linkType === 'mfr_drug') {return (d3.event.pageX + 35) + 'px'}; return (d3.event.pageX - 420) + 'px';  })
+						.style('top', function (){if (d.linkType === 'misc_recipient'){return (d3.event.pageY - 450) + 'px'}; return (d3.event.pageY - 160) + 'px'})
 					})
 					.on('mouseout', function(d) {
 						d3.select(this)
@@ -207,22 +216,6 @@ angular.module('foglightApp')
 						tooltipSankey.transition().duration(300)
 						.style('opacity', 0)
 					})
-					// .on('click', function(d) {
-
-					// 	var countyState = dMap.get(d.id).county + ', ' + dMap.get(d.id).state;
-					// 	scope.countyinfo = countyState;
-					// 	scope.bins = [];
-					// 	scope.onCountyClick({FIPS: d.id, county: countyState});
-					// })
-
-
-
-
-					// add the link titles
-					// link.append("title")
-					// .text(function(d) {
-					// 	return d.source.name + " → " + d.nature + " → " + 
-					// 	d.target.name + "\n" + format(d.value); });
 
 					// add in the nodes
 					var node = svg.append("g").selectAll(".node")

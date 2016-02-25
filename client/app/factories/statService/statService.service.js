@@ -347,6 +347,7 @@ angular.module('foglightApp')
                     newLink["linkType"] = "misc_recipient";
 
                     dataObj[binKey].push(newLink);
+                    console.log("misc newLink: ", newLink)
           }
         }
       }
