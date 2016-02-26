@@ -21,7 +21,7 @@ angular.module('foglightApp')
 				buckets = 9,
 				// colors = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]
 				// colors = ["#ffffcc","#ffeda0","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#bd0026","#800026"]
-				colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]
+				 colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]
 				// colors = ["#f7f4f9","#e7e1ef","#d4b9da","#c994c7","#df65b0","#e7298a","#ce1256","#980043","#67001f"],
 				// colors = ["#fff7fb","#ece2f0","#d0d1e6","#a6bddb","#67a9cf","#3690c0","#02818a","#016c59","#014636"],
 				// colors = ["#feebe2","#fbb4b9","#f768a1","#c51b8a","#7a0177"],
@@ -72,7 +72,7 @@ angular.module('foglightApp')
 		        .style('background', '#1D2024')
 		        .style('border-radius', '4px')
 		        .style('color', 'white')
-		        .style('opacity', '0.5')
+		        .style('opacity', '0')
 		        .style('font-size', '1.25rem')
 
 				var projection = d3.geo.albersUsa()
@@ -100,12 +100,52 @@ angular.module('foglightApp')
 						gMap = dataMaps[scope.year]['grants'],
 						tMap = dataMaps[scope.year]['totals'],
 						data = dataSets[scope.year][displayDataSet],
-						displayMap = dataMaps[scope.year][displayDataSet]
+						displayMap = dataMaps[scope.year][displayDataSet],
+						maxDataPoint = d3.max(data, function (d){ return d.rate; }),
+						meanDataPoint = d3.mean(data, function (d){ return d.rate; })
 
 					var colorScale = d3.scale.quantile()
-					.domain([0, buckets - 1, d3.max(data, function (d){ return d.rate; })])
+					.domain([0, meanDataPoint, maxDataPoint])
 					.range(colors)
 
+					var test = [];
+					
+					colors.forEach(function(color){ test.push(colorScale.invertExtent(color))})
+
+					// var maxDataPoint = d3.max(data, function (d){ return d.rate; })
+
+					console.log("test: ", test)
+					// console.log("maxDataPoint: ", maxDataPoint)
+
+					// // var rateScale = d3.scale.quantile().quantiles([0, buckets - 1, d3.max(data, function (d){ return d.rate; })])
+
+					// var x = d3.scale.linear().domain([0, buckets - 1, d3.max(data, function (d){ return d.rate; })]);
+					// console.log("ticks: ", x.ticks(buckets-1).map(x.tickFormat(buckets-1, "f"))); // ["-100%", "-50%", "+0%", "+50%", "+100%"]
+
+
+					// console.log("rateScale: ", rateScale)
+					// var legend = svg.selectAll(".legend")
+     //          .data([0].concat(colorScale.quantiles()), function(d) { return d; });
+
+          // legend.enter().append("g")
+          //     .attr("class", "legend");
+
+          // legend.append("rect")
+          //   .attr("x", function(d, i) { return legendElementWidth * i; })
+          //   .attr("y", height)
+          //   .attr("width", legendElementWidth)
+          //   .attr("height", gridSize / 2)
+          //   .style("fill", function(d, i) { return colors[i]; });
+
+          // legend.append("text")
+          //   .attr("class", "mono")
+          //   .text(function(d) { return "≥ " + Math.round(d); })
+          //   .attr("x", function(d, i) { return legendElementWidth * i; })
+          //   .attr("y", height + gridSize);
+
+          // legend.exit().remove();
+
+          			
 					var counties = svg.selectAll("path")
 					.data(topojson.feature(us, us.objects.counties).features)
 
@@ -117,7 +157,7 @@ angular.module('foglightApp')
 				  	.style("fill", colors[0]);
 
 				  	counties.transition().duration(1000)
-				  	.style("fill", function(d) { var countyData = displayMap.get(d.id); if (countyData) {return colorScale(countyData.rate)} else {return colorScale(0)}; });
+				  	.style("fill", function(d) { var countyData = displayMap.get(d.id); if (countyData) { return colorScale(countyData.rate)} else {return colorScale(0)}; });
 
 				  	// .attr("class", function(d) { var quantized = colorScale(rateById.get(d.id)); return quantized })
 
@@ -127,6 +167,9 @@ angular.module('foglightApp')
 					.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
 					.attr("class", "states")
 					.attr("d", path);
+
+
+
 
 
 					var currencyFormat = d3.format("$,.2f"),
@@ -171,6 +214,7 @@ angular.module('foglightApp')
 						d3.select(this).style('opacity', 0.7)
 						tooltip.transition()
 						.style('opacity', .85)
+						.style('z-index', 100)
 						tooltip.html(function() {
 							return "<strong style='color:  #FA3232; font-size: 1.6rem; margin-top: -5px'>" + countyState + " (" + scope.year + ")</strong>" +	
 							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem; margin-top: 0.8rem'>Diabetes Cases: </strong><strong style='color: #F75707; font-size: 1.2rem'> &nbsp" + numberFormat(dTotal) + "&nbsp (" + dRate + "%</strong>*)</div>" +
@@ -191,6 +235,7 @@ angular.module('foglightApp')
 						.style('opacity', 1)
 						tooltip.transition().duration(300)
 						.style('opacity', 0)
+						.style('z-index', -100)
 					})
 					.on('click', function(d) {
 

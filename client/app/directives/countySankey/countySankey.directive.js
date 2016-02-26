@@ -143,16 +143,16 @@ angular.module('foglightApp')
 							};
 							if(d.linkType === 'misc_recipient'){
 								console.log("misc d: ", d)
-								var rows = Math.ceil((d.natures.toString().length + d.drugs.toString().length + d.mfrs.toString().length - 20)/22);
-								return 115 + rows*16 + 'px';
+								var rows = Math.ceil((d.natures.toString().length + d.drugs.toString().length + d.mfrs.toString().length - 20)/26);
+								return 130 + rows*18 + 'px';
 							}; 
 							if (d.linkType === 'mfr_recipient'){
-								var rows = Math.ceil((d.nature.length - 10)/22);
+								var rows = Math.ceil((d.nature.length - 10)/26);
 								return 110 + rows*16 + 'px';
 							}
 							if (d.linkType === 'drug_recipient'){
-								var rows = Math.ceil((d.nature.length - 10)/22);
-								return 125 + rows*16 + 'px';
+								var rows = Math.ceil((d.nature.length - 10)/26);
+								return 130 + rows*16 + 'px';
 							}
 							return 140 + 'px';
 						}

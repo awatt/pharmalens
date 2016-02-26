@@ -8,7 +8,7 @@
 <div class="container mainBody">
     
     <!-- MAIN BODY CARD -->
-    <md-card>
+    <md-card class="bodyCard">
       <md-card-content>
 
         <!-- FAB SPEED DIAL -->
@@ -67,47 +67,77 @@
               </div>
 
 
-      <!-- DASHBOARD -->
-    <div layout="row">
-
-     <div flex="80" flex-offset="10" class="textCard">
-
-     <md-card-title>
+<md-card-title>
      <md-card-title-text>
-                     <!-- countyMap buttons -->
 
-      <!-- <div layout="row"> -->
-        <!-- <md-card class="dashCard" flex="50" flex-offset="25"> -->
-            <div layout="row">
-                <div flex="25" flex-offset="25">
+            <div layout="row" >
+                <div flex="20" flex-offset="40">
                   <md-radio-group layout="row" ng-model="programYear">
                     <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
                     <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
                   </md-radio-group>
                 </div>
-                <div flex="25" layout="row">
+                <div flex="15" layout="row">
                  <div ng-repeat="item in items">
                    <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
                  </div>
                 </div>   
               </div>
-            <!-- </md-card> -->
-      <!-- </div> -->
-
 
        </md-card-title-text>
          </md-card-title>
 
+      <!-- DASHBOARD -->
+<!--     <div layout="row">
+
+     <div flex="80" flex-offset="10" class="textCard"> -->
 
 
+     <!-- <md-card-title> -->
+     <!-- <md-card-title-text> -->
+                     <!-- countyMap buttons -->
+
+      <!-- <div layout="row"> -->
+        <!-- <md-card class="dashCard" flex="50" flex-offset="25"> -->
+            <!-- <div layout="row">
+
+              <md-card flex="60" flex-offset="20">
+                <md-card-content layout="row">
+
+                <div flex="50">
+                  <md-radio-group layout="row" ng-model="programYear">
+                    <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
+                    <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
+                  </md-radio-group>
+                </div>
+                
+                <div flex="50" layout="row">
+                 <div ng-repeat="item in items">
+                   <md-checkbox ng-checked="existlayout-align"center center"s(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
+                 </div>
+                </div>
+
+                </md-card-content>
+              </md-card>  
+
+              </div> -->
+            <!-- </md-card> -->
+      <!-- </div> -->
+
+
+       <!-- </md-card-title-text> -->
+         <!-- </md-card-title> -->
+
+
+
+<!--             </div>
+    </div> -->
+
+
+            <div id="countyMap">
+              <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
+              </div>
             </div>
-    </div>
-
-
-    <div id="countyMap">
-      <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
-      </div>
-    </div>
 
 
           </md-card-content>
