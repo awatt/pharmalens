@@ -142,7 +142,7 @@ angular.module('foglightApp')
 							if(d.linkType === 'misc_recipient'){
 								console.log("misc d: ", d)
 								var rows = Math.ceil((d.natures.toString().length + d.drugs.toString().length + d.mfrs.toString().length - 20)/26);
-								return 130 + rows*18 + 'px';
+								return 130 + rows*20 + 'px';
 							}; 
 							if (d.linkType === 'mfr_recipient'){
 								var rows = Math.ceil((d.nature.length - 10)/26);
@@ -197,6 +197,7 @@ angular.module('foglightApp')
 						d3.select(this).style('opacity', 0.7)
 						tooltipSankey.transition().duration(100)
 						.style('opacity', .85)
+						.style('z-index', 100)
 						.style("height", sizeToolTip)
 						tooltipSankey.html(function() {
 
@@ -213,6 +214,7 @@ angular.module('foglightApp')
 						.style('opacity', 1)
 						tooltipSankey.transition().duration(300)
 						.style('opacity', 0)
+						.style('z-index', -100)
 					})
 
 					// add in the nodes
@@ -266,7 +268,6 @@ angular.module('foglightApp')
 		} //close renderSankey function
 
 				var data = statService.dataObj[scope.bin];
-
 					renderSankey(data);
 
 		}  //close link function

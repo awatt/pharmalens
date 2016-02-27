@@ -71,7 +71,7 @@
      <md-card-title-text>
 
             <div layout="row" >
-                <div flex="20" flex-offset="35">
+                <div flex="20" flex-offset="30">
                   <md-radio-group layout="row" ng-model="programYear">
                     <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
                     <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
@@ -135,7 +135,7 @@
 
 
             <div id="countyMap">
-              <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county)">
+              <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county, payments, grants)">
               </div>
             </div>
 

@@ -76,12 +76,14 @@ angular.module('foglightApp')
         recipientTotals.getPaymentTotals(FIPS, program_year).$promise.then(function(paymentTotals){
           paymentData.paymentData.query({FIPS: FIPS, program_year: program_year}).$promise.then(function(paymentData){
             $scope.bins = statService.formatData(paymentData,paymentTotals,$scope.recipientNames);
+            console.log("$scope.bins.length: ", $scope.bins.length)
           })
         });
       } else if ($scope.dataSet === 'grants'){
         recipientTotals.getGrantTotals(FIPS, program_year).$promise.then(function(grantTotals){
           grantData.grantData.query({FIPS: FIPS, program_year: program_year}).$promise.then(function(grantData){
             $scope.bins = statService.formatData(grantData,grantTotals,$scope.recipientNames);
+            console.log("$scope.bins.length: ", $scope.bins.length)
           })
         });
       } else {
@@ -255,23 +257,47 @@ function createFilterFor(query) {
 
 
 //DIALOG FUNCTIONS
-$scope.showSankeyDialog = function(ev, FIPS, searchTerm) {
-  $scope.setDataTitle();
-  $scope.progress = true;
-  $scope.bins = [];
-  if(typeof searchTerm === "object" && searchTerm !== null){
-    $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
-  } else if (searchTerm === null) {
-    $scope.countyName = $scope.counties[FIPS].name;
-    $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
+$scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
+  //if no data for given county and dataset, show no data dialog
+  if( (!payments && !grants) || ($scope.dataSet === 'payments' && !payments) || ($scope.dataSet === 'grants' && !grants)  ){
+     $mdDialog.show(
+      $mdDialog.alert()
+        .parent(angular.element(document.querySelector('#countyMap')))
+        .clickOutsideToClose(true)
+        .title('No ' + $scope.programYear + ' results for that County')
+        .ariaLabel('')
+        .ok('OK')
+        .targetEvent(ev)
+    );
   } else {
-    $scope.countyName = searchTerm;
-    $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
+    $scope.setDataTitle();
+    $scope.progress = true;
+    $scope.bins = [];
+    if(typeof searchTerm === "object" && searchTerm !== null){
+      $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
+    } else if (searchTerm === null) {
+      $scope.countyName = $scope.counties[FIPS].name;
+      $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
+    } else {
+      $scope.countyName = searchTerm;
+      $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
+    }
+    $mdDialog.show({
+      controller: dialogController,
+      templateUrl: 'app/main/sankeyDialog.html',
+      scope: $scope,        
+      preserveScope: true,
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    });
   }
+};
 
+$scope.showPhysicianSearchDialog = function(ev) {
   $mdDialog.show({
     controller: dialogController,
-    templateUrl: 'app/main/sankeyDialog.html',
+    templateUrl: 'app/main/physicianSearchDialog.html',
     scope: $scope,        
     preserveScope: true,
     parent: angular.element(document.body),
@@ -280,10 +306,10 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm) {
   });
 };
 
-$scope.showPhysicianSearchDialog = function(ev) {
+$scope.showNoDataDialog = function(ev) {
   $mdDialog.show({
     controller: dialogController,
-    templateUrl: 'app/main/physicianSearchDialog.html',
+    templateUrl: 'app/main/noDataDialog.html',
     scope: $scope,        
     preserveScope: true,
     parent: angular.element(document.body),

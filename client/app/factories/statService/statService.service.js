@@ -44,7 +44,7 @@ angular.module('foglightApp')
    
 
     var formatData = function(data,recipientStats,recipientNames){
-
+      
         //clear out global objects
         for (var key in dataObj){delete dataObj[key]};
         for (var key in recipientStatsMap){delete recipientStatsMap[key]};
@@ -76,6 +76,12 @@ angular.module('foglightApp')
           if(str === "Dr.Reddy's Laboratories,Inc."){return "DR. REDDY'S"};
           return str.match(/(?:^|(?:[.!?]\s))(\w+)/)[0].toUpperCase();
         }
+
+        var deDupe = function(arr){
+         return arr.filter(function(elem, pos) {
+          return arr.indexOf(elem) == pos;
+        }); 
+       }
 
       for (var key in recipientStats) {
         if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
@@ -162,7 +168,7 @@ angular.module('foglightApp')
           bin_misc[recipient].value += amount;
 
           if (bin_misc[recipient].mfrs.indexOf(mfr) < 0){
-            bin_misc[recipient].mfrs.push(mfr);
+            bin_misc[recipient].mfrs.push(formatMfr(mfr));
           }
 
           if (bin_misc[recipient].natures.indexOf(nature) < 0){
@@ -341,13 +347,12 @@ angular.module('foglightApp')
                     newLink["target"] = recipientKey;
                     newLink["targetType"] = "recipient";
                     newLink["value"] = recipientBin.value;
-                    newLink["mfrs"] = recipientBin.mfrs;
-                    newLink["drugs"] = recipientBin.drugs;
-                    newLink["natures"] = recipientBin.natures;
+                    newLink["mfrs"] = deDupe(recipientBin.mfrs);
+                    newLink["drugs"] = deDupe(recipientBin.drugs);
+                    newLink["natures"] = deDupe(recipientBin.natures);
                     newLink["linkType"] = "misc_recipient";
 
                     dataObj[binKey].push(newLink);
-                    console.log("misc newLink: ", newLink)
           }
         }
       }

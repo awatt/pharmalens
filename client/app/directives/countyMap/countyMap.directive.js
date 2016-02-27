@@ -246,7 +246,7 @@ angular.module('foglightApp')
 						var countyState = dMap.get(d.id).county + ', ' + dMap.get(d.id).state;
 						scope.countyinfo = countyState;
 						scope.bins = [];
-						scope.onCountyClick({FIPS: d.id, county: countyState});
+						scope.onCountyClick({FIPS: d.id, county: countyState, payments: pMap.get(d.id), grants: gMap.get(d.id)});
 					})
 				}
 
