@@ -108,44 +108,9 @@ angular.module('foglightApp')
 					.domain([0, meanDataPoint, maxDataPoint])
 					.range(colors)
 
-					var test = [];
-					
-					colors.forEach(function(color){ test.push(colorScale.invertExtent(color))})
 
-					// var maxDataPoint = d3.max(data, function (d){ return d.rate; })
+     				//ADD COUNTIES
 
-					console.log("test: ", test)
-					// console.log("maxDataPoint: ", maxDataPoint)
-
-					// // var rateScale = d3.scale.quantile().quantiles([0, buckets - 1, d3.max(data, function (d){ return d.rate; })])
-
-					// var x = d3.scale.linear().domain([0, buckets - 1, d3.max(data, function (d){ return d.rate; })]);
-					// console.log("ticks: ", x.ticks(buckets-1).map(x.tickFormat(buckets-1, "f"))); // ["-100%", "-50%", "+0%", "+50%", "+100%"]
-
-
-					// console.log("rateScale: ", rateScale)
-					// var legend = svg.selectAll(".legend")
-     //          .data([0].concat(colorScale.quantiles()), function(d) { return d; });
-
-          // legend.enter().append("g")
-          //     .attr("class", "legend");
-
-          // legend.append("rect")
-          //   .attr("x", function(d, i) { return legendElementWidth * i; })
-          //   .attr("y", height)
-          //   .attr("width", legendElementWidth)
-          //   .attr("height", gridSize / 2)
-          //   .style("fill", function(d, i) { return colors[i]; });
-
-          // legend.append("text")
-          //   .attr("class", "mono")
-          //   .text(function(d) { return "≥ " + Math.round(d); })
-          //   .attr("x", function(d, i) { return legendElementWidth * i; })
-          //   .attr("y", height + gridSize);
-
-          // legend.exit().remove();
-
-          			
 					var counties = svg.selectAll("path")
 					.data(topojson.feature(us, us.objects.counties).features)
 
@@ -168,9 +133,47 @@ angular.module('foglightApp')
 					.attr("class", "states")
 					.attr("d", path);
 
+					//ADD LEGEND
 
+					var legendData = [],
+					formatNumber = d3.format(",.0f"),
+					formatPercent = d3.format(",.1f"),
+					formatLegendData = function(color){
+						var datum = {};
+						datum['max'] = colorScale.invertExtent(color)[1];
+						datum['min'] = colorScale.invertExtent(color)[0];
+						datum['color'] = color;
+						legendData.push(datum);
+					};
+					
+					colors.forEach(formatLegendData);
 
+					var legend = svg.selectAll(".legend")
+					.data(legendData)
 
+					legend.enter().append("g")
+					.attr("class", "legend");
+
+					legend.append("rect")
+					.attr("x", function(d, i) { return frameWidth/4.8 + 68 * i} )
+					.attr("y", 2)
+					.attr("width", 68)
+					.attr("height", 13)
+					.style("fill", function(d){ return d.color});
+
+					d3.selectAll("text").remove();
+
+					legend.append("text")
+					.attr("class", "ticks")
+					.text(function(d) { return (scope.dataset === 'diabetes') ? "≥ " + formatPercent(d.min) + "%" : "≥ $" + formatNumber(d.min); })
+					.attr("x", function(d, i) { return frameWidth/4.8 + 68 * i})
+					.attr("y", 30)
+
+					legend.append("text")
+					.attr("class", "annotation")
+					.text(function(d) { return (scope.dataset === 'diabetes') ? "(diabetes rates - 2012 est. pop.)" : "(rate per 1,000 residents)" })
+					.attr("x", function() { return frameWidth/4.8 + 400})
+					.attr("y", 52)					
 
 					var currencyFormat = d3.format("$,.2f"),
 						numberFormat = d3.format(","),
@@ -221,7 +224,7 @@ angular.module('foglightApp')
 							"<div style='margin-top: 0.4rem'><strong style='font-size: 1.3rem'>Payments: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(pTotal) + "&nbsp (" + currencyFormat(pRate) + "</strong>**)</div>" +
 							"<div><strong style='font-size: 1.3rem; margin-top: -35px'>Grants: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(gTotal) + "&nbsp (" + currencyFormat(gRate) + "</strong>**)</div>" +
 							"<div><strong style='font-size: 1.3rem; margin-top: -35px'>Totals: </strong><strong style='color: #EBF70A; font-size: 1.2rem'> &nbsp" + currencyFormat(tTotal) + "&nbsp (" + currencyFormat(tRate) + "</strong>**)</div>" +
-							"<div style='color: white; font-size: 1rem; margin-top: 0.4rem'>&nbsp&nbsp*2012 estimated population: <span style='color: #F75707'>" + numberFormat(population) + "</span></div>" + 
+							"<div style='color: white; font-size: 1rem; margin-top: 0.4rem'>&nbsp&nbsp*2012 est. pop.: <span style='color: #F75707'>" + numberFormat(population) + "</span></div>" + 
 							"<div style='color: white; font-size: 1rem'>&nbsp&nbsp**rate per 1,000 residents</div>";
 						})
 					})

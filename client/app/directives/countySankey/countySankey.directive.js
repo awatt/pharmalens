@@ -32,8 +32,6 @@ angular.module('foglightApp')
 
 					var testSelection = d3.select('.sankeyDialog')[0][0].clientWidth;
 
-					console.log("testSelection: ", testSelection)
-
 					var margin = {top: 10, right: 15, bottom: 10, left: 10},
 					frameWidth = d3.select('.sankeyDialog')[0][0].clientWidth,
 					width = frameWidth - margin.left - margin.right,
