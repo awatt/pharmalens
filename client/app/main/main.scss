@@ -159,6 +159,7 @@ md-dialog-content{
 
 body{
       background-color: rgba(255, 255, 255, 0);
+      font-size: 12px;
 }
 
 .footer{
@@ -282,6 +283,7 @@ md-card {
   background: rgba(158,202,225,0.3);
   // background: rgba(254,80,0,0.4);
   border-radius: 3px;
+  padding: 5px 15px;
 }
 
 .footer {
@@ -308,7 +310,7 @@ md-card {
 
 .infoFrame {
   min-height: 140px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 }
 
 .fade.ng-hide-remove {
