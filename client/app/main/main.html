@@ -42,28 +42,25 @@
                 <md-card flex class="fade" ng-show="dataSet === 'diabetes'">
                 <md-card-content>
 
-                  <p>As of 2014, the number of <a href="https://en.wikipedia.org/wiki/Diabetes_mellitus" target="_blank">Diabetes Mellitus</a> (DM) cases worldwide is <a href="https://www.idf.org/sites/default/files/IDF-2014-Annual-Report-final.pdf" target="_blank">estimated</a> at 387 million, with an expected growth of 55% to 592 million over the next 20 years.  Including the 316+ million at high risk of the disease, the market for consumers of DM pharmaceutical products is expected to reach about 1 billion by 2035.  Currently, 29.1 million Americans (9.3%) have DM, with some counties suffering from rates of over 20%.  An additional 86 million Americans (37%) over the age of 20 are <a href="http://www.cdc.gov/diabetes/pdfs/data/2014-report-estimates-of-diabetes-and-its-burden-in-the-united-states.pdf" target="_blank">estimated</a> to suffer from <a href="https://en.wikipedia.org/wiki/Prediabetes" target="_blank">prediabetes</a> and are at high risk for DM.</p>
-
-                  <p>Recent years have seen a massive influx of big pharma marketing payments and research grant support to physicians on behalf of DM-related treatments, intended to capture this new patient market.  More than $___ was spent in 2014 alone.</p>
-
+                  <p>The worldwide market for <a href="https://en.wikipedia.org/wiki/Diabetes_mellitus" target="_blank">Diabetes Mellitus</a> (DM) pharmaceuticals is <a href="https://www.idf.org/sites/default/files/IDF-2014-Annual-Report-final.pdf" target="_blank"> on track to reach</a> 1 billion people by 2035, including those with DM and those at high risk for the disease. With 29.1 million Americans (9.3%) currently suffering from DM and an additional <a href="http://www.cdc.gov/diabetes/pdfs/data/2014-report-estimates-of-diabetes-and-its-burden-in-the-united-states.pdf" target="_blank">86 million</a> (37%) over the age of 20 with <a href="https://en.wikipedia.org/wiki/Prediabetes" target="_blank">prediabetes</a>, the U.S. will continue to be one of the most lucrative markets for DM-related pharmaceuticals.</p>
                 </md-card-content>
                 </md-card>
 
                 <md-card flex class="fade" ng-show="dataSet === 'payments'">
                 <md-card-content>
-                  <p>PAYMENTS.  The Sunshine Act embodies the growing pubic awareness of the conflicts of interest produced by these financial relationships.  In 2009, the National Academy of Medicine (NAM), reported data suggesting “that these relationships may influence physicians to prescribe a company’s medicines even when evidence indicates another drug would be more beneficial.” (url: http://iom.nationalacademies.org/Reports/2009/Conflict-of-Interest-in-Medical-Research-Education-and-Practice.aspx)  The NAM report urged greater transparency and recommended “eliminating these problematic relationships between physicians and industry.”</p>
+                  <p>Recent years have seen a massive influx of big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of $___ was spent in 20__, with the top 10 counties recieving $__(__%), the top 10 doctors receiving $__(__%) and the top 10 promoted drugs garnering $__ (_%) of the payments.</p>
                   </md-card-content>
                 </md-card>
 
                 <md-card flex class="fade" ng-show="dataSet === 'grants'">
                 <md-card-content>
-                  <p>GRANTS.  While Open Payments is a major step towards transparency, a recent University of Colorado study published in JAMA Internal Medicine found “negligible to small” deterrence effect of the disclosure laws on physicians’ prescribing habits.  Among the researchers’ speculative reasons for the small effect was the fact that “although these payments were disclosed to state agencies, payment information was not disseminated to the public in an accessible way.”  [url: http://archinte.jamanetwork.com/article.aspx?articleid=1170047]</p>
+                  <p>The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of $___ was granted in 20__, with the top 10 counties recieving $__(__%), the top 10 lead researchers receiving $__(__%) and the top 10 researched drugs garnering $__ (_%) of the grant money.</p>
                   </md-card-content>
                 </md-card>
 
                 <md-card flex class="fade" ng-show="dataSet === 'totals'">
                 <md-card-content>
-                  <p>TOTALS.  PharmLens is designed to enhance transparency and public accessibility to this critical information, using the tools of data visualization.</p>
+                  <p>Total combined outlays for payments and research grants in 20__ stood at $____, with the top 5 pharmaceutical companies accounting for $___(__%) and the top 5 drugs accounting for $__(__%)</p>
                   </md-card-content>
                 </md-card>
 
@@ -89,53 +86,6 @@
 
        </md-card-title-text>
          </md-card-title>
-
-      <!-- DASHBOARD -->
-<!--     <div layout="row">
-
-     <div flex="80" flex-offset="10" class="textCard"> -->
-
-
-     <!-- <md-card-title> -->
-     <!-- <md-card-title-text> -->
-                     <!-- countyMap buttons -->
-
-      <!-- <div layout="row"> -->
-        <!-- <md-card class="dashCard" flex="50" flex-offset="25"> -->
-            <!-- <div layout="row">
-
-              <md-card flex="60" flex-offset="20">
-                <md-card-content layout="row">
-
-                <div flex="50">
-                  <md-radio-group layout="row" ng-model="programYear">
-                    <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
-                    <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
-                  </md-radio-group>
-                </div>
-                
-                <div flex="50" layout="row">
-                 <div ng-repeat="item in items">
-                   <md-checkbox ng-checked="existlayout-align"center center"s(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
-                 </div>
-                </div>
-
-                </md-card-content>
-              </md-card>  
-
-              </div> -->
-            <!-- </md-card> -->
-      <!-- </div> -->
-
-
-       <!-- </md-card-title-text> -->
-         <!-- </md-card-title> -->
-
-
-
-<!--             </div>
-    </div> -->
-
 
             <div id="countyMap">
               <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county, payments, grants)">
