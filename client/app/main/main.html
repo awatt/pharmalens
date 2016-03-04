@@ -48,13 +48,13 @@
 
                 <md-card flex class="fade" ng-show="dataSet === 'payments'">
                 <md-card-content>
-                  <p>Recent years have seen a massive influx of big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of $___ was spent in 20__, with the top 10 counties recieving $__(__%), the top 10 doctors receiving $__(__%) and the top 10 promoted drugs garnering $__ (_%) of the payments.</p>
+                  <p>Recent years have seen a massive influx of big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of $___ was spent in 20__, with the <a href ng-click="showCountyStatsDialog()">top 10 counties</a> recieving $__(__%), the top 10 doctors receiving $__(__%) and the top 10 promoted drugs garnering $__ (_%) of the payments.</p>
                   </md-card-content>
                 </md-card>
 
                 <md-card flex class="fade" ng-show="dataSet === 'grants'">
                 <md-card-content>
-                  <p>The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of $___ was granted in 20__, with the top 10 counties recieving $__(__%), the top 10 lead researchers receiving $__(__%) and the top 10 researched drugs garnering $__ (_%) of the grant money.</p>
+                  <p>The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of $___ was granted in 20__, with the <a href ng-click="showCountyStatsDialog()">top 10 counties</a> recieving $__(__%), the top 10 lead researchers receiving $__(__%) and the top 10 researched drugs garnering $__ (_%) of the grant money.</p>
                   </md-card-content>
                 </md-card>
 
@@ -66,21 +66,26 @@
 
               </div>
 
-
 <md-card-title>
      <md-card-title-text>
 
-            <div layout="row" >
-                <div flex="20" flex-offset="30">
+            <div layout="row" layout-align="center center">
+                <div flex="25">
                   <md-radio-group layout="row" ng-model="programYear">
                     <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
                     <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
                   </md-radio-group>
                 </div>
-                <div flex="15" layout="row">
+                <div flex="25" layout="row">
                  <div ng-repeat="item in items">
                    <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
                  </div>
+                </div>
+                <div flex="20">
+                  <md-radio-group layout="row" ng-model="metric">
+                    <md-radio-button value="total" class="md-primary">total</md-radio-button>
+                    <md-radio-button value="per_capita" class="md-primary">per&nbsp1,000&nbspresidents</md-radio-button>
+                  </md-radio-group>
                 </div>   
               </div>
 
@@ -88,7 +93,7 @@
          </md-card-title>
 
             <div id="countyMap">
-              <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" on-county-click="showSankeyDialog($event, FIPS, county, payments, grants)">
+              <div county-map countyinfo="countyInfo" bins="bins" year="programYear" dataset="dataSet" metric="metric" on-county-click="showSankeyDialog($event, FIPS, county, payments, grants)">
               </div>
             </div>
 

@@ -1,0 +1,28 @@
+<md-content ng-if="dataSet === 'payments'">
+	<md-subheader class="md-primary" ng-if="metric === 'per_capita'">Amount Per 1,000 Residents</md-subheader>
+	<md-subheader class="md-primary" ng-if="metric === 'total'">Total Amount</md-subheader>
+	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'per_capita'">
+	  <div md-virtual-repeat="item in countyPaymentStats" class="repeated-item" flex>
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
+	  </div>
+	</md-virtual-repeat-container>
+	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'total'">
+	  <div md-virtual-repeat="item in countyPaymentStats" class="repeated-item" flex>
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
+	  </div>
+	</md-virtual-repeat-container>
+</md-content>
+<md-content ng-if="dataSet === 'grants'">
+	<md-subheader class="md-primary" ng-if="metric === 'per_capita'">Amount Per 1,000 Residents</md-subheader>
+	<md-subheader class="md-primary" ng-if="metric === 'total'">Total Amount</md-subheader>
+	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'per_capita'">
+	  <div md-virtual-repeat="item in countyGrantStats" class="repeated-item" flex>
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
+	  </div>
+	</md-virtual-repeat-container>
+	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'total'">
+	  <div md-virtual-repeat="item in countyGrantStats" class="repeated-item" flex>
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
+	  </div>
+	</md-virtual-repeat-container>
+</md-content>

@@ -7500,7 +7500,7 @@ var grants2014 = [
   }
 ];
 
-function compare(a,b) {
+function compareNum(a,b) {
   if (a.number > b.number)
     return -1;
   else if (a.number < b.number)
@@ -7509,20 +7509,37 @@ function compare(a,b) {
     return 0;
 }
 
-var topCounties2013 = (function(){
-  return grants2013.sort(compare).slice(0,100);
+function compareRate(a,b) {
+  if (a.rate > b.rate)
+    return -1;
+  else if (a.rate < b.rate)
+    return 1;
+  else 
+    return 0;
+}
+
+var topCountiesNum2013 = (function(){
+  return grants2013.sort(compareNum).slice(0,100);
 })();
 
-var topCounties2014 = (function(){
-  return grants2014.sort(compare).slice(0,100);
+var topCountiesNum2014 = (function(){
+  return grants2014.sort(compareNum).slice(0,100);
 })();
 
-console.log("topCounties2014: ", topCounties2014)
+var topCountiesRate2013 = (function(){
+  return grants2013.sort(compareRate).slice(0,100);
+})();
+
+var topCountiesRate2014 = (function(){
+  return grants2014.sort(compareRate).slice(0,100);
+})();
 
     return {
       '2013': grants2013,
       '2014': grants2014,
-      topCounties2013: topCounties2013,
-      topCounties2014: topCounties2014
+      total2013: topCountiesNum2013,
+      total2014: topCountiesNum2014,
+      per_capita2013: topCountiesRate2013,
+      per_capita2014: topCountiesRate2014
     };
   });

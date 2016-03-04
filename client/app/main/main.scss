@@ -269,6 +269,23 @@ md-checkbox {
 }
 
 
+//VIRTUAL REPEAT CONTAINER
+#vertical-container {
+  height: 400px;
+  width: 350px; }
+
+md-virtual-repeat-container .repeated-item {
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  height: 40px;
+  padding-top: 10px; }
+
+md-virtual-repeat-container {
+  border: solid 1px grey; }
+
+.md-virtual-repeat-container .md-virtual-repeat-offsetter div {
+  padding-left: 16px; }
+
 // ANIMATIONS
 @-webkit-keyframes fadeIn {
   from {

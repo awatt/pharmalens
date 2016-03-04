@@ -1,13 +1,16 @@
 'use strict';
 
 angular.module('foglightApp')
-.controller('MainCtrl', function ($scope, $http, $timeout, statService, grantData, paymentData, recipientTotals, recipientNames, locator, $mdDialog) {
+.controller('MainCtrl', function ($scope, $http, $timeout, statService, grantData, paymentData, recipientTotals, recipientNames, locator, $mdDialog, payments, grants) {
 
   $scope.countyName = '';
   $scope.bins = [];
   $scope.recipientNames;
   $scope.recipientStats;
   $scope.programYear = '2014';
+  $scope.metric = 'per_capita';
+  $scope.countyPaymentStats = payments.per_capita2014;
+  $scope.countyGrantStats = grants.per_capita2014;
 
   $scope.test = 'false';
   $scope.runTest = function(){
@@ -256,15 +259,31 @@ function createFilterFor(query) {
 //INPUT SEARCH LOGIC - END
 
 
+//TOP STATS DATA SWITCHING
+$scope.$watch("metric", function(newVal, oldVal){
+  if(newVal !== oldVal){
+    $scope.countyPaymentStats = payments[newVal + $scope.programYear];
+    $scope.countyGrantStats = grants[newVal + $scope.programYear];
+  }
+})
+
+$scope.$watch("programYear", function(newVal, oldVal){
+  if(newVal !== oldVal){
+    $scope.countyPaymentStats = payments[$scope.metric + newVal];
+    $scope.countyGrantStats = grants[$scope.metric + newVal];
+  }
+})
+
 //DIALOG FUNCTIONS
 $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
+  console.log("searchTerm: ", searchTerm)
   //if no data for given county and dataset, show no data dialog
-  if( (!payments && !grants) || ($scope.dataSet === 'payments' && !payments) || ($scope.dataSet === 'grants' && !grants)  ){
+  if( ((payments === 0) && (grants === 0)) || ($scope.dataSet === 'payments' && (payments === 0)) || ($scope.dataSet === 'grants' && (grants === 0))  ){
      $mdDialog.show(
       $mdDialog.alert()
         .parent(angular.element(document.querySelector('#countyMap')))
         .clickOutsideToClose(true)
-        .title('No ' + $scope.programYear + ' results for that County')
+        .title($scope.programYear + ' results for that County: $0.00')
         .ariaLabel('')
         .ok('OK')
         .targetEvent(ev)
@@ -276,6 +295,7 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
     if(typeof searchTerm === "object" && searchTerm !== null){
       $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
     } else if (searchTerm === null) {
+
       $scope.countyName = $scope.counties[FIPS].name;
       $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
     } else {
@@ -306,18 +326,6 @@ $scope.showPhysicianSearchDialog = function(ev) {
   });
 };
 
-$scope.showNoDataDialog = function(ev) {
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/noDataDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
-
 $scope.showInfoDialog = function(ev) {
   $mdDialog.show({
     controller: dialogController,
@@ -330,21 +338,19 @@ $scope.showInfoDialog = function(ev) {
   });
 };
 
-// $scope.showCountySearchDialog = function(ev) {
-//   $mdDialog.show({
-//     controller: dialogController,
-//     templateUrl: 'app/main/countySearchDialog.html',
-//     scope: $scope,        
-//     preserveScope: true,
-//     parent: angular.element(document.body),
-//     targetEvent: ev,
-//     clickOutsideToClose:true,
-//     openFrom: angular.element(document.querySelector('#doctorLookup')),
-//     closeTo: angular.element(document.querySelector('#countyMap'))
-//   });
-// };
-//DIALOG FUNCTIONS - END
+$scope.showCountyStatsDialog = function(ev) {
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/countyStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
+};
 
+//DIALOG FUNCTIONS - END
 
 
   }) //MainCtrl Close

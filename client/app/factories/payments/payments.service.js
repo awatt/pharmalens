@@ -42699,18 +42699,14 @@ var topCountiesRate2014 = (function(){
   return payments2014.sort(compareRate).slice(0,100);
 })();
 
-console.log("topPaymentNumCounties2014: ", topCountiesNum2014)
-console.log("topPaymentRateCounties2014: ", topCountiesRate2014)
-
     return {
       '2013': payments2013,
       '2014': payments2014,
-      topCountiesNum2013: topCountiesNum2013,
-      topCountiesNum2014: topCountiesNum2014,
-      topCountiesRate2013: topCountiesRate2013,
-      topCountiesRate2014: topCountiesRate2014
+      total2013: topCountiesNum2013,
+      total2014: topCountiesNum2014,
+      per_capita2013: topCountiesRate2013,
+      per_capita2014: topCountiesRate2014
     };
-
   });
 
 

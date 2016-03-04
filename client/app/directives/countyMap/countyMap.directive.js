@@ -9,7 +9,8 @@ angular.module('foglightApp')
 			onCountyClick: '&',
 			dataset: '=',
 			year: '=',
-			bins: '='
+			bins: '=',
+			metric: '='
 		},
 
 		link: function (scope, element, attrs) {
@@ -93,7 +94,7 @@ angular.module('foglightApp')
 				var us = counties;
 
 
-				var renderMap =  function(displayDataSet){
+				var renderMap =  function(displayDataSet,newMetric){
 
 					var dMap = dataMaps[scope.year]['diabetes'],
 						pMap = dataMaps[scope.year]['payments'],
@@ -101,8 +102,9 @@ angular.module('foglightApp')
 						tMap = dataMaps[scope.year]['totals'],
 						data = dataSets[scope.year][displayDataSet],
 						displayMap = dataMaps[scope.year][displayDataSet],
-						maxDataPoint = d3.max(data, function (d){ return d.rate; }),
-						meanDataPoint = d3.mean(data, function (d){ return d.rate; })
+						metric = function(){ if(newMetric === 'total'){ return 'number';} return 'rate'; }(),
+						maxDataPoint = d3.max(data, function (d){ return d[metric]; }),
+						meanDataPoint = d3.mean(data, function (d){ return d[metric]; })
 
 					var colorScale = d3.scale.quantile()
 					.domain([0, meanDataPoint, maxDataPoint])
@@ -122,7 +124,7 @@ angular.module('foglightApp')
 				  	.style("fill", colors[0]);
 
 				  	counties.transition().duration(1000)
-				  	.style("fill", function(d) { var countyData = displayMap.get(d.id); if (countyData) { return colorScale(countyData.rate)} else {return colorScale(0)}; });
+				  	.style("fill", function(d) { var countyData = displayMap.get(d.id); if (countyData) { return colorScale(countyData[metric])} else {return colorScale(0)}; });
 
 				  	// .attr("class", function(d) { var quantized = colorScale(rateById.get(d.id)); return quantized })
 
@@ -246,7 +248,9 @@ angular.module('foglightApp')
 						var countyState = dMap.get(d.id).county + ', ' + dMap.get(d.id).state;
 						scope.countyinfo = countyState;
 						scope.bins = [];
-						scope.onCountyClick({FIPS: d.id, county: countyState, payments: pMap.get(d.id), grants: gMap.get(d.id)});
+						var countyPayments = function(){ if(!pMap.get(d.id)){ return 0;} return pMap.get(d.id).number; }();
+						var countyGrants = function(){ if(!gMap.get(d.id)){ return 0;} return gMap.get(d.id).number; }();
+						scope.onCountyClick({FIPS: d.id, county: countyState, payments: countyPayments, grants: countyGrants});
 					})
 				}
 
@@ -256,13 +260,19 @@ angular.module('foglightApp')
 
 			      scope.$watch("dataset", function(newVal, oldVal){
 			      	if(newVal !== oldVal){
-			      		renderMap(newVal);
+			      		renderMap(newVal, scope.metric);
 			      	}
 			      })
 
 			      scope.$watch("year", function(newVal, oldVal){
 			      	if(newVal !== oldVal){
-			      		renderMap(scope.dataset);
+			      		renderMap(scope.dataset, scope.metric);
+			      	}
+			      })
+
+			      scope.$watch("metric", function(newVal, oldVal){
+			      	if(newVal !== oldVal){
+			      		renderMap(scope.dataset, scope.metric);
 			      	}
 			      })
 
