@@ -10,6 +10,7 @@ router.get('/:id', controller.show);
 router.get('/FIPS/:FIPS/:program_year', controller.findByFIPS);
 router.get('/profile_ID/:profile_ID/:program_year', controller.findByProfileID);
 router.get('/FIPS/RecipientTotals/:FIPS/:program_year', controller.recipientTotalsByFIPS);
+router.get('/RecipientTotals/:program_year', controller.recipientTotalsByYear);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);

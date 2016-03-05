@@ -8,7 +8,6 @@ var Payment = require('./payment.model');
 exports.findByFIPS = function(req, res) {
   Payment.find({ program_year: req.params.program_year, recipient_FIPS: req.params.FIPS }).exec(function(err, payments) {
     if(err) {return handleError(res, err); }
-    console.log("this is payments in the back end: ", payments)
       return res.json(200, payments);
   });
 };
@@ -21,7 +20,6 @@ exports.findByProfileID = function(req, res) {
 };
 
 exports.recipientTotalsByFIPS = function(req, res) {
-  console.log("req.params: ", req.params)
   var o = {};
   o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
   o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};

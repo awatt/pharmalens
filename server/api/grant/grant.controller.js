@@ -37,6 +37,61 @@ exports.recipientTotalsByFIPS = function(req, res) {
 })
 };
 
+exports.recipientTotalsByYear = function(req, res) {
+
+  console.log("req.params.program_year: ", req.params.program_year)
+
+    Grant.aggregate([
+        { $match: {
+            program_year: Number(req.params.program_year)
+        }},
+        { $group: {
+            _id: "$recipient_profile_ID",
+            balance: { $sum: "$amount_USD" }
+        }},
+        { $lookup: {
+          from: "physicians",
+          localField: "_id",
+          foreignField: "profile_ID",
+          as: "profile"
+        }},
+        { $sort: { "balance": -1 } },
+        { $limit: 100 }
+    ], function (err, results) {
+    if(err) {return handleError(res, err); }
+
+    console.log("results on back end: ", results)
+    // var resultsMap = {};
+    // for (var key in results) {
+    //     if (results.hasOwnProperty(key) && !isNaN(key)) {
+    //       resultsMap[results[key]._id] = results[key].value;
+    //     }
+    //   }
+    return res.json(200, results);
+});
+};
+
+
+// Recommend.aggregate(
+//     [
+//         // Grouping pipeline
+//         { "$group": { 
+//             "_id": '$roomId', 
+//             "recommendCount": { "$sum": 1 }
+//         }},
+//         // Sorting pipeline
+//         { "$sort": { "recommendCount": -1 } },
+//         // Optionally limit results
+//         { "$limit": 5 }
+//     ],
+//     function(err,result) {
+
+//        // Result is an array of documents
+//     }
+// );
+
+
+
 // Get list of grants
 exports.index = function(req, res) {
   Grant.find(function (err, grants) {

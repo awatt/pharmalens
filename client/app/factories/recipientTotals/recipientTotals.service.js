@@ -3,7 +3,7 @@
 angular.module('foglightApp')
   .factory('recipientTotals', function ($resource) {
 
-    var recipientPaymentsTotals = $resource('api/payments/FIPS/RecipientTotals/:FIPS/:program_year',
+    var recipientPaymentsTotalsFIPS = $resource('api/payments/FIPS/RecipientTotals/:FIPS/:program_year',
     {
       FIPS: '@FIPS', program_year: '@program_year'
     },
@@ -13,7 +13,7 @@ angular.module('foglightApp')
       }
     });
 
-    var recipientGrantsTotals = $resource('api/grants/FIPS/RecipientTotals/:FIPS/:program_year',
+    var recipientGrantsTotalsFIPS = $resource('api/grants/FIPS/RecipientTotals/:FIPS/:program_year',
     {
       FIPS: '@FIPS',
       program_year: '@program_year'
@@ -24,8 +24,28 @@ angular.module('foglightApp')
       }
     });
 
-    var getPaymentTotals = function(FIPS, program_year){
-      return recipientPaymentsTotals.get({FIPS: FIPS, program_year: program_year}, function(Totals){
+    var recipientPaymentsTotalsYear = $resource('api/payments/RecipientTotals/:program_year',
+    {
+      program_year: '@program_year'
+    },
+    {
+      update: {
+        method: 'PUT'
+      }
+    });
+
+    var recipientGrantsTotalsYear = $resource('api/grants/RecipientTotals/:program_year',
+    {
+      program_year: '@program_year'
+    },
+    {
+      update: {
+        method: 'PUT'
+      }
+    });
+
+    var getPaymentTotalsFIPS = function(FIPS, program_year){
+      return recipientPaymentsTotalsFIPS.get({FIPS: FIPS, program_year: program_year}, function(Totals){
         var TotalsMap = {};
         for (var key in Totals) {
           if (Totals.hasOwnProperty(key) && !isNaN(key)) {
@@ -36,8 +56,8 @@ angular.module('foglightApp')
       })
     }
 
-    var getGrantTotals = function(FIPS, program_year){
-      return recipientGrantsTotals.get({FIPS: FIPS, program_year: program_year}, function(Totals){
+    var getGrantTotalsFIPS = function(FIPS, program_year){
+      return recipientGrantsTotalsFIPS.get({FIPS: FIPS, program_year: program_year}, function(Totals){
         var TotalsMap = {};
         for (var key in Totals) {
           if (Totals.hasOwnProperty(key) && !isNaN(key)) {
@@ -45,11 +65,25 @@ angular.module('foglightApp')
           }
         }
         return TotalsMap;
+      })
+    }
+
+    var getPaymentTotalsYear = function(program_year){
+      return recipientPaymentsTotalsYear.query({program_year: program_year}, function(Totals){
+        console.log("getPaymentTotalsYear results: ", Totals)
+      })
+    }
+
+    var getGrantTotalsYear = function(program_year){
+      return recipientGrantsTotalsYear.query({program_year: program_year}, function(Totals){
+        console.log("getGrantTotalsYear results: ", Totals)
       })
     }
 
     return {
-      getPaymentTotals: getPaymentTotals,
-      getGrantTotals: getGrantTotals
+      getPaymentTotalsFIPS: getPaymentTotalsFIPS,
+      getGrantTotalsFIPS: getGrantTotalsFIPS,
+      getPaymentTotalsYear: getPaymentTotalsYear,
+      getGrantTotalsYear: getGrantTotalsYear
     };
 });

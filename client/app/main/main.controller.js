@@ -11,6 +11,8 @@ angular.module('foglightApp')
   $scope.metric = 'per_capita';
   $scope.countyPaymentStats = payments.per_capita2014;
   $scope.countyGrantStats = grants.per_capita2014;
+  $scope.physicianPaymentStats;
+  $scope.physicianGrantStats;
 
   $scope.test = 'false';
   $scope.runTest = function(){
@@ -58,8 +60,6 @@ angular.module('foglightApp')
         return list.indexOf(item) > -1;
       };
 
-
-
   //PROGRESS CIRCULAR
   $scope.progress = true;
 
@@ -76,22 +76,20 @@ angular.module('foglightApp')
     }).$promise
     .then(function(){
       if ($scope.dataSet === 'payments'){
-        recipientTotals.getPaymentTotals(FIPS, program_year).$promise.then(function(paymentTotals){
+        recipientTotals.getPaymentTotalsFIPS(FIPS, program_year).$promise.then(function(paymentTotals){
           paymentData.paymentData.query({FIPS: FIPS, program_year: program_year}).$promise.then(function(paymentData){
             $scope.bins = statService.formatData(paymentData,paymentTotals,$scope.recipientNames);
-            console.log("$scope.bins.length: ", $scope.bins.length)
           })
         });
       } else if ($scope.dataSet === 'grants'){
-        recipientTotals.getGrantTotals(FIPS, program_year).$promise.then(function(grantTotals){
+        recipientTotals.getGrantTotalsFIPS(FIPS, program_year).$promise.then(function(grantTotals){
           grantData.grantData.query({FIPS: FIPS, program_year: program_year}).$promise.then(function(grantData){
             $scope.bins = statService.formatData(grantData,grantTotals,$scope.recipientNames);
-            console.log("$scope.bins.length: ", $scope.bins.length)
           })
         });
       } else {
-        recipientTotals.getPaymentTotals(FIPS, program_year).$promise.then(function(paymentTotals){
-          recipientTotals.getGrantTotals(FIPS, program_year).$promise.then(function(grantTotals){
+        recipientTotals.getPaymentTotalsFIPS(FIPS, program_year).$promise.then(function(paymentTotals){
+          recipientTotals.getGrantTotalsFIPS(FIPS, program_year).$promise.then(function(grantTotals){
             paymentData.paymentData.query({FIPS: FIPS, program_year: program_year}).$promise.then(function(paymentData){
               grantData.grantData.query({FIPS: FIPS, program_year: program_year}).$promise.then(function(grantData){
                 var totalData = paymentData.concat(grantData);
@@ -210,8 +208,8 @@ angular.module('foglightApp')
           $scope.physicianNames = physicianNames;
         }).$promise
         .then(function(){
-          recipientTotals.getPaymentTotals(newFIPS, Number($scope.programYear)).$promise.then(function(paymentTotals){
-            recipientTotals.getGrantTotals(newFIPS, Number($scope.programYear)).$promise.then(function(grantTotals){             
+          recipientTotals.getPaymentTotalsFIPS(newFIPS, Number($scope.programYear)).$promise.then(function(paymentTotals){
+            recipientTotals.getGrantTotalsFIPS(newFIPS, Number($scope.programYear)).$promise.then(function(grantTotals){             
               var physiciansMap = [];
               for (var key in $scope.physicianNames) {
                 if ($scope.physicianNames.hasOwnProperty(key) && !isNaN(key) && (paymentTotals[key] || grantTotals[key])) {
@@ -348,6 +346,21 @@ $scope.showCountyStatsDialog = function(ev) {
     targetEvent: ev,
     clickOutsideToClose:true
   });
+};
+
+$scope.showPhysicianStatsDialog = function(ev) {
+  recipientTotals.getGrantTotalsYear($scope.programYear).$promise.then(function(result){
+    $scope.physicianGrantStats = result;
+    $mdDialog.show({
+      controller: dialogController,
+      templateUrl: 'app/main/physicianStatsDialog.html',
+      scope: $scope,        
+      preserveScope: true,
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    });
+  })
 };
 
 //DIALOG FUNCTIONS - END
