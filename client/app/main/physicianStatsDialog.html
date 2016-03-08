@@ -3,7 +3,7 @@
 	<md-subheader class="md-primary">Total Amount</md-subheader>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in physicianPaymentStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.profile[0].last_name}}, {{item.profile[0].first_name}}</a>, {{item.profile[0].city}}, {{item.profile[0].state}} - {{item.balance | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.first_name}} {{item.last_name}}</a>, {{item.city}}, {{item.state}} - {{item.amount | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>
@@ -11,7 +11,15 @@
 	<md-subheader class="md-primary">Total Amount</md-subheader>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in physicianGrantStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.profile[0].last_name}}, {{item.profile[0].first_name}}</a>, {{item.profile[0].city}}, {{item.profile[0].state}} - {{item.balance | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.first_name}} {{item.last_name}}</a>, {{item.city}}, {{item.state}} - {{item.amount | currency}}
+	  </div>
+	</md-virtual-repeat-container>
+</md-content>
+<md-content ng-if="dataSet === 'totals'">
+	<md-subheader class="md-primary">Total Amount</md-subheader>
+	<md-virtual-repeat-container id="vertical-container">
+	  <div md-virtual-repeat="item in physicianTotalStats" class="repeated-item" flex>
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.first_name}} {{item.last_name}}</a>, {{item.city}}, {{item.state}} - {{item.amount | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>

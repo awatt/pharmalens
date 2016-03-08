@@ -48,23 +48,25 @@
 
                 <md-card flex class="fade" ng-show="dataSet === 'payments'">
                 <md-card-content>
-                  <p>Recent years have seen a massive influx of big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of $___ was spent in 20__, with the <a href ng-click="showCountyStatsDialog()">top 10 counties</a> recieving $__(__%), the top 10 doctors receiving $__(__%) and the top 10 promoted drugs garnering $__ (_%) of the payments.</p>
+                  <p>Recent years have seen a massive influx of big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of $___ was spent in 20__, with the <a href ng-click="showCountyStatsDialog()">top 10 counties</a> recieving $__(__%), the <a href ng-click="showPhysicianPaymentStatsDialog()">top 10 doctors</a> receiving $__(__%) and the <a href ng-click="showDrugPaymentStatsDialog()">top 10 promoted drugs</a> garnering $__ (_%) of the payments.</p>
                   </md-card-content>
                 </md-card>
 
                 <md-card flex class="fade" ng-show="dataSet === 'grants'">
                 <md-card-content>
-                  <p>The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of $___ was granted in 20__, with the <a href ng-click="showCountyStatsDialog()">top 10 counties</a> recieving $__(__%), the top <a href ng-click="showPhysicianStatsDialog()">top 10 lead researchers</a> receiving $__(__%) and the top 10 researched drugs garnering $__ (_%) of the grant money.</p>
+                  <p>The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of $___ was granted in 20__, with the <a href ng-click="showCountyStatsDialog()">top 10 counties</a> recieving $__(__%), the <a href ng-click="showPhysicianGrantStatsDialog()">top 10 lead researchers</a> receiving $__(__%) and the <a href ng-click="showDrugGrantStatsDialog()">top 10 researched drugs</a> garnering $__ (_%) of the grant money.</p>
                   </md-card-content>
                 </md-card>
 
                 <md-card flex class="fade" ng-show="dataSet === 'totals'">
                 <md-card-content>
-                  <p>Total combined outlays for payments and research grants in 20__ stood at $____, with the top 5 pharmaceutical companies accounting for $___(__%) and the top 5 drugs accounting for $__(__%)</p>
+                  <p>Total combined outlays for payments and research grants in 20__ stood at $____, with the top 5 pharmaceutical companies accounting for $___(__%), the <a href ng-click="showPhysicianTotalStatsDialog()">top 10 doctors</a> accounting for $___(__%) and the <a href ng-click="showDrugTotalStatsDialog()">top 10 promoted drugs</a> accounting for $__(__%)</p>
                   </md-card-content>
                 </md-card>
 
               </div>
+
+              <p>{{dataSet}}</p>
 
 <md-card-title>
      <md-card-title-text>

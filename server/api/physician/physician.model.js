@@ -16,10 +16,9 @@ var PhysicianSchema = new Schema({
 	state: String,
 	zip: String,
 	FIPS: Number,
-	totalPayments: [Object]
-	// payments: [{ type: Schema.Types.ObjectId, ref: 'Payment' }]
-	// _payments: {type: Schema.Types.ObjectId, ref: 'Payment'}
-    // _grants: {type: Schema.Types.ObjectId, ref: 'Grant'}
+	totalPayments: Object,
+	totalGrants: Object,
+	totalTotals: Object
 });
 
 PhysicianSchema.index({profile_ID: 1});

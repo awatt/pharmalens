@@ -20,76 +20,22 @@ exports.findByProfileID = function(req, res) {
 };
 
 exports.recipientTotalsByFIPS = function(req, res) {
-  var o = {};
-  o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
-  o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};
-  o.query = { program_year: req.params.program_year, recipient_FIPS: req.params.FIPS };
+    var o = {};
+    o.map = function(){ emit(this.recipient_profile_ID, this.amount_USD); };
+    o.reduce = function(recipient_profile_ID, amount_USD){return Array.sum(amount_USD);};
+    o.query = { program_year: req.params.program_year, recipient_FIPS: req.params.FIPS };
 
-  Grant.mapReduce(o, function (err, results) {
-    if(err) {return handleError(res, err); }
-    var resultsMap = {};
-    for (var key in results) {
-        if (results.hasOwnProperty(key) && !isNaN(key)) {
-          resultsMap[results[key]._id] = results[key].value;
+    Grant.mapReduce(o, function (err, results) {
+      if(err) {return handleError(res, err); }
+      var resultsMap = {};
+      for (var key in results) {
+          if (results.hasOwnProperty(key) && !isNaN(key)) {
+            resultsMap[results[key]._id] = results[key].value;
+          }
         }
-      }
-    return res.json(200, resultsMap);
-})
+      return res.json(200, resultsMap);
+  })
 };
-
-exports.recipientTotalsByYear = function(req, res) {
-
-  console.log("req.params.program_year: ", req.params.program_year)
-
-    Grant.aggregate([
-        { $match: {
-            program_year: Number(req.params.program_year)
-        }},
-        { $group: {
-            _id: "$recipient_profile_ID",
-            balance: { $sum: "$amount_USD" }
-        }},
-        { $lookup: {
-          from: "physicians",
-          localField: "_id",
-          foreignField: "profile_ID",
-          as: "profile"
-        }},
-        { $sort: { "balance": -1 } },
-        { $limit: 100 }
-    ], function (err, results) {
-    if(err) {return handleError(res, err); }
-
-    console.log("results on back end: ", results)
-    // var resultsMap = {};
-    // for (var key in results) {
-    //     if (results.hasOwnProperty(key) && !isNaN(key)) {
-    //       resultsMap[results[key]._id] = results[key].value;
-    //     }
-    //   }
-    return res.json(200, results);
-});
-};
-
-
-// Recommend.aggregate(
-//     [
-//         // Grouping pipeline
-//         { "$group": { 
-//             "_id": '$roomId', 
-//             "recommendCount": { "$sum": 1 }
-//         }},
-//         // Sorting pipeline
-//         { "$sort": { "recommendCount": -1 } },
-//         // Optionally limit results
-//         { "$limit": 5 }
-//     ],
-//     function(err,result) {
-
-//        // Result is an array of documents
-//     }
-// );
-
 
 
 // Get list of grants

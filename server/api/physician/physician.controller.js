@@ -37,10 +37,91 @@ exports.recipientStatsByFIPS = function(req, res) {
 
   Payment.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
-    // console.log("recipientStatsByFIPS in the back end: ", results)
     return res.json(200, results);
 })
 };
+
+
+exports.recipientGrantTotalsByYear = function(req, res) {
+      var matchProperty = 'totalGrants.' + req.params.program_year;
+      var queryObj = {},
+      sortObj = {},
+      projectObj = { 
+        profile_ID: "$profile_ID",
+        first_name: "$first_name",
+        last_name: "$last_name",
+        city: "$city", 
+        state: "$state"
+      },
+      queryConditions = {$exists: true};
+      queryObj[matchProperty] = queryConditions;
+      projectObj['amount'] = "$" + matchProperty;
+      Physician.aggregate([
+        // {$match: {totalGrants: {$ne: []}}},
+          // {$unwind: '$totalGrants'},
+          { $match: queryObj},
+          { $project: projectObj},
+          { $sort: {amount: -1} },
+          { $limit: 50 }
+      ], function (err, results) {
+      if(err) {return handleError(res, err); }
+      return res.json(200, results);
+  });
+};
+
+exports.recipientPaymentTotalsByYear = function(req, res) {
+      var matchProperty = 'totalPayments.' + req.params.program_year;
+      var queryObj = {},
+      sortObj = {},
+      projectObj = { 
+        profile_ID: "$profile_ID",
+        first_name: "$first_name",
+        last_name: "$last_name",
+        city: "$city", 
+        state: "$state"
+      },
+      queryConditions = {$exists: true};
+      queryObj[matchProperty] = queryConditions;
+      projectObj['amount'] = "$" + matchProperty;
+      Physician.aggregate([
+        // {$match: {totalPayments: {$ne: []}}},
+          // {$unwind: '$totalPayments'},
+          { $match: queryObj},
+          { $project: projectObj},
+          { $sort: {amount: -1} },
+          { $limit: 50 }
+      ], function (err, results) {
+      if(err) {return handleError(res, err); }
+      return res.json(200, results);
+  });
+};
+
+exports.recipientTotalTotalsByYear = function(req, res) {
+  console.log("getting here")
+      var matchProperty = 'totalTotals.' + req.params.program_year;
+      var queryObj = {},
+      sortObj = {},
+      projectObj = { 
+        profile_ID: "$profile_ID",
+        first_name: "$first_name",
+        last_name: "$last_name",
+        city: "$city", 
+        state: "$state"
+      },
+      queryConditions = {$exists: true};
+      queryObj[matchProperty] = queryConditions;
+      projectObj['amount'] = "$" + matchProperty;
+      Physician.aggregate([
+          { $match: queryObj},
+          { $project: projectObj},
+          { $sort: {amount: -1} },
+          { $limit: 50 }
+      ], function (err, results) {
+      if(err) {return handleError(res, err); }
+      return res.json(200, results);
+  });
+};
+
 
 
 // Get a single physician

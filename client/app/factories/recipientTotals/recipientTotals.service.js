@@ -24,7 +24,7 @@ angular.module('foglightApp')
       }
     });
 
-    var recipientPaymentsTotalsYear = $resource('api/payments/RecipientTotals/:program_year',
+    var recipientPaymentsTotalsYear = $resource('api/physicians/RecipientPaymentTotals/:program_year',
     {
       program_year: '@program_year'
     },
@@ -34,7 +34,17 @@ angular.module('foglightApp')
       }
     });
 
-    var recipientGrantsTotalsYear = $resource('api/grants/RecipientTotals/:program_year',
+    var recipientGrantsTotalsYear = $resource('api/physicians/RecipientGrantTotals/:program_year',
+    {
+      program_year: '@program_year'
+    },
+    {
+      update: {
+        method: 'PUT'
+      }
+    });
+
+    var recipientTotalsTotalsYear = $resource('api/physicians/RecipientTotalTotals/:program_year',
     {
       program_year: '@program_year'
     },
@@ -70,13 +80,16 @@ angular.module('foglightApp')
 
     var getPaymentTotalsYear = function(program_year){
       return recipientPaymentsTotalsYear.query({program_year: program_year}, function(Totals){
-        console.log("getPaymentTotalsYear results: ", Totals)
       })
     }
 
     var getGrantTotalsYear = function(program_year){
       return recipientGrantsTotalsYear.query({program_year: program_year}, function(Totals){
-        console.log("getGrantTotalsYear results: ", Totals)
+      })
+    }
+
+    var getTotalTotalsYear = function(program_year){
+      return recipientTotalsTotalsYear.query({program_year: program_year}, function(Totals){
       })
     }
 
@@ -84,6 +97,7 @@ angular.module('foglightApp')
       getPaymentTotalsFIPS: getPaymentTotalsFIPS,
       getGrantTotalsFIPS: getGrantTotalsFIPS,
       getPaymentTotalsYear: getPaymentTotalsYear,
-      getGrantTotalsYear: getGrantTotalsYear
+      getGrantTotalsYear: getGrantTotalsYear,
+      getTotalTotalsYear: getTotalTotalsYear
     };
 });
