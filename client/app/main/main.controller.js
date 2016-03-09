@@ -18,6 +18,91 @@ angular.module('foglightApp')
   $scope.drugGrantStats;
   $scope.drugTotalStats;
 
+  $scope.runStats = function(arr){
+    console.log("got here");
+    var total = 0, top = 0, docnum = arr.length;
+    for (var i = 0, max = arr.length; i<max; i++){
+      console.log("and here")
+      total += arr[i].amount;
+      if(i === 9){
+        top = total;
+      }
+    }
+    console.log("total:", total + " top: ", top + " top%: ", top/total + " numdocs: ", docnum)
+  }
+
+
+
+
+
+
+  $scope.physicianTopStats = {
+    
+    grants: {
+      '2013': {
+        top: 35363046.27000002,
+        total: 43803285.640000015
+      },
+      '2014': {
+        top: 0,
+        total: 0
+      }
+    },
+    payments: {
+      '2013': {
+        top: 0,
+        total: 0
+      },
+      '2014': {
+        top: 0,
+        total: 0
+      }
+    },
+    totals: {
+      '2013': {
+        top: 0,
+        total: 0
+      },
+      '2014': {
+        top: 0,
+        total: 0
+      }
+    }
+  }
+
+  $scope.drugTopStats = { 
+    grants: {
+      '2013': {
+        top: 35363046.27000002,
+        total: 43803285.640000015
+      },
+      '2014': {
+        top: 57884002.75166666,
+        total: 76777711.51249999
+      }
+    },
+    payments: {
+      '2013': {
+        top: 27911880.55900045,
+        total: 36060446.71050045
+      },
+      '2014': {
+        top: 82535608.24833187,
+        total: 104507268.70516518
+      }
+    },
+    totals: {
+      '2013': {
+        top: 57940176.053833775,
+        total: 67000821.724333785
+      },
+      '2014': {
+        top: 123630386.26099844,
+        total: 160109207.37916505
+      }
+    }
+  }
+
   $scope.test = 'false';
   $scope.runTest = function(){
     console.log($scope.test)
@@ -283,7 +368,7 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
   if( ((payments === 0) && (grants === 0)) || ($scope.dataSet === 'payments' && (payments === 0)) || ($scope.dataSet === 'grants' && (grants === 0))  ){
      $mdDialog.show(
       $mdDialog.alert()
-        .parent(angular.element(document.querySelector('#countyMap')))
+        .parent(angular.element(document.body))
         .clickOutsideToClose(true)
         .title($scope.programYear + ' results for that County: $0.00')
         .ariaLabel('')
@@ -353,94 +438,111 @@ $scope.showCountyStatsDialog = function(ev) {
 };
 
 $scope.showPhysicianPaymentStatsDialog = function(ev) {
+  $scope.progress = true;
   recipientTotals.getPaymentTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.physicianPaymentStats = result;
-    $mdDialog.show({
-      controller: dialogController,
-      templateUrl: 'app/main/physicianStatsDialog.html',
-      scope: $scope,        
-      preserveScope: true,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    });
+    $scope.hideProgress();
+    $scope.runStats(result);
   })
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/physicianStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
 };
 
 $scope.showPhysicianGrantStatsDialog = function(ev) {
+  $scope.progress = true;
   recipientTotals.getGrantTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.physicianGrantStats = result;
-    $mdDialog.show({
-      controller: dialogController,
-      templateUrl: 'app/main/physicianStatsDialog.html',
-      scope: $scope,        
-      preserveScope: true,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    });
+    $scope.hideProgress();
+    $scope.runStats(result);
   })
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/physicianStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
 };
 
 $scope.showPhysicianTotalStatsDialog = function(ev) {
-  console.log("hitting this")
+  $scope.progress = true;
   recipientTotals.getTotalTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.physicianTotalStats = result;
-    $mdDialog.show({
-      controller: dialogController,
-      templateUrl: 'app/main/physicianStatsDialog.html',
-      scope: $scope,        
-      preserveScope: true,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    });
+    $scope.hideProgress();
+    $scope.runStats(result);
   })
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/physicianStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
 };
 
 $scope.showDrugGrantStatsDialog = function(ev) {
+  $scope.progress = true;
   drugTotals.getDrugGrantTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.drugGrantStats = result;
-    $mdDialog.show({
-      controller: dialogController,
-      templateUrl: 'app/main/drugStatsDialog.html',
-      scope: $scope,        
-      preserveScope: true,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    });
+    $scope.hideProgress();
+    $scope.runStats(result);
   })
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/drugStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
 };
 
 $scope.showDrugPaymentStatsDialog = function(ev) {
+  $scope.progress = true;
   drugTotals.getDrugPaymentTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.drugPaymentStats = result;
-    $mdDialog.show({
-      controller: dialogController,
-      templateUrl: 'app/main/drugStatsDialog.html',
-      scope: $scope,        
-      preserveScope: true,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    });
+    $scope.hideProgress();
+    $scope.runStats(result);
   })
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/drugStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
 };
 
 $scope.showDrugTotalStatsDialog = function(ev) {
+  $scope.progress = true;
   drugTotals.getDrugTotalTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.drugTotalStats = result;
-    $mdDialog.show({
-      controller: dialogController,
-      templateUrl: 'app/main/drugStatsDialog.html',
-      scope: $scope,        
-      preserveScope: true,
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true
-    });
+    $scope.hideProgress();
+    $scope.runStats(result);
   })
+  $mdDialog.show({
+    controller: dialogController,
+    templateUrl: 'app/main/drugStatsDialog.html',
+    scope: $scope,        
+    preserveScope: true,
+    parent: angular.element(document.body),
+    targetEvent: ev,
+    clickOutsideToClose:true
+  });
 };
 
 //DIALOG FUNCTIONS - END

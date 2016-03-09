@@ -21,12 +21,12 @@ exports.recipientNamesByFIPS = function(req, res) {
     if(err) {return handleError(res, err); }
     var resultsMap = {};
     for (var key in results) {
-        if (results.hasOwnProperty(key) && !isNaN(key)) {
-          resultsMap[results[key]._id] = results[key].value;
-        }
+      if (results.hasOwnProperty(key) && !isNaN(key)) {
+        resultsMap[results[key]._id] = results[key].value;
       }
+    }
     return res.json(200, resultsMap);
-})
+  })
 };
 
 exports.recipientStatsByFIPS = function(req, res) {
@@ -38,9 +38,8 @@ exports.recipientStatsByFIPS = function(req, res) {
   Payment.mapReduce(o, function (err, results) {
     if(err) {return handleError(res, err); }
     return res.json(200, results);
-})
+  })
 };
-
 
 exports.recipientGrantTotalsByYear = function(req, res) {
       var matchProperty = 'totalGrants.' + req.params.program_year;
@@ -57,12 +56,10 @@ exports.recipientGrantTotalsByYear = function(req, res) {
       queryObj[matchProperty] = queryConditions;
       projectObj['amount'] = "$" + matchProperty;
       Physician.aggregate([
-        // {$match: {totalGrants: {$ne: []}}},
-          // {$unwind: '$totalGrants'},
           { $match: queryObj},
           { $project: projectObj},
-          { $sort: {amount: -1} },
-          { $limit: 50 }
+          { $sort: {amount: -1} }
+          // { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
       return res.json(200, results);
@@ -84,12 +81,10 @@ exports.recipientPaymentTotalsByYear = function(req, res) {
       queryObj[matchProperty] = queryConditions;
       projectObj['amount'] = "$" + matchProperty;
       Physician.aggregate([
-        // {$match: {totalPayments: {$ne: []}}},
-          // {$unwind: '$totalPayments'},
           { $match: queryObj},
           { $project: projectObj},
-          { $sort: {amount: -1} },
-          { $limit: 50 }
+          { $sort: {amount: -1} }
+          // { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
       return res.json(200, results);
@@ -97,7 +92,6 @@ exports.recipientPaymentTotalsByYear = function(req, res) {
 };
 
 exports.recipientTotalTotalsByYear = function(req, res) {
-  console.log("getting here")
       var matchProperty = 'totalTotals.' + req.params.program_year;
       var queryObj = {},
       sortObj = {},
@@ -114,8 +108,8 @@ exports.recipientTotalTotalsByYear = function(req, res) {
       Physician.aggregate([
           { $match: queryObj},
           { $project: projectObj},
-          { $sort: {amount: -1} },
-          { $limit: 50 }
+          { $sort: {amount: -1} }
+          // { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
       return res.json(200, results);

@@ -5,7 +5,7 @@ angular.module('foglightApp')
 
    var dataObj = {},
    recipientStatsMap = {},
-        bins = ["less than $500", "btw $500 - $1,000", "btw $1,000 - $5,000", '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k']
+        bins = ["< $500", "$500 - $1,000", "$1,000 - $5,000", '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k']
 
     var findBin = function(val){
       var arr = [0, 500, 1000, 5000, 10000, 25000, 50000, 100000, 200000],

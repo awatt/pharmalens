@@ -9,6 +9,7 @@ router.get('/', controller.index);
 router.get('/:id', controller.show);
 router.get('/DrugGrantTotals/:program_year', controller.drugGrantTotalsByYear);
 router.get('/DrugPaymentTotals/:program_year', controller.drugPaymentTotalsByYear);
+router.get('/DrugTotalTotals/:program_year', controller.drugTotalTotalsByYear);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);

@@ -18,9 +18,17 @@ exports.drugGrantTotalsByYear = function(req, res) {
           { $match: queryObj},
           { $project: projectObj},
           { $sort: {amount: -1} },
-          { $limit: 50 }
+          { $limit: 100 }
       ], function (err, results) {
-console.log("backend results: ", results)
+      
+      results.forEach(function(doc){
+        var arr = doc.submitting_mfrs, mfrs = formatMfr(arr[0]);
+        for (var i = 1, max = arr.length; i < max; i++){
+          mfrs += ', ' + formatMfr(arr[i]);
+        }
+        doc.submitting_mfrs = mfrs;
+        return doc;
+      })
 
       if(err) {return handleError(res, err); }
       return res.json(200, results);
@@ -43,7 +51,7 @@ exports.drugPaymentTotalsByYear = function(req, res) {
           { $match: queryObj},
           { $project: projectObj},
           { $sort: {amount: -1} },
-          { $limit: 50 }
+          { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
 
@@ -55,32 +63,66 @@ exports.drugPaymentTotalsByYear = function(req, res) {
         doc.submitting_mfrs = mfrs;
         return doc;
       })
-      console.log("payment results: ", results)
+
       return res.json(200, results);
   });
 };
 
 exports.drugTotalTotalsByYear = function(req, res) {
-      var matchProperty = 'totalPayment' + req.params.program_year;
-      var queryObj = {},
-      sortObj = {},
-      projectObj = { 
-        drug: 1,
+
+var matchPaymentProperty = 'totalPayment' + req.params.program_year,
+    matchGrantProperty  = 'totalGrant' + req.params.program_year,
+    queryObjMatch = {'$or': []},
+    queryObj1 = {},
+    queryObj2 = {},
+    queryObj3 = {},
+    queryObj4 = {},
+    queryConditions = {$exists: true};
+    queryObj1[matchPaymentProperty] = queryConditions;
+    queryObj2[matchGrantProperty] = queryConditions;
+    queryObjMatch['$or'].push(queryObj1, queryObj2);
+    queryObj3['$addToSet'] = '$' + matchGrantProperty;
+    queryObj4['$addToSet'] = '$' + matchPaymentProperty;
+
+    Drug.aggregate([
+      {$match: queryObjMatch },
+      {$unwind: "$submitting_mfrs"},
+      {$group: { 
+        _id: "$drug",
+        grantAmount: queryObj3,
+        paymentAmount: queryObj4,
+        submitting_mfrs: {$addToSet: "$submitting_mfrs"}
+      }},
+      {$unwind: "$grantAmount"},
+      {$unwind: "$paymentAmount"},
+      {$project: {
+        _id: 0,
+        drug: "$_id",
+        amount: {$sum: ['$grantAmount', '$paymentAmount']},
         submitting_mfrs: 1
-      },
-      queryConditions = {$exists: true};
-      queryObj[matchProperty] = queryConditions;
-      projectObj['amount'] = "$" + matchProperty;
-      Drug.aggregate([
-          { $match: queryObj},
-          { $project: projectObj},
-          { $sort: {amount: -1} },
-          { $limit: 50 }
+      }},
+      { $sort: {amount: -1} },
+      { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
+
+      results.forEach(function(doc){
+        var arr = doc.submitting_mfrs, mfrs = formatMfr(arr[0]);
+        for (var i = 1, max = arr.length; i < max; i++){
+          mfrs += ', ' + formatMfr(arr[i]);
+        }
+        doc.submitting_mfrs = mfrs;
+
+        return doc;
+      })
+
       return res.json(200, results);
   });
 };
+
+var zeroFormat = function(val){
+  return (val) ? val : 0;
+}
 
 var formatMfr = function(str){
   if(str === "Daiichi Sankyo Inc."){return "SANKYO"};
@@ -101,7 +143,6 @@ var formatMfr = function(str){
   if(str === "Dr.Reddy's Laboratories,Inc."){return "DR. REDDY'S"};
   return str.match(/(?:^|(?:[.!?]\s))(\w+)/)[0].toUpperCase();
 }
-
 
 
 // Get list of drugs

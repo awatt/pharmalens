@@ -1,5 +1,8 @@
 <md-dialog aria-label="..."  ng-cloak>
-<md-content ng-if="dataSet === 'payments'">
+  <div ng-hide="!progress" layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular class="md-warn md-hue-3 stats"  md-mode="indeterminate" md-diameter="60"></md-progress-circular>
+  </div>
+<md-content ng-if="dataSet === 'payments' && !progress">
 	<md-subheader class="md-primary">Total Amount</md-subheader>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in drugPaymentStats" class="repeated-item" flex>
@@ -7,7 +10,7 @@
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>
-<md-content ng-if="dataSet === 'grants'">
+<md-content ng-if="dataSet === 'grants' && !progress">
 	<md-subheader class="md-primary">Total Amount</md-subheader>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in drugGrantStats" class="repeated-item" flex>
@@ -15,7 +18,7 @@
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>
-<md-content ng-if="dataSet === 'totals'">
+<md-content ng-if="dataSet === 'totals' && !progress">
 	<md-subheader class="md-primary">Total Amount</md-subheader>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in drugTotalStats" class="repeated-item" flex>

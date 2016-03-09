@@ -23,6 +23,16 @@ angular.module('foglightApp')
       }
     });
 
+    var drugTotalsTotalsYear = $resource('api/drugs/DrugTotalTotals/:program_year',
+    {
+      program_year: '@program_year'
+    },
+    {
+      update: {
+        method: 'PUT'
+      }
+    });
+
     var getDrugPaymentTotalsYear = function(program_year){
       return drugPaymentsTotalsYear.query({program_year: program_year}, function(Totals){
       })
@@ -33,8 +43,14 @@ angular.module('foglightApp')
       })
     }
 
+    var getDrugTotalTotalsYear = function(program_year){
+      return drugTotalsTotalsYear.query({program_year: program_year}, function(Totals){
+      })
+    }
+
     return {
       getDrugPaymentTotalsYear: getDrugPaymentTotalsYear,
-      getDrugGrantTotalsYear: getDrugGrantTotalsYear
+      getDrugGrantTotalsYear: getDrugGrantTotalsYear,
+      getDrugTotalTotalsYear: getDrugTotalTotalsYear
     };
 });
