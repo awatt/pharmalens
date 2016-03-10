@@ -58,8 +58,8 @@ exports.recipientGrantTotalsByYear = function(req, res) {
       Physician.aggregate([
           { $match: queryObj},
           { $project: projectObj},
-          { $sort: {amount: -1} }
-          // { $limit: 100 }
+          { $sort: {amount: -1} },
+          { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
       return res.json(200, results);
@@ -83,8 +83,8 @@ exports.recipientPaymentTotalsByYear = function(req, res) {
       Physician.aggregate([
           { $match: queryObj},
           { $project: projectObj},
-          { $sort: {amount: -1} }
-          // { $limit: 100 }
+          { $sort: {amount: -1} },
+          { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
       return res.json(200, results);
@@ -108,8 +108,8 @@ exports.recipientTotalTotalsByYear = function(req, res) {
       Physician.aggregate([
           { $match: queryObj},
           { $project: projectObj},
-          { $sort: {amount: -1} }
-          // { $limit: 100 }
+          { $sort: {amount: -1} },
+          { $limit: 100 }
       ], function (err, results) {
       if(err) {return handleError(res, err); }
       return res.json(200, results);

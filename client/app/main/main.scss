@@ -34,6 +34,11 @@ p {
   position: auto;
 }
 
+.subheading {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .counties {
   fill: none;
 }
@@ -200,6 +205,7 @@ md-radio-group {
     text-align: center;
     letter-spacing: 0.4em;
     margin-bottom: 30px;
+    margin-left: 40px;
     padding-top: 20px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -245,7 +251,7 @@ md-card {
 }
 
 .infoFrame {
-  min-height: 140px;
+  min-height: 160px;
   // margin-bottom: 40px;
 }
 
@@ -257,6 +263,16 @@ md-card {
 .fade.ng-hide-remove {
     -webkit-animation: fadeIn 1.75s;
     animation: fadeIn 1.75s;
+}
+
+#dashboard {
+  font-size: 12;
+  font-weight: bold;
+}
+
+#infoButton {
+  float: right;
+  // margin: 50px;
 }
 
 

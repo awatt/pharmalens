@@ -7501,37 +7501,27 @@ var grants2014 = [
 ];
 
 function compareNum(a,b) {
-  if (a.number > b.number)
-    return -1;
-  else if (a.number < b.number)
-    return 1;
-  else 
-    return 0;
+    return b.number - a.number;
 }
 
 function compareRate(a,b) {
-  if (a.rate > b.rate)
-    return -1;
-  else if (a.rate < b.rate)
-    return 1;
-  else 
-    return 0;
+    return b.rate - a.rate;
 }
 
 var topCountiesNum2013 = (function(){
-  return grants2013.sort(compareNum).slice(0,100);
+  return grants2013.sort(compareNum).slice(0);
 })();
 
 var topCountiesNum2014 = (function(){
-  return grants2014.sort(compareNum).slice(0,100);
+  return grants2014.sort(compareNum).slice(0);
 })();
 
 var topCountiesRate2013 = (function(){
-  return grants2013.sort(compareRate).slice(0,100);
+  return grants2013.sort(compareRate).slice(0);
 })();
 
 var topCountiesRate2014 = (function(){
-  return grants2014.sort(compareRate).slice(0,100);
+  return grants2014.sort(compareRate).slice(0);
 })();
 
     return {
