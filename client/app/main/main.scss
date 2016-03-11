@@ -1,14 +1,4 @@
-
-p {
-  margin: 0;
-}
-
-.footer {
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 70px;
-    // border-top: 1px solid #E5E5E5;
-}
+//--------------------------BACKGROUND IMAGE
 
 .fullscreen {
   width: 110%;
@@ -29,69 +19,12 @@ p {
   }
 }
 
+
+//----------------------------MAIN BODY & CONTAINER
+
 .container {
   width: 85%;
   position: auto;
-}
-
-.subheading {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.counties {
-  fill: none;
-}
-
-.states {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-
-//begin sankey
-.node rect {
-  cursor: move;
-  fill-opacity: .9;
-  shape-rendering: crispEdges;
-}
-
-.node text {
-  pointer-events: none;
-  text-shadow: 0 1px 0 #fff;
-}
-
-.link {
-  fill: none;
-  stroke: #000;
-  stroke-opacity: .2;
-}
-
-.link:hover {
-  stroke-opacity: .5;
-}
-
-md-input-container {
-  margin: 10px; }
-
-.physician-list li {
-  border-bottom: 1px solid #ccc;
-  height: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  white-space: normal; }
-.physician-list li:last-child {
-  border-bottom-width: 0; }
-.physician-list .item-title,
-.physician-list .item-metadata {
-  display: block;
-  line-height: 2; }
-.physician-list .item-title md-icon {
-  height: 18px;
-  width: 18px; }
-
-md-dialog-content{
-  padding: 2px;
 }
 
 body{
@@ -99,87 +32,37 @@ body{
       // font-size: 13px;
 }
 
-// .footer{
-//   border-top: 0px;
-// }
-
-
-//COUNTYMAP
-
-  .fullscreen-dialog {
-       height:90%;
-       width:90%;
-       max-height:90%;
-       max-width: 90%;
-       position: absolute;
-       top: 5%;
-       left: 5%;
-       border-radius: 0;
-   }
-
-#countyMap svg {
-    display: block;
-    margin: auto;
+.mainBody {
+  margin-top: 20px;
 }
 
-md-progress-circular .sankey {
-  margin: 175px;
+//BODYCARD
+
+.bodyCard {
+  padding-bottom: 100px;
 }
 
-md-progress-circular .stats {
-  margin: 50px;
+md-card {
+  background: rgba(158,202,225,0.3);
+  // background: rgba(254,80,0,0.4);
+  border-radius: 3px;
+  padding: 5px 15px;
 }
+
+
+//----------------------------BUTTONS
 
 i {
   vertical-align: middle;
 }
 
- text.ticks {
-        font-size: 8pt;
-        // font-weight: bold;
-        font-family: Consolas, courier;
-        fill: #6B6969;
-      }
 
- text.annotation {
-        font-size: 8pt;
-        font-family: Consolas, courier;
-        fill: #928D8D;
-      }
-
-//SANKEYMAP
-
-md-radio-group {
-  width: 150px; 
+#infoButton {
+  float: right;
+  // margin: 50px;
 }
 
-.sankeyDialog {
-  overflow-y: hidden;
-}
-
-.sankeyTitle {
-  font-weight: bold;
-  font-size: 22px;
-  max-height: 50px;
-}
-
-.sankeyHeaders {
-  font-weight: bolder;
-  font-size: 16px;
-  background-color: #9a169d;
-  min-height: 22px;
-}
-
-.fa-long-arrow-right {
-  padding: 0 15px;
-}
-
-.fa-money {
-  color: #85bb65;
-}
-
-
-//MAIN TITLE
+//----------------------------MAIN TITLE
 
 .unblurred{
   color: #1d91c0;
@@ -210,33 +93,33 @@ md-radio-group {
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-// .titleCard {
-//   width: 75%;
-//   position: center;
-// }
 
-//BODYCARD
+//---------------------------------INFO CARD
 
-.bodyCard {
-  padding-bottom: 100px;
+.subheading {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-md-card {
-  background: rgba(158,202,225,0.3);
-  // background: rgba(254,80,0,0.4);
-  border-radius: 3px;
-  padding: 5px 15px;
+
+
+
+//---------------------------------DASHBOARD
+
+md-radio-group {
+  width: 150px; 
 }
 
-.footer {
-  margin-top: 50px;
-  font-size: 12px;
-  line-height: 1.2;
+md-radio-button {
+  margin: 16px;
 }
 
-.footerCard {
-  padding-top: 10px;
+md-checkbox {
+  margin: 14px;
 }
+
+
+//--------------DASH ANIMATION
 
 .fade, .dashCard {
   // background: rgba(254,80,0,0.65);
@@ -270,24 +153,9 @@ md-card {
   font-weight: bold;
 }
 
-#infoButton {
-  float: right;
-  // margin: 50px;
-}
 
 
-md-radio-button {
-  margin: 16px;
-}
-
-md-checkbox {
-  margin: 14px;
-}
-
-.mainBody {
-  margin-top: 20px;
-}
-
+//--------------------------- STATS DIALOGS
 
 //VIRTUAL REPEAT CONTAINER
 #vertical-container {
@@ -306,7 +174,171 @@ md-virtual-repeat-container {
 .md-virtual-repeat-container .md-virtual-repeat-offsetter div {
   padding-left: 16px; }
 
-// ANIMATIONS
+
+//COUNTY STATS DIALOG
+
+
+//DRUG STATS DIALOG
+
+
+//PHYSICAIN STATS DIALOG
+
+
+
+//INFO DIALOG
+
+
+//--------------------------SEARCH DIALOG
+
+md-input-container {
+  margin: 10px; }
+
+.physician-list li {
+  border-bottom: 1px solid #ccc;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal; }
+.physician-list li:last-child {
+  border-bottom-width: 0; }
+.physician-list .item-title,
+.physician-list .item-metadata {
+  display: block;
+  line-height: 2; }
+.physician-list .item-title md-icon {
+  height: 18px;
+  width: 18px; }
+
+
+
+
+//------------------------CHOROPLETH U.S. COUNTY MAP
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+#countyMap svg {
+    display: block;
+    margin: auto;
+}
+
+//----------CHOROPLETH LEGEND
+
+ text.ticks {
+        font-size: 8pt;
+        // font-weight: bold;
+        font-family: Consolas, courier;
+        fill: #6B6969;
+      }
+
+ text.annotation {
+        font-size: 8pt;
+        font-family: Consolas, courier;
+        fill: #928D8D;
+      }
+
+
+//-----------------------------------SANKEY MAP
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+
+//-------SANKEY DIALOG
+
+.sankeyDialog {
+  overflow-y: hidden;
+}
+
+.sankeyTitle {
+  font-weight: bold;
+  font-size: 22px;
+  max-height: 50px;
+}
+
+.sankeyHeaders {
+  font-weight: bolder;
+  font-size: 16px;
+  background-color: #9a169d;
+  min-height: 22px;
+}
+
+.fa-long-arrow-right {
+  padding: 0 15px;
+}
+
+.fa-money {
+  color: #85bb65;
+}
+
+.fullscreen-dialog {
+   height:90%;
+   width:90%;
+   max-height:90%;
+   max-width: 90%;
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   border-radius: 0;
+}
+
+
+//-------------------------------PROGRESS INDICATORS
+
+md-progress-circular .sankey {
+  margin: 175px;
+}
+
+md-progress-circular .stats {
+  margin: 50px;
+}
+
+
+
+//--------------------------------------FOOTER
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    // border-top: 1px solid #E5E5E5;
+}
+
+.footer {
+  margin-top: 50px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.footerCard {
+  padding-top: 10px;
+}
+
+
+// ------------------------------------ANIMATIONS
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
