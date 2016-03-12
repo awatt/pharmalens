@@ -406,14 +406,8 @@ $scope.$watch("metric", function(newVal, oldVal){
 $scope.$watch("programYear", function(newVal, oldVal){
   if(newVal !== oldVal){
     $scope.countyPaymentStats = payments[$scope.metric + newVal];
-    console.log("$scope.countyPaymentStats")
-    $scope.runStats($scope.countyPaymentStats)
     $scope.countyGrantStats = grants[$scope.metric + newVal];
-    console.log("$scope.countyGrantStats")
-    $scope.runStats($scope.countyGrantStats)
     $scope.countyTotalStats = totals[$scope.metric + newVal];
-    console.log("$scope.countyTotalStats")
-    $scope.runStats($scope.countyTotalStats)
   }
 })
 
@@ -497,7 +491,6 @@ $scope.showPhysicianPaymentStatsDialog = function(ev) {
   recipientTotals.getPaymentTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.physicianPaymentStats = result;
     $scope.hideProgress();
-    $scope.runStats(result);
   })
   $mdDialog.show({
     controller: dialogController,
@@ -515,7 +508,6 @@ $scope.showPhysicianGrantStatsDialog = function(ev) {
   recipientTotals.getGrantTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.physicianGrantStats = result;
     $scope.hideProgress();
-    $scope.runStats(result);
   })
   $mdDialog.show({
     controller: dialogController,
@@ -533,7 +525,6 @@ $scope.showPhysicianTotalStatsDialog = function(ev) {
   recipientTotals.getTotalTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.physicianTotalStats = result;
     $scope.hideProgress();
-    $scope.runStats(result);
   })
   $mdDialog.show({
     controller: dialogController,
@@ -551,7 +542,6 @@ $scope.showDrugGrantStatsDialog = function(ev) {
   drugTotals.getDrugGrantTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.drugGrantStats = result;
     $scope.hideProgress();
-    $scope.runStats(result);
   })
   $mdDialog.show({
     controller: dialogController,
@@ -569,7 +559,6 @@ $scope.showDrugPaymentStatsDialog = function(ev) {
   drugTotals.getDrugPaymentTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.drugPaymentStats = result;
     $scope.hideProgress();
-    $scope.runStats(result);
   })
   $mdDialog.show({
     controller: dialogController,
@@ -587,7 +576,6 @@ $scope.showDrugTotalStatsDialog = function(ev) {
   drugTotals.getDrugTotalTotalsYear($scope.programYear).$promise.then(function(result){
     $scope.drugTotalStats = result;
     $scope.hideProgress();
-    $scope.runStats(result);
   })
   $mdDialog.show({
     controller: dialogController,

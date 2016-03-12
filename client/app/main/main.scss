@@ -23,7 +23,7 @@
 //----------------------------MAIN BODY & CONTAINER
 
 .container {
-  width: 85%;
+  width: 90%;
   position: auto;
 }
 
@@ -42,11 +42,16 @@ body{
   padding-bottom: 100px;
 }
 
+
+//----------------------------CARDS
+
+
 md-card {
-  background: rgba(158,202,225,0.3);
+  background: rgba(1,70,54, 0.12);
+  // background: rgba(158,202,225,0.3);
   // background: rgba(254,80,0,0.4);
   border-radius: 3px;
-  padding: 5px 15px;
+  // padding: 5px 15px;
 }
 
 
@@ -56,10 +61,16 @@ i {
   vertical-align: middle;
 }
 
-
 #infoButton {
   float: right;
-  // margin: 50px;
+  margin-top: 25px;
+  margin-right: 80px;
+  margin-left: -80px;
+  background: rgba(166,189,219,0.6);
+}
+
+#doctorLookup {
+  float: right;
 }
 
 //----------------------------MAIN TITLE
@@ -67,6 +78,7 @@ i {
 .unblurred{
   color: #1d91c0;
   // color: #9ACA7E;
+  // rgba(44, 160, 44,0.2)
 }
 
 .blurred {
@@ -87,55 +99,79 @@ i {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.4em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: 40px;
     padding-top: 20px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 
-//---------------------------------INFO CARD
-
-.subheading {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-
-
 
 //---------------------------------DASHBOARD
 
-md-radio-group {
-  width: 150px; 
-}
+//---DASH INFO
 
-md-radio-button {
-  margin: 16px;
-}
-
-md-checkbox {
-  margin: 14px;
+.subheading {
+  // font-weight: bold;
+  font-size: 1.1em;
+  // line-height: 1;
 }
 
 
-//--------------DASH ANIMATION
+#dashboard {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 11em 4em 1em 4em;
+  // border-width: 1px;
+  // border-color: rgba(44, 160, 44,0.2);
+  // border-color: rgba(44, 160, 44,0.2);
+  // border-style: solid;
+  border-radius: 3px;
+  background-color: rgba(236,226,240, 0.75);
+}
+
+//---DASH ANIMATION
+
+p {
+  margin: 0;
+}
 
 .fade, .dashCard {
   // background: rgba(254,80,0,0.65);
-  background: rgba(158,202,225,0.65);
+  // background: rgba(158,202,225,0.65);
+  // background: rgba(44, 160, 44, 0.65);
 }
 
 .fade {
   position: absolute;
-  left: 20%;
-  right: 20%;
+  margin: 1.3% 16.3% 0 1.3%;
+  // border-width: 2px;
+  // border-color: rgba(166,189,219,0.3);
+  // border-color: rgba(158, 218, 229,0.3);
+  // border-style: solid;
+  border-radius: 4px;
+  background-color: rgba(255,247,251, 0.8);
+  // background-color: rgba(166, 189, 219, 0.7);
+  
+  // background: rgba(158, 218, 229,0.6);
+  box-shadow: none;
   opacity: 1;
 }
 
-.infoFrame {
-  min-height: 160px;
-  // margin-bottom: 40px;
+#infoCard {
+  min-height: 152px;
+  font-size: 13px;
+  margin: 0 8% 2% 8%;
+  line-height: 1.3em;
+  border-radius: 1px;
+  background-color: rgba(54, 144, 192, 0.38);
+  // border-style: solid;
+  // border-width: 2px;
+  // border-color: rgba(54, 144, 192, 0.2);
+}
+
+.infoText {
+  margin: 16px;
 }
 
 .fade.ng-hide-remove {
@@ -148,11 +184,9 @@ md-checkbox {
     animation: fadeIn 1.75s;
 }
 
-#dashboard {
-  font-size: 12;
-  font-weight: bold;
+md-checkbox {
+  border-width: 1px;
 }
-
 
 
 //--------------------------- STATS DIALOGS
@@ -317,7 +351,6 @@ md-progress-circular .stats {
 }
 
 
-
 //--------------------------------------FOOTER
 
 .footer {
@@ -360,32 +393,32 @@ md-progress-circular .stats {
 }
 
 @-webkit-keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #9ACA7E; }
+  0%   { text-shadow: 0px 0px 0px #85BB65; }
   35%   { text-shadow: 0px 0px 12px #1d91c0; }
-  60% { text-shadow: 0px 0px 0px #9ACA7E; }
+  60% { text-shadow: 0px 0px 0px #85BB65; }
   // 75%   { text-shadow: 0px 0px 6px #9ACA7E; }
-  100% { text-shadow: 0px 0px 0px #9ACA7E; }
+  100% { text-shadow: 0px 0px 0px #85BB65; }
 }
 @-moz-keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #9ACA7E; }
+  0%   { text-shadow: 0px 0px 0px #85BB65; }
   35%   { text-shadow: 0px 0px 12px #1d91c0; }
-  60% { text-shadow: 0px 0px 0px #9ACA7E; }
+  60% { text-shadow: 0px 0px 0px #85BB65; }
   // 75%   { text-shadow: 0px 0px 6px #9ACA7E; }
-  100% { text-shadow: 0px 0px 0px #9ACA7E; }
+  100% { text-shadow: 0px 0px 0px #85BB65; }
 }
 @-o-keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #9ACA7E; }
+  0%   { text-shadow: 0px 0px 0px #85BB65; }
   35%   { text-shadow: 0px 0px 12px #1d91c0; }
-  60% { text-shadow: 0px 0px 0px #9ACA7E; }
+  60% { text-shadow: 0px 0px 0px #85BB65; }
   // 75%   { text-shadow: 0px 0px 6px #9ACA7E; }
-  100% { text-shadow: 0px 0px 0px #9ACA7E; }
+  100% { text-shadow: 0px 0px 0px #85BB65; }
 }
 @keyframes blurry {
-  0%   { text-shadow: 0px 0px 0px #9ACA7E; }
+  0%   { text-shadow: 0px 0px 0px #85BB65; }
   35%   { text-shadow: 0px 0px 12px #1d91c0; }
-  60% { text-shadow: 0px 0px 0px #9ACA7E; }
+  60% { text-shadow: 0px 0px 0px #85BB65; }
   // 75%   { text-shadow: 0px 0px 6px #9ACA7E; }
-  100% { text-shadow: 0px 0px 0px #9ACA7E; }  
+  100% { text-shadow: 0px 0px 0px #85BB65; }  
 }
 
 
