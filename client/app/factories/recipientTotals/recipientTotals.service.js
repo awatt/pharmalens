@@ -24,9 +24,10 @@ angular.module('foglightApp')
       }
     });
 
-    var recipientPaymentsTotalsYear = $resource('api/physicians/RecipientPaymentTotals/:program_year',
+    var recipientTotalsYear = $resource('api/physicians/RecipientTotals/:program_year/:dataSet',
     {
-      program_year: '@program_year'
+      program_year: '@program_year',
+      dataSet: '@dataSet'
     },
     {
       update: {
@@ -34,26 +35,7 @@ angular.module('foglightApp')
       }
     });
 
-    var recipientGrantsTotalsYear = $resource('api/physicians/RecipientGrantTotals/:program_year',
-    {
-      program_year: '@program_year'
-    },
-    {
-      update: {
-        method: 'PUT'
-      }
-    });
-
-    var recipientTotalsTotalsYear = $resource('api/physicians/RecipientTotalTotals/:program_year',
-    {
-      program_year: '@program_year'
-    },
-    {
-      update: {
-        method: 'PUT'
-      }
-    });
-
+    //SANKEY QUERIES
     var getPaymentTotalsFIPS = function(FIPS, program_year){
       return recipientPaymentsTotalsFIPS.get({FIPS: FIPS, program_year: program_year}, function(Totals){
         var TotalsMap = {};
@@ -78,26 +60,76 @@ angular.module('foglightApp')
       })
     }
 
-    var getPaymentTotalsYear = function(program_year){
-      return recipientPaymentsTotalsYear.query({program_year: program_year}, function(Totals){
+    //PHYSICIAN DIALOG QUERY & CACHE
+    var getTotalsYear = function(dataSet, program_year){
+      return recipientTotalsYear.query({program_year: program_year, dataSet: dataSet}, function(stats){
       })
     }
+    getTotalsYear.cache = {};
 
-    var getGrantTotalsYear = function(program_year){
-      return recipientGrantsTotalsYear.query({program_year: program_year}, function(Totals){
-      })
-    }
+      
+    var runDashStats = function(dataArr,dataSet,year,topThreshold){
+      //check for nested objects init
+      dashStats[dataSet] = dashStats[dataSet] || {};
+      dashStats[dataSet][year] = dashStats[dataSet][year] || {}; 
+      
+      var dashObj = dashStats[dataSet][year];
 
-    var getTotalTotalsYear = function(program_year){
-      return recipientTotalsTotalsYear.query({program_year: program_year}, function(Totals){
-      })
+          // dataArr = dataInit.dataSet.year,
+          dashObj['num'] = dataArr.length;
+
+      for (var i = 0, max = dataArr.length; i < max; i++){
+        if (i === topThreshold){
+          dashObj['top'] = dashObj.total;
+        };
+        dashObj['total'] += dataArr[i].amount;
+      }
     }
+    
+  //DASHBOARD STATE
+    var dashStats = {
+    grants: {
+      '2013': {
+        top: 14022910.629999999,
+        total: 57244553.180000186,
+        num: 1770
+      },
+      '2014': {
+        top: 18532901.270000003,
+        total: 101514054.45000018,
+        num: 1848
+      }
+    },
+    payments: {
+      '2013': {
+        top: 2743070.34,
+        total: 42153350.450003706,
+        num: 84677
+      },
+      '2014': {
+        top: 4794219.020000001,
+        total: 114942571.53999986,
+        num: 115705
+      }
+    },
+    totals: {
+      '2013': {
+        top: 14805489.24,
+        total: 99397903.63000128,
+        num: 85352
+      },
+      '2014': {
+        top: 19975678.090000004,
+        total: 216456625.9900036,
+        num: 116227
+      }
+    }
+  }
 
     return {
       getPaymentTotalsFIPS: getPaymentTotalsFIPS,
       getGrantTotalsFIPS: getGrantTotalsFIPS,
-      getPaymentTotalsYear: getPaymentTotalsYear,
-      getGrantTotalsYear: getGrantTotalsYear,
-      getTotalTotalsYear: getTotalTotalsYear
+      getTotalsYear: getTotalsYear,
+      dashStats: dashStats
     };
 });

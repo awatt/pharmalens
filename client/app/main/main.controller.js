@@ -9,149 +9,16 @@ angular.module('foglightApp')
   $scope.recipientStats;
   $scope.programYear = '2014';
   $scope.metric = 'per_capita';
+  $scope.statsLimit = 100;
+  $scope.topStatsThreshold = 10;
   $scope.countyPaymentStats = payments.per_capita2014;
   $scope.countyGrantStats = grants.per_capita2014;
   $scope.countyTotalStats = totals.per_capita2014;
-  $scope.physicianPaymentStats;
-  $scope.physicianGrantStats;
-  $scope.physicianTotalStats;
-  $scope.drugPaymentStats;
-  $scope.drugGrantStats;
-  $scope.drugTotalStats;
-
-  // $scope.runStats = function(arr){
-  //   var top = 0, arr = arr.slice(0,10), docnum = arr.length, avg = 0;
-  //   for (var i = 0, max = docnum; i<max; i++){
-  //     top += arr[i].rate;
-  //   }
-  //   avg = top/docnum;
-  //   console.log("avg ", avg + " top: ", top + " numdocs: ", docnum)
-  // }
-
-  $scope.physicianTopStats = {
-    grants: {
-      '2013': {
-        top: 14022910.629999999,
-        total: 57244553.180000186,
-        num: 1770
-      },
-      '2014': {
-        top: 18532901.270000003,
-        total: 101514054.45000018,
-        num: 1848
-      }
-    },
-    payments: {
-      '2013': {
-        top: 2743070.34,
-        total: 42153350.450003706,
-        num: 84677
-      },
-      '2014': {
-        top: 4794219.020000001,
-        total: 114942571.53999986,
-        num: 115705
-      }
-    },
-    totals: {
-      '2013': {
-        top: 14805489.24,
-        total: 99397903.63000128,
-        num: 85352
-      },
-      '2014': {
-        top: 19975678.090000004,
-        total: 216456625.9900036,
-        num: 116227
-      }
-    }
-  }
-
-  $scope.drugTopStats = { 
-    grants: {
-      '2013': {
-        top: 35363046.27000002,
-        total: 43803285.640000015,
-        num: 83
-      },
-      '2014': {
-        top: 57884002.75166666,
-        total: 76793594.50999998,
-        num: 110
-      }
-    },
-    payments: {
-      '2013': {
-        top: 27911880.55900045,
-        total: 36201855.68000049,
-        num: 423
-      },
-      '2014': {
-        top: 82535608.24833187,
-        total: 104784850.15999866,
-        num: 514
-      }
-    },
-    totals: {
-      '2013': {
-        top: 58996214.27133396,
-        total: 80005141.32000071,
-        num: 446
-      },
-      '2014': {
-        top: 124532291.93583061,
-        total: 181578444.66999736,
-        num: 542
-      }
-    }
-  }
-  
-
-  $scope.countyTopStats = { 
-    grants: {
-      '2013': {
-        top: 11234105.090000004,
-        topPC: 2933.02419148287,
-        total: 57244553.18000001,
-        num: 476
-      },
-      '2014': {
-        top: 15350263.669999998,
-        topPC: 6667.5462612,
-        total: 100467944.38999994,
-        num: 460
-      }
-    },
-    payments: {
-      '2013': {
-        top: 1170724.880000001,
-        topPC: 1650.9673420819188,
-        total: 42151131.11000026,
-        num: 2558
-      },
-      '2014': {
-        top: 1947497.8299999998,
-        topPC: 5088.382967899999,
-        total: 118611712.15,
-        num: 2774
-      }
-    },
-    totals: {
-      '2013': {
-        top: 13149874.49,
-        topPC: 3361.343699393508,
-        total: 99395684.28999971,
-        num: 2559
-      },
-      '2014': {
-        top: 18335468.33,
-        topPC: 8551.784883510334,
-        total: 217014309.10000032,
-        num: 2849
-      }
-    }
-  }
-
+  $scope.physicianStats;
+  $scope.drugStats;
+  $scope.physicianTopStats = recipientTotals.dashStats;
+  $scope.drugTopStats = drugTotals.dashStats;
+  $scope.countyTopStats = totals.dashStats;
 
   $scope.test = 'false';
   $scope.runTest = function(){
@@ -486,12 +353,28 @@ $scope.showCountyStatsDialog = function(ev) {
   });
 };
 
-$scope.showPhysicianPaymentStatsDialog = function(ev) {
+$scope.showPhysicianStatsDialog = function(ev) {
+
+  //launch progress circular
   $scope.progress = true;
-  recipientTotals.getPaymentTotalsYear($scope.programYear).$promise.then(function(result){
-    $scope.physicianPaymentStats = result;
+
+  //format cashe object for inspection
+  recipientTotals.getTotalsYear.cache[$scope.dataSet] = recipientTotals.getTotalsYear.cache[$scope.dataSet] || {};
+
+  //check data cache in factory
+  if (!recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear]){
+
+    //pull data from backend - factory stores in cache
+    recipientTotals.getTotalsYear($scope.dataSet, $scope.programYear).$promise
+    .then(function(result){
+      recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear] = result;
+      $scope.physicianStats = result.slice(0,$scope.statsLimit);
+      $scope.hideProgress();
+    })
+  } else {
+    $scope.physicianStats = recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear].slice(0,$scope.statsLimit);
     $scope.hideProgress();
-  })
+  }
   $mdDialog.show({
     controller: dialogController,
     templateUrl: 'app/main/physicianStatsDialog.html',
@@ -503,78 +386,11 @@ $scope.showPhysicianPaymentStatsDialog = function(ev) {
   });
 };
 
-$scope.showPhysicianGrantStatsDialog = function(ev) {
+$scope.showDrugStatsDialog = function(ev) {
   $scope.progress = true;
-  recipientTotals.getGrantTotalsYear($scope.programYear).$promise.then(function(result){
-    $scope.physicianGrantStats = result;
-    $scope.hideProgress();
-  })
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/physicianStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
 
-$scope.showPhysicianTotalStatsDialog = function(ev) {
-  $scope.progress = true;
-  recipientTotals.getTotalTotalsYear($scope.programYear).$promise.then(function(result){
-    $scope.physicianTotalStats = result;
-    $scope.hideProgress();
-  })
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/physicianStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
-
-$scope.showDrugGrantStatsDialog = function(ev) {
-  $scope.progress = true;
-  drugTotals.getDrugGrantTotalsYear($scope.programYear).$promise.then(function(result){
-    $scope.drugGrantStats = result;
-    $scope.hideProgress();
-  })
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/drugStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
-
-$scope.showDrugPaymentStatsDialog = function(ev) {
-  $scope.progress = true;
-  drugTotals.getDrugPaymentTotalsYear($scope.programYear).$promise.then(function(result){
-    $scope.drugPaymentStats = result;
-    $scope.hideProgress();
-  })
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/drugStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
-
-$scope.showDrugTotalStatsDialog = function(ev) {
-  $scope.progress = true;
-  drugTotals.getDrugTotalTotalsYear($scope.programYear).$promise.then(function(result){
-    $scope.drugTotalStats = result;
+  drugTotals.getDrugTotalsYear($scope.programYear,$scope.dataSet).$promise.then(function(result){
+    $scope.drugStats = result;
     $scope.hideProgress();
   })
   $mdDialog.show({
@@ -591,7 +407,7 @@ $scope.showDrugTotalStatsDialog = function(ev) {
 //DIALOG FUNCTIONS - END
 
 
-  }) //MainCtrl Close
+}) //MainCtrl Close
 
 //DIALOG CONTROLLER
 function dialogController($scope, $mdDialog) {

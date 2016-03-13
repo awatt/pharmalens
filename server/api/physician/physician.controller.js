@@ -41,8 +41,12 @@ exports.recipientStatsByFIPS = function(req, res) {
   })
 };
 
-exports.recipientGrantTotalsByYear = function(req, res) {
-      var matchProperty = 'totalGrants.' + req.params.program_year;
+exports.recipientTotalsByYear = function(req, res) {
+      var matchProperty = 'total' 
+                        + req.params.dataSet.substr(0,1).toUpperCase() 
+                        + req.params.dataSet.substr(1) 
+                        + '.' 
+                        + req.params.program_year;
       var queryObj = {},
       sortObj = {},
       projectObj = { 
@@ -59,64 +63,13 @@ exports.recipientGrantTotalsByYear = function(req, res) {
           { $match: queryObj},
           { $project: projectObj},
           { $sort: {amount: -1} },
-          { $limit: 100 }
+          { $limit: 500 }
       ], function (err, results) {
+        console.log("results: ", results)
       if(err) {return handleError(res, err); }
       return res.json(200, results);
   });
 };
-
-exports.recipientPaymentTotalsByYear = function(req, res) {
-      var matchProperty = 'totalPayments.' + req.params.program_year;
-      var queryObj = {},
-      sortObj = {},
-      projectObj = { 
-        profile_ID: "$profile_ID",
-        first_name: "$first_name",
-        last_name: "$last_name",
-        city: "$city", 
-        state: "$state"
-      },
-      queryConditions = {$exists: true};
-      queryObj[matchProperty] = queryConditions;
-      projectObj['amount'] = "$" + matchProperty;
-      Physician.aggregate([
-          { $match: queryObj},
-          { $project: projectObj},
-          { $sort: {amount: -1} },
-          { $limit: 100 }
-      ], function (err, results) {
-      if(err) {return handleError(res, err); }
-      return res.json(200, results);
-  });
-};
-
-exports.recipientTotalTotalsByYear = function(req, res) {
-      var matchProperty = 'totalTotals.' + req.params.program_year;
-      var queryObj = {},
-      sortObj = {},
-      projectObj = { 
-        profile_ID: "$profile_ID",
-        first_name: "$first_name",
-        last_name: "$last_name",
-        city: "$city", 
-        state: "$state"
-      },
-      queryConditions = {$exists: true};
-      queryObj[matchProperty] = queryConditions;
-      projectObj['amount'] = "$" + matchProperty;
-      Physician.aggregate([
-          { $match: queryObj},
-          { $project: projectObj},
-          { $sort: {amount: -1} },
-          { $limit: 100 }
-      ], function (err, results) {
-      if(err) {return handleError(res, err); }
-      return res.json(200, results);
-  });
-};
-
-
 
 // Get a single physician
 exports.show = function(req, res) {

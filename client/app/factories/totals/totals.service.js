@@ -43299,13 +43299,60 @@ var topCountiesRate2014 = (function(){
   return totals2014.sort(compareRate).slice(0);
 })();
 
+//DASHBOARD STATE
+var dashStats = { 
+    grants: {
+      '2013': {
+        top: 11234105.090000004,
+        topPC: 2933.02419148287,
+        total: 57244553.18000001,
+        num: 476
+      },
+      '2014': {
+        top: 15350263.669999998,
+        topPC: 6667.5462612,
+        total: 100467944.38999994,
+        num: 460
+      }
+    },
+    payments: {
+      '2013': {
+        top: 1170724.880000001,
+        topPC: 1650.9673420819188,
+        total: 42151131.11000026,
+        num: 2558
+      },
+      '2014': {
+        top: 1947497.8299999998,
+        topPC: 5088.382967899999,
+        total: 118611712.15,
+        num: 2774
+      }
+    },
+    totals: {
+      '2013': {
+        top: 13149874.49,
+        topPC: 3361.343699393508,
+        total: 99395684.28999971,
+        num: 2559
+      },
+      '2014': {
+        top: 18335468.33,
+        topPC: 8551.784883510334,
+        total: 217014309.10000032,
+        num: 2849
+      }
+    }
+  }
+
     return {
       '2013': totals2013,
       '2014': totals2014,
       total2013: topCountiesNum2013,
       total2014: topCountiesNum2014,
       per_capita2013: topCountiesRate2013,
-      per_capita2014: topCountiesRate2014
+      per_capita2014: topCountiesRate2014,
+      dashStats: dashStats
     };
   });
 
