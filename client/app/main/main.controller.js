@@ -9,7 +9,7 @@ angular.module('foglightApp')
   $scope.recipientStats;
   $scope.programYear = '2014';
   $scope.metric = 'per_capita';
-  $scope.statsLimit = 100;
+  $scope.statsLimit = 200;
   $scope.topStatsThreshold = 10;
   $scope.countyPaymentStats = payments.per_capita2014;
   $scope.countyGrantStats = grants.per_capita2014;
@@ -24,7 +24,7 @@ angular.module('foglightApp')
   $scope.runTest = function(){
   }
 
-  //DATASET SWITCHING
+//DATASET SWITCHING
   $scope.dataSet = 'diabetes';
   $scope.dataTitle;
   $scope.setDataTitle = function(){
@@ -34,13 +34,12 @@ angular.module('foglightApp')
       $scope.dataTitle = $scope.dataSet.substring(0,1).toUpperCase() + $scope.dataSet.substring(1);
     }
   }
-
   $scope.message = 'false';
   $scope.onChange = function(cbState) {
     $scope.message = cbState;
   };
 
-  //CHECKBOXES
+//CHECKBOXES
    $scope.items = ['payments', 'grants'];
       $scope.selected = [];
       $scope.toggle = function (item, list) {
@@ -65,16 +64,14 @@ angular.module('foglightApp')
         return list.indexOf(item) > -1;
       };
 
-  //PROGRESS CIRCULAR
+//PROGRESS CIRCULAR
   $scope.progress = true;
 
   $scope.hideProgress = function(){
     $scope.progress = false;
   }
-  //PROGRESS CIRCULAR - END
 
-
-  //DATA RETRIEVAL 
+//DATA RETRIEVAL 
   $scope.getStatsByFIPS = function(FIPS, program_year){
     recipientNames.get({FIPS: FIPS, program_year: program_year}, function(recipientNames){
       $scope.recipientNames = recipientNames;
@@ -121,7 +118,7 @@ angular.module('foglightApp')
     var recipientStats = {};
     var recipientNames = {};
     if ($scope.dataSet === 'payments'){
-      paymentData.paymentDataByProfileID.query({profile_ID: physician.profile_ID, program_year: program_year}).$promise.then(function(paymentData){
+      paymentData.paymentDataByProfileID.query({profile_ID: profile_ID, program_year: program_year}).$promise.then(function(paymentData){
         recipientStats[physician.profile_ID] = physician.totalPayments;
         recipientNames[physician.profile_ID] = physician.display;
         $scope.bins = statService.formatData(paymentData,recipientStats, recipientNames);
@@ -143,11 +140,9 @@ angular.module('foglightApp')
       });
     }
   };
-  //DATA RETRIEVAL - END
 
 
-
-  //MATERIAL DESIGN TABS CONTROL
+//MATERIAL DESIGN TABS CONTROL
   $scope.data = {
     selectedIndex: 0,
     bottom: true
@@ -158,12 +153,11 @@ angular.module('foglightApp')
   $scope.previous = function() {
     $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
   };
-  //MATERIAL DESIGN TABS CONTROL - END
 
 
-  //INPUT SEARCH LOGIC
+//INPUT SEARCH LOGIC
   $scope.user = {
-    state: 'AL',
+    state: 'AR',
     county: -1,
     physician: ''
   };
@@ -183,6 +177,7 @@ angular.module('foglightApp')
     }
 
     $scope.$watch("user.state", function(newVal, oldVal){
+      console.log("newVal: ", newVal)
       if(newVal !== oldVal){
         $scope.counties = locator[newVal].map(function(county) {
           return {name: county.county, FIPS: county.FIPS};
@@ -221,7 +216,8 @@ angular.module('foglightApp')
                   var physician = {
                     value: $scope.physicianNames[key].toLowerCase(),
                     display: $scope.physicianNames[key],
-                    profile_ID: key,
+                    profile_ID: Number(key),
+                    FIPS: newFIPS,
                     totalPayments: getValue(paymentTotals[key]),
                     totalGrants: getValue(grantTotals[key])
                   };
@@ -237,12 +233,9 @@ angular.module('foglightApp')
                 }
                 return 0;
               });
-
             })
         });
       }); 
-
-
     }
   });
 
@@ -259,7 +252,6 @@ function createFilterFor(query) {
     return (state.value.indexOf(lowercaseQuery) === 0);
   };
 }
-//INPUT SEARCH LOGIC - END
 
 //TOP STATS DATA SWITCHING
 $scope.$watch("metric", function(newVal, oldVal){
@@ -279,10 +271,17 @@ $scope.$watch("programYear", function(newVal, oldVal){
 })
 
 //DIALOG FUNCTIONS
-$scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
-  //if no data for given county and dataset, show no data dialog
-  if( ((payments === 0) && (grants === 0)) || ($scope.dataSet === 'payments' && (payments === 0)) || ($scope.dataSet === 'grants' && (grants === 0))  ){
-     $mdDialog.show(
+
+$scope.binlength;
+$scope.lastindex;
+
+$scope.init = function(binlength,lastindex){
+  $scope.binlength = binlength;
+  $scope.lastindex = lastindex;
+}
+
+$scope.showAlertDialog = function(ev){
+  $mdDialog.show(
       $mdDialog.alert()
         .parent(angular.element(document.body))
         .clickOutsideToClose(true)
@@ -291,20 +290,54 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
         .ok('OK')
         .targetEvent(ev)
     );
+}
+
+
+$scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
+  console.log("FIPS: ", FIPS);
+  console.log("searchTerm: ", searchTerm);
+  console.log("payments: ", payments);
+  console.log("grants: ", grants);
+  
+  //if no data for given county and dataset, show no data dialog
+  if( ((payments === 0) && (grants === 0)) 
+    || ($scope.dataSet === 'payments' && (payments === 0 || !recipientTotals.countyTotals.payments)) 
+    || ($scope.dataSet === 'grants' && (grants === 0 || !recipientTotals.countyTotals.grants))  ){
+    
+    $scope.showAlertDialog();
+
+    //reset switch
+    recipientTotals.countyTotals.payments = recipientTotals.countyTotals.payments = false;
+
   } else {
     $scope.setDataTitle();
     $scope.progress = true;
     $scope.bins = [];
-    if(typeof searchTerm === "object" && searchTerm !== null){
+
+    //if query is for physician data from search dialog
+    if(typeof searchTerm === "object" && searchTerm !== undefined){
+
+      console.log("selectedItem, aka searchTerm: ", searchTerm)
+
+      $scope.countyName = $scope.counties[FIPS].name;
       $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
-    } else if (searchTerm === null) {
+
+    
+    //if query is for county data from search dialog
+    } else if (searchTerm === undefined) {
+
+      console.log("$scope.counties: ", $scope.counties)
 
       $scope.countyName = $scope.counties[FIPS].name;
       $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
     } else {
+
+      //map click county query  
       $scope.countyName = searchTerm;
       $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
     }
+
+
     $mdDialog.show({
       controller: dialogController,
       templateUrl: 'app/main/sankeyDialog.html',
@@ -318,6 +351,11 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants) {
 };
 
 $scope.showPhysicianSearchDialog = function(ev) {
+$scope.searchText = '';
+$scope.selectedItem = undefined;
+$scope.user.state = '';
+$scope.user.county = -1;
+
   $mdDialog.show({
     controller: dialogController,
     templateUrl: 'app/main/physicianSearchDialog.html',

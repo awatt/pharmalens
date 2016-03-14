@@ -3,7 +3,14 @@
     <md-progress-circular class="md-warn md-hue-3 stats"  md-mode="indeterminate" md-diameter="60"></md-progress-circular>
   </div>
 <md-content ng-if="!progress">
-	<md-subheader class="md-primary">Total Amount</md-subheader>
+	<div layout="row">
+		<span flex></span>
+			<md-subheader class="md-primary">Total Amount</md-subheader>
+		<span flex></span>
+		<md-button class="md-icon-button" ng-click="cancel()" aria-label="...">
+			<i class="fa fa-times"></i>
+		</md-button>
+	</div>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in physicianStats" class="repeated-item" flex>
 	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.first_name}} {{item.last_name}}</a>, {{item.city}}, {{item.state}} - {{item.amount | currency}}

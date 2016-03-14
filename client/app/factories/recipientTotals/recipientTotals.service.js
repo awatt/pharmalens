@@ -35,13 +35,25 @@ angular.module('foglightApp')
       }
     });
 
+    //switches for search dialog lookup
+    var countyTotals = {
+      payments: false,
+      grants: false
+    }
+
     //SANKEY QUERIES
     var getPaymentTotalsFIPS = function(FIPS, program_year){
+      countyTotals.payments = false;
       return recipientPaymentsTotalsFIPS.get({FIPS: FIPS, program_year: program_year}, function(Totals){
         var TotalsMap = {};
         for (var key in Totals) {
           if (Totals.hasOwnProperty(key) && !isNaN(key)) {
             TotalsMap[Totals[key]._id] = Totals[key].value;
+            
+            //switch on if payments in county
+            if(Totals[key].value){
+              countyTotals.payment = true;
+            }
           }
         }
         return TotalsMap;
@@ -49,11 +61,17 @@ angular.module('foglightApp')
     }
 
     var getGrantTotalsFIPS = function(FIPS, program_year){
+      countyTotals.grants = false;
       return recipientGrantsTotalsFIPS.get({FIPS: FIPS, program_year: program_year}, function(Totals){
         var TotalsMap = {};
         for (var key in Totals) {
           if (Totals.hasOwnProperty(key) && !isNaN(key)) {
             TotalsMap[Totals[key]._id] = Totals[key].value;
+            
+            //switch on if grants in county
+            if(Totals[key].value){
+              countyTotals.grants = true;
+            }
           }
         }
         return TotalsMap;
@@ -130,6 +148,7 @@ angular.module('foglightApp')
       getPaymentTotalsFIPS: getPaymentTotalsFIPS,
       getGrantTotalsFIPS: getGrantTotalsFIPS,
       getTotalsYear: getTotalsYear,
-      dashStats: dashStats
+      dashStats: dashStats,
+      countyTotals: countyTotals
     };
 });
