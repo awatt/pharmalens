@@ -3,8 +3,6 @@
 angular.module('foglightApp')
   .factory('grants', function () {
 
-
-
 var grants2013 =
 [
   {

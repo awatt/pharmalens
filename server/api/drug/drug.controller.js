@@ -4,14 +4,11 @@ var _ = require('lodash');
 var Drug = require('./drug.model');
 
 exports.drugTotalsByYear = function(req, res) {
-console.log("got to back end")
       var matchProperty = 'total' 
                         + req.params.dataSet.substr(0,1).toUpperCase() 
                         + req.params.dataSet.substr(1, req.params.dataSet.length-2) 
                         + req.params.program_year;
       
-      console.log("matchProperty: ", matchProperty)
-      // console.log("req.params.dataSet.substr(1, req.params.dataSet.length-1): ", req.params.dataSet.substr(1, req.params.dataSet.length-2))
       var queryObj = {},
       sortObj = {},
       projectObj = { 
@@ -38,78 +35,10 @@ console.log("got to back end")
         return doc;
       })
 
-      console.log("results: ", results)
-
       if(err) {return handleError(res, err); }
       return res.json(200, results);
   });
 };
-
-// exports.drugPaymentTotalsByYear = function(req, res) {
-//     console.log("got here")
-//       var matchProperty = 'totalPayment' + req.params.program_year;
-//       var queryObj = {},
-//       sortObj = {},
-//       projectObj = { 
-//         drug: 1,
-//         submitting_mfrs: 1
-//       },
-//       queryConditions = {$exists: true};
-//       queryObj[matchProperty] = queryConditions;
-//       projectObj['amount'] = "$" + matchProperty;
-//       Drug.aggregate([
-//           { $match: queryObj},
-//           { $project: projectObj},
-//           { $sort: {amount: -1} }
-//           // { $limit: 100 }
-//       ], function (err, results) {
-//       if(err) {return handleError(res, err); }
-
-//       results.forEach(function(doc){
-//         var arr = doc.submitting_mfrs, mfrs = formatMfr(arr[0]);
-//         for (var i = 1, max = arr.length; i < max; i++){
-//           mfrs += ', ' + formatMfr(arr[i]);
-//         }
-//         doc.submitting_mfrs = mfrs;
-//         return doc;
-//       })
-
-//       return res.json(200, results);
-//   });
-// };
-
-// exports.drugTotalTotalsByYear = function(req, res) {
-//     console.log("got here")
-//       var matchProperty = 'totalTotal' + req.params.program_year;
-//       var queryObj = {},
-//       sortObj = {},
-//       projectObj = { 
-//         drug: 1,
-//         submitting_mfrs: 1
-//       },
-//       queryConditions = {$exists: true};
-//       queryObj[matchProperty] = queryConditions;
-//       projectObj['amount'] = "$" + matchProperty;
-//       Drug.aggregate([
-//           { $match: queryObj},
-//           { $project: projectObj},
-//           { $sort: {amount: -1} }
-//           // { $limit: 100 }
-//       ], function (err, results) {
-//       if(err) {return handleError(res, err); }
-
-//       results.forEach(function(doc){
-//         var arr = doc.submitting_mfrs, mfrs = formatMfr(arr[0]);
-//         for (var i = 1, max = arr.length; i < max; i++){
-//           mfrs += ', ' + formatMfr(arr[i]);
-//         }
-//         doc.submitting_mfrs = mfrs;
-//         return doc;
-//       })
-
-//       return res.json(200, results);
-//   });
-// };
 
 var zeroFormat = function(val){
   return (val) ? val : 0;

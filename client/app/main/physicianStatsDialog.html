@@ -13,7 +13,7 @@
 	</div>
 	<md-virtual-repeat-container id="vertical-container">
 	  <div md-virtual-repeat="item in physicianStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.first_name}} {{item.last_name}}</a>, {{item.city}}, {{item.state}} - {{item.amount | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, 'topDoc', item,1,1)">{{item.first_name}} {{item.last_name}}</a>, {{item.city}}, {{item.state}} - {{item.amount | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>

@@ -38,9 +38,7 @@
 
       <md-tabs md-dynamic-height class="md-accent" md-border-bottom>
 
-        <!-- <md-tab ng-repeat="bin in bins" ng-init="$last ? hideProgress() : null"> -->
-        <!-- <md-tab ng-repeat="bin in bins" ng-init="!bins.length ? showAlertDialog() : null"> -->
-        <md-tab ng-repeat="bin in bins" ng-init="init(bins.length,$last)"> 
+        <md-tab ng-repeat="bin in bins" ng-init="$last ? hideProgress() : null">
           <md-tab-label>{{bin.bin}} <span ng-if="bin.rawAmount > 0">(${{bin.rawAmount | number:2}})</span></md-tab-label>
           <md-tab-body>
           <div id="chart-{{$index}}" county-sankey bin-num="$index" bin="bin.bin"></div>

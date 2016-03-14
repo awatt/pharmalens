@@ -118,6 +118,8 @@ angular.module('foglightApp')
   }
 
   $scope.getStatsByPhysician = function(physician, program_year){
+    console.log("physician: ", physician)
+
     var recipientStats = {};
     var recipientNames = {};
     if ($scope.dataSet === 'payments'){
@@ -277,15 +279,6 @@ $scope.$watch("programYear", function(newVal, oldVal){
 })
 
 //DIALOG FUNCTIONS
-
-$scope.binlength;
-$scope.lastindex;
-
-$scope.init = function(binlength,lastindex){
-  $scope.binlength = binlength;
-  $scope.lastindex = lastindex;
-}
-
 $scope.showAlertDialog = function(ev){
   $mdDialog.show(
       $mdDialog.alert()
@@ -308,8 +301,11 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state
 
   //if no data for given county and dataset, show no data dialog
   if( ((payments === 0) && (grants === 0)) 
-    || ($scope.dataSet === 'payments' && (payments === 0 || !recipientTotals.countyTotals.payments)) 
-    || ($scope.dataSet === 'grants' && (grants === 0 || !recipientTotals.countyTotals.grants))  ){
+    || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !recipientTotals.countyTotals.payments))) 
+    || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !recipientTotals.countyTotals.grants)))  ){
+
+    console.log("negged")
+    console.log("recipientTotals.countyTotals.payments: ", recipientTotals.countyTotals.payments)
     
     $scope.showAlertDialog();
 
@@ -321,8 +317,24 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state
     $scope.progress = true;
     $scope.bins = [];
 
+    //if query is for physician data launched from top physicians dialog
+    if(FIPS === 'topDoc'){
+
+      //reset object to comply with other physician sankey request object format
+      if($scope.dataSet === 'grants'){
+        searchTerm['totalGrants'] = searchTerm.amount;
+        searchTerm['totalPayments'] = 0;
+      } else {
+        searchTerm['totalGrants'] = 0;
+        searchTerm['totalPayments'] = searchTerm.amount;
+      }
+
+      $scope.countyName = searchTerm.countyDoc[0].county + ', ' + searchTerm.countyDoc[0].state;
+      $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
+
+
     //if query is for physician data from search dialog
-    if(typeof searchTerm === "object" && searchTerm !== null){
+    } else if (typeof searchTerm === "object" && searchTerm !== null){
       console.log("physician search")
 
       $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
@@ -337,9 +349,10 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state
 
       $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
       $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
+    
+    //map click county query
     } else {
       console.log("countymap search")
-      //map click county query  
       $scope.countyName = searchTerm;
       $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
     }

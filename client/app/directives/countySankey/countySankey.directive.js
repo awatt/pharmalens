@@ -13,6 +13,8 @@ angular.module('foglightApp')
 
 			var renderSankey = function(data){
 
+				console.log("sankey data input: ", data)
+
 				d3Service.d3().then(function(d3){
 
 					var countLinks = function(data){

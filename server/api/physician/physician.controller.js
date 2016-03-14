@@ -51,6 +51,9 @@ exports.recipientTotalsByYear = function(req, res) {
       sortObj = {},
       projectObj = { 
         profile_ID: "$profile_ID",
+        FIPS: "$FIPS",
+        countyDoc: "$countyDoc",
+        display: { $concat: [ "$last_name", ", ", "$first_name" ] },
         first_name: "$first_name",
         last_name: "$last_name",
         city: "$city", 
@@ -61,15 +64,21 @@ exports.recipientTotalsByYear = function(req, res) {
       projectObj['amount'] = "$" + matchProperty;
       Physician.aggregate([
           { $match: queryObj},
+          { $lookup: {
+            from: 'counties',
+            localField: 'FIPS',
+            foreignField: 'FIPS',
+            as: 'countyDoc'
+          }},
           { $project: projectObj},
           { $sort: {amount: -1} },
           { $limit: 500 }
       ], function (err, results) {
-        console.log("results: ", results)
       if(err) {return handleError(res, err); }
       return res.json(200, results);
   });
 };
+
 
 // Get a single physician
 exports.show = function(req, res) {

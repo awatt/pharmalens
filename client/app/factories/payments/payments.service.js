@@ -42698,5 +42698,3 @@ var topCountiesRate2014 = (function(){
       per_capita2014: topCountiesRate2014
     };
   });
-
-
