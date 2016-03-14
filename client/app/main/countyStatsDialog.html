@@ -11,12 +11,12 @@
 	</div>
 	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'per_capita'">
 	  <div md-virtual-repeat="item in countyPaymentStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS, item.county, undefined, undefined, item.state)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'total'">
 	  <div md-virtual-repeat="item in countyPaymentStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS, item.county, undefined, undefined, item.state)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>
@@ -32,12 +32,12 @@
 	</div>
 	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'per_capita'">
 	  <div md-virtual-repeat="item in countyGrantStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS, item.county, undefined, undefined, item.state)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'total'">
 	  <div md-virtual-repeat="item in countyGrantStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS, item.county, undefined, undefined, item.state)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>
@@ -53,12 +53,12 @@
 	</div>
 	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'per_capita'">
 	  <div md-virtual-repeat="item in countyTotalStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS, item.county, undefined, undefined, item.state)">{{item.county}}, {{item.state}}</a> - {{item.rate | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 	<md-virtual-repeat-container id="vertical-container" ng-if="metric === 'total'">
 	  <div md-virtual-repeat="item in countyTotalStats" class="repeated-item" flex>
-	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
+	    {{$index + 1}}.&nbsp <a href ng-click="showSankeyDialog($event, item.FIPS, item.county, undefined, undefined, item.state)">{{item.county}}, {{item.state}}</a> - {{item.number | currency}}
 	  </div>
 	</md-virtual-repeat-container>
 </md-content>

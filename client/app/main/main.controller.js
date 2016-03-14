@@ -329,7 +329,19 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state
         searchTerm['totalPayments'] = searchTerm.amount;
       }
 
-      $scope.countyName = searchTerm.countyDoc[0].county + ', ' + searchTerm.countyDoc[0].state;
+      searchTerm['display'] = searchTerm.last_name + ', ' + searchTerm.first_name;
+
+      var county = (function(){
+        var arr = locator[searchTerm.state], match;
+        for (var i = 0, max = arr.length; i < max; i++){
+          if (arr[i].FIPS === searchTerm.FIPS){
+            match = arr[i].county;
+          }
+        }
+        return match;
+      })();
+
+      $scope.countyName = county + ', ' + searchTerm.state;
       $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
 
 
@@ -350,10 +362,15 @@ $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state
       $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
       $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
     
-    //map click county query
+    //map click or top counties dialog county query
     } else {
       console.log("countymap search")
-      $scope.countyName = searchTerm;
+       if(state){
+        $scope.countyName = searchTerm + ', ' + state;        
+       } else {
+        $scope.countyName = searchTerm;
+       }
+       
       $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
     }
 
