@@ -1,12 +1,11 @@
-<div layout="row">
-  <span flex></span>
-  <md-button class="md-icon-button" ng-click="cancel()" aria-label="...">
-  <i class="fa fa-times"></i>
-</md-button>
-</div>
-
+<md-dialog>
 <md-content class="autoScroll">
-
+<div layout="row">
+    <md-subheader class="md-primary"> &nbsp&nbsp&nbsp&nbspSearch by County or Physician</md-subheader>
+    <md-button class="md-icon-button" ng-click="cancel()" aria-label="...">
+      <i class="fa fa-times"></i>
+    </md-button>
+  </div>
      <!-- state search -->
         <md-input-container ng-click="loadStates()" class="md-block" flex-gt-sm>
           <label>State</label>
@@ -39,7 +38,7 @@
           md-items="item in querySearch(searchText)"
           md-item-text="item.display"
           md-min-length="0"
-          md-floating-label="Physician",
+          md-floating-label="Physician"
           md-menu-class="physician-list">
           <md-item-template>
             <span class="item-title">
@@ -64,3 +63,4 @@
           <md-button ng-disabled="(user.county === -1)" flex class="md-button md-cornered md-button-colored btn-lg home-input-button" ng-click="showSankeyDialog($event, user.county, selectedItem, selectedItem.totalPayments, selectedItem.totalGrants, user.state)">Display   <i ng-show="selectedItem" class="fa fa-user-md"></i><i ng-hide="selectedItem" class="fa fa-map-marker"></i>  Stats</md-button>
          </div>
   </md-content>
+</md-dialog>

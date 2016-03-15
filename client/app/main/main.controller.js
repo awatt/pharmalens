@@ -24,6 +24,16 @@ angular.module('foglightApp')
   $scope.runTest = function(){
   }
 
+
+
+//TEST MENU
+    var originatorEv;
+    $scope.openMenu = function($mdOpenMenu, ev) {
+      originatorEv = ev;
+      $mdOpenMenu(ev);
+    };
+
+
 //DATASET SWITCHING
   $scope.dataSet = 'diabetes';
   $scope.dataTitle;
@@ -40,29 +50,29 @@ angular.module('foglightApp')
   };
 
 //CHECKBOXES
-   $scope.items = ['payments', 'grants'];
-      $scope.selected = [];
-      $scope.toggle = function (item, list) {
-        var idx = list.indexOf(item);
-        if (idx > -1){
-          list.splice(idx, 1);
-          if (list.length){
-            $scope.dataSet = list[0]
-          } else{
-            $scope.dataSet = 'diabetes'
-          }
-        } else {
-          list.push(item);
-          if(list.length === 2){
-            $scope.dataSet = 'totals';
-          } else {
-            $scope.dataSet = list[0];
-          }
-        }
-      };
-      $scope.exists = function (item, list) {
-        return list.indexOf(item) > -1;
-      };
+  $scope.items = ['payments', 'grants'];
+  $scope.selected = [];
+  $scope.toggle = function (item, list) {
+    var idx = list.indexOf(item);
+    if (idx > -1){
+      list.splice(idx, 1);
+      if (list.length){
+        $scope.dataSet = list[0]
+      } else{
+        $scope.dataSet = 'diabetes'
+      }
+    } else {
+      list.push(item);
+      if(list.length === 2){
+        $scope.dataSet = 'totals';
+      } else {
+        $scope.dataSet = list[0];
+      }
+    }
+  };
+  $scope.exists = function (item, list) {
+    return list.indexOf(item) > -1;
+  };
 
 //PROGRESS CIRCULAR
   $scope.progress = true;
@@ -184,37 +194,37 @@ angular.module('foglightApp')
       }
     }
 
-    $scope.$watch("user.state", function(newVal, oldVal){
-      console.log("newVal: ", newVal)
-      if(newVal !== oldVal){
-        $scope.counties = locator[newVal].map(function(county) {
-          return {name: county.county, FIPS: county.FIPS};
-        }).sort(function (a, b) {
-          if (a.name > b.name) {
-            return 1;
-          }
-          if (a.name < b.name) {
-            return -1;
-          }
-          return 0;
-        });
-      }
-    })
-
-    $scope.$watch("user.county", function(newVal, oldVal){
-      if(newVal !== oldVal){
-        var newFIPS = $scope.counties[newVal].FIPS;
-        $scope.countyName = $scope.counties[newVal].name;     
-        var getValue = function(val){
-          if (!val){
-            return 0;
-          };
-          return val;
+  $scope.$watch("user.state", function(newVal, oldVal){
+    console.log("newVal: ", newVal)
+    if(newVal !== oldVal){
+      $scope.counties = locator[newVal].map(function(county) {
+        return {name: county.county, FIPS: county.FIPS};
+      }).sort(function (a, b) {
+        if (a.name > b.name) {
+          return 1;
         }
-        
-        recipientNames.get({FIPS: newFIPS}, function(physicianNames){
-          $scope.physicianNames = physicianNames;
-        }).$promise
+        if (a.name < b.name) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+  })
+
+  $scope.$watch("user.county", function(newVal, oldVal){
+    if(newVal !== oldVal){
+      var newFIPS = $scope.counties[newVal].FIPS;
+      $scope.countyName = $scope.counties[newVal].name;     
+      var getValue = function(val){
+        if (!val){
+          return 0;
+        };
+        return val;
+      }
+      
+    recipientNames.get({FIPS: newFIPS}, function(physicianNames){
+      $scope.physicianNames = physicianNames;
+      }).$promise
         .then(function(){
           recipientTotals.getPaymentTotalsFIPS(newFIPS, Number($scope.programYear)).$promise.then(function(paymentTotals){
             recipientTotals.getGrantTotalsFIPS(newFIPS, Number($scope.programYear)).$promise.then(function(grantTotals){             
@@ -242,247 +252,233 @@ angular.module('foglightApp')
                 return 0;
               });
             })
-        });
-      }); 
-    }
+          });
+        }); 
+      }
   });
 
-$scope.isDisabled = false;
+  $scope.isDisabled = false;
 
-$scope.querySearch = function (query) {
-  var results = query ? $scope.physicians.filter( createFilterFor(query) ) : $scope.physicians;
-  return results;
-}
-
-function createFilterFor(query) {
-  var lowercaseQuery = angular.lowercase(query);
-  return function filterFn(state) {
-    return (state.value.indexOf(lowercaseQuery) === 0);
-  };
-}
-
-//TOP STATS DATA SWITCHING
-$scope.$watch("metric", function(newVal, oldVal){
-  if(newVal !== oldVal){
-    $scope.countyPaymentStats = payments[newVal + $scope.programYear];
-    $scope.countyGrantStats = grants[newVal + $scope.programYear];
-    $scope.countyTotalStats = totals[newVal + $scope.programYear];
+  $scope.querySearch = function (query) {
+    var results = query ? $scope.physicians.filter( createFilterFor(query) ) : $scope.physicians;
+    return results;
   }
-})
 
-$scope.$watch("programYear", function(newVal, oldVal){
-  if(newVal !== oldVal){
-    $scope.countyPaymentStats = payments[$scope.metric + newVal];
-    $scope.countyGrantStats = grants[$scope.metric + newVal];
-    $scope.countyTotalStats = totals[$scope.metric + newVal];
+  function createFilterFor(query) {
+    var lowercaseQuery = angular.lowercase(query);
+    return function filterFn(state) {
+      return (state.value.indexOf(lowercaseQuery) === 0);
+    };
   }
-})
 
-//DIALOG FUNCTIONS
-$scope.showAlertDialog = function(ev){
-  $mdDialog.show(
-      $mdDialog.alert()
-        .parent(angular.element(document.body))
-        .clickOutsideToClose(true)
-        .title($scope.programYear + ' results for that County: $0.00')
-        .ariaLabel('')
-        .ok('OK')
-        .targetEvent(ev)
-    );
-}
+  //TOP STATS DATA SWITCHING
+  $scope.$watch("metric", function(newVal, oldVal){
+    if(newVal !== oldVal){
+      $scope.countyPaymentStats = payments[newVal + $scope.programYear];
+      $scope.countyGrantStats = grants[newVal + $scope.programYear];
+      $scope.countyTotalStats = totals[newVal + $scope.programYear];
+    }
+  })
+
+  $scope.$watch("programYear", function(newVal, oldVal){
+    if(newVal !== oldVal){
+      $scope.countyPaymentStats = payments[$scope.metric + newVal];
+      $scope.countyGrantStats = grants[$scope.metric + newVal];
+      $scope.countyTotalStats = totals[$scope.metric + newVal];
+    }
+  })
+
+  //DIALOG FUNCTIONS
+  $scope.showAlertDialog = function(ev){
+    $mdDialog.show(
+        $mdDialog.alert()
+          .parent(angular.element(document.body))
+          .clickOutsideToClose(true)
+          .title($scope.programYear + ' results for that County: $0.00')
+          .ariaLabel('')
+          .ok('OK')
+          .targetEvent(ev)
+      );
+  }
 
 
-$scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
-  console.log("FIPS: ", FIPS);
-  console.log("searchTerm: ", searchTerm);
-  console.log("payments: ", payments);
-  console.log("grants: ", grants);
-  console.log("state: ", state);
+  $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
+    console.log("FIPS: ", FIPS);
+    console.log("searchTerm: ", searchTerm);
+    console.log("payments: ", payments);
+    console.log("grants: ", grants);
+    console.log("state: ", state);
 
-  //if no data for given county and dataset, show no data dialog
-  if( ((payments === 0) && (grants === 0)) 
-    || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !recipientTotals.countyTotals.payments))) 
-    || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !recipientTotals.countyTotals.grants)))  ){
+    //if no data for given county and dataset, show no data dialog
+    if( ((payments === 0) && (grants === 0)) 
+      || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !recipientTotals.countyTotals.payments))) 
+      || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !recipientTotals.countyTotals.grants)))  ){
 
-    console.log("negged")
-    console.log("recipientTotals.countyTotals.payments: ", recipientTotals.countyTotals.payments)
-    
-    $scope.showAlertDialog();
+      $scope.showAlertDialog();
 
-    //reset switch
-    recipientTotals.countyTotals.payments = recipientTotals.countyTotals.payments = false;
+      //reset switch
+      recipientTotals.countyTotals.payments = recipientTotals.countyTotals.payments = false;
 
-  } else {
-    $scope.setDataTitle();
-    $scope.progress = true;
-    $scope.bins = [];
+    } else {
+      $scope.setDataTitle();
+      $scope.progress = true;
+      $scope.bins = [];
 
-    //if query is for physician data launched from top physicians dialog
-    if(FIPS === 'topDoc'){
+      //if query is for physician data launched from top physicians dialog
+      if(FIPS === 'topDoc'){
 
-      //reset object to comply with other physician sankey request object format
-      if($scope.dataSet === 'grants'){
-        searchTerm['totalGrants'] = searchTerm.amount;
-        searchTerm['totalPayments'] = 0;
+        //reset object to comply with other physician sankey request object format
+        if($scope.dataSet === 'grants'){
+          searchTerm['totalGrants'] = searchTerm.amount;
+          searchTerm['totalPayments'] = 0;
+        } else {
+          searchTerm['totalGrants'] = 0;
+          searchTerm['totalPayments'] = searchTerm.amount;
+        }
+
+        searchTerm['display'] = searchTerm.last_name + ', ' + searchTerm.first_name;
+
+        var county = (function(){
+          var arr = locator[searchTerm.state], match;
+          for (var i = 0, max = arr.length; i < max; i++){
+            if (arr[i].FIPS === searchTerm.FIPS){
+              match = arr[i].county;
+            }
+          }
+          return match;
+        })();
+
+        $scope.countyName = county + ', ' + searchTerm.state;
+        $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
+
+
+      //if query is for physician data from search dialog
+      } else if (typeof searchTerm === "object" && searchTerm !== null){
+        console.log("physician search")
+
+        $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
+        $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
+
+      
+      //if query is for county data from search dialog
+      } else if (searchTerm === null) {
+        $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
+        $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
+      
+      //map click or top counties dialog county query
       } else {
-        searchTerm['totalGrants'] = 0;
-        searchTerm['totalPayments'] = searchTerm.amount;
+         if(state){
+          $scope.countyName = searchTerm + ', ' + state;        
+         } else {
+          $scope.countyName = searchTerm;
+         }
+        $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
       }
 
-      searchTerm['display'] = searchTerm.last_name + ', ' + searchTerm.first_name;
-
-      var county = (function(){
-        var arr = locator[searchTerm.state], match;
-        for (var i = 0, max = arr.length; i < max; i++){
-          if (arr[i].FIPS === searchTerm.FIPS){
-            match = arr[i].county;
-          }
-        }
-        return match;
-      })();
-
-      $scope.countyName = county + ', ' + searchTerm.state;
-      $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
-
-
-    //if query is for physician data from search dialog
-    } else if (typeof searchTerm === "object" && searchTerm !== null){
-      console.log("physician search")
-
-      $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
-      $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
-
-    
-    //if query is for county data from search dialog
-    } else if (searchTerm === null) {
-      console.log("county search")
-      console.log("$scope.counties: ", $scope.counties)
-      console.log("FIPS: ", FIPS)
-
-      $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
-      $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
-    
-    //map click or top counties dialog county query
-    } else {
-      console.log("countymap search")
-       if(state){
-        $scope.countyName = searchTerm + ', ' + state;        
-       } else {
-        $scope.countyName = searchTerm;
-       }
-       
-      $scope.getStatsByFIPS(FIPS, Number($scope.programYear));
+      $mdDialog.show({
+        controller: dialogController,
+        templateUrl: 'app/main/sankeyDialog.html',
+        scope: $scope,        
+        preserveScope: true,
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose:true
+      });
     }
+  };
 
+  $scope.showPhysicianSearchDialog = function(ev) {
+  $scope.searchText = '';
+  $scope.selectedItem = undefined;
+  $scope.user.state = '';
+  $scope.user.county = -1;
 
     $mdDialog.show({
       controller: dialogController,
-      templateUrl: 'app/main/sankeyDialog.html',
+      templateUrl: 'app/main/physicianSearchDialog.html',
       scope: $scope,        
       preserveScope: true,
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
     });
-  }
-};
+  };
 
-$scope.showPhysicianSearchDialog = function(ev) {
-$scope.searchText = '';
-$scope.selectedItem = undefined;
-$scope.user.state = '';
-$scope.user.county = -1;
+  $scope.showInfoDialog = function(ev) {
+    $mdDialog.show({
+      controller: dialogController,
+      templateUrl: 'app/main/infoDialog.html',
+      scope: $scope,        
+      preserveScope: true,
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    });
+  };
 
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/physicianSearchDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
+  $scope.showCountyStatsDialog = function(ev) {
+    $mdDialog.show({
+      controller: dialogController,
+      templateUrl: 'app/main/countyStatsDialog.html',
+      scope: $scope,        
+      preserveScope: true,
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    });
+  };
 
-$scope.showInfoDialog = function(ev) {
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/infoDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
+  $scope.showPhysicianStatsDialog = function(ev) {
 
-$scope.showCountyStatsDialog = function(ev) {
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/countyStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
+    //launch progress circular
+    $scope.progress = true;
 
-$scope.showPhysicianStatsDialog = function(ev) {
+    //format cashe object for inspection
+    recipientTotals.getTotalsYear.cache[$scope.dataSet] = recipientTotals.getTotalsYear.cache[$scope.dataSet] || {};
 
-  //launch progress circular
-  $scope.progress = true;
+    //check data cache in factory
+    if (!recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear]){
 
-  //format cashe object for inspection
-  recipientTotals.getTotalsYear.cache[$scope.dataSet] = recipientTotals.getTotalsYear.cache[$scope.dataSet] || {};
+      //pull data from backend - factory stores in cache
+      recipientTotals.getTotalsYear($scope.dataSet, $scope.programYear).$promise
+      .then(function(result){
+        recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear] = result;
+        $scope.physicianStats = result.slice(0,$scope.statsLimit);
+        $scope.hideProgress();
+      })
+    } else {
+      $scope.physicianStats = recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear].slice(0,$scope.statsLimit);
+      $scope.hideProgress();
+    }
+    $mdDialog.show({
+      controller: dialogController,
+      templateUrl: 'app/main/physicianStatsDialog.html',
+      scope: $scope,        
+      preserveScope: true,
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    });
+  };
 
-  //check data cache in factory
-  if (!recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear]){
+  $scope.showDrugStatsDialog = function(ev) {
+    $scope.progress = true;
 
-    //pull data from backend - factory stores in cache
-    recipientTotals.getTotalsYear($scope.dataSet, $scope.programYear).$promise
-    .then(function(result){
-      recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear] = result;
-      $scope.physicianStats = result.slice(0,$scope.statsLimit);
+    drugTotals.getDrugTotalsYear($scope.programYear,$scope.dataSet).$promise.then(function(result){
+      $scope.drugStats = result;
       $scope.hideProgress();
     })
-  } else {
-    $scope.physicianStats = recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear].slice(0,$scope.statsLimit);
-    $scope.hideProgress();
-  }
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/physicianStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
-
-$scope.showDrugStatsDialog = function(ev) {
-  $scope.progress = true;
-
-  drugTotals.getDrugTotalsYear($scope.programYear,$scope.dataSet).$promise.then(function(result){
-    $scope.drugStats = result;
-    $scope.hideProgress();
-  })
-  $mdDialog.show({
-    controller: dialogController,
-    templateUrl: 'app/main/drugStatsDialog.html',
-    scope: $scope,        
-    preserveScope: true,
-    parent: angular.element(document.body),
-    targetEvent: ev,
-    clickOutsideToClose:true
-  });
-};
-
-//DIALOG FUNCTIONS - END
-
-
-}) //MainCtrl Close
+    $mdDialog.show({
+      controller: dialogController,
+      templateUrl: 'app/main/drugStatsDialog.html',
+      scope: $scope,        
+      preserveScope: true,
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    });
+  };
+})
 
 //DIALOG CONTROLLER
 function dialogController($scope, $mdDialog) {

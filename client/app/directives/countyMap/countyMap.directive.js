@@ -60,6 +60,8 @@ angular.module('foglightApp')
 					}
 				}
 
+				console
+
 				var frameWidth = d3.select('#countyMap')[0][0].clientWidth,
 				margin = (frameWidth-width/2);
 		        
@@ -85,7 +87,7 @@ angular.module('foglightApp')
 
 				var svg = d3.select('[id="countyMap"]').append("svg")
 				.attr("width", width)
-				.attr("height", height)
+				.attr("height", height + 35)
 				.attr("transform", 
 						"translate(" + margin + "," + 0 + ")")
 				.append("g")
@@ -121,7 +123,10 @@ angular.module('foglightApp')
 				  	.attr("class", "county")
 				  	.attr("data-toggle", "modal")
 				  	.attr("data-target", "#sankeyModal")
-				  	.style("fill", colors[0]);
+				  	.style("fill", colors[0])
+				  	.attr("transform", 
+						"translate(0,35)")
+				  	// .attr("transform", "translate(" + width / 2 + "," + height / 2 + ");
 
 				  	counties.transition().duration(1000)
 				  	.style("fill", function(d) { var countyData = displayMap.get(d.id); if (countyData) { return colorScale(countyData[metric])} else {return colorScale(0)}; });
@@ -133,7 +138,9 @@ angular.module('foglightApp')
 				  	svg.append("path")
 					.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
 					.attr("class", "states")
-					.attr("d", path);
+					.attr("d", path)
+					.attr("transform", 
+						"translate(0,35)");
 
 					//ADD LEGEND
 
@@ -157,25 +164,32 @@ angular.module('foglightApp')
 					.attr("class", "legend");
 
 					legend.append("rect")
-					.attr("x", function(d, i) { return frameWidth/4.8 + 68 * i} )
-					.attr("y", 2)
-					.attr("width", 68)
-					.attr("height", 13)
+					.attr("x", function(d, i) { return frameWidth/28 + 98 * i} )
+					.attr("y", 0)
+					.attr("width", 98)
+					.attr("height", 12)
 					.style("fill", function(d){ return d.color});
 
 					d3.selectAll("text").remove();
 
 					legend.append("text")
 					.attr("class", "ticks")
-					.text(function(d) { return (scope.dataset === 'diabetes') ? "≥ " + formatPercent(d.min) + "%" : "≥ $" + formatNumber(d.min); })
-					.attr("x", function(d, i) { return frameWidth/4.8 + 68 * i})
-					.attr("y", 30)
+					.text(function(d) { 
+						return (scope.dataset === 'diabetes' && scope.metric === 'per_capita') 
+						? "≥ " + formatPercent(d.min) + "%" 
+						: (scope.dataset === 'diabetes') 
+							? "≥ " + formatNumber(d.min)
+							: "≥ $" + formatNumber(d.min); })
+					.attr("x", function(d, i) { return frameWidth/28 + 98 * i})
+					.attr("y", 27)
+
 
 					legend.append("text")
 					.attr("class", "annotation")
 					.text(function(d) { return (scope.dataset === 'diabetes') ? "(diabetes rates - 2012 est. pop.)" : "(rate per 1,000 residents)" })
 					.attr("x", function() { return frameWidth/4.8 + 400})
-					.attr("y", 52)					
+					.attr("y", 52)
+					
 
 					var currencyFormat = d3.format("$,.2f"),
 						numberFormat = d3.format(","),

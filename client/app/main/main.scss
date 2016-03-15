@@ -266,16 +266,20 @@ md-input-container {
 //----------CHOROPLETH LEGEND
 
  text.ticks {
-        font-size: 8pt;
-        // font-weight: bold;
+        font-size: 9pt;
+        font-weight: bold;
         font-family: Consolas, courier;
-        fill: #6B6969;
+        background: rgba(1,70,54, 0.12);
+        fill: black;
+        // fill: #6B6969;
       }
 
  text.annotation {
         font-size: 8pt;
         font-family: Consolas, courier;
-        fill: #928D8D;
+        background: rgba(1,70,54, 0.12);
+        fill: black;
+        // fill: #928D8D;
       }
 
 

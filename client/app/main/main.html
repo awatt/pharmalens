@@ -17,8 +17,6 @@
       <h1 class="mainTitle"><span class="unblurred">PHARMA</span><span class="blurred">LENS</span></h1>
     </div>
 
-
-
       <md-card id="infoCard">
         
           <md-card class="fade" ng-show="dataSet === 'diabetes'"><p class="infoText"><strong class="subheading">DIABETES</strong>&nbsp&nbsp  The worldwide market for <a href="https://en.wikipedia.org/wiki/Diabetes_mellitus" target="_blank">Diabetes Mellitus</a> (DM) pharmaceuticals is <a href="https://www.idf.org/sites/default/files/IDF-2014-Annual-Report-final.pdf" target="_blank"> on track to reach</a> 1 billion people by 2035, including those with DM and those at high risk for the disease.  With 29.1 million Americans (9.3%) currently suffering from DM and an additional <a href="http://www.cdc.gov/diabetes/pdfs/data/2014-report-estimates-of-diabetes-and-its-burden-in-the-united-states.pdf" target="_blank">86 million</a> (37%) over the age of 20 with <a href="https://en.wikipedia.org/wiki/Prediabetes" target="_blank">prediabetes</a>, the U.S. will continue to be one of the most lucrative markets for DM-related pharmaceuticals.</p></md-card>
@@ -26,29 +24,159 @@
           <md-card class="fade" ng-show="dataSet === 'grants'"><p class="infoText"><strong class="subheading">RESEARCH GRANTS</strong>&nbsp&nbsp  The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of {{physicianTopStats[dataSet][programYear].total | currency}} was granted in {{programYear}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 lead researchers</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 researched drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) garnering {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%) of the grant money.</p></md-card>
           <md-card class="fade" ng-show="dataSet === 'totals'"><p class="infoText"><strong class="subheading">TOTAL EXPENDITURES</strong>&nbsp&nbsp  Total combined outlays for payments and research grants in {{programYear}} stood at {{physicianTopStats[dataSet][programYear].total | currency}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita terms</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 doctors</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 promoted drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) accounting for {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%)</p></md-card>
 
-            <div layout="row" id="dashboard" layout-align="space between">
-              <div flex="20">
-                <md-radio-group layout="row" ng-model="programYear">
-                  <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
-                  <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
-                </md-radio-group>
-              </div>
-              <div flex="20" layout="row">
-               <div ng-repeat="item in items">
-                 <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
-               </div>
-              </div>
-              <div flex="20">
-                <md-radio-group layout="row" ng-model="metric">
-                  <md-radio-button value="total" class="md-primary">total</md-radio-button>
-                  <md-radio-button value="per_capita" class="md-primary">per&nbspcapita</md-radio-button>
-                </md-radio-group>
-              </div>
-              <div flex="20">
-               <md-button id="doctorLookup" aria-label="Search by Doctor or County" class="md-fab md-raised md-mini md-warn" ng-click="showPhysicianSearchDialog($event)"><md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">Search by Doctor or County</md-tooltip><i class="fa fa-search fa-lg"></i>
-             </md-button>
-              </div>
+            <div id="dashboard">
+              
+
+              <div layout="row">
+
+
+                <md-input-container ng-click="loadStates()" class="md-block" flex-gt-sm>
+                  <label>State</label>
+                     <!-- <md-icon md-svg-src="main/img/icons/medical51.svg" class="name"></md-icon> -->
+                    <md-select ng-model="user.state">
+                      <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                      </md-option>
+                    </md-select>
+                </md-input-container>
+        
+                <!-- county search -->
+                <md-input-container width="2" class="md-block" flex-gt-sm>
+                  <label>County</label>
+                    <md-select ng-model="user.county">
+                      <md-option ng-repeat="county in counties" value="{{$index}}">
+                        {{county.name}}
+                      </md-option>
+                    </md-select>
+                </md-input-container>
+
+                 <!-- physician name search -->
+                <md-autocomplete required
+                  ng-disabled="isDisabled"
+                  md-no-cache="noCache"
+                  md-selected-item="selectedItem"
+                  md-search-text-change="searchTextChange(searchText)"
+                  md-search-text="searchText"
+                  md-selected-item-change="selectedItemChange(item)"
+                  md-items="item in querySearch(searchText)"
+                  md-item-text="item.display"
+                  md-min-length="0"
+                  md-floating-label="Physician"
+                  md-menu-class="physician-list">
+                  <md-item-template>
+                    <span class="item-title">
+                    <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
+                  </span>
+                  <span class="item-metadata">
+                    <span class="item-metastat">
+                      <strong>${{item.totalPayments | number : 2}}</strong> in payments
+                    </span>
+                    <br>
+                    <span class="item-metastat">
+                      <strong>${{item.totalGrants | number : 2}}</strong> in grants
+                    </span>
+                  </span>
+                  </md-item-template>
+                  <md-not-found>
+                  No names matching "{{searchText}}" were found.
+                  </md-not-found>
+                </md-autocomplete>
+
+                <md-button ng-disabled="(user.county === -1)" flex class="md-button md-cornered md-button-colored btn-lg home-input-button" ng-click="showSankeyDialog($event, user.county, selectedItem, selectedItem.totalPayments, selectedItem.totalGrants, user.state)">Display   <i ng-show="selectedItem" class="fa fa-user-md"></i><i ng-hide="selectedItem" class="fa fa-map-marker"></i>  Stats</md-button>
+
+        </div>
+
+
+        <div layout="row">
+                      <!--     <div flex>
+                  <md-radio-group layout="row" ng-model="programYear">
+                    <md-radio-button value="2013" class="md-primary">2013</md-radio-button>
+                    <md-radio-button value="2014" class="md-primary">2014</md-radio-button>
+                  </md-radio-group>
+                </div> -->
+
+
+<md-menu>
+<md-chips>
+<md-chip aria-label="..." ng-click="$mdOpenMenu($event)">
+            Year
+          </md-chip>
+        </md-chips>
+          <md-menu-content ng-model="programYear" width="2">
+            <md-menu-item>
+              <md-button value="2013">2013</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button value="2014">2014</md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+<md-menu>
+          <md-button aria-label="..." ng-click="$mdOpenMenu($event)">
+            Data Metric
+          </md-button>
+          <md-menu-content ng-model="metric" width="2">
+            <md-menu-item>
+              <md-button value="Total">Total</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button value="Per Capita">Per&nbspCapita</md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+<!-- MENU TEST -->
+    <!-- <md-menu>
+      <md-button aria-label="" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+        Year
+      </md-button>
+      <md-menu-content width="2">
+        <md-menu-item>
+          <md-button ng-click="ctrl.redial($event)">
+            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+            Redial
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
+            <md-icon md-svg-icon="call:voicemail"></md-icon>
+            Check voicemail
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-click="ctrl.toggleNotifications()">
+            <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>
+            {{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+ -->
+
+
+
+<!--           <div flex>
+            <md-radio-group layout="row" ng-model="metric">
+            <md-radio-button value="total" class="md-primary">total</md-radio-button>
+            <md-radio-button value="per_capita" class="md-primary">per&nbspcapita</md-radio-button>
+          </md-radio-group>
+        </div> -->
+        <div flex layout="row">
+         <div ng-repeat="item in items">
+           <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">{{ item }}</md-checkbox>
+         </div>
+       </div>
+
+     </div>
+
             </div>
+
+            <!--               <div flex="20">
+               <md-button id="doctorLookup" aria-label="Search by Doctor or County" class="md-fab md-raised md-mini md-warn" ng-click="showPhysicianSearchDialog($event)"><md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">Advanced Search</md-tooltip><i class="fa fa-search fa-lg"></i>
+             </md-button>
+              </div> -->
         
       </md-card>
 
