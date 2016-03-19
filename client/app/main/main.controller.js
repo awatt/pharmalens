@@ -25,15 +25,6 @@ angular.module('foglightApp')
   }
 
 
-
-//TEST MENU
-    var originatorEv;
-    $scope.openMenu = function($mdOpenMenu, ev) {
-      originatorEv = ev;
-      $mdOpenMenu(ev);
-    };
-
-
 //DATASET SWITCHING
   $scope.dataSet = 'diabetes';
   $scope.dataTitle;
@@ -50,29 +41,29 @@ angular.module('foglightApp')
   };
 
 //CHECKBOXES
-  $scope.items = ['payments', 'grants'];
-  $scope.selected = [];
-  $scope.toggle = function (item, list) {
-    var idx = list.indexOf(item);
-    if (idx > -1){
-      list.splice(idx, 1);
-      if (list.length){
-        $scope.dataSet = list[0]
-      } else{
-        $scope.dataSet = 'diabetes'
-      }
-    } else {
-      list.push(item);
-      if(list.length === 2){
-        $scope.dataSet = 'totals';
-      } else {
-        $scope.dataSet = list[0];
-      }
-    }
-  };
-  $scope.exists = function (item, list) {
-    return list.indexOf(item) > -1;
-  };
+  // $scope.items = ['payments', 'grants'];
+  // $scope.selected = [];
+  // $scope.toggle = function (item, list) {
+  //   var idx = list.indexOf(item);
+  //   if (idx > -1){
+  //     list.splice(idx, 1);
+  //     if (list.length){
+  //       $scope.dataSet = list[0]
+  //     } else{
+  //       $scope.dataSet = 'diabetes'
+  //     }
+  //   } else {
+  //     list.push(item);
+  //     if(list.length === 2){
+  //       $scope.dataSet = 'totals';
+  //     } else {
+  //       $scope.dataSet = list[0];
+  //     }
+  //   }
+  // };
+  // $scope.exists = function (item, list) {
+  //   return list.indexOf(item) > -1;
+  // };
 
 //PROGRESS CIRCULAR
   $scope.progress = true;
@@ -160,17 +151,35 @@ angular.module('foglightApp')
   };
 
 
-//MATERIAL DESIGN TABS CONTROL
-  $scope.data = {
-    selectedIndex: 0,
-    bottom: true
-  };
-  $scope.next = function() {
-    $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-  };
-  $scope.previous = function() {
-    $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-  };
+//MATERIAL DESIGN MENUS CONTROL
+var originatorEv;
+$scope.openMenu = function($mdOpenMenu, ev) {
+  originatorEv = ev;
+  $mdOpenMenu(ev);
+};
+
+$scope.setYear = function(value){
+  $scope.programYear = value;
+}
+
+$scope.setMetric = function(value){
+  $scope.metric = value;
+}
+
+$scope.setDataSet = function(value){
+  $scope.dataSet = value;
+}
+
+  // $scope.data = {
+  //   selectedIndex: 0,
+  //   bottom: true
+  // };
+  // $scope.next = function() {
+  //   $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
+  // };
+  // $scope.previous = function() {
+  //   $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
+  // };
 
 
 //INPUT SEARCH LOGIC
@@ -184,6 +193,12 @@ angular.module('foglightApp')
   $scope.counties;
   $scope.physicians;
 
+  $scope.clearFields = function(){
+    $scope.states = $scope.counties = $scope.physicians = $scope.searchText = (function(){ return undefined; })();
+    $scope.user.county = -1;
+    $scope.user.physician = '';
+  }
+
   $scope.loadStates = function(){
     if ($scope.states === undefined){
       $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
@@ -194,11 +209,19 @@ angular.module('foglightApp')
       }
     }
 
+  var formatCounty = function(county){
+    var arr = county.split(' '), lastWord = arr[arr.length - 1];
+    if (lastWord === 'County'){
+      return county.slice(0, county.length - 6);
+    }
+    return county;
+  }
+
   $scope.$watch("user.state", function(newVal, oldVal){
     console.log("newVal: ", newVal)
     if(newVal !== oldVal){
       $scope.counties = locator[newVal].map(function(county) {
-        return {name: county.county, FIPS: county.FIPS};
+        return {name: formatCounty(county.county), FIPS: county.FIPS};
       }).sort(function (a, b) {
         if (a.name > b.name) {
           return 1;
@@ -303,11 +326,6 @@ angular.module('foglightApp')
 
 
   $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
-    console.log("FIPS: ", FIPS);
-    console.log("searchTerm: ", searchTerm);
-    console.log("payments: ", payments);
-    console.log("grants: ", grants);
-    console.log("state: ", state);
 
     //if no data for given county and dataset, show no data dialog
     if( ((payments === 0) && (grants === 0)) 
@@ -354,16 +372,17 @@ angular.module('foglightApp')
 
       //if query is for physician data from search dialog
       } else if (typeof searchTerm === "object" && searchTerm !== null){
-        console.log("physician search")
 
         $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
         $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
+        $scope.clearFields();
 
       
       //if query is for county data from search dialog
       } else if (searchTerm === null) {
         $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
         $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));
+        $scope.clearFields();
       
       //map click or top counties dialog county query
       } else {
