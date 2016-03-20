@@ -20,8 +20,8 @@ angular.module('foglightApp')
 				var width = 960,
 				height = 600,
 				buckets = 9,
-				// colors = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]
-				colors = ["#ffffcc","#ffeda0","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#bd0026","#800026"]
+				colors = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]
+				// colors = ["#ffffcc","#ffeda0","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#bd0026","#800026"]
 				 // colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]
 				// colors = ["#f7f4f9","#e7e1ef","#d4b9da","#c994c7","#df65b0","#e7298a","#ce1256","#980043","#67001f"]
 				// colors = ["#fff7fb","#ece2f0","#d0d1e6","#a6bddb","#67a9cf","#3690c0","#02818a","#016c59","#014636"]
@@ -186,9 +186,13 @@ angular.module('foglightApp')
 
 					legend.append("text")
 					.attr("class", "annotation")
-					.text(function(d) { return (scope.dataset === 'diabetes') ? "(diabetes rates - 2012 est. pop.)" : "(rate per 1,000 residents)" })
-					.attr("x", function() { return frameWidth/4.8 + 400})
-					.attr("y", 52)
+					.text(function(d) { return (scope.dataset === 'diabetes') 
+						? "(based on 2012 census data)" 
+						: (scope.metric === 'total')
+							? "(total by county)"
+							: "(per 1,000 residents by county)" })
+					.attr("x", function() { return frameWidth/4.8 + 450})
+					.attr("y", 60)
 					
 
 					var currencyFormat = d3.format("$,.2f"),

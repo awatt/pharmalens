@@ -29,6 +29,7 @@
 
 body{
       background-color: rgba(255, 255, 255, 0);
+      color: #3C3535;
       // font-size: 13px;
 }
 
@@ -76,12 +77,13 @@ i {
 .dashButton {
   border-radius: 40px;
   padding: 0;
-  font-size: 11;
+  font-size: 13px;
   padding: 0;
-  margin: 0px 4px;
-  min-height: 34px;
-  max-height: 34px;
-  min-width: 78px;
+  margin: 0px 3px;
+  height: 34px;
+  // min-height: 34px;
+  // max-height: 34px;
+  min-width: 75px;
   font-weight: 700;
 }
 
@@ -91,6 +93,10 @@ i {
 
 .md-menu {
   padding: 0;
+}
+
+.infoDialogCloseButton {
+  float: right;
 }
 
 //----------------------------MAIN TITLE
@@ -119,8 +125,9 @@ i {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.4em;
-    margin-bottom: 20px;
-    margin-left: 40px;
+    margin: 35px 0px 35px 40px;
+    // margin-bottom: 20px;
+    // margin-left: 40px;
     padding-top: 20px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -164,11 +171,11 @@ p {
 }
 
 #infoCard {
-  min-height: 228px;
-  font-size: 13px;
-  margin: 0 8% 2% 8%;
-  line-height: 1.3em;
-  border-radius: 1px;
+  min-height: 220px;
+  font-size: 13.5px;
+  margin: 0 5% 2% 5%;
+  line-height: 1.35em;
+  border-radius: 3px;
   background-color: rgba(54, 144, 192, 0.38);
   // border-style: solid;
   // border-width: 2px;
@@ -176,7 +183,7 @@ p {
 }
 
 .infoText {
-  margin: 16px;
+  margin: 15px;
 }
 
 
@@ -204,12 +211,16 @@ p {
   // border-color: rgba(44, 160, 44,0.2);
   // border-color: rgba(44, 160, 44,0.2);
   // border-style: solid;
-  border-radius: 3px;
-  background-color: rgba(54, 144, 192, 0.5);
+  // border-radius: 3px;
+  background-color: rgba(255,247,251, 0.65);
 }
 
 #gradient {
-  background: linear-gradient(to right, rgba(54, 144, 192, 0), rgba(54, 144, 192, 0.5)); 
+  background: linear-gradient(to right, rgba(54, 144, 192, 0), rgba(255,247,251, 0.65)); 
+}
+
+#searchPanel {
+  margin-bottom: -40px;
 }
 
 //--------------------------- STATS DIALOGS
@@ -288,19 +299,21 @@ md-input-container {
 //----------CHOROPLETH LEGEND
 
  text.ticks {
-        font-size: 9pt;
-        font-weight: bold;
+        font-size: 10pt;
+        // font-weight: bold;
         font-family: Consolas, courier;
-        background: rgba(1,70,54, 0.12);
-        fill: black;
+        // background: rgba(1,70,54, 0.12);
+        fill: #3C3535;
         // fill: #6B6969;
       }
 
  text.annotation {
-        font-size: 8pt;
-        font-family: Consolas, courier;
-        background: rgba(1,70,54, 0.12);
-        fill: black;
+        font-size: 9pt;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: italic; 
+        // font-family: Consolas, courier;
+        // background: rgba(1,70,54, 0.12);
+        fill: rgba(74,66,66,0.1);
         // fill: #928D8D;
       }
 

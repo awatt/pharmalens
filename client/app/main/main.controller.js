@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foglightApp')
-.controller('MainCtrl', function ($scope, $http, $timeout, statService, grantData, paymentData, recipientTotals, recipientNames, drugTotals, locator, $mdDialog, payments, grants, totals) {
+.controller('MainCtrl', function ($scope, $http, $timeout, statService, grantData, paymentData, recipientTotals, recipientNames, drugTotals, locator, $mdDialog, $mdToast, payments, grants, totals) {
 
   $scope.countyName = '';
   $scope.bins = [];
@@ -197,6 +197,7 @@ $scope.setDataSet = function(value){
     $scope.states = $scope.counties = $scope.physicians = $scope.searchText = (function(){ return undefined; })();
     $scope.user.county = -1;
     $scope.user.physician = '';
+    $scope.user.state = 'AR';
   }
 
   $scope.loadStates = function(){
@@ -312,6 +313,29 @@ $scope.setDataSet = function(value){
   })
 
   //DIALOG FUNCTIONS
+
+  $scope.showSimpleToast = function() {
+    $mdToast.show(
+      $mdToast.simple()
+        .content('No Data for that Category')
+        .capsule(true)
+        .parent(el)
+        // .parent('#countyMap')
+        .position('top right')
+        .hideDelay(3000)
+    );
+  };
+
+    //   var openToast =  function() {
+    //     console.log("got to toast")
+    //   $mdToast.show(
+    //     $mdToast.simple()
+    //       .content('No Data in that Category')
+    //       .position('top right')
+    //       .hideDelay(3000)
+    //   );
+    // };
+
   $scope.showAlertDialog = function(ev){
     $mdDialog.show(
         $mdDialog.alert()
@@ -332,7 +356,11 @@ $scope.setDataSet = function(value){
       || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !recipientTotals.countyTotals.payments))) 
       || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !recipientTotals.countyTotals.grants)))  ){
 
-      $scope.showAlertDialog();
+      $scope.showSimpleToast();
+      // $scope.showAlertDialog();
+
+      // openToast();
+
 
       //reset switch
       recipientTotals.countyTotals.payments = recipientTotals.countyTotals.payments = false;

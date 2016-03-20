@@ -9,7 +9,9 @@
     <md-card class="bodyCard">
       <md-card-content>
 
-        <md-button aria-label="About" id="infoButton" class="md-fab md-raised md-mini md-warn" ng-click="showInfoDialog($event)"><i class="fa fa-info fa-lg fa-align-center"></i>
+        <md-button aria-label="About" id="infoButton" class="md-fab md-raised md-mini md-warn" ng-click="showInfoDialog($event)"><md-tooltip md-direction="left">
+          About PharmaLens
+        </md-tooltip><i class="fa fa-info fa-lg fa-align-center"></i>
         </md-button>
 
       <!-- TITLE -->
@@ -19,25 +21,25 @@
 
       <md-card id="infoCard" layout='row'>
   
-        <div flex='50' id='infoPanel'>
+        <div flex='35' id='infoPanel'>
 
           <md-card flex class="fade" ng-show="dataSet === 'diabetes'">
-              <p class="infoText"><strong class="subheading">DIABETES</strong>&nbsp&nbsp  The worldwide market for <a href="https://en.wikipedia.org/wiki/Diabetes_mellitus" target="_blank">Diabetes Mellitus</a> (DM) pharmaceuticals is <a href="https://www.idf.org/sites/default/files/IDF-2014-Annual-Report-final.pdf" target="_blank"> on track to reach</a> 1 billion people by 2035, including those with DM and those at high risk for the disease.  With 29.1 million Americans (9.3%) currently suffering from DM and an additional <a href="http://www.cdc.gov/diabetes/pdfs/data/2014-report-estimates-of-diabetes-and-its-burden-in-the-united-states.pdf" target="_blank">86 million</a> (37%) over the age of 20 with <a href="https://en.wikipedia.org/wiki/Prediabetes" target="_blank">prediabetes</a>, the U.S. will continue to be one of the most lucrative markets for DM-related pharmaceuticals.</p></md-card>
-              <md-card class="fade" ng-show="dataSet === 'payments'"><p class="infoText"><strong class="subheading">MARKETING</strong>&nbsp&nbsp  Recent years have seen a massive influx of big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of {{ physicianTopStats[dataSet][programYear].total | currency}} was spent in {{programYear}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita terms</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 doctors</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 promoted drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) garnering {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%) of the payments.</p></md-card>
-              <md-card class="fade" ng-show="dataSet === 'grants'"><p class="infoText"><strong class="subheading">RESEARCH GRANTS</strong>&nbsp&nbsp  The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of {{physicianTopStats[dataSet][programYear].total | currency}} was granted in {{programYear}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 lead researchers</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 researched drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) garnering {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%) of the grant money.</p></md-card>
-              <md-card class="fade" ng-show="dataSet === 'totals'"><p class="infoText"><strong class="subheading">TOTAL EXPENDITURES</strong>&nbsp&nbsp  Total combined outlays for payments and research grants in {{programYear}} stood at {{physicianTopStats[dataSet][programYear].total | currency}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita terms</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 doctors</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 promoted drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) accounting for {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%)</p>
+              <p class="infoText"><strong class="subheading">DIABETES RATES</strong>&nbsp&nbsp  The worldwide market for <a href="https://en.wikipedia.org/wiki/Diabetes_mellitus" target="_blank">Diabetes Mellitus</a> (DM) pharmaceuticals is <a href="https://www.idf.org/sites/default/files/IDF-2014-Annual-Report-final.pdf" target="_blank"> on track to reach</a> 1 billion people by 2035, including those with DM and those at high risk for the disease.  With 29.1 million Americans (9.3%) currently suffering from DM and an additional <a href="http://www.cdc.gov/diabetes/pdfs/data/2014-report-estimates-of-diabetes-and-its-burden-in-the-united-states.pdf" target="_blank">86 million</a> (37%) over the age of 20 with <a href="https://en.wikipedia.org/wiki/Prediabetes" target="_blank">prediabetes</a>, the U.S. will continue to be one of the most lucrative markets for DM-related pharmaceuticals.</p></md-card>
+              <md-card class="fade" ng-show="dataSet === 'payments'"><p class="infoText"><strong class="subheading">MARKETING PAYMENTS - {{programYear}}</strong>&nbsp&nbsp  Recent years have seen rapid growth in big pharma marketing payments to prescribing physicians to boost sales of DM-related drugs.  These payments took the form of, among other things, meals, drug samples, and fees for speaking at medical conferences and teaching Continuing Medical Education (CME) courses to other practitioners.  A total of {{ physicianTopStats[dataSet][programYear].total | currency}} was spent in {{programYear}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita terms</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 doctors</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 promoted drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) garnering {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%) of the payments.</p></md-card>
+              <md-card class="fade" ng-show="dataSet === 'grants'"><p class="infoText"><strong class="subheading">RESEARCH GRANTS - {{programYear}}</strong>&nbsp&nbsp  The pharmaceutical industry has also boosted research grants to develop positive supporting science for their DM-related drug pipelines.  A total of {{physicianTopStats[dataSet][programYear].total | currency}} was granted in {{programYear}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 lead researchers</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 researched drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) garnering {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%) of the grant money.</p></md-card>
+              <md-card class="fade" ng-show="dataSet === 'totals'"><p class="infoText"><strong class="subheading">TOTAL EXPENDITURES - {{programYear}}</strong>&nbsp&nbsp  Total combined outlays for payments and research grants in {{programYear}} stood at {{physicianTopStats[dataSet][programYear].total | currency}}, with <span ng-if="metric === 'total'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in total terms</a> receiving {{ countyTopStats[dataSet][programYear].top | currency}} ({{ 100*countyTopStats[dataSet][programYear].top/countyTopStats[dataSet][programYear].total | number:2}}%)</span><span ng-if="metric === 'per_capita'">the <a href ng-click="showCountyStatsDialog()">top 10 counties in per capita terms</a> receiving, on average, {{ countyTopStats[dataSet][programYear].topPC | currency}} per 1,000 residents</span>, the <a href ng-click="showPhysicianStatsDialog()">top 10 doctors</a> (out of {{physicianTopStats[dataSet][programYear].num | number}} total) receiving {{ physicianTopStats[dataSet][programYear].top | currency}} ({{ 100*physicianTopStats[dataSet][programYear].top/physicianTopStats[dataSet][programYear].total | number:2}}%) and the <a href ng-click="showDrugStatsDialog()">top 10 promoted drugs</a> (out of {{drugTopStats[dataSet][programYear].num | number}} total) accounting for {{ drugTopStats[dataSet][programYear].top | currency}} ({{ 100*drugTopStats[dataSet][programYear].top/drugTopStats[dataSet][programYear].total | number:2}}%)</p>
         </md-card>
 
       </div>
       <!-- END LEFT PANEL -->
 
-      <div flex='10' id='gradient'>
+      <div flex='20' id='gradient'>
       </div>
 
       <!-- RIGHT PANEL -->
-      <div id='dashBoard' flex='40' layout='column'>
+      <div id='dashBoard' flex='45' layout='column'>
 
-        <div flex id='searchPanel' layout='row'>
+        <div flex id='searchPanel' layout='row' layout-align='start end'>
           
           <md-input-container ng-click="loadStates()">
             <label>State</label>
@@ -95,10 +97,10 @@
 
         </div>
 
-        <div flex id='buttonPanel' layout='row'>
+        <div flex id='buttonPanel' layout='row' layout-align='start center'>
 
           <md-menu flex>
-            <md-button aria-label="..." class="md-accent md-raised md-primary dashButton" ng-click="$mdOpenMenu($event)">Year</md-button>
+            <md-button aria-label="..." class="md-accent md-raised md-warn dashButton" ng-click="$mdOpenMenu($event)">Year</md-button>
             <md-menu-content width="2">
               <md-menu-item>
                 <md-button ng-click="setYear('2013')">2013</md-button>
@@ -122,7 +124,7 @@
           </md-menu>
 
           <md-menu flex>
-            <md-button aria-label="..." class="md-accent md-raised md-warn dashButton" ng-click="$mdOpenMenu($event)">DataSet</md-button>
+            <md-button aria-label="..." class="md-accent md-raised md-warn dashButton" ng-click="$mdOpenMenu($event)">Data</md-button>
               <md-menu-content width="2">
                 <md-menu-item>
                   <md-button ng-click="setDataSet('diabetes')">Diabetes Rates</md-button>
@@ -139,9 +141,9 @@
             </md-menu-content>
           </md-menu>
 
-            <md-button flex ng-disabled="(user.county === -1)" class="md-accent md-raised md-primary dashButton" ng-click="showSankeyDialog($event, user.county, selectedItem, selectedItem.totalPayments, selectedItem.totalGrants, user.state)">Show <i ng-show="selectedItem" class="fa fa-user-md fa-lg"></i><i ng-hide="selectedItem" class="fa fa-map-marker fa-lg"></i></md-button>
+            <div flex><md-button ng-disabled="(user.county === -1)" class="md-raised md-primary dashButton" ng-click="showSankeyDialog($event, user.county, selectedItem, selectedItem.totalPayments, selectedItem.totalGrants, user.state)">Show <i ng-show="selectedItem" class="fa fa-user-md fa-lg"></i><i ng-hide="selectedItem" class="fa fa-map-marker fa-lg"></i></md-button></div>
       
-            <md-button flex aria-label="..." ng-disabled="(counties === undefined)" class="md-accent md-raised md-primary dashButton" ng-click="clearFields()">Clear</md-button>
+            <div flex><md-button aria-label="..." ng-disabled="(counties === undefined)" class="md-accent md-raised md-primary dashButton" ng-click="clearFields()">Clear</md-button></div>
 
         </div>
         <!-- END BUTTON PANEL -->
