@@ -75,6 +75,14 @@ i {
 
 .dashButton {
   border-radius: 40px;
+  padding: 0;
+  font-size: 11;
+  padding: 0;
+  margin: 0px 4px;
+  min-height: 34px;
+  max-height: 34px;
+  min-width: 78px;
+  font-weight: 700;
 }
 
 #resetButton {
@@ -129,34 +137,19 @@ i {
   // line-height: 1;
 }
 
-
-#dashboard {
-  font-size: 13px;
-  font-weight: bold;
-  margin: 1em 0;
-  // border-width: 1px;
-  // border-color: rgba(44, 160, 44,0.2);
-  // border-color: rgba(44, 160, 44,0.2);
-  // border-style: solid;
-  border-radius: 3px;
-  background-color: rgba(236,226,240, 0.75);
-}
-
-//---DASH ANIMATION
-
 p {
   margin: 0;
 }
 
-.fade, .dashCard {
-  // background: rgba(254,80,0,0.65);
-  // background: rgba(158,202,225,0.65);
-  // background: rgba(44, 160, 44, 0.65);
-}
+// .fade, .dashCard {
+//   // background: rgba(254,80,0,0.65);
+//   // background: rgba(158,202,225,0.65);
+//   // background: rgba(44, 160, 44, 0.65);
+// }
 
 .fade {
   position: absolute;
-  margin: 1% 55% 0 1%;
+  margin: 1% 48% 0 1%;
   // border-width: 2px;
   // border-color: rgba(166,189,219,0.3);
   // border-color: rgba(158, 218, 229,0.3);
@@ -186,6 +179,8 @@ p {
   margin: 16px;
 }
 
+
+
 .fade.ng-hide-remove {
       -webkit-animation-delay: 2s;
     animation-delay: 2s;
@@ -196,10 +191,26 @@ p {
     animation: fadeIn 1.75s;
 }
 
-md-checkbox {
-  border-width: 1px;
+// md-checkbox {
+//   border-width: 1px;
+// }
+
+
+#dashBoard {
+  font-size: 13px;
+  font-weight: bold;
+  // margin-top: 150px;
+  // border-width: 1px;
+  // border-color: rgba(44, 160, 44,0.2);
+  // border-color: rgba(44, 160, 44,0.2);
+  // border-style: solid;
+  border-radius: 3px;
+  background-color: rgba(54, 144, 192, 0.5);
 }
 
+#gradient {
+  background: linear-gradient(to right, rgba(54, 144, 192, 0), rgba(54, 144, 192, 0.5)); 
+}
 
 //--------------------------- STATS DIALOGS
 

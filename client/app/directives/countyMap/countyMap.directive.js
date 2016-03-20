@@ -273,7 +273,6 @@ angular.module('foglightApp')
 			      d3.select(self.frameElement).style("height", height + "px");
 
 			      scope.$watch("dataset", function(newVal, oldVal){
-			      	console.log("dataset newVal: ", newVal)
 			      	if(newVal !== oldVal){
 			      		renderMap(newVal, scope.metric);
 			      	}
