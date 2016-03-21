@@ -24,7 +24,6 @@ angular.module('foglightApp')
   $scope.runTest = function(){
   }
 
-
 //DATASET SWITCHING
   $scope.dataSet = 'diabetes';
   $scope.dataTitle;
@@ -39,31 +38,6 @@ angular.module('foglightApp')
   $scope.onChange = function(cbState) {
     $scope.message = cbState;
   };
-
-//CHECKBOXES
-  // $scope.items = ['payments', 'grants'];
-  // $scope.selected = [];
-  // $scope.toggle = function (item, list) {
-  //   var idx = list.indexOf(item);
-  //   if (idx > -1){
-  //     list.splice(idx, 1);
-  //     if (list.length){
-  //       $scope.dataSet = list[0]
-  //     } else{
-  //       $scope.dataSet = 'diabetes'
-  //     }
-  //   } else {
-  //     list.push(item);
-  //     if(list.length === 2){
-  //       $scope.dataSet = 'totals';
-  //     } else {
-  //       $scope.dataSet = list[0];
-  //     }
-  //   }
-  // };
-  // $scope.exists = function (item, list) {
-  //   return list.indexOf(item) > -1;
-  // };
 
 //PROGRESS CIRCULAR
   $scope.progress = true;
@@ -150,7 +124,6 @@ angular.module('foglightApp')
     }
   };
 
-
 //MATERIAL DESIGN MENUS CONTROL
 var originatorEv;
 $scope.openMenu = function($mdOpenMenu, ev) {
@@ -169,18 +142,6 @@ $scope.setMetric = function(value){
 $scope.setDataSet = function(value){
   $scope.dataSet = value;
 }
-
-  // $scope.data = {
-  //   selectedIndex: 0,
-  //   bottom: true
-  // };
-  // $scope.next = function() {
-  //   $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-  // };
-  // $scope.previous = function() {
-  //   $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-  // };
-
 
 //INPUT SEARCH LOGIC
   $scope.user = {
@@ -314,40 +275,17 @@ $scope.setDataSet = function(value){
 
   //DIALOG FUNCTIONS
 
-  $scope.showSimpleToast = function() {
-    $mdToast.show(
-      $mdToast.simple()
-        .content('No Data for that Category')
-        .capsule(true)
-        .parent(el)
-        // .parent('#countyMap')
-        .position('top right')
-        .hideDelay(3000)
-    );
+  var openToast = function() {
+    $mdToast.show({
+      hideDelay   : 2000,
+      position    : 'top right',
+      capsule: true,
+      highlightClass: 'md-warn',
+      controller  : toastController,
+      parent : angular.element('#countyMap'),
+      templateUrl : 'app/main/toast.html'
+    });
   };
-
-    //   var openToast =  function() {
-    //     console.log("got to toast")
-    //   $mdToast.show(
-    //     $mdToast.simple()
-    //       .content('No Data in that Category')
-    //       .position('top right')
-    //       .hideDelay(3000)
-    //   );
-    // };
-
-  $scope.showAlertDialog = function(ev){
-    $mdDialog.show(
-        $mdDialog.alert()
-          .parent(angular.element(document.body))
-          .clickOutsideToClose(true)
-          .title($scope.programYear + ' results for that County: $0.00')
-          .ariaLabel('')
-          .ok('OK')
-          .targetEvent(ev)
-      );
-  }
-
 
   $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
 
@@ -356,11 +294,7 @@ $scope.setDataSet = function(value){
       || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !recipientTotals.countyTotals.payments))) 
       || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !recipientTotals.countyTotals.grants)))  ){
 
-      $scope.showSimpleToast();
-      // $scope.showAlertDialog();
-
-      // openToast();
-
+      openToast();
 
       //reset switch
       recipientTotals.countyTotals.payments = recipientTotals.countyTotals.payments = false;
@@ -539,6 +473,12 @@ function dialogController($scope, $mdDialog) {
     $mdDialog.hide(answer);
   };
 }
+
+function toastController ($scope, $mdToast) {
+  $scope.closeToast = function() {
+    $mdToast.hide()
+  };
+};
 
 
 
