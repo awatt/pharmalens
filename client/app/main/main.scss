@@ -357,6 +357,7 @@ md-input-container {
 
 .sankeyDialog {
   overflow-y: hidden;
+
 }
 
 .sankeyTitle {
@@ -368,16 +369,18 @@ md-input-container {
 .sankeyHeaders {
   font-weight: bolder;
   font-size: 16px;
-  background-color: #9a169d;
+  color: #1d91c0;
+  background-color: #ffffd9;
   min-height: 22px;
 }
 
 .fa-long-arrow-right {
   padding: 0 15px;
+  color: #225ea8;
 }
 
 .fa-money {
-  color: #85bb65;
+  color: #85BB65;
 }
 
 .fullscreen-dialog {
@@ -388,18 +391,34 @@ md-input-container {
    position: absolute;
    top: 5%;
    left: 5%;
-   border-radius: 0;
+   border-radius: 4px;
+}
+
+//titlebar color and text
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+    background-color: #225ea8;
+    color: rgba(255,255,255,0.89);
+}
+
+//focused tab text color
+md-toolbar.md-warn > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-warn > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {
+    color: #fc8d59;
+}
+
+//unfocused tab text color
+md-toolbar.md-warn > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+    color: rgb(152, 146, 146);
 }
 
 
 //-------------------------------PROGRESS INDICATORS
 
-md-progress-circular .sankey {
+#sankeyProgress {
   margin: 175px;
 }
 
-md-progress-circular .stats {
-  margin: 50px;
+.statsProgress {
+  margin: 5px;
 }
 
 

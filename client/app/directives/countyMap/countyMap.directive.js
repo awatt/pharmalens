@@ -10,7 +10,9 @@ angular.module('foglightApp')
 			dataset: '=',
 			year: '=',
 			bins: '=',
-			metric: '='
+			metric: '=',
+			gmap: '=',
+			pmap: '='
 		},
 
 		link: function (scope, element, attrs) {
@@ -60,8 +62,6 @@ angular.module('foglightApp')
 					}
 				}
 
-				console
-
 				var frameWidth = d3.select('#countyMap')[0][0].clientWidth,
 				margin = (frameWidth-width/2);
 		        
@@ -107,6 +107,12 @@ angular.module('foglightApp')
 						metric = function(){ if(newMetric === 'total'){ return 'number';} return 'rate'; }(),
 						maxDataPoint = d3.max(data, function (d){ return d[metric]; }),
 						meanDataPoint = d3.mean(data, function (d){ return d[metric]; })
+
+						scope.gmap = gMap;
+						scope.pmap = pMap;
+
+
+						console.log("pMap: ", pMap)
 
 					var colorScale = d3.scale.quantile()
 					.domain([0, meanDataPoint, maxDataPoint])

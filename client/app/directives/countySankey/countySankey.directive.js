@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foglightApp')
-.directive('countySankey', ['d3Service', 'sankeyService', 'sankeyData', 'statService', function(d3Service, sankeyService, sankeyData, statService) {
+.directive('countySankey', ['d3Service', 'sankeyService', 'statService', function(d3Service, sankeyService, statService) {
 	return {
 		restrict: 'EA',
 		scope: {
@@ -40,7 +40,7 @@ angular.module('foglightApp')
 
 					var formatNumber = d3.format(",.0f"),    // zero decimal places
 					format = function(d) { return units + "" +formatNumber(d); },
-					color = d3.scale.category20();
+					color = d3.scale.category20c();
 
 					// append the svg canvas to the page
 					var svg = d3.select('#chart-' + scope.binNum).append("svg")
@@ -140,7 +140,6 @@ angular.module('foglightApp')
 								return '90px'
 							};
 							if(d.linkType === 'misc_recipient'){
-								console.log("misc d: ", d)
 								var rows = Math.ceil((d.natures.toString().length + d.drugs.toString().length + d.mfrs.toString().length - 20)/26);
 								return 130 + rows*20 + 'px';
 							}; 

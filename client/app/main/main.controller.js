@@ -16,6 +16,8 @@ angular.module('foglightApp')
   $scope.countyTotalStats = totals.per_capita2014;
   $scope.physicianStats;
   $scope.drugStats;
+  $scope.gMap;
+  $scope.pMap;
   $scope.physicianTopStats = recipientTotals.dashStats;
   $scope.drugTopStats = drugTotals.dashStats;
   $scope.countyTopStats = totals.dashStats;
@@ -180,7 +182,6 @@ $scope.setDataSet = function(value){
   }
 
   $scope.$watch("user.state", function(newVal, oldVal){
-    console.log("newVal: ", newVal)
     if(newVal !== oldVal){
       $scope.counties = locator[newVal].map(function(county) {
         return {name: formatCounty(county.county), FIPS: county.FIPS};
@@ -287,17 +288,16 @@ $scope.setDataSet = function(value){
     });
   };
 
+
+
   $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
 
     //if no data for given county and dataset, show no data dialog
     if( ((payments === 0) && (grants === 0)) 
-      || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !recipientTotals.countyTotals.payments))) 
-      || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !recipientTotals.countyTotals.grants)))  ){
+      || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !$scope.pMap.get($scope.counties[FIPS].FIPS).number))) 
+      || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !$scope.gMap.get($scope.counties[FIPS].FIPS).number)))  ){
 
       openToast();
-
-      //reset switch
-      recipientTotals.countyTotals.payments = recipientTotals.countyTotals.payments = false;
 
     } else {
       $scope.setDataTitle();
@@ -420,7 +420,7 @@ $scope.setDataSet = function(value){
     //check data cache in factory
     if (!recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear]){
 
-      //pull data from backend - factory stores in cache
+      //pull data from backend if not already cached - factory stores in cache
       recipientTotals.getTotalsYear($scope.dataSet, $scope.programYear).$promise
       .then(function(result){
         recipientTotals.getTotalsYear.cache[$scope.dataSet][$scope.programYear] = result;

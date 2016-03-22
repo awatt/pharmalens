@@ -155,8 +155,6 @@ d3.sankey = function(width) {
   function scaleNodeBreadths(kx) {
     nodes.forEach(function(node) {
       node.x *= kx;
-      // console.log("this is node.nodeType in scaleNodeBreadths: ", node.nodeType)
-      // console.log("this is node.x in scaleNodeBreadths: ", node.x)
       if(node.nodeType === "drug"){
           var tempBreadth = node.x;
         node.x = tempBreadth/1.6;
