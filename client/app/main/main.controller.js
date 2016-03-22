@@ -288,8 +288,6 @@ $scope.setDataSet = function(value){
     });
   };
 
-
-
   $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
 
     //if no data for given county and dataset, show no data dialog
@@ -331,14 +329,12 @@ $scope.setDataSet = function(value){
         $scope.countyName = county + ', ' + searchTerm.state;
         $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
 
-
       //if query is for physician data from search dialog
       } else if (typeof searchTerm === "object" && searchTerm !== null){
 
         $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
         $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
         $scope.clearFields();
-
       
       //if query is for county data from search dialog
       } else if (searchTerm === null) {

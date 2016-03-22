@@ -245,8 +245,11 @@ angular.module('foglightApp')
 					.attr("dy", 0)
 					.attr("y", function(d) { return d.dy / 2; })
 					.attr("dy", ".35em")
+					// .attr("style", "font-weight: 500;")
+					.attr("style", "color: #225ea8")
+					.attr("style", "text-shadow: 2px 2px 3px grey;")
 					.attr("text-anchor", "end")
-					.attr("transform", null)
+					.attr("transform", "translate(-3,0)")
 					.text(function(d) { return d.name; })
 					.filter(function(d) { return d.x < width / 2; })
 					.attr("x", 6 + sankey.nodeWidth())
@@ -267,6 +270,7 @@ angular.module('foglightApp')
 		} //close renderSankey function
 
 				var data = statService.dataObj[scope.bin];
+				console.log("data in sankey: ", data)
 					renderSankey(data);
 
 		}  //close link function

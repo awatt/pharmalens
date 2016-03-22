@@ -10,40 +10,32 @@
         </md-button>
         </div>
           
-          <div class="sankeyHeaders" layout="row" layout-align"space-between end">
-            <div flex-offset="5" flex="10">Manufacturer</div>
+          <div class="sankeyHeaders" layout="row" layout-align"space-between">
+
+            <div flex-offset="5" flex="15">MANUFACTURER</div>
             <div flex="20">
-              <span flex></span>
               <i class="fa fa-long-arrow-right fa-lg"></i>
-              <span flex></span>
               <i class="fa fa-money fa-lg"></i>
               <i class="fa fa-money fa-lg"></i>
               <i class="fa fa-money fa-lg"></i>
-              <span flex></span>
               <i class="fa fa-long-arrow-right fa-lg"></i>
-              <span flex></span>
             </div>
-            <div flex="20">Drug Promotion</div>
-            <div flex="25">
-              <span flex></span>
+            <div flex="20">PROMOTED DRUG</div>
+            <div  flex="25">
               <i class="fa fa-long-arrow-right fa-lg"></i>
-              <span flex></span>
               <i class="fa fa-money fa-lg"></i>
               <i class="fa fa-money fa-lg"></i>
               <i class="fa fa-money fa-lg"></i>
-              <span flex></span>
               <i class="fa fa-long-arrow-right fa-lg"></i>
-              <span flex></span>
             </div>
-            <div flex="15">Recipient</div>
+            <div flex="15">RECIPIENT</div>
           </div>
+
 
 
     </md-toolbar>
     <md-dialog-content id="sankeyContent">
-
       <md-tabs md-dynamic-height md-border-bottom>
-
         <md-tab ng-repeat="bin in bins" ng-init="$last ? hideProgress() : null">
           <md-tab-label>{{bin.bin}} <span ng-if="bin.rawAmount > 0">(${{bin.rawAmount | number:2}})</span></md-tab-label>
           <md-tab-body>
