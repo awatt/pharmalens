@@ -3,6 +3,7 @@
 angular.module('foglightApp')
   .factory('grants', function () {
 
+//research grant data for choropleth countymap rendering 
 var grants2013 =
 [
   {

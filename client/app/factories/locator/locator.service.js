@@ -3,6 +3,7 @@
 angular.module('foglightApp')
   .factory('locator', function () {
 
+  //hashmap for grabbing general county data
     var countiesByState = {
   "AK": [
     {

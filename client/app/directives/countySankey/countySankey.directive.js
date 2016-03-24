@@ -15,6 +15,7 @@ angular.module('foglightApp')
 
 				d3Service.d3().then(function(d3){
 
+					//count links to render for scaling overall map
 					var countLinks = function(data){
 						var count = 0;
 						for (var i=0, max = data.length; i<max; i++){
@@ -32,12 +33,13 @@ angular.module('foglightApp')
 
 					var testSelection = d3.select('.sankeyDialog')[0][0].clientWidth;
 
+					//scaling variables
 					var margin = {top: 10, right: 15, bottom: 10, left: 10},
 					frameWidth = d3.select('.sankeyDialog')[0][0].clientWidth,
 					width = frameWidth - margin.left - margin.right,
 					height = 500 + numLinks*18 - margin.top - margin.bottom;
 
-
+					//number and color formatting
 					var formatNumber = d3.format(",.0f"),    // zero decimal places
 					format = function(d) { return units + "" +formatNumber(d); },
 					color = d3.scale.category20c();
@@ -63,8 +65,10 @@ angular.module('foglightApp')
 					//set up graph in same style as original example but empty
 					var graph = {"nodes" : [], "links" : []};
 
+					//grab data on nature of payment ('food & beverage, etc.')
 					var getNature = function(x){ if (x.nature) return x.nature; return "";}
 
+					//load sankey node data
 					data.forEach(function (d) {
 						graph.nodes.push({ "name": d.source, "nodeType": d.sourceType });
 						graph.nodes.push({ "name": d.target, "nodeType": d.targetType });
@@ -77,6 +81,7 @@ angular.module('foglightApp')
 							"mfrs": d.mfrs,
 							"natures": d.natures});
 					});
+
 
 					var subGraph = d3.nest()
 					.key(function (d) { return d.name; })
@@ -113,8 +118,6 @@ angular.module('foglightApp')
 					.style("stroke-width", function(d) { return Math.max(1, d.dy); })
 					.sort(function(a, b) { return b.dy - a.dy; });
 
-					// d3.select('.tooltip').remove()
-
 			        //tooltip template
 			        var tooltipSankey = d3.select('#tooltipSankey')
 			        .attr("class", "tooltip")
@@ -135,6 +138,7 @@ angular.module('foglightApp')
 
 						var currencyFormat = d3.format("$,.2f");
 
+						//dynamic tooltip sizing for amount of data
 						var sizeToolTip = function() {
 							if(d.linkType === 'mfr_drug'){
 								return '90px'
@@ -154,7 +158,7 @@ angular.module('foglightApp')
 							return 140 + 'px';
 						}
 
-
+						//markup for tooltips by link type
 						var linkMarkup = '',
 							drug = '',
 							mfr = '',
@@ -234,7 +238,6 @@ angular.module('foglightApp')
 					.attr("height", function(d) { return d.dy; })
 					.attr("width", sankey.nodeWidth())
 					.style("fill", function(d) { return d.color = color(d.name.replace(/ .*/, "")); })
-					// .style("stroke", function(d) { return d3.rgb(d.color).darker(2); })
 					.append("title")
 					.text(function(d) { return d.name + "\n" + format(d.value); });
 
@@ -245,7 +248,6 @@ angular.module('foglightApp')
 					.attr("dy", 0)
 					.attr("y", function(d) { return d.dy / 2; })
 					.attr("dy", ".35em")
-					// .attr("style", "font-weight: 500;")
 					.attr("style", "color: #225ea8")
 					.attr("style", "text-shadow: 2px 2px 3px grey;")
 					.attr("text-anchor", "end")
@@ -270,7 +272,6 @@ angular.module('foglightApp')
 		} //close renderSankey function
 
 				var data = statService.dataObj[scope.bin];
-				console.log("data in sankey: ", data)
 					renderSankey(data);
 
 		}  //close link function

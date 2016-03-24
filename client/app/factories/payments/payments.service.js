@@ -3,6 +3,7 @@
 angular.module('foglightApp')
   .factory('payments', function () {
 
+//payment data for choropleth countymap rendering 
 var payments2013 = [
   {
     "state":"AK",

@@ -19,7 +19,7 @@ angular.module('foglightApp')
       })
     }
 
-  //DASHBOARD STATE
+  //dashboard state
     var dashStats = { 
     grants: {
       '2013': {

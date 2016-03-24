@@ -45,7 +45,6 @@
           </md-tooltip>
           <md-input-container ng-click="loadStates()">
             <label>State</label>
-                <!-- <md-icon md-svg-src="main/img/icons/medical51.svg" class="name"></md-icon> -->
               <md-select ng-model="user.state">
               <md-option ng-repeat="state in states" value="{{state.abbrev}}">
                 {{state.abbrev}}
@@ -143,9 +142,9 @@
             </md-menu-content>
           </md-menu>
 
-            <div flex><md-tooltip md-delay="600" md-direction="top">Map It!</md-tooltip><md-button ng-disabled="(user.county === -1)" class="md-raised md-primary dashButton" ng-click="showSankeyDialog($event, user.county, selectedItem, selectedItem.totalPayments, selectedItem.totalGrants, user.state)">Show <i ng-show="selectedItem" class="fa fa-user-md fa-lg"></i><i ng-hide="selectedItem" class="fa fa-map-marker fa-lg"></i></md-button></div>
+            <div flex><md-button ng-disabled="(user.county === -1)" class="md-raised md-primary dashButton" ng-click="showSankeyDialog($event, user.county, selectedItem, selectedItem.totalPayments, selectedItem.totalGrants, user.state)">Show <i ng-show="selectedItem" class="fa fa-user-md fa-lg"></i><i ng-hide="selectedItem" class="fa fa-map-marker fa-lg"></i></md-button></div>
       
-            <div flex><md-tooltip md-delay="600" md-direction="top">Reset Search Tool</md-tooltip><md-button aria-label="..." ng-disabled="(counties === undefined)" class="md-accent md-raised md-primary dashButton" ng-click="clearFields()">Clear</md-button></div>
+            <div flex><md-button aria-label="..." ng-disabled="(counties === undefined)" class="md-accent md-raised md-primary dashButton" ng-click="clearFields()">Clear</md-button></div>
 
         </div>
         <!-- END BUTTON PANEL -->

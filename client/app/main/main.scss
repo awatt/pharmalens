@@ -30,7 +30,6 @@
 body{
       background-color: rgba(255, 255, 255, 0);
       color: #3C3535;
-      // font-size: 13px;
 }
 
 .mainBody {
@@ -49,10 +48,7 @@ body{
 
 md-card {
   background: rgba(1,70,54, 0.12);
-  // background: rgba(158,202,225,0.3);
-  // background: rgba(254,80,0,0.4);
   border-radius: 3px;
-  // padding: 5px 15px;
 }
 
 
@@ -93,8 +89,6 @@ i {
   padding: 0;
   margin: 0px 3px;
   height: 34px;
-  // min-height: 34px;
-  // max-height: 34px;
   min-width: 75px;
   font-weight: 700;
 }
@@ -120,12 +114,9 @@ i {
 
 .unblurred{
   color: #1d91c0;
-  // color: #9ACA7E;
-  // rgba(44, 160, 44,0.2)
 }
 
 .blurred {
-    // font-size: 32px;
     color: transparent;
     -webkit-animation: blurry 10s infinite;/* Safari 4+ */
     -moz-animation:    blurry 10s infinite;/* Fx 5+ */
@@ -135,16 +126,11 @@ i {
 
 .mainTitle {
  font-family: 'Ubuntu', sans-serif;
- // font-size: 48px;
-    // position: relative;
-    // color: #1d91c0;
     font-size: 60px;
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.4em;
     margin: 35px 0px 35px 40px;
-    // margin-bottom: 20px;
-    // margin-left: 40px;
     padding-top: 20px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -156,34 +142,19 @@ i {
 //---DASH INFO
 
 .subheading {
-  // font-weight: bold;
   font-size: 1.1em;
-  // line-height: 1;
 }
 
 p {
   margin: 0;
 }
 
-// .fade, .dashCard {
-//   // background: rgba(254,80,0,0.65);
-//   // background: rgba(158,202,225,0.65);
-//   // background: rgba(44, 160, 44, 0.65);
-// }
 
 .fade {
   position: absolute;
   margin: 1% 48% 0 1%;
-  // border-width: 2px;
-  // border-color: rgba(166,189,219,0.3);
-  // border-color: rgba(158, 218, 229,0.3);
-  // border-style: solid;
   border-radius: 4px;
   background-color: rgba(255,247,251, 0.8);
-  // background-color: rgba(166, 189, 219, 0.7);
-  
-  // background: rgba(158, 218, 229,0.6);
-  // box-shadow: none;
   opacity: 1;
 }
 
@@ -194,9 +165,6 @@ p {
   line-height: 1.35em;
   border-radius: 3px;
   background-color: rgba(54, 144, 192, 0.38);
-  // border-style: solid;
-  // border-width: 2px;
-  // border-color: rgba(54, 144, 192, 0.2);
 }
 
 .infoText {
@@ -215,20 +183,10 @@ p {
     animation: fadeIn 1.75s;
 }
 
-// md-checkbox {
-//   border-width: 1px;
-// }
-
 
 #dashBoard {
   font-size: 13px;
   font-weight: bold;
-  // margin-top: 150px;
-  // border-width: 1px;
-  // border-color: rgba(44, 160, 44,0.2);
-  // border-color: rgba(44, 160, 44,0.2);
-  // border-style: solid;
-  // border-radius: 3px;
   background-color: rgba(255,247,251, 0.65);
 }
 
@@ -260,19 +218,6 @@ md-virtual-repeat-container {
   padding-left: 16px; }
 
 
-//COUNTY STATS DIALOG
-
-
-//DRUG STATS DIALOG
-
-
-//PHYSICAIN STATS DIALOG
-
-
-
-//INFO DIALOG
-
-
 //--------------------------SEARCH DIALOG
 
 md-input-container {
@@ -294,9 +239,6 @@ md-input-container {
   height: 18px;
   width: 18px; }
 
-
-
-
 //------------------------CHOROPLETH U.S. COUNTY MAP
 .counties {
   fill: none;
@@ -317,21 +259,15 @@ md-input-container {
 
  text.ticks {
         font-size: 10pt;
-        // font-weight: bold;
         font-family: Consolas, courier;
-        // background: rgba(1,70,54, 0.12);
         fill: #3C3535;
-        // fill: #6B6969;
       }
 
  text.annotation {
         font-size: 9pt;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic; 
-        // font-family: Consolas, courier;
-        // background: rgba(1,70,54, 0.12);
         fill: rgba(74,66,66,0.1);
-        // fill: #928D8D;
       }
 
 
@@ -377,6 +313,7 @@ md-input-container {
   color: #1d91c0;
   background-color: #ffffd9;
   min-height: 22px;
+  box-shadow: 0 3px 3px -3px grey;
 }
 
 .fa-long-arrow-right {
@@ -426,14 +363,12 @@ md-toolbar.md-warn > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-ta
   margin: 5px;
 }
 
-
 //--------------------------------------FOOTER
 
 .footer {
     text-align: center;
     padding: 30px 0;
     margin-top: 70px;
-    // border-top: 1px solid #E5E5E5;
 }
 
 .footer {

@@ -3,6 +3,7 @@
 angular.module('foglightApp')
   .factory('totals', function () {
 
+  //combined grants and payment data by county for choropleth countymap rendering 
     var totals2013 = [
   {
     "state":"AK",

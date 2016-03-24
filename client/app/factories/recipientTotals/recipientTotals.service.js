@@ -75,7 +75,6 @@ angular.module('foglightApp')
       
       var dashObj = dashStats[dataSet][year];
 
-          // dataArr = dataInit.dataSet.year,
           dashObj['num'] = dataArr.length;
 
       for (var i = 0, max = dataArr.length; i < max; i++){
@@ -86,7 +85,7 @@ angular.module('foglightApp')
       }
     }
     
-  //DASHBOARD STATE
+    //dashboard state
     var dashStats = {
     grants: {
       '2013': {

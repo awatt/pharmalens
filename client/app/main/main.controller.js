@@ -22,9 +22,9 @@ angular.module('foglightApp')
   $scope.drugTopStats = drugTotals.dashStats;
   $scope.countyTopStats = totals.dashStats;
 
-  $scope.test = 'false';
-  $scope.runTest = function(){
-  }
+  // $scope.test = 'false';
+  // $scope.runTest = function(){
+  // }
 
 //DATASET SWITCHING
   $scope.dataSet = 'diabetes';
@@ -95,8 +95,6 @@ angular.module('foglightApp')
   }
 
   $scope.getStatsByPhysician = function(physician, program_year){
-    console.log("physician: ", physician)
-
     var recipientStats = {};
     var recipientNames = {};
     if ($scope.dataSet === 'payments'){
@@ -197,6 +195,7 @@ $scope.setDataSet = function(value){
     }
   })
 
+  //update selected county in search dropdown
   $scope.$watch("user.county", function(newVal, oldVal){
     if(newVal !== oldVal){
       var newFIPS = $scope.counties[newVal].FIPS;
@@ -207,7 +206,8 @@ $scope.setDataSet = function(value){
         };
         return val;
       }
-      
+    
+    //grab new county physician names and individual grant and payment stats for query search dropdown  
     recipientNames.get({FIPS: newFIPS}, function(physicianNames){
       $scope.physicianNames = physicianNames;
       }).$promise
@@ -245,6 +245,7 @@ $scope.setDataSet = function(value){
 
   $scope.isDisabled = false;
 
+  //filter physician names by user entered char-search
   $scope.querySearch = function (query) {
     var results = query ? $scope.physicians.filter( createFilterFor(query) ) : $scope.physicians;
     return results;
@@ -257,7 +258,7 @@ $scope.setDataSet = function(value){
     };
   }
 
-  //TOP STATS DATA SWITCHING
+  //TOP RECIPIENT STATS DATA SWITCHING
   $scope.$watch("metric", function(newVal, oldVal){
     if(newVal !== oldVal){
       $scope.countyPaymentStats = payments[newVal + $scope.programYear];
@@ -275,7 +276,6 @@ $scope.setDataSet = function(value){
   })
 
   //DIALOG FUNCTIONS
-
   var openToast = function() {
     $mdToast.show({
       hideDelay   : 2000,
@@ -290,7 +290,7 @@ $scope.setDataSet = function(value){
 
   $scope.showSankeyDialog = function(ev, FIPS, searchTerm, payments, grants, state) {
 
-    //if no data for given county and dataset, show no data dialog
+    //if no data for given county and dataset, display $0.00 data toast alert
     if( ((payments === 0) && (grants === 0)) 
       || ($scope.dataSet === 'payments' && (payments === 0 || (searchTerm === null && !$scope.pMap.get($scope.counties[FIPS].FIPS).number))) 
       || ($scope.dataSet === 'grants' && (grants === 0 || (searchTerm === null && !$scope.gMap.get($scope.counties[FIPS].FIPS).number)))  ){
@@ -316,6 +316,7 @@ $scope.setDataSet = function(value){
 
         searchTerm['display'] = searchTerm.last_name + ', ' + searchTerm.first_name;
 
+        //grab county display name from locator service
         var county = (function(){
           var arr = locator[searchTerm.state], match;
           for (var i = 0, max = arr.length; i < max; i++){
@@ -329,14 +330,14 @@ $scope.setDataSet = function(value){
         $scope.countyName = county + ', ' + searchTerm.state;
         $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
 
-      //if query is for physician data from search dialog
+      //stats procedure if user query is for physician data from search dialog
       } else if (typeof searchTerm === "object" && searchTerm !== null){
 
         $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
         $scope.getStatsByPhysician(searchTerm, Number($scope.programYear));
         $scope.clearFields();
       
-      //if query is for county data from search dialog
+      //stats procedure if user query is for county data from search dialog
       } else if (searchTerm === null) {
         $scope.countyName = $scope.counties[FIPS].name + ', ' + state;
         $scope.getStatsByFIPS($scope.counties[FIPS].FIPS, Number($scope.programYear));

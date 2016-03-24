@@ -3,10 +3,12 @@
 angular.module('foglightApp')
   .factory('statService', function () {
 
+  //bin categories by range of amounts recieved in a year by a physician
    var dataObj = {},
    recipientStatsMap = {},
         bins = ["< $500", "$500 - $1,000", "$1,000 - $5,000", '5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k']
 
+    //find the correct bin based upon an amount
     var findBin = function(val){
       var arr = [0, 500, 1000, 5000, 10000, 25000, 50000, 100000, 200000],
           i = 0
@@ -16,6 +18,8 @@ angular.module('foglightApp')
       return bins[i-1];
     }
 
+    //format and order the finished bins lowest to highest, including
+    //individual named bins for highest earners
     var formatBins = function(newLowBins, newIndivBins){
         var lowBins = bins.slice(0,3),
             newBins = []
@@ -48,7 +52,9 @@ angular.module('foglightApp')
         //clear out global objects
         for (var key in dataObj){delete dataObj[key]};
         for (var key in recipientStatsMap){delete recipientStatsMap[key]};
-          
+    
+    //init data objects for sorting and merging into bins by county and recipient
+    //including separate 'misc' bin for pooling the smallest payments into a single sankey link      
     var dataObj_mfr = {},
         dataObj_drug = {},
         dataObj_direct = {},
@@ -57,6 +63,7 @@ angular.module('foglightApp')
         newIndivBins = [],
         highBins = ['5to10k', '10to25k', '25to50k', '50to100k', '100to200k', 'over200k'];
 
+        //clean up certain messy mfr names for display
         var formatMfr = function(str){
           if(str === "Daiichi Sankyo Inc."){return "SANKYO"};
           if(str === "Eli Lilly and Company"){return "LILLY"};
@@ -82,6 +89,7 @@ angular.module('foglightApp')
           return arr.indexOf(elem) == pos;
         }); 
        }
+
 
       for (var key in recipientStats) {
         if (recipientStats.hasOwnProperty(key) && !isNaN(key)) {
@@ -118,6 +126,7 @@ angular.module('foglightApp')
       //format each data point for d3 and push into appropriate visualization bin
       for (var i = 0, max = data.length; i<max; i++){
 
+        
         var miscSwitch = -1,
             recipient = recipientNames[data[i].recipient_profile_ID],
             recipientBin = recipientStatsMap[recipient],

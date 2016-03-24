@@ -27,11 +27,8 @@ angular.module('foglightApp')
 				 // colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]
 				// colors = ["#f7f4f9","#e7e1ef","#d4b9da","#c994c7","#df65b0","#e7298a","#ce1256","#980043","#67001f"]
 				// colors = ["#fff7fb","#ece2f0","#d0d1e6","#a6bddb","#67a9cf","#3690c0","#02818a","#016c59","#014636"]
-				// colors = ["#feebe2","#fbb4b9","#f768a1","#c51b8a","#7a0177"]
-				// colors = ["#fcd6d6","#f5c5c5","#eea9a9","#e48686","#db5e5e","#d13737","#c91919","#a70000"]
-				// colors = ["rgb(247,251,255)","rgb(222,235,247)","rgb(198,219,239)","rgb(158,202,225)","rgb(107,174,214)","rgb(66,146,198)","rgb(33,113,181)","rgb(8,81,156)","rgb(8,48,107)"]
-				// dataSets = {'diabetes': diabetes,'payments': payments, 'grants': grants, 'totals': totals};
 
+				//link factory datasets
 				var dataSets = {
 					'2013': {
 						'diabetes': diabetes,
@@ -47,6 +44,7 @@ angular.module('foglightApp')
 					}
 				}
 
+				//load datamaps for tooltips
 				var dataMaps = {
 					'2013': {
 						'diabetes': d3.map(dataSets['2013']['diabetes'], function(d) { return d.FIPS; }),
@@ -95,9 +93,10 @@ angular.module('foglightApp')
 
 				var us = counties;
 
-
+				//re-run on toggling datasets and metrics (total vs. per capita stats)
 				var renderMap =  function(displayDataSet,newMetric){
 
+					//var references for applicable datamaps based upon year, new dataset toggle and metric
 					var dMap = dataMaps[scope.year]['diabetes'],
 						pMap = dataMaps[scope.year]['payments'],
 						gMap = dataMaps[scope.year]['grants'],
@@ -108,19 +107,18 @@ angular.module('foglightApp')
 						maxDataPoint = d3.max(data, function (d){ return d[metric]; }),
 						meanDataPoint = d3.mean(data, function (d){ return d[metric]; })
 
+						//put grant and payment maps on scope for reference in sankey map build
+						//in main controller
 						scope.gmap = gMap;
 						scope.pmap = pMap;
 
-
-						console.log("pMap: ", pMap)
-
+					//set up colorscale for map render by county
 					var colorScale = d3.scale.quantile()
 					.domain([0, meanDataPoint, maxDataPoint])
 					.range(colors)
 
 
-     				//ADD COUNTIES
-
+     				//add counties
 					var counties = svg.selectAll("path")
 					.data(topojson.feature(us, us.objects.counties).features)
 
@@ -132,14 +130,21 @@ angular.module('foglightApp')
 				  	.style("fill", colors[0])
 				  	.attr("transform", 
 						"translate(0,35)")
-				  	// .attr("transform", "translate(" + width / 2 + "," + height / 2 + ");
 
+				  	//transition for county color refill on data toggle
 				  	counties.transition().duration(1000)
-				  	.style("fill", function(d) { var countyData = displayMap.get(d.id); if (countyData) { return colorScale(countyData[metric])} else {return colorScale(0)}; });
+				  	.style("fill", function(d) { 
+				  		var countyData = displayMap.get(d.id); 
+				  		if (countyData) { 
+				  			return colorScale(countyData[metric])
+				  		} else {
+				  			return colorScale(0)
+				  		}; 
+				  	});
 
-				  	// .attr("class", function(d) { var quantized = colorScale(rateById.get(d.id)); return quantized })
-
+				  	//clear counties with no new color data on toggle
 				  	counties.exit().remove();
+
 
 				  	svg.append("path")
 					.datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
@@ -148,8 +153,7 @@ angular.module('foglightApp')
 					.attr("transform", 
 						"translate(0,35)");
 
-					//ADD LEGEND
-
+					//add legend
 					var legendData = [],
 					formatNumber = d3.format(",.0f"),
 					formatPercent = d3.format(",.1f"),
@@ -178,6 +182,8 @@ angular.module('foglightApp')
 
 					d3.selectAll("text").remove();
 
+
+					//add legend text
 					legend.append("text")
 					.attr("class", "ticks")
 					.text(function(d) { 
@@ -189,7 +195,7 @@ angular.module('foglightApp')
 					.attr("x", function(d, i) { return frameWidth/28 + 98 * i})
 					.attr("y", 27)
 
-
+					//annotation
 					legend.append("text")
 					.attr("class", "annotation")
 					.text(function(d) { return (scope.dataset === 'diabetes') 
@@ -200,7 +206,7 @@ angular.module('foglightApp')
 					.attr("x", function() { return frameWidth/4.8 + 450})
 					.attr("y", 60)
 					
-
+					//display data formatting
 					var currencyFormat = d3.format("$,.2f"),
 						numberFormat = d3.format(","),
 						rateFormat = d3.format("%"),
@@ -280,25 +286,27 @@ angular.module('foglightApp')
 
 				renderMap('diabetes');
 
-			      d3.select(self.frameElement).style("height", height + "px");
 
-			      scope.$watch("dataset", function(newVal, oldVal){
-			      	if(newVal !== oldVal){
-			      		renderMap(newVal, scope.metric);
-			      	}
-			      })
+			    d3.select(self.frameElement).style("height", height + "px");
 
-			      scope.$watch("year", function(newVal, oldVal){
-			      	if(newVal !== oldVal){
-			      		renderMap(scope.dataset, scope.metric);
-			      	}
-			      })
+			    //watch isolate scope for user data toggling and rerender
+			    scope.$watch("dataset", function(newVal, oldVal){
+			    	if(newVal !== oldVal){
+			    		renderMap(newVal, scope.metric);
+			    	}
+			    })
 
-			      scope.$watch("metric", function(newVal, oldVal){
-			      	if(newVal !== oldVal){
-			      		renderMap(scope.dataset, scope.metric);
-			      	}
-			      })
+			    scope.$watch("year", function(newVal, oldVal){
+			    	if(newVal !== oldVal){
+			    		renderMap(scope.dataset, scope.metric);
+			    	}
+			    })
+
+			    scope.$watch("metric", function(newVal, oldVal){
+			    	if(newVal !== oldVal){
+			    		renderMap(scope.dataset, scope.metric);
+			    	}
+			    })
 
 		//close d3 service CB function
 	})

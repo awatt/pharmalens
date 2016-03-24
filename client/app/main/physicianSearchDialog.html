@@ -9,7 +9,6 @@
      <!-- state search -->
         <md-input-container ng-click="loadStates()" class="md-block" flex-gt-sm>
           <label>State</label>
-             <!-- <md-icon md-svg-src="main/img/icons/medical51.svg" class="name"></md-icon> -->
             <md-select ng-model="user.state">
               <md-option ng-repeat="state in states" value="{{state.abbrev}}">
                 {{state.abbrev}}

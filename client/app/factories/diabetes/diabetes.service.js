@@ -3,6 +3,7 @@
 angular.module('foglightApp')
   .factory('diabetes', function () {
 
+  //diabetes data for choropleth countymap rendering 
     var diabetes = [
   {
     "state":"AK",

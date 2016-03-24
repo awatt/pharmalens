@@ -56,7 +56,6 @@ exports.recipientTotalsByYear = function(req, res) {
       projectObj = { 
         profile_ID: "$profile_ID",
         FIPS: "$FIPS",
-        // display: { $concat: [ "$last_name", ", ", "$first_name" ] },
         first_name: "$first_name",
         last_name: "$last_name",
         city: "$city", 
