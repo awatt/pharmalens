@@ -458,7 +458,7 @@ $scope.setDataSet = function(value){
   };
 })
 
-//DIALOG CONTROLLER
+//dialog controller
 function dialogController($scope, $mdDialog) {
   $scope.hide = function() {
     $mdDialog.hide();
@@ -471,12 +471,22 @@ function dialogController($scope, $mdDialog) {
   };
 }
 
+dialogController.$inject = ['$scope', '$mdDialog'];
+
+angular.module('pharmalensApp')
+.controller( 'dialogController', dialogController );
+
+//toast controller
 function toastController ($scope, $mdToast) {
   $scope.closeToast = function() {
     $mdToast.hide()
   };
 };
 
+toastController.$inject = ['$scope', '$mdToast'];
+
+angular.module('pharmalensApp')
+.controller( 'toastController', toastController );
 
 
 
