@@ -30,6 +30,7 @@
 
 * AngularJS - front-end MVC
 * Angular Material Design - style library
+* D3JS - data visualization library
 * NodeJS - runtime
 * ExpressJS - server
 * grunt - task runner
