@@ -10,25 +10,26 @@
 - [License](#license)
 
 ##<a name="examples"></a>Examples
-- U.S. County Data![Example 0](http://g.recordit.co/Ewpp0EMSGB.gif)
+- National Diabetes and Marketing Data By County![Example 0](http://g.recordit.co/Ewpp0EMSGB.gif)
 <hr></hr> 
 <p></p>
-- Visualize By Individual County![Example 1](http://g.recordit.co/ERKguJHru9.gif)
+- County Data Snapshots![Example 1](http://g.recordit.co/ERKguJHru9.gif)
 <hr></hr> 
 <p></p>
-- Explore the Visualization![Example 2](http://g.recordit.co/LFKgmictr8.gif)
+- County Data Focus![Example 2](http://g.recordit.co/LFKgmictr8.gif)
 <hr></hr> 
 <p></p>
 - Search By Physician![Example 3](http://g.recordit.co/r1lC0jORth.gif)
 <hr></hr> 
 <p></p>
-- Explore Top Recipients![Example 4](http://g.recordit.co/Sjl3HTukxD.gif)
+- Explore Top Recipient Stats![Example 4](http://g.recordit.co/Sjl3HTukxD.gif)
 <hr></hr> 
 <p></p>
 
 ## Technology
 
 * AngularJS - front-end MVC
+* Angular Material Design - style library
 * NodeJS - runtime
 * ExpressJS - server
 * grunt - task runner
