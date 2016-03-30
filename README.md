@@ -10,7 +10,7 @@
 - [License](#license)
 
 ##<a name="examples"></a>Examples
-- U.S. County Data![Example 0](http://g.recordit.co/TvpuQbu8ZN.gif)
+- U.S. County Data![Example 0](http://g.recordit.co/Ewpp0EMSGB.gif)
 <hr></hr> 
 <p></p>
 - Visualize By Individual County![Example 1](http://g.recordit.co/ERKguJHru9.gif)
@@ -22,7 +22,7 @@
 - Search By Physician![Example 3](http://g.recordit.co/r1lC0jORth.gif)
 <hr></hr> 
 <p></p>
-- Explore Top Recipients![Example 4](http://g.recordit.co/qNgovGky6E.gif)
+- Explore Top Recipients![Example 4](http://g.recordit.co/Sjl3HTukxD.gif)
 <hr></hr> 
 <p></p>
 
